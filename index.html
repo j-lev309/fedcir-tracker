@@ -78,6 +78,8 @@ main{max-width:1060px;margin:0 auto;padding:10px 20px 70px}
 .step.done{color:var(--ink)}
 .step .d{font-family:var(--mono);font-size:11.5px}
 
+.summary{font-family:var(--serif);font-size:14px;line-height:1.65;margin-top:11px;color:#2A3342;border-top:1px solid var(--line);padding-top:9px}
+.summary .sumlabel{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--steel);display:block;margin-bottom:3px}
 .panel-line{font-family:var(--serif);font-size:14.5px;margin-top:10px;border-top:1px solid var(--line);padding-top:10px}
 .panel-line .before{font-style:italic;color:var(--steel)}
 .panel-line .j{font-variant:small-caps;font-weight:600}
@@ -235,7 +237,7 @@ function filtered(){
     if(pr && decoKind(c)!==pr)return false;
     if(jg && !(c.panel||[]).some(p=>cleanJudge(p.name)===jg))return false;
     if(q){
-      const hay=[c.case_name,c.docket_number,c.origin,(c.decision||{}).disposition,
+      const hay=[c.case_name,c.docket_number,c.origin,c.summary,(c.decision||{}).disposition,
                  ...(c.panel||[]).map(p=>p.name)].join(" ").toLowerCase();
       if(!hay.includes(q))return false;
     }
@@ -283,11 +285,15 @@ function cardHTML(c){
   const argNote=(arg&&c.status!=="Decided")?`<div class="arg-note">ORAL ARGUMENT — ${fmtD(arg.date)}${arg.time?" · "+esc(arg.time):""}${arg.courtroom?" · "+esc(arg.courtroom):""} · panel posted 1 hr before argument</div>`:"";
 
   const issues=(c.patent_issues||[]).map(i=>`<span class="issue">${esc(i)}</span>`).join("");
+  const ok=u=>typeof u==="string"&&u.startsWith("http")&&!/courtlistener\.com\/?$/.test(u)&&!/uscourts\.gov\/?$/.test(u);
+  const clSearch=c.docket_number?`https://www.courtlistener.com/?q=%22${encodeURIComponent(c.docket_number)}%22&order_by=score+desc`:"";
+  const clLink=ok(d.url_cl)?d.url_cl:(ok(c.url_cl)?c.url_cl:clSearch);
   const links=[
-    d.url_pdf?`<a href="${esc(d.url_pdf)}" target="_blank" rel="noopener">Opinion PDF ↗</a>`:"",
-    d.url_cl?`<a href="${esc(d.url_cl)}" target="_blank" rel="noopener">CourtListener ↗</a>`:(c.url_cl?`<a href="${esc(c.url_cl)}" target="_blank" rel="noopener">Docket ↗</a>`:""),
-    c.url_audio?`<a href="${esc(c.url_audio)}" target="_blank" rel="noopener">Argument audio ↗</a>`:"",
+    ok(d.url_pdf)?`<a href="${esc(d.url_pdf)}" target="_blank" rel="noopener">Opinion PDF ↗</a>`:"",
+    clLink?`<a href="${esc(clLink)}" target="_blank" rel="noopener">${ok(d.url_cl)||ok(c.url_cl)?"CourtListener":"Search CourtListener"} ↗</a>`:"",
+    ok(c.url_audio)?`<a href="${esc(c.url_audio)}" target="_blank" rel="noopener">Argument audio ↗</a>`:"",
   ].filter(Boolean).join("");
+  const summary=c.summary?`<div class="summary"><span class="sumlabel">Summary</span>${esc(c.summary)}</div>`:"";
 
   return `<article class="card">
     ${stamp}
@@ -296,6 +302,7 @@ function cardHTML(c){
     <div class="meta"><span>Status <b>${esc(c.status)}</b></span>${d.disposition?`<span>Disposition <b>${esc(d.disposition)}</b></span>`:""}<span>Type <b>${esc(c.case_type)}</b></span></div>
     <div class="timeline">${steps}</div>
     ${argNote}
+    ${summary}
     ${panelHTML(c)}
     ${issues?`<div class="issues">${issues}</div>`:""}
     ${links?`<div class="links">${links}</div>`:""}
