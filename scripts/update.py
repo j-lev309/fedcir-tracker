@@ -35,7 +35,7 @@ import requests
 # Config
 # ----------------------------------------------------------------------------
 
-SCRIPT_VERSION = "v5-failfast (2026-07-05)"
+SCRIPT_VERSION = "v7-resilient (2026-07-05)"
 CL_BASE = "https://www.courtlistener.com/api/rest/v4"
 CAFC_SCHEDULED_URL = "https://www.cafc.uscourts.gov/home/oral-argument/scheduled-cases/"
 CAFC_OPINION_RSS = "https://www.cafc.uscourts.gov/category/opinion-order/feed/"
@@ -46,7 +46,7 @@ ANTHROPIC_KEY = os.environ.get("ANTHROPIC_API_KEY", "").strip()
 WINDOW_MONTHS = int(os.environ.get("WINDOW_MONTHS", "18"))   # rolling window of filings
 MAX_DOCKETS = int(os.environ.get("MAX_DOCKETS", "4000"))
 MAX_OPINION_TEXT_FETCHES = int(os.environ.get("MAX_OPINION_TEXT_FETCHES", "120"))
-REQUEST_TIMEOUT = 60
+REQUEST_TIMEOUT = 90
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / "data"
@@ -67,9 +67,12 @@ def log(msg: str) -> None:
 # CourtListener helpers
 # ----------------------------------------------------------------------------
 
-def cl_paginate(url: str, params: dict, cap: int) -> list:
-    """Follow v4 cursor pagination until cap items or no `next`."""
+def cl_paginate(url: str, params: dict, cap: int, meta: dict = None) -> list:
+    """Follow v4 cursor pagination until cap items or no `next`.
+    If `meta` dict is passed, records {'complete': bool, 'reason': str} describing
+    whether the full result set was retrieved or the run was cut short."""
     items, next_url, first, backoff, strikes, got_any = [], url, True, 30, 0, False
+    complete, reason, timeouts = True, "ok", 0
     while next_url and len(items) < cap:
         try:
             r = SESSION.get(next_url, params=params if first else None, timeout=REQUEST_TIMEOUT)
@@ -99,17 +102,33 @@ def cl_paginate(url: str, params: dict, cap: int) -> list:
             payload = r.json()
         except RuntimeError:
             raise  # fatal auth/quota diagnosis — stop the whole run loudly
-        except Exception as e:  # noqa: BLE001 — transient network hiccup; move on
+        except (requests.exceptions.Timeout, requests.exceptions.ConnectionError) as e:
+            timeouts += 1
+            if timeouts <= 3:
+                wait = 15 * timeouts
+                log(f"  network timeout ({timeouts}/3); retrying same page in {wait}s")
+                time.sleep(wait)
+                continue  # retry the SAME page — cursor unchanged
+            log(f"  giving up on this source after 3 timeouts: {e}")
+            complete, reason = False, "network timeouts"
+            break
+        except Exception as e:  # noqa: BLE001 — unexpected; keep what we have
             log(f"  pagination stopped: {e}")
+            complete, reason = False, f"interrupted ({type(e).__name__})"
             break
         items.extend(payload.get("results", []))
         got_any = True
+        timeouts = 0  # reset per-page timeout counter after a success
         next_url, first = payload.get("next"), False
         time.sleep(0.9)  # stay well under 5,000 req/hr
+    if len(items) >= cap and next_url:
+        complete, reason = False, "hit cap"
+    if meta is not None:
+        meta["complete"], meta["reason"], meta["count"] = complete, reason, len(items)
     return items[:cap]
 
 
-def fetch_dockets(since: str) -> list:
+def fetch_dockets(since: str, meta: dict = None) -> list:
     log(f"Fetching CAFC dockets filed since {since} …")
     fields = ",".join([
         "id", "docket_number", "case_name", "case_name_short", "date_filed",
@@ -119,13 +138,13 @@ def fetch_dockets(since: str) -> list:
     items = cl_paginate(
         f"{CL_BASE}/dockets/",
         {"court": "cafc", "date_filed__gte": since, "order_by": "-date_filed", "fields": fields},
-        MAX_DOCKETS,
+        MAX_DOCKETS, meta,
     )
     log(f"  {len(items)} dockets")
     return items
 
 
-def fetch_clusters(since: str) -> list:
+def fetch_clusters(since: str, meta: dict = None) -> list:
     """Decisions (opinion clusters) — carries precedential status + panel judges."""
     log(f"Fetching CAFC opinion clusters since {since} …")
     fields = ",".join([
@@ -137,13 +156,13 @@ def fetch_clusters(since: str) -> list:
         f"{CL_BASE}/clusters/",
         {"docket__court": "cafc", "date_filed__gte": since,
          "order_by": "-date_filed", "fields": fields},
-        MAX_DOCKETS,
+        MAX_DOCKETS, meta,
     )
     log(f"  {len(items)} clusters")
     return items
 
 
-def fetch_opinions(since: str) -> list:
+def fetch_opinions(since: str, meta: dict = None) -> list:
     """Individual opinions — author, joined-by, and lead/concurrence/dissent type."""
     log("Fetching CAFC opinions (authorship / roles) …")
     fields = ",".join([
@@ -154,21 +173,23 @@ def fetch_opinions(since: str) -> list:
         f"{CL_BASE}/opinions/",
         {"cluster__docket__court": "cafc", "cluster__date_filed__gte": since,
          "order_by": "-id", "fields": fields},
-        MAX_DOCKETS,
+        MAX_DOCKETS, meta,
     )
     log(f"  {len(items)} opinions")
     return items
 
 
-def fetch_audio(since: str) -> list:
-    """Oral-argument recordings — confirms argued dates and panel names."""
+def fetch_audio(since: str, meta: dict = None) -> list:
+    """Oral-argument recordings — confirms argued dates and panel names.
+    Note: the v4 audio endpoint doesn't support docket__date_argued__gte,
+    so we filter by the recording's own date_created (argument day)."""
     log("Fetching CAFC oral-argument audio metadata …")
     fields = ",".join(["id", "docket", "case_name", "judges", "absolute_url"])
     items = cl_paginate(
         f"{CL_BASE}/audio/",
-        {"docket__court": "cafc", "docket__date_argued__gte": since,
-         "order_by": "-id", "fields": fields},
-        2000,
+        {"docket__court": "cafc", "date_created__gte": since,
+         "order_by": "-date_created", "fields": fields},
+        2000, meta,
     )
     log(f"  {len(items)} recordings")
     return items
@@ -476,10 +497,11 @@ def build() -> dict:
         except Exception:  # noqa: BLE001
             cache = {}
 
-    dockets = fetch_dockets(since)
-    clusters = fetch_clusters(since)
-    opinions = fetch_opinions(since)
-    audio = fetch_audio(since)
+    cov = {k: {} for k in ("dockets", "clusters", "opinions", "audio")}
+    dockets = fetch_dockets(since, cov["dockets"])
+    clusters = fetch_clusters(since, cov["clusters"])
+    opinions = fetch_opinions(since, cov["opinions"])
+    audio = fetch_audio(since, cov["audio"])
     scheduled = fetch_scheduled_arguments()
     rss = fetch_opinion_rss()
 
@@ -662,17 +684,54 @@ def build() -> dict:
         "scheduled": sum(c["status"] == "Argument Scheduled" for c in cases),
         "awaiting": sum(c["status"].startswith("Argued") for c in cases),
         "decided": sum(c["status"] == "Decided" for c in cases),
-        "precedential": sum(1 for c in cases if (c.get("decision") or {})
-                            .get("precedential_status", "").startswith("Pub")),
+        "precedential": sum(1 for c in cases if str((c.get("decision") or {})
+                            .get("precedential_status") or "").startswith("Pub")),
         "rule36": sum(1 for c in cases if re.search(
             r"rule\s*36", str((c.get("decision") or {}).get("disposition") or ""), re.I)),
     }
 
     DATA_DIR.mkdir(exist_ok=True)
     CACHE_PATH.write_text(json.dumps(cache, indent=1))
+
+    # ---- coverage: what this file actually contains, and how complete -----
+    summarized = sum(1 for c in cases if c.get("summary"))
+    decided_summarizable = sum(
+        1 for c in cases if c["status"] == "Decided"
+        and not re.search(r"rule\s*36",
+                          str((c.get("decision") or {}).get("disposition") or ""), re.I))
+    all_complete = all(cov[k].get("complete", True) for k in cov)
+    latest_decision = max((c["decision"]["date"] for c in cases
+                           if (c.get("decision") or {}).get("date")), default=None)
+    next_arg = min((c["argument"]["date"] for c in cases
+                    if (c.get("argument") or {}).get("date", "") >= today
+                    and c["status"] != "Decided"), default=None)
+    coverage = {
+        "complete": all_complete,
+        "window_since": since,
+        "window_months": WINDOW_MONTHS,
+        "sources": {
+            "dockets": cov["dockets"], "clusters": cov["clusters"],
+            "opinions": cov["opinions"], "audio": cov["audio"],
+            "scheduled_arguments": {"count": len(scheduled), "complete": True,
+                                    "reason": "ok"},
+            "opinion_rss": {"count": len(rss), "complete": True, "reason": "ok"},
+        },
+        "summaries": {
+            "enabled": bool(ANTHROPIC_KEY),
+            "have": summarized,
+            "expected": decided_summarizable,
+            "complete": (not ANTHROPIC_KEY) or summarized >= decided_summarizable,
+        },
+        "opinion_text_fetches_this_run": text_fetches,
+        "opinion_text_fetch_cap": MAX_OPINION_TEXT_FETCHES,
+        "latest_decision_date": latest_decision,
+        "next_argument_date": next_arg,
+    }
+
     return {
         "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "window_since": since,
+        "coverage": coverage,
         "stats": stats,
         "upcoming_argument_docket_numbers": [c["docket_number"] for c in upcoming],
         "cases": cases,
@@ -688,8 +747,17 @@ def main() -> int:
         return 1
     data = build()
     OUT_PATH.write_text(json.dumps(data, indent=1))
+    cov = data["coverage"]
     log(f"Wrote {OUT_PATH} — {data['stats']['total']} cases "
         f"({data['stats']['decided']} decided, {data['stats']['scheduled']} scheduled).")
+    log(f"Coverage: {'COMPLETE' if cov['complete'] else 'PARTIAL — a source was cut short; next run will fill in'}"
+        f" | window since {cov['window_since']}"
+        f" | summaries {cov['summaries']['have']}/{cov['summaries']['expected']}"
+        f"{' (disabled)' if not cov['summaries']['enabled'] else ''}")
+    if not cov["complete"]:
+        for name, m in cov["sources"].items():
+            if not m.get("complete", True):
+                log(f"  partial source: {name} — {m.get('reason')} ({m.get('count')} items)")
     return 0
 
 
