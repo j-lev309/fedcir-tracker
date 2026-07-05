@@ -30,6 +30,25 @@ header{border-bottom:3px double var(--federal);background:var(--card)}
 .mast .sub{font-family:var(--mono);font-size:11.5px;color:var(--steel);letter-spacing:.06em;text-transform:uppercase}
 .updated{font-family:var(--mono);font-size:12px;color:var(--steel)}
 .updated b{color:var(--ink);font-weight:500}
+.scope{max-width:1060px;margin:0 auto;padding:0 20px}
+.scope details{border:1px solid var(--line);border-radius:3px;background:var(--card);margin-top:2px}
+.scope summary{cursor:pointer;padding:10px 14px;font-size:13px;font-weight:600;display:flex;align-items:center;gap:9px;list-style:none}
+.scope summary::-webkit-details-marker{display:none}
+.scope summary .caret{transition:transform .15s;color:var(--steel);font-size:11px}
+.scope details[open] summary .caret{transform:rotate(90deg)}
+.badge{font-family:var(--mono);font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:2px 8px;border-radius:99px}
+.badge.ok{background:rgba(34,53,92,.1);color:var(--federal)}
+.badge.partial{background:rgba(168,135,50,.16);color:#7a5f10}
+.badge.building{background:rgba(140,31,20,.1);color:var(--stamp)}
+.scope .body{padding:2px 14px 14px;font-size:13px;line-height:1.7;border-top:1px solid var(--line)}
+.scope .body dl{display:grid;grid-template-columns:auto 1fr;gap:2px 14px;margin:8px 0 0;font-family:var(--mono);font-size:12px}
+.scope .body dt{color:var(--steel)}
+.scope .body dd{color:var(--ink)}
+.scope .srcrow{display:flex;align-items:center;gap:7px}
+.scope .tick{font-size:12px}
+.scope .tick.y{color:var(--federal)}
+.scope .tick.n{color:var(--seal)}
+.scope .note{margin-top:9px;font-size:12px;color:var(--steel);font-style:italic;line-height:1.55}
 
 /* ---------- stat strip ---------- */
 .stats{max-width:1060px;margin:0 auto;padding:14px 20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:0;border-bottom:1px solid var(--line)}
@@ -114,6 +133,8 @@ footer{border-top:1px solid var(--line);padding:18px 20px 40px;max-width:1060px;
 
 <div class="banner" id="banner" hidden><div id="bannerText"></div></div>
 
+<section class="scope" id="scope"></section>
+
 <section class="stats" id="stats" aria-label="Case statistics"></section>
 
 <section class="controls">
@@ -177,10 +198,52 @@ async function load(){
   }else{
     $("updated").innerHTML="Last updated <b>"+new Date(DATA.generated_at).toLocaleString("en-US",{month:"short",day:"numeric",hour:"numeric",minute:"2-digit"})+"</b>";
   }
-  buildStats(); buildTabs(); buildChips(); buildJudges();
+  buildStats(); buildTabs(); buildChips(); buildJudges(); buildScope();
   ["statusSel","precSel","judgeSel"].forEach(id=>$(id).addEventListener("change",()=>{shown=60;render();}));
   $("search").addEventListener("input",()=>{shown=60;render();});
   render();
+}
+
+function buildScope(){
+  const c=DATA.coverage;
+  if(!c){$("scope").innerHTML="";return;}
+  const SRC={dockets:"Dockets (all appeals)",clusters:"Decisions",opinions:"Opinion authorship/roles",audio:"Argument audio",scheduled_arguments:"Argument calendar (CAFC PDFs)",opinion_rss:"Same-day opinions (RSS)"};
+  const sm=c.summaries||{};
+  const summariesBuilding = sm.enabled && !sm.complete;
+  let badge, label;
+  if(!c.complete){badge="partial";label="Partial — refreshing";}
+  else if(summariesBuilding){badge="building";label="Summaries building";}
+  else{badge="ok";label="Complete";}
+
+  const srcRows=Object.entries(SRC).map(([k,lbl])=>{
+    const m=(c.sources||{})[k]||{};
+    const ok=m.complete!==false;
+    return `<div class="srcrow"><span class="tick ${ok?"y":"n"}">${ok?"✓":"△"}</span>${lbl}<span style="color:var(--steel);font-family:var(--mono)">· ${m.count??0}${ok?"":" · "+esc(m.reason||"partial")}</span></div>`;
+  }).join("");
+
+  const winStart=fmtD(c.window_since);
+  const summaryLine = !sm.enabled
+    ? "Off — add the ANTHROPIC_API_KEY secret to enable AI case summaries."
+    : sm.complete
+      ? `All ${sm.expected} eligible decisions summarized.`
+      : `${sm.have} of ${sm.expected} decisions summarized — the rest fill in over the next few runs (${c.opinion_text_fetches_this_run}/${c.opinion_text_fetch_cap} fetched this run).`;
+
+  $("scope").innerHTML=`<details${c.complete&&!summariesBuilding?"":" open"}>
+    <summary><span class="caret">▶</span>What this dashboard contains <span class="badge ${badge}">${label}</span></summary>
+    <div class="body">
+      <dl>
+        <dt>Window</dt><dd>All CAFC appeals docketed since <b>${winStart}</b> (${c.window_months} months), plus every decision and scheduled argument in that span.</dd>
+        <dt>Latest decision</dt><dd>${fmtD(c.latest_decision_date)}</dd>
+        <dt>Next argument</dt><dd>${fmtD(c.next_argument_date)}</dd>
+      </dl>
+      <div style="margin-top:11px;font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--steel)">Data sources this run</div>
+      <div style="margin-top:5px;display:grid;gap:3px">${srcRows}</div>
+      <div style="margin-top:11px;font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--steel)">Case summaries</div>
+      <div style="margin-top:3px">${summaryLine}</div>
+      ${!c.complete?`<div class="note">One source was cut short this run (usually a network timeout on CourtListener). The dashboard shows everything retrieved so far; the next scheduled run fills in the gap automatically — no action needed.</div>`:""}
+      <div class="note">Panels appear once a case is argued or decided — the court discloses them one hour before argument. Pending-appeal coverage depends on RECAP; everything argued or decided is captured.</div>
+    </div>
+  </details>`;
 }
 
 function buildStats(){
