@@ -35,6 +35,7 @@ import requests
 # Config
 # ----------------------------------------------------------------------------
 
+SCRIPT_VERSION = "v5-failfast (2026-07-05)"
 CL_BASE = "https://www.courtlistener.com/api/rest/v4"
 CAFC_SCHEDULED_URL = "https://www.cafc.uscourts.gov/home/oral-argument/scheduled-cases/"
 CAFC_OPINION_RSS = "https://www.cafc.uscourts.gov/category/opinion-order/feed/"
@@ -68,22 +69,41 @@ def log(msg: str) -> None:
 
 def cl_paginate(url: str, params: dict, cap: int) -> list:
     """Follow v4 cursor pagination until cap items or no `next`."""
-    items, next_url, first, backoff = [], url, True, 30
+    items, next_url, first, backoff, strikes, got_any = [], url, True, 30, 0, False
     while next_url and len(items) < cap:
         try:
             r = SESSION.get(next_url, params=params if first else None, timeout=REQUEST_TIMEOUT)
+            if r.status_code == 401:
+                raise RuntimeError(
+                    "CourtListener returned 401 Unauthorized. The COURTLISTENER_TOKEN "
+                    "secret is missing, misspelled, or has a stray space. Re-copy it "
+                    "from https://www.courtlistener.com/profile/api-token/ and update "
+                    "the repo secret exactly.")
             if r.status_code == 429:
+                strikes += 1
+                if not got_any and strikes >= 3:
+                    raise RuntimeError(
+                        "Rate limited on the very first requests with no success. "
+                        "Either the token is invalid (treated as anonymous) or this "
+                        "token's hourly quota is exhausted from prior runs. Verify with:\n"
+                        "  curl -s -H 'Authorization: Token <TOKEN>' "
+                        "'https://www.courtlistener.com/api/rest/v4/dockets/?court=cafc&fields=id' "
+                        "-o /dev/null -w 'HTTP %{http_code}\\n'\n"
+                        "401 = bad token; 429 = wait one hour for the quota to reset.")
                 log(f"  rate limited; sleeping {backoff}s")
                 time.sleep(backoff)
                 backoff = min(backoff + 30, 120)
                 continue
-            backoff = 30
+            backoff, strikes = 30, 0
             r.raise_for_status()
             payload = r.json()
-        except Exception as e:  # noqa: BLE001
+        except RuntimeError:
+            raise  # fatal auth/quota diagnosis — stop the whole run loudly
+        except Exception as e:  # noqa: BLE001 — transient network hiccup; move on
             log(f"  pagination stopped: {e}")
             break
         items.extend(payload.get("results", []))
+        got_any = True
         next_url, first = payload.get("next"), False
         time.sleep(0.9)  # stay well under 5,000 req/hr
     return items[:cap]
@@ -660,6 +680,7 @@ def build() -> dict:
 
 
 def main() -> int:
+    log(f"Federal Circuit Tracker pipeline {SCRIPT_VERSION}")
     if not CL_TOKEN:
         log("ERROR: COURTLISTENER_TOKEN is not set. Get a free token at "
             "https://www.courtlistener.com/profile/api-token/ and add it as a "
