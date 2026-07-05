@@ -35,7 +35,7 @@ import requests
 # Config
 # ----------------------------------------------------------------------------
 
-SCRIPT_VERSION = "v7-resilient (2026-07-05)"
+SCRIPT_VERSION = "v8-quotabreak (2026-07-05)"
 CL_BASE = "https://www.courtlistener.com/api/rest/v4"
 CAFC_SCHEDULED_URL = "https://www.cafc.uscourts.gov/home/oral-argument/scheduled-cases/"
 CAFC_OPINION_RSS = "https://www.cafc.uscourts.gov/category/opinion-order/feed/"
@@ -47,6 +47,8 @@ WINDOW_MONTHS = int(os.environ.get("WINDOW_MONTHS", "18"))   # rolling window of
 MAX_DOCKETS = int(os.environ.get("MAX_DOCKETS", "4000"))
 MAX_OPINION_TEXT_FETCHES = int(os.environ.get("MAX_OPINION_TEXT_FETCHES", "120"))
 REQUEST_TIMEOUT = 90
+RL_BUDGET_SECONDS = int(os.environ.get("RL_BUDGET_SECONDS", "240"))  # stop a source after ~4 min throttled
+QUOTA_EXHAUSTED = False  # set True once a source gives up on rate limiting
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / "data"
@@ -71,8 +73,13 @@ def cl_paginate(url: str, params: dict, cap: int, meta: dict = None) -> list:
     """Follow v4 cursor pagination until cap items or no `next`.
     If `meta` dict is passed, records {'complete': bool, 'reason': str} describing
     whether the full result set was retrieved or the run was cut short."""
+    global QUOTA_EXHAUSTED
+    if QUOTA_EXHAUSTED:  # a prior source already hit the wall this run; don't re-grind
+        if meta is not None:
+            meta["complete"], meta["reason"], meta["count"] = False, "quota exhausted", 0
+        return []
     items, next_url, first, backoff, strikes, got_any = [], url, True, 30, 0, False
-    complete, reason, timeouts = True, "ok", 0
+    complete, reason, timeouts, rl_waited = True, "ok", 0, 0
     while next_url and len(items) < cap:
         try:
             r = SESSION.get(next_url, params=params if first else None, timeout=REQUEST_TIMEOUT)
@@ -93,8 +100,16 @@ def cl_paginate(url: str, params: dict, cap: int, meta: dict = None) -> list:
                         "'https://www.courtlistener.com/api/rest/v4/dockets/?court=cafc&fields=id' "
                         "-o /dev/null -w 'HTTP %{http_code}\\n'\n"
                         "401 = bad token; 429 = wait one hour for the quota to reset.")
+                if rl_waited >= RL_BUDGET_SECONDS:
+                    log(f"  quota exhausted — spent {rl_waited}s throttled with no "
+                        f"progress; stopping this source. Wait ~1 hour and re-run; "
+                        f"the cache keeps what's already been fetched.")
+                    QUOTA_EXHAUSTED = True
+                    complete, reason = False, "quota exhausted"
+                    break
                 log(f"  rate limited; sleeping {backoff}s")
                 time.sleep(backoff)
+                rl_waited += backoff
                 backoff = min(backoff + 30, 120)
                 continue
             backoff, strikes = 30, 0
