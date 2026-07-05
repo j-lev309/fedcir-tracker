@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Federal Circuit Tracker</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F7F5F0; --card:#FCFBF8; --ink:#17202E; --federal:#22355C;
+  --stamp:#8C1F14; --steel:#68727F; --seal:#A88732; --line:#D9D4C8;
+  --serif:"STIX Two Text",Georgia,serif;
+  --sans:"Public Sans",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.5}
+a{color:var(--federal)}
+button{font-family:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--seal);outline-offset:2px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* ---------- masthead ---------- */
+header{border-bottom:3px double var(--federal);background:var(--card)}
+.mast{max-width:1060px;margin:0 auto;padding:22px 20px 16px;display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.mast h1{font-family:var(--serif);font-weight:700;font-size:clamp(20px,3.4vw,29px);letter-spacing:.01em}
+.mast h1 .fc{color:var(--stamp)}
+.mast .sub{font-family:var(--mono);font-size:11.5px;color:var(--steel);letter-spacing:.06em;text-transform:uppercase}
+.updated{font-family:var(--mono);font-size:12px;color:var(--steel)}
+.updated b{color:var(--ink);font-weight:500}
+
+/* ---------- stat strip ---------- */
+.stats{max-width:1060px;margin:0 auto;padding:14px 20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:0;border-bottom:1px solid var(--line)}
+.stat{padding:2px 14px;border-left:1px solid var(--line)}
+.stat:first-child{border-left:none;padding-left:0}
+.stat .n{font-family:var(--mono);font-size:22px;font-weight:600;color:var(--federal)}
+.stat .l{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--steel)}
+.stat.hot .n{color:var(--stamp)}
+
+/* ---------- controls ---------- */
+.controls{max-width:1060px;margin:0 auto;padding:16px 20px 6px}
+.viewtoggle{display:inline-flex;border:1px solid var(--federal);border-radius:3px;overflow:hidden;margin-bottom:14px}
+.viewtoggle button{padding:7px 18px;background:transparent;border:none;font-weight:600;font-size:13px;color:var(--federal);letter-spacing:.02em}
+.viewtoggle button.on{background:var(--federal);color:var(--card)}
+.tabs{display:flex;gap:2px;flex-wrap:wrap;border-bottom:1px solid var(--line)}
+.tabs button{background:none;border:none;padding:9px 13px 10px;font-size:13.5px;font-weight:600;color:var(--steel);border-bottom:3px solid transparent;margin-bottom:-1px}
+.tabs button.on{color:var(--ink);border-bottom-color:var(--seal)}
+.tabs button .ct{font-family:var(--mono);font-size:11px;color:var(--steel);font-weight:400}
+.chips{display:flex;gap:8px;flex-wrap:wrap;padding:12px 0 4px}
+.chips button{border:1px solid var(--line);background:var(--card);border-radius:99px;padding:5px 13px;font-size:12.5px;font-weight:500;color:var(--ink)}
+.chips button.on{background:var(--federal);border-color:var(--federal);color:#fff}
+.row2{display:flex;gap:10px;flex-wrap:wrap;padding:10px 0 4px;align-items:center}
+.row2 select,.row2 input{border:1px solid var(--line);background:var(--card);border-radius:3px;padding:7px 10px;font-size:13px;font-family:var(--sans);color:var(--ink)}
+.row2 input{flex:1;min-width:190px}
+.count{font-family:var(--mono);font-size:12px;color:var(--steel);margin-left:auto}
+
+/* ---------- case cards: the slip-opinion caption ---------- */
+main{max-width:1060px;margin:0 auto;padding:10px 20px 70px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:2px;padding:20px 22px 16px;margin:14px 0;position:relative;box-shadow:0 1px 0 rgba(23,32,46,.04)}
+.card .courtline{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--steel);margin-bottom:8px}
+.caption{font-family:var(--serif);font-size:clamp(16px,2.2vw,20px);font-weight:600;letter-spacing:.015em;padding-right:118px;font-variant:small-caps}
+.caption .vs{font-variant:normal;font-style:italic;font-weight:400;font-size:.85em;padding:0 .25em;color:var(--steel)}
+.meta{font-family:var(--mono);font-size:12px;color:var(--steel);margin-top:7px;display:flex;gap:14px;flex-wrap:wrap}
+.meta b{color:var(--ink);font-weight:500}
+
+.stamp{position:absolute;top:18px;right:18px;font-family:var(--mono);font-size:10.5px;font-weight:600;letter-spacing:.13em;border:2px solid var(--stamp);color:var(--stamp);padding:4px 9px;transform:rotate(2.5deg);border-radius:2px;background:rgba(140,31,20,.03)}
+.stamp.np{border-color:var(--steel);color:var(--steel);background:transparent}
+.stamp.r36{border-color:var(--federal);color:var(--federal)}
+.stamp.pend{border-style:dashed;border-color:var(--seal);color:var(--seal);transform:rotate(-2deg)}
+
+.timeline{display:flex;gap:0;margin:14px 0 4px;flex-wrap:wrap}
+.step{display:flex;align-items:center;gap:7px;font-size:12px;color:var(--steel);padding-right:16px;margin-right:16px;border-right:1px solid var(--line)}
+.step:last-child{border-right:none}
+.dot{width:9px;height:9px;border-radius:50%;border:1.5px solid var(--steel);background:transparent;flex:none}
+.step.done .dot{background:var(--federal);border-color:var(--federal)}
+.step.done{color:var(--ink)}
+.step .d{font-family:var(--mono);font-size:11.5px}
+
+.panel-line{font-family:var(--serif);font-size:14.5px;margin-top:10px;border-top:1px solid var(--line);padding-top:10px}
+.panel-line .before{font-style:italic;color:var(--steel)}
+.panel-line .j{font-variant:small-caps;font-weight:600}
+.panel-line .role{font-style:italic;font-size:.86em;color:var(--stamp)}
+.issues{margin-top:10px;display:flex;gap:6px;flex-wrap:wrap}
+.issue{font-family:var(--mono);font-size:11px;letter-spacing:.03em;background:var(--paper);border:1px solid var(--line);border-radius:2px;padding:3px 8px;color:var(--federal)}
+.links{margin-top:11px;display:flex;gap:16px;flex-wrap:wrap;font-size:13px;font-weight:600}
+.arg-note{margin-top:10px;font-size:13px;background:rgba(168,135,50,.08);border-left:3px solid var(--seal);padding:7px 11px;font-family:var(--mono);font-size:12px}
+
+/* ---------- calendar view ---------- */
+.dayhead{font-family:var(--serif);font-size:19px;font-weight:700;margin:28px 0 4px;padding-bottom:6px;border-bottom:2px solid var(--federal)}
+.dayhead .dow{color:var(--stamp)}
+.empty{padding:60px 0;text-align:center;color:var(--steel);font-family:var(--serif);font-style:italic;font-size:17px}
+.banner{max-width:1060px;margin:14px auto 0;padding:0 20px}
+.banner div{background:rgba(168,135,50,.1);border:1px solid var(--seal);border-radius:3px;padding:10px 14px;font-size:13px}
+.loadmore{display:block;margin:26px auto;background:none;border:1px solid var(--federal);color:var(--federal);border-radius:3px;padding:9px 26px;font-weight:600;font-size:13px}
+footer{border-top:1px solid var(--line);padding:18px 20px 40px;max-width:1060px;margin:0 auto;font-size:12px;color:var(--steel);line-height:1.7}
+@media(max-width:640px){.caption{padding-right:0;padding-top:30px}.stamp{top:12px;right:12px}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="mast">
+    <div>
+      <h1>Federal <span class="fc">Circuit</span> Tracker</h1>
+      <div class="sub">United States Court of Appeals · Docketed → Argued → Decided</div>
+    </div>
+    <div class="updated" id="updated">loading…</div>
+  </div>
+</header>
+
+<div class="banner" id="banner" hidden><div id="bannerText"></div></div>
+
+<section class="stats" id="stats" aria-label="Case statistics"></section>
+
+<section class="controls">
+  <div class="viewtoggle" role="tablist">
+    <button id="vCases" class="on" onclick="setView('cases')">Cases</button>
+    <button id="vCal" onclick="setView('calendar')">Argument Calendar</button>
+  </div>
+  <div class="tabs" id="typeTabs"></div>
+  <div class="chips" id="issueChips" hidden></div>
+  <div class="row2">
+    <select id="statusSel" aria-label="Filter by status">
+      <option value="">All statuses</option>
+      <option>Pending / Briefing</option>
+      <option>Argument Scheduled</option>
+      <option>Argued — Awaiting Decision</option>
+      <option>Decided</option>
+    </select>
+    <select id="precSel" aria-label="Filter by disposition">
+      <option value="">All dispositions</option>
+      <option value="prec">Precedential</option>
+      <option value="nonprec">Nonprecedential</option>
+      <option value="r36">Rule 36</option>
+    </select>
+    <select id="judgeSel" aria-label="Filter by judge"><option value="">All judges</option></select>
+    <input id="search" type="search" placeholder="Search caption, docket no., origin…" aria-label="Search cases">
+    <span class="count" id="count"></span>
+  </div>
+</section>
+
+<main id="main"><div class="empty">Loading docket…</div></main>
+
+<footer>
+  Data: <a href="https://www.courtlistener.com" target="_blank" rel="noopener">CourtListener / Free Law Project</a> and
+  <a href="https://www.cafc.uscourts.gov" target="_blank" rel="noopener">cafc.uscourts.gov</a> (Scheduled Cases &amp; Opinions RSS).
+  Refreshed twice each weekday via GitHub Actions.
+  <br>Note: the Federal Circuit discloses panel composition only one hour before argument, so panels appear here once a case is argued or decided.
+  Coverage of not-yet-decided appeals depends on RECAP contributions and may be incomplete. This is a personal research tool, not legal advice.
+</footer>
+
+<script>
+const ISSUE_ORDER = ["§ 101 Eligibility","§§ 102/103 Prior Art","§ 112 / Claim Construction","PTAB Procedure & Standing","Damages & Remedies","Other / Procedural"];
+const TYPE_ORDER  = ["Patent (PTAB)","Patent (District Ct.)","ITC / § 337","Trade (CIT)","Veterans","Federal Claims","Federal Employment","Other / Unclassified"];
+let DATA=null, view="cases", typeF="", issueF="", shown=60;
+
+const $ = id => document.getElementById(id);
+const esc = s => String(s??"").replace(/[&<>"']/g, c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const fmtD = d => d ? new Date(d+"T12:00:00").toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"}) : "—";
+
+async function load(){
+  try{
+    const r = await fetch("data/cases.json",{cache:"no-store"});
+    DATA = await r.json();
+  }catch(e){
+    $("main").innerHTML = '<div class="empty">Could not load data/cases.json — has the first Actions run completed?</div>';
+    return;
+  }
+  if(DATA.generated_at==="sample"){
+    $("banner").hidden=false;
+    $("bannerText").innerHTML="<b>Sample data.</b> These are placeholder cases so you can preview the layout. Add your <code>COURTLISTENER_TOKEN</code> secret and run the <i>Update Federal Circuit data</i> workflow once — real cases will replace this automatically.";
+    $("updated").innerHTML="sample preview";
+  }else{
+    $("updated").innerHTML="Last updated <b>"+new Date(DATA.generated_at).toLocaleString("en-US",{month:"short",day:"numeric",hour:"numeric",minute:"2-digit"})+"</b>";
+  }
+  buildStats(); buildTabs(); buildChips(); buildJudges();
+  ["statusSel","precSel","judgeSel"].forEach(id=>$(id).addEventListener("change",()=>{shown=60;render();}));
+  $("search").addEventListener("input",()=>{shown=60;render();});
+  render();
+}
+
+function buildStats(){
+  const s=DATA.stats||{};
+  const items=[["Tracked",s.total],["Pending",s.pending],["Arg. Scheduled",s.scheduled,true],["Awaiting Op.",s.awaiting],["Decided",s.decided],["Precedential",s.precedential],["Rule 36",s.rule36]];
+  $("stats").innerHTML=items.map(([l,n,hot])=>`<div class="stat${hot?" hot":""}"><div class="n">${n??0}</div><div class="l">${l}</div></div>`).join("");
+}
+
+function buildTabs(){
+  const counts={};
+  DATA.cases.forEach(c=>counts[c.case_type]=(counts[c.case_type]||0)+1);
+  const types=TYPE_ORDER.filter(t=>counts[t]).concat(Object.keys(counts).filter(t=>!TYPE_ORDER.includes(t)));
+  $("typeTabs").innerHTML=`<button class="${typeF===""?"on":""}" data-t="">All <span class="ct">${DATA.cases.length}</span></button>`+
+    types.map(t=>`<button class="${typeF===t?"on":""}" data-t="${esc(t)}">${esc(t)} <span class="ct">${counts[t]}</span></button>`).join("");
+  [...$("typeTabs").children].forEach(b=>b.onclick=()=>{typeF=b.dataset.t;issueF="";shown=60;buildTabs();buildChips();render();});
+}
+
+function buildChips(){
+  const isPatent = typeF.startsWith("Patent")||typeF.startsWith("ITC")||typeF==="";
+  const present=new Set(); DATA.cases.forEach(c=>(c.patent_issues||[]).forEach(i=>present.add(i)));
+  const issues=ISSUE_ORDER.filter(i=>present.has(i));
+  if(!isPatent||!issues.length){$("issueChips").hidden=true;return;}
+  $("issueChips").hidden=false;
+  $("issueChips").innerHTML=issues.map(i=>`<button class="${issueF===i?"on":""}" data-i="${esc(i)}">${esc(i)}</button>`).join("");
+  [...$("issueChips").children].forEach(b=>b.onclick=()=>{issueF=(issueF===b.dataset.i?"":b.dataset.i);shown=60;buildChips();render();});
+}
+
+function buildJudges(){
+  const names=new Set();
+  DATA.cases.forEach(c=>(c.panel||[]).forEach(p=>{const n=cleanJudge(p.name);if(n)names.add(n);}));
+  $("judgeSel").innerHTML='<option value="">All judges</option>'+[...names].sort().map(n=>`<option>${esc(n)}</option>`).join("");
+}
+
+function cleanJudge(n){
+  return String(n||"").replace(/,?\s*(Chief |Circuit |District |Senior )?Judge.*/i,"").replace(/^(Judge|Hon\.?)\s+/i,"").trim();
+}
+
+function decoKind(c){
+  const d=c.decision||{};
+  if(/rule\s*36/i.test(d.disposition||""))return "r36";
+  const p=(d.precedential_status||"").toLowerCase();
+  if(p.startsWith("pub")||p==="precedential")return "prec";
+  if(p)return "nonprec";
+  return "";
+}
+
+function filtered(){
+  const st=$("statusSel").value, pr=$("precSel").value, jg=$("judgeSel").value,
+        q=$("search").value.trim().toLowerCase();
+  return DATA.cases.filter(c=>{
+    if(typeF && c.case_type!==typeF)return false;
+    if(issueF && !(c.patent_issues||[]).includes(issueF))return false;
+    if(st && c.status!==st)return false;
+    if(pr && decoKind(c)!==pr)return false;
+    if(jg && !(c.panel||[]).some(p=>cleanJudge(p.name)===jg))return false;
+    if(q){
+      const hay=[c.case_name,c.docket_number,c.origin,(c.decision||{}).disposition,
+                 ...(c.panel||[]).map(p=>p.name)].join(" ").toLowerCase();
+      if(!hay.includes(q))return false;
+    }
+    return true;
+  });
+}
+
+function captionHTML(name){
+  const m=String(name||"").split(/\s+v\.?\s+/i);
+  if(m.length===2)return `${esc(m[0])}<span class="vs">v.</span>${esc(m[1])}`;
+  return esc(name);
+}
+
+function panelHTML(c){
+  const p=c.panel||[]; if(!p.length)return "";
+  const seen=new Set(), parts=[];
+  p.forEach(j=>{
+    const n=cleanJudge(j.name); if(!n||seen.has(n.toLowerCase()))return;
+    seen.add(n.toLowerCase());
+    const role=(j.role&&!["Panel","Joined","Author","Opinion"].includes(j.role))?` <span class="role">(${esc(j.role)})</span>`
+              :(j.role==="Author"?' <span class="role">(author)</span>':"");
+    parts.push(`<span class="j">${esc(n)}</span>${role}`);
+  });
+  if(!parts.length)return "";
+  const list = parts.length>1 ? parts.slice(0,-1).join(", ")+" and "+parts.at(-1) : parts[0];
+  return `<div class="panel-line"><span class="before">Before</span> ${list}<span class="before">${parts.length>1?", Circuit Judges":""}</span></div>`;
+}
+
+function cardHTML(c){
+  const d=c.decision||{}, kind=decoKind(c);
+  let stamp="";
+  if(kind==="prec")stamp='<div class="stamp">PRECEDENTIAL</div>';
+  else if(kind==="r36")stamp='<div class="stamp r36">RULE 36</div>';
+  else if(kind==="nonprec")stamp='<div class="stamp np">NONPRECEDENTIAL</div>';
+  else if(c.status==="Argument Scheduled")stamp='<div class="stamp pend">ARG. SCHEDULED</div>';
+  else if(c.status.startsWith("Argued"))stamp='<div class="stamp pend">SUB JUDICE</div>';
+
+  const steps=[
+    ["Docketed",c.date_filed,!!c.date_filed],
+    ["Argued",c.date_argued||(c.argument||{}).date,!!c.date_argued||c.status.startsWith("Argued")||(c.argument&&c.argument.date<=new Date().toISOString().slice(0,10))],
+    ["Decided",d.date,c.status==="Decided"],
+  ].map(([l,dt,done])=>`<div class="step${done?" done":""}"><span class="dot"></span>${l}<span class="d">${fmtD(dt)}</span></div>`).join("");
+
+  const arg=c.argument;
+  const argNote=(arg&&c.status!=="Decided")?`<div class="arg-note">ORAL ARGUMENT — ${fmtD(arg.date)}${arg.time?" · "+esc(arg.time):""}${arg.courtroom?" · "+esc(arg.courtroom):""} · panel posted 1 hr before argument</div>`:"";
+
+  const issues=(c.patent_issues||[]).map(i=>`<span class="issue">${esc(i)}</span>`).join("");
+  const links=[
+    d.url_pdf?`<a href="${esc(d.url_pdf)}" target="_blank" rel="noopener">Opinion PDF ↗</a>`:"",
+    d.url_cl?`<a href="${esc(d.url_cl)}" target="_blank" rel="noopener">CourtListener ↗</a>`:(c.url_cl?`<a href="${esc(c.url_cl)}" target="_blank" rel="noopener">Docket ↗</a>`:""),
+    c.url_audio?`<a href="${esc(c.url_audio)}" target="_blank" rel="noopener">Argument audio ↗</a>`:"",
+  ].filter(Boolean).join("");
+
+  return `<article class="card">
+    ${stamp}
+    <div class="courtline">Fed. Cir. · No. ${esc(c.docket_number||"—")}${c.origin?" · from "+esc(c.origin):""}</div>
+    <div class="caption">${captionHTML(c.case_name)}</div>
+    <div class="meta"><span>Status <b>${esc(c.status)}</b></span>${d.disposition?`<span>Disposition <b>${esc(d.disposition)}</b></span>`:""}<span>Type <b>${esc(c.case_type)}</b></span></div>
+    <div class="timeline">${steps}</div>
+    ${argNote}
+    ${panelHTML(c)}
+    ${issues?`<div class="issues">${issues}</div>`:""}
+    ${links?`<div class="links">${links}</div>`:""}
+  </article>`;
+}
+
+function render(){
+  const list=filtered();
+  $("count").textContent=list.length+" case"+(list.length===1?"":"s");
+  if(view==="calendar"){renderCalendar(list);return;}
+  if(!list.length){$("main").innerHTML='<div class="empty">No cases match these filters.</div>';return;}
+  let html=list.slice(0,shown).map(cardHTML).join("");
+  if(list.length>shown)html+='<button class="loadmore" onclick="shown+=60;render()">Show more ('+(list.length-shown)+' remaining)</button>';
+  $("main").innerHTML=html;
+}
+
+function renderCalendar(list){
+  const today=new Date().toISOString().slice(0,10);
+  const up=list.filter(c=>c.argument&&c.argument.date>=today&&c.status!=="Decided")
+               .sort((a,b)=>a.argument.date.localeCompare(b.argument.date));
+  if(!up.length){$("main").innerHTML='<div class="empty">No upcoming arguments match these filters — the next Scheduled Cases PDF may not be posted yet.</div>';return;}
+  let html="",cur="";
+  up.forEach(c=>{
+    if(c.argument.date!==cur){
+      cur=c.argument.date;
+      const dt=new Date(cur+"T12:00:00");
+      html+=`<div class="dayhead"><span class="dow">${dt.toLocaleDateString("en-US",{weekday:"long"})}</span>, ${dt.toLocaleDateString("en-US",{month:"long",day:"numeric",year:"numeric"})}</div>`;
+    }
+    html+=cardHTML(c);
+  });
+  $("main").innerHTML=html;
+}
+
+function setView(v){
+  view=v;
+  $("vCases").classList.toggle("on",v==="cases");
+  $("vCal").classList.toggle("on",v==="calendar");
+  render();
+}
+
+load();
+</script>
+</body>
+</html>
