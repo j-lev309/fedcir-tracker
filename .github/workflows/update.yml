@@ -1,0 +1,46 @@
+name: Update Federal Circuit data
+
+on:
+  schedule:
+    # Weekdays at 15:45 UTC (11:45 a.m. ET) and 21:00 UTC (5:00 p.m. ET).
+    # CAFC dockets opinions between 8:30–11:00 a.m. ET, so the first run
+    # catches the morning release and the second sweeps up stragglers.
+    - cron: "45 15 * * 1-5"
+    - cron: "0 21 * * 1-5"
+  workflow_dispatch: {}   # lets you trigger a refresh manually from the Actions tab
+
+permissions:
+  contents: write
+
+concurrency:
+  group: data-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r scripts/requirements.txt
+
+      - name: Run pipeline
+        env:
+          COURTLISTENER_TOKEN: ${{ secrets.COURTLISTENER_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}   # optional
+        run: python scripts/update.py
+
+      - name: Commit refreshed data
+        run: |
+          git config user.name "fedcir-tracker-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/
+          git diff --cached --quiet && echo "No changes" && exit 0
+          git commit -m "data: refresh $(date -u +%F)"
+          git push
