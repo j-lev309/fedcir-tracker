@@ -68,14 +68,16 @@ def log(msg: str) -> None:
 
 def cl_paginate(url: str, params: dict, cap: int) -> list:
     """Follow v4 cursor pagination until cap items or no `next`."""
-    items, next_url, first = [], url, True
+    items, next_url, first, backoff = [], url, True, 30
     while next_url and len(items) < cap:
         try:
             r = SESSION.get(next_url, params=params if first else None, timeout=REQUEST_TIMEOUT)
             if r.status_code == 429:
-                log("  rate limited; sleeping 30s")
-                time.sleep(30)
+                log(f"  rate limited; sleeping {backoff}s")
+                time.sleep(backoff)
+                backoff = min(backoff + 30, 120)
                 continue
+            backoff = 30
             r.raise_for_status()
             payload = r.json()
         except Exception as e:  # noqa: BLE001
@@ -83,7 +85,7 @@ def cl_paginate(url: str, params: dict, cap: int) -> list:
             break
         items.extend(payload.get("results", []))
         next_url, first = payload.get("next"), False
-        time.sleep(0.4)  # be a polite API citizen
+        time.sleep(0.9)  # stay well under 5,000 req/hr
     return items[:cap]
 
 
@@ -155,9 +157,16 @@ def fetch_audio(since: str) -> list:
 def fetch_opinion_text(opinion_id: int) -> str:
     """Plain text of one opinion (for issue classification). Capped by caller."""
     try:
+        time.sleep(0.9)  # pacing: these add up during the summary backfill
         r = SESSION.get(f"{CL_BASE}/opinions/{opinion_id}/",
                         params={"fields": "plain_text,html_with_citations"},
                         timeout=REQUEST_TIMEOUT)
+        if r.status_code == 429:
+            log("  rate limited on opinion text; sleeping 60s")
+            time.sleep(60)
+            r = SESSION.get(f"{CL_BASE}/opinions/{opinion_id}/",
+                            params={"fields": "plain_text,html_with_citations"},
+                            timeout=REQUEST_TIMEOUT)
         r.raise_for_status()
         d = r.json()
         text = d.get("plain_text") or ""
