@@ -350,10 +350,8 @@ def classify_issues_keywords(text: str) -> list:
     return [lbl for _, lbl in sorted(found, reverse=True)]
 
 
-def classify_issues_claude(case_name: str, text: str, cache: dict, key: str) -> list:
+def classify_issues_claude(case_name: str, text: str) -> list:
     """Optional fallback via Claude for opinions the keyword pass missed."""
-    if key in cache:
-        return cache[key]
     if not ANTHROPIC_KEY or not text:
         return []
     buckets = list(ISSUE_RULES.keys()) + ["Other"]
@@ -379,8 +377,35 @@ def classify_issues_claude(case_name: str, text: str, cache: dict, key: str) -> 
     except Exception as e:  # noqa: BLE001
         log(f"  Claude classify failed: {e}")
         labels = []
-    cache[key] = labels
     return labels
+
+
+def summarize_claude(case_name: str, text: str) -> str | None:
+    """2–3 sentence neutral summary of a decision. Requires ANTHROPIC_API_KEY."""
+    if not ANTHROPIC_KEY or not text or len(text) < 400:
+        return None
+    prompt = (
+        "Summarize this Federal Circuit decision in 2-3 sentences for a law-student "
+        "reader: state the disposition/holding and the key reasoning. Be neutral, "
+        "specific, and concrete (name the statute/doctrine at issue). No preamble, "
+        "no markdown — just the sentences.\n\n"
+        f"Case: {case_name}\n\nOpinion text:\n{text[:14000]}"
+    )
+    try:
+        r = requests.post(
+            "https://api.anthropic.com/v1/messages",
+            headers={"x-api-key": ANTHROPIC_KEY, "anthropic-version": "2023-06-01",
+                     "content-type": "application/json"},
+            json={"model": "claude-haiku-4-5", "max_tokens": 300,
+                  "messages": [{"role": "user", "content": prompt}]},
+            timeout=90,
+        )
+        r.raise_for_status()
+        out = "".join(b.get("text", "") for b in r.json().get("content", [])).strip()
+        return out[:1200] or None
+    except Exception as e:  # noqa: BLE001
+        log(f"  Claude summary failed: {e}")
+        return None
 
 
 # ----------------------------------------------------------------------------
@@ -471,7 +496,7 @@ def build() -> dict:
             status = "Pending / Briefing"
 
         # ---- decision block ---------------------------------------------
-        decision, panel, opinion_text = None, [], ""
+        decision, panel = None, []
         if lead_cluster:
             prec = (lead_cluster.get("precedential_status") or "").title()
             cluster_ops = ops_by_cluster.get(lead_cluster["id"], [])
@@ -498,7 +523,8 @@ def build() -> dict:
                 "date": lead_cluster.get("date_filed"),
                 "precedential_status": prec or None,
                 "disposition": dispo or None,
-                "url_cl": "https://www.courtlistener.com" + (lead_cluster.get("absolute_url") or ""),
+                "url_cl": ("https://www.courtlistener.com" + lead_cluster["absolute_url"])
+                          if lead_cluster.get("absolute_url") else None,
                 "url_pdf": pdf or (rss_hit.get("url") or None),
             }
         elif dn in rss:  # released today; CL hasn't ingested yet
@@ -516,30 +542,46 @@ def build() -> dict:
             for j in split_judges(audio_by_docket[did].get("judges") or ""):
                 panel.append({"name": j, "role": "Panel"})
 
-        # ---- patent issue classification ----------------------------------
-        issues = []
-        if case_type.startswith(("Patent", "ITC")):
+        # ---- opinion enrichment: patent issues + case summary --------------
+        issues, summary = [], None
+        is_patent = case_type.startswith(("Patent", "ITC"))
+        is_r36 = bool(decision and re.search(
+            r"rule\s*36", str(decision.get("disposition") or ""), re.I))
+        lead_ops = ops_by_cluster.get(lead_cluster["id"], []) if lead_cluster else []
+        cache_key = f"op-{lead_ops[0]['id']}" if lead_ops else None
+
+        cached = cache.get(cache_key) if cache_key else None
+        if isinstance(cached, list):          # migrate pre-summary cache format
+            cached = {"issues": cached, "summary": None}
+        if cached:
+            issues = cached.get("issues") or []
+            summary = cached.get("summary")
+
+        if is_patent and not issues:          # cheap pass before spending a fetch
             seed_text = " ".join(str(x or "") for x in (
                 (lead_cluster or {}).get("syllabus"), (lead_cluster or {}).get("headnotes"),
                 (lead_cluster or {}).get("disposition"), d.get("case_name")))
             issues = classify_issues_keywords(seed_text)
-            if not issues and lead_cluster and text_fetches < MAX_OPINION_TEXT_FETCHES:
-                lead_ops = ops_by_cluster.get(lead_cluster["id"], [])
-                if lead_ops:
-                    cache_key = f"op-{lead_ops[0]['id']}"
-                    if cache_key in cache:
-                        issues = cache[cache_key]
-                    else:
-                        opinion_text = fetch_opinion_text(lead_ops[0]["id"])
-                        text_fetches += 1
-                        issues = classify_issues_keywords(opinion_text)
-                        if not issues:
-                            issues = classify_issues_claude(
-                                d.get("case_name") or dn, opinion_text, cache, cache_key)
-                        else:
-                            cache[cache_key] = issues
-            if not issues and status == "Decided":
-                issues = ["Other / Procedural"]
+
+        need_issues = is_patent and not issues and bool(lead_ops)
+        need_summary = (bool(ANTHROPIC_KEY) and decision is not None
+                        and not summary and not is_r36 and bool(lead_ops))
+        if cache_key and (need_issues or need_summary) \
+                and text_fetches < MAX_OPINION_TEXT_FETCHES:
+            opinion_text = fetch_opinion_text(lead_ops[0]["id"])
+            text_fetches += 1
+            if need_issues and opinion_text:
+                issues = (classify_issues_keywords(opinion_text)
+                          or classify_issues_claude(d.get("case_name") or dn, opinion_text))
+            if need_summary:
+                summary = summarize_claude(d.get("case_name") or dn, opinion_text)
+            cache[cache_key] = {"issues": issues, "summary": summary}
+
+        if is_r36 and not summary:
+            summary = ("Judgment of the tribunal below summarily affirmed without "
+                       "opinion under Federal Circuit Rule 36.")
+        if is_patent and not issues and status == "Decided":
+            issues = ["Other / Procedural"]
 
         cases.append({
             "docket_number": dn,
@@ -553,7 +595,9 @@ def build() -> dict:
             "decision": decision,
             "panel": panel,
             "patent_issues": issues,
-            "url_cl": "https://www.courtlistener.com" + (d.get("absolute_url") or ""),
+            "summary": summary,
+            "url_cl": ("https://www.courtlistener.com" + d["absolute_url"])
+                      if d.get("absolute_url") else None,
             "url_audio": ("https://www.courtlistener.com" +
                           audio_by_docket[did]["absolute_url"])
                          if did in audio_by_docket and audio_by_docket[did].get("absolute_url")
@@ -569,7 +613,8 @@ def build() -> dict:
                 "case_type": "Other / Unclassified", "origin": None,
                 "status": "Argument Scheduled", "date_filed": None,
                 "date_argued": None, "argument": s, "decision": None,
-                "panel": [], "patent_issues": [], "url_cl": None, "url_audio": None,
+                "panel": [], "patent_issues": [], "summary": None,
+                "url_cl": None, "url_audio": None,
             })
 
     cases.sort(key=lambda c: (c.get("decision") or {}).get("date")
