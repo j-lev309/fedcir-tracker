@@ -240,7 +240,7 @@ function buildScope(){
       <div style="margin-top:5px;display:grid;gap:3px">${srcRows}</div>
       <div style="margin-top:11px;font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--steel)">Case summaries</div>
       <div style="margin-top:3px">${summaryLine}</div>
-      ${!c.complete?`<div class="note">One source was cut short this run (usually a network timeout on CourtListener). The dashboard shows everything retrieved so far; the next scheduled run fills in the gap automatically — no action needed.</div>`:""}
+      ${!c.complete?`<div class="note">${Object.values(c.sources||{}).some(m=>m.reason==="quota exhausted")?"The CourtListener hourly request quota was used up mid-run (common after several runs close together). Everything fetched before that is shown below. Wait about an hour, then re-run — the cache keeps what's already been retrieved, so it resumes rather than starting over.":"One source was cut short this run (usually a network timeout on CourtListener). The dashboard shows everything retrieved so far; the next scheduled run fills in the gap automatically — no action needed."}</div>`:""}
       <div class="note">Panels appear once a case is argued or decided — the court discloses them one hour before argument. Pending-appeal coverage depends on RECAP; everything argued or decided is captured.</div>
     </div>
   </details>`;
