@@ -1,6 +1,53 @@
 {
- "generated_at": "2026-07-05T19:22:36+00:00",
- "window_since": "2025-01-11",
+ "generated_at": "2026-07-06T18:14:08+00:00",
+ "window_since": "2025-01-12",
+ "coverage": {
+  "complete": false,
+  "window_since": "2025-01-12",
+  "window_months": 18,
+  "sources": {
+   "dockets": {
+    "complete": false,
+    "reason": "network timeouts",
+    "count": 0
+   },
+   "clusters": {
+    "complete": false,
+    "reason": "quota exhausted",
+    "count": 300
+   },
+   "opinions": {
+    "complete": false,
+    "reason": "quota exhausted",
+    "count": 0
+   },
+   "audio": {
+    "complete": false,
+    "reason": "quota exhausted",
+    "count": 0
+   },
+   "scheduled_arguments": {
+    "count": 0,
+    "complete": true,
+    "reason": "ok"
+   },
+   "opinion_rss": {
+    "count": 100,
+    "complete": true,
+    "reason": "ok"
+   }
+  },
+  "summaries": {
+   "enabled": false,
+   "have": 0,
+   "expected": 0,
+   "complete": true
+  },
+  "opinion_text_fetches_this_run": 0,
+  "opinion_text_fetch_cap": 120,
+  "latest_decision_date": null,
+  "next_argument_date": null
+ },
  "stats": {
   "total": 0,
   "pending": 0,
