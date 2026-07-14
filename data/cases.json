@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-07-14T17:15:47+00:00",
+ "generated_at": "2026-07-14T22:17:13+00:00",
  "window_since": "2025-01-20",
  "coverage": {
   "complete": false,
@@ -13,13 +13,13 @@
    },
    "clusters": {
     "complete": false,
-    "reason": "network timeouts",
-    "count": 0
+    "reason": "quota exhausted",
+    "count": 1000
    },
    "opinions": {
     "complete": false,
     "reason": "quota exhausted",
-    "count": 1000
+    "count": 0
    },
    "audio": {
     "complete": false,
