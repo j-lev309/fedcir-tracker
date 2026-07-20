@@ -35,7 +35,7 @@ import requests
 # Config
 # ----------------------------------------------------------------------------
 
-SCRIPT_VERSION = "v8-quotabreak (2026-07-05)"
+SCRIPT_VERSION = "v9-incremental (2026-07-20)"
 CL_BASE = "https://www.courtlistener.com/api/rest/v4"
 CAFC_SCHEDULED_URL = "https://www.cafc.uscourts.gov/home/oral-argument/scheduled-cases/"
 CAFC_OPINION_RSS = "https://www.cafc.uscourts.gov/category/opinion-order/feed/"
@@ -49,11 +49,24 @@ MAX_OPINION_TEXT_FETCHES = int(os.environ.get("MAX_OPINION_TEXT_FETCHES", "120")
 REQUEST_TIMEOUT = 90
 RL_BUDGET_SECONDS = int(os.environ.get("RL_BUDGET_SECONDS", "240"))  # stop a source after ~4 min throttled
 QUOTA_EXHAUSTED = False  # set True once a source gives up on rate limiting
+FIRST_SOURCE = True      # only the run's first source treats instant throttling as fatal
+
+# --- incremental fetching -----------------------------------------------
+# Re-pulling the whole window every run starved the later sources (opinions,
+# audio) of quota. Instead each source records how far it got, and subsequent
+# runs fetch only what's new — with a per-source page budget so no single
+# source can consume the entire hourly quota, and rotating priority so every
+# source gets to go first regularly.
+INCREMENTAL = os.environ.get("INCREMENTAL", "1") != "0"
+PAGE_BUDGET = int(os.environ.get("PAGE_BUDGET", "12"))       # max pages per source per run
+BACKFILL_OVERLAP_DAYS = 3   # re-scan a few days back to catch late-posted records
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / "data"
 OUT_PATH = DATA_DIR / "cases.json"
 CACHE_PATH = DATA_DIR / "issue_cache.json"
+STATE_PATH = DATA_DIR / "state.json"      # per-source high-water marks
+STORE_PATH = DATA_DIR / "store.json"      # accumulated raw records across runs
 
 SESSION = requests.Session()
 SESSION.headers.update({"User-Agent": "fedcir-tracker (personal research dashboard)"})
@@ -69,15 +82,18 @@ def log(msg: str) -> None:
 # CourtListener helpers
 # ----------------------------------------------------------------------------
 
-def cl_paginate(url: str, params: dict, cap: int, meta: dict = None) -> list:
-    """Follow v4 cursor pagination until cap items or no `next`.
+def cl_paginate(url: str, params: dict, cap: int, meta: dict = None,
+                page_budget: int = None) -> list:
+    """Follow v4 cursor pagination until cap items, page_budget pages, or no `next`.
     If `meta` dict is passed, records {'complete': bool, 'reason': str} describing
-    whether the full result set was retrieved or the run was cut short."""
-    global QUOTA_EXHAUSTED
+    whether the full result set was retrieved or the run was cut short.
+    page_budget prevents one source from consuming the entire hourly quota."""
+    global QUOTA_EXHAUSTED, FIRST_SOURCE
     if QUOTA_EXHAUSTED:  # a prior source already hit the wall this run; don't re-grind
         if meta is not None:
             meta["complete"], meta["reason"], meta["count"] = False, "quota exhausted", 0
         return []
+    pages = 0
     items, next_url, first, backoff, strikes, got_any = [], url, True, 30, 0, False
     complete, reason, timeouts, rl_waited = True, "ok", 0, 0
     while next_url and len(items) < cap:
@@ -92,14 +108,24 @@ def cl_paginate(url: str, params: dict, cap: int, meta: dict = None) -> list:
             if r.status_code == 429:
                 strikes += 1
                 if not got_any and strikes >= 3:
-                    raise RuntimeError(
-                        "Rate limited on the very first requests with no success. "
-                        "Either the token is invalid (treated as anonymous) or this "
-                        "token's hourly quota is exhausted from prior runs. Verify with:\n"
-                        "  curl -s -H 'Authorization: Token <TOKEN>' "
-                        "'https://www.courtlistener.com/api/rest/v4/dockets/?court=cafc&fields=id' "
-                        "-o /dev/null -w 'HTTP %{http_code}\\n'\n"
-                        "401 = bad token; 429 = wait one hour for the quota to reset.")
+                    if FIRST_SOURCE:
+                        # Nothing has succeeded all run — likely a bad token or a
+                        # fully spent quota. Worth failing loudly with a diagnosis.
+                        raise RuntimeError(
+                            "Rate limited on the very first requests with no success. "
+                            "Either the token is invalid (treated as anonymous) or this "
+                            "token's hourly quota is exhausted from prior runs. Verify with:\n"
+                            "  curl -s -H 'Authorization: Token <TOKEN>' "
+                            "'https://www.courtlistener.com/api/rest/v4/dockets/?court=cafc&fields=id' "
+                            "-o /dev/null -w 'HTTP %{http_code}\\n'\n"
+                            "401 = bad token; 429 = wait one hour for the quota to reset.")
+                    # A later source: earlier data is good, so keep it and move on
+                    # rather than throwing the whole run away.
+                    log("  throttled before any results; skipping this source "
+                        "(earlier data retained) — it goes first next run")
+                    QUOTA_EXHAUSTED = True
+                    complete, reason = False, "quota exhausted"
+                    break
                 if rl_waited >= RL_BUDGET_SECONDS:
                     log(f"  quota exhausted — spent {rl_waited}s throttled with no "
                         f"progress; stopping this source. Wait ~1 hour and re-run; "
@@ -133,13 +159,19 @@ def cl_paginate(url: str, params: dict, cap: int, meta: dict = None) -> list:
             break
         items.extend(payload.get("results", []))
         got_any = True
+        pages += 1
         timeouts = 0  # reset per-page timeout counter after a success
         next_url, first = payload.get("next"), False
+        if page_budget and pages >= page_budget and next_url:
+            complete, reason = False, "page budget reached"
+            log(f"  page budget ({page_budget}) reached — resuming next run")
+            break
         time.sleep(0.9)  # stay well under 5,000 req/hr
     if len(items) >= cap and next_url:
         complete, reason = False, "hit cap"
     if meta is not None:
         meta["complete"], meta["reason"], meta["count"] = complete, reason, len(items)
+    FIRST_SOURCE = False  # subsequent sources degrade gracefully instead of raising
     return items[:cap]
 
 
@@ -153,7 +185,7 @@ def fetch_dockets(since: str, meta: dict = None) -> list:
     items = cl_paginate(
         f"{CL_BASE}/dockets/",
         {"court": "cafc", "date_filed__gte": since, "order_by": "-date_filed", "fields": fields},
-        MAX_DOCKETS, meta,
+        MAX_DOCKETS, meta, PAGE_BUDGET,
     )
     log(f"  {len(items)} dockets")
     return items
@@ -171,13 +203,13 @@ def fetch_clusters(since: str, meta: dict = None) -> list:
         f"{CL_BASE}/clusters/",
         {"docket__court": "cafc", "date_filed__gte": since,
          "order_by": "-date_filed", "fields": fields},
-        MAX_DOCKETS, meta,
+        MAX_DOCKETS, meta, PAGE_BUDGET,
     )
     log(f"  {len(items)} clusters")
     return items
 
 
-def fetch_opinions(since: str, meta: dict = None) -> list:
+def fetch_opinions(since: str, meta: dict = None, after_id: int = 0) -> list:
     """Individual opinions — author, joined-by, and lead/concurrence/dissent type."""
     log("Fetching CAFC opinions (authorship / roles) …")
     fields = ",".join([
@@ -187,14 +219,15 @@ def fetch_opinions(since: str, meta: dict = None) -> list:
     items = cl_paginate(
         f"{CL_BASE}/opinions/",
         {"cluster__docket__court": "cafc", "cluster__date_filed__gte": since,
-         "order_by": "-id", "fields": fields},
-        MAX_DOCKETS, meta,
+         "order_by": "id" if INCREMENTAL else "-id", "fields": fields,
+         **({"id__gt": after_id} if (INCREMENTAL and after_id) else {})},
+        MAX_DOCKETS, meta, PAGE_BUDGET,
     )
     log(f"  {len(items)} opinions")
     return items
 
 
-def fetch_audio(since: str, meta: dict = None) -> list:
+def fetch_audio(since: str, meta: dict = None, after_id: int = 0) -> list:
     """Oral-argument recordings — confirms argued dates and panel names.
     Note: the v4 audio endpoint doesn't support docket__date_argued__gte,
     so we filter by the recording's own date_created (argument day)."""
@@ -203,8 +236,9 @@ def fetch_audio(since: str, meta: dict = None) -> list:
     items = cl_paginate(
         f"{CL_BASE}/audio/",
         {"docket__court": "cafc", "date_created__gte": since,
-         "order_by": "-date_created", "fields": fields},
-        2000, meta,
+         "order_by": "id" if INCREMENTAL else "-date_created", "fields": fields,
+         **({"id__gt": after_id} if (INCREMENTAL and after_id) else {})},
+        2000, meta, PAGE_BUDGET,
     )
     log(f"  {len(items)} recordings")
     return items
@@ -503,6 +537,26 @@ def split_judges(s: str) -> list:
 # Assembly
 # ----------------------------------------------------------------------------
 
+def _load_json(path: Path, default):
+    try:
+        return json.loads(path.read_text())
+    except Exception:  # noqa: BLE001 — missing or corrupt: start fresh
+        return default
+
+
+def _merge_store(store: dict, key: str, new_records: list, id_field: str = "id") -> list:
+    """Merge newly fetched records into the persisted store, de-duped by id.
+    Newer records replace older ones with the same id. Returns the full set."""
+    existing = {str(r.get(id_field)): r for r in store.get(key, [])
+                if r.get(id_field) is not None}
+    for r in new_records:
+        if r.get(id_field) is not None:
+            existing[str(r[id_field])] = r
+    merged = list(existing.values())
+    store[key] = merged
+    return merged
+
+
 def build() -> dict:
     since = (date.today() - timedelta(days=30 * WINDOW_MONTHS)).isoformat()
     cache = {}
@@ -513,10 +567,89 @@ def build() -> dict:
             cache = {}
 
     cov = {k: {} for k in ("dockets", "clusters", "opinions", "audio")}
-    dockets = fetch_dockets(since, cov["dockets"])
-    clusters = fetch_clusters(since, cov["clusters"])
-    opinions = fetch_opinions(since, cov["opinions"])
-    audio = fetch_audio(since, cov["audio"])
+
+    # ---- load persisted state and accumulated raw records ------------------
+    state = _load_json(STATE_PATH, {})
+    store = _load_json(STORE_PATH, {})
+    run_no = int(state.get("run_no", 0)) + 1
+    full_since = since
+
+    def _since_for(key: str) -> str:
+        """Incremental: only fetch what's new since this source last succeeded."""
+        if not INCREMENTAL:
+            return full_since
+        last = (state.get(key) or {}).get("last_date")
+        if not last:
+            return full_since
+        try:
+            d = datetime.strptime(last, "%Y-%m-%d").date() - timedelta(days=BACKFILL_OVERLAP_DAYS)
+            return max(d.isoformat(), full_since)
+        except ValueError:
+            return full_since
+
+    # Priority by staleness: the source that has gone longest without a clean
+    # finish goes first. A simple rotation could starve whichever source sat
+    # last in the list, so we sort by (caught_up, last_ok) instead — never
+    # caught up sorts first, then oldest success.
+    order = ["dockets", "clusters", "opinions", "audio"]
+
+    def _staleness(k):
+        st = state.get(k) or {}
+        # Never-caught-up sources come first; among those, the one attempted
+        # longest ago goes first, so a source that fails repeatedly still yields
+        # its turn instead of blocking the queue every run.
+        return (1 if st.get("caught_up") else 0, st.get("last_attempt") or "")
+
+    order.sort(key=_staleness)
+    log(f"Run #{run_no} — source order: {', '.join(order)}"
+        + (f" (incremental)" if INCREMENTAL else " (full window)"))
+
+    results: dict = {}
+    for key in order:
+        if key == "dockets":
+            results[key] = fetch_dockets(_since_for(key), cov[key])
+        elif key == "clusters":
+            results[key] = fetch_clusters(_since_for(key), cov[key])
+        elif key == "opinions":
+            results[key] = fetch_opinions(_since_for(key), cov[key],
+                                          (state.get(key) or {}).get("last_id", 0))
+        elif key == "audio":
+            results[key] = fetch_audio(_since_for(key), cov[key],
+                                       (state.get(key) or {}).get("last_id", 0))
+
+    # ---- merge this run's records into the accumulated store ---------------
+    dockets = _merge_store(store, "dockets", results.get("dockets", []), "id")
+    clusters = _merge_store(store, "clusters", results.get("clusters", []), "id")
+    opinions = _merge_store(store, "opinions", results.get("opinions", []), "id")
+    audio = _merge_store(store, "audio", results.get("audio", []), "id")
+    log(f"Store totals — dockets {len(dockets)}, clusters {len(clusters)}, "
+        f"opinions {len(opinions)}, audio {len(audio)}")
+
+    # ---- advance high-water marks for sources that finished cleanly --------
+    for key, recs in (("dockets", results.get("dockets", [])),
+                      ("clusters", results.get("clusters", [])),
+                      ("opinions", results.get("opinions", [])),
+                      ("audio", results.get("audio", []))):
+        st = state.setdefault(key, {})
+        ok = cov[key].get("complete", False)
+        if recs:
+            ids = [r.get("id") for r in recs if isinstance(r.get("id"), int)]
+            if ids:
+                st["last_id"] = max(st.get("last_id", 0), max(ids))
+            dates = [r.get("date_filed") or r.get("date_created") for r in recs]
+            dates = [d for d in dates if d]
+            if dates:
+                st["last_date"] = max(st.get("last_date", ""), max(dates))[:10]
+        if ok:
+            st["caught_up"] = True
+            st["last_ok"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
+        elif cov[key].get("reason") in ("quota exhausted", "network timeouts"):
+            st["caught_up"] = False
+        # Always advance the attempt clock so a source that keeps failing still
+        # rotates out of first place and doesn't monopolize the front of the queue.
+        st["last_attempt"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
+    state["run_no"] = run_no
+
     scheduled = fetch_scheduled_arguments()
     rss = fetch_opinion_rss()
 
@@ -707,6 +840,8 @@ def build() -> dict:
 
     DATA_DIR.mkdir(exist_ok=True)
     CACHE_PATH.write_text(json.dumps(cache, indent=1))
+    STATE_PATH.write_text(json.dumps(state, indent=1))
+    STORE_PATH.write_text(json.dumps(store, separators=(",", ":")))
 
     # ---- coverage: what this file actually contains, and how complete -----
     summarized = sum(1 for c in cases if c.get("summary"))
