@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-07-21T15:15:35+00:00",
+ "generated_at": "2026-07-21T15:39:21+00:00",
  "window_since": "2025-01-27",
  "coverage": {
   "complete": false,
@@ -7,19 +7,19 @@
   "window_months": 18,
   "sources": {
    "dockets": {
-    "complete": false,
-    "reason": "quota exhausted",
-    "count": 0
+    "complete": true,
+    "reason": "ok",
+    "count": 1
    },
    "clusters": {
-    "complete": false,
-    "reason": "quota exhausted",
-    "count": 0
+    "complete": true,
+    "reason": "ok",
+    "count": 10
    },
    "opinions": {
     "complete": false,
     "reason": "quota exhausted",
-    "count": 800
+    "count": 460
    },
    "audio": {
     "complete": false,
@@ -43,7 +43,7 @@
    "expected": 12,
    "complete": true
   },
-  "opinion_text_fetches_this_run": 0,
+  "opinion_text_fetches_this_run": 6,
   "opinion_text_fetch_cap": 120,
   "latest_decision_date": "2026-07-09",
   "next_argument_date": null
@@ -121,7 +121,7 @@
     "precedential_status": "Unpublished",
     "disposition": "Opinion",
     "url_cl": "https://www.courtlistener.com/opinion/10925012/davis-v-united-states/",
-    "url_pdf": "https://www.cafc.uscourts.gov/07-09-2026-26-1414-davis-v-us-opinion-26-1414-opinion-7-9-2026_2720784/"
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1414.OPINION.7-9-2026_2720784.pdf"
    },
    "panel": [],
    "patent_issues": [],
@@ -191,7 +191,7 @@
     "precedential_status": "Unpublished",
     "disposition": "Order",
     "url_cl": "https://www.courtlistener.com/opinion/10883747/rai-strategic-holdings-inc-v-itc/",
-    "url_pdf": "https://www.cafc.uscourts.gov/07-01-2026-26-1518-rai-strategic-holdings-inc-v-itc-order-26-1518-order-7-1-2026_2717825/"
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1518.ORDER.7-1-2026_2717825.pdf"
    },
    "panel": [],
    "patent_issues": [
@@ -215,7 +215,7 @@
     "precedential_status": "Published",
     "disposition": "Opinion",
     "url_cl": "https://www.courtlistener.com/opinion/10883424/otsuka-america-pharmaceutical-inc-v-hetero-labs-limited/",
-    "url_pdf": "https://www.cafc.uscourts.gov/07-01-2026-25-2016-otsuka-america-pharmaceutical-inc-v-hetero-labs-limited-opinion-25-2016-opinion-7-1-2026_2717310/"
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-2016.OPINION.7-1-2026_2717310.pdf"
    },
    "panel": [],
    "patent_issues": [
@@ -239,7 +239,7 @@
     "precedential_status": "Unpublished",
     "disposition": "Order",
     "url_cl": "https://www.courtlistener.com/opinion/10881701/in-re-core-scientific-inc/",
-    "url_pdf": "https://www.cafc.uscourts.gov/06-29-2026-26-140-in-re-core-scientific-inc-order-26-140-order-6-29-2026_2715846/"
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-140.ORDER.6-29-2026_2715846.pdf"
    },
    "panel": [],
    "patent_issues": [
@@ -263,7 +263,7 @@
     "precedential_status": "Unpublished",
     "disposition": "Order",
     "url_cl": "https://www.courtlistener.com/opinion/10881703/cramer-v-doj/",
-    "url_pdf": "https://www.cafc.uscourts.gov/06-29-2026-26-1404-cramer-v-doj-order-26-1404-order-6-29-2026_2715932/"
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1404.ORDER.6-29-2026_2715932.pdf"
    },
    "panel": [],
    "patent_issues": [],
@@ -309,7 +309,7 @@
     "precedential_status": "Unpublished",
     "disposition": "Order",
     "url_cl": "https://www.courtlistener.com/opinion/10880552/diallo-v-epa/",
-    "url_pdf": "https://www.cafc.uscourts.gov/06-25-2026-26-1896-diallo-v-epa-order-26-1896-order-6-25-2026_2715006/"
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1896.ORDER.6-25-2026_2715006.pdf"
    },
    "panel": [],
    "patent_issues": [],
@@ -331,7 +331,7 @@
     "precedential_status": "Unpublished",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10878157/pom-group-inc-v-schedule-a/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1863.ORDER.6-22-2026_2712564.pdf"
    },
    "panel": [],
    "patent_issues": [
@@ -355,7 +355,7 @@
     "precedential_status": "Published",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10876250/jackler-v-doj/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1575.ORDER.6-17-2026_2710901.pdf"
    },
    "panel": [],
    "patent_issues": [],
@@ -521,7 +521,7 @@
     "precedential_status": "Unpublished",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10868312/markham-v-united-states/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1327.ORDER.6-2-2026_2702994.pdf"
    },
    "panel": [],
    "patent_issues": [],
@@ -543,7 +543,7 @@
     "precedential_status": "Unpublished",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10867976/zhang-v-parties-identified-on-schedule-a/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1539.ORDER.6-1-2026_2702049.pdf"
    },
    "panel": [],
    "patent_issues": [
@@ -631,7 +631,7 @@
     "precedential_status": "Unpublished",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10857448/nesarikar-v-pto/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1167.OPINION.5-12-2026_2692194.pdf"
    },
    "panel": [],
    "patent_issues": [
