@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-07-21T15:00:54+00:00",
+ "generated_at": "2026-07-21T15:15:35+00:00",
  "window_since": "2025-01-27",
  "coverage": {
   "complete": false,
@@ -7,24 +7,24 @@
   "window_months": 18,
   "sources": {
    "dockets": {
-    "complete": true,
-    "reason": "ok",
-    "count": 3
+    "complete": false,
+    "reason": "quota exhausted",
+    "count": 0
    },
    "clusters": {
-    "complete": true,
-    "reason": "ok",
-    "count": 11
+    "complete": false,
+    "reason": "quota exhausted",
+    "count": 0
    },
    "opinions": {
     "complete": false,
-    "reason": "interrupted (HTTPError)",
-    "count": 20
+    "reason": "quota exhausted",
+    "count": 800
    },
    "audio": {
-    "complete": true,
-    "reason": "ok",
-    "count": 547
+    "complete": false,
+    "reason": "quota exhausted",
+    "count": 0
    },
    "scheduled_arguments": {
     "count": 0,
