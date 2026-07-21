@@ -35,7 +35,7 @@ import requests
 # Config
 # ----------------------------------------------------------------------------
 
-SCRIPT_VERSION = "v12-authorship (2026-07-21)"
+SCRIPT_VERSION = "v16-panelformats (2026-07-21)"
 CL_BASE = "https://www.courtlistener.com/api/rest/v4"
 CAFC_SCHEDULED_URL = "https://www.cafc.uscourts.gov/home/oral-argument/scheduled-cases/"
 CAFC_OPINION_RSS = "https://www.cafc.uscourts.gov/category/opinion-order/feed/"
@@ -45,7 +45,7 @@ ANTHROPIC_KEY = os.environ.get("ANTHROPIC_API_KEY", "").strip()
 
 WINDOW_MONTHS = int(os.environ.get("WINDOW_MONTHS", "18"))   # rolling window of filings
 MAX_DOCKETS = int(os.environ.get("MAX_DOCKETS", "4000"))
-MAX_OPINION_TEXT_FETCHES = int(os.environ.get("MAX_OPINION_TEXT_FETCHES", "120"))
+MAX_OPINION_TEXT_FETCHES = int(os.environ.get("MAX_OPINION_TEXT_FETCHES", "250"))
 REQUEST_TIMEOUT = 90
 RL_BUDGET_SECONDS = int(os.environ.get("RL_BUDGET_SECONDS", "240"))  # stop a source after ~4 min throttled
 QUOTA_EXHAUSTED = False  # set True once a source gives up on rate limiting
@@ -222,7 +222,7 @@ def fetch_clusters(since: str, meta: dict = None, budget: int = None) -> list:
     log(f"Fetching CAFC opinion clusters since {since} …")
     fields = ",".join([
         "id", "absolute_url", "case_name", "date_filed", "precedential_status",
-        "judges", "docket_id", "nature_of_suit", "syllabus", "headnotes",
+        "judges", "panel", "docket_id", "nature_of_suit", "syllabus", "headnotes",
         "disposition", "sub_opinions",
     ])
     items = cl_paginate(
@@ -246,6 +246,7 @@ def fetch_opinions(since: str, meta: dict = None, after_id: int = 0, budget: int
     log("Fetching CAFC opinions (authorship / roles) …")
     fields = ",".join([
         "id", "cluster_id", "author_str", "joined_by_str", "type",
+        "author_id", "joined_by", "per_curiam",
         "download_url", "absolute_url",
     ])
     items = cl_paginate(
@@ -268,6 +269,7 @@ def fetch_opinions_for_clusters(cluster_ids: list, meta: dict = None) -> list:
     log(f"Topping up authorship for {len(cluster_ids)} decided case(s) …")
     fields = ",".join([
         "id", "cluster_id", "author_str", "joined_by_str", "type",
+        "author_id", "joined_by", "per_curiam",
         "download_url", "absolute_url",
     ])
     out, batch_size = [], 20
@@ -302,6 +304,134 @@ def fetch_audio(since: str, meta: dict = None, after_id: int = 0, budget: int = 
     )
     log(f"  {len(items)} recordings")
     return items
+
+
+CAFC_JUDGES = [
+    "Moore", "Newman", "Lourie", "Dyk", "Prost", "Reyna", "Taranto", "Chen",
+    "Hughes", "Stoll", "Cunningham", "Stark", "Bryson", "Clevenger", "Schall",
+    "Mayer", "Plager", "Linn", "Wallach", "O'Malley", "Toranto",
+]
+
+# The Federal Circuit's cover page attributes opinions in the third person:
+#   "Opinion for the court filed by Circuit Judge BRYSON."
+#   "Opinion dissenting-in-part and concurring-in-part filed by Circuit Judge DYK."
+#   "Concurring opinion filed by Circuit Judge NEWMAN."
+# This is the primary source of authorship; the first-person header style
+# ("BRYSON, Circuit Judge.") is a secondary fallback.
+FILED_BY_RE = re.compile(
+    r"(?P<desc>[A-Za-z ,\-]{0,80}?)\bopinion\b(?P<desc2>[A-Za-z ,\-]{0,80}?)"
+    r"\bfiled\s+by\b[^.\n]*?\b(?:Chief\s+|Circuit\s+|District\s+|Senior\s+)*Judges?\s+"
+    r"(?P<name>[A-Z][A-Za-z'\-]+)",
+    re.I)
+
+
+def _role_from_description(desc: str) -> str:
+    """Map cover-page wording to a role label, preserving in-part distinctions."""
+    d = (desc or "").lower()
+    has_dis, has_con = "dissent" in d, "concur" in d
+    in_part = "in-part" in d or "in part" in d
+    if has_dis and has_con:
+        return "Concurrence/Dissent in part"
+    if has_dis:
+        return "Dissent in part" if in_part else "Dissent"
+    if has_con:
+        return "Concurrence in part" if in_part else "Concurrence"
+    if "for the court" in d or "for the panel" in d:
+        return "Author"
+    return "Author"
+
+
+# "Before DYK, BRYSON, and STOLL, Circuit Judges." — the panel line on the cover.
+# Must survive "Before MOORE, Chief Judge, PROST and HUGHES, Circuit Judges."
+# where an inner ", Chief Judge," would otherwise truncate the match, so stop
+# only at a sentence end or a blank line rather than the first "Judge".
+BEFORE_RE = re.compile(
+    r"\bBefore\b[:\s]+(.{0,220}?)(?:\.\s|\.\n|\n\s*\n)", re.I | re.S)
+# First-person opinion header, the other style the court uses:
+#   "CUNNINGHAM, Circuit Judge."
+#   "DYK, Circuit Judge, dissenting-in-part and concurring-in-part."
+# Extracted text often collapses the cover page onto one line, so this must
+# match mid-line too — but requires 2+ spaces or a line start before the name so
+# it can't match the tail of "Before PROST, MAYER, and CUNNINGHAM, Circuit Judges."
+AUTHOR_RE = re.compile(
+    r"(?:^|\n|[ \t]{2,})([A-Z][A-Za-z'\-]+)\s*,\s*"
+    r"(?:Chief\s+|Circuit\s+|District\s+|Senior\s+)*Judge\b\s*"
+    r"(?:,\s*(?P<desc>[A-Za-z \-]{0,60}?))?\s*\.",
+    re.M)
+PER_CURIAM_RE = re.compile(r"\bPER\s+CURIAM\b", re.I)
+
+
+def parse_panel_from_text(text: str) -> list:
+    """Extract panel and authorship from Federal Circuit opinion text.
+
+    CourtListener holds no structured panel data for CAFC cases — the names
+    exist only on the opinion's cover page. The court uses two attribution
+    styles, both of which appear in practice:
+
+      Third person (cover page):
+        Before DYK, BRYSON, and STOLL, Circuit Judges.
+        Opinion for the court filed by Circuit Judge BRYSON.
+        Opinion dissenting-in-part and concurring-in-part filed by Circuit Judge DYK.
+
+      First person (opinion header):
+        Before PROST, MAYER, and CUNNINGHAM, Circuit Judges.
+        CUNNINGHAM, Circuit Judge.
+
+    Both are parsed; whichever yields authorship wins. Everyone named on the
+    Before line who isn't otherwise credited is recorded as a panel member.
+    """
+    if not text:
+        return []
+    head = text[:8000]          # cover page and opening
+    panel, seen = [], set()
+
+    def add(name, role):
+        n = (name or "").strip().strip(".,;:").title()
+        if not n or len(n) < 3 or n.lower() in seen:
+            return
+        if not re.fullmatch(r"[A-Za-z'\-]+", n):
+            return
+        if n.lower() in ("before", "per", "circuit", "chief", "senior", "district",
+                         "judge", "judges", "opinion", "court", "filed"):
+            return
+        seen.add(n.lower())
+        panel.append({"name": n, "role": role})
+
+    # 1. Third-person attributions on the cover page (most reliable when present).
+    for m in FILED_BY_RE.finditer(head):
+        desc = (m.group("desc") or "") + " " + (m.group("desc2") or "")
+        add(m.group("name"), _role_from_description(desc))
+
+    # 2. First-person opinion headers, across the document so later dissents and
+    #    concurrences are captured too.
+    if not panel:
+        for m in AUTHOR_RE.finditer(text[:60000]):
+            name = m.group(1)
+            desc = m.groupdict().get("desc") or ""
+            if name.lower() in ("before", "per"):
+                continue
+            role = _role_from_description(desc) if desc.strip() else "Author"
+            add(name, role)
+
+    if not panel and PER_CURIAM_RE.search(head):
+        add("Per Curiam", "Per Curiam")
+
+    # 3. Panel membership from the Before line; anyone not already credited with
+    #    an opinion is a plain panel member.
+    m = BEFORE_RE.search(head)
+    if m:
+        for part in re.split(r",|\band\b|;", m.group(1)):
+            part = re.sub(r"\(.*?\)", "", part)
+            part = re.sub(r"\b(Chief|Circuit|District|Senior|Judges?)\b", "", part,
+                          flags=re.I)
+            add(part, "Panel")
+
+    # Guard against false positives: if nothing matched a known CAFC judge and
+    # we found more than 5 "judges", the parse is probably garbage.
+    known = sum(1 for p in panel if p["name"] in CAFC_JUDGES)
+    if len(panel) > 5 and known == 0:
+        return []
+    return panel
 
 
 def fetch_opinion_text(opinion_id: int) -> str:
@@ -567,6 +697,38 @@ def summarize_claude(case_name: str, text: str) -> str | None:
         return None
 
 
+JUDGE_NAME_CACHE: dict = {}
+
+
+def resolve_judge_names(ids: list) -> dict:
+    """Map CourtListener person ids -> display surnames.
+
+    CAFC opinion records frequently come back with author_str/joined_by_str
+    empty while author_id/joined_by carry the real reference, so names must be
+    resolved from the people endpoint. Results are cached for the whole run and
+    persisted between runs, since judges change rarely.
+    """
+    want = [i for i in {i for i in ids if i} if str(i) not in JUDGE_NAME_CACHE]
+    if not want or QUOTA_EXHAUSTED:
+        return JUDGE_NAME_CACHE
+    log(f"Resolving {len(want)} judge name(s) …")
+    for i in range(0, len(want), 25):
+        batch = want[i:i + 25]
+        recs = cl_paginate(
+            f"{CL_BASE}/people/",
+            {"id__in": ",".join(str(x) for x in batch),
+             "fields": "id,name_first,name_last"},
+            200, None, 2,
+        )
+        for r in recs:
+            last = (r.get("name_last") or "").strip()
+            if r.get("id") and last:
+                JUDGE_NAME_CACHE[str(r["id"])] = last
+        if not recs:  # endpoint rejected the filter — stop trying this run
+            break
+    return JUDGE_NAME_CACHE
+
+
 # ----------------------------------------------------------------------------
 # Panel formatting
 # ----------------------------------------------------------------------------
@@ -630,6 +792,7 @@ def build() -> dict:
 
     # ---- load persisted state and accumulated raw records ------------------
     state = _load_json(STATE_PATH, {})
+    JUDGE_NAME_CACHE.update(state.get("judge_names") or {})
     store = _load_json(STORE_PATH, {})
     run_no = int(state.get("run_no", 0)) + 1
     full_since = since
@@ -716,6 +879,7 @@ def build() -> dict:
         # rotates out of first place and doesn't monopolize the front of the queue.
         st["last_attempt"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
     state["run_no"] = run_no
+    state["judge_names"] = JUDGE_NAME_CACHE
 
     scheduled = fetch_scheduled_arguments()
     rss = fetch_opinion_rss()
@@ -782,16 +946,61 @@ def build() -> dict:
         if lead_cluster:
             prec = (lead_cluster.get("precedential_status") or "").title()
             cluster_ops = ops_by_cluster.get(lead_cluster["id"], [])
+            # CAFC records often leave author_str/joined_by_str blank, so resolve
+            # names through several fallbacks rather than trusting one field.
+            need_ids = []
+            for op in cluster_ops:
+                if not (op.get("author_str") or "").strip() and op.get("author_id"):
+                    need_ids.append(op["author_id"])
+                for jid in (op.get("joined_by") or []):
+                    if isinstance(jid, int):
+                        need_ids.append(jid)
+            names = resolve_judge_names(need_ids) if need_ids else JUDGE_NAME_CACHE
+
             for op in cluster_ops:
                 role = norm_type(op.get("type"))
                 author = (op.get("author_str") or "").strip()
+                if not author and op.get("author_id"):
+                    author = names.get(str(op["author_id"]), "")
                 if author:
                     panel.append({"name": author, "role": role})
-                for j in split_judges(op.get("joined_by_str") or ""):
+                elif op.get("per_curiam"):
+                    panel.append({"name": "Per Curiam", "role": "Per Curiam"})
+                joined = split_judges(op.get("joined_by_str") or "")
+                if not joined:
+                    joined = [names[str(j)] for j in (op.get("joined_by") or [])
+                              if str(j) in names]
+                for j in joined:
                     panel.append({"name": j, "role": "Joined"})
-            for j in split_judges(lead_cluster.get("judges") or ""):
-                if not any(p["name"].lower() == j.lower() for p in panel):
-                    panel.append({"name": j, "role": "Panel"})
+
+            # Cluster-level panel strings are the most reliable fallback for
+            # cases where no per-opinion authorship is recorded at all.
+            for field in ("judges", "panel_str", "panel"):
+                val = lead_cluster.get(field)
+                if isinstance(val, list):
+                    val = ", ".join(names.get(str(v), "") for v in val)
+                for j in split_judges(val or ""):
+                    if j and not any(p["name"].lower() == j.lower() for p in panel):
+                        panel.append({"name": j, "role": "Panel"})
+
+            # Last resort — and for CAFC, the usual one. CourtListener holds no
+            # structured panel data for this court; the names live only on the
+            # opinion's cover page ("Before LOURIE, DYK, and STOLL"). Parse them
+            # out of the text, reusing the cached text fetch where possible.
+            if not panel and cluster_ops and text_fetches < MAX_OPINION_TEXT_FETCHES:
+                op_id = cluster_ops[0]["id"]
+                pkey = f"panel-{op_id}"
+                cached_panel = cache.get(pkey)
+                if cached_panel is not None:
+                    panel = list(cached_panel)
+                else:
+                    otext = fetch_opinion_text(op_id)
+                    text_fetches += 1
+                    panel = parse_panel_from_text(otext)
+                    cache[pkey] = panel
+                    if panel:
+                        log(f"  panel parsed from text for {dn}: "
+                            + ", ".join(f"{p['name']} ({p['role']})" for p in panel))
             rss_hit = rss.get(dn) or {}
             dispo = (lead_cluster.get("disposition") or rss_hit.get("disposition") or "").strip()
             if prec.startswith("Unpub") and re.search(r"rule\s*36", dispo, re.I):
