@@ -35,7 +35,7 @@ import requests
 # Config
 # ----------------------------------------------------------------------------
 
-SCRIPT_VERSION = "v9-incremental (2026-07-20)"
+SCRIPT_VERSION = "v10-budget (2026-07-21)"
 CL_BASE = "https://www.courtlistener.com/api/rest/v4"
 CAFC_SCHEDULED_URL = "https://www.cafc.uscourts.gov/home/oral-argument/scheduled-cases/"
 CAFC_OPINION_RSS = "https://www.cafc.uscourts.gov/category/opinion-order/feed/"
@@ -58,7 +58,13 @@ FIRST_SOURCE = True      # only the run's first source treats instant throttling
 # source can consume the entire hourly quota, and rotating priority so every
 # source gets to go first regularly.
 INCREMENTAL = os.environ.get("INCREMENTAL", "1") != "0"
-PAGE_BUDGET = int(os.environ.get("PAGE_BUDGET", "12"))       # max pages per source per run
+# Page budget per source per run. This exists to stop one source eating the whole
+# hourly quota — NOT to cap how much data we collect. A too-tight budget truncates
+# every source at the same artificial ceiling, which starves opinions of the
+# authorship records that decided cases need. Sources still catching up get a
+# generous budget; once caught up, incremental runs need only a handful of pages.
+PAGE_BUDGET = int(os.environ.get("PAGE_BUDGET", "60"))        # catching up
+PAGE_BUDGET_STEADY = int(os.environ.get("PAGE_BUDGET_STEADY", "15"))  # caught up
 BACKFILL_OVERLAP_DAYS = 3   # re-scan a few days back to catch late-posted records
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -175,7 +181,7 @@ def cl_paginate(url: str, params: dict, cap: int, meta: dict = None,
     return items[:cap]
 
 
-def fetch_dockets(since: str, meta: dict = None) -> list:
+def fetch_dockets(since: str, meta: dict = None, budget: int = None) -> list:
     log(f"Fetching CAFC dockets filed since {since} …")
     fields = ",".join([
         "id", "docket_number", "case_name", "case_name_short", "date_filed",
@@ -185,13 +191,13 @@ def fetch_dockets(since: str, meta: dict = None) -> list:
     items = cl_paginate(
         f"{CL_BASE}/dockets/",
         {"court": "cafc", "date_filed__gte": since, "order_by": "-date_filed", "fields": fields},
-        MAX_DOCKETS, meta, PAGE_BUDGET,
+        MAX_DOCKETS, meta, budget or PAGE_BUDGET,
     )
     log(f"  {len(items)} dockets")
     return items
 
 
-def fetch_clusters(since: str, meta: dict = None) -> list:
+def fetch_clusters(since: str, meta: dict = None, budget: int = None) -> list:
     """Decisions (opinion clusters) — carries precedential status + panel judges."""
     log(f"Fetching CAFC opinion clusters since {since} …")
     fields = ",".join([
@@ -203,13 +209,13 @@ def fetch_clusters(since: str, meta: dict = None) -> list:
         f"{CL_BASE}/clusters/",
         {"docket__court": "cafc", "date_filed__gte": since,
          "order_by": "-date_filed", "fields": fields},
-        MAX_DOCKETS, meta, PAGE_BUDGET,
+        MAX_DOCKETS, meta, budget or PAGE_BUDGET,
     )
     log(f"  {len(items)} clusters")
     return items
 
 
-def fetch_opinions(since: str, meta: dict = None, after_id: int = 0) -> list:
+def fetch_opinions(since: str, meta: dict = None, after_id: int = 0, budget: int = None) -> list:
     """Individual opinions — author, joined-by, and lead/concurrence/dissent type."""
     log("Fetching CAFC opinions (authorship / roles) …")
     fields = ",".join([
@@ -221,13 +227,13 @@ def fetch_opinions(since: str, meta: dict = None, after_id: int = 0) -> list:
         {"cluster__docket__court": "cafc", "cluster__date_filed__gte": since,
          "order_by": "id" if INCREMENTAL else "-id", "fields": fields,
          **({"id__gt": after_id} if (INCREMENTAL and after_id) else {})},
-        MAX_DOCKETS, meta, PAGE_BUDGET,
+        MAX_DOCKETS, meta, budget or PAGE_BUDGET,
     )
     log(f"  {len(items)} opinions")
     return items
 
 
-def fetch_audio(since: str, meta: dict = None, after_id: int = 0) -> list:
+def fetch_audio(since: str, meta: dict = None, after_id: int = 0, budget: int = None) -> list:
     """Oral-argument recordings — confirms argued dates and panel names.
     Note: the v4 audio endpoint doesn't support docket__date_argued__gte,
     so we filter by the recording's own date_created (argument day)."""
@@ -238,7 +244,7 @@ def fetch_audio(since: str, meta: dict = None, after_id: int = 0) -> list:
         {"docket__court": "cafc", "date_created__gte": since,
          "order_by": "id" if INCREMENTAL else "-date_created", "fields": fields,
          **({"id__gt": after_id} if (INCREMENTAL and after_id) else {})},
-        2000, meta, PAGE_BUDGET,
+        2000, meta, budget or PAGE_BUDGET,
     )
     log(f"  {len(items)} recordings")
     return items
@@ -604,18 +610,25 @@ def build() -> dict:
     log(f"Run #{run_no} — source order: {', '.join(order)}"
         + (f" (incremental)" if INCREMENTAL else " (full window)"))
 
+    def _budget_for(k: str) -> int:
+        # A source that has never finished still needs to catch up on history;
+        # give it room. Caught-up sources only need the newest page or two.
+        return PAGE_BUDGET_STEADY if (state.get(k) or {}).get("caught_up") else PAGE_BUDGET
+
     results: dict = {}
     for key in order:
         if key == "dockets":
-            results[key] = fetch_dockets(_since_for(key), cov[key])
+            results[key] = fetch_dockets(_since_for(key), cov[key], _budget_for(key))
         elif key == "clusters":
-            results[key] = fetch_clusters(_since_for(key), cov[key])
+            results[key] = fetch_clusters(_since_for(key), cov[key], _budget_for(key))
         elif key == "opinions":
             results[key] = fetch_opinions(_since_for(key), cov[key],
-                                          (state.get(key) or {}).get("last_id", 0))
+                                          (state.get(key) or {}).get("last_id", 0),
+                                          _budget_for(key))
         elif key == "audio":
             results[key] = fetch_audio(_since_for(key), cov[key],
-                                       (state.get(key) or {}).get("last_id", 0))
+                                       (state.get(key) or {}).get("last_id", 0),
+                                       _budget_for(key))
 
     # ---- merge this run's records into the accumulated store ---------------
     dockets = _merge_store(store, "dockets", results.get("dockets", []), "id")
