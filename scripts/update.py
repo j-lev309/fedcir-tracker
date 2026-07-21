@@ -35,7 +35,7 @@ import requests
 # Config
 # ----------------------------------------------------------------------------
 
-SCRIPT_VERSION = "v11-httpfix (2026-07-21)"
+SCRIPT_VERSION = "v12-authorship (2026-07-21)"
 CL_BASE = "https://www.courtlistener.com/api/rest/v4"
 CAFC_SCHEDULED_URL = "https://www.cafc.uscourts.gov/home/oral-argument/scheduled-cases/"
 CAFC_OPINION_RSS = "https://www.cafc.uscourts.gov/category/opinion-order/feed/"
@@ -236,7 +236,13 @@ def fetch_clusters(since: str, meta: dict = None, budget: int = None) -> list:
 
 
 def fetch_opinions(since: str, meta: dict = None, after_id: int = 0, budget: int = None) -> list:
-    """Individual opinions — author, joined-by, and lead/concurrence/dissent type."""
+    """Individual opinions — author, joined-by, and lead/concurrence/dissent type.
+
+    Ordered newest-first: the cases a user is looking at are the ones recently
+    decided, so authorship for those must land in the first page, not after a
+    full backfill from the start of the window. Incremental progress is tracked
+    by the cluster date filter (`since`), not by an ascending id cursor.
+    """
     log("Fetching CAFC opinions (authorship / roles) …")
     fields = ",".join([
         "id", "cluster_id", "author_str", "joined_by_str", "type",
@@ -245,12 +251,41 @@ def fetch_opinions(since: str, meta: dict = None, after_id: int = 0, budget: int
     items = cl_paginate(
         f"{CL_BASE}/opinions/",
         {"cluster__docket__court": "cafc", "cluster__date_filed__gte": since,
-         "order_by": "id" if INCREMENTAL else "-id", "fields": fields,
-         **({"id__gt": after_id} if (INCREMENTAL and after_id) else {})},
+         "order_by": "-id", "fields": fields},
         MAX_DOCKETS, meta, budget or PAGE_BUDGET,
     )
     log(f"  {len(items)} opinions")
     return items
+
+
+def fetch_opinions_for_clusters(cluster_ids: list, meta: dict = None) -> list:
+    """Targeted top-up: fetch opinions for specific clusters that still have no
+    authorship. The broad date-ordered sweep can leave gaps (a cluster whose
+    opinions sit outside the pages fetched so far), and those gaps are exactly
+    the decided cases a reader is looking at. This closes them directly."""
+    if not cluster_ids:
+        return []
+    log(f"Topping up authorship for {len(cluster_ids)} decided case(s) …")
+    fields = ",".join([
+        "id", "cluster_id", "author_str", "joined_by_str", "type",
+        "download_url", "absolute_url",
+    ])
+    out, batch_size = [], 20
+    for i in range(0, len(cluster_ids), batch_size):
+        if QUOTA_EXHAUSTED:
+            break
+        batch = cluster_ids[i:i + batch_size]
+        got = cl_paginate(
+            f"{CL_BASE}/opinions/",
+            {"cluster_id__in": ",".join(str(c) for c in batch), "fields": fields},
+            500, None, 3,
+        )
+        out.extend(got)
+    log(f"  {len(out)} opinions from top-up")
+    if meta is not None:
+        meta.setdefault("count", 0)
+        meta["count"] += len(out)
+    return out
 
 
 def fetch_audio(since: str, meta: dict = None, after_id: int = 0, budget: int = None) -> list:
@@ -262,8 +297,7 @@ def fetch_audio(since: str, meta: dict = None, after_id: int = 0, budget: int = 
     items = cl_paginate(
         f"{CL_BASE}/audio/",
         {"docket__court": "cafc", "date_created__gte": since,
-         "order_by": "id" if INCREMENTAL else "-date_created", "fields": fields,
-         **({"id__gt": after_id} if (INCREMENTAL and after_id) else {})},
+         "order_by": "-date_created", "fields": fields},
         2000, meta, budget or PAGE_BUDGET,
     )
     log(f"  {len(items)} recordings")
@@ -691,6 +725,22 @@ def build() -> dict:
         cid = op.get("cluster_id")
         if cid:
             ops_by_cluster.setdefault(cid, []).append(op)
+
+    # Targeted top-up: any cluster we know about that still has no opinions is a
+    # decided case that would render with an empty panel. Fetch those directly
+    # rather than waiting for the broad sweep to happen across them.
+    missing = [cl["id"] for cl in clusters
+               if cl.get("id") and cl["id"] not in ops_by_cluster]
+    if missing and not QUOTA_EXHAUSTED:
+        missing = missing[:200]  # bounded so a huge backlog can't eat the quota
+        extra = fetch_opinions_for_clusters(missing, cov["opinions"])
+        if extra:
+            opinions = _merge_store(store, "opinions", extra, "id")
+            ops_by_cluster = {}
+            for op in opinions:
+                cid = op.get("cluster_id")
+                if cid:
+                    ops_by_cluster.setdefault(cid, []).append(op)
 
     clusters_by_docket: dict = {}
     for cl in clusters:
