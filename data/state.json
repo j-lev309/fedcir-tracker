@@ -1,28 +1,36 @@
 {
  "dockets": {
+  "last_attempt": "2026-07-21T19:47:44+00:00",
+  "caught_up": true,
+  "last_ok": "2026-07-21T19:47:44+00:00",
+  "backfill_done": true,
   "last_id": 73644847,
   "last_date": "2026-07-20",
-  "last_attempt": "2026-07-21T15:33:11+00:00",
-  "caught_up": true,
-  "last_ok": "2026-07-21T15:33:11+00:00"
+  "backfill_completed_at": "2026-07-21",
+  "resume_url": null
  },
  "clusters": {
+  "last_attempt": "2026-07-21T19:47:44+00:00",
+  "caught_up": false,
+  "last_ok": "2026-07-21T15:33:11+00:00",
+  "backfill_done": false,
   "last_id": 10933327,
-  "last_date": "2026-07-21",
-  "last_attempt": "2026-07-21T15:33:11+00:00",
-  "caught_up": true,
-  "last_ok": "2026-07-21T15:33:11+00:00"
+  "last_date": "2026-07-21"
  },
  "opinions": {
   "last_id": 11400888,
-  "last_attempt": "2026-07-21T15:33:11+00:00",
-  "caught_up": false
+  "last_attempt": "2026-07-21T19:47:44+00:00",
+  "caught_up": false,
+  "backfill_done": false
  },
  "audio": {
   "last_id": 105721,
-  "last_attempt": "2026-07-21T15:33:11+00:00",
+  "last_attempt": "2026-07-21T19:47:44+00:00",
   "caught_up": false,
-  "last_ok": "2026-07-21T15:00:52+00:00"
+  "last_ok": "2026-07-21T15:00:52+00:00",
+  "backfill_done": false
  },
- "run_no": 4
+ "run_no": 5,
+ "schema_v17": true,
+ "judge_names": {}
 }
