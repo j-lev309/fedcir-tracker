@@ -35,7 +35,7 @@ import requests
 # Config
 # ----------------------------------------------------------------------------
 
-SCRIPT_VERSION = "v18-pdftext (2026-07-21)"
+SCRIPT_VERSION = "v19-decoupled (2026-07-21)"
 CL_BASE = "https://www.courtlistener.com/api/rest/v4"
 CAFC_SCHEDULED_URL = "https://www.cafc.uscourts.gov/home/oral-argument/scheduled-cases/"
 CAFC_OPINION_RSS = "https://www.cafc.uscourts.gov/category/opinion-order/feed/"
@@ -1091,23 +1091,40 @@ def build() -> dict:
             # Last resort — and for CAFC, the usual one. CourtListener holds no
             # structured panel data for this court; the names live only on the
             # opinion's cover page ("Before LOURIE, DYK, and STOLL"). Parse them
-            # out of the text, reusing the cached text fetch where possible.
-            if not panel and cluster_ops and text_fetches < MAX_OPINION_TEXT_FETCHES:
-                op_id = cluster_ops[0]["id"]
-                pkey = f"panel-{op_id}"
-                cached_panel = cache.get(pkey)
+            # out of the text, fetching the court's own PDF (quota-free).
+            #
+            # Crucially: don't gate this on having opinion API records. The PDF
+            # URL can come from the opinion record, the RSS feed, or the cluster
+            # page — any of which bypasses the CourtListener rate limit.
+            rss_hit = rss.get(dn) or {}
+            if not panel and text_fetches < MAX_OPINION_TEXT_FETCHES:
+                # Find the best available PDF URL without requiring opinion records
+                pdf_url = None
+                op_id = None
+                for op in cluster_ops:
+                    if op.get("download_url"):
+                        pdf_url = op["download_url"]
+                        op_id = op.get("id")
+                        break
+                if not pdf_url and rss_hit.get("url"):
+                    pdf_url = rss_hit["url"]
+                if not pdf_url and lead_cluster.get("absolute_url"):
+                    # CourtListener cluster pages sometimes carry the PDF link
+                    pdf_url = None  # would require another API call; skip
+
+                ckey = f"panel-cl-{lead_cluster['id']}"
+                cached_panel = cache.get(ckey)
                 if cached_panel is not None:
                     panel = list(cached_panel)
-                else:
-                    otext = fetch_opinion_text(
-                        op_id, cluster_ops[0].get("download_url"))
+                elif pdf_url:
+                    otext = fetch_opinion_text(op_id or 0, pdf_url)
                     text_fetches += 1
                     panel = parse_panel_from_text(otext)
-                    cache[pkey] = panel
+                    cache[ckey] = panel
                     if panel:
                         log(f"  panel parsed from text for {dn}: "
                             + ", ".join(f"{p['name']} ({p['role']})" for p in panel))
-            rss_hit = rss.get(dn) or {}
+
             dispo = (lead_cluster.get("disposition") or rss_hit.get("disposition") or "").strip()
             if prec.startswith("Unpub") and re.search(r"rule\s*36", dispo, re.I):
                 dispo = "Rule 36 Judgment"
@@ -1145,7 +1162,10 @@ def build() -> dict:
         is_r36 = bool(decision and re.search(
             r"rule\s*36", str(decision.get("disposition") or ""), re.I))
         lead_ops = ops_by_cluster.get(lead_cluster["id"], []) if lead_cluster else []
-        cache_key = f"op-{lead_ops[0]['id']}" if lead_ops else None
+
+        # Cache key: use the cluster ID, not the opinion ID, so enrichment works
+        # even when opinion records weren't fetched (the common case under quota).
+        cache_key = f"cl-{lead_cluster['id']}" if lead_cluster else None
 
         cached = cache.get(cache_key) if cache_key else None
         if isinstance(cached, list):          # migrate pre-summary cache format
@@ -1160,13 +1180,22 @@ def build() -> dict:
                 (lead_cluster or {}).get("disposition"), d.get("case_name")))
             issues = classify_issues_keywords(seed_text)
 
-        need_issues = is_patent and not issues and bool(lead_ops)
+        # Find the best PDF URL without requiring opinion records
+        enrich_pdf = None
+        for op in lead_ops:
+            if op.get("download_url"):
+                enrich_pdf = op["download_url"]
+                break
+        if not enrich_pdf and decision:
+            enrich_pdf = decision.get("url_pdf")
+
+        need_issues = is_patent and not issues
         need_summary = (bool(ANTHROPIC_KEY) and decision is not None
-                        and not summary and not is_r36 and bool(lead_ops))
+                        and not summary and not is_r36)
         if cache_key and (need_issues or need_summary) \
-                and text_fetches < MAX_OPINION_TEXT_FETCHES:
+                and enrich_pdf and text_fetches < MAX_OPINION_TEXT_FETCHES:
             opinion_text = fetch_opinion_text(
-                lead_ops[0]["id"], lead_ops[0].get("download_url"))
+                lead_ops[0]["id"] if lead_ops else 0, enrich_pdf)
             text_fetches += 1
             if need_issues and opinion_text:
                 issues = (classify_issues_keywords(opinion_text)
