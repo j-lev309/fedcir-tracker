@@ -35,7 +35,7 @@ import requests
 # Config
 # ----------------------------------------------------------------------------
 
-SCRIPT_VERSION = "v16-panelformats (2026-07-21)"
+SCRIPT_VERSION = "v18-pdftext (2026-07-21)"
 CL_BASE = "https://www.courtlistener.com/api/rest/v4"
 CAFC_SCHEDULED_URL = "https://www.cafc.uscourts.gov/home/oral-argument/scheduled-cases/"
 CAFC_OPINION_RSS = "https://www.cafc.uscourts.gov/category/opinion-order/feed/"
@@ -45,7 +45,9 @@ ANTHROPIC_KEY = os.environ.get("ANTHROPIC_API_KEY", "").strip()
 
 WINDOW_MONTHS = int(os.environ.get("WINDOW_MONTHS", "18"))   # rolling window of filings
 MAX_DOCKETS = int(os.environ.get("MAX_DOCKETS", "4000"))
-MAX_OPINION_TEXT_FETCHES = int(os.environ.get("MAX_OPINION_TEXT_FETCHES", "250"))
+# Opinion text now comes from the court's own PDFs, which cost nothing
+# against the CourtListener quota, so this cap can be generous.
+MAX_OPINION_TEXT_FETCHES = int(os.environ.get("MAX_OPINION_TEXT_FETCHES", "600"))
 REQUEST_TIMEOUT = 90
 RL_BUDGET_SECONDS = int(os.environ.get("RL_BUDGET_SECONDS", "240"))  # stop a source after ~4 min throttled
 QUOTA_EXHAUSTED = False  # set True once a source gives up on rate limiting
@@ -89,11 +91,13 @@ def log(msg: str) -> None:
 # ----------------------------------------------------------------------------
 
 def cl_paginate(url: str, params: dict, cap: int, meta: dict = None,
-                page_budget: int = None) -> list:
+                page_budget: int = None, resume_url: str = None) -> list:
     """Follow v4 cursor pagination until cap items, page_budget pages, or no `next`.
     If `meta` dict is passed, records {'complete': bool, 'reason': str} describing
     whether the full result set was retrieved or the run was cut short.
-    page_budget prevents one source from consuming the entire hourly quota."""
+    page_budget prevents one source from consuming the entire hourly quota.
+    resume_url continues a budget-truncated backfill from where the last run
+    stopped; without it each run would refetch page 1 and never advance."""
     global QUOTA_EXHAUSTED, FIRST_SOURCE
     if QUOTA_EXHAUSTED:  # a prior source already hit the wall this run; don't re-grind
         if meta is not None:
@@ -101,7 +105,8 @@ def cl_paginate(url: str, params: dict, cap: int, meta: dict = None,
         return []
     pages = 0
     dropped_filter = False
-    items, next_url, first, backoff, strikes, got_any = [], url, True, 30, 0, False
+    items, next_url, first, backoff, strikes, got_any = (
+        [], resume_url or url, not resume_url, 30, 0, False)
     complete, reason, timeouts, rl_waited = True, "ok", 0, 0
     while next_url and len(items) < cap:
         try:
@@ -190,6 +195,8 @@ def cl_paginate(url: str, params: dict, cap: int, meta: dict = None,
         next_url, first = payload.get("next"), False
         if page_budget and pages >= page_budget and next_url:
             complete, reason = False, "page budget reached"
+            if meta is not None:
+                meta["resume_url"] = next_url   # continue here on the next run
             log(f"  page budget ({page_budget}) reached — resuming next run")
             break
         time.sleep(0.9)  # stay well under 5,000 req/hr
@@ -197,11 +204,13 @@ def cl_paginate(url: str, params: dict, cap: int, meta: dict = None,
         complete, reason = False, "hit cap"
     if meta is not None:
         meta["complete"], meta["reason"], meta["count"] = complete, reason, len(items)
+        if complete:
+            meta["resume_url"] = None       # finished: start fresh next time
     FIRST_SOURCE = False  # subsequent sources degrade gracefully instead of raising
     return items[:cap]
 
 
-def fetch_dockets(since: str, meta: dict = None, budget: int = None) -> list:
+def fetch_dockets(since: str, meta: dict = None, budget: int = None, resume: str = None) -> list:
     log(f"Fetching CAFC dockets filed since {since} …")
     fields = ",".join([
         "id", "docket_number", "case_name", "case_name_short", "date_filed",
@@ -211,13 +220,13 @@ def fetch_dockets(since: str, meta: dict = None, budget: int = None) -> list:
     items = cl_paginate(
         f"{CL_BASE}/dockets/",
         {"court": "cafc", "date_filed__gte": since, "order_by": "-date_filed", "fields": fields},
-        MAX_DOCKETS, meta, budget or PAGE_BUDGET,
+        MAX_DOCKETS, meta, budget or PAGE_BUDGET, resume,
     )
     log(f"  {len(items)} dockets")
     return items
 
 
-def fetch_clusters(since: str, meta: dict = None, budget: int = None) -> list:
+def fetch_clusters(since: str, meta: dict = None, budget: int = None, resume: str = None) -> list:
     """Decisions (opinion clusters) — carries precedential status + panel judges."""
     log(f"Fetching CAFC opinion clusters since {since} …")
     fields = ",".join([
@@ -229,13 +238,13 @@ def fetch_clusters(since: str, meta: dict = None, budget: int = None) -> list:
         f"{CL_BASE}/clusters/",
         {"docket__court": "cafc", "date_filed__gte": since,
          "order_by": "-date_filed", "fields": fields},
-        MAX_DOCKETS, meta, budget or PAGE_BUDGET,
+        MAX_DOCKETS, meta, budget or PAGE_BUDGET, resume,
     )
     log(f"  {len(items)} clusters")
     return items
 
 
-def fetch_opinions(since: str, meta: dict = None, after_id: int = 0, budget: int = None) -> list:
+def fetch_opinions(since: str, meta: dict = None, after_id: int = 0, budget: int = None, resume: str = None) -> list:
     """Individual opinions — author, joined-by, and lead/concurrence/dissent type.
 
     Ordered newest-first: the cases a user is looking at are the ones recently
@@ -253,7 +262,7 @@ def fetch_opinions(since: str, meta: dict = None, after_id: int = 0, budget: int
         f"{CL_BASE}/opinions/",
         {"cluster__docket__court": "cafc", "cluster__date_filed__gte": since,
          "order_by": "-id", "fields": fields},
-        MAX_DOCKETS, meta, budget or PAGE_BUDGET,
+        MAX_DOCKETS, meta, budget or PAGE_BUDGET, resume,
     )
     log(f"  {len(items)} opinions")
     return items
@@ -290,7 +299,7 @@ def fetch_opinions_for_clusters(cluster_ids: list, meta: dict = None) -> list:
     return out
 
 
-def fetch_audio(since: str, meta: dict = None, after_id: int = 0, budget: int = None) -> list:
+def fetch_audio(since: str, meta: dict = None, after_id: int = 0, budget: int = None, resume: str = None) -> list:
     """Oral-argument recordings — confirms argued dates and panel names.
     Note: the v4 audio endpoint doesn't support docket__date_argued__gte,
     so we filter by the recording's own date_created (argument day)."""
@@ -300,7 +309,7 @@ def fetch_audio(since: str, meta: dict = None, after_id: int = 0, budget: int = 
         f"{CL_BASE}/audio/",
         {"docket__court": "cafc", "date_created__gte": since,
          "order_by": "-date_created", "fields": fields},
-        2000, meta, budget or PAGE_BUDGET,
+        2000, meta, budget or PAGE_BUDGET, resume,
     )
     log(f"  {len(items)} recordings")
     return items
@@ -319,8 +328,8 @@ CAFC_JUDGES = [
 # This is the primary source of authorship; the first-person header style
 # ("BRYSON, Circuit Judge.") is a secondary fallback.
 FILED_BY_RE = re.compile(
-    r"(?P<desc>[A-Za-z ,\-]{0,80}?)\bopinion\b(?P<desc2>[A-Za-z ,\-]{0,80}?)"
-    r"\bfiled\s+by\b[^.\n]*?\b(?:Chief\s+|Circuit\s+|District\s+|Senior\s+)*Judges?\s+"
+    r"(?P<desc>[A-Za-z ,\-\n]{0,90}?)\bopinion\b(?P<desc2>[A-Za-z ,\-\n]{0,90}?)"
+    r"\bfiled\s+by\b[\s\S]{0,40}?\b(?:Chief\s+|Circuit\s+|District\s+|Senior\s+)*Judges?\s+"
     r"(?P<name>[A-Z][A-Za-z'\-]+)",
     re.I)
 
@@ -434,27 +443,73 @@ def parse_panel_from_text(text: str) -> list:
     return panel
 
 
-def fetch_opinion_text(opinion_id: int) -> str:
-    """Plain text of one opinion (for issue classification). Capped by caller."""
+FAILED_TEXT_IDS: set = set()   # per-session: never retry a record that failed
+PDF_SESSION = requests.Session()
+PDF_SESSION.headers.update({
+    "User-Agent": "fedcir-tracker (personal research dashboard)"})
+
+
+def _pdf_to_text(data: bytes) -> str:
+    """Extract text from an opinion PDF."""
     try:
-        time.sleep(0.9)  # pacing: these add up during the summary backfill
+        import pdfplumber
+        from io import BytesIO
+        with pdfplumber.open(BytesIO(data)) as pdf:
+            # The cover page carries the panel and authorship; a handful of
+            # pages is plenty for issue classification and summaries too.
+            pages = pdf.pages[:12]
+            return "\n".join((p.extract_text() or "") for p in pages)[:60000]
+    except Exception as e:  # noqa: BLE001
+        log(f"  PDF text extraction failed: {e}")
+        return ""
+
+
+def fetch_opinion_text(opinion_id: int, download_url: str = None) -> str:
+    """Full text of one opinion, for panel parsing, issue tagging, and summaries.
+
+    Prefers the court's own PDF (cafc.uscourts.gov), which costs nothing against
+    the CourtListener rate limit — the API is only a fallback when no PDF URL is
+    recorded. Records that fail once are remembered for the session so a single
+    bad opinion can't burn the budget being retried over and over.
+    """
+    if opinion_id in FAILED_TEXT_IDS:
+        return ""
+
+    # 1. Court PDF — free, doesn't touch the API quota.
+    if download_url and download_url.startswith("http"):
+        try:
+            r = PDF_SESSION.get(download_url, timeout=REQUEST_TIMEOUT)
+            r.raise_for_status()
+            text = _pdf_to_text(r.content)
+            if text.strip():
+                return text
+            log(f"  PDF for {opinion_id} produced no text; trying API")
+        except Exception as e:  # noqa: BLE001
+            log(f"  PDF fetch failed for {opinion_id} ({e}); trying API")
+
+    # 2. CourtListener API fallback — costs quota, so one attempt only.
+    try:
+        time.sleep(0.9)
         r = SESSION.get(f"{CL_BASE}/opinions/{opinion_id}/",
                         params={"fields": "plain_text,html_with_citations"},
                         timeout=REQUEST_TIMEOUT)
         if r.status_code == 429:
-            log("  rate limited on opinion text; sleeping 60s")
-            time.sleep(60)
-            r = SESSION.get(f"{CL_BASE}/opinions/{opinion_id}/",
-                            params={"fields": "plain_text,html_with_citations"},
-                            timeout=REQUEST_TIMEOUT)
+            # Don't sleep-and-retry: the quota is gone and every further attempt
+            # deepens it. Record the miss and move on; the next run picks it up.
+            log("  rate limited on opinion text; skipping (will retry next run)")
+            FAILED_TEXT_IDS.add(opinion_id)
+            return ""
         r.raise_for_status()
         d = r.json()
         text = d.get("plain_text") or ""
         if not text and d.get("html_with_citations"):
             text = re.sub(r"<[^>]+>", " ", d["html_with_citations"])
+        if not text.strip():
+            FAILED_TEXT_IDS.add(opinion_id)
         return text[:60000]
     except Exception as e:  # noqa: BLE001
         log(f"  opinion text {opinion_id} failed: {e}")
+        FAILED_TEXT_IDS.add(opinion_id)
         return ""
 
 
@@ -793,15 +848,46 @@ def build() -> dict:
     # ---- load persisted state and accumulated raw records ------------------
     state = _load_json(STATE_PATH, {})
     JUDGE_NAME_CACHE.update(state.get("judge_names") or {})
+
+    # --- migration -------------------------------------------------------
+    # Versions before v17 advanced `last_date` from the newest record fetched,
+    # even when the source had only covered a slice of the window. Because
+    # fetches are newest-first, that sealed the older backlog behind a marker
+    # set on the first run — decisions before it could never be retrieved.
+    # Any state lacking the `backfill_done` flag predates the fix, so clear its
+    # markers and let the sources re-scan the full window once.
+    if state and not state.get("schema_v17"):
+        cleared = []
+        for k in ("dockets", "clusters", "opinions", "audio"):
+            st = state.get(k)
+            if isinstance(st, dict) and st.get("last_date"):
+                st.pop("last_date", None)
+                st.pop("last_id", None)
+                st["backfill_done"] = False
+                st["caught_up"] = False
+                cleared.append(k)
+        state["schema_v17"] = True
+        if cleared:
+            log(f"State migration: cleared premature high-water marks for "
+                f"{', '.join(cleared)} — re-scanning the full window to recover "
+                f"decisions that were skipped.")
     store = _load_json(STORE_PATH, {})
     run_no = int(state.get("run_no", 0)) + 1
     full_since = since
 
     def _since_for(key: str) -> str:
-        """Incremental: only fetch what's new since this source last succeeded."""
-        if not INCREMENTAL:
-            return full_since
-        last = (state.get(key) or {}).get("last_date")
+        """Date floor for this source's fetch.
+
+        A source only earns incremental mode after it has actually covered the
+        whole window. Previously the high-water mark advanced from the newest
+        record seen, which — because sources fetch newest-first — sealed the
+        entire backlog behind a marker set on the very first run and made older
+        decisions permanently unreachable. Now `backfill_done` gates that.
+        """
+        st = state.get(key) or {}
+        if not INCREMENTAL or not st.get("backfill_done"):
+            return full_since          # still backfilling: always the full window
+        last = st.get("last_date")
         if not last:
             return full_since
         try:
@@ -832,20 +918,25 @@ def build() -> dict:
         # give it room. Caught-up sources only need the newest page or two.
         return PAGE_BUDGET_STEADY if (state.get(k) or {}).get("caught_up") else PAGE_BUDGET
 
+    def _resume_for(k: str):
+        return (state.get(k) or {}).get("resume_url")
+
     results: dict = {}
     for key in order:
         if key == "dockets":
-            results[key] = fetch_dockets(_since_for(key), cov[key], _budget_for(key))
+            results[key] = fetch_dockets(_since_for(key), cov[key], _budget_for(key),
+                                         _resume_for(key))
         elif key == "clusters":
-            results[key] = fetch_clusters(_since_for(key), cov[key], _budget_for(key))
+            results[key] = fetch_clusters(_since_for(key), cov[key], _budget_for(key),
+                                          _resume_for(key))
         elif key == "opinions":
             results[key] = fetch_opinions(_since_for(key), cov[key],
                                           (state.get(key) or {}).get("last_id", 0),
-                                          _budget_for(key))
+                                          _budget_for(key), _resume_for(key))
         elif key == "audio":
             results[key] = fetch_audio(_since_for(key), cov[key],
                                        (state.get(key) or {}).get("last_id", 0),
-                                       _budget_for(key))
+                                       _budget_for(key), _resume_for(key))
 
     # ---- merge this run's records into the accumulated store ---------------
     dockets = _merge_store(store, "dockets", results.get("dockets", []), "id")
@@ -873,10 +964,24 @@ def build() -> dict:
         if ok:
             st["caught_up"] = True
             st["last_ok"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
-        elif cov[key].get("reason") in ("quota exhausted", "network timeouts"):
+            # A source has only truly backfilled once it fetched the entire
+            # window in one clean pass — not merely finished a budgeted slice.
+            # Until then it keeps re-scanning from the window start so nothing
+            # older than the newest record can be skipped.
+            if _since_for(key) == full_since:
+                st["backfill_done"] = True
+                if not st.get("backfill_completed_at"):
+                    st["backfill_completed_at"] = date.today().isoformat()
+                    log(f"  {key}: full-window backfill complete — "
+                        f"switching to incremental updates")
+        elif cov[key].get("reason") in ("quota exhausted", "network timeouts",
+                                        "page budget reached"):
             st["caught_up"] = False
+            st["backfill_done"] = False   # still incomplete; keep scanning wide
         # Always advance the attempt clock so a source that keeps failing still
         # rotates out of first place and doesn't monopolize the front of the queue.
+        if "resume_url" in cov[key]:
+            st["resume_url"] = cov[key]["resume_url"]
         st["last_attempt"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
     state["run_no"] = run_no
     state["judge_names"] = JUDGE_NAME_CACHE
@@ -994,7 +1099,8 @@ def build() -> dict:
                 if cached_panel is not None:
                     panel = list(cached_panel)
                 else:
-                    otext = fetch_opinion_text(op_id)
+                    otext = fetch_opinion_text(
+                        op_id, cluster_ops[0].get("download_url"))
                     text_fetches += 1
                     panel = parse_panel_from_text(otext)
                     cache[pkey] = panel
@@ -1059,7 +1165,8 @@ def build() -> dict:
                         and not summary and not is_r36 and bool(lead_ops))
         if cache_key and (need_issues or need_summary) \
                 and text_fetches < MAX_OPINION_TEXT_FETCHES:
-            opinion_text = fetch_opinion_text(lead_ops[0]["id"])
+            opinion_text = fetch_opinion_text(
+                lead_ops[0]["id"], lead_ops[0].get("download_url"))
             text_fetches += 1
             if need_issues and opinion_text:
                 issues = (classify_issues_keywords(opinion_text)
@@ -1142,13 +1249,17 @@ def build() -> dict:
         and not re.search(r"rule\s*36",
                           str((c.get("decision") or {}).get("disposition") or ""), re.I))
     all_complete = all(cov[k].get("complete", True) for k in cov)
+    backfilling = [k for k in ("dockets", "clusters", "opinions", "audio")
+                   if not (state.get(k) or {}).get("backfill_done")]
     latest_decision = max((c["decision"]["date"] for c in cases
                            if (c.get("decision") or {}).get("date")), default=None)
     next_arg = min((c["argument"]["date"] for c in cases
                     if (c.get("argument") or {}).get("date", "") >= today
                     and c["status"] != "Decided"), default=None)
     coverage = {
-        "complete": all_complete,
+        "complete": all_complete and not backfilling,
+        "run_complete": all_complete,
+        "backfilling": backfilling,
         "window_since": since,
         "window_months": WINDOW_MONTHS,
         "sources": {
