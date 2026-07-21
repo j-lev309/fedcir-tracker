@@ -284,8 +284,10 @@ function buildScope(){
   const SRC={dockets:"Dockets (all appeals)",clusters:"Decisions",opinions:"Opinion authorship/roles",audio:"Argument audio",scheduled_arguments:"Argument calendar (CAFC PDFs)",opinion_rss:"Same-day opinions (RSS)"};
   const sm=c.summaries||{};
   const summariesBuilding = sm.enabled && !sm.complete;
+  const backfilling = (c.backfilling||[]).length>0;
   let badge, label;
-  if(!c.complete){badge="partial";label="Partial — refreshing";}
+  if(backfilling){badge="building";label="Backfilling — incomplete";}
+  else if(!c.complete){badge="partial";label="Partial — refreshing";}
   else if(summariesBuilding){badge="building";label="Summaries building";}
   else{badge="ok";label="Complete";}
 
@@ -306,8 +308,10 @@ function buildScope(){
     <summary><span class="caret">▶</span>What this dashboard contains <span class="badge ${badge}">${label}</span></summary>
     <div class="body">
       <dl>
-        <dt>Window</dt><dd>All CAFC appeals docketed since <b>${winStart}</b> (${c.window_months} months), plus every decision and scheduled argument in that span.</dd>
-        <dt>Latest decision</dt><dd>${fmtD(c.latest_decision_date)}</dd>
+        <dt>Window</dt><dd>${backfilling
+          ? `Target: all CAFC appeals docketed since <b>${winStart}</b> (${c.window_months} months). <b style="color:var(--stamp)">Still backfilling ${esc((c.backfilling||[]).join(", "))}</b> — older cases in this range are not all loaded yet, so treat coverage as partial.`
+          : `All CAFC appeals docketed since <b>${winStart}</b> (${c.window_months} months), plus every decision and scheduled argument in that span.`}</dd>
+        <dt>Latest decision</dt><dd>${fmtD(c.latest_decision_date)}${backfilling?' <span style="color:var(--steel)">(newest loaded — not necessarily the newest that exists)</span>':''}</dd>
         <dt>Next argument</dt><dd>${fmtD(c.next_argument_date)}</dd>
       </dl>
       <div style="margin-top:11px;font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--steel)">Data sources this run</div>
