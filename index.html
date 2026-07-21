@@ -73,6 +73,13 @@ header{border-bottom:3px double var(--federal);background:var(--card)}
 .row2{display:flex;gap:10px;flex-wrap:wrap;padding:10px 0 4px;align-items:center}
 .row2 select,.row2 input{border:1px solid var(--line);background:var(--card);border-radius:3px;padding:7px 10px;font-size:13px;font-family:var(--sans);color:var(--ink)}
 .row2 input{flex:1;min-width:190px}
+.row3{display:flex;gap:8px;flex-wrap:wrap;align-items:center;padding:2px 0 6px}
+.row3 select,.row3 input[type=date]{border:1px solid var(--line);background:var(--card);border-radius:3px;padding:6px 9px;font-size:12.5px;font-family:var(--sans);color:var(--ink)}
+.row3 .dlab{font-family:var(--mono);font-size:11px;color:var(--steel);display:flex;align-items:center;gap:5px}
+.presets{display:flex;gap:5px;flex-wrap:wrap}
+.presets button{border:1px solid var(--line);background:var(--card);border-radius:99px;padding:5px 11px;font-size:12px;font-weight:500;color:var(--ink)}
+.presets button.on{background:var(--seal);border-color:var(--seal);color:#fff}
+.clearbtn{border:1px solid var(--stamp);background:transparent;color:var(--stamp);border-radius:3px;padding:5px 11px;font-size:12px;font-weight:600}
 .count{font-family:var(--mono);font-size:12px;color:var(--steel);margin-left:auto}
 
 /* ---------- case cards: the slip-opinion caption ---------- */
@@ -162,6 +169,23 @@ footer{border-top:1px solid var(--line);padding:18px 20px 40px;max-width:1060px;
     <input id="search" type="search" placeholder="Search caption, docket no., origin…" aria-label="Search cases">
     <span class="count" id="count"></span>
   </div>
+  <div class="row3">
+    <select id="dateField" aria-label="Which date to filter on">
+      <option value="decision">Decision date</option>
+      <option value="argument">Argument date</option>
+      <option value="filed">Docketed date</option>
+    </select>
+    <div class="presets" id="datePresets">
+      <button data-p="30">Last 30 days</button>
+      <button data-p="90">Last 90 days</button>
+      <button data-p="term">This term</button>
+      <button data-p="ytd">Year to date</button>
+      <button data-p="upcoming">Upcoming</button>
+    </div>
+    <label class="dlab">from <input type="date" id="dateFrom" aria-label="From date"></label>
+    <label class="dlab">to <input type="date" id="dateTo" aria-label="To date"></label>
+    <button id="dateClear" class="clearbtn" hidden>Clear dates</button>
+  </div>
 </section>
 
 <main id="main"><div class="empty">Loading docket…</div></main>
@@ -201,7 +225,57 @@ async function load(){
   buildStats(); buildTabs(); buildChips(); buildJudges(); buildScope();
   ["statusSel","precSel","judgeSel"].forEach(id=>$(id).addEventListener("change",()=>{shown=60;render();}));
   $("search").addEventListener("input",()=>{shown=60;render();});
+  setupDateFilter();
   render();
+}
+
+function setupDateFilter(){
+  const iso=d=>d.toISOString().slice(0,10);
+  const today=new Date();
+
+  function applyPreset(p){
+    let from="", to="";
+    if(p==="30"||p==="90"){
+      const d=new Date(today); d.setDate(d.getDate()-parseInt(p,10));
+      from=iso(d); to=iso(today);
+    }else if(p==="ytd"){
+      from=`${today.getFullYear()}-01-01`; to=iso(today);
+    }else if(p==="term"){
+      // Federal Circuit term runs October 1 through September 30.
+      const y=today.getMonth()>=9?today.getFullYear():today.getFullYear()-1;
+      from=`${y}-10-01`; to=`${y+1}-09-30`;
+    }else if(p==="upcoming"){
+      from=iso(today); to="";
+      $("dateField").value="argument";   // "upcoming" only makes sense for arguments
+    }
+    $("dateFrom").value=from; $("dateTo").value=to;
+    [...$("datePresets").children].forEach(b=>b.classList.toggle("on",b.dataset.p===p));
+    $("dateClear").hidden=false;
+    shown=60; render();
+  }
+
+  [...$("datePresets").children].forEach(b=>{
+    b.onclick=()=>{
+      const active=b.classList.contains("on");
+      if(active){ clearDates(); } else { applyPreset(b.dataset.p); }
+    };
+  });
+
+  function clearDates(){
+    $("dateFrom").value=""; $("dateTo").value="";
+    [...$("datePresets").children].forEach(b=>b.classList.remove("on"));
+    $("dateClear").hidden=true;
+    shown=60; render();
+  }
+  $("dateClear").onclick=clearDates;
+
+  // Manual edits override any preset selection
+  ["dateFrom","dateTo"].forEach(id=>$(id).addEventListener("change",()=>{
+    [...$("datePresets").children].forEach(b=>b.classList.remove("on"));
+    $("dateClear").hidden=!($("dateFrom").value||$("dateTo").value);
+    shown=60; render();
+  }));
+  $("dateField").addEventListener("change",()=>{shown=60;render();});
 }
 
 function buildScope(){
@@ -290,15 +364,28 @@ function decoKind(c){
   return "";
 }
 
+function caseDate(c, field){
+  if(field==="decision") return (c.decision||{}).date||null;
+  if(field==="argument") return c.date_argued||(c.argument||{}).date||null;
+  return c.date_filed||null;
+}
+
 function filtered(){
   const st=$("statusSel").value, pr=$("precSel").value, jg=$("judgeSel").value,
-        q=$("search").value.trim().toLowerCase();
+        q=$("search").value.trim().toLowerCase(),
+        df=$("dateField").value, from=$("dateFrom").value, to=$("dateTo").value;
   return DATA.cases.filter(c=>{
     if(typeF && c.case_type!==typeF)return false;
     if(issueF && !(c.patent_issues||[]).includes(issueF))return false;
     if(st && c.status!==st)return false;
     if(pr && decoKind(c)!==pr)return false;
     if(jg && !(c.panel||[]).some(p=>cleanJudge(p.name)===jg))return false;
+    if(from||to){
+      const d=caseDate(c,df);
+      if(!d)return false;              // no date of that kind = excluded
+      if(from && d<from)return false;
+      if(to && d>to)return false;
+    }
     if(q){
       const hay=[c.case_name,c.docket_number,c.origin,c.summary,(c.decision||{}).disposition,
                  ...(c.panel||[]).map(p=>p.name)].join(" ").toLowerCase();
@@ -374,9 +461,17 @@ function cardHTML(c){
 
 function render(){
   const list=filtered();
-  $("count").textContent=list.length+" case"+(list.length===1?"":"s");
+  const df=$("dateField").value, hasDate=$("dateFrom").value||$("dateTo").value;
+  const fieldLabel={decision:"decision date",argument:"argument date",filed:"docketed date"}[df];
+  $("count").textContent=list.length+" case"+(list.length===1?"":"s")
+    +(hasDate?` · by ${fieldLabel}`:"");
   if(view==="calendar"){renderCalendar(list);return;}
-  if(!list.length){$("main").innerHTML='<div class="empty">No cases match these filters.</div>';return;}
+  if(!list.length){
+    $("main").innerHTML='<div class="empty">No cases match these filters.'
+      +(hasDate?`<br><span style="font-size:14px">Cases without a ${esc(fieldLabel)} are excluded by a date range — try a different date field or clear the range.</span>`:"")
+      +'</div>';
+    return;
+  }
   let html=list.slice(0,shown).map(cardHTML).join("");
   if(list.length>shown)html+='<button class="loadmore" onclick="shown+=60;render()">Show more ('+(list.length-shown)+' remaining)</button>';
   $("main").innerHTML=html;
