@@ -1,10 +1,11 @@
 {
- "generated_at": "2026-07-21T19:51:28+00:00",
+ "generated_at": "2026-07-21T22:13:28+00:00",
  "window_since": "2025-01-27",
  "coverage": {
   "complete": false,
   "run_complete": false,
   "backfilling": [
+   "dockets",
    "clusters",
    "opinions",
    "audio"
@@ -13,20 +14,19 @@
   "window_months": 18,
   "sources": {
    "dockets": {
-    "complete": true,
-    "reason": "ok",
-    "count": 365,
-    "resume_url": null
+    "complete": false,
+    "reason": "quota exhausted",
+    "count": 0
    },
    "clusters": {
     "complete": false,
-    "reason": "HTTP 502",
-    "count": 340
+    "reason": "quota exhausted",
+    "count": 1000
    },
    "opinions": {
     "complete": false,
     "reason": "quota exhausted",
-    "count": 380
+    "count": 0
    },
    "audio": {
     "complete": false,
@@ -47,21 +47,21 @@
   "summaries": {
    "enabled": false,
    "have": 2,
-   "expected": 32,
+   "expected": 89,
    "complete": true
   },
-  "opinion_text_fetches_this_run": 51,
+  "opinion_text_fetches_this_run": 94,
   "opinion_text_fetch_cap": 600,
   "latest_decision_date": "2026-07-17",
   "next_argument_date": null
  },
  "stats": {
   "total": 365,
-  "pending": 321,
+  "pending": 268,
   "scheduled": 0,
-  "awaiting": 10,
-  "decided": 34,
-  "precedential": 6,
+  "awaiting": 6,
+  "decided": 91,
+  "precedential": 10,
   "rule36": 2
  },
  "upcoming_argument_docket_numbers": [],
@@ -1381,6 +1381,28 @@
    "url_audio": null
   },
   {
+   "docket_number": "2026-1031",
+   "case_name": "Aljindi v. United States",
+   "case_type": "Federal Claims",
+   "origin": "United States Court of Federal Claims",
+   "status": "Decided",
+   "date_filed": "2025-10-09",
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-04-14",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10842432/aljindi-v-united-states/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1031.OPINION.4-14-2026_2675825.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/73186599/aljindi-v-united-states/",
+   "url_audio": null
+  },
+  {
    "docket_number": "2026-1647",
    "case_name": "Greenthread, LLC v. Cirrus Logic, Inc.",
    "case_type": "Patent (PTAB)",
@@ -1394,6 +1416,30 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/73247721/greenthread-llc-v-cirrus-logic-inc/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "2026-1092",
+   "case_name": "Wuhan China Star Optoelectronics Semiconductor Dis v. Samsung Display Co., Ltd.",
+   "case_type": "Patent (PTAB)",
+   "origin": "United States Patent and Trademark Office, Patent Trial and Appeal Board",
+   "status": "Decided",
+   "date_filed": "2025-10-24",
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-04-08",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10839449/wuhan-china-star-optoelectronics-semiconductor-dis-v-samsung-display-co/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1092.ORDER.4-7-2026_261092472026.pdf"
+   },
+   "panel": [],
+   "patent_issues": [
+    "Other / Procedural"
+   ],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/71865090/wuhan-china-star-optoelectronics-semiconductor-dis-v-samsung-display-co/",
    "url_audio": null
   },
   {
@@ -1426,6 +1472,28 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/73539833/raydiant-oximetry-inc-v-alc-medical-holdings-llc/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "2025-1991",
+   "case_name": "SecurityPoint Holdings, Inc. v. United States",
+   "case_type": "Federal Claims",
+   "origin": "United States Court of Federal Claims",
+   "status": "Decided",
+   "date_filed": "2025-08-05",
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-03-31",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10830456/securitypoint-holdings-inc-v-united-states/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1991.ORDER.3-31-2026_2669180.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/73119050/securitypoint-holdings-inc-v-united-states/",
    "url_audio": null
   },
   {
@@ -1493,6 +1561,28 @@
    "url_audio": null
   },
   {
+   "docket_number": "2025-1972",
+   "case_name": "Ingram v. Collins",
+   "case_type": "Veterans",
+   "origin": "United States Court of Appeals for Veterans Claims",
+   "status": "Decided",
+   "date_filed": "2025-07-29",
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-03-30",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10829886/ingram-v-collins/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1972.ORDER.3-30-2026_2668347.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/73112928/ingram-v-collins/",
+   "url_audio": null
+  },
+  {
    "docket_number": "2026-1566",
    "case_name": "Saha Thai Steel Pipe Public Company Limited v. United States",
    "case_type": "Trade (CIT)",
@@ -1541,6 +1631,30 @@
    "url_audio": null
   },
   {
+   "docket_number": "2026-123",
+   "case_name": "In re: Volkswagen Group of America, Inc.",
+   "case_type": "Patent (PTAB)",
+   "origin": "United States Patent and Trademark Office",
+   "status": "Decided",
+   "date_filed": "2026-01-06",
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-03-19",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10811192/in-re-volkswagen-group-of-america-inc/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-123.ORDER.3-19-2026_2663037.pdf"
+   },
+   "panel": [],
+   "patent_issues": [
+    "Other / Procedural"
+   ],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/72143262/in-re-volkswagen-group-of-america-inc/",
+   "url_audio": null
+  },
+  {
    "docket_number": "2026-1523",
    "case_name": "Bprotocol Foundation v. Universal Navigation Inc.",
    "case_type": "Patent (District Ct.)",
@@ -1573,6 +1687,98 @@
    "url_audio": null
   },
   {
+   "docket_number": "2025-2026",
+   "case_name": "Applications In Internet Time, LLC v. Salesforce, Inc.",
+   "case_type": "Patent (District Ct.)",
+   "origin": "United States District Court for the District of Nevada",
+   "status": "Decided",
+   "date_filed": "2025-08-18",
+   "date_argued": "2026-02-09",
+   "argument": null,
+   "decision": {
+    "date": "2026-03-16",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10809208/applications-in-internet-time-llc-v-salesforce-inc/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-2026.OPINION.3-16-2026_2661219.pdf"
+   },
+   "panel": [],
+   "patent_issues": [
+    "Other / Procedural"
+   ],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/71357659/applications-in-internet-time-llc-v-salesforce-inc/",
+   "url_audio": "https://www.courtlistener.com/audio/102589/applications-in-internet-time-llc-v-salesforce-inc/"
+  },
+  {
+   "docket_number": "2025-2125",
+   "case_name": "Carbyne Biometrics, LLC v. Apple Inc.",
+   "case_type": "Patent (PTAB)",
+   "origin": "United States Patent and Trademark Office, Patent Trial and Appeal Board",
+   "status": "Decided",
+   "date_filed": "2025-09-19",
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-03-12",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10807957/carbyne-biometrics-llc-v-apple-inc/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-2125.ORDER.3-12-2026_2660346.pdf"
+   },
+   "panel": [],
+   "patent_issues": [
+    "Other / Procedural"
+   ],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/71543086/carbyne-biometrics-llc-v-apple-inc/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "2025-2128",
+   "case_name": "Golden v. United States",
+   "case_type": "Federal Claims",
+   "origin": "United States Court of Federal Claims",
+   "status": "Decided",
+   "date_filed": "2025-09-19",
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-03-10",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10806556/golden-v-united-states/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-2128.OPINION.3-10-2026_2658940.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/71430414/golden-v-united-states/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "2025-1792",
+   "case_name": "Ligado Networks LLC v. United States",
+   "case_type": "Federal Claims",
+   "origin": "United States Court of Federal Claims",
+   "status": "Decided",
+   "date_filed": "2025-05-20",
+   "date_argued": "2026-02-04",
+   "argument": null,
+   "decision": {
+    "date": "2026-03-10",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10806555/ligado-networks-llc-v-united-states/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1792.ERRATA.3-10-2026_2658976.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/70327557/ligado-networks-llc-v-united-states/",
+   "url_audio": "https://www.courtlistener.com/audio/102524/ligado-networks-llc-v-united-states/"
+  },
+  {
    "docket_number": "2026-1493",
    "case_name": "Apple Inc. v. Smith Interface Technologies, LLC",
    "case_type": "Patent (PTAB)",
@@ -1586,6 +1792,28 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/73272461/apple-inc-v-smith-interface-technologies-llc/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "2026-1459",
+   "case_name": "Mosaic Company v. United States",
+   "case_type": "Trade (CIT)",
+   "origin": "United States Court of International Trade",
+   "status": "Decided",
+   "date_filed": "2026-02-20",
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-03-04",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10803701/mosaic-company-v-united-states/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/72312923/mosaic-company-v-united-states/",
    "url_audio": null
   },
   {
@@ -1605,6 +1833,120 @@
    "url_audio": null
   },
   {
+   "docket_number": "2025-2003",
+   "case_name": "Perkins v. Collins",
+   "case_type": "Veterans",
+   "origin": "United States Court of Appeals for Veterans Claims",
+   "status": "Decided",
+   "date_filed": "2025-08-08",
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-03-03",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10803116/perkins-v-collins/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/71221782/perkins-v-collins/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "2025-1812",
+   "case_name": "V.O.S. Selections, Inc. v. Trump",
+   "case_type": "Trade (CIT)",
+   "origin": "United States Court of International Trade",
+   "status": "Decided",
+   "date_filed": "2025-05-28",
+   "date_argued": "2025-07-31",
+   "argument": null,
+   "decision": {
+    "date": "2026-03-02",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10802420/vos-selections-inc-v-trump/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/70394463/vos-selections-inc-v-trump/",
+   "url_audio": "https://www.courtlistener.com/audio/99869/vos-selections-inc-v-trump/"
+  },
+  {
+   "docket_number": "2026-116",
+   "case_name": "In re: Tesla, Inc.",
+   "case_type": "Patent (PTAB)",
+   "origin": "United States Patent and Trademark Office",
+   "status": "Decided",
+   "date_filed": "2025-12-02",
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-02-27",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10801275/in-re-tesla-inc/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [
+    "Other / Procedural"
+   ],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/72338983/in-re-tesla-inc/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "2025-1755",
+   "case_name": "Neal v. DVA",
+   "case_type": "Federal Employment",
+   "origin": "Merit Systems Protection Board",
+   "status": "Decided",
+   "date_filed": "2025-05-09",
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-02-27",
+    "precedential_status": "Published",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10801273/neal-v-dva/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/70243315/neal-v-dva/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "2026-119",
+   "case_name": "In re: Kahoot! AS",
+   "case_type": "Patent (PTAB)",
+   "origin": "United States Patent and Trademark Office",
+   "status": "Decided",
+   "date_filed": "2025-12-29",
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-02-25",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10800193/in-re-kahoot-as/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [
+    "Other / Procedural"
+   ],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/72190479/in-re-kahoot-as/",
+   "url_audio": null
+  },
+  {
    "docket_number": "2026-1471",
    "case_name": "Entropic Communications, LLC v. Squires",
    "case_type": "Patent (PTAB)",
@@ -1618,6 +1960,102 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/72366164/entropic-communications-llc-v-squires/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "2026-128",
+   "case_name": "In re: Kabir",
+   "case_type": "Patent (District Ct.)",
+   "origin": "United States District Court for the District of New Jersey",
+   "status": "Decided",
+   "date_filed": "2026-02-05",
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-02-24",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10799621/in-re-kabir/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [
+    "Other / Procedural"
+   ],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/72252134/in-re-kabir/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "2026-117",
+   "case_name": "In re: Tessell, Inc.",
+   "case_type": "Patent (PTAB)",
+   "origin": "United States Patent and Trademark Office",
+   "status": "Decided",
+   "date_filed": "2025-12-08",
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-02-24",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10799650/in-re-tessell-inc/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [
+    "Other / Procedural"
+   ],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/72104615/in-re-tessell-inc/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "2026-115",
+   "case_name": "In re: Kangxi Communication Technologies Co., Ltd.",
+   "case_type": "Patent (PTAB)",
+   "origin": "United States Patent and Trademark Office",
+   "status": "Decided",
+   "date_filed": "2025-11-24",
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-02-24",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10799620/in-re-kangxi-communication-technologies-co-ltd/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [
+    "Other / Procedural"
+   ],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/72104642/in-re-kangxi-communication-technologies-co-ltd/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "2026-113",
+   "case_name": "In re: Intel Corporation",
+   "case_type": "Patent (PTAB)",
+   "origin": "United States Patent and Trademark Office",
+   "status": "Decided",
+   "date_filed": "2025-11-24",
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-02-24",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10799622/in-re-intel-corporation/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [
+    "Other / Procedural"
+   ],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/72104656/in-re-intel-corporation/",
    "url_audio": null
   },
   {
@@ -1650,22 +2088,6 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/72312924/mosaic-company-v-united-states/",
-   "url_audio": null
-  },
-  {
-   "docket_number": "2026-1459",
-   "case_name": "Mosaic Company v. United States",
-   "case_type": "Trade (CIT)",
-   "origin": "United States Court of International Trade",
-   "status": "Pending / Briefing",
-   "date_filed": "2026-02-20",
-   "date_argued": null,
-   "argument": null,
-   "decision": null,
-   "panel": [],
-   "patent_issues": [],
-   "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/72312923/mosaic-company-v-united-states/",
    "url_audio": null
   },
   {
@@ -1717,6 +2139,28 @@
    "url_audio": null
   },
   {
+   "docket_number": "2026-1123",
+   "case_name": "Nguyen v. Bondi",
+   "case_type": "Other / Unclassified",
+   "origin": "Board of Immigration Ap- peals",
+   "status": "Decided",
+   "date_filed": "2025-11-05",
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-02-17",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10794924/nguyen-v-bondi/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/71881241/nguyen-v-bondi/",
+   "url_audio": null
+  },
+  {
    "docket_number": "2026-1434",
    "case_name": "Pemberton v. Jack In The Box Inc.",
    "case_type": "Patent (District Ct.)",
@@ -1765,19 +2209,25 @@
    "url_audio": null
   },
   {
-   "docket_number": "2026-128",
-   "case_name": "In re: Kabir",
-   "case_type": "Patent (District Ct.)",
-   "origin": "United States District Court for the District of New Jersey",
-   "status": "Pending / Briefing",
-   "date_filed": "2026-02-05",
+   "docket_number": "2025-2120",
+   "case_name": "Auxin Solar Inc. v. United States",
+   "case_type": "Trade (CIT)",
+   "origin": "United States Court of International Trade",
+   "status": "Decided",
+   "date_filed": "2025-09-17",
    "date_argued": null,
    "argument": null,
-   "decision": null,
+   "decision": {
+    "date": "2026-02-05",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10784644/auxin-solar-inc-v-united-states/",
+    "url_pdf": null
+   },
    "panel": [],
    "patent_issues": [],
    "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/72252134/in-re-kabir/",
+   "url_cl": "https://www.courtlistener.com/docket/71373118/auxin-solar-inc-v-united-states/",
    "url_audio": null
   },
   {
@@ -1794,6 +2244,52 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/72220385/dasso-international-inc-v-moso-international-bv/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "2025-1641",
+   "case_name": "Amgen Inc. v. Colorado Pres. Drug Affordability Review Board",
+   "case_type": "Patent (District Ct.)",
+   "origin": "United States District Court for the District of Colorado",
+   "status": "Decided",
+   "date_filed": "2025-04-14",
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-02-02",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10782674/amgen-inc-v-colorado-pres-drug-affordability-review-board/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [
+    "Other / Procedural"
+   ],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/69918606/amgen-inc-v-colorado-pres-drug-affordability-review-board/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "2025-127",
+   "case_name": "In re: US",
+   "case_type": "Trade (CIT)",
+   "origin": "United States Court of International Trade",
+   "status": "Decided",
+   "date_filed": "2025-04-07",
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-02-02",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10782772/in-re-us/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/69853257/in-re-us/",
    "url_audio": null
   },
   {
@@ -1842,6 +2338,30 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/73131797/apple-inc-v-theta-ip-llc/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "2026-111",
+   "case_name": "In re: Google LLC",
+   "case_type": "Patent (PTAB)",
+   "origin": "United States Patent and Trademark Office",
+   "status": "Decided",
+   "date_filed": "2025-11-20",
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-01-27",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10779855/in-re-google-llc/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [
+    "Other / Procedural"
+   ],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/72104663/in-re-google-llc/",
    "url_audio": null
   },
   {
@@ -1973,6 +2493,30 @@
    "url_audio": null
   },
   {
+   "docket_number": "2025-1794",
+   "case_name": "RJ Technology LLC v. Samsung Electronics Co., Ltd.",
+   "case_type": "Patent (PTAB)",
+   "origin": "United States Patent and Trademark Office, Patent Trial and Appeal Board",
+   "status": "Decided",
+   "date_filed": "2025-05-20",
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-01-15",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10774997/rj-technology-llc-v-samsung-electronics-co-ltd/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [
+    "Other / Procedural"
+   ],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/70790394/rj-technology-llc-v-samsung-electronics-co-ltd/",
+   "url_audio": null
+  },
+  {
    "docket_number": "2026-1339",
    "case_name": "Entropic Communications, LLC v. Squires",
    "case_type": "Patent (PTAB)",
@@ -2037,19 +2581,49 @@
    "url_audio": null
   },
   {
-   "docket_number": "2026-123",
-   "case_name": "In re: Volkswagen Group of America, Inc.",
+   "docket_number": "2025-2063",
+   "case_name": "Multimedia Technologies Pte. Ltd. v. LG Electronics Inc.",
    "case_type": "Patent (PTAB)",
-   "origin": "United States Patent and Trademark Office",
-   "status": "Pending / Briefing",
-   "date_filed": "2026-01-06",
+   "origin": "United States Patent and Trademark Office, Patent Trial and Appeal Board",
+   "status": "Decided",
+   "date_filed": "2025-08-29",
    "date_argued": null,
    "argument": null,
-   "decision": null,
+   "decision": {
+    "date": "2026-01-09",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10772508/multimedia-technologies-pte-ltd-v-lg-electronics-inc/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [
+    "Other / Procedural"
+   ],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/71260332/multimedia-technologies-pte-ltd-v-lg-electronics-inc/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "2025-1491",
+   "case_name": "Windsor v. Collins",
+   "case_type": "Veterans",
+   "origin": "United States Court of Appeals for Veterans Claims",
+   "status": "Decided",
+   "date_filed": "2025-02-27",
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-01-09",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10772445/windsor-v-collins/",
+    "url_pdf": null
+   },
    "panel": [],
    "patent_issues": [],
    "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/72143262/in-re-volkswagen-group-of-america-inc/",
+   "url_cl": "https://www.courtlistener.com/docket/72124445/windsor-v-collins/",
    "url_audio": null
   },
   {
@@ -2067,6 +2641,28 @@
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/72250721/dhs-probationary-employees-1-class-v-dhs/",
    "url_audio": null
+  },
+  {
+   "docket_number": "2026-1160",
+   "case_name": "Fedmet Resources Corporation v. United States",
+   "case_type": "Trade (CIT)",
+   "origin": "United States Court of International Trade",
+   "status": "Decided",
+   "date_filed": "2025-11-17",
+   "date_argued": "2026-07-09",
+   "argument": null,
+   "decision": {
+    "date": "2026-01-05",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10768891/fedmet-resources-corporation-v-magnesia-carbon-bricks-fair-trade-committee/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/71926619/fedmet-resources-corporation-v-united-states/",
+   "url_audio": "https://www.courtlistener.com/audio/105708/fedmet-resources-corporation-v-united-states/"
   },
   {
    "docket_number": "2026-1296",
@@ -2101,6 +2697,30 @@
    "url_audio": null
   },
   {
+   "docket_number": "2025-2142",
+   "case_name": "Bright Head LLC v. The Individuals, Corps. Identified on Schedule A",
+   "case_type": "Patent (District Ct.)",
+   "origin": "United States District Court for the Northern District of Illinois",
+   "status": "Decided",
+   "date_filed": "2025-09-24",
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2025-12-31",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10767253/bright-head-llc-v-the-individuals-corps-identified-on-schedule-a/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [
+    "Other / Procedural"
+   ],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/71492607/bright-head-llc-v-the-individuals-corps-identified-on-schedule-a/",
+   "url_audio": null
+  },
+  {
    "docket_number": "2026-1290",
    "case_name": "BGH Edelstahl Siegen GmbH v. United States",
    "case_type": "Trade (CIT)",
@@ -2117,19 +2737,27 @@
    "url_audio": null
   },
   {
-   "docket_number": "2026-119",
-   "case_name": "In re: Kahoot! AS",
+   "docket_number": "2026-105",
+   "case_name": "In re: Maplebear Inc.",
    "case_type": "Patent (PTAB)",
    "origin": "United States Patent and Trademark Office",
-   "status": "Pending / Briefing",
-   "date_filed": "2025-12-29",
+   "status": "Decided",
+   "date_filed": "2025-10-22",
    "date_argued": null,
    "argument": null,
-   "decision": null,
+   "decision": {
+    "date": "2025-12-30",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10766498/in-re-maplebear-inc/",
+    "url_pdf": null
+   },
    "panel": [],
-   "patent_issues": [],
+   "patent_issues": [
+    "Other / Procedural"
+   ],
    "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/72190479/in-re-kahoot-as/",
+   "url_cl": "https://www.courtlistener.com/docket/71749114/in-re-maplebear-inc/",
    "url_audio": null
   },
   {
@@ -2261,6 +2889,52 @@
    "url_audio": null
   },
   {
+   "docket_number": "2025-1687",
+   "case_name": "Lodge v. Collins",
+   "case_type": "Veterans",
+   "origin": "United States Court of Appeals for Veterans Claims",
+   "status": "Decided",
+   "date_filed": "2025-04-24",
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2025-12-10",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10750588/lodge-v-collins/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/70807866/lodge-v-collins/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "2025-1547",
+   "case_name": "Samsung Electronics Co., Ltd. v. Resonant Systems, Inc.",
+   "case_type": "Patent (PTAB)",
+   "origin": "United States Patent and Trademark Office, Patent Trial and Appeal Board",
+   "status": "Decided",
+   "date_filed": "2025-03-17",
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2025-12-10",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10750647/samsung-electronics-co-ltd-v-resonant-systems-inc/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [
+    "Other / Procedural"
+   ],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/69745490/samsung-electronics-co-ltd-v-resonant-systems-inc/",
+   "url_audio": null
+  },
+  {
    "docket_number": "2026-1235",
    "case_name": "Fiskars Finland Oy Ab v. Woodland Tools Inc.",
    "case_type": "Patent (District Ct.)",
@@ -2293,19 +2967,145 @@
    "url_audio": null
   },
   {
-   "docket_number": "2026-117",
-   "case_name": "In re: Tessell, Inc.",
-   "case_type": "Patent (PTAB)",
-   "origin": "United States Patent and Trademark Office",
-   "status": "Pending / Briefing",
-   "date_filed": "2025-12-08",
+   "docket_number": "2026-104",
+   "case_name": "In re: Comcast Cable Communications, LLC",
+   "case_type": "Patent (District Ct.)",
+   "origin": "United States District Court for the Eastern District of Texas",
+   "status": "Decided",
+   "date_filed": "2025-10-21",
    "date_argued": null,
    "argument": null,
-   "decision": null,
+   "decision": {
+    "date": "2025-12-09",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10749778/in-re-comcast-cable-communications-llc/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [
+    "Other / Procedural"
+   ],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/71719338/in-re-comcast-cable-communications-llc/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "2026-101",
+   "case_name": "In re: Cambridge Industries USA Inc.",
+   "case_type": "Patent (PTAB)",
+   "origin": "United States Patent and Trademark Office",
+   "status": "Decided",
+   "date_filed": "2025-10-10",
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2025-12-09",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10749696/in-re-cambridge-industries-usa-inc/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [
+    "Other / Procedural"
+   ],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/71664633/in-re-cambridge-industries-usa-inc/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "2025-152",
+   "case_name": "In re: SanDisk Technologies, Inc.",
+   "case_type": "Patent (PTAB)",
+   "origin": "United States Patent and Trademark Office",
+   "status": "Decided",
+   "date_filed": "2025-09-18",
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2025-12-09",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10749776/in-re-sandisk-technologies-inc/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [
+    "Other / Procedural"
+   ],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/71388380/in-re-sandisk-technologies-inc/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "2025-148",
+   "case_name": "In re: HighLevel, Inc.",
+   "case_type": "Patent (PTAB)",
+   "origin": "United States Patent and Trademark Office",
+   "status": "Decided",
+   "date_filed": "2025-08-29",
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2025-12-09",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10749777/in-re-highlevel-inc/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [
+    "Other / Procedural"
+   ],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/71241964/in-re-highlevel-inc/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "2025-1769",
+   "case_name": "Doe v. HHS",
+   "case_type": "Federal Claims",
+   "origin": "United States Court of Federal Claims",
+   "status": "Decided",
+   "date_filed": "2025-05-14",
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2025-12-09",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10749782/doe-v-hhs/",
+    "url_pdf": null
+   },
    "panel": [],
    "patent_issues": [],
    "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/72104615/in-re-tessell-inc/",
+   "url_cl": "https://www.courtlistener.com/docket/72008964/doe-v-hhs/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "2025-1392",
+   "case_name": "Pop Top Corp. v. Rakuten Kobo Inc.",
+   "case_type": "Patent (District Ct.)",
+   "origin": "United States District Court for the Northern District of California",
+   "status": "Decided",
+   "date_filed": "2025-01-27",
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2025-12-09",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10749774/pop-top-corp-v-rakuten-kobo-inc/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [
+    "Other / Procedural"
+   ],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/71464568/pop-top-corp-v-rakuten-kobo-inc/",
    "url_audio": null
   },
   {
@@ -2325,19 +3125,49 @@
    "url_audio": null
   },
   {
-   "docket_number": "2026-116",
-   "case_name": "In re: Tesla, Inc.",
+   "docket_number": "2025-2032",
+   "case_name": "Immersion Corporation v. Valve Corporation",
    "case_type": "Patent (PTAB)",
    "origin": "United States Patent and Trademark Office",
-   "status": "Pending / Briefing",
-   "date_filed": "2025-12-02",
+   "status": "Decided",
+   "date_filed": "2025-08-19",
    "date_argued": null,
    "argument": null,
-   "decision": null,
+   "decision": {
+    "date": "2025-12-03",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10746647/immersion-corporation-v-valve-corporation/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [
+    "Other / Procedural"
+   ],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/71987836/immersion-corporation-v-valve-corporation/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "2025-1536",
+   "case_name": "Colage v. Collins",
+   "case_type": "Veterans",
+   "origin": "United States Court of Appeals for Veterans Claims",
+   "status": "Decided",
+   "date_filed": "2025-03-13",
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2025-12-03",
+    "precedential_status": "Published",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10746556/colage-v-collins/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1536.OPINION.12-3-2025_2613128.pdf"
+   },
    "panel": [],
    "patent_issues": [],
    "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/72338983/in-re-tesla-inc/",
+   "url_cl": "https://www.courtlistener.com/docket/71987145/colage-v-collins/",
    "url_audio": null
   },
   {
@@ -2373,35 +3203,51 @@
    "url_audio": null
   },
   {
-   "docket_number": "2026-115",
-   "case_name": "In re: Kangxi Communication Technologies Co., Ltd.",
-   "case_type": "Patent (PTAB)",
-   "origin": "United States Patent and Trademark Office",
-   "status": "Pending / Briefing",
-   "date_filed": "2025-11-24",
+   "docket_number": "2025-1706",
+   "case_name": "Red Hat, Inc. v. VirtaMove, Corp.",
+   "case_type": "Patent (District Ct.)",
+   "origin": "United States District Court for the Northern District of California",
+   "status": "Decided",
+   "date_filed": "2025-04-29",
    "date_argued": null,
    "argument": null,
-   "decision": null,
+   "decision": {
+    "date": "2025-11-26",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10742810/red-hat-inc-v-virtamove-corp/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1706.ORDER.11-26-2025_2610395.pdf"
+   },
    "panel": [],
-   "patent_issues": [],
+   "patent_issues": [
+    "Other / Procedural"
+   ],
    "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/72104642/in-re-kangxi-communication-technologies-co-ltd/",
+   "url_cl": "https://www.courtlistener.com/docket/70169151/red-hat-inc-v-virtamove-corp/",
    "url_audio": null
   },
   {
-   "docket_number": "2026-113",
-   "case_name": "In re: Intel Corporation",
-   "case_type": "Patent (PTAB)",
-   "origin": "United States Patent and Trademark Office",
-   "status": "Pending / Briefing",
-   "date_filed": "2025-11-24",
+   "docket_number": "2026-102",
+   "case_name": "In re: Catanzaro",
+   "case_type": "Patent (District Ct.)",
+   "origin": "United States District Court for the Middle District of Pennsylvania",
+   "status": "Decided",
+   "date_filed": "2025-10-20",
    "date_argued": null,
    "argument": null,
-   "decision": null,
+   "decision": {
+    "date": "2025-11-24",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10741381/in-re-catanzaro/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-102.ORDER.11-24-2025_2608616.pdf"
+   },
    "panel": [],
-   "patent_issues": [],
+   "patent_issues": [
+    "Other / Procedural"
+   ],
    "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/72104656/in-re-intel-corporation/",
+   "url_cl": "https://www.courtlistener.com/docket/71700212/in-re-catanzaro/",
    "url_audio": null
   },
   {
@@ -2437,38 +3283,6 @@
    "url_audio": null
   },
   {
-   "docket_number": "2026-111",
-   "case_name": "In re: Google LLC",
-   "case_type": "Patent (PTAB)",
-   "origin": "United States Patent and Trademark Office",
-   "status": "Pending / Briefing",
-   "date_filed": "2025-11-20",
-   "date_argued": null,
-   "argument": null,
-   "decision": null,
-   "panel": [],
-   "patent_issues": [],
-   "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/72104663/in-re-google-llc/",
-   "url_audio": null
-  },
-  {
-   "docket_number": "2026-1160",
-   "case_name": "Fedmet Resources Corporation v. United States",
-   "case_type": "Trade (CIT)",
-   "origin": "United States Court of International Trade",
-   "status": "Argued \u2014 Awaiting Decision",
-   "date_filed": "2025-11-17",
-   "date_argued": "2026-07-09",
-   "argument": null,
-   "decision": null,
-   "panel": [],
-   "patent_issues": [],
-   "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/71926619/fedmet-resources-corporation-v-united-states/",
-   "url_audio": "https://www.courtlistener.com/audio/105708/fedmet-resources-corporation-v-united-states/"
-  },
-  {
    "docket_number": "2026-1155",
    "case_name": "Pipe & Piling Supplies v. United States",
    "case_type": "Trade (CIT)",
@@ -2482,6 +3296,52 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/71976727/pipe-piling-supplies-v-united-states/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "2025-1878",
+   "case_name": "Huang v. TetraMem, Inc.",
+   "case_type": "Patent (District Ct.)",
+   "origin": "United States District Court for the Northern District of California",
+   "status": "Decided",
+   "date_filed": "2025-06-24",
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2025-11-14",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10736432/huang-v-tetramem-inc/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1878.ORDER.11-14-2025_2604049.pdf"
+   },
+   "panel": [],
+   "patent_issues": [
+    "Other / Procedural"
+   ],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/71416373/huang-v-tetramem-inc/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "2025-1793",
+   "case_name": "Franklin v. Collins",
+   "case_type": "Veterans",
+   "origin": "United States Court of Appeals for Veterans Claims",
+   "status": "Decided",
+   "date_filed": "2025-05-20",
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2025-11-14",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10736349/franklin-v-collins/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1793.ORDER.11-14-2025_2603940.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/70807874/franklin-v-collins/",
    "url_audio": null
   },
   {
@@ -2501,19 +3361,99 @@
    "url_audio": null
   },
   {
-   "docket_number": "2026-1123",
-   "case_name": "Nguyen v. Bondi",
-   "case_type": "Other / Unclassified",
-   "origin": "Board of Immigration Ap- peals",
-   "status": "Pending / Briefing",
-   "date_filed": "2025-11-05",
+   "docket_number": "2025-2049",
+   "case_name": "Microsoft Corporation v. InterDigital Patent Holdings, Inc.",
+   "case_type": "Patent (PTAB)",
+   "origin": "United States Patent and Trademark Office, Patent Trial and Appeal Board",
+   "status": "Decided",
+   "date_filed": "2025-08-26",
    "date_argued": null,
    "argument": null,
-   "decision": null,
+   "decision": {
+    "date": "2025-11-06",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10732094/microsoft-corporation-v-interdigital-patent-holdings-inc/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-2049.ORDER.11-6-2025_2599857.pdf"
+   },
    "panel": [],
-   "patent_issues": [],
+   "patent_issues": [
+    "Other / Procedural"
+   ],
    "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/71881241/nguyen-v-bondi/",
+   "url_cl": "https://www.courtlistener.com/docket/71742233/microsoft-corporation-v-interdigital-patent-holdings-inc/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "2025-144",
+   "case_name": "In re: Google LLC",
+   "case_type": "Patent (PTAB)",
+   "origin": "United States Patent and Trademark Office",
+   "status": "Decided",
+   "date_filed": "2025-08-18",
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2025-11-06",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10731827/in-re-google-llc/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-144.ORDER.11-6-2025_2599508.pdf"
+   },
+   "panel": [],
+   "patent_issues": [
+    "Other / Procedural"
+   ],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/71148002/in-re-google-llc/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "2025-134",
+   "case_name": "In re: Motorola Solutions, Inc.",
+   "case_type": "Patent (PTAB)",
+   "origin": "United States Patent and Trademark Office",
+   "status": "Decided",
+   "date_filed": "2025-06-23",
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2025-11-06",
+    "precedential_status": "Published",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10731793/in-re-motorola-solutions-inc/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-134.ORDER.11-6-2025_2599490.pdf"
+   },
+   "panel": [],
+   "patent_issues": [
+    "Other / Procedural"
+   ],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/70619962/in-re-motorola-solutions-inc/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "2025-132",
+   "case_name": "In re: SAP America, Inc.",
+   "case_type": "Patent (PTAB)",
+   "origin": "United States Patent and Trademark Office",
+   "status": "Decided",
+   "date_filed": "2025-06-16",
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2025-11-06",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10731826/in-re-sap-america-inc/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-132.ORDER.11-6-2025_2599495.pdf"
+   },
+   "panel": [],
+   "patent_issues": [
+    "Other / Procedural"
+   ],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/70555071/in-re-sap-america-inc/",
    "url_audio": null
   },
   {
@@ -2530,6 +3470,30 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/71866781/jiangsu-senmao-bamboo-and-wood-industry-co-ltd-v-united-states/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "2026-103",
+   "case_name": "In re: Aylo Holdings S.a r.l.",
+   "case_type": "Patent (District Ct.)",
+   "origin": "United States District Court for the Eastern District of Texas",
+   "status": "Decided",
+   "date_filed": "2025-10-20",
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2025-11-03",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10729569/in-re-aylo-holdings-sa-rl/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-103.ORDER.11-3-2025_2597246.pdf"
+   },
+   "panel": [],
+   "patent_issues": [
+    "Other / Procedural"
+   ],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/71715081/in-re-aylo-holdings-sa-rl/",
    "url_audio": null
   },
   {
@@ -2581,19 +3545,71 @@
    "url_audio": null
   },
   {
-   "docket_number": "2026-1092",
-   "case_name": "Wuhan China Star Optoelectronics Semiconductor Dis v. Samsung Display Co., Ltd.",
-   "case_type": "Patent (PTAB)",
-   "origin": "United States Patent and Trademark Office, Patent Trial and Appeal Board",
-   "status": "Pending / Briefing",
-   "date_filed": "2025-10-24",
+   "docket_number": "2025-151",
+   "case_name": "In re: Lopez",
+   "case_type": "Federal Claims",
+   "origin": "United States Court of Federal Claims",
+   "status": "Decided",
+   "date_filed": "2025-09-05",
    "date_argued": null,
    "argument": null,
-   "decision": null,
+   "decision": {
+    "date": "2025-10-28",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10712407/in-re-lopez/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-151.ORDER.10-28-2025_2594491.pdf"
+   },
    "panel": [],
    "patent_issues": [],
    "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/71865090/wuhan-china-star-optoelectronics-semiconductor-dis-v-samsung-display-co/",
+   "url_cl": "https://www.courtlistener.com/docket/71680543/in-re-lopez/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "2025-147",
+   "case_name": "In re: Miller Mendel, Inc.",
+   "case_type": "Patent (District Ct.)",
+   "origin": "United States District Court for the Eastern District of California",
+   "status": "Decided",
+   "date_filed": "2025-08-26",
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2025-10-28",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10712406/in-re-miller-mendel-inc/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-147.ORDER.10-28-2025_2594510.pdf"
+   },
+   "panel": [],
+   "patent_issues": [
+    "Other / Procedural"
+   ],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/71208870/in-re-miller-mendel-inc/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "2025-1502",
+   "case_name": "Wright v. Collins",
+   "case_type": "Veterans",
+   "origin": "United States Court of Appeals for Veterans Claims",
+   "status": "Decided",
+   "date_filed": "2025-03-05",
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2025-10-28",
+    "precedential_status": "Published",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10712356/wright-v-collins/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1502.OPINION.10-28-2025_2594460.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/69713787/wright-v-collins/",
    "url_audio": null
   },
   {
@@ -2613,19 +3629,27 @@
    "url_audio": null
   },
   {
-   "docket_number": "2026-105",
-   "case_name": "In re: Maplebear Inc.",
-   "case_type": "Patent (PTAB)",
-   "origin": "United States Patent and Trademark Office",
-   "status": "Pending / Briefing",
-   "date_filed": "2025-10-22",
+   "docket_number": "2025-1602",
+   "case_name": "Voip-Pal.com, Inc. v. Verizon Communications, Inc.",
+   "case_type": "Patent (District Ct.)",
+   "origin": "United States District Court for the Western District of Texas",
+   "status": "Decided",
+   "date_filed": "2025-03-28",
    "date_argued": null,
    "argument": null,
-   "decision": null,
+   "decision": {
+    "date": "2025-10-24",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10710585/voip-palcom-inc-v-verizon-communications-inc/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1602.ORDER.10-24-2025_2593435.pdf"
+   },
    "panel": [],
-   "patent_issues": [],
+   "patent_issues": [
+    "Other / Procedural"
+   ],
    "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/71749114/in-re-maplebear-inc/",
+   "url_cl": "https://www.courtlistener.com/docket/70283758/voip-palcom-inc-v-verizon-communications-inc/",
    "url_audio": null
   },
   {
@@ -2645,19 +3669,25 @@
    "url_audio": null
   },
   {
-   "docket_number": "2026-104",
-   "case_name": "In re: Comcast Cable Communications, LLC",
-   "case_type": "Patent (District Ct.)",
-   "origin": "United States District Court for the Eastern District of Texas",
-   "status": "Pending / Briefing",
-   "date_filed": "2025-10-21",
+   "docket_number": "2025-153",
+   "case_name": "In re: Hooper",
+   "case_type": "Veterans",
+   "origin": "United States Court of Appeals for Veterans Claims",
+   "status": "Decided",
+   "date_filed": "2025-09-18",
    "date_argued": null,
    "argument": null,
-   "decision": null,
+   "decision": {
+    "date": "2025-10-22",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10708724/in-re-hooper/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-153.ORDER.10-22-2025_2591335.pdf"
+   },
    "panel": [],
    "patent_issues": [],
    "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/71719338/in-re-comcast-cable-communications-llc/",
+   "url_cl": "https://www.courtlistener.com/docket/71680573/in-re-hooper/",
    "url_audio": null
   },
   {
@@ -2677,35 +3707,49 @@
    "url_audio": null
   },
   {
-   "docket_number": "2026-103",
-   "case_name": "In re: Aylo Holdings S.a r.l.",
+   "docket_number": "2025-1977",
+   "case_name": "Nwosu v. Bolduc",
    "case_type": "Patent (District Ct.)",
-   "origin": "United States District Court for the Eastern District of Texas",
-   "status": "Pending / Briefing",
-   "date_filed": "2025-10-20",
+   "origin": "United States District Court for the District of Colorado",
+   "status": "Decided",
+   "date_filed": "2025-07-30",
    "date_argued": null,
    "argument": null,
-   "decision": null,
+   "decision": {
+    "date": "2025-10-21",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10707958/nwosu-v-bolduc/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1977.ORDER.10-21-2025_2590432.pdf"
+   },
    "panel": [],
-   "patent_issues": [],
+   "patent_issues": [
+    "Other / Procedural"
+   ],
    "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/71715081/in-re-aylo-holdings-sa-rl/",
+   "url_cl": "https://www.courtlistener.com/docket/71358931/nwosu-v-bolduc/",
    "url_audio": null
   },
   {
-   "docket_number": "2026-102",
-   "case_name": "In re: Catanzaro",
-   "case_type": "Patent (District Ct.)",
-   "origin": "United States District Court for the Middle District of Pennsylvania",
-   "status": "Pending / Briefing",
-   "date_filed": "2025-10-20",
+   "docket_number": "2025-1797",
+   "case_name": "Southwest Airlines Co. v. United States",
+   "case_type": "Trade (CIT)",
+   "origin": "United States Court of International Trade",
+   "status": "Decided",
+   "date_filed": "2025-05-21",
    "date_argued": null,
    "argument": null,
-   "decision": null,
+   "decision": {
+    "date": "2025-10-20",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10707363/southwest-airlines-co-v-united-states/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1797.ORDER.10-20-2025_2590132.pdf"
+   },
    "panel": [],
    "patent_issues": [],
    "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/71700212/in-re-catanzaro/",
+   "url_cl": "https://www.courtlistener.com/docket/70332347/southwest-airlines-co-v-united-states/",
    "url_audio": null
   },
   {
@@ -2805,19 +3849,27 @@
    "url_audio": null
   },
   {
-   "docket_number": "2026-101",
-   "case_name": "In re: Cambridge Industries USA Inc.",
-   "case_type": "Patent (PTAB)",
-   "origin": "United States Patent and Trademark Office",
-   "status": "Pending / Briefing",
-   "date_filed": "2025-10-10",
+   "docket_number": "2026-100",
+   "case_name": "In re: Weisner",
+   "case_type": "Patent (District Ct.)",
+   "origin": "United States District Court for the Southern District of New York",
+   "status": "Decided",
+   "date_filed": "2025-10-06",
    "date_argued": null,
    "argument": null,
-   "decision": null,
+   "decision": {
+    "date": "2025-10-15",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10704286/in-re-weisner/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-100.ORDER.10-15-2025_2587904.pdf"
+   },
    "panel": [],
-   "patent_issues": [],
+   "patent_issues": [
+    "Other / Procedural"
+   ],
    "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/71664633/in-re-cambridge-industries-usa-inc/",
+   "url_cl": "https://www.courtlistener.com/docket/71570261/in-re-weisner/",
    "url_audio": null
   },
   {
@@ -2850,38 +3902,6 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/71608701/target-general-merchandise-inc-v-united-states/",
-   "url_audio": null
-  },
-  {
-   "docket_number": "2026-1031",
-   "case_name": "Aljindi v. United States",
-   "case_type": "Federal Claims",
-   "origin": "United States Court of Federal Claims",
-   "status": "Pending / Briefing",
-   "date_filed": "2025-10-09",
-   "date_argued": null,
-   "argument": null,
-   "decision": null,
-   "panel": [],
-   "patent_issues": [],
-   "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/73186599/aljindi-v-united-states/",
-   "url_audio": null
-  },
-  {
-   "docket_number": "2026-100",
-   "case_name": "In re: Weisner",
-   "case_type": "Patent (District Ct.)",
-   "origin": "United States District Court for the Southern District of New York",
-   "status": "Pending / Briefing",
-   "date_filed": "2025-10-06",
-   "date_argued": null,
-   "argument": null,
-   "decision": null,
-   "panel": [],
-   "patent_issues": [],
-   "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/71570261/in-re-weisner/",
    "url_audio": null
   },
   {
@@ -2997,22 +4017,6 @@
    "url_audio": null
   },
   {
-   "docket_number": "2025-2142",
-   "case_name": "Bright Head LLC v. The Individuals, Corps. Identified on Schedule A",
-   "case_type": "Patent (District Ct.)",
-   "origin": "United States District Court for the Northern District of Illinois",
-   "status": "Pending / Briefing",
-   "date_filed": "2025-09-24",
-   "date_argued": null,
-   "argument": null,
-   "decision": null,
-   "panel": [],
-   "patent_issues": [],
-   "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/71492607/bright-head-llc-v-the-individuals-corps-identified-on-schedule-a/",
-   "url_audio": null
-  },
-  {
    "docket_number": "2025-2137",
    "case_name": "Synopsys, Inc. v. Real Intent, Inc.",
    "case_type": "Patent (District Ct.)",
@@ -3026,86 +4030,6 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/72046901/synopsys-inc-v-real-intent-inc/",
-   "url_audio": null
-  },
-  {
-   "docket_number": "2025-2125",
-   "case_name": "Carbyne Biometrics, LLC v. Apple Inc.",
-   "case_type": "Patent (PTAB)",
-   "origin": "United States Patent and Trademark Office, Patent Trial and Appeal Board",
-   "status": "Pending / Briefing",
-   "date_filed": "2025-09-19",
-   "date_argued": null,
-   "argument": null,
-   "decision": null,
-   "panel": [],
-   "patent_issues": [],
-   "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/71543086/carbyne-biometrics-llc-v-apple-inc/",
-   "url_audio": null
-  },
-  {
-   "docket_number": "2025-2128",
-   "case_name": "Golden v. United States",
-   "case_type": "Federal Claims",
-   "origin": "United States Court of Federal Claims",
-   "status": "Pending / Briefing",
-   "date_filed": "2025-09-19",
-   "date_argued": null,
-   "argument": null,
-   "decision": null,
-   "panel": [],
-   "patent_issues": [],
-   "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/71430414/golden-v-united-states/",
-   "url_audio": null
-  },
-  {
-   "docket_number": "2025-152",
-   "case_name": "In re: SanDisk Technologies, Inc.",
-   "case_type": "Patent (PTAB)",
-   "origin": "United States Patent and Trademark Office",
-   "status": "Pending / Briefing",
-   "date_filed": "2025-09-18",
-   "date_argued": null,
-   "argument": null,
-   "decision": null,
-   "panel": [],
-   "patent_issues": [],
-   "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/71388380/in-re-sandisk-technologies-inc/",
-   "url_audio": null
-  },
-  {
-   "docket_number": "2025-153",
-   "case_name": "In re: Hooper",
-   "case_type": "Veterans",
-   "origin": "United States Court of Appeals for Veterans Claims",
-   "status": "Pending / Briefing",
-   "date_filed": "2025-09-18",
-   "date_argued": null,
-   "argument": null,
-   "decision": null,
-   "panel": [],
-   "patent_issues": [],
-   "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/71680573/in-re-hooper/",
-   "url_audio": null
-  },
-  {
-   "docket_number": "2025-2120",
-   "case_name": "Auxin Solar Inc. v. United States",
-   "case_type": "Trade (CIT)",
-   "origin": "United States Court of International Trade",
-   "status": "Pending / Briefing",
-   "date_filed": "2025-09-17",
-   "date_argued": null,
-   "argument": null,
-   "decision": null,
-   "panel": [],
-   "patent_issues": [],
-   "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/71373118/auxin-solar-inc-v-united-states/",
    "url_audio": null
   },
   {
@@ -3189,22 +4113,6 @@
    "url_audio": null
   },
   {
-   "docket_number": "2025-151",
-   "case_name": "In re: Lopez",
-   "case_type": "Federal Claims",
-   "origin": "United States Court of Federal Claims",
-   "status": "Pending / Briefing",
-   "date_filed": "2025-09-05",
-   "date_argued": null,
-   "argument": null,
-   "decision": null,
-   "panel": [],
-   "patent_issues": [],
-   "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/71680543/in-re-lopez/",
-   "url_audio": null
-  },
-  {
    "docket_number": "2025-2082",
    "case_name": "Dasso International, Inc. v. MOSO North America, Inc.",
    "case_type": "Patent (District Ct.)",
@@ -3285,38 +4193,6 @@
    "url_audio": null
   },
   {
-   "docket_number": "2025-148",
-   "case_name": "In re: HighLevel, Inc.",
-   "case_type": "Patent (PTAB)",
-   "origin": "United States Patent and Trademark Office",
-   "status": "Pending / Briefing",
-   "date_filed": "2025-08-29",
-   "date_argued": null,
-   "argument": null,
-   "decision": null,
-   "panel": [],
-   "patent_issues": [],
-   "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/71241964/in-re-highlevel-inc/",
-   "url_audio": null
-  },
-  {
-   "docket_number": "2025-2063",
-   "case_name": "Multimedia Technologies Pte. Ltd. v. LG Electronics Inc.",
-   "case_type": "Patent (PTAB)",
-   "origin": "United States Patent and Trademark Office, Patent Trial and Appeal Board",
-   "status": "Pending / Briefing",
-   "date_filed": "2025-08-29",
-   "date_argued": null,
-   "argument": null,
-   "decision": null,
-   "panel": [],
-   "patent_issues": [],
-   "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/71260332/multimedia-technologies-pte-ltd-v-lg-electronics-inc/",
-   "url_audio": null
-  },
-  {
    "docket_number": "2025-2059",
    "case_name": "Cleveland Medical Devices, Inc. v. ResMed Corporation",
    "case_type": "Patent (PTAB)",
@@ -3330,38 +4206,6 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/71444340/cleveland-medical-devices-inc-v-resmed-corporation/",
-   "url_audio": null
-  },
-  {
-   "docket_number": "2025-2049",
-   "case_name": "Microsoft Corporation v. InterDigital Patent Holdings, Inc.",
-   "case_type": "Patent (PTAB)",
-   "origin": "United States Patent and Trademark Office, Patent Trial and Appeal Board",
-   "status": "Pending / Briefing",
-   "date_filed": "2025-08-26",
-   "date_argued": null,
-   "argument": null,
-   "decision": null,
-   "panel": [],
-   "patent_issues": [],
-   "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/71742233/microsoft-corporation-v-interdigital-patent-holdings-inc/",
-   "url_audio": null
-  },
-  {
-   "docket_number": "2025-147",
-   "case_name": "In re: Miller Mendel, Inc.",
-   "case_type": "Patent (District Ct.)",
-   "origin": "United States District Court for the Eastern District of California",
-   "status": "Pending / Briefing",
-   "date_filed": "2025-08-26",
-   "date_argued": null,
-   "argument": null,
-   "decision": null,
-   "panel": [],
-   "patent_issues": [],
-   "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/71208870/in-re-miller-mendel-inc/",
    "url_audio": null
   },
   {
@@ -3509,22 +4353,6 @@
    "url_audio": null
   },
   {
-   "docket_number": "2025-2032",
-   "case_name": "Immersion Corporation v. Valve Corporation",
-   "case_type": "Patent (PTAB)",
-   "origin": "United States Patent and Trademark Office",
-   "status": "Pending / Briefing",
-   "date_filed": "2025-08-19",
-   "date_argued": null,
-   "argument": null,
-   "decision": null,
-   "panel": [],
-   "patent_issues": [],
-   "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/71987836/immersion-corporation-v-valve-corporation/",
-   "url_audio": null
-  },
-  {
    "docket_number": "2025-2025",
    "case_name": "Immersion Corporation v. Valve Corporation",
    "case_type": "Patent (PTAB)",
@@ -3539,38 +4367,6 @@
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/73157818/immersion-corporation-v-valve-corporation/",
    "url_audio": null
-  },
-  {
-   "docket_number": "2025-144",
-   "case_name": "In re: Google LLC",
-   "case_type": "Patent (PTAB)",
-   "origin": "United States Patent and Trademark Office",
-   "status": "Pending / Briefing",
-   "date_filed": "2025-08-18",
-   "date_argued": null,
-   "argument": null,
-   "decision": null,
-   "panel": [],
-   "patent_issues": [],
-   "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/71148002/in-re-google-llc/",
-   "url_audio": null
-  },
-  {
-   "docket_number": "2025-2026",
-   "case_name": "Applications In Internet Time, LLC v. Salesforce, Inc.",
-   "case_type": "Patent (District Ct.)",
-   "origin": "United States District Court for the District of Nevada",
-   "status": "Argued \u2014 Awaiting Decision",
-   "date_filed": "2025-08-18",
-   "date_argued": "2026-02-09",
-   "argument": null,
-   "decision": null,
-   "panel": [],
-   "patent_issues": [],
-   "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/71357659/applications-in-internet-time-llc-v-salesforce-inc/",
-   "url_audio": "https://www.courtlistener.com/audio/102589/applications-in-internet-time-llc-v-salesforce-inc/"
   },
   {
    "docket_number": "2025-2022",
@@ -3621,22 +4417,6 @@
    "url_audio": null
   },
   {
-   "docket_number": "2025-2003",
-   "case_name": "Perkins v. Collins",
-   "case_type": "Veterans",
-   "origin": "United States Court of Appeals for Veterans Claims",
-   "status": "Pending / Briefing",
-   "date_filed": "2025-08-08",
-   "date_argued": null,
-   "argument": null,
-   "decision": null,
-   "panel": [],
-   "patent_issues": [],
-   "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/71221782/perkins-v-collins/",
-   "url_audio": null
-  },
-  {
    "docket_number": "2025-1994",
    "case_name": "Verizon Connect Inc. v. Omega Patents, LLC",
    "case_type": "Patent (PTAB)",
@@ -3650,22 +4430,6 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/71875906/verizon-connect-inc-v-omega-patents-llc/",
-   "url_audio": null
-  },
-  {
-   "docket_number": "2025-1991",
-   "case_name": "SecurityPoint Holdings, Inc. v. United States",
-   "case_type": "Federal Claims",
-   "origin": "United States Court of Federal Claims",
-   "status": "Pending / Briefing",
-   "date_filed": "2025-08-05",
-   "date_argued": null,
-   "argument": null,
-   "decision": null,
-   "panel": [],
-   "patent_issues": [],
-   "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/73119050/securitypoint-holdings-inc-v-united-states/",
    "url_audio": null
   },
   {
@@ -3733,22 +4497,6 @@
    "url_audio": null
   },
   {
-   "docket_number": "2025-1977",
-   "case_name": "Nwosu v. Bolduc",
-   "case_type": "Patent (District Ct.)",
-   "origin": "United States District Court for the District of Colorado",
-   "status": "Pending / Briefing",
-   "date_filed": "2025-07-30",
-   "date_argued": null,
-   "argument": null,
-   "decision": null,
-   "panel": [],
-   "patent_issues": [],
-   "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/71358931/nwosu-v-bolduc/",
-   "url_audio": null
-  },
-  {
    "docket_number": "2025-142",
    "case_name": "In re: Fintiv, Inc.",
    "case_type": "Patent (District Ct.)",
@@ -3762,22 +4510,6 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/70951024/in-re-fintiv-inc/",
-   "url_audio": null
-  },
-  {
-   "docket_number": "2025-1972",
-   "case_name": "Ingram v. Collins",
-   "case_type": "Veterans",
-   "origin": "United States Court of Appeals for Veterans Claims",
-   "status": "Pending / Briefing",
-   "date_filed": "2025-07-29",
-   "date_argued": null,
-   "argument": null,
-   "decision": null,
-   "panel": [],
-   "patent_issues": [],
-   "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/73112928/ingram-v-collins/",
    "url_audio": null
   },
   {
@@ -4181,22 +4913,6 @@
    "url_audio": null
   },
   {
-   "docket_number": "2025-1878",
-   "case_name": "Huang v. TetraMem, Inc.",
-   "case_type": "Patent (District Ct.)",
-   "origin": "United States District Court for the Northern District of California",
-   "status": "Pending / Briefing",
-   "date_filed": "2025-06-24",
-   "date_argued": null,
-   "argument": null,
-   "decision": null,
-   "panel": [],
-   "patent_issues": [],
-   "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/71416373/huang-v-tetramem-inc/",
-   "url_audio": null
-  },
-  {
    "docket_number": "2025-1876",
    "case_name": "VideoShare, LLC v. Google LLC",
    "case_type": "Patent (District Ct.)",
@@ -4210,22 +4926,6 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/71841348/videoshare-llc-v-google-llc/",
-   "url_audio": null
-  },
-  {
-   "docket_number": "2025-134",
-   "case_name": "In re: Motorola Solutions, Inc.",
-   "case_type": "Patent (PTAB)",
-   "origin": "United States Patent and Trademark Office",
-   "status": "Pending / Briefing",
-   "date_filed": "2025-06-23",
-   "date_argued": null,
-   "argument": null,
-   "decision": null,
-   "panel": [],
-   "patent_issues": [],
-   "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/70619962/in-re-motorola-solutions-inc/",
    "url_audio": null
   },
   {
@@ -4258,22 +4958,6 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/70567940/butenhoff-v-collins/",
-   "url_audio": null
-  },
-  {
-   "docket_number": "2025-132",
-   "case_name": "In re: SAP America, Inc.",
-   "case_type": "Patent (PTAB)",
-   "origin": "United States Patent and Trademark Office",
-   "status": "Pending / Briefing",
-   "date_filed": "2025-06-16",
-   "date_argued": null,
-   "argument": null,
-   "decision": null,
-   "panel": [],
-   "patent_issues": [],
-   "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/70555071/in-re-sap-america-inc/",
    "url_audio": null
   },
   {
@@ -4469,22 +5153,6 @@
    "url_audio": null
   },
   {
-   "docket_number": "2025-1812",
-   "case_name": "V.O.S. Selections, Inc. v. Trump",
-   "case_type": "Trade (CIT)",
-   "origin": "United States Court of International Trade",
-   "status": "Argued \u2014 Awaiting Decision",
-   "date_filed": "2025-05-28",
-   "date_argued": "2025-07-31",
-   "argument": null,
-   "decision": null,
-   "panel": [],
-   "patent_issues": [],
-   "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/70394463/vos-selections-inc-v-trump/",
-   "url_audio": "https://www.courtlistener.com/audio/99869/vos-selections-inc-v-trump/"
-  },
-  {
    "docket_number": "2025-1813",
    "case_name": "State of Oregon v. Trump",
    "case_type": "Trade (CIT)",
@@ -4517,38 +5185,6 @@
    "url_audio": null
   },
   {
-   "docket_number": "2025-1797",
-   "case_name": "Southwest Airlines Co. v. United States",
-   "case_type": "Trade (CIT)",
-   "origin": "United States Court of International Trade",
-   "status": "Pending / Briefing",
-   "date_filed": "2025-05-21",
-   "date_argued": null,
-   "argument": null,
-   "decision": null,
-   "panel": [],
-   "patent_issues": [],
-   "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/70332347/southwest-airlines-co-v-united-states/",
-   "url_audio": null
-  },
-  {
-   "docket_number": "2025-1792",
-   "case_name": "Ligado Networks LLC v. United States",
-   "case_type": "Federal Claims",
-   "origin": "United States Court of Federal Claims",
-   "status": "Argued \u2014 Awaiting Decision",
-   "date_filed": "2025-05-20",
-   "date_argued": "2026-02-04",
-   "argument": null,
-   "decision": null,
-   "panel": [],
-   "patent_issues": [],
-   "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/70327557/ligado-networks-llc-v-united-states/",
-   "url_audio": "https://www.courtlistener.com/audio/102524/ligado-networks-llc-v-united-states/"
-  },
-  {
    "docket_number": "2025-1796",
    "case_name": "Buergofol GmbH v. Omega Liner Company, Inc.",
    "case_type": "Patent (PTAB)",
@@ -4578,38 +5214,6 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/70318452/samsung-display-co-ltd-v-itc/",
-   "url_audio": null
-  },
-  {
-   "docket_number": "2025-1794",
-   "case_name": "RJ Technology LLC v. Samsung Electronics Co., Ltd.",
-   "case_type": "Patent (PTAB)",
-   "origin": "United States Patent and Trademark Office, Patent Trial and Appeal Board",
-   "status": "Pending / Briefing",
-   "date_filed": "2025-05-20",
-   "date_argued": null,
-   "argument": null,
-   "decision": null,
-   "panel": [],
-   "patent_issues": [],
-   "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/70790394/rj-technology-llc-v-samsung-electronics-co-ltd/",
-   "url_audio": null
-  },
-  {
-   "docket_number": "2025-1793",
-   "case_name": "Franklin v. Collins",
-   "case_type": "Veterans",
-   "origin": "United States Court of Appeals for Veterans Claims",
-   "status": "Pending / Briefing",
-   "date_filed": "2025-05-20",
-   "date_argued": null,
-   "argument": null,
-   "decision": null,
-   "panel": [],
-   "patent_issues": [],
-   "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/70807874/franklin-v-collins/",
    "url_audio": null
   },
   {
@@ -4661,22 +5265,6 @@
    "url_audio": null
   },
   {
-   "docket_number": "2025-1769",
-   "case_name": "Doe v. HHS",
-   "case_type": "Federal Claims",
-   "origin": "United States Court of Federal Claims",
-   "status": "Pending / Briefing",
-   "date_filed": "2025-05-14",
-   "date_argued": null,
-   "argument": null,
-   "decision": null,
-   "panel": [],
-   "patent_issues": [],
-   "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/72008964/doe-v-hhs/",
-   "url_audio": null
-  },
-  {
    "docket_number": "2025-1764",
    "case_name": "Caddo Systems, Inc. v. Jetbrains Americas, Inc.",
    "case_type": "Patent (District Ct.)",
@@ -4722,22 +5310,6 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/71382882/modernatx-inc-v-biontech-se/",
-   "url_audio": null
-  },
-  {
-   "docket_number": "2025-1755",
-   "case_name": "Neal v. DVA",
-   "case_type": "Federal Employment",
-   "origin": "Merit Systems Protection Board",
-   "status": "Pending / Briefing",
-   "date_filed": "2025-05-09",
-   "date_argued": null,
-   "argument": null,
-   "decision": null,
-   "panel": [],
-   "patent_issues": [],
-   "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/70243315/neal-v-dva/",
    "url_audio": null
   },
   {
@@ -4917,22 +5489,6 @@
    "url_audio": null
   },
   {
-   "docket_number": "2025-1706",
-   "case_name": "Red Hat, Inc. v. VirtaMove, Corp.",
-   "case_type": "Patent (District Ct.)",
-   "origin": "United States District Court for the Northern District of California",
-   "status": "Pending / Briefing",
-   "date_filed": "2025-04-29",
-   "date_argued": null,
-   "argument": null,
-   "decision": null,
-   "panel": [],
-   "patent_issues": [],
-   "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/70169151/red-hat-inc-v-virtamove-corp/",
-   "url_audio": null
-  },
-  {
    "docket_number": "2025-1702",
    "case_name": "Finjan LLC v. Palo Alto Networks, Inc.",
    "case_type": "Patent (District Ct.)",
@@ -4978,22 +5534,6 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/69939386/asia-wheel-co-ltd-v-united-states/",
-   "url_audio": null
-  },
-  {
-   "docket_number": "2025-1687",
-   "case_name": "Lodge v. Collins",
-   "case_type": "Veterans",
-   "origin": "United States Court of Appeals for Veterans Claims",
-   "status": "Pending / Briefing",
-   "date_filed": "2025-04-24",
-   "date_argued": null,
-   "argument": null,
-   "decision": null,
-   "panel": [],
-   "patent_issues": [],
-   "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/70807866/lodge-v-collins/",
    "url_audio": null
   },
   {
@@ -5173,22 +5713,6 @@
    "url_audio": null
   },
   {
-   "docket_number": "2025-1641",
-   "case_name": "Amgen Inc. v. Colorado Pres. Drug Affordability Review Board",
-   "case_type": "Patent (District Ct.)",
-   "origin": "United States District Court for the District of Colorado",
-   "status": "Pending / Briefing",
-   "date_filed": "2025-04-14",
-   "date_argued": null,
-   "argument": null,
-   "decision": null,
-   "panel": [],
-   "patent_issues": [],
-   "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/69918606/amgen-inc-v-colorado-pres-drug-affordability-review-board/",
-   "url_audio": null
-  },
-  {
    "docket_number": "2025-1643",
    "case_name": "Genexa, Inc. v. KinderFarms, LLC",
    "case_type": "Patent (PTAB)",
@@ -5285,22 +5809,6 @@
    "url_audio": "https://www.courtlistener.com/audio/105655/epic-tech-llc-v-pen-tech-associates-inc/"
   },
   {
-   "docket_number": "2025-127",
-   "case_name": "In re: US",
-   "case_type": "Trade (CIT)",
-   "origin": "United States Court of International Trade",
-   "status": "Pending / Briefing",
-   "date_filed": "2025-04-07",
-   "date_argued": null,
-   "argument": null,
-   "decision": null,
-   "panel": [],
-   "patent_issues": [],
-   "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/69853257/in-re-us/",
-   "url_audio": null
-  },
-  {
    "docket_number": "2025-1617",
    "case_name": "Shenzhen Jisu Technology Co., Ltd. v. The Entities And Individuals Identified In Annex A",
    "case_type": "Patent (District Ct.)",
@@ -5394,22 +5902,6 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/70284554/appliance-computing-iii-inc-v-redfin-corp/",
-   "url_audio": null
-  },
-  {
-   "docket_number": "2025-1602",
-   "case_name": "Voip-Pal.com, Inc. v. Verizon Communications, Inc.",
-   "case_type": "Patent (District Ct.)",
-   "origin": "United States District Court for the Western District of Texas",
-   "status": "Pending / Briefing",
-   "date_filed": "2025-03-28",
-   "date_argued": null,
-   "argument": null,
-   "decision": null,
-   "panel": [],
-   "patent_issues": [],
-   "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/70283758/voip-palcom-inc-v-verizon-communications-inc/",
    "url_audio": null
   },
   {
@@ -5621,22 +6113,6 @@
    "url_audio": null
   },
   {
-   "docket_number": "2025-1547",
-   "case_name": "Samsung Electronics Co., Ltd. v. Resonant Systems, Inc.",
-   "case_type": "Patent (PTAB)",
-   "origin": "United States Patent and Trademark Office, Patent Trial and Appeal Board",
-   "status": "Pending / Briefing",
-   "date_filed": "2025-03-17",
-   "date_argued": null,
-   "argument": null,
-   "decision": null,
-   "panel": [],
-   "patent_issues": [],
-   "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/69745490/samsung-electronics-co-ltd-v-resonant-systems-inc/",
-   "url_audio": null
-  },
-  {
    "docket_number": "2025-1543",
    "case_name": "Apple Inc. v. AliveCor, Inc.",
    "case_type": "Patent (PTAB)",
@@ -5650,22 +6126,6 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/69919684/apple-inc-v-alivecor-inc/",
-   "url_audio": null
-  },
-  {
-   "docket_number": "2025-1536",
-   "case_name": "Colage v. Collins",
-   "case_type": "Veterans",
-   "origin": "United States Court of Appeals for Veterans Claims",
-   "status": "Pending / Briefing",
-   "date_filed": "2025-03-13",
-   "date_argued": null,
-   "argument": null,
-   "decision": null,
-   "panel": [],
-   "patent_issues": [],
-   "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/71987145/colage-v-collins/",
    "url_audio": null
   },
   {
@@ -5858,38 +6318,6 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/69711259/williams-v-mspb/",
-   "url_audio": null
-  },
-  {
-   "docket_number": "2025-1502",
-   "case_name": "Wright v. Collins",
-   "case_type": "Veterans",
-   "origin": "United States Court of Appeals for Veterans Claims",
-   "status": "Pending / Briefing",
-   "date_filed": "2025-03-05",
-   "date_argued": null,
-   "argument": null,
-   "decision": null,
-   "panel": [],
-   "patent_issues": [],
-   "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/69713787/wright-v-collins/",
-   "url_audio": null
-  },
-  {
-   "docket_number": "2025-1491",
-   "case_name": "Windsor v. Collins",
-   "case_type": "Veterans",
-   "origin": "United States Court of Appeals for Veterans Claims",
-   "status": "Pending / Briefing",
-   "date_filed": "2025-02-27",
-   "date_argued": null,
-   "argument": null,
-   "decision": null,
-   "panel": [],
-   "patent_issues": [],
-   "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/72124445/windsor-v-collins/",
    "url_audio": null
   },
   {
@@ -6114,22 +6542,6 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/69588117/guzman-v-hunter/",
-   "url_audio": null
-  },
-  {
-   "docket_number": "2025-1392",
-   "case_name": "Pop Top Corp. v. Rakuten Kobo Inc.",
-   "case_type": "Patent (District Ct.)",
-   "origin": "United States District Court for the Northern District of California",
-   "status": "Pending / Briefing",
-   "date_filed": "2025-01-27",
-   "date_argued": null,
-   "argument": null,
-   "decision": null,
-   "panel": [],
-   "patent_issues": [],
-   "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/71464568/pop-top-corp-v-rakuten-kobo-inc/",
    "url_audio": null
   },
   {
