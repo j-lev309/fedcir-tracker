@@ -1,30 +1,30 @@
 {
- "generated_at": "2026-07-20T22:11:34+00:00",
- "window_since": "2025-01-26",
+ "generated_at": "2026-07-21T15:00:54+00:00",
+ "window_since": "2025-01-27",
  "coverage": {
   "complete": false,
-  "window_since": "2025-01-26",
+  "window_since": "2025-01-27",
   "window_months": 18,
   "sources": {
    "dockets": {
-    "complete": false,
-    "reason": "page budget reached",
-    "count": 240
+    "complete": true,
+    "reason": "ok",
+    "count": 3
    },
    "clusters": {
-    "complete": false,
-    "reason": "page budget reached",
-    "count": 240
+    "complete": true,
+    "reason": "ok",
+    "count": 11
    },
    "opinions": {
     "complete": false,
-    "reason": "page budget reached",
-    "count": 240
+    "reason": "interrupted (HTTPError)",
+    "count": 20
    },
    "audio": {
-    "complete": false,
-    "reason": "page budget reached",
-    "count": 240
+    "complete": true,
+    "reason": "ok",
+    "count": 547
    },
    "scheduled_arguments": {
     "count": 0,
@@ -49,8 +49,8 @@
   "next_argument_date": null
  },
  "stats": {
-  "total": 239,
-  "pending": 224,
+  "total": 240,
+  "pending": 225,
   "scheduled": 0,
   "awaiting": 3,
   "decided": 12,
@@ -59,6 +59,22 @@
  },
  "upcoming_argument_docket_numbers": [],
  "cases": [
+  {
+   "docket_number": "2026-2050",
+   "case_name": "Stingray Group Inc. v. Hernandez-Mondragon",
+   "case_type": "Patent (PTAB)",
+   "origin": "United States Patent and Trademark Office",
+   "status": "Pending / Briefing",
+   "date_filed": "2026-07-20",
+   "date_argued": null,
+   "argument": null,
+   "decision": null,
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/73644847/stingray-group-inc-v-hernandez-mondragon/",
+   "url_audio": null
+  },
   {
    "docket_number": "2026-2024",
    "case_name": "Kumar Industries v. United States",
@@ -207,7 +223,7 @@
    ],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/72222689/otsuka-america-pharmaceutical-inc-v-hetero-labs-limited/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/102882/otsuka-america-pharmaceutical-inc-v-hetero-labs-limited/"
   },
   {
    "docket_number": "2026-140",
@@ -2031,7 +2047,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/71926619/fedmet-resources-corporation-v-united-states/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/105708/fedmet-resources-corporation-v-united-states/"
   },
   {
    "docket_number": "2026-1155",
@@ -2399,7 +2415,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/71638721/parkervision-inc-v-qualcomm-incorporated/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/105165/parkervision-inc-v-qualcomm-incorporated/"
   },
   {
    "docket_number": "2026-1037",
@@ -3151,7 +3167,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/71357659/applications-in-internet-time-llc-v-salesforce-inc/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/102589/applications-in-internet-time-llc-v-salesforce-inc/"
   },
   {
    "docket_number": "2025-2022",
