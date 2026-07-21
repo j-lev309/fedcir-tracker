@@ -35,7 +35,7 @@ import requests
 # Config
 # ----------------------------------------------------------------------------
 
-SCRIPT_VERSION = "v10-budget (2026-07-21)"
+SCRIPT_VERSION = "v11-httpfix (2026-07-21)"
 CL_BASE = "https://www.courtlistener.com/api/rest/v4"
 CAFC_SCHEDULED_URL = "https://www.cafc.uscourts.gov/home/oral-argument/scheduled-cases/"
 CAFC_OPINION_RSS = "https://www.cafc.uscourts.gov/category/opinion-order/feed/"
@@ -100,6 +100,7 @@ def cl_paginate(url: str, params: dict, cap: int, meta: dict = None,
             meta["complete"], meta["reason"], meta["count"] = False, "quota exhausted", 0
         return []
     pages = 0
+    dropped_filter = False
     items, next_url, first, backoff, strikes, got_any = [], url, True, 30, 0, False
     complete, reason, timeouts, rl_waited = True, "ok", 0, 0
     while next_url and len(items) < cap:
@@ -145,6 +146,24 @@ def cl_paginate(url: str, params: dict, cap: int, meta: dict = None,
                 backoff = min(backoff + 30, 120)
                 continue
             backoff, strikes = 30, 0
+            if r.status_code >= 400:
+                # Surface exactly what the server objected to — a 400 usually means
+                # an unsupported filter, which is silent and fatal otherwise.
+                body = ""
+                try:
+                    body = r.text[:300]
+                except Exception:  # noqa: BLE001
+                    pass
+                log(f"  HTTP {r.status_code} from {next_url.split('?')[0]} — {body}")
+                if (r.status_code == 400 and params and not dropped_filter
+                        and any(k.endswith("__gt") for k in params)):
+                    # Unsupported incremental filter: drop it and retry once from
+                    # the date window instead of losing the whole source.
+                    params = {k: v for k, v in params.items() if not k.endswith("__gt")}
+                    log("  retrying without the incremental id filter")
+                    dropped_filter = True
+                    next_url, first = url, True
+                    continue
             r.raise_for_status()
             payload = r.json()
         except RuntimeError:
@@ -161,7 +180,8 @@ def cl_paginate(url: str, params: dict, cap: int, meta: dict = None,
             break
         except Exception as e:  # noqa: BLE001 — unexpected; keep what we have
             log(f"  pagination stopped: {e}")
-            complete, reason = False, f"interrupted ({type(e).__name__})"
+            code = getattr(getattr(e, "response", None), "status_code", None)
+            complete, reason = False, (f"HTTP {code}" if code else f"interrupted ({type(e).__name__})")
             break
         items.extend(payload.get("results", []))
         got_any = True
