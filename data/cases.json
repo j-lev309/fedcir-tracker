@@ -1,10 +1,11 @@
 {
- "generated_at": "2026-07-22T17:12:30+00:00",
+ "generated_at": "2026-07-22T22:14:22+00:00",
  "window_since": "2025-01-28",
  "coverage": {
   "complete": false,
   "run_complete": false,
   "backfilling": [
+   "dockets",
    "clusters",
    "opinions",
    "audio"
@@ -13,15 +14,14 @@
   "window_months": 18,
   "sources": {
    "dockets": {
-    "complete": true,
-    "reason": "ok",
-    "count": 363,
-    "resume_url": null
+    "complete": false,
+    "reason": "quota exhausted",
+    "count": 0
    },
    "clusters": {
     "complete": false,
     "reason": "quota exhausted",
-    "count": 1060
+    "count": 980
    },
    "opinions": {
     "complete": false,
@@ -50,7 +50,7 @@
    "expected": 102,
    "complete": true
   },
-  "opinion_text_fetches_this_run": 55,
+  "opinion_text_fetches_this_run": 41,
   "opinion_text_fetch_cap": 600,
   "latest_decision_date": "2026-07-22",
   "next_argument_date": null
