@@ -191,12 +191,17 @@
  },
  "panel-cl-10731827": [],
  "cl-10731827": {
-  "issues": [],
+  "issues": [
+   "PTAB Procedure & Standing",
+   "\u00a7\u00a7 102/103 Prior Art"
+  ],
   "summary": null
  },
  "panel-cl-10809208": [],
  "cl-10809208": {
-  "issues": [],
+  "issues": [
+   "\u00a7\u00a7 102/103 Prior Art"
+  ],
   "summary": null
  },
  "panel-cl-10883424": [],
@@ -299,5 +304,66 @@
  "cl-10924869": {
   "issues": [],
   "summary": null
- }
+ },
+ "panel-cl-10679401": [],
+ "cl-10679401": {
+  "issues": [],
+  "summary": null
+ },
+ "panel-cl-10677566": [
+  {
+   "name": "Lourie",
+   "role": "Panel"
+  },
+  {
+   "name": "Prost",
+   "role": "Panel"
+  },
+  {
+   "name": "Chen",
+   "role": "Panel"
+  }
+ ],
+ "cl-10677566": {
+  "issues": [],
+  "summary": null
+ },
+ "panel-cl-10730429": [],
+ "cl-10730429": {
+  "issues": [],
+  "summary": null
+ },
+ "panel-cl-10676176": [],
+ "cl-10676176": {
+  "issues": [],
+  "summary": null
+ },
+ "panel-cl-10669941": [],
+ "cl-10669941": {
+  "issues": [],
+  "summary": null
+ },
+ "panel-cl-10669911": [],
+ "cl-10669911": {
+  "issues": [],
+  "summary": null
+ },
+ "panel-cl-10678343": [],
+ "cl-10678343": {
+  "issues": [],
+  "summary": null
+ },
+ "panel-cl-10933804": [],
+ "cl-10933804": {
+  "issues": [],
+  "summary": null
+ },
+ "panel-cl-10681613": [],
+ "cl-10681613": {
+  "issues": [],
+  "summary": null
+ },
+ "panel-cl-10672313": [],
+ "panel-cl-10701599": [],
+ "panel-cl-10675442": []
 }
