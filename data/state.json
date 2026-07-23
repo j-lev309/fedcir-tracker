@@ -1,36 +1,36 @@
 {
  "dockets": {
-  "last_attempt": "2026-07-23T17:16:16+00:00",
-  "caught_up": true,
+  "last_attempt": "2026-07-23T22:14:27+00:00",
+  "caught_up": false,
   "last_ok": "2026-07-23T17:16:16+00:00",
-  "backfill_done": true,
+  "backfill_done": false,
   "last_id": 73644847,
   "last_date": "2026-07-20",
   "backfill_completed_at": "2026-07-21",
   "resume_url": null
  },
  "clusters": {
-  "last_attempt": "2026-07-23T17:16:16+00:00",
+  "last_attempt": "2026-07-23T22:14:27+00:00",
   "caught_up": false,
   "last_ok": "2026-07-21T15:33:11+00:00",
   "backfill_done": false,
-  "last_id": 10934440,
+  "last_id": 10934513,
   "last_date": "2026-07-23"
  },
  "opinions": {
   "last_id": 11400888,
-  "last_attempt": "2026-07-23T17:16:16+00:00",
+  "last_attempt": "2026-07-23T22:14:27+00:00",
   "caught_up": false,
   "backfill_done": false
  },
  "audio": {
   "last_id": 105721,
-  "last_attempt": "2026-07-23T17:16:16+00:00",
+  "last_attempt": "2026-07-23T22:14:27+00:00",
   "caught_up": false,
   "last_ok": "2026-07-21T15:00:52+00:00",
   "backfill_done": false
  },
- "run_no": 9,
+ "run_no": 10,
  "schema_v17": true,
  "judge_names": {}
 }
