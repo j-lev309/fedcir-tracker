@@ -272,7 +272,10 @@
  },
  "panel-cl-10844507": [],
  "cl-10844507": {
-  "issues": [],
+  "issues": [
+   "\u00a7\u00a7 102/103 Prior Art",
+   "Damages & Remedies"
+  ],
   "summary": null
  },
  "panel-cl-10932409": [],
@@ -291,7 +294,10 @@
  "panel-cl-10857960": [],
  "panel-cl-10878465": [],
  "cl-10878465": {
-  "issues": [],
+  "issues": [
+   "\u00a7 112 / Claim Construction",
+   "\u00a7\u00a7 102/103 Prior Art"
+  ],
   "summary": null
  },
  "panel-cl-10878464": [],
@@ -350,7 +356,9 @@
  },
  "panel-cl-10678343": [],
  "cl-10678343": {
-  "issues": [],
+  "issues": [
+   "PTAB Procedure & Standing"
+  ],
   "summary": null
  },
  "panel-cl-10933804": [],
@@ -365,5 +373,6 @@
  },
  "panel-cl-10672313": [],
  "panel-cl-10701599": [],
- "panel-cl-10675442": []
+ "panel-cl-10675442": [],
+ "panel-cl-10871816": []
 }

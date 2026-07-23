@@ -1,27 +1,27 @@
 {
- "generated_at": "2026-07-22T22:14:22+00:00",
- "window_since": "2025-01-28",
+ "generated_at": "2026-07-23T17:17:30+00:00",
+ "window_since": "2025-01-29",
  "coverage": {
   "complete": false,
   "run_complete": false,
   "backfilling": [
-   "dockets",
    "clusters",
    "opinions",
    "audio"
   ],
-  "window_since": "2025-01-28",
+  "window_since": "2025-01-29",
   "window_months": 18,
   "sources": {
    "dockets": {
-    "complete": false,
-    "reason": "quota exhausted",
-    "count": 0
+    "complete": true,
+    "reason": "ok",
+    "count": 363,
+    "resume_url": null
    },
    "clusters": {
     "complete": false,
     "reason": "quota exhausted",
-    "count": 980
+    "count": 1020
    },
    "opinions": {
     "complete": false,
@@ -47,20 +47,20 @@
   "summaries": {
    "enabled": false,
    "have": 2,
-   "expected": 102,
+   "expected": 103,
    "complete": true
   },
-  "opinion_text_fetches_this_run": 41,
+  "opinion_text_fetches_this_run": 42,
   "opinion_text_fetch_cap": 600,
   "latest_decision_date": "2026-07-22",
   "next_argument_date": null
  },
  "stats": {
-  "total": 365,
+  "total": 366,
   "pending": 256,
   "scheduled": 0,
   "awaiting": 5,
-  "decided": 104,
+  "decided": 105,
   "precedential": 10,
   "rule36": 2
  },
@@ -362,7 +362,7 @@
    "decision": {
     "date": "2026-06-29",
     "precedential_status": "Unpublished",
-    "disposition": "Order",
+    "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10881701/in-re-core-scientific-inc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-140.ORDER.6-29-2026_2715846.pdf"
    },
@@ -484,7 +484,8 @@
    },
    "panel": [],
    "patent_issues": [
-    "Other / Procedural"
+    "\u00a7 112 / Claim Construction",
+    "\u00a7\u00a7 102/103 Prior Art"
    ],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/71155957/enanta-pharmaceuticals-inc-v-pfizer-inc/",
@@ -650,6 +651,28 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/73430502/in-re-us/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "2026-1041",
+   "case_name": "Mathai v. United States",
+   "case_type": "Federal Claims",
+   "origin": "United States Court of Federal Claims",
+   "status": "Decided",
+   "date_filed": "2025-10-14",
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-06-08",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10871816/mathai-v-united-states/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1041.OPINION.6-8-2026_2706048.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/73451697/mathai-v-united-states/",
    "url_audio": null
   },
   {
@@ -1382,7 +1405,8 @@
    },
    "panel": [],
    "patent_issues": [
-    "Other / Procedural"
+    "\u00a7\u00a7 102/103 Prior Art",
+    "Damages & Remedies"
    ],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/70242518/international-medical-devices-inc-v-cornell/",
@@ -4129,7 +4153,7 @@
    },
    "panel": [],
    "patent_issues": [
-    "Other / Procedural"
+    "PTAB Procedure & Standing"
    ],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/69932559/interactive-communications-international-inc-v-blackhawk-network-inc/",
