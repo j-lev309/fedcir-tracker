@@ -1,27 +1,27 @@
 {
- "generated_at": "2026-07-23T22:15:10+00:00",
- "window_since": "2025-01-29",
+ "generated_at": "2026-07-24T17:26:00+00:00",
+ "window_since": "2025-01-30",
  "coverage": {
   "complete": false,
   "run_complete": false,
   "backfilling": [
-   "dockets",
    "clusters",
    "opinions",
    "audio"
   ],
-  "window_since": "2025-01-29",
+  "window_since": "2025-01-30",
   "window_months": 18,
   "sources": {
    "dockets": {
-    "complete": false,
-    "reason": "quota exhausted",
-    "count": 0
+    "complete": true,
+    "reason": "ok",
+    "count": 363,
+    "resume_url": null
    },
    "clusters": {
     "complete": false,
     "reason": "quota exhausted",
-    "count": 920
+    "count": 760
    },
    "opinions": {
     "complete": false,
@@ -386,7 +386,7 @@
    "decision": {
     "date": "2026-06-29",
     "precedential_status": "Unpublished",
-    "disposition": "Order",
+    "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10881703/cramer-v-doj/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1404.ORDER.6-29-2026_2715932.pdf"
    },
@@ -3523,7 +3523,7 @@
    },
    "panel": [],
    "patent_issues": [
-    "Other / Procedural"
+    "PTAB Procedure & Standing"
    ],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/70555071/in-re-sap-america-inc/",
