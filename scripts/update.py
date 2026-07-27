@@ -30,7 +30,8 @@ from io import BytesIO
 from pathlib import Path
 
 import requests
-
+import urllib3
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 # ----------------------------------------------------------------------------
 # Config
 # ----------------------------------------------------------------------------
@@ -445,6 +446,7 @@ def parse_panel_from_text(text: str) -> list:
 
 FAILED_TEXT_IDS: set = set()   # per-session: never retry a record that failed
 PDF_SESSION = requests.Session()
+PDF_SESSION.verify = False   # CAFC uses a cert chain GitHub runners don't trust
 PDF_SESSION.headers.update({
     "User-Agent": "fedcir-tracker (personal research dashboard)"})
 
