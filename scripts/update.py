@@ -1115,8 +1115,8 @@ def build() -> dict:
                     pdf_url = None  # would require another API call; skip
 
                 ckey = f"panel-cl-{lead_cluster['id']}"
-                cached_panel = cache.get(ckey)
-                if cached_panel is not None:
+               cached_panel = cache.get(ckey)
+                if cached_panel:
                     panel = list(cached_panel)
                 elif pdf_url:
                     otext = fetch_opinion_text(op_id or 0, pdf_url)
