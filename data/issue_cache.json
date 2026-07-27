@@ -148,7 +148,10 @@
  "panel-cl-10846087": [],
  "panel-cl-10857448": [],
  "cl-10857448": {
-  "issues": [],
+  "issues": [
+   "PTAB Procedure & Standing",
+   "Damages & Remedies"
+  ],
   "summary": null
  },
  "panel-cl-10839449": [],
@@ -158,7 +161,9 @@
  },
  "panel-cl-10729569": [],
  "cl-10729569": {
-  "issues": [],
+  "issues": [
+   "PTAB Procedure & Standing"
+  ],
   "summary": null
  },
  "panel-cl-10741381": [],
@@ -208,7 +213,11 @@
  },
  "panel-cl-10883424": [],
  "cl-10883424": {
-  "issues": [],
+  "issues": [
+   "\u00a7 112 / Claim Construction",
+   "Damages & Remedies",
+   "\u00a7\u00a7 102/103 Prior Art"
+  ],
   "summary": null
  },
  "panel-cl-10830456": [],

@@ -1,27 +1,27 @@
 {
- "generated_at": "2026-07-24T22:14:14+00:00",
- "window_since": "2025-01-30",
+ "generated_at": "2026-07-27T17:31:28+00:00",
+ "window_since": "2025-02-02",
  "coverage": {
   "complete": false,
   "run_complete": false,
   "backfilling": [
-   "dockets",
    "clusters",
    "opinions",
    "audio"
   ],
-  "window_since": "2025-01-30",
+  "window_since": "2025-02-02",
   "window_months": 18,
   "sources": {
    "dockets": {
-    "complete": false,
-    "reason": "quota exhausted",
-    "count": 0
+    "complete": true,
+    "reason": "ok",
+    "count": 364,
+    "resume_url": null
    },
    "clusters": {
     "complete": false,
     "reason": "quota exhausted",
-    "count": 1000
+    "count": 620
    },
    "opinions": {
     "complete": false,
@@ -47,20 +47,20 @@
   "summaries": {
    "enabled": false,
    "have": 2,
-   "expected": 103,
+   "expected": 102,
    "complete": true
   },
-  "opinion_text_fetches_this_run": 37,
+  "opinion_text_fetches_this_run": 36,
   "opinion_text_fetch_cap": 600,
   "latest_decision_date": "2026-07-22",
   "next_argument_date": null
  },
  "stats": {
-  "total": 366,
-  "pending": 256,
+  "total": 370,
+  "pending": 261,
   "scheduled": 0,
   "awaiting": 5,
-  "decided": 105,
+  "decided": 104,
   "precedential": 10,
   "rule36": 2
  },
@@ -344,7 +344,9 @@
    },
    "panel": [],
    "patent_issues": [
-    "Other / Procedural"
+    "\u00a7 112 / Claim Construction",
+    "Damages & Remedies",
+    "\u00a7\u00a7 102/103 Prior Art"
    ],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/72222689/otsuka-america-pharmaceutical-inc-v-hetero-labs-limited/",
@@ -397,27 +399,19 @@
    "url_audio": null
   },
   {
-   "docket_number": "2026-1255",
-   "case_name": "Belden Canada ULC v. CommScope, Inc.",
-   "case_type": "Patent (District Ct.)",
-   "origin": "United States District Court for the District of Delaware",
-   "status": "Decided",
-   "date_filed": "2025-12-15",
+   "docket_number": "2026-1980",
+   "case_name": "Abate v. Collins",
+   "case_type": "Veterans",
+   "origin": null,
+   "status": "Pending / Briefing",
+   "date_filed": "2026-06-26",
    "date_argued": null,
    "argument": null,
-   "decision": {
-    "date": "2026-06-29",
-    "precedential_status": null,
-    "disposition": "Order",
-    "url_cl": null,
-    "url_pdf": "https://www.cafc.uscourts.gov/06-29-2026-26-1255-belden-canada-ulc-v-commscope-inc-order-26-1255-order-6-29-2026_2716159/"
-   },
+   "decision": null,
    "panel": [],
-   "patent_issues": [
-    "Other / Procedural"
-   ],
+   "patent_issues": [],
    "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/72041315/belden-canada-ulc-v-commscope-inc/",
+   "url_cl": "https://www.courtlistener.com/docket/73671798/abate-v-collins/",
    "url_audio": null
   },
   {
@@ -977,7 +971,8 @@
    },
    "panel": [],
    "patent_issues": [
-    "Other / Procedural"
+    "PTAB Procedure & Standing",
+    "Damages & Remedies"
    ],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/71999151/nesarikar-v-pto/",
@@ -1426,6 +1421,22 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/73491132/deckers-outdoor-corporation-v-romeo-and-juliette-inc/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "2026-1674",
+   "case_name": "Kiniery v. Collins",
+   "case_type": "Veterans",
+   "origin": null,
+   "status": "Pending / Briefing",
+   "date_filed": "2026-04-15",
+   "date_argued": null,
+   "argument": null,
+   "decision": null,
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/73671799/kiniery-v-collins/",
    "url_audio": null
   },
   {
@@ -2905,6 +2916,38 @@
    "url_audio": null
   },
   {
+   "docket_number": "2026-1255",
+   "case_name": "Belden Canada ULC v. CommScope, Inc.",
+   "case_type": "Patent (District Ct.)",
+   "origin": "United States District Court for the District of Delaware",
+   "status": "Pending / Briefing",
+   "date_filed": "2025-12-15",
+   "date_argued": null,
+   "argument": null,
+   "decision": null,
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/72041315/belden-canada-ulc-v-commscope-inc/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "2026-1253",
+   "case_name": "Gilbert v. Collins",
+   "case_type": "Veterans",
+   "origin": null,
+   "status": "Pending / Briefing",
+   "date_filed": "2025-12-15",
+   "date_argued": null,
+   "argument": null,
+   "decision": null,
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/73671624/gilbert-v-collins/",
+   "url_audio": null
+  },
+  {
    "docket_number": "2026-1245",
    "case_name": "Fedmet Resources Corporation v. United States",
    "case_type": "Trade (CIT)",
@@ -3587,7 +3630,7 @@
    },
    "panel": [],
    "patent_issues": [
-    "Other / Procedural"
+    "PTAB Procedure & Standing"
    ],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/71715081/in-re-aylo-holdings-sa-rl/",
@@ -4870,6 +4913,22 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/71316800/in-re-timchuk/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "2025-1963",
+   "case_name": "Gilbert v. Collins",
+   "case_type": "Veterans",
+   "origin": null,
+   "status": "Pending / Briefing",
+   "date_filed": "2025-07-25",
+   "date_argued": null,
+   "argument": null,
+   "decision": null,
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/73672441/gilbert-v-collins/",
    "url_audio": null
   },
   {
