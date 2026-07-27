@@ -1,36 +1,37 @@
 {
  "dockets": {
-  "last_attempt": "2026-07-27T20:13:20+00:00",
-  "caught_up": false,
-  "last_ok": "2026-07-27T17:30:44+00:00",
-  "backfill_done": false,
-  "last_id": 73672441,
+  "last_attempt": "2026-07-27T22:18:19+00:00",
+  "caught_up": true,
+  "last_ok": "2026-07-27T22:18:19+00:00",
+  "backfill_done": true,
+  "last_id": 73677137,
   "last_date": "2026-07-20",
   "backfill_completed_at": "2026-07-21",
   "resume_url": null
  },
  "clusters": {
-  "last_attempt": "2026-07-27T20:13:20+00:00",
+  "last_attempt": "2026-07-27T22:18:19+00:00",
   "caught_up": false,
   "last_ok": "2026-07-21T15:33:11+00:00",
   "backfill_done": false,
   "last_id": 10935367,
-  "last_date": "2026-07-27"
+  "last_date": "2026-07-27",
+  "resume_url": "https://www.courtlistener.com/api/rest/v4/clusters/?date_filed__gte=2025-02-02&docket__court=cafc&fields=id%2Cabsolute_url%2Ccase_name%2Cdate_filed%2Cprecedential_status%2Cjudges%2Cpanel%2Cdocket_id%2Cnature_of_suit%2Csyllabus%2Cheadnotes%2Cdisposition%2Csub_opinions&order_by=-date_filed&page=32"
  },
  "opinions": {
   "last_id": 11400888,
-  "last_attempt": "2026-07-27T20:13:20+00:00",
+  "last_attempt": "2026-07-27T22:18:19+00:00",
   "caught_up": false,
   "backfill_done": false
  },
  "audio": {
   "last_id": 105721,
-  "last_attempt": "2026-07-27T20:13:20+00:00",
+  "last_attempt": "2026-07-27T22:18:19+00:00",
   "caught_up": false,
   "last_ok": "2026-07-21T15:00:52+00:00",
   "backfill_done": false
  },
- "run_no": 14,
+ "run_no": 15,
  "schema_v17": true,
  "judge_names": {}
 }
