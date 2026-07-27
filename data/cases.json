@@ -1,10 +1,11 @@
 {
- "generated_at": "2026-07-27T17:31:28+00:00",
+ "generated_at": "2026-07-27T20:13:51+00:00",
  "window_since": "2025-02-02",
  "coverage": {
   "complete": false,
   "run_complete": false,
   "backfilling": [
+   "dockets",
    "clusters",
    "opinions",
    "audio"
@@ -13,15 +14,14 @@
   "window_months": 18,
   "sources": {
    "dockets": {
-    "complete": true,
-    "reason": "ok",
-    "count": 364,
-    "resume_url": null
+    "complete": false,
+    "reason": "quota exhausted",
+    "count": 0
    },
    "clusters": {
     "complete": false,
     "reason": "quota exhausted",
-    "count": 620
+    "count": 800
    },
    "opinions": {
     "complete": false,
@@ -50,7 +50,7 @@
    "expected": 102,
    "complete": true
   },
-  "opinion_text_fetches_this_run": 36,
+  "opinion_text_fetches_this_run": 33,
   "opinion_text_fetch_cap": 600,
   "latest_decision_date": "2026-07-22",
   "next_argument_date": null
@@ -264,7 +264,7 @@
    },
    "panel": [],
    "patent_issues": [
-    "Other / Procedural"
+    "\u00a7 101 Eligibility"
    ],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/73434617/etison-llc-v-highlevel-inc/",
@@ -813,7 +813,7 @@
    },
    "panel": [],
    "patent_issues": [
-    "Other / Procedural"
+    "Damages & Remedies"
    ],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/72105033/insulet-corp-v-eoflow-co-ltd/",
@@ -3542,7 +3542,7 @@
    },
    "panel": [],
    "patent_issues": [
-    "Other / Procedural"
+    "PTAB Procedure & Standing"
    ],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/70619962/in-re-motorola-solutions-inc/",
