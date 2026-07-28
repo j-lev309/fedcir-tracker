@@ -906,9 +906,26 @@
   ],
   "summary": null
  },
- "panel-cl-10933804": [],
+ "panel-cl-10933804": [
+  {
+   "name": "Hughes",
+   "role": "Author"
+  },
+  {
+   "name": "Stoll",
+   "role": "Dissent"
+  },
+  {
+   "name": "Prost",
+   "role": "Panel"
+  }
+ ],
  "cl-10933804": {
-  "issues": [],
+  "issues": [
+   "\u00a7\u00a7 102/103 Prior Art",
+   "PTAB Procedure & Standing",
+   "Damages & Remedies"
+  ],
   "summary": null
  },
  "panel-cl-10681613": [
@@ -1377,6 +1394,116 @@
  },
  "panel-cl-10609948": [],
  "cl-10609948": {
+  "issues": [],
+  "summary": null
+ },
+ "panel-cl-10589774": [],
+ "cl-10589774": {
+  "issues": [],
+  "summary": null
+ },
+ "panel-cl-10580646": [],
+ "cl-10580646": {
+  "issues": [],
+  "summary": null
+ },
+ "panel-cl-10372863": [
+  {
+   "name": "Taranto",
+   "role": "Panel"
+  },
+  {
+   "name": "Wallach",
+   "role": "Panel"
+  },
+  {
+   "name": "Cunningham",
+   "role": "Panel"
+  }
+ ],
+ "cl-10372863": {
+  "issues": [],
+  "summary": null
+ },
+ "panel-cl-10386078": [
+  {
+   "name": "Prost",
+   "role": "Panel"
+  },
+  {
+   "name": "Wallach",
+   "role": "Panel"
+  },
+  {
+   "name": "Taranto",
+   "role": "Panel"
+  }
+ ],
+ "cl-10386078": {
+  "issues": [],
+  "summary": null
+ },
+ "panel-cl-10365394": [],
+ "cl-10365394": {
+  "issues": [],
+  "summary": null
+ },
+ "panel-cl-10587256": [
+  {
+   "name": "Dyk",
+   "role": "Author"
+  },
+  {
+   "name": "Lourie",
+   "role": "Panel"
+  },
+  {
+   "name": "Mayer",
+   "role": "Panel"
+  }
+ ],
+ "cl-10587256": {
+  "issues": [],
+  "summary": null
+ },
+ "panel-cl-10378713": [],
+ "cl-10378713": {
+  "issues": [],
+  "summary": null
+ },
+ "panel-cl-10587259": [
+  {
+   "name": "Dyk",
+   "role": "Author"
+  },
+  {
+   "name": "Lourie",
+   "role": "Panel"
+  },
+  {
+   "name": "Mayer",
+   "role": "Panel"
+  }
+ ],
+ "cl-10587259": {
+  "issues": [],
+  "summary": null
+ },
+ "panel-cl-10376232": [
+  {
+   "name": "Dyk",
+   "role": "Panel"
+  },
+  {
+   "name": "Prost",
+   "role": "Panel"
+  },
+  {
+   "name": "Chen",
+   "role": "Panel"
+  }
+ ],
+ "cl-10376232": {
   "issues": [],
   "summary": null
  }
