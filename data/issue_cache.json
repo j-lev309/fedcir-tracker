@@ -1091,5 +1091,293 @@
  "cl-10871816": {
   "issues": [],
   "summary": null
+ },
+ "panel-cl-10677620": [
+  {
+   "name": "Lourie",
+   "role": "Panel"
+  },
+  {
+   "name": "Prost",
+   "role": "Panel"
+  },
+  {
+   "name": "Chen",
+   "role": "Panel"
+  }
+ ],
+ "cl-10677620": {
+  "issues": [],
+  "summary": null
+ },
+ "panel-cl-10669107": [
+  {
+   "name": "Lourie",
+   "role": "Panel"
+  },
+  {
+   "name": "Prost",
+   "role": "Panel"
+  },
+  {
+   "name": "Chen",
+   "role": "Panel"
+  }
+ ],
+ "cl-10669107": {
+  "issues": [],
+  "summary": null
+ },
+ "panel-cl-10669913": [
+  {
+   "name": "Lourie",
+   "role": "Panel"
+  },
+  {
+   "name": "Prost",
+   "role": "Panel"
+  },
+  {
+   "name": "Chen",
+   "role": "Panel"
+  }
+ ],
+ "cl-10669913": {
+  "issues": [],
+  "summary": null
+ },
+ "panel-cl-10669942": [],
+ "cl-10669942": {
+  "issues": [],
+  "summary": null
+ },
+ "panel-cl-10646148": [
+  {
+   "name": "Taranto",
+   "role": "Panel"
+  },
+  {
+   "name": "Cunningham",
+   "role": "Panel"
+  },
+  {
+   "name": "Stark",
+   "role": "Panel"
+  }
+ ],
+ "cl-10646148": {
+  "issues": [
+   "PTAB Procedure & Standing"
+  ],
+  "summary": null
+ },
+ "panel-cl-10669912": [
+  {
+   "name": "Reyna",
+   "role": "Panel"
+  },
+  {
+   "name": "Hughes",
+   "role": "Panel"
+  },
+  {
+   "name": "Stoll",
+   "role": "Panel"
+  }
+ ],
+ "cl-10669912": {
+  "issues": [],
+  "summary": null
+ },
+ "panel-cl-10669910": [
+  {
+   "name": "Stoll",
+   "role": "Author"
+  },
+  {
+   "name": "Reyna",
+   "role": "Panel"
+  },
+  {
+   "name": "Hughes",
+   "role": "Panel"
+  }
+ ],
+ "cl-10669910": {
+  "issues": [],
+  "summary": null
+ },
+ "panel-cl-10660812": [],
+ "cl-10660812": {
+  "issues": [],
+  "summary": null
+ },
+ "panel-cl-10636369": [
+  {
+   "name": "Taranto",
+   "role": "Panel"
+  },
+  {
+   "name": "Cunningham",
+   "role": "Panel"
+  },
+  {
+   "name": "Stark",
+   "role": "Panel"
+  }
+ ],
+ "cl-10636369": {
+  "issues": [],
+  "summary": null
+ },
+ "panel-cl-10636313": [
+  {
+   "name": "Reyna",
+   "role": "Panel"
+  },
+  {
+   "name": "Taranto",
+   "role": "Panel"
+  },
+  {
+   "name": "Stark",
+   "role": "Panel"
+  }
+ ],
+ "cl-10636313": {
+  "issues": [
+   "\u00a7 112 / Claim Construction"
+  ],
+  "summary": null
+ },
+ "panel-cl-10617608": [
+  {
+   "name": "Dyk",
+   "role": "Panel"
+  },
+  {
+   "name": "Mayer",
+   "role": "Panel"
+  },
+  {
+   "name": "Reyna",
+   "role": "Panel"
+  }
+ ],
+ "cl-10617608": {
+  "issues": [],
+  "summary": null
+ },
+ "panel-cl-10625794": [
+  {
+   "name": "Reyna",
+   "role": "Panel"
+  },
+  {
+   "name": "Mayer",
+   "role": "Panel"
+  },
+  {
+   "name": "Chen",
+   "role": "Panel"
+  }
+ ],
+ "cl-10625794": {
+  "issues": [],
+  "summary": null
+ },
+ "panel-cl-10631700": [],
+ "cl-10631700": {
+  "issues": [],
+  "summary": null
+ },
+ "panel-cl-10604408": [],
+ "cl-10604408": {
+  "issues": [],
+  "summary": null
+ },
+ "panel-cl-10599894": [],
+ "cl-10599894": {
+  "issues": [],
+  "summary": null
+ },
+ "panel-cl-10635077": [
+  {
+   "name": "Taranto",
+   "role": "Panel"
+  },
+  {
+   "name": "Cunningham",
+   "role": "Panel"
+  },
+  {
+   "name": "Stark",
+   "role": "Panel"
+  }
+ ],
+ "cl-10635077": {
+  "issues": [],
+  "summary": null
+ },
+ "panel-cl-10599913": [],
+ "cl-10599913": {
+  "issues": [],
+  "summary": null
+ },
+ "panel-cl-10646195": [],
+ "cl-10646195": {
+  "issues": [],
+  "summary": null
+ },
+ "panel-cl-10625847": [],
+ "cl-10625847": {
+  "issues": [],
+  "summary": null
+ },
+ "panel-cl-10616083": [
+  {
+   "name": "Reyna",
+   "role": "Panel"
+  },
+  {
+   "name": "Mayer",
+   "role": "Panel"
+  },
+  {
+   "name": "Chen",
+   "role": "Panel"
+  }
+ ],
+ "cl-10616083": {
+  "issues": [],
+  "summary": null
+ },
+ "panel-cl-10622139": [],
+ "cl-10622139": {
+  "issues": [],
+  "summary": null
+ },
+ "panel-cl-10667731": [
+  {
+   "name": "Andrews",
+   "role": "Author"
+  },
+  {
+   "name": "Prost",
+   "role": "Panel"
+  },
+  {
+   "name": "Cunningham",
+   "role": "Panel"
+  }
+ ],
+ "cl-10667731": {
+  "issues": [],
+  "summary": null
+ },
+ "panel-cl-10609948": [],
+ "cl-10609948": {
+  "issues": [],
+  "summary": null
  }
 }
