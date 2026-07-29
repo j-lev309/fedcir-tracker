@@ -1,10 +1,11 @@
 {
- "generated_at": "2026-07-29T20:16:30+00:00",
+ "generated_at": "2026-07-29T22:21:25+00:00",
  "window_since": "2025-02-04",
  "coverage": {
   "complete": false,
   "run_complete": false,
   "backfilling": [
+   "dockets",
    "clusters",
    "opinions",
    "audio"
@@ -13,16 +14,15 @@
   "window_months": 18,
   "sources": {
    "dockets": {
-    "complete": true,
-    "reason": "ok",
-    "count": 365,
-    "resume_url": null
-   },
-   "clusters": {
-    "resume_url": "https://www.courtlistener.com/api/rest/v4/clusters/?date_filed__gte=2025-02-04&docket__court=cafc&fields=id%2Cabsolute_url%2Ccase_name%2Cdate_filed%2Cprecedential_status%2Cjudges%2Cpanel%2Cdocket_id%2Cdocket%2Cnature_of_suit%2Csyllabus%2Cheadnotes%2Cdisposition%2Csub_opinions&order_by=-date_filed&page=43",
     "complete": false,
     "reason": "quota exhausted",
-    "count": 840
+    "count": 0
+   },
+   "clusters": {
+    "resume_url": "https://www.courtlistener.com/api/rest/v4/clusters/?date_filed__gte=2025-02-04&docket__court=cafc&fields=id%2Cabsolute_url%2Ccase_name%2Cdate_filed%2Cprecedential_status%2Cjudges%2Cpanel%2Cdocket_id%2Cdocket%2Cnature_of_suit%2Csyllabus%2Cheadnotes%2Cdisposition%2Csub_opinions&order_by=-date_filed&page=83",
+    "complete": false,
+    "reason": "quota exhausted",
+    "count": 800
    },
    "opinions": {
     "complete": false,
@@ -48,7 +48,7 @@
   "summaries": {
    "enabled": false,
    "have": 0,
-   "expected": 1820,
+   "expected": 1853,
    "complete": true
   },
   "opinion_text_fetches_this_run": 600,
@@ -57,12 +57,12 @@
   "next_argument_date": null
  },
  "stats": {
-  "total": 2056,
-  "pending": 229,
+  "total": 2088,
+  "pending": 228,
   "scheduled": 0,
   "awaiting": 5,
-  "decided": 1822,
-  "precedential": 271,
+  "decided": 1855,
+  "precedential": 273,
   "rule36": 2
  },
  "upcoming_argument_docket_numbers": [],
@@ -679,7 +679,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10933752/quillet-v-dva/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1195.OPINION.7-22-2026_2726409.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Hughes",
+     "role": "Author"
+    },
+    {
+     "name": "Moore",
+     "role": "Panel"
+    },
+    {
+     "name": "Lourie",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10933752/quillet-v-dva/",
@@ -701,7 +714,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10933751/rhee-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1130.OPINION.7-22-2026_2726430.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Lourie",
+     "role": "Panel"
+    },
+    {
+     "name": "Linn",
+     "role": "Panel"
+    },
+    {
+     "name": "Hughes",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10933751/rhee-v-united-states/",
@@ -723,7 +749,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10933803/weed-v-ssa/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-2006.OPINION.7-22-2026_2726445.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Prost",
+     "role": "Author"
+    },
+    {
+     "name": "Lourie",
+     "role": "Panel"
+    },
+    {
+     "name": "Stark",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10933803/weed-v-ssa/",
@@ -14410,7 +14449,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10811574/healthestate-llc-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1336.OPINION.3-20-2026_2663609.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Reyna",
+     "role": "Author"
+    },
+    {
+     "name": "Dyk",
+     "role": "Panel"
+    },
+    {
+     "name": "Stoll",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10811574/healthestate-llc-v-united-states/",
@@ -15671,9 +15723,22 @@
     "url_cl": "https://www.courtlistener.com/opinion/10804784/in-re-hbn-shoe-llc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1672.OPINION.3-6-2026_2657445.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Taranto",
+     "role": "Author"
+    },
+    {
+     "name": "Dyk",
+     "role": "Panel"
+    },
+    {
+     "name": "Reyna",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [
-    "Other / Procedural"
+    "\u00a7\u00a7 102/103 Prior Art"
    ],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10804784/in-re-hbn-shoe-llc/",
@@ -16937,7 +17002,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10797682/nimbelink-corp-v-digi-international-inc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-2292.OPINION.2-23-2026_2651127.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Moore",
+     "role": "Author"
+    },
+    {
+     "name": "Dyk",
+     "role": "Panel"
+    },
+    {
+     "name": "Taranto",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10797682/nimbelink-corp-v-digi-international-inc/",
@@ -18909,7 +18987,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10785127/gibson-v-sec/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1484.OPINION.2-6-2026_2644234.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Cunningham",
+     "role": "Author"
+    },
+    {
+     "name": "Prost",
+     "role": "Panel"
+    },
+    {
+     "name": "Stark",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10785127/gibson-v-sec/",
@@ -21045,7 +21136,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10777371/gonzalez-dufour-v-opm/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1208.ORDER.1-21-2026_2635566.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Stoll",
+     "role": "Panel"
+    },
+    {
+     "name": "Wallach",
+     "role": "Panel"
+    },
+    {
+     "name": "Cunningham",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10777371/gonzalez-dufour-v-opm/",
@@ -21067,7 +21171,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10777369/kamdem-ouaffo-v-fein-such-kahn-shepard-pc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1141.ORDER.1-21-2026_2635468.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Stoll",
+     "role": "Panel"
+    },
+    {
+     "name": "Wallach",
+     "role": "Panel"
+    },
+    {
+     "name": "Cunningham",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10777369/kamdem-ouaffo-v-fein-such-kahn-shepard-pc/",
@@ -21089,7 +21206,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10777278/apple-inc-v-smart-mobile-technologies-llc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1352.OPINION.1-21-2026_2635427.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Reyna",
+     "role": "Author"
+    },
+    {
+     "name": "Lourie",
+     "role": "Panel"
+    },
+    {
+     "name": "Chen",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10777278/apple-inc-v-smart-mobile-technologies-llc/",
@@ -21111,7 +21241,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10777372/frank-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-2105.OPINION.1-21-2026_2635500.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Stark",
+     "role": "Author"
+    },
+    {
+     "name": "Prost",
+     "role": "Panel"
+    },
+    {
+     "name": "Chen",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10777372/frank-v-united-states/",
@@ -21133,7 +21276,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10777368/lionra-technologies-ltd-v-cisco-systems-inc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-2153.OPINION.1-21-2026_2635465.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Prost",
+     "role": "Author"
+    },
+    {
+     "name": "Cunningham",
+     "role": "Panel"
+    },
+    {
+     "name": "Stark",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10777368/lionra-technologies-ltd-v-cisco-systems-inc/",
@@ -21155,7 +21311,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10777373/celltrust-corp-v-myrepchat-llc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/23-2057.OPINION.1-21-2026_2635438.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Andrews",
+     "role": "Author"
+    },
+    {
+     "name": "Cunningham",
+     "role": "Author"
+    },
+    {
+     "name": "Prost",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10777373/celltrust-corp-v-myrepchat-llc/",
@@ -21177,7 +21346,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10776707/barry-v-depuy-synthes-companies/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/23-2226.OPINION.1-20-2026_2634511.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Stark",
+     "role": "Author"
+    },
+    {
+     "name": "Prost",
+     "role": "Dissent"
+    },
+    {
+     "name": "Taranto",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10776707/barry-v-depuy-synthes-companies/",
@@ -21255,7 +21437,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10775402/sunoco-partners-marketing-terminals-lp-v-powder-springs-logistics-llc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/23-1218.OPINION.1-16-2026_2633857.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Stoll",
+     "role": "Author"
+    },
+    {
+     "name": "Clevenger",
+     "role": "Panel"
+    },
+    {
+     "name": "Cunningham",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10775402/sunoco-partners-marketing-terminals-lp-v-powder-springs-logistics-llc/",
@@ -21277,7 +21472,28 @@
     "url_cl": "https://www.courtlistener.com/opinion/10775403/gamevice-inc-v-nintendo-co-ltd/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1467.OPINION.1-16-2026_2633865.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Andrews",
+     "role": "Author"
+    },
+    {
+     "name": "Moore",
+     "role": "Panel"
+    },
+    {
+     "name": "Chen",
+     "role": "Panel"
+    },
+    {
+     "name": "Gamevice",
+     "role": "Panel"
+    },
+    {
+     "name": "Inc",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10775403/gamevice-inc-v-nintendo-co-ltd/",
@@ -21321,7 +21537,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10774888/farley-v-mspb/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1827.OPINION.1-15-2026_2633357.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Reyna",
+     "role": "Panel"
+    },
+    {
+     "name": "Chen",
+     "role": "Panel"
+    },
+    {
+     "name": "Freeman",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10774888/farley-v-mspb/",
@@ -21367,7 +21596,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10774887/herms-v-hhs/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1007.OPINION.1-15-2026_2633373.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Lourie",
+     "role": "Author"
+    },
+    {
+     "name": "Taranto",
+     "role": "Panel"
+    },
+    {
+     "name": "Chen",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10774887/herms-v-hhs/",
@@ -21421,7 +21663,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10774331/mckinney-v-secretary-of-veterans-affairs/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/23-1930.OPINION.1-14-2026_2632733.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Chen",
+     "role": "Author"
+    },
+    {
+     "name": "Prost",
+     "role": "Panel"
+    },
+    {
+     "name": "Reyna",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10774331/mckinney-v-secretary-of-veterans-affairs/",
@@ -21443,9 +21698,23 @@
     "url_cl": "https://www.courtlistener.com/opinion/10774332/in-re-blue-buffalo-enterprises-inc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1611.OPINION.1-14-2026_2632686.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Chun",
+     "role": "Author"
+    },
+    {
+     "name": "Moore",
+     "role": "Author"
+    },
+    {
+     "name": "Taranto",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [
-    "Other / Procedural"
+    "\u00a7\u00a7 102/103 Prior Art",
+    "\u00a7 112 / Claim Construction"
    ],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10774332/in-re-blue-buffalo-enterprises-inc/",
@@ -21467,7 +21736,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10774333/horton-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1897.OPINION.1-14-2026_2632719.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Prost",
+     "role": "Panel"
+    },
+    {
+     "name": "Cunningham",
+     "role": "Panel"
+    },
+    {
+     "name": "Stark",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10774333/horton-v-united-states/",
@@ -21489,7 +21771,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10774330/rn-nehushtan-trust-ltd-v-apple-inc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1806.OPINION.1-14-2026_2632702.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Hughes",
+     "role": "Author"
+    },
+    {
+     "name": "Reyna",
+     "role": "Panel"
+    },
+    {
+     "name": "Wallach",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10774330/rn-nehushtan-trust-ltd-v-apple-inc/",
@@ -21511,7 +21806,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10774334/duvuvuei-v-mspb/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-2263.OPINION.1-14-2026_2632751.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Dyk",
+     "role": "Panel"
+    },
+    {
+     "name": "Stoll",
+     "role": "Panel"
+    },
+    {
+     "name": "Cunningham",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10774334/duvuvuei-v-mspb/",
@@ -21571,7 +21879,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10773637/apple-inc-v-smart-mobile-technologies-llc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1419.OPINION.1-13-2026_2631842.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Stoll",
+     "role": "Author"
+    },
+    {
+     "name": "Dyk",
+     "role": "Panel"
+    },
+    {
+     "name": "Chen",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10773637/apple-inc-v-smart-mobile-technologies-llc/",
@@ -21593,7 +21914,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10773631/young-v-collins/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1833.OPINION.1-13-2026_2631803.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Taranto",
+     "role": "Author"
+    },
+    {
+     "name": "Bryson",
+     "role": "Panel"
+    },
+    {
+     "name": "Cunningham",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10773631/young-v-collins/",
@@ -21615,7 +21949,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10773633/palmeri-v-mspb/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1918.OPINION.1-13-2026_2631884.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Dyk",
+     "role": "Author"
+    },
+    {
+     "name": "Reyna",
+     "role": "Panel"
+    },
+    {
+     "name": "Chen",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10773633/palmeri-v-mspb/",
@@ -21659,7 +22006,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10773635/johnson-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1552.OPINION.1-13-2026_2631815.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Reyna",
+     "role": "Panel"
+    },
+    {
+     "name": "Chen",
+     "role": "Panel"
+    },
+    {
+     "name": "Freeman",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10773635/johnson-v-united-states/",
@@ -21681,7 +22041,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10773632/ray-v-united-states-mint-denver-colorado/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1631.OPINION.1-13-2026_2631825.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Lourie",
+     "role": "Panel"
+    },
+    {
+     "name": "Bryson",
+     "role": "Panel"
+    },
+    {
+     "name": "Reyna",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10773632/ray-v-united-states-mint-denver-colorado/",
@@ -21725,7 +22098,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10773636/in-re-laurel-designs-llc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1203.OPINION.1-13-2026_2631856.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Bumb",
+     "role": "Author"
+    },
+    {
+     "name": "Moore",
+     "role": "Panel"
+    },
+    {
+     "name": "Stoll",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [
     "Other / Procedural"
    ],
@@ -21847,7 +22233,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10773198/resumadero-v-opm/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1361.OPINION.1-12-2026_2630912.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Prost",
+     "role": "Panel"
+    },
+    {
+     "name": "Chen",
+     "role": "Panel"
+    },
+    {
+     "name": "Stark",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10773198/resumadero-v-opm/",
@@ -21869,7 +22268,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10773201/centripetal-networks-llc-v-keysight-technologies-inc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1930.RULE_36_JUDGMENT.1-12-2026_2630941.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Reyna",
+     "role": "Panel"
+    },
+    {
+     "name": "Chen",
+     "role": "Panel"
+    },
+    {
+     "name": "Freeman",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10773201/centripetal-networks-llc-v-keysight-technologies-inc/",
@@ -21935,7 +22347,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10773199/madigan-v-navy/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1815.OPINION.1-12-2026_2630898.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Prost",
+     "role": "Panel"
+    },
+    {
+     "name": "Wallach",
+     "role": "Panel"
+    },
+    {
+     "name": "Stark",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10773199/madigan-v-navy/",
@@ -22083,7 +22508,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10772446/sandstrom-v-itc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1269.OPINION.1-9-2026_2630267.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Wallach",
+     "role": "Author"
+    },
+    {
+     "name": "Reyna",
+     "role": "Panel"
+    },
+    {
+     "name": "Hughes",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10772446/sandstrom-v-itc/",
@@ -22186,7 +22624,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10771002/crocs-inc-v-itc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1300.OPINION.1-8-2026_2629793.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Stoll",
+     "role": "Author"
+    },
+    {
+     "name": "Lourie",
+     "role": "Panel"
+    },
+    {
+     "name": "Chun",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10771002/crocs-inc-v-itc/",
@@ -22230,7 +22681,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10770967/chisena-v-major-league-baseball-players-association/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/23-2073.OPINION.1-8-2026_2629780.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Lourie",
+     "role": "Author"
+    },
+    {
+     "name": "Hughes",
+     "role": "Panel"
+    },
+    {
+     "name": "Freeman",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10770967/chisena-v-major-league-baseball-players-association/",
@@ -22296,7 +22760,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10770964/tindall-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1845.OPINION.1-8-2026_2629769.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Lourie",
+     "role": "Author"
+    },
+    {
+     "name": "Taranto",
+     "role": "Panel"
+    },
+    {
+     "name": "Chen",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10770964/tindall-v-united-states/",
@@ -22318,7 +22795,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10770966/midwest-cbk-llc-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1142.OPINION.1-8-2026_2629753.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Andrews",
+     "role": "Author"
+    },
+    {
+     "name": "Prost",
+     "role": "Panel"
+    },
+    {
+     "name": "Cunningham",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10770966/midwest-cbk-llc-v-united-states/",
@@ -22340,7 +22830,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10770342/haggart-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1256.OPINION.1-7-2026_2629221.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Prost",
+     "role": "Author"
+    },
+    {
+     "name": "Taranto",
+     "role": "Panel"
+    },
+    {
+     "name": "Hughes",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10770342/haggart-v-united-states/",
@@ -22384,7 +22887,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10770414/viasat-inc-v-western-digital-technologies-inc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1483.OPINION.1-7-2026_2629282.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Bryson",
+     "role": "Author"
+    },
+    {
+     "name": "Chen",
+     "role": "Panel"
+    },
+    {
+     "name": "Cunningham",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10770414/viasat-inc-v-western-digital-technologies-inc/",
@@ -22406,7 +22922,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10770416/joseph-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1647.OPINION.1-7-2026_2629265.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Dyk",
+     "role": "Panel"
+    },
+    {
+     "name": "Taranto",
+     "role": "Panel"
+    },
+    {
+     "name": "Cunningham",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10770416/joseph-v-united-states/",
@@ -22428,7 +22957,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10770417/indect-usa-corp-v-park-assist-llc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1023.OPINION.1-7-2026_2629243.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Stark",
+     "role": "Author"
+    },
+    {
+     "name": "Hughes",
+     "role": "Panel"
+    },
+    {
+     "name": "Wang",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10770417/indect-usa-corp-v-park-assist-llc/",
@@ -22450,7 +22992,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10770340/osc-solutions-inc-v-secretary-of-the-navy/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1195.OPINION.1-7-2026_2629233.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Taranto",
+     "role": "Author"
+    },
+    {
+     "name": "Dyk",
+     "role": "Panel"
+    },
+    {
+     "name": "Cunningham",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10770340/osc-solutions-inc-v-secretary-of-the-navy/",
@@ -22472,7 +23027,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10770415/nathan-v-mspb/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1260.OPINION.1-7-2026_2629295.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Dyk",
+     "role": "Panel"
+    },
+    {
+     "name": "Prost",
+     "role": "Panel"
+    },
+    {
+     "name": "Reyna",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10770415/nathan-v-mspb/",
@@ -22494,7 +23062,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10769605/castillejos-v-mspb/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1219.OPINION.1-6-2026_2628518.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Dyk",
+     "role": "Panel"
+    },
+    {
+     "name": "Prost",
+     "role": "Panel"
+    },
+    {
+     "name": "Reyna",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10769605/castillejos-v-mspb/",
@@ -22516,7 +23097,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10769604/irizarry-v-dhs/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1872.OPINION.1-6-2026_2628510.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Lourie",
+     "role": "Panel"
+    },
+    {
+     "name": "Taranto",
+     "role": "Panel"
+    },
+    {
+     "name": "Chen",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10769604/irizarry-v-dhs/",
@@ -22538,7 +23132,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10769603/technology-in-ariscale-llc-v-razer-usa-ltd/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1657.OPINION.1-6-2026_2628553.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Cunningham",
+     "role": "Author"
+    },
+    {
+     "name": "Prost",
+     "role": "Panel"
+    },
+    {
+     "name": "Reyna",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10769603/technology-in-ariscale-llc-v-razer-usa-ltd/",
@@ -22898,7 +23505,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10766496/yue-v-hanna/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1356.ORDER.12-30-2025_2625443.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Reyna",
+     "role": "Panel"
+    },
+    {
+     "name": "Bryson",
+     "role": "Panel"
+    },
+    {
+     "name": "Stark",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10766496/yue-v-hanna/",
@@ -22920,7 +23540,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10766548/thundathil-v-collins/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1396.OPINION.12-30-2025_2625475.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Moore",
+     "role": "Panel"
+    },
+    {
+     "name": "Taranto",
+     "role": "Panel"
+    },
+    {
+     "name": "Hughes",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10766548/thundathil-v-collins/",
@@ -22966,7 +23599,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10766547/zip-top-inc-v-sc-johnson-son-incorporated/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1661.OPINION.12-30-2025_2625505.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Chun",
+     "role": "Author"
+    },
+    {
+     "name": "Moore",
+     "role": "Panel"
+    },
+    {
+     "name": "Taranto",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10766547/zip-top-inc-v-sc-johnson-son-incorporated/",
@@ -23026,7 +23672,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10765954/fitzgerald-v-mspb/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1976.ORDER.12-29-2025_2624480.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Reyna",
+     "role": "Panel"
+    },
+    {
+     "name": "Bryson",
+     "role": "Panel"
+    },
+    {
+     "name": "Stark",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10765954/fitzgerald-v-mspb/",
@@ -23048,7 +23707,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10765973/united-states-v-dervishaj/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1018.ORDER.12-29-2025_2624568.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Bryson",
+     "role": "Author"
+    },
+    {
+     "name": "Reyna",
+     "role": "Panel"
+    },
+    {
+     "name": "Stark",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10765973/united-states-v-dervishaj/",
@@ -23070,7 +23742,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10765974/smith-v-collins/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-2055.ORDER.12-29-2025_2624525.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Reyna",
+     "role": "Panel"
+    },
+    {
+     "name": "Bryson",
+     "role": "Panel"
+    },
+    {
+     "name": "Stark",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10765974/smith-v-collins/",
@@ -23092,7 +23777,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10765975/parrott-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1172.ORDER.12-29-2025_2624606.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Reyna",
+     "role": "Panel"
+    },
+    {
+     "name": "Bryson",
+     "role": "Panel"
+    },
+    {
+     "name": "Stark",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10765975/parrott-v-united-states/",
@@ -23114,7 +23812,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10765953/jac-v-hhs/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1751.OPINION.12-29-2025_2624481.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Reyna",
+     "role": "Author"
+    },
+    {
+     "name": "Lourie",
+     "role": "Panel"
+    },
+    {
+     "name": "Cunningham",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10765953/jac-v-hhs/",
@@ -23136,9 +23847,22 @@
     "url_cl": "https://www.courtlistener.com/opinion/10763817/in-re-estech-systems-ip-llc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1935.OPINION.12-23-2025_2623368.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Dyk",
+     "role": "Author"
+    },
+    {
+     "name": "Prost",
+     "role": "Panel"
+    },
+    {
+     "name": "Reyna",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [
-    "Other / Procedural"
+    "\u00a7\u00a7 102/103 Prior Art"
    ],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10763817/in-re-estech-systems-ip-llc/",
@@ -23182,7 +23906,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10763818/ethanol-boosting-systems-llc-v-ford-motor-company/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1381.OPINION.12-23-2025_2623346.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Chen",
+     "role": "Author"
+    },
+    {
+     "name": "Clevenger",
+     "role": "Panel"
+    },
+    {
+     "name": "Hughes",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10763818/ethanol-boosting-systems-llc-v-ford-motor-company/",
@@ -23204,7 +23941,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10763816/osburn-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-2025.OPINION.12-23-2025_2623388.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Dyk",
+     "role": "Author"
+    },
+    {
+     "name": "Prost",
+     "role": "Panel"
+    },
+    {
+     "name": "Reyna",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10763816/osburn-v-united-states/",
@@ -23226,7 +23976,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10762971/white-v-hhs/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1372.OPINION.12-22-2025_2622454.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Lourie",
+     "role": "Author"
+    },
+    {
+     "name": "Reyna",
+     "role": "Panel"
+    },
+    {
+     "name": "Stark",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10762971/white-v-hhs/",
@@ -23270,7 +24033,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10762972/ablan-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/23-1363.OPINION.12-22-2025_2622469.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Cunningham",
+     "role": "Author"
+    },
+    {
+     "name": "Reyna",
+     "role": "Panel"
+    },
+    {
+     "name": "Taranto",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10762972/ablan-v-united-states/",
@@ -23308,7 +24084,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10761592/apple-inc-v-smart-mobile-technologies-llc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1624.OPINION.12-19-2025_2621810.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Chen",
+     "role": "Author"
+    },
+    {
+     "name": "Dyk",
+     "role": "Panel"
+    },
+    {
+     "name": "Stoll",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10761592/apple-inc-v-smart-mobile-technologies-llc/",
@@ -23330,7 +24119,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10761696/kioxia-corporation-v-viasat-inc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1384.OPINION.12-19-2025_2621821.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Chen",
+     "role": "Author"
+    },
+    {
+     "name": "Bryson",
+     "role": "Panel"
+    },
+    {
+     "name": "Cunningham",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10761696/kioxia-corporation-v-viasat-inc/",
@@ -23352,7 +24154,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10761695/memoryweb-llc-v-samsung-electronics-co-ltd/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1322.OPINION.12-19-2025_2621829.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Schall",
+     "role": "Author"
+    },
+    {
+     "name": "Taranto",
+     "role": "Panel"
+    },
+    {
+     "name": "Stark",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10761695/memoryweb-llc-v-samsung-electronics-co-ltd/",
@@ -23374,7 +24189,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10760762/micron-technology-inc-v-longhorn-ip-llc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/23-2007.OPINION.12-18-2025_2621143.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Lourie",
+     "role": "Author"
+    },
+    {
+     "name": "Schall",
+     "role": "Panel"
+    },
+    {
+     "name": "Stoll",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10760762/micron-technology-inc-v-longhorn-ip-llc/",
@@ -23396,7 +24224,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10760761/mutakaber-v-secretary-of-state/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1644.OPINION.12-18-2025_2621183.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Stark",
+     "role": "Author"
+    },
+    {
+     "name": "Cunningham",
+     "role": "Panel"
+    },
+    {
+     "name": "Linn",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10760761/mutakaber-v-secretary-of-state/",
@@ -23506,7 +24347,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10759849/entropic-communications-llc-v-charter-communications-inc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1896.OPINION.12-17-2025_2620384.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Bryson",
+     "role": "Author"
+    },
+    {
+     "name": "Lourie",
+     "role": "Panel"
+    },
+    {
+     "name": "Chen",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10759849/entropic-communications-llc-v-charter-communications-inc/",
@@ -23528,7 +24382,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10759846/ortiz-associates-consulting-llc-v-vizio-inc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1783.OPINION.12-17-2025_2620392.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Bryson",
+     "role": "Author"
+    },
+    {
+     "name": "Taranto",
+     "role": "Panel"
+    },
+    {
+     "name": "Cunningham",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10759846/ortiz-associates-consulting-llc-v-vizio-inc/",
@@ -23550,7 +24417,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10759850/brimer-v-navy/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1388.OPINION.12-17-2025_2620424.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Stoll",
+     "role": "Author"
+    },
+    {
+     "name": "Taranto",
+     "role": "Panel"
+    },
+    {
+     "name": "Cunningham",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10759850/brimer-v-navy/",
@@ -23594,7 +24474,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10759844/wonderland-switzerland-ag-v-evenflo-company-inc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/23-2043.OPINION.12-17-2025_2620462.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Moore",
+     "role": "Author"
+    },
+    {
+     "name": "Reyna",
+     "role": "Concurrence/Dissent in part"
+    },
+    {
+     "name": "Prost",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10759844/wonderland-switzerland-ag-v-evenflo-company-inc/",
@@ -23616,7 +24509,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10759847/laird-v-collins/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1263.OPINION.12-17-2025_2620438.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Stoll",
+     "role": "Author"
+    },
+    {
+     "name": "Lourie",
+     "role": "Panel"
+    },
+    {
+     "name": "Schall",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10759847/laird-v-collins/",
@@ -23638,7 +24544,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10759848/flatland-realty-llc-v-secretary-of-the-army/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1531.OPINION.12-17-2025_2620405.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Schall",
+     "role": "Author"
+    },
+    {
+     "name": "Lourie",
+     "role": "Panel"
+    },
+    {
+     "name": "Stoll",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10759848/flatland-realty-llc-v-secretary-of-the-army/",
@@ -23660,9 +24579,22 @@
     "url_cl": "https://www.courtlistener.com/opinion/10759845/rfcyber-corp-v-squires/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1614.OPINION.12-17-2025_2620416.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Stoll",
+     "role": "Author"
+    },
+    {
+     "name": "Lourie",
+     "role": "Panel"
+    },
+    {
+     "name": "Chun",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [
-    "Other / Procedural"
+    "\u00a7\u00a7 102/103 Prior Art"
    ],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10759845/rfcyber-corp-v-squires/",
@@ -23764,7 +24696,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10759048/cooperative-entertainment-inc-v-kollective-technology-inc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1550.OPINION.12-16-2025_2619889.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Oetken",
+     "role": "Author"
+    },
+    {
+     "name": "Stark",
+     "role": "Author"
+    },
+    {
+     "name": "Moore",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10759048/cooperative-entertainment-inc-v-kollective-technology-inc/",
@@ -23874,7 +24819,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10758270/kulkarni-v-mspb/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1597.OPINION.12-15-2025_2619258.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Dyk",
+     "role": "Panel"
+    },
+    {
+     "name": "Chen",
+     "role": "Panel"
+    },
+    {
+     "name": "Stoll",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10758270/kulkarni-v-mspb/",
@@ -23896,7 +24854,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10758307/carley-v-saalwaechter-inc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1001.ORDER.12-15-2025_2619350.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Reyna",
+     "role": "Panel"
+    },
+    {
+     "name": "Bryson",
+     "role": "Panel"
+    },
+    {
+     "name": "Stark",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10758307/carley-v-saalwaechter-inc/",
@@ -23942,7 +24913,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10758306/in-re-amoss/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1617.OPINION.12-15-2025_2619327.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Lourie",
+     "role": "Author"
+    },
+    {
+     "name": "Stoll",
+     "role": "Panel"
+    },
+    {
+     "name": "Oetken",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [
     "Other / Procedural"
    ],
@@ -23988,7 +24972,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10758271/in-re-deflanders/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-108.ORDER.12-15-2025_2619248.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Reyna",
+     "role": "Panel"
+    },
+    {
+     "name": "Bryson",
+     "role": "Panel"
+    },
+    {
+     "name": "Stark",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [
     "Other / Procedural"
    ],
@@ -24012,7 +25009,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10758274/asg-solutions-corp-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1755.OPINION.12-15-2025_2619225.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Chen",
+     "role": "Panel"
+    },
+    {
+     "name": "Bryson",
+     "role": "Panel"
+    },
+    {
+     "name": "Cunningham",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10758274/asg-solutions-corp-v-united-states/",
@@ -24034,7 +25044,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10758273/cr-bard-inc-v-angiodynamics-inc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/23-2056.OPINION.12-15-2025_2619233.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Lourie",
+     "role": "Panel"
+    },
+    {
+     "name": "Reyna",
+     "role": "Panel"
+    },
+    {
+     "name": "Chen",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10758273/cr-bard-inc-v-angiodynamics-inc/",
@@ -24088,7 +25111,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10754495/johnson-v-collins/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/23-2087.OPINION.12-12-2025_2618607.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Dyk",
+     "role": "Panel"
+    },
+    {
+     "name": "Chen",
+     "role": "Panel"
+    },
+    {
+     "name": "Stoll",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10754495/johnson-v-collins/",
@@ -24110,7 +25146,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10754494/lone-star-scm-systems-ltd-v-zebra-technologies-corporation/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1731.OPINION.12-12-2025_2618612.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Prost",
+     "role": "Author"
+    },
+    {
+     "name": "Taranto",
+     "role": "Panel"
+    },
+    {
+     "name": "Hughes",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10754494/lone-star-scm-systems-ltd-v-zebra-technologies-corporation/",
@@ -24132,7 +25181,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10754497/golden-v-collins/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/23-2070.OPINION.12-12-2025_2618593.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Cunningham",
+     "role": "Author"
+    },
+    {
+     "name": "Lourie",
+     "role": "Panel"
+    },
+    {
+     "name": "Dyk",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10754497/golden-v-collins/",
@@ -24154,7 +25216,16 @@
     "url_cl": "https://www.courtlistener.com/opinion/10754707/lesko-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/23-1823.OPINION.12-12-2025_2618923.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Moore",
+     "role": "Author"
+    },
+    {
+     "name": "Stoll",
+     "role": "Dissent"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10754707/lesko-v-united-states/",
@@ -24176,7 +25247,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10754496/in-re-carter/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-110.ORDER.12-12-2025_2618590.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Reyna",
+     "role": "Panel"
+    },
+    {
+     "name": "Bryson",
+     "role": "Panel"
+    },
+    {
+     "name": "Stark",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [
     "Other / Procedural"
    ],
@@ -24246,7 +25330,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10752979/montano-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1973.ORDER.12-11-2025_2618033.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Prost",
+     "role": "Panel"
+    },
+    {
+     "name": "Chen",
+     "role": "Panel"
+    },
+    {
+     "name": "Hughes",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10752979/montano-v-united-states/",
@@ -24290,7 +25387,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10752632/cruz-v-dhs/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1820.OPINION.12-11-2025_2617926.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Prost",
+     "role": "Panel"
+    },
+    {
+     "name": "Taranto",
+     "role": "Panel"
+    },
+    {
+     "name": "Hughes",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10752632/cruz-v-dhs/",
@@ -24350,7 +25460,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10750591/darelius-v-opm/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1782.OPINION.12-10-2025_2617324.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Moore",
+     "role": "Panel"
+    },
+    {
+     "name": "Chen",
+     "role": "Panel"
+    },
+    {
+     "name": "Stark",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10750591/darelius-v-opm/",
@@ -24431,7 +25554,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10750592/crenshaw-v-opm/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1934.OPINION.12-10-2025_2617247.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Prost",
+     "role": "Author"
+    },
+    {
+     "name": "Dyk",
+     "role": "Panel"
+    },
+    {
+     "name": "Reyna",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10750592/crenshaw-v-opm/",
@@ -24475,7 +25611,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10750521/grasshopper-gardens-inc-v-pma-mechanical-llc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1097.ORDER.12-10-2025_2617121.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Prost",
+     "role": "Panel"
+    },
+    {
+     "name": "Chen",
+     "role": "Panel"
+    },
+    {
+     "name": "Hughes",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10750521/grasshopper-gardens-inc-v-pma-mechanical-llc/",
@@ -24497,7 +25646,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10750590/game-plan-inc-v-uninterrupted-ip-llc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1407.OPINION.12-10-2025_2617313.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Reyna",
+     "role": "Author"
+    },
+    {
+     "name": "Prost",
+     "role": "Panel"
+    },
+    {
+     "name": "Cunningham",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10750590/game-plan-inc-v-uninterrupted-ip-llc/",
@@ -24541,7 +25703,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10750589/kanam-v-burgum/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1010.ORDER.12-10-2025_2617289.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Prost",
+     "role": "Panel"
+    },
+    {
+     "name": "Chen",
+     "role": "Panel"
+    },
+    {
+     "name": "Hughes",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10750589/kanam-v-burgum/",
@@ -24563,7 +25738,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10750532/goode-v-frtib/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-2135.ORDER.12-10-2025_2617144.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Prost",
+     "role": "Panel"
+    },
+    {
+     "name": "Chen",
+     "role": "Panel"
+    },
+    {
+     "name": "Hughes",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10750532/goode-v-frtib/",
@@ -25558,7 +26746,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10746557/clegg-v-collins/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1220.OPINION.12-3-2025_2613163.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Prost",
+     "role": "Panel"
+    },
+    {
+     "name": "Taranto",
+     "role": "Panel"
+    },
+    {
+     "name": "Hughes",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10746557/clegg-v-collins/",
@@ -25751,7 +26952,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10745868/robinson-v-collins/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1721.OPINION.12-2-2025_2612163.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Dyk",
+     "role": "Panel"
+    },
+    {
+     "name": "Prost",
+     "role": "Panel"
+    },
+    {
+     "name": "Reyna",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10745868/robinson-v-collins/",
@@ -25795,7 +27009,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10745906/williams-v-collins/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1914.OPINION.12-2-2025_2612195.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Taranto",
+     "role": "Panel"
+    },
+    {
+     "name": "Bryson",
+     "role": "Panel"
+    },
+    {
+     "name": "Cunningham",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10745906/williams-v-collins/",
@@ -25817,7 +27044,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10745869/hornberger-v-mspb/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1156.OPINION.12-2-2025_2612135.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Dyk",
+     "role": "Panel"
+    },
+    {
+     "name": "Prost",
+     "role": "Panel"
+    },
+    {
+     "name": "Reyna",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10745869/hornberger-v-mspb/",
@@ -25839,7 +27079,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10745867/seagen-inc-v-daiichi-sankyo-company-ltd/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/23-2424.OPINION.12-2-2025_2612088.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Lourie",
+     "role": "Author"
+    },
+    {
+     "name": "Reyna",
+     "role": "Panel"
+    },
+    {
+     "name": "Chen",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10745867/seagen-inc-v-daiichi-sankyo-company-ltd/",
@@ -25861,7 +27114,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10745866/seagen-inc-v-daiichi-sankyo-inc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1878.OPINION.12-2-2025_2612119.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Lourie",
+     "role": "Author"
+    },
+    {
+     "name": "Reyna",
+     "role": "Panel"
+    },
+    {
+     "name": "Chen",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10745866/seagen-inc-v-daiichi-sankyo-inc/",
@@ -25883,7 +27149,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10745907/soto-v-usps/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1275.OPINION.12-2-2025_2612184.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Taranto",
+     "role": "Panel"
+    },
+    {
+     "name": "Bryson",
+     "role": "Panel"
+    },
+    {
+     "name": "Cunningham",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10745907/soto-v-usps/",
@@ -25921,9 +27200,23 @@
     "url_cl": "https://www.courtlistener.com/opinion/10745188/in-re-gesture-technology-partners-llc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1075.OPINION.12-1-2025_2611111.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Lourie",
+     "role": "Author"
+    },
+    {
+     "name": "Bryson",
+     "role": "Panel"
+    },
+    {
+     "name": "Chen",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [
-    "Other / Procedural"
+    "PTAB Procedure & Standing",
+    "\u00a7\u00a7 102/103 Prior Art"
    ],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10745188/in-re-gesture-technology-partners-llc/",
@@ -25945,7 +27238,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10745189/ferrell-v-interior/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1533.OPINION.12-1-2025_2611095.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Chen",
+     "role": "Panel"
+    },
+    {
+     "name": "Bryson",
+     "role": "Panel"
+    },
+    {
+     "name": "Cunningham",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10745189/ferrell-v-interior/",
@@ -26013,7 +27319,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10742749/bryant-v-mspb/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-2310.OPINION.11-26-2025_2610299.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Hughes",
+     "role": "Panel"
+    },
+    {
+     "name": "Cunningham",
+     "role": "Panel"
+    },
+    {
+     "name": "Stark",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10742749/bryant-v-mspb/",
@@ -26075,7 +27394,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10741970/akamai-technologies-inc-v-mediapointe-inc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1571.OPINION.11-25-2025_2609454.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Taranto",
+     "role": "Author"
+    },
+    {
+     "name": "Stoll",
+     "role": "Panel"
+    },
+    {
+     "name": "Cunningham",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10741970/akamai-technologies-inc-v-mediapointe-inc/",
@@ -26097,7 +27429,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10741967/wolf-creek-railroad-llc-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1873.OPINION.11-25-2025_2609418.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Taranto",
+     "role": "Author"
+    },
+    {
+     "name": "Dyk",
+     "role": "Panel"
+    },
+    {
+     "name": "Chen",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10741967/wolf-creek-railroad-llc-v-united-states/",
@@ -26119,7 +27464,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10741969/escapex-ip-llc-v-google-llc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1201.OPINION.11-25-2025_2609432.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Stark",
+     "role": "Author"
+    },
+    {
+     "name": "Taranto",
+     "role": "Panel"
+    },
+    {
+     "name": "Stoll",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10741969/escapex-ip-llc-v-google-llc/",
@@ -26163,7 +27521,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10741946/crowley-government-services-inc-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-2121.ORDER.11-25-2025_2609360.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Prost",
+     "role": "Panel"
+    },
+    {
+     "name": "Chen",
+     "role": "Panel"
+    },
+    {
+     "name": "Hughes",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10741946/crowley-government-services-inc-v-united-states/",
@@ -26222,7 +27593,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10741380/olley-v-turner/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-2144.ORDER.11-24-2025_2608613.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Prost",
+     "role": "Panel"
+    },
+    {
+     "name": "Chen",
+     "role": "Panel"
+    },
+    {
+     "name": "Hughes",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10741380/olley-v-turner/",
@@ -26244,7 +27628,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10741378/pleasant-v-mspb/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-2048.ORDER.11-24-2025_2608588.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Prost",
+     "role": "Panel"
+    },
+    {
+     "name": "Chen",
+     "role": "Panel"
+    },
+    {
+     "name": "Hughes",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10741378/pleasant-v-mspb/",
@@ -26332,7 +27729,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10740218/prewitt-v-collins/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1523.OPINION.11-21-2025_2607592.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Lourie",
+     "role": "Panel"
+    },
+    {
+     "name": "Schall",
+     "role": "Panel"
+    },
+    {
+     "name": "Stoll",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10740218/prewitt-v-collins/",
@@ -26354,7 +27764,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10740228/senter-v-energy/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1304.OPINION.11-21-2025_2607614.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Taranto",
+     "role": "Panel"
+    },
+    {
+     "name": "Schall",
+     "role": "Panel"
+    },
+    {
+     "name": "Stark",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10740228/senter-v-energy/",
@@ -26376,7 +27799,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10740229/reyes-v-mspb/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1717.OPINION.11-21-2025_2607600.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Prost",
+     "role": "Author"
+    },
+    {
+     "name": "Moore",
+     "role": "Panel"
+    },
+    {
+     "name": "Taranto",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10740229/reyes-v-mspb/",
@@ -26430,7 +27866,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10739338/google-llc-v-nobots-llc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1432.OPINION.11-20-2025_2606713.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Chun",
+     "role": "Author"
+    },
+    {
+     "name": "Taranto",
+     "role": "Author"
+    },
+    {
+     "name": "Moore",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10739338/google-llc-v-nobots-llc/",
@@ -26518,7 +27967,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10738694/chae-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1379.OPINION.11-19-2025_2606052.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Dyk",
+     "role": "Panel"
+    },
+    {
+     "name": "Reyna",
+     "role": "Panel"
+    },
+    {
+     "name": "Stoll",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10738694/chae-v-united-states/",
@@ -26562,7 +28024,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10738693/national-steel-car-ltd-v-greenbrier-concarril-llc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1453.OPINION.11-19-2025_2606033.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Andrews",
+     "role": "Author"
+    },
+    {
+     "name": "Moore",
+     "role": "Panel"
+    },
+    {
+     "name": "Chen",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10738693/national-steel-car-ltd-v-greenbrier-concarril-llc/",
@@ -26584,7 +28059,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10737955/duke-university-v-sandoz-inc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1078.OPINION.11-18-2025_2605503.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Stark",
+     "role": "Author"
+    },
+    {
+     "name": "Dyk",
+     "role": "Panel"
+    },
+    {
+     "name": "Stoll",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10737955/duke-university-v-sandoz-inc/",
@@ -26628,7 +28116,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10737999/young-v-collins/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1386.OPINION.11-18-2025_2605546.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Hughes",
+     "role": "Author"
+    },
+    {
+     "name": "Chen",
+     "role": "Panel"
+    },
+    {
+     "name": "Clevenger",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10737999/young-v-collins/",
@@ -26650,7 +28151,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10738000/lock-v-collins/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-2142.OPINION.11-18-2025_2605523.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Dyk",
+     "role": "Panel"
+    },
+    {
+     "name": "Linn",
+     "role": "Panel"
+    },
+    {
+     "name": "Hughes",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10738000/lock-v-collins/",
@@ -26694,7 +28208,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10737466/nutricia-north-america-inc-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1436.OPINION.11-17-2025_2604754.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Taranto",
+     "role": "Author"
+    },
+    {
+     "name": "Prost",
+     "role": "Panel"
+    },
+    {
+     "name": "Stark",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10737466/nutricia-north-america-inc-v-united-states/",
@@ -26716,7 +28243,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10737467/kaptan-demir-celik-endustrisi-ve-ticaret-as-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1431.OPINION.11-17-2025_2604727.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Linn",
+     "role": "Author"
+    },
+    {
+     "name": "Chen",
+     "role": "Panel"
+    },
+    {
+     "name": "Hughes",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10737467/kaptan-demir-celik-endustrisi-ve-ticaret-as-v-united-states/",
@@ -26738,7 +28278,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10736434/chisum-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1548.OPINION.11-14-2025_2604013.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Chen",
+     "role": "Panel"
+    },
+    {
+     "name": "Bryson",
+     "role": "Panel"
+    },
+    {
+     "name": "Cunningham",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10736434/chisum-v-united-states/",
@@ -26782,7 +28335,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10736350/akerman-v-mspb/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1314.OPINION.11-14-2025_2603989.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Chen",
+     "role": "Panel"
+    },
+    {
+     "name": "Clevenger",
+     "role": "Panel"
+    },
+    {
+     "name": "Hughes",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10736350/akerman-v-mspb/",
@@ -26804,7 +28370,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10736430/samsung-electronics-co-ltd-v-power2b-inc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/23-2121.OPINION.11-14-2025_2604066.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Stoll",
+     "role": "Author"
+    },
+    {
+     "name": "Dyk",
+     "role": "Dissent"
+    },
+    {
+     "name": "Stark",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10736430/samsung-electronics-co-ltd-v-power2b-inc/",
@@ -26850,7 +28429,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10736431/inventist-inc-v-ninebot-inc-usa/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1010.OPINION.11-14-2025_2604045.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Dyk",
+     "role": "Author"
+    },
+    {
+     "name": "Hughes",
+     "role": "Panel"
+    },
+    {
+     "name": "Stark",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10736431/inventist-inc-v-ninebot-inc-usa/",
@@ -26872,7 +28464,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10736433/hawk-technology-systems-llc-v-castle-retail-llc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1116.OPINION.11-14-2025_2604032.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Reyna",
+     "role": "Author"
+    },
+    {
+     "name": "Stoll",
+     "role": "Panel"
+    },
+    {
+     "name": "Cunningham",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10736433/hawk-technology-systems-llc-v-castle-retail-llc/",
@@ -26932,7 +28537,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10735714/smartrend-manufacturing-group-smg-inc-v-opti-luxx-inc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1616.OPINION.11-13-2025_2603126.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Dyk",
+     "role": "Author"
+    },
+    {
+     "name": "Linn",
+     "role": "Panel"
+    },
+    {
+     "name": "Stark",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10735714/smartrend-manufacturing-group-smg-inc-v-opti-luxx-inc/",
@@ -26998,7 +28616,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10735753/jackson-v-dhs/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1614.OPINION.11-13-2025_2603138.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Chun",
+     "role": "Author"
+    },
+    {
+     "name": "Moore",
+     "role": "Panel"
+    },
+    {
+     "name": "Taranto",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10735753/jackson-v-dhs/",
@@ -27042,7 +28673,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10734915/rough-v-dva/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1479.OPINION.11-12-2025_2602124.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Dyk",
+     "role": "Panel"
+    },
+    {
+     "name": "Reyna",
+     "role": "Panel"
+    },
+    {
+     "name": "Stoll",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10734915/rough-v-dva/",
@@ -27108,7 +28752,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10734917/canatex-completion-solutions-inc-v-wellmatics-llc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1466.OPINION.11-12-2025_2602112.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Taranto",
+     "role": "Author"
+    },
+    {
+     "name": "Moore",
+     "role": "Panel"
+    },
+    {
+     "name": "Prost",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10734917/canatex-completion-solutions-inc-v-wellmatics-llc/",
@@ -27130,7 +28787,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10735204/arendi-sarl-v-google-llc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/23-2029.ORDER.11-12-2025_2602573.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Dyk",
+     "role": "Panel"
+    },
+    {
+     "name": "Linn",
+     "role": "Panel"
+    },
+    {
+     "name": "Hughes",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10735204/arendi-sarl-v-google-llc/",
@@ -27152,7 +28822,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10734119/warne-v-mspb/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1258.OPINION.11-10-2025_2601119.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Cunningham",
+     "role": "Panel"
+    },
+    {
+     "name": "Linn",
+     "role": "Panel"
+    },
+    {
+     "name": "Stark",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10734119/warne-v-mspb/",
@@ -27174,7 +28857,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10734120/cpc-patent-technologies-pty-ltd-v-assa-abloy-ab/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1492.OPINION.11-10-2025_2601155.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Chen",
+     "role": "Author"
+    },
+    {
+     "name": "Wallach",
+     "role": "Dissent"
+    },
+    {
+     "name": "Prost",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10734120/cpc-patent-technologies-pty-ltd-v-assa-abloy-ab/",
@@ -27240,7 +28936,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10732641/rivers-v-mspb/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1573.OPINION.11-7-2025_2600430.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Dyk",
+     "role": "Panel"
+    },
+    {
+     "name": "Linn",
+     "role": "Panel"
+    },
+    {
+     "name": "Hughes",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10732641/rivers-v-mspb/",
@@ -27262,7 +28971,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10732642/richardson-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1553.OPINION.11-7-2025_2600411.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Hughes",
+     "role": "Panel"
+    },
+    {
+     "name": "Cunningham",
+     "role": "Panel"
+    },
+    {
+     "name": "Stark",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10732642/richardson-v-united-states/",
@@ -27284,7 +29006,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10732643/raiszadeh-v-dhs/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/23-2409.OPINION.11-7-2025_2600442.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Lourie",
+     "role": "Panel"
+    },
+    {
+     "name": "Stoll",
+     "role": "Panel"
+    },
+    {
+     "name": "Chun",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10732643/raiszadeh-v-dhs/",
@@ -27366,7 +29101,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10731792/miles-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1622.OPINION.11-6-2025_2599445.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Lourie",
+     "role": "Panel"
+    },
+    {
+     "name": "Stoll",
+     "role": "Panel"
+    },
+    {
+     "name": "Stark",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10731792/miles-v-united-states/",
@@ -27410,7 +29158,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10731778/woodroof-v-commerce/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-2139.OPINION.11-6-2025_2599431.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Chun",
+     "role": "Author"
+    },
+    {
+     "name": "Moore",
+     "role": "Panel"
+    },
+    {
+     "name": "Taranto",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10731778/woodroof-v-commerce/",
@@ -27478,7 +29239,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10731795/boyd-v-treasury/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1128.OPINION.11-6-2025_2599469.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Lourie",
+     "role": "Panel"
+    },
+    {
+     "name": "Stoll",
+     "role": "Panel"
+    },
+    {
+     "name": "Stark",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10731795/boyd-v-treasury/",
@@ -27612,7 +29386,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10731035/rodriguez-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1750.OPINION.11-5-2025_2598828.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Dyk",
+     "role": "Panel"
+    },
+    {
+     "name": "Taranto",
+     "role": "Panel"
+    },
+    {
+     "name": "Chen",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10731035/rodriguez-v-united-states/",
@@ -27634,7 +29421,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10731036/howard-v-defense/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1506.OPINION.11-5-2025_2598820.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Dyk",
+     "role": "Panel"
+    },
+    {
+     "name": "Taranto",
+     "role": "Panel"
+    },
+    {
+     "name": "Chen",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10731036/howard-v-defense/",
@@ -27680,7 +29480,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10730336/demery-v-mspb/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1157.OPINION.11-4-2025_2597959.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Moore",
+     "role": "Panel"
+    },
+    {
+     "name": "Hughes",
+     "role": "Panel"
+    },
+    {
+     "name": "Stoll",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10730336/demery-v-mspb/",
@@ -27724,9 +29537,24 @@
     "url_cl": "https://www.courtlistener.com/opinion/10730292/cases2tech-llc-v-squires/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/23-2290.OPINION.11-4-2025_2597882.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Taranto",
+     "role": "Author"
+    },
+    {
+     "name": "Schall",
+     "role": "Panel"
+    },
+    {
+     "name": "Stark",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [
-    "Other / Procedural"
+    "\u00a7\u00a7 102/103 Prior Art",
+    "\u00a7 112 / Claim Construction",
+    "PTAB Procedure & Standing"
    ],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10730292/cases2tech-llc-v-squires/",
@@ -27748,7 +29576,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10730293/barrette-v-dva/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1708.OPINION.11-4-2025_2597866.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Chen",
+     "role": "Panel"
+    },
+    {
+     "name": "Clevenger",
+     "role": "Panel"
+    },
+    {
+     "name": "Hughes",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10730293/barrette-v-dva/",
@@ -27891,7 +29732,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10715462/courtney-v-mspb/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1348.OPINION.10-31-2025_2596833.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Taranto",
+     "role": "Panel"
+    },
+    {
+     "name": "Stoll",
+     "role": "Panel"
+    },
+    {
+     "name": "Cunningham",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10715462/courtney-v-mspb/",
@@ -27913,7 +29767,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10714800/merck-serono-sa-v-twi-pharmaceuticals-inc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1463.OPINION.10-30-2025_2596136.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Linn",
+     "role": "Author"
+    },
+    {
+     "name": "Hughes",
+     "role": "Panel"
+    },
+    {
+     "name": "Cunningham",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10714800/merck-serono-sa-v-twi-pharmaceuticals-inc/",
@@ -27935,7 +29802,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10714801/merck-serono-sa-v-hopewell-pharma-ventures-inc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1210.OPINION.10-30-2025_2596117.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Linn",
+     "role": "Author"
+    },
+    {
+     "name": "Hughes",
+     "role": "Panel"
+    },
+    {
+     "name": "Cunningham",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10714801/merck-serono-sa-v-hopewell-pharma-ventures-inc/",
@@ -28167,7 +30047,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10711554/peter-j-polinski-trust-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-2002.ORDER.10-27-2025_2593810.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Dyk",
+     "role": "Panel"
+    },
+    {
+     "name": "Linn",
+     "role": "Panel"
+    },
+    {
+     "name": "Cunningham",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10711554/peter-j-polinski-trust-v-united-states/",
@@ -28189,7 +30082,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10711516/aortic-innovations-llc-v-edwards-lifesciences-corporation/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1145.OPINION.10-27-2025_2593688.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Reyna",
+     "role": "Author"
+    },
+    {
+     "name": "Prost",
+     "role": "Panel"
+    },
+    {
+     "name": "Chen",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10711516/aortic-innovations-llc-v-edwards-lifesciences-corporation/",
@@ -28211,7 +30117,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10711515/pictometry-international-corporation-v-nearmap-us-inc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1290.OPINION.10-27-2025_2593674.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Prost",
+     "role": "Author"
+    },
+    {
+     "name": "Taranto",
+     "role": "Panel"
+    },
+    {
+     "name": "Stark",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10711515/pictometry-international-corporation-v-nearmap-us-inc/",
@@ -28233,7 +30152,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10710414/bryan-v-collins/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1861.OPINION.10-24-2025_2593043.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Prost",
+     "role": "Author"
+    },
+    {
+     "name": "Moore",
+     "role": "Panel"
+    },
+    {
+     "name": "Taranto",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10710414/bryan-v-collins/",
@@ -28255,9 +30187,22 @@
     "url_cl": "https://www.courtlistener.com/opinion/10710413/nera-innovations-limited-v-squires/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1079.OPINION.10-24-2025_2593076.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Prost",
+     "role": "Author"
+    },
+    {
+     "name": "Cunningham",
+     "role": "Panel"
+    },
+    {
+     "name": "Stark",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [
-    "Other / Procedural"
+    "\u00a7\u00a7 102/103 Prior Art"
    ],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10710413/nera-innovations-limited-v-squires/",
@@ -28341,7 +30286,12 @@
     "url_cl": "https://www.courtlistener.com/opinion/10709544/biestek-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/23-1467.OPINION.10-23-2025_2592250.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Bryson",
+     "role": "Author"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10709544/biestek-v-united-states/",
@@ -28385,7 +30335,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10709545/beavis-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/23-2222.OPINION.10-23-2025_2592188.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Bryson",
+     "role": "Author"
+    },
+    {
+     "name": "Lourie",
+     "role": "Panel"
+    },
+    {
+     "name": "Chen",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10709545/beavis-v-united-states/",
@@ -28429,9 +30392,22 @@
     "url_cl": "https://www.courtlistener.com/opinion/10708779/in-re-x-fab-semiconductor-foundries-gmbh/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1337.OPINION.10-22-2025_2591402.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Moore",
+     "role": "Author"
+    },
+    {
+     "name": "Dyk",
+     "role": "Panel"
+    },
+    {
+     "name": "Cunningham",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [
-    "Other / Procedural"
+    "\u00a7\u00a7 102/103 Prior Art"
    ],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10708779/in-re-x-fab-semiconductor-foundries-gmbh/",
@@ -28453,7 +30429,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10708780/house-v-general-electric-company/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1294.OPINION.10-22-2025_2591363.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Dyk",
+     "role": "Panel"
+    },
+    {
+     "name": "Hughes",
+     "role": "Panel"
+    },
+    {
+     "name": "Stark",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10708780/house-v-general-electric-company/",
@@ -28475,7 +30464,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10708781/centripetal-networks-llc-v-palo-alto-networks-inc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/23-2027.OPINION.10-22-2025_2591433.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Cunningham",
+     "role": "Author"
+    },
+    {
+     "name": "Moore",
+     "role": "Panel"
+    },
+    {
+     "name": "Hughes",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10708781/centripetal-networks-llc-v-palo-alto-networks-inc/",
@@ -28535,7 +30537,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10708024/rothschild-connected-devices-innovations-llc-v-coca-cola-company/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1253.OPINION.10-21-2025_2590588.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Prost",
+     "role": "Author"
+    },
+    {
+     "name": "Lourie",
+     "role": "Panel"
+    },
+    {
+     "name": "Stoll",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10708024/rothschild-connected-devices-innovations-llc-v-coca-cola-company/",
@@ -28579,7 +30594,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10708025/evans-v-collins/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1200.OPINION.10-21-2025_2590557.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Taranto",
+     "role": "Panel"
+    },
+    {
+     "name": "Stoll",
+     "role": "Panel"
+    },
+    {
+     "name": "Cunningham",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10708025/evans-v-collins/",
@@ -28641,7 +30669,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10706809/startz-v-army/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1375.OPINION.10-20-2025_2589747.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Dyk",
+     "role": "Panel"
+    },
+    {
+     "name": "Hughes",
+     "role": "Panel"
+    },
+    {
+     "name": "Stoll",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10706809/startz-v-army/",
@@ -28663,7 +30704,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10706810/butler-v-mspb/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1204.OPINION.10-20-2025_2589737.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Moore",
+     "role": "Panel"
+    },
+    {
+     "name": "Dyk",
+     "role": "Panel"
+    },
+    {
+     "name": "Cunningham",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10706810/butler-v-mspb/",
@@ -28685,7 +30739,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10706842/steigert-v-mspb/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1906.ORDER.10-20-2025_2589863.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Dyk",
+     "role": "Panel"
+    },
+    {
+     "name": "Linn",
+     "role": "Panel"
+    },
+    {
+     "name": "Cunningham",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10706842/steigert-v-mspb/",
@@ -28729,7 +30796,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10705736/barrette-outdoor-living-inc-v-fortress-iron-lp/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1231.OPINION.10-17-2025_2589197.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Linn",
+     "role": "Author"
+    },
+    {
+     "name": "Moore",
+     "role": "Panel"
+    },
+    {
+     "name": "Cunningham",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10705736/barrette-outdoor-living-inc-v-fortress-iron-lp/",
@@ -28751,7 +30831,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10705734/vinesar-v-hhs/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1787.OPINION.10-17-2025_2589220.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Prost",
+     "role": "Panel"
+    },
+    {
+     "name": "Taranto",
+     "role": "Panel"
+    },
+    {
+     "name": "Stark",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10705734/vinesar-v-hhs/",
@@ -28835,7 +30928,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10705040/winnemucca-indian-colony-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1108.OPINION.10-16-2025_2588681.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Dyk",
+     "role": "Author"
+    },
+    {
+     "name": "Lourie",
+     "role": "Panel"
+    },
+    {
+     "name": "Cunningham",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10705040/winnemucca-indian-colony-v-united-states/",
@@ -28857,7 +30963,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10705029/polinski-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1568.OPINION.10-16-2025_2588661.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Lourie",
+     "role": "Panel"
+    },
+    {
+     "name": "Reyna",
+     "role": "Panel"
+    },
+    {
+     "name": "Chen",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10705029/polinski-v-united-states/",
@@ -28879,7 +30998,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10705030/bumgardner-v-collins/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1461.OPINION.10-16-2025_2588651.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Prost",
+     "role": "Panel"
+    },
+    {
+     "name": "Cunningham",
+     "role": "Panel"
+    },
+    {
+     "name": "Stark",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10705030/bumgardner-v-collins/",
@@ -28923,7 +31055,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10704325/inland-diamond-products-co-v-cherry-optical-inc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1560.OPINION.10-15-2025_2587951.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Prost",
+     "role": "Panel"
+    },
+    {
+     "name": "Reyna",
+     "role": "Panel"
+    },
+    {
+     "name": "Chen",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10704325/inland-diamond-products-co-v-cherry-optical-inc/",
@@ -28945,7 +31090,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10704288/causam-enterprises-inc-v-itc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/23-1769.OPINION.10-15-2025_2587890.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Taranto",
+     "role": "Author"
+    },
+    {
+     "name": "Chen",
+     "role": "Panel"
+    },
+    {
+     "name": "Stoll",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10704288/causam-enterprises-inc-v-itc/",
@@ -28967,7 +31125,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10704326/inland-diamond-products-co-v-cherry-optical-inc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1106.OPINION.10-15-2025_2587943.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Prost",
+     "role": "Author"
+    },
+    {
+     "name": "Reyna",
+     "role": "Panel"
+    },
+    {
+     "name": "Chen",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10704326/inland-diamond-products-co-v-cherry-optical-inc/",
@@ -28989,7 +31160,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10704323/mouton-miller-v-dhs/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1173.OPINION.10-15-2025_2587932.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Lourie",
+     "role": "Panel"
+    },
+    {
+     "name": "Reyna",
+     "role": "Panel"
+    },
+    {
+     "name": "Chen",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10704323/mouton-miller-v-dhs/",
@@ -29011,7 +31195,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10704287/gaylord-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1555.OPINION.10-15-2025_2587921.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Dyk",
+     "role": "Panel"
+    },
+    {
+     "name": "Hughes",
+     "role": "Panel"
+    },
+    {
+     "name": "Stoll",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10704287/gaylord-v-united-states/",
@@ -29033,7 +31230,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10704285/stevenson-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1478.OPINION.10-15-2025_2587879.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Moore",
+     "role": "Panel"
+    },
+    {
+     "name": "Prost",
+     "role": "Panel"
+    },
+    {
+     "name": "Taranto",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10704285/stevenson-v-united-states/",
@@ -29092,7 +31302,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10704284/sweet-harvest-foods-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1370.OPINION.10-15-2025_2587907.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Taranto",
+     "role": "Author"
+    },
+    {
+     "name": "Lourie",
+     "role": "Panel"
+    },
+    {
+     "name": "Cunningham",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10704284/sweet-harvest-foods-v-united-states/",
@@ -29114,7 +31337,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10704289/causam-enterprises-inc-v-ecobee-technologies-ulc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1958.OPINION.10-15-2025_2587898.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Taranto",
+     "role": "Author"
+    },
+    {
+     "name": "Chen",
+     "role": "Panel"
+    },
+    {
+     "name": "Stoll",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10704289/causam-enterprises-inc-v-ecobee-technologies-ulc/",
@@ -29136,7 +31372,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10704324/iqe-plc-v-newport-fab-llc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1124.OPINION.10-15-2025_2587999.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Hughes",
+     "role": "Author"
+    },
+    {
+     "name": "Stark",
+     "role": "Panel"
+    },
+    {
+     "name": "Wang",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10704324/iqe-plc-v-newport-fab-llc/",
@@ -29158,7 +31407,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10704328/brita-lp-v-itc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1098.OPINION.10-15-2025_2587963.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Prost",
+     "role": "Author"
+    },
+    {
+     "name": "Reyna",
+     "role": "Panel"
+    },
+    {
+     "name": "Chen",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10704328/brita-lp-v-itc/",
@@ -29180,7 +31442,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10704327/carrum-technologies-llc-v-ford-motor-company/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1183.OPINION.10-15-2025_2587985.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Lourie",
+     "role": "Author"
+    },
+    {
+     "name": "Taranto",
+     "role": "Panel"
+    },
+    {
+     "name": "Cunningham",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10704327/carrum-technologies-llc-v-ford-motor-company/",
@@ -29449,7 +31724,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10700205/opm-v-moulton/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1774.OPINION.10-10-2025_2586260.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Prost",
+     "role": "Author"
+    },
+    {
+     "name": "Wallach",
+     "role": "Panel"
+    },
+    {
+     "name": "Chen",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10700205/opm-v-moulton/",
@@ -29471,7 +31759,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10700217/petlechkov-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1098.OPINION.10-10-2025_2586268.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Taranto",
+     "role": "Panel"
+    },
+    {
+     "name": "Stoll",
+     "role": "Panel"
+    },
+    {
+     "name": "Cunningham",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10700217/petlechkov-v-united-states/",
@@ -29515,7 +31816,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10693164/blevins-v-mspb/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1061.OPINION.10-9-2025_2585708.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Prost",
+     "role": "Panel"
+    },
+    {
+     "name": "Cunningham",
+     "role": "Panel"
+    },
+    {
+     "name": "Stark",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10693164/blevins-v-mspb/",
@@ -29603,9 +31917,24 @@
     "url_cl": "https://www.courtlistener.com/opinion/10693136/st-case1tech-llc-v-squires/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/23-2305.OPINION.10-9-2025_2585626.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Taranto",
+     "role": "Author"
+    },
+    {
+     "name": "Prost",
+     "role": "Panel"
+    },
+    {
+     "name": "Stark",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [
-    "Other / Procedural"
+    "\u00a7\u00a7 102/103 Prior Art",
+    "\u00a7 112 / Claim Construction",
+    "PTAB Procedure & Standing"
    ],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10693136/st-case1tech-llc-v-squires/",
@@ -29627,9 +31956,24 @@
     "url_cl": "https://www.courtlistener.com/opinion/10693161/st-case1tech-llc-v-squires/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/23-2335.OPINION.10-9-2025_2585724.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Dyk",
+     "role": "Panel"
+    },
+    {
+     "name": "Hughes",
+     "role": "Panel"
+    },
+    {
+     "name": "Stark",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [
-    "Other / Procedural"
+    "\u00a7\u00a7 102/103 Prior Art",
+    "\u00a7 112 / Claim Construction",
+    "PTAB Procedure & Standing"
    ],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10693161/st-case1tech-llc-v-squires/",
@@ -29651,7 +31995,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10693137/st-case1tech-llc-v-squires/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/23-2294.OPINION.10-9-2025_2585634.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Prost",
+     "role": "Panel"
+    },
+    {
+     "name": "Taranto",
+     "role": "Panel"
+    },
+    {
+     "name": "Stark",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [
     "Other / Procedural"
    ],
@@ -29729,7 +32086,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10692524/blackmon-v-mspb/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1154.OPINION.10-8-2025_2585020.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Moore",
+     "role": "Panel"
+    },
+    {
+     "name": "Prost",
+     "role": "Panel"
+    },
+    {
+     "name": "Taranto",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10692524/blackmon-v-mspb/",
@@ -29751,7 +32121,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10692569/el-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1474.OPINION.10-8-2025_2585037.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Lourie",
+     "role": "Panel"
+    },
+    {
+     "name": "Reyna",
+     "role": "Panel"
+    },
+    {
+     "name": "Chen",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10692569/el-v-united-states/",
@@ -29817,7 +32200,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10692568/gujarat-fluorochemicals-ltd-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1268.OPINION.10-8-2025_2585099.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Reyna",
+     "role": "Author"
+    },
+    {
+     "name": "Bryson",
+     "role": "Concurrence"
+    },
+    {
+     "name": "Stoll",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10692568/gujarat-fluorochemicals-ltd-v-united-states/",
@@ -29861,7 +32257,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10691917/chisum-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1562.OPINION.10-7-2025_2584356.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Prost",
+     "role": "Panel"
+    },
+    {
+     "name": "Cunningham",
+     "role": "Panel"
+    },
+    {
+     "name": "Stark",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10691917/chisum-v-united-states/",
@@ -29905,7 +32314,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10691916/young-v-defense/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1575.OPINION.10-7-2025_2584364.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Lourie",
+     "role": "Panel"
+    },
+    {
+     "name": "Reyna",
+     "role": "Panel"
+    },
+    {
+     "name": "Chen",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10691916/young-v-defense/",
@@ -29927,7 +32349,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10691359/ag-der-dillinger-huttenwerke-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1498.OPINION.10-6-2025_2583726.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Reyna",
+     "role": "Author"
+    },
+    {
+     "name": "Lourie",
+     "role": "Panel"
+    },
+    {
+     "name": "Dyk",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10691359/ag-der-dillinger-huttenwerke-v-united-states/",
@@ -29949,7 +32384,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10691358/rasmussen-instruments-llc-v-depuy-synthes-products-inc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/23-1855.OPINION.10-6-2025_2583754.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Hughes",
+     "role": "Author"
+    },
+    {
+     "name": "Linn",
+     "role": "Panel"
+    },
+    {
+     "name": "Cunningham",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10691358/rasmussen-instruments-llc-v-depuy-synthes-products-inc/",
@@ -29971,7 +32419,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10688414/us-inventor-inc-v-pto/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1396.OPINION.10-3-2025_2583057.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Reyna",
+     "role": "Author"
+    },
+    {
+     "name": "Lourie",
+     "role": "Panel"
+    },
+    {
+     "name": "Stark",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10688414/us-inventor-inc-v-pto/",
@@ -29993,7 +32454,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10690198/stryker-corporation-v-osteomed-llc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/23-1925.OPINION.10-3-2025_2583077.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Hughes",
+     "role": "Author"
+    },
+    {
+     "name": "Bryson",
+     "role": "Panel"
+    },
+    {
+     "name": "Stark",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10690198/stryker-corporation-v-osteomed-llc/",
@@ -30053,7 +32527,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10687680/rex-medical-lp-v-intuitive-surgical-inc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1072.OPINION.10-2-2025_2582479.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Stoll",
+     "role": "Author"
+    },
+    {
+     "name": "Dyk",
+     "role": "Panel"
+    },
+    {
+     "name": "Prost",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10687680/rex-medical-lp-v-intuitive-surgical-inc/",
@@ -30097,7 +32584,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10687681/electrical-welfare-trust-fund-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1107.OPINION.10-2-2025_2582464.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Bumb",
+     "role": "Author"
+    },
+    {
+     "name": "Stoll",
+     "role": "Author"
+    },
+    {
+     "name": "Moore",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10687681/electrical-welfare-trust-fund-v-united-states/",
@@ -30189,7 +32689,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10683954/snap-inc-v-you-map-inc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1120.OPINION.10-1-2025_2581670.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Dyk",
+     "role": "Author"
+    },
+    {
+     "name": "Hughes",
+     "role": "Panel"
+    },
+    {
+     "name": "Stark",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10683954/snap-inc-v-you-map-inc/",
@@ -30211,7 +32724,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10681614/focus-products-group-international-llc-v-kartri-sales-co-inc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/23-1446.OPINION.9-30-2025_2580961.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Chen",
+     "role": "Author"
+    },
+    {
+     "name": "Moore",
+     "role": "Panel"
+    },
+    {
+     "name": "Clevenger",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10681614/focus-products-group-international-llc-v-kartri-sales-co-inc/",
@@ -30233,7 +32759,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10681611/underwood-v-bank-of-america-corporation/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1892.ORDER.9-30-2025_2580850.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Reyna",
+     "role": "Panel"
+    },
+    {
+     "name": "Hughes",
+     "role": "Panel"
+    },
+    {
+     "name": "Stoll",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10681611/underwood-v-bank-of-america-corporation/",
@@ -30299,7 +32838,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10681612/muldrow-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1847.ORDER.9-30-2025_2580967.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Reyna",
+     "role": "Panel"
+    },
+    {
+     "name": "Hughes",
+     "role": "Panel"
+    },
+    {
+     "name": "Stoll",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10681612/muldrow-v-united-states/",
@@ -31927,6 +34479,50 @@
    "url_audio": null
   },
   {
+   "docket_number": "CL-10669909",
+   "case_name": "Pelt v. Collins",
+   "case_type": "Veterans",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2025-09-11",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10669909/pelt-v-collins/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/23-2201.RULE_36_JUDGMENT.9-11-2025_2571696.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10669909/pelt-v-collins/",
+   "url_audio": "https://www.courtlistener.com/audio/100139/pelt-v-collins/"
+  },
+  {
+   "docket_number": "CL-10669943",
+   "case_name": "Doe v. United States",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2025-09-11",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10669943/doe-v-united-states/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1526.ORDER.9-11-2025_2571781.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10669943/doe-v-united-states/",
+   "url_audio": null
+  },
+  {
    "docket_number": "2025-2097",
    "case_name": "Dodson v. Collins",
    "case_type": "Veterans",
@@ -32245,6 +34841,28 @@
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10668478/teva-pharmaceuticals-international-gmbh-v-eli-lilly-and-company/",
    "url_audio": null
+  },
+  {
+   "docket_number": "CL-10667732",
+   "case_name": "Magema Technology LLC v. Phillips 66",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2025-09-08",
+    "precedential_status": "Published",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10667732/magema-technology-llc-v-phillips-66/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1342.OPINION.9-8-2025_2569384.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10667732/magema-technology-llc-v-phillips-66/",
+   "url_audio": "https://www.courtlistener.com/audio/99689/magema-technology-llc-v-phillips-66/"
   },
   {
    "docket_number": "2025-2088",
@@ -32735,6 +35353,50 @@
    "url_audio": null
   },
   {
+   "docket_number": "CL-10666083",
+   "case_name": "Meta Platforms, Inc. v. Almondnet, Inc.",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2025-09-03",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10666083/meta-platforms-inc-v-almondnet-inc/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1638.ORDER.9-3-2025_2567215.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10666083/meta-platforms-inc-v-almondnet-inc/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "CL-10665263",
+   "case_name": "Igt v. Zynga Inc.",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2025-09-03",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10665263/igt-v-zynga-inc/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/23-2365.RULE_36_JUDGMENT.9-3-2025_2567082.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10665263/igt-v-zynga-inc/",
+   "url_audio": "https://www.courtlistener.com/audio/100010/igt-v-zynga-inc/"
+  },
+  {
    "docket_number": "2025-2071",
    "case_name": "Lynk Labs, Inc. v. Home Depot U.S.A., Inc.",
    "case_type": "Patent (District Ct.)",
@@ -33121,6 +35783,28 @@
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10660814/global-health-solutions-llc-v-selner/",
    "url_audio": "https://www.courtlistener.com/audio/97404/global-health-solutions-llc-v-selner/"
+  },
+  {
+   "docket_number": "CL-10661005",
+   "case_name": "Philips North America, LLC v. Fitbit LLC",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2025-08-26",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10661005/philips-north-america-llc-v-fitbit-llc/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1479.ORDER.8-26-2025_2563984.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10661005/philips-north-america-llc-v-fitbit-llc/",
+   "url_audio": null
   },
   {
    "docket_number": "2025-2050",
@@ -33669,6 +36353,28 @@
    "url_audio": "https://www.courtlistener.com/audio/100025/rfcyber-corp-v-stewart/"
   },
   {
+   "docket_number": "CL-10653834",
+   "case_name": "Abc Corporation I v. Partnership and Unincorporated Associations",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2025-08-14",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10653834/abc-corporation-i-v-partnership-and-unincorporated-associations/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1471.OPINION.8-14-2025_2558427.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10653834/abc-corporation-i-v-partnership-and-unincorporated-associations/",
+   "url_audio": "https://www.courtlistener.com/audio/100028/abc-corporation-i-v-partnership-and-unincorporated-associations/"
+  },
+  {
    "docket_number": "CL-10653000",
    "case_name": "Taction Technology, Inc. v. Apple Inc.",
    "case_type": "Other / Unclassified",
@@ -34149,6 +36855,72 @@
    "url_audio": null
   },
   {
+   "docket_number": "CL-10651396",
+   "case_name": "Hernandez v. United States",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2025-08-11",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10651396/hernandez-v-united-states/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1248.OPINION.8-11-2025_2556535.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10651396/hernandez-v-united-states/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "CL-10651395",
+   "case_name": "Hout v. United States",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2025-08-11",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10651395/hout-v-united-states/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1247.OPINION.8-11-2025_2556527.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10651395/hout-v-united-states/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "CL-10651397",
+   "case_name": "Calderon Lopez v. State of California Bar Association",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2025-08-11",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10651397/calderon-lopez-v-state-of-california-bar-association/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1739.ORDER.8-11-2025_2556593.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10651397/calderon-lopez-v-state-of-california-bar-association/",
+   "url_audio": null
+  },
+  {
    "docket_number": "CL-10650441",
    "case_name": "Mondis Technology Ltd. v. Lg Electronics Inc.",
    "case_type": "Other / Unclassified",
@@ -34498,6 +37270,28 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10648630/yomi-v-mspb/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "CL-10648889",
+   "case_name": "Bluebird Bio, Inc. v. Sloan Kettering Institute for Cancer Research",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2025-08-06",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10648889/bluebird-bio-inc-v-sloan-kettering-institute-for-cancer-research/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-2010.ORDER.8-6-2025_2554916.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10648889/bluebird-bio-inc-v-sloan-kettering-institute-for-cancer-research/",
    "url_audio": null
   },
   {
@@ -35046,6 +37840,28 @@
    "url_audio": "https://www.courtlistener.com/audio/99405/jenkins-v-collins/"
   },
   {
+   "docket_number": "CL-10643562",
+   "case_name": "Ca, Inc. v. Netflix, Inc.",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2025-07-29",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10643562/ca-inc-v-netflix-inc/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1082.OPINION.7-29-2025_2551219.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10643562/ca-inc-v-netflix-inc/",
+   "url_audio": "https://www.courtlistener.com/audio/99319/ca-inc-v-netflix-inc/"
+  },
+  {
    "docket_number": "CL-10642208",
    "case_name": "Jilin Forest Industry Jinqiao Flooring Group Co. v. United States",
    "case_type": "Other / Unclassified",
@@ -35466,6 +38282,28 @@
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10637715/nwala-v-air-force/",
    "url_audio": null
+  },
+  {
+   "docket_number": "CL-10637680",
+   "case_name": "Largan Precision Co., Ltd. v. Motorola Mobility LLC",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2025-07-21",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10637680/largan-precision-co-ltd-v-motorola-mobility-llc/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1468.OPINION.7-21-2025_2547064.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10637680/largan-precision-co-ltd-v-motorola-mobility-llc/",
+   "url_audio": "https://www.courtlistener.com/audio/99751/largan-precision-co-ltd-v-motorola-mobility-llc/"
   },
   {
    "docket_number": "CL-10636371",
@@ -36007,6 +38845,74 @@
    "url_audio": null
   },
   {
+   "docket_number": "CL-10633583",
+   "case_name": "In Re ADHAMI",
+   "case_type": "Patent (PTAB)",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2025-07-16",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10633583/in-re-adhami/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1218.RULE_36_JUDGMENT.7-16-2025_2545358.pdf"
+   },
+   "panel": [],
+   "patent_issues": [
+    "Other / Procedural"
+   ],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10633583/in-re-adhami/",
+   "url_audio": "https://www.courtlistener.com/audio/99722/in-re-adhami/"
+  },
+  {
+   "docket_number": "CL-10633582",
+   "case_name": "Nespresso USA, Inc. v. K-Fee System Gmbh",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2025-07-16",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10633582/nespresso-usa-inc-v-k-fee-system-gmbh/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-2261.ORDER.7-16-2025_2545329.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10633582/nespresso-usa-inc-v-k-fee-system-gmbh/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "CL-10633638",
+   "case_name": "Oleinic v. Air Force",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2025-07-16",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10633638/oleinic-v-air-force/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-2272.OPINION.7-16-2025_2545379.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10633638/oleinic-v-air-force/",
+   "url_audio": null
+  },
+  {
    "docket_number": "2025-1937",
    "case_name": "BYD (H.K.) Co., Ltd. v. United States",
    "case_type": "Trade (CIT)",
@@ -36489,6 +39395,52 @@
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10626623/combs-v-collins/",
    "url_audio": "https://www.courtlistener.com/audio/98685/combs-v-collins/"
+  },
+  {
+   "docket_number": "CL-10626666",
+   "case_name": "Webb v. Air Force",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2025-07-10",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10626666/webb-v-air-force/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-2109.OPINION.7-10-2025_2542598.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10626666/webb-v-air-force/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "CL-10626615",
+   "case_name": "In Re WHITE",
+   "case_type": "Patent (PTAB)",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2025-07-10",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10626615/in-re-white/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1073.OPINION.7-10-2025_2542439.pdf"
+   },
+   "panel": [],
+   "patent_issues": [
+    "Other / Procedural"
+   ],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10626615/in-re-white/",
+   "url_audio": null
   },
   {
    "docket_number": "2025-129",
@@ -37348,6 +40300,28 @@
    "url_audio": "https://www.courtlistener.com/audio/97412/swarm-technology-llc-v-amazoncom-inc/"
   },
   {
+   "docket_number": "CL-10619927",
+   "case_name": "Ball Metal Beverage Container Corporation v. Crown Packaging Technology, Inc.",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2025-06-30",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10619927/ball-metal-beverage-container-corporation-v-crown-packaging-technology/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/23-2308.OPINION.6-30-2025_2537371.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10619927/ball-metal-beverage-container-corporation-v-crown-packaging-technology/",
+   "url_audio": "https://www.courtlistener.com/audio/98363/ball-metal-beverage-container-corporation-v-crown-packaging-technology/"
+  },
+  {
    "docket_number": "CL-10618460",
    "case_name": "Deal v. Collins",
    "case_type": "Veterans",
@@ -37920,6 +40894,30 @@
    "url_audio": "https://www.courtlistener.com/audio/98750/keyes-helium-company-llc-v-united-states/"
   },
   {
+   "docket_number": "2025-1747",
+   "case_name": "Driscoll's, Inc. v. California Berry Cultivars, LLC",
+   "case_type": "Patent (District Ct.)",
+   "origin": "United States District Court for the Eastern District of California",
+   "status": "Decided",
+   "date_filed": "2025-05-07",
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2025-06-23",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10615299/driscolls-inc-v-california-berry-cultivars-llc/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1747.ORDER.6-23-2025_2534066.pdf"
+   },
+   "panel": [],
+   "patent_issues": [
+    "Other / Procedural"
+   ],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/70448028/driscolls-inc-v-california-berry-cultivars-llc/",
+   "url_audio": null
+  },
+  {
    "docket_number": "2025-1876",
    "case_name": "VideoShare, LLC v. Google LLC",
    "case_type": "Patent (District Ct.)",
@@ -38370,6 +41368,28 @@
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10605969/chinook-landing-llc-v-united-states/",
    "url_audio": "https://www.courtlistener.com/audio/99318/chinook-landing-llc-v-united-states/"
+  },
+  {
+   "docket_number": "CL-10605966",
+   "case_name": "Roku, Inc. v. Universal Electronics, Inc.",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2025-06-17",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10605966/roku-inc-v-universal-electronics-inc/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1188.OPINION.6-17-2025_2531849.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10605966/roku-inc-v-universal-electronics-inc/",
+   "url_audio": "https://www.courtlistener.com/audio/98821/roku-inc-v-universal-electronics-inc/"
   },
   {
    "docket_number": "2025-1868",
@@ -38832,6 +41852,28 @@
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10602682/graham-v-doj/",
    "url_audio": null
+  },
+  {
+   "docket_number": "CL-10602683",
+   "case_name": "Agilent Technologies, Inc. v. Synthego Corp.",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2025-06-11",
+    "precedential_status": "Published",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10602683/agilent-technologies-inc-v-synthego-corp/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/23-2186.OPINION.6-11-2025_2528805.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10602683/agilent-technologies-inc-v-synthego-corp/",
+   "url_audio": "https://www.courtlistener.com/audio/97686/agilent-technologies-inc-v-synthego-corp/"
   },
   {
    "docket_number": "CL-10601778",
@@ -39790,6 +42832,28 @@
    "url_audio": null
   },
   {
+   "docket_number": "CL-10598176",
+   "case_name": "Marcum v. MSPB",
+   "case_type": "Federal Employment",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2025-06-04",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10598176/marcum-v-mspb/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/23-2439.OPINION.6-4-2025_2525050.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10598176/marcum-v-mspb/",
+   "url_audio": null
+  },
+  {
    "docket_number": "CL-10597421",
    "case_name": "Hanshow America Inc. v. Ses-Imagotag Inc.",
    "case_type": "Other / Unclassified",
@@ -40684,6 +43748,28 @@
    "url_audio": null
   },
   {
+   "docket_number": "CL-10587280",
+   "case_name": "Shafique v. United States",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2025-05-20",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10587280/shafique-v-united-states/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1482.ORDER.5-20-2025_2517588.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10587280/shafique-v-united-states/",
+   "url_audio": null
+  },
+  {
    "docket_number": "2025-1796",
    "case_name": "Buergofol GmbH v. Omega Liner Company, Inc.",
    "case_type": "Patent (PTAB)",
@@ -41184,6 +44270,28 @@
    "url_audio": null
   },
   {
+   "docket_number": "CL-10583913",
+   "case_name": "Batson v. Collins",
+   "case_type": "Veterans",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2025-05-14",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10583913/batson-v-collins/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/23-2408.OPINION.5-14-2025_2514192.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10583913/batson-v-collins/",
+   "url_audio": "https://www.courtlistener.com/audio/98825/batson-v-collins/"
+  },
+  {
    "docket_number": "CL-10583215",
    "case_name": "Stoxdox, Inc. v. Stoxx Ltd.",
    "case_type": "Other / Unclassified",
@@ -41618,6 +44726,50 @@
    "url_audio": null
   },
   {
+   "docket_number": "CL-10580649",
+   "case_name": "Casimier v. Opm",
+   "case_type": "Federal Employment",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2025-05-09",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10580649/casimier-v-opm/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-2251.OPINION.5-9-2025_2512096.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10580649/casimier-v-opm/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "CL-10580648",
+   "case_name": "Defrank v. MSPB",
+   "case_type": "Federal Employment",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2025-05-09",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10580648/defrank-v-mspb/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-2284.OPINION.5-9-2025_2512149.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10580648/defrank-v-mspb/",
+   "url_audio": null
+  },
+  {
    "docket_number": "2025-1756",
    "case_name": "ModernaTX, Inc. v. BioNTech SE",
    "case_type": "Patent (PTAB)",
@@ -41978,22 +45130,6 @@
    "url_audio": null
   },
   {
-   "docket_number": "2025-1747",
-   "case_name": "Driscoll's, Inc. v. California Berry Cultivars, LLC",
-   "case_type": "Patent (District Ct.)",
-   "origin": "United States District Court for the Eastern District of California",
-   "status": "Pending / Briefing",
-   "date_filed": "2025-05-07",
-   "date_argued": null,
-   "argument": null,
-   "decision": null,
-   "panel": [],
-   "patent_issues": [],
-   "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/70448028/driscolls-inc-v-california-berry-cultivars-llc/",
-   "url_audio": null
-  },
-  {
    "docket_number": "CL-10533731",
    "case_name": "Focus Products Group International, LLC v. Kartri Sales Co., Inc.",
    "case_type": "Other / Unclassified",
@@ -42082,6 +45218,28 @@
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10532940/jazz-pharmaceuticals-inc-v-avadel-cns-pharmaceuticals-llc/",
    "url_audio": "https://www.courtlistener.com/audio/97382/jazz-pharmaceuticals-inc-v-avadel-cns-pharmaceuticals-llc/"
+  },
+  {
+   "docket_number": "CL-10533732",
+   "case_name": "Aviation Capital Partners, LLC v. Sh Advisors, LLC",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2025-05-06",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10533732/aviation-capital-partners-llc-v-sh-advisors-llc/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1099.OPINION.5-6-2025_2509925.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10533732/aviation-capital-partners-llc-v-sh-advisors-llc/",
+   "url_audio": "https://www.courtlistener.com/audio/98326/aviation-capital-partners-llc-v-sh-advisors-llc/"
   },
   {
    "docket_number": "2025-1740",
@@ -42671,6 +45829,28 @@
    "url_audio": "https://www.courtlistener.com/audio/98339/guizhou-tyre-co-ltd-v-united-states/"
   },
   {
+   "docket_number": "CL-10386114",
+   "case_name": "Reed v. United States",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2025-04-28",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10386114/reed-v-united-states/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1423.ORDER.4-28-2025_2505251.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10386114/reed-v-united-states/",
+   "url_audio": null
+  },
+  {
    "docket_number": "2025-1702",
    "case_name": "Finjan LLC v. Palo Alto Networks, Inc.",
    "case_type": "Patent (District Ct.)",
@@ -43110,6 +46290,28 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10382634/valve-corporation-v-ironburg-inventions-ltd/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "CL-10382638",
+   "case_name": "Franz Wakefield v. IBM",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2025-04-23",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10382638/franz-wakefield-v-ibm/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-2032.OPINION.4-23-2025_2503172.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10382638/franz-wakefield-v-ibm/",
    "url_audio": null
   },
   {
@@ -43669,6 +46871,50 @@
    "url_audio": "https://www.courtlistener.com/audio/97381/regeneron-pharmaceuticals-inc-v-mylan-pharmaceuticals-inc/"
   },
   {
+   "docket_number": "CL-10379662",
+   "case_name": "McDermott v. USPS",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2025-04-16",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10379662/mcdermott-v-usps/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-125.ORDER.4-16-2025_2499544.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10379662/mcdermott-v-usps/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "CL-10379701",
+   "case_name": "Xerox Corp. v. Meta Platforms, Inc.",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2025-04-16",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10379701/xerox-corp-v-meta-platforms-inc/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/23-1911.RULE_36_JUDGMENT.4-16-2025_2499579.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10379701/xerox-corp-v-meta-platforms-inc/",
+   "url_audio": "https://www.courtlistener.com/audio/98374/xerox-corp-v-meta-platforms-inc/"
+  },
+  {
    "docket_number": "CL-10378731",
    "case_name": "Sage Products, LLC v. Stewart",
    "case_type": "Patent (PTAB)",
@@ -43994,6 +47240,28 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10376984/luxer-corp-v-butterflymx-inc/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "CL-10376869",
+   "case_name": "Avila v. Department of Agriculture",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2025-04-11",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10376869/avila-v-department-of-agriculture/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-2073.OPINION.4-11-2025_2497249.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10376869/avila-v-department-of-agriculture/",
    "url_audio": null
   },
   {
