@@ -37,7 +37,7 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 # Config
 # ----------------------------------------------------------------------------
 
-SCRIPT_VERSION = "v20-unified (2026-07-27)"
+SCRIPT_VERSION = "v21-clusterfirst (2026-07-29)"
 CL_BASE = "https://www.courtlistener.com/api/rest/v4"
 CAFC_SCHEDULED_URL = "https://www.cafc.uscourts.gov/home/oral-argument/scheduled-cases/"
 CAFC_OPINION_RSS = "https://www.cafc.uscourts.gov/category/opinion-order/feed/"
@@ -239,8 +239,8 @@ def fetch_clusters(since: str, meta: dict = None, budget: int = None, resume: st
     log(f"Fetching CAFC opinion clusters since {since} …")
     fields = ",".join([
         "id", "absolute_url", "case_name", "date_filed", "precedential_status",
-        "judges", "panel", "docket_id", "nature_of_suit", "syllabus", "headnotes",
-        "disposition", "sub_opinions",
+        "judges", "panel", "docket_id", "docket", "nature_of_suit", "syllabus",
+        "headnotes", "disposition", "sub_opinions",
     ])
     items = cl_paginate(
         f"{CL_BASE}/clusters/",
@@ -643,6 +643,7 @@ CASE_TYPE_RULES = [
     ("Federal Claims",       r"federal claims"),
     ("Federal Employment",   r"merit systems|mspb|personnel"),
     ("Patent (District Ct.)", r"district"),
+    ("Patent",               r"\bpatent\b"),   # catch-all for cluster nature_of_suit = "Patent"
 ]
 
 VETERANS_HINT = re.compile(r"\bv\.?\s+(mcdonough|collins|wilkie|shulkin)\b", re.I)
@@ -1033,177 +1034,180 @@ def build() -> dict:
         if did:
             audio_by_docket[did] = a
 
+    # ======================================================================
+    # CASE ASSEMBLY — cluster-first.
+    #
+    # Previously: loop over dockets, look up matching clusters. That hid any
+    # decided case whose docket hadn't been fetched — which was ~80% of them,
+    # because CL's CAFC docket coverage depends on RECAP.
+    #
+    # Now: start from clusters (decisions), since they're scraped directly from
+    # the court and represent the most complete source. Attach docket metadata
+    # where available. Then add undecided dockets that have no cluster yet.
+    # ======================================================================
+
+    dockets_by_id: dict = {d["id"]: d for d in dockets}
+    dockets_by_dn: dict = {norm_dn((d.get("docket_number") or "").strip()): d
+                           for d in dockets}
+    seen_docket_ids: set = set()
+
     cases, text_fetches = [], 0
-    for d in dockets:
-        did = d["id"]
-        dn = norm_dn((d.get("docket_number") or "").strip())
-        case_type = classify_case_type(d)
-        d_clusters = sorted(clusters_by_docket.get(did, []),
-                            key=lambda c: c.get("date_filed") or "", reverse=True)
-        lead_cluster = d_clusters[0] if d_clusters else None
 
-        # ---- status -----------------------------------------------------
-        decided = bool(lead_cluster) or dn in rss
-        argued_date = d.get("date_argued")
-        sched = scheduled.get(dn)
-        if decided:
-            status = "Decided"
-        elif argued_date:
-            status = "Argued — Awaiting Decision"
-        elif sched:
-            status = "Argument Scheduled"
+    # ---- Phase 1: all decided cases (from clusters) ----------------------
+    for cl in clusters:
+        clid = cl["id"]
+        did = cl.get("docket_id")
+        d = dockets_by_id.get(did) if did else None
+
+        # Docket number: prefer the docket record, fall back to extracting from
+        # the cluster's docket URL reference or case name.
+        dn = ""
+        if d:
+            dn = norm_dn((d.get("docket_number") or "").strip())
+        if not dn:
+            # cluster's "docket" field is often a URL like "/api/rest/v4/dockets/12345/"
+            docket_ref = cl.get("docket") or ""
+            if isinstance(docket_ref, str):
+                m = re.search(r"(\d{2,4}-\d{3,5})", docket_ref)
+                if m:
+                    dn = norm_dn(m.group(1))
+            if not dn:
+                m = DOCKET_RE.search(cl.get("case_name") or "")
+                if m:
+                    dn = norm_dn(m.group(0))
+        if not dn:
+            dn = f"CL-{clid}"  # fallback so every case has an identifier
+
+        if did:
+            seen_docket_ids.add(did)
+
+        # case type from docket if available, otherwise from cluster metadata
+        if d:
+            case_type = classify_case_type(d)
         else:
-            status = "Pending / Briefing"
+            nature = cl.get("nature_of_suit") or ""
+            case_name = cl.get("case_name") or ""
+            case_type = classify_case_type({
+                "appeal_from_str": nature, "nature_of_suit": nature,
+                "case_name": case_name})
 
-        # ---- decision block ---------------------------------------------
-        decision, panel = None, []
-        is_r36_case = False
-        opinion_text = ""   # may be populated by PDF fetch; reused for all enrichment
-        if lead_cluster:
-            prec = (lead_cluster.get("precedential_status") or "").title()
-            cluster_ops = ops_by_cluster.get(lead_cluster["id"], [])
-            # CAFC records often leave author_str/joined_by_str blank, so resolve
-            # names through several fallbacks rather than trusting one field.
-            need_ids = []
-            for op in cluster_ops:
-                if not (op.get("author_str") or "").strip() and op.get("author_id"):
-                    need_ids.append(op["author_id"])
-                for jid in (op.get("joined_by") or []):
-                    if isinstance(jid, int):
-                        need_ids.append(jid)
-            names = resolve_judge_names(need_ids) if need_ids else JUDGE_NAME_CACHE
+        prec = (cl.get("precedential_status") or "").title()
+        cluster_ops = ops_by_cluster.get(clid, [])
+        is_r36_case = bool(re.search(
+            r"rule\s*36", cl.get("disposition") or "", re.I))
 
-            for op in cluster_ops:
-                role = norm_type(op.get("type"))
-                author = (op.get("author_str") or "").strip()
-                if not author and op.get("author_id"):
-                    author = names.get(str(op["author_id"]), "")
-                if author:
-                    panel.append({"name": author, "role": role})
-                elif op.get("per_curiam"):
-                    panel.append({"name": "Per Curiam", "role": "Per Curiam"})
-                joined = split_judges(op.get("joined_by_str") or "")
-                if not joined:
-                    joined = [names[str(j)] for j in (op.get("joined_by") or [])
-                              if str(j) in names]
-                for j in joined:
-                    panel.append({"name": j, "role": "Joined"})
+        # ---- panel from API fields (usually empty for CAFC) ---------------
+        panel = []
+        need_ids = []
+        for op in cluster_ops:
+            if not (op.get("author_str") or "").strip() and op.get("author_id"):
+                need_ids.append(op["author_id"])
+            for jid in (op.get("joined_by") or []):
+                if isinstance(jid, int):
+                    need_ids.append(jid)
+        names = resolve_judge_names(need_ids) if need_ids else JUDGE_NAME_CACHE
 
-            # Cluster-level panel strings are the most reliable fallback for
-            # cases where no per-opinion authorship is recorded at all.
-            for field in ("judges", "panel_str", "panel"):
-                val = lead_cluster.get(field)
-                if isinstance(val, list):
-                    val = ", ".join(names.get(str(v), "") for v in val)
-                for j in split_judges(val or ""):
-                    if j and not any(p["name"].lower() == j.lower() for p in panel):
-                        panel.append({"name": j, "role": "Panel"})
+        for op in cluster_ops:
+            role = norm_type(op.get("type"))
+            author = (op.get("author_str") or "").strip()
+            if not author and op.get("author_id"):
+                author = names.get(str(op["author_id"]), "")
+            if author:
+                panel.append({"name": author, "role": role})
+            elif op.get("per_curiam"):
+                panel.append({"name": "Per Curiam", "role": "Per Curiam"})
+            joined = split_judges(op.get("joined_by_str") or "")
+            if not joined:
+                joined = [names[str(j)] for j in (op.get("joined_by") or [])
+                          if str(j) in names]
+            for j in joined:
+                panel.append({"name": j, "role": "Joined"})
 
-            # ---- unified enrichment: panel + issues + summary from ONE PDF ----
-            # CourtListener has no structured panel data for CAFC, so everything
-            # comes from the opinion text. Rather than fetching the PDF separately
-            # for panels and again for issues, fetch it once and use it for all.
-            rss_hit = rss.get(dn) or {}
+        for field in ("judges", "panel_str", "panel"):
+            val = cl.get(field)
+            if isinstance(val, list):
+                val = ", ".join(names.get(str(v), "") for v in val)
+            for j in split_judges(val or ""):
+                if j and not any(p["name"].lower() == j.lower() for p in panel):
+                    panel.append({"name": j, "role": "Panel"})
 
-            # Find the best PDF URL from any available source
-            enrich_pdf = None
-            op_id = None
-            for op in cluster_ops:
-                if op.get("download_url"):
-                    enrich_pdf = op["download_url"]
-                    op_id = op.get("id")
-                    break
-            if not enrich_pdf and rss_hit.get("url"):
-                enrich_pdf = rss_hit["url"]
+        # ---- unified enrichment: panel + issues + summary from ONE PDF ----
+        rss_hit = rss.get(dn) or {}
+        enrich_pdf = None
+        op_id = None
+        for op in cluster_ops:
+            if op.get("download_url"):
+                enrich_pdf = op["download_url"]
+                op_id = op.get("id")
+                break
+        if not enrich_pdf and rss_hit.get("url"):
+            enrich_pdf = rss_hit["url"]
 
-            # Check panel cache
-            ckey = f"panel-cl-{lead_cluster['id']}"
-            cached_panel = cache.get(ckey)
-            if cached_panel:
-                panel = list(cached_panel)
+        ckey = f"panel-cl-{clid}"
+        cached_panel = cache.get(ckey)
+        if cached_panel:
+            panel = list(cached_panel)
 
-            # Fetch opinion text once if ANY enrichment needs it
-            opinion_text = ""
-            needs_panel = not panel
-            needs_issues = case_type.startswith(("Patent", "ITC"))
-            needs_summary = bool(ANTHROPIC_KEY) and not is_r36_case
+        opinion_text = ""
+        needs_panel = not panel
+        needs_issues = case_type.startswith(("Patent", "ITC"))
+        needs_summary = bool(ANTHROPIC_KEY) and not is_r36_case
 
-            if enrich_pdf and text_fetches < MAX_OPINION_TEXT_FETCHES \
-                    and (needs_panel or needs_issues or needs_summary):
-                opinion_text = fetch_opinion_text(op_id or 0, enrich_pdf)
-                text_fetches += 1
+        if enrich_pdf and text_fetches < MAX_OPINION_TEXT_FETCHES \
+                and (needs_panel or needs_issues or needs_summary):
+            opinion_text = fetch_opinion_text(op_id or 0, enrich_pdf)
+            text_fetches += 1
 
-            # Panel from text
-            if not panel and opinion_text:
-                panel = parse_panel_from_text(opinion_text)
-                cache[ckey] = panel
-                if panel:
-                    log(f"  panel parsed from text for {dn}: "
-                        + ", ".join(f"{p['name']} ({p['role']})" for p in panel))
+        if not panel and opinion_text:
+            panel = parse_panel_from_text(opinion_text)
+            cache[ckey] = panel
+            if panel:
+                log(f"  panel parsed from text for {dn}: "
+                    + ", ".join(f"{p['name']} ({p['role']})" for p in panel))
 
-            dispo = (lead_cluster.get("disposition") or rss_hit.get("disposition") or "").strip()
-            if prec.startswith("Unpub") and re.search(r"rule\s*36", dispo, re.I):
-                dispo = "Rule 36 Judgment"
-            pdf_link = enrich_pdf or ""
-            decision = {
-                "date": lead_cluster.get("date_filed"),
-                "precedential_status": prec or None,
-                "disposition": dispo or None,
-                "url_cl": ("https://www.courtlistener.com" + lead_cluster["absolute_url"])
-                          if lead_cluster.get("absolute_url") else None,
-                "url_pdf": pdf_link or None,
-            }
-        elif dn in rss:  # released today; CL hasn't ingested yet
-            h = rss[dn]
-            is_r36_case = is_r36_case or bool(re.search(r"rule\s*36", h.get("disposition") or "", re.I))
-            decision = {
-                "date": h.get("date"),
-                "precedential_status": "Unpublished" if is_r36_case else None,
-                "disposition": h.get("disposition"),
-                "url_cl": None, "url_pdf": h.get("url"),
-            }
+        dispo = (cl.get("disposition") or rss_hit.get("disposition") or "").strip()
+        if prec.startswith("Unpub") and re.search(r"rule\s*36", dispo, re.I):
+            dispo = "Rule 36 Judgment"
 
-        # ---- panel from audio if not decided ------------------------------
-        if not panel and did in audio_by_docket:
-            for j in split_judges(audio_by_docket[did].get("judges") or ""):
-                panel.append({"name": j, "role": "Panel"})
+        decision = {
+            "date": cl.get("date_filed"),
+            "precedential_status": prec or None,
+            "disposition": dispo or None,
+            "url_cl": ("https://www.courtlistener.com" + cl["absolute_url"])
+                      if cl.get("absolute_url") else None,
+            "url_pdf": enrich_pdf or (rss_hit.get("url") or None),
+        }
 
-        # ---- opinion enrichment: patent issues + case summary --------------
+        # ---- issues + summary from the same text --------------------------
         issues, summary = [], None
         is_patent = case_type.startswith(("Patent", "ITC"))
-        is_r36_case = is_r36_case or bool(decision and re.search(
-            r"rule\s*36", str(decision.get("disposition") or ""), re.I))
-        lead_ops = ops_by_cluster.get(lead_cluster["id"], []) if lead_cluster else []
+        cache_key = f"cl-{clid}"
 
-        # Cache key: use the cluster ID, not the opinion ID, so enrichment works
-        # even when opinion records weren't fetched (the common case under quota).
-        cache_key = f"cl-{lead_cluster['id']}" if lead_cluster else None
-
-        cached = cache.get(cache_key) if cache_key else None
-        if isinstance(cached, list):          # migrate pre-summary cache format
+        cached = cache.get(cache_key)
+        if isinstance(cached, list):
             cached = {"issues": cached, "summary": None}
         if cached:
             issues = cached.get("issues") or []
             summary = cached.get("summary")
 
-        if is_patent and not issues:          # cheap pass before spending a fetch
+        if is_patent and not issues:
             seed_text = " ".join(str(x or "") for x in (
-                (lead_cluster or {}).get("syllabus"), (lead_cluster or {}).get("headnotes"),
-                (lead_cluster or {}).get("disposition"), d.get("case_name")))
+                cl.get("syllabus"), cl.get("headnotes"),
+                cl.get("disposition"), cl.get("case_name")))
             issues = classify_issues_keywords(seed_text)
 
-        # Reuse opinion_text from the panel-fetch if available; otherwise find a PDF
         if not opinion_text and cache_key:
-            enrich_pdf2 = None
-            for op in lead_ops:
-                if op.get("download_url"):
-                    enrich_pdf2 = op["download_url"]
-                    break
-            if not enrich_pdf2 and decision:
+            lead_ops = ops_by_cluster.get(clid, [])
+            enrich_pdf2 = enrich_pdf
+            if not enrich_pdf2:
+                for op in lead_ops:
+                    if op.get("download_url"):
+                        enrich_pdf2 = op["download_url"]
+                        break
+            if not enrich_pdf2:
                 enrich_pdf2 = decision.get("url_pdf")
             need_issues = is_patent and not issues
-            need_summary = (bool(ANTHROPIC_KEY) and decision is not None
-                            and not summary and not is_r36_case)
+            need_summary = (bool(ANTHROPIC_KEY) and not summary and not is_r36_case)
             if enrich_pdf2 and (need_issues or need_summary) \
                     and text_fetches < MAX_OPINION_TEXT_FETCHES:
                 opinion_text = fetch_opinion_text(
@@ -1213,16 +1217,86 @@ def build() -> dict:
         if opinion_text and cache_key:
             if is_patent and not issues:
                 issues = (classify_issues_keywords(opinion_text)
-                          or classify_issues_claude(d.get("case_name") or dn, opinion_text))
-            if bool(ANTHROPIC_KEY) and decision and not summary and not is_r36_case:
-                summary = summarize_claude(d.get("case_name") or dn, opinion_text)
+                          or classify_issues_claude(cl.get("case_name") or dn, opinion_text))
+            if bool(ANTHROPIC_KEY) and not summary and not is_r36_case:
+                summary = summarize_claude(cl.get("case_name") or dn, opinion_text)
             cache[cache_key] = {"issues": issues, "summary": summary}
 
         if is_r36_case and not summary:
             summary = ("Judgment of the tribunal below summarily affirmed without "
                        "opinion under Federal Circuit Rule 36.")
-        if is_patent and not issues and status == "Decided":
+        if is_patent and not issues:
             issues = ["Other / Procedural"]
+
+        # ---- audio for panel on undecided (rare here since these are decided)
+        if not panel and did and did in audio_by_docket:
+            for j in split_judges(audio_by_docket[did].get("judges") or ""):
+                panel.append({"name": j, "role": "Panel"})
+
+        argued_date = d.get("date_argued") if d else None
+        sched = scheduled.get(dn)
+
+        cases.append({
+            "docket_number": dn,
+            "case_name": cl.get("case_name") or (d.get("case_name") if d else None) or dn,
+            "case_type": case_type,
+            "origin": (d.get("appeal_from_str") if d else None) or None,
+            "status": "Decided",
+            "date_filed": (d.get("date_filed") if d else None) or None,
+            "date_argued": argued_date,
+            "argument": sched,
+            "decision": decision,
+            "panel": panel,
+            "patent_issues": issues,
+            "summary": summary,
+            "url_cl": ("https://www.courtlistener.com" + d["absolute_url"])
+                      if d and d.get("absolute_url")
+                      else decision.get("url_cl"),
+            "url_audio": ("https://www.courtlistener.com" +
+                          audio_by_docket[did]["absolute_url"])
+                         if did and did in audio_by_docket
+                         and audio_by_docket[did].get("absolute_url")
+                         else None,
+        })
+
+    # ---- Phase 2: undecided dockets (pending / argued / scheduled) --------
+    decided_dns = {c["docket_number"] for c in cases}
+    for d in dockets:
+        did = d["id"]
+        if did in seen_docket_ids:
+            continue  # already emitted via its cluster
+        dn = norm_dn((d.get("docket_number") or "").strip())
+        if dn in decided_dns:
+            continue
+
+        case_type = classify_case_type(d)
+        argued_date = d.get("date_argued")
+        sched = scheduled.get(dn)
+
+        if argued_date:
+            status = "Argued — Awaiting Decision"
+        elif sched:
+            status = "Argument Scheduled"
+        else:
+            status = "Pending / Briefing"
+
+        panel = []
+        if did in audio_by_docket:
+            for j in split_judges(audio_by_docket[did].get("judges") or ""):
+                panel.append({"name": j, "role": "Panel"})
+
+        # RSS-only decision that CL hasn't ingested as a cluster yet
+        decision = None
+        if dn in rss:
+            h = rss[dn]
+            is_r36 = bool(re.search(r"rule\s*36", h.get("disposition") or "", re.I))
+            decision = {
+                "date": h.get("date"),
+                "precedential_status": "Unpublished" if is_r36 else None,
+                "disposition": h.get("disposition"),
+                "url_cl": None, "url_pdf": h.get("url"),
+            }
+            status = "Decided"
 
         cases.append({
             "docket_number": dn,
@@ -1235,8 +1309,8 @@ def build() -> dict:
             "argument": sched,
             "decision": decision,
             "panel": panel,
-            "patent_issues": issues,
-            "summary": summary,
+            "patent_issues": [],
+            "summary": None,
             "url_cl": ("https://www.courtlistener.com" + d["absolute_url"])
                       if d.get("absolute_url") else None,
             "url_audio": ("https://www.courtlistener.com" +
@@ -1244,19 +1318,6 @@ def build() -> dict:
                          if did in audio_by_docket and audio_by_docket[did].get("absolute_url")
                          else None,
         })
-
-    # Upcoming arguments that never matched a CourtListener docket still matter
-    known = {c["docket_number"] for c in cases}
-    for dn, s in scheduled.items():
-        if dn not in known and s.get("date") and s["date"] >= date.today().isoformat():
-            cases.append({
-                "docket_number": dn, "case_name": s.get("caption") or dn,
-                "case_type": "Other / Unclassified", "origin": None,
-                "status": "Argument Scheduled", "date_filed": None,
-                "date_argued": None, "argument": s, "decision": None,
-                "panel": [], "patent_issues": [], "summary": None,
-                "url_cl": None, "url_audio": None,
-            })
 
     cases.sort(key=lambda c: (c.get("decision") or {}).get("date")
                or (c.get("argument") or {}).get("date")
