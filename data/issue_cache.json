@@ -1506,5 +1506,333 @@
  "cl-10376232": {
   "issues": [],
   "summary": null
+ },
+ "panel-cl-10803701": [],
+ "cl-10803701": {
+  "issues": [],
+  "summary": null
+ },
+ "panel-cl-10799621": [
+  {
+   "name": "Taranto",
+   "role": "Panel"
+  },
+  {
+   "name": "Mayer",
+   "role": "Panel"
+  },
+  {
+   "name": "Stark",
+   "role": "Panel"
+  }
+ ],
+ "cl-10799621": {
+  "issues": [],
+  "summary": null
+ },
+ "panel-cl-10800193": [
+  {
+   "name": "Taranto",
+   "role": "Panel"
+  },
+  {
+   "name": "Mayer",
+   "role": "Panel"
+  },
+  {
+   "name": "Stark",
+   "role": "Panel"
+  }
+ ],
+ "cl-10800193": {
+  "issues": [
+   "PTAB Procedure & Standing"
+  ],
+  "summary": null
+ },
+ "panel-cl-10799650": [
+  {
+   "name": "Taranto",
+   "role": "Panel"
+  },
+  {
+   "name": "Mayer",
+   "role": "Panel"
+  },
+  {
+   "name": "Stark",
+   "role": "Panel"
+  }
+ ],
+ "cl-10799650": {
+  "issues": [
+   "PTAB Procedure & Standing"
+  ],
+  "summary": null
+ },
+ "panel-cl-10801275": [
+  {
+   "name": "Taranto",
+   "role": "Panel"
+  },
+  {
+   "name": "Mayer",
+   "role": "Panel"
+  },
+  {
+   "name": "Stark",
+   "role": "Panel"
+  }
+ ],
+ "cl-10801275": {
+  "issues": [
+   "PTAB Procedure & Standing"
+  ],
+  "summary": null
+ },
+ "panel-cl-10799620": [
+  {
+   "name": "Wallach",
+   "role": "Author"
+  },
+  {
+   "name": "Stoll",
+   "role": "Panel"
+  },
+  {
+   "name": "Cunningham",
+   "role": "Panel"
+  }
+ ],
+ "cl-10799620": {
+  "issues": [
+   "PTAB Procedure & Standing"
+  ],
+  "summary": null
+ },
+ "panel-cl-10799622": [
+  {
+   "name": "Taranto",
+   "role": "Panel"
+  },
+  {
+   "name": "Mayer",
+   "role": "Panel"
+  },
+  {
+   "name": "Stark",
+   "role": "Panel"
+  }
+ ],
+ "cl-10799622": {
+  "issues": [
+   "PTAB Procedure & Standing"
+  ],
+  "summary": null
+ },
+ "panel-cl-10779855": [
+  {
+   "name": "Wallach",
+   "role": "Author"
+  },
+  {
+   "name": "Lourie",
+   "role": "Panel"
+  },
+  {
+   "name": "Stoll",
+   "role": "Panel"
+  }
+ ],
+ "cl-10779855": {
+  "issues": [
+   "PTAB Procedure & Standing"
+  ],
+  "summary": null
+ },
+ "panel-cl-10768891": [],
+ "cl-10768891": {
+  "issues": [],
+  "summary": null
+ },
+ "panel-cl-10794924": [
+  {
+   "name": "Taranto",
+   "role": "Panel"
+  },
+  {
+   "name": "Mayer",
+   "role": "Panel"
+  },
+  {
+   "name": "Stark",
+   "role": "Panel"
+  }
+ ],
+ "cl-10794924": {
+  "issues": [],
+  "summary": null
+ },
+ "panel-cl-10766498": [],
+ "cl-10766498": {
+  "issues": [],
+  "summary": null
+ },
+ "panel-cl-10767253": [],
+ "cl-10767253": {
+  "issues": [],
+  "summary": null
+ },
+ "panel-cl-10784644": [],
+ "cl-10784644": {
+  "issues": [],
+  "summary": null
+ },
+ "panel-cl-10772508": [],
+ "cl-10772508": {
+  "issues": [],
+  "summary": null
+ },
+ "panel-cl-10803116": [],
+ "cl-10803116": {
+  "issues": [],
+  "summary": null
+ },
+ "panel-cl-10802420": [
+  {
+   "name": "Moore",
+   "role": "Panel"
+  },
+  {
+   "name": "Lourie",
+   "role": "Panel"
+  },
+  {
+   "name": "Dyk",
+   "role": "Panel"
+  },
+  {
+   "name": "Prost",
+   "role": "Panel"
+  },
+  {
+   "name": "Reyna",
+   "role": "Panel"
+  },
+  {
+   "name": "Taranto",
+   "role": "Panel"
+  },
+  {
+   "name": "Chen",
+   "role": "Panel"
+  },
+  {
+   "name": "Hughes",
+   "role": "Panel"
+  },
+  {
+   "name": "Stoll",
+   "role": "Panel"
+  },
+  {
+   "name": "Cunningham",
+   "role": "Panel"
+  },
+  {
+   "name": "Stark",
+   "role": "Panel"
+  }
+ ],
+ "cl-10802420": {
+  "issues": [],
+  "summary": null
+ },
+ "panel-cl-10774997": [],
+ "cl-10774997": {
+  "issues": [],
+  "summary": null
+ },
+ "panel-cl-10749782": [
+  {
+   "name": "Prost",
+   "role": "Panel"
+  },
+  {
+   "name": "Clevenger",
+   "role": "Panel"
+  },
+  {
+   "name": "Taranto",
+   "role": "Panel"
+  }
+ ],
+ "cl-10749782": {
+  "issues": [],
+  "summary": null
+ },
+ "panel-cl-10801273": [
+  {
+   "name": "Dyk",
+   "role": "Author"
+  },
+  {
+   "name": "Schall",
+   "role": "Panel"
+  },
+  {
+   "name": "Stark",
+   "role": "Panel"
+  }
+ ],
+ "cl-10801273": {
+  "issues": [],
+  "summary": null
+ },
+ "panel-cl-10750588": [
+  {
+   "name": "Lourie",
+   "role": "Panel"
+  },
+  {
+   "name": "Stoll",
+   "role": "Panel"
+  },
+  {
+   "name": "Oetken",
+   "role": "Panel"
+  }
+ ],
+ "cl-10750588": {
+  "issues": [],
+  "summary": null
+ },
+ "panel-cl-10782674": [],
+ "cl-10782674": {
+  "issues": [],
+  "summary": null
+ },
+ "panel-cl-10750647": [],
+ "cl-10750647": {
+  "issues": [],
+  "summary": null
+ },
+ "panel-cl-10772445": [
+  {
+   "name": "Prost",
+   "role": "Panel"
+  },
+  {
+   "name": "Wallach",
+   "role": "Panel"
+  },
+  {
+   "name": "Stark",
+   "role": "Panel"
+  }
+ ],
+ "cl-10772445": {
+  "issues": [],
+  "summary": null
  }
 }
