@@ -1,12 +1,10 @@
 {
- "generated_at": "2026-07-30T20:33:35+00:00",
+ "generated_at": "2026-07-30T22:24:54+00:00",
  "window_since": "2025-02-05",
  "coverage": {
   "complete": false,
   "run_complete": false,
   "backfilling": [
-   "dockets",
-   "clusters",
    "opinions",
    "audio"
   ],
@@ -14,20 +12,22 @@
   "window_months": 18,
   "sources": {
    "dockets": {
-    "complete": false,
-    "reason": "quota exhausted",
-    "count": 0
+    "complete": true,
+    "reason": "ok",
+    "count": 361,
+    "resume_url": null
    },
    "clusters": {
-    "resume_url": "https://www.courtlistener.com/api/rest/v4/clusters/?date_filed__gte=2025-02-05&docket__court=cafc&fields=id%2Cabsolute_url%2Ccase_name%2Cdate_filed%2Cprecedential_status%2Cjudges%2Cpanel%2Cdocket_id%2Cdocket%2Cnature_of_suit%2Csyllabus%2Cheadnotes%2Cdisposition%2Csub_opinions&order_by=-date_filed&page=58",
-    "complete": false,
-    "reason": "quota exhausted",
-    "count": 800
+    "complete": true,
+    "reason": "ok",
+    "count": 730,
+    "resume_url": null
    },
    "opinions": {
+    "resume_url": "https://www.courtlistener.com/api/rest/v4/opinions/?cluster__date_filed__gte=2025-02-04&cluster__docket__court=cafc&cursor=cD0xMDc5OTIwOA%3D%3D&fields=id%2Ccluster_id%2Cauthor_str%2Cjoined_by_str%2Ctype%2Cauthor_id%2Cjoined_by%2Cper_curiam%2Cdownload_url%2Cabsolute_url&order_by=-id",
     "complete": false,
     "reason": "quota exhausted",
-    "count": 0
+    "count": 100
    },
    "audio": {
     "complete": false,
@@ -43689,7 +43689,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10616871/golden-v-google-llc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-2024.OPINION.6-25-2025_2535571.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Moore",
+     "role": "Panel"
+    },
+    {
+     "name": "Hughes",
+     "role": "Panel"
+    },
+    {
+     "name": "Cunningham",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10616871/golden-v-google-llc/",
@@ -43727,7 +43740,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10616084/divx-llc-v-unified-patents-llc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/23-1699.OPINION.6-24-2025_2534936.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Chen",
+     "role": "Author"
+    },
+    {
+     "name": "Lourie",
+     "role": "Panel"
+    },
+    {
+     "name": "Dyk",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10616084/divx-llc-v-unified-patents-llc/",
@@ -43771,7 +43797,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10616081/simpkins-v-opm/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1921.OPINION.6-24-2025_2534955.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Dyk",
+     "role": "Panel"
+    },
+    {
+     "name": "Stoll",
+     "role": "Panel"
+    },
+    {
+     "name": "Stark",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10616081/simpkins-v-opm/",
@@ -43830,7 +43869,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10615297/ruiz-v-dhs/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1023.OPINION.6-23-2025_2534042.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Hughes",
+     "role": "Panel"
+    },
+    {
+     "name": "Cunningham",
+     "role": "Panel"
+    },
+    {
+     "name": "Stark",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10615297/ruiz-v-dhs/",
@@ -43852,7 +43904,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10615254/wu-v-fujianshengfusixianshangmaoyouxiangongsi/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1698.ORDER.6-23-2025_2533989.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Reyna",
+     "role": "Panel"
+    },
+    {
+     "name": "Mayer",
+     "role": "Panel"
+    },
+    {
+     "name": "Chen",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10615254/wu-v-fujianshengfusixianshangmaoyouxiangongsi/",
@@ -43874,7 +43939,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10615298/keyes-helium-company-llc-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1132.OPINION.6-23-2025_2534013.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Lourie",
+     "role": "Author"
+    },
+    {
+     "name": "Dyk",
+     "role": "Panel"
+    },
+    {
+     "name": "Reyna",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10615298/keyes-helium-company-llc-v-united-states/",
@@ -43952,7 +44030,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10614218/msn-laboratories-private-ltd-v-bausch-health-ireland-ltd/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1053.OPINION.6-20-2025_2533178.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Lourie",
+     "role": "Author"
+    },
+    {
+     "name": "Dyk",
+     "role": "Panel"
+    },
+    {
+     "name": "Chen",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10614218/msn-laboratories-private-ltd-v-bausch-health-ireland-ltd/",
@@ -43974,7 +44065,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10614318/smith-v-navy/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1229.ORDER.6-20-2025_2533285.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Reyna",
+     "role": "Panel"
+    },
+    {
+     "name": "Mayer",
+     "role": "Panel"
+    },
+    {
+     "name": "Chen",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10614318/smith-v-navy/",
@@ -43996,7 +44100,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10614219/in-re-raggio/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1255.ORDER.6-20-2025_2533216.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Reyna",
+     "role": "Panel"
+    },
+    {
+     "name": "Mayer",
+     "role": "Panel"
+    },
+    {
+     "name": "Chen",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [
     "Other / Procedural"
    ],

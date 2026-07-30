@@ -17859,5 +17859,172 @@
  "cl-10616809": {
   "issues": [],
   "summary": null
+ },
+ "panel-cl-10616871": [
+  {
+   "name": "Moore",
+   "role": "Panel"
+  },
+  {
+   "name": "Hughes",
+   "role": "Panel"
+  },
+  {
+   "name": "Cunningham",
+   "role": "Panel"
+  }
+ ],
+ "cl-10616871": {
+  "issues": [],
+  "summary": null
+ },
+ "panel-cl-10616084": [
+  {
+   "name": "Chen",
+   "role": "Author"
+  },
+  {
+   "name": "Lourie",
+   "role": "Panel"
+  },
+  {
+   "name": "Dyk",
+   "role": "Panel"
+  }
+ ],
+ "cl-10616084": {
+  "issues": [],
+  "summary": null
+ },
+ "panel-cl-10616082": [],
+ "cl-10616082": {
+  "issues": [],
+  "summary": null
+ },
+ "panel-cl-10616081": [
+  {
+   "name": "Dyk",
+   "role": "Panel"
+  },
+  {
+   "name": "Stoll",
+   "role": "Panel"
+  },
+  {
+   "name": "Stark",
+   "role": "Panel"
+  }
+ ],
+ "cl-10616081": {
+  "issues": [],
+  "summary": null
+ },
+ "panel-cl-10615297": [
+  {
+   "name": "Hughes",
+   "role": "Panel"
+  },
+  {
+   "name": "Cunningham",
+   "role": "Panel"
+  },
+  {
+   "name": "Stark",
+   "role": "Panel"
+  }
+ ],
+ "cl-10615297": {
+  "issues": [],
+  "summary": null
+ },
+ "panel-cl-10615254": [
+  {
+   "name": "Reyna",
+   "role": "Panel"
+  },
+  {
+   "name": "Mayer",
+   "role": "Panel"
+  },
+  {
+   "name": "Chen",
+   "role": "Panel"
+  }
+ ],
+ "cl-10615254": {
+  "issues": [],
+  "summary": null
+ },
+ "panel-cl-10615298": [
+  {
+   "name": "Lourie",
+   "role": "Author"
+  },
+  {
+   "name": "Dyk",
+   "role": "Panel"
+  },
+  {
+   "name": "Reyna",
+   "role": "Panel"
+  }
+ ],
+ "cl-10615298": {
+  "issues": [],
+  "summary": null
+ },
+ "panel-cl-10614218": [
+  {
+   "name": "Lourie",
+   "role": "Author"
+  },
+  {
+   "name": "Dyk",
+   "role": "Panel"
+  },
+  {
+   "name": "Chen",
+   "role": "Panel"
+  }
+ ],
+ "cl-10614218": {
+  "issues": [],
+  "summary": null
+ },
+ "panel-cl-10614318": [
+  {
+   "name": "Reyna",
+   "role": "Panel"
+  },
+  {
+   "name": "Mayer",
+   "role": "Panel"
+  },
+  {
+   "name": "Chen",
+   "role": "Panel"
+  }
+ ],
+ "cl-10614318": {
+  "issues": [],
+  "summary": null
+ },
+ "panel-cl-10614219": [
+  {
+   "name": "Reyna",
+   "role": "Panel"
+  },
+  {
+   "name": "Mayer",
+   "role": "Panel"
+  },
+  {
+   "name": "Chen",
+   "role": "Panel"
+  }
+ ],
+ "cl-10614219": {
+  "issues": [],
+  "summary": null
  }
 }
