@@ -1,11 +1,10 @@
 {
- "generated_at": "2026-07-30T16:33:17+00:00",
+ "generated_at": "2026-07-30T18:33:29+00:00",
  "window_since": "2025-02-05",
  "coverage": {
   "complete": false,
   "run_complete": false,
   "backfilling": [
-   "dockets",
    "clusters",
    "opinions",
    "audio"
@@ -14,20 +13,21 @@
   "window_months": 18,
   "sources": {
    "dockets": {
-    "complete": false,
-    "reason": "quota exhausted",
-    "count": 0
+    "complete": true,
+    "reason": "ok",
+    "count": 361,
+    "resume_url": null
    },
    "clusters": {
+    "resume_url": "https://www.courtlistener.com/api/rest/v4/clusters/?date_filed__gte=2025-02-05&docket__court=cafc&fields=id%2Cabsolute_url%2Ccase_name%2Cdate_filed%2Cprecedential_status%2Cjudges%2Cpanel%2Cdocket_id%2Cdocket%2Cnature_of_suit%2Csyllabus%2Cheadnotes%2Cdisposition%2Csub_opinions&order_by=-date_filed&page=18",
+    "complete": false,
+    "reason": "quota exhausted",
+    "count": 340
+   },
+   "opinions": {
     "complete": false,
     "reason": "quota exhausted",
     "count": 0
-   },
-   "opinions": {
-    "resume_url": "https://www.courtlistener.com/api/rest/v4/opinions/?cluster__date_filed__gte=2025-02-04&cluster__docket__court=cafc&cursor=cD0xMDgyMDY4OQ%3D%3D&fields=id%2Ccluster_id%2Cauthor_str%2Cjoined_by_str%2Ctype%2Cauthor_id%2Cjoined_by%2Cper_curiam%2Cdownload_url%2Cabsolute_url&order_by=-id",
-    "complete": false,
-    "reason": "quota exhausted",
-    "count": 120
    },
    "audio": {
     "complete": false,
@@ -48,25 +48,289 @@
   "summaries": {
    "enabled": false,
    "have": 0,
-   "expected": 1865,
+   "expected": 1877,
    "complete": true
   },
   "opinion_text_fetches_this_run": 600,
   "opinion_text_fetch_cap": 600,
-  "latest_decision_date": "2026-07-29",
+  "latest_decision_date": "2026-07-30",
   "next_argument_date": null
  },
  "stats": {
-  "total": 2100,
+  "total": 2112,
   "pending": 228,
   "scheduled": 0,
   "awaiting": 5,
-  "decided": 1867,
-  "precedential": 273,
+  "decided": 1879,
+  "precedential": 275,
   "rule36": 2
  },
  "upcoming_argument_docket_numbers": [],
  "cases": [
+  {
+   "docket_number": "CL-10936592",
+   "case_name": "Sanders v. United States",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-07-30",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10936592/sanders-v-united-states/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10936592/sanders-v-united-states/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "CL-10936781",
+   "case_name": "Williams v. DVA",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-07-30",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10936781/williams-v-dva/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10936781/williams-v-dva/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "CL-10936595",
+   "case_name": "Ildico Inc. v. United States",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-07-30",
+    "precedential_status": "Published",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10936595/ildico-inc-v-united-states/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10936595/ildico-inc-v-united-states/",
+   "url_audio": "https://www.courtlistener.com/audio/105355/ildico-inc-v-united-states/"
+  },
+  {
+   "docket_number": "CL-10936593",
+   "case_name": "Qoye v. United States",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-07-30",
+    "precedential_status": "Published",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10936593/qoye-v-united-states/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10936593/qoye-v-united-states/",
+   "url_audio": "https://www.courtlistener.com/audio/102579/qoye-v-united-states/"
+  },
+  {
+   "docket_number": "CL-10936591",
+   "case_name": "Taylor v. People of the Venue of the Foreign United States",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-07-30",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10936591/taylor-v-people-of-the-venue-of-the-foreign-united-states/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10936591/taylor-v-people-of-the-venue-of-the-foreign-united-states/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "CL-10936596",
+   "case_name": "G+ Communications, LLC v. Samsung Electronics Co., Ltd.",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-07-30",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10936596/g-communications-llc-v-samsung-electronics-co-ltd/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10936596/g-communications-llc-v-samsung-electronics-co-ltd/",
+   "url_audio": "https://www.courtlistener.com/audio/103044/g-communications-llc-v-samsung-electronics-co-ltd/"
+  },
+  {
+   "docket_number": "CL-10936528",
+   "case_name": "Yahne v. United States",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-07-30",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10936528/yahne-v-united-states/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10936528/yahne-v-united-states/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "CL-10936543",
+   "case_name": "Schmeisser Gmbh v. Ac-Unity D.O.O.",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-07-30",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10936543/schmeisser-gmbh-v-ac-unity-doo/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10936543/schmeisser-gmbh-v-ac-unity-doo/",
+   "url_audio": "https://www.courtlistener.com/audio/104731/schmeisser-gmbh-v-ac-unity-doo/"
+  },
+  {
+   "docket_number": "CL-10936542",
+   "case_name": "Walker v. Dhs",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-07-30",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10936542/walker-v-dhs/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10936542/walker-v-dhs/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "CL-10936544",
+   "case_name": "James v. Collins",
+   "case_type": "Veterans",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-07-30",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10936544/james-v-collins/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10936544/james-v-collins/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "CL-10936545",
+   "case_name": "Hollins v. USPS",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-07-30",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10936545/hollins-v-usps/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10936545/hollins-v-usps/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "CL-10936594",
+   "case_name": "On24, Inc. v. webinar.net, Inc.",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-07-30",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10936594/on24-inc-v-webinarnet-inc/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10936594/on24-inc-v-webinarnet-inc/",
+   "url_audio": "https://www.courtlistener.com/audio/105660/on24-inc-v-webinarnet-inc/"
+  },
   {
    "docket_number": "CL-10936231",
    "case_name": "Young v. Opm",
@@ -40622,7 +40886,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10636368/murray-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/23-2287.OPINION.7-18-2025_2546605.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Cunningham",
+     "role": "Author"
+    },
+    {
+     "name": "Reyna",
+     "role": "Panel"
+    },
+    {
+     "name": "Stark",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10636368/murray-v-united-states/",
@@ -40716,7 +40993,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10636372/colibri-heart-valve-llc-v-medtronic-corevalve-llc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/23-2153.OPINION.7-18-2025_2546584.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Taranto",
+     "role": "Author"
+    },
+    {
+     "name": "Hughes",
+     "role": "Panel"
+    },
+    {
+     "name": "Stoll",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10636372/colibri-heart-valve-llc-v-medtronic-corevalve-llc/",
@@ -40819,7 +41109,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10635076/latham-v-collins/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1390.OPINION.7-17-2025_2546073.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Hughes",
+     "role": "Panel"
+    },
+    {
+     "name": "Linn",
+     "role": "Panel"
+    },
+    {
+     "name": "Cunningham",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10635076/latham-v-collins/",
@@ -40841,7 +41144,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10635075/monbo-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1826.ORDER.7-17-2025_2546124.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Taranto",
+     "role": "Panel"
+    },
+    {
+     "name": "Cunningham",
+     "role": "Panel"
+    },
+    {
+     "name": "Stark",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10635075/monbo-v-united-states/",
@@ -40863,7 +41179,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10635074/top-brand-llc-v-cozy-comfort-company-llc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-2191.OPINION.7-17-2025_2546100.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Dyk",
+     "role": "Author"
+    },
+    {
+     "name": "Reyna",
+     "role": "Panel"
+    },
+    {
+     "name": "Stark",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10635074/top-brand-llc-v-cozy-comfort-company-llc/",
@@ -40917,7 +41246,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10633639/muhleisen-v-mspb/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-2355.OPINION.7-16-2025_2545436.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Lourie",
+     "role": "Panel"
+    },
+    {
+     "name": "Dyk",
+     "role": "Panel"
+    },
+    {
+     "name": "Cunningham",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10633639/muhleisen-v-mspb/",
@@ -40983,7 +41325,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10633641/maddox-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1257.OPINION.7-16-2025_2545407.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Lourie",
+     "role": "Panel"
+    },
+    {
+     "name": "Dyk",
+     "role": "Panel"
+    },
+    {
+     "name": "Cunningham",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10633641/maddox-v-united-states/",
@@ -41027,7 +41382,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10633581/williamson-v-collins/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1770.OPINION.7-16-2025_2545326.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Prost",
+     "role": "Panel"
+    },
+    {
+     "name": "Clevenger",
+     "role": "Panel"
+    },
+    {
+     "name": "Cunningham",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10633581/williamson-v-collins/",
@@ -41133,7 +41501,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10633252/cunningham-v-opm/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1036.OPINION.7-15-2025_2544738.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Wang",
+     "role": "Author"
+    },
+    {
+     "name": "Moore",
+     "role": "Panel"
+    },
+    {
+     "name": "Stoll",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10633252/cunningham-v-opm/",
@@ -41187,7 +41568,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10632470/agboke-v-doj/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1976.OPINION.7-14-2025_2543851.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Moore",
+     "role": "Panel"
+    },
+    {
+     "name": "Linn",
+     "role": "Panel"
+    },
+    {
+     "name": "Cunningham",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10632470/agboke-v-doj/",
@@ -41209,7 +41603,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10632469/agboke-v-mspb/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1975.OPINION.7-14-2025_2543835.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Moore",
+     "role": "Panel"
+    },
+    {
+     "name": "Linn",
+     "role": "Panel"
+    },
+    {
+     "name": "Cunningham",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10632469/agboke-v-mspb/",
@@ -41253,7 +41660,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10632468/shockwave-medical-inc-v-cardiovascular-systems-inc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/23-1864.OPINION.7-14-2025_2543865.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Dyk",
+     "role": "Author"
+    },
+    {
+     "name": "Lourie",
+     "role": "Panel"
+    },
+    {
+     "name": "Cunningham",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10632468/shockwave-medical-inc-v-cardiovascular-systems-inc/",
@@ -41331,7 +41751,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10627294/mccloud-v-mspb/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-2376.OPINION.7-11-2025_2543232.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Lourie",
+     "role": "Panel"
+    },
+    {
+     "name": "Prost",
+     "role": "Panel"
+    },
+    {
+     "name": "Bumb",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10627294/mccloud-v-mspb/",
@@ -41353,7 +41786,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10627295/hayes-libby-v-collins/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1384.OPINION.7-11-2025_2543194.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Lourie",
+     "role": "Panel"
+    },
+    {
+     "name": "Prost",
+     "role": "Panel"
+    },
+    {
+     "name": "Bumb",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10627295/hayes-libby-v-collins/",
@@ -41423,7 +41869,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10627293/tomko-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1312.OPINION.7-11-2025_2543211.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Moore",
+     "role": "Panel"
+    },
+    {
+     "name": "Prost",
+     "role": "Panel"
+    },
+    {
+     "name": "Reyna",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10627293/tomko-v-united-states/",
@@ -41469,7 +41928,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10626670/howard-v-mspb/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-2184.OPINION.7-10-2025_2542538.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Moore",
+     "role": "Panel"
+    },
+    {
+     "name": "Prost",
+     "role": "Panel"
+    },
+    {
+     "name": "Reyna",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10626670/howard-v-mspb/",
@@ -41535,7 +42007,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10626614/serp-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-2319.OPINION.7-10-2025_2542449.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Bumb",
+     "role": "Author"
+    },
+    {
+     "name": "Moore",
+     "role": "Panel"
+    },
+    {
+     "name": "Stoll",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10626614/serp-v-united-states/",
@@ -41579,7 +42064,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10626623/combs-v-collins/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/23-2364.OPINION.7-10-2025_2542491.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Hughes",
+     "role": "Author"
+    },
+    {
+     "name": "Taranto",
+     "role": "Panel"
+    },
+    {
+     "name": "Stoll",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10626623/combs-v-collins/",
@@ -41706,7 +42204,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10625844/tanser-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1226.OPINION.7-9-2025_2541753.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Hughes",
+     "role": "Panel"
+    },
+    {
+     "name": "Stark",
+     "role": "Panel"
+    },
+    {
+     "name": "Wang",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10625844/tanser-v-united-states/",
@@ -41728,7 +42239,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10625793/lite-machines-corp-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-128.ORDER.7-9-2025_2541660.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Reyna",
+     "role": "Panel"
+    },
+    {
+     "name": "Mayer",
+     "role": "Panel"
+    },
+    {
+     "name": "Chen",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10625793/lite-machines-corp-v-united-states/",
@@ -41840,7 +42364,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10625209/davis-v-usps/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1136.ORDER.7-8-2025_2540968.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Reyna",
+     "role": "Panel"
+    },
+    {
+     "name": "Mayer",
+     "role": "Panel"
+    },
+    {
+     "name": "Chen",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10625209/davis-v-usps/",
@@ -41862,7 +42399,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10625255/yoebstl-v-dva/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1052.ORDER.7-8-2025_2541538.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Hughes",
+     "role": "Panel"
+    },
+    {
+     "name": "Stark",
+     "role": "Panel"
+    },
+    {
+     "name": "Wang",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10625255/yoebstl-v-dva/",
@@ -41884,7 +42434,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10625206/el-malik-v-collins/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1300.OPINION.7-8-2025_2540944.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Lourie",
+     "role": "Panel"
+    },
+    {
+     "name": "Reyna",
+     "role": "Panel"
+    },
+    {
+     "name": "Stark",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10625206/el-malik-v-collins/",
@@ -41906,7 +42469,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10625201/slagle-v-opm/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1242.OPINION.7-8-2025_2541006.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Wang",
+     "role": "Author"
+    },
+    {
+     "name": "Moore",
+     "role": "Panel"
+    },
+    {
+     "name": "Stoll",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10625201/slagle-v-opm/",
@@ -41972,7 +42548,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10625204/janssen-pharmaceuticals-inc-v-teva-pharmaceuticals-usa-inc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1228.OPINION.7-8-2025_2541042.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Taranto",
+     "role": "Author"
+    },
+    {
+     "name": "Prost",
+     "role": "Panel"
+    },
+    {
+     "name": "Reyna",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10625204/janssen-pharmaceuticals-inc-v-teva-pharmaceuticals-usa-inc/",
@@ -42018,7 +42607,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10625203/jones-v-dva/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1223.OPINION.7-8-2025_2541049.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Lourie",
+     "role": "Panel"
+    },
+    {
+     "name": "Reyna",
+     "role": "Panel"
+    },
+    {
+     "name": "Stark",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10625203/jones-v-dva/",
@@ -42040,7 +42642,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10625208/ecofactor-inc-v-google-llc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1027.OPINION.7-8-2025_2540984.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Taranto",
+     "role": "Author"
+    },
+    {
+     "name": "Stoll",
+     "role": "Panel"
+    },
+    {
+     "name": "Stark",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10625208/ecofactor-inc-v-google-llc/",
