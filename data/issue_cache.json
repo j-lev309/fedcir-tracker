@@ -18407,5 +18407,41 @@
  "cl-10604255": {
   "issues": [],
   "summary": null
+ },
+ "panel-cl-10604257": [
+  {
+   "name": "Lourie",
+   "role": "Panel"
+  },
+  {
+   "name": "Mayer",
+   "role": "Panel"
+  },
+  {
+   "name": "Dyk",
+   "role": "Panel"
+  }
+ ],
+ "cl-10604257": {
+  "issues": [],
+  "summary": null
+ },
+ "panel-cl-10604256": [
+  {
+   "name": "Bryson",
+   "role": "Author"
+  },
+  {
+   "name": "Hughes",
+   "role": "Panel"
+  },
+  {
+   "name": "Stark",
+   "role": "Panel"
+  }
+ ],
+ "cl-10604256": {
+  "issues": [],
+  "summary": null
  }
 }
