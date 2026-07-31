@@ -18149,5 +18149,95 @@
  "cl-10605964": {
   "issues": [],
   "summary": null
+ },
+ "panel-cl-10606071": [
+  {
+   "name": "Dyk",
+   "role": "Author"
+  },
+  {
+   "name": "Lourie",
+   "role": "Panel"
+  },
+  {
+   "name": "Reyna",
+   "role": "Panel"
+  }
+ ],
+ "cl-10606071": {
+  "issues": [],
+  "summary": null
+ },
+ "panel-cl-10605965": [
+  {
+   "name": "Hughes",
+   "role": "Author"
+  },
+  {
+   "name": "Cunningham",
+   "role": "Panel"
+  },
+  {
+   "name": "Stark",
+   "role": "Panel"
+  }
+ ],
+ "cl-10605965": {
+  "issues": [],
+  "summary": null
+ },
+ "panel-cl-10606069": [
+  {
+   "name": "Stoll",
+   "role": "Author"
+  },
+  {
+   "name": "Clevenger",
+   "role": "Panel"
+  },
+  {
+   "name": "Cunningham",
+   "role": "Panel"
+  }
+ ],
+ "cl-10606069": {
+  "issues": [],
+  "summary": null
+ },
+ "panel-cl-10605967": [
+  {
+   "name": "Schall",
+   "role": "Author"
+  },
+  {
+   "name": "Dyk",
+   "role": "Panel"
+  },
+  {
+   "name": "Chen",
+   "role": "Panel"
+  }
+ ],
+ "cl-10605967": {
+  "issues": [],
+  "summary": null
+ },
+ "panel-cl-10606070": [
+  {
+   "name": "Lourie",
+   "role": "Author"
+  },
+  {
+   "name": "Dyk",
+   "role": "Panel"
+  },
+  {
+   "name": "Cunningham",
+   "role": "Panel"
+  }
+ ],
+ "cl-10606070": {
+  "issues": [],
+  "summary": null
  }
 }
