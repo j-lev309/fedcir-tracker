@@ -1,11 +1,10 @@
 {
- "generated_at": "2026-07-31T18:30:50+00:00",
+ "generated_at": "2026-07-31T20:32:59+00:00",
  "window_since": "2025-02-06",
  "coverage": {
   "complete": false,
   "run_complete": false,
   "backfilling": [
-   "dockets",
    "clusters",
    "opinions",
    "audio"
@@ -14,20 +13,21 @@
   "window_months": 18,
   "sources": {
    "dockets": {
-    "complete": false,
-    "reason": "quota exhausted",
-    "count": 0
+    "complete": true,
+    "reason": "ok",
+    "count": 359,
+    "resume_url": null
    },
    "clusters": {
+    "resume_url": "https://www.courtlistener.com/api/rest/v4/clusters/?date_filed__gte=2025-02-06&docket__court=cafc&fields=id%2Cabsolute_url%2Ccase_name%2Cdate_filed%2Cprecedential_status%2Cjudges%2Cpanel%2Cdocket_id%2Cdocket%2Cnature_of_suit%2Csyllabus%2Cheadnotes%2Cdisposition%2Csub_opinions&order_by=-date_filed&page=32",
+    "complete": false,
+    "reason": "quota exhausted",
+    "count": 620
+   },
+   "opinions": {
     "complete": false,
     "reason": "quota exhausted",
     "count": 0
-   },
-   "opinions": {
-    "resume_url": "https://www.courtlistener.com/api/rest/v4/opinions/?cluster__date_filed__gte=2025-02-06&cluster__docket__court=cafc&cursor=cD0xMTE0NTk4OA%3D%3D&fields=id%2Ccluster_id%2Cauthor_str%2Cjoined_by_str%2Ctype%2Cauthor_id%2Cjoined_by%2Cper_curiam%2Cdownload_url%2Cabsolute_url&order_by=-id",
-    "complete": false,
-    "reason": "quota exhausted",
-    "count": 760
    },
    "audio": {
     "complete": false,
@@ -141,7 +141,7 @@
    "docket_number": "2025-1695",
    "case_name": "Rj Technology LLC v. Apple Inc.",
    "case_type": "Patent (PTAB)",
-   "origin": "United States Patent and Trademark Office",
+   "origin": "United States Patent and Trademark Office, Patent Trial and Appeal Board",
    "status": "Decided",
    "date_filed": "2025-04-25",
    "date_argued": null,
@@ -44926,7 +44926,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10605197/crawford-v-collins/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1075.OPINION.6-16-2025_2530942.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Moore",
+     "role": "Author"
+    },
+    {
+     "name": "Lourie",
+     "role": "Panel"
+    },
+    {
+     "name": "Bryson",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10605197/crawford-v-collins/",
@@ -44970,7 +44983,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10605230/optis-wireless-technology-llc-v-apple-inc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/22-1925.OPINION.6-16-2025_2530981.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Prost",
+     "role": "Author"
+    },
+    {
+     "name": "Reyna",
+     "role": "Panel"
+    },
+    {
+     "name": "Stark",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10605230/optis-wireless-technology-llc-v-apple-inc/",
@@ -45062,7 +45088,52 @@
     "url_cl": "https://www.courtlistener.com/opinion/10604255/vos-selections-inc-v-trump/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1812.ORDER.6-13-2025_2530087.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Moore",
+     "role": "Panel"
+    },
+    {
+     "name": "Lourie",
+     "role": "Panel"
+    },
+    {
+     "name": "Dyk",
+     "role": "Panel"
+    },
+    {
+     "name": "Prost",
+     "role": "Panel"
+    },
+    {
+     "name": "Reyna",
+     "role": "Panel"
+    },
+    {
+     "name": "Taranto",
+     "role": "Panel"
+    },
+    {
+     "name": "Chen",
+     "role": "Panel"
+    },
+    {
+     "name": "Hughes",
+     "role": "Panel"
+    },
+    {
+     "name": "Stoll",
+     "role": "Panel"
+    },
+    {
+     "name": "Cunningham",
+     "role": "Panel"
+    },
+    {
+     "name": "Stark",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/70394463/vos-selections-inc-v-trump/",
