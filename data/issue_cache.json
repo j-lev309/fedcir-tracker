@@ -18239,5 +18239,77 @@
  "cl-10606070": {
   "issues": [],
   "summary": null
+ },
+ "panel-cl-10605969": [
+  {
+   "name": "Hall",
+   "role": "Author"
+  },
+  {
+   "name": "Prost",
+   "role": "Author"
+  },
+  {
+   "name": "Moore",
+   "role": "Panel"
+  }
+ ],
+ "cl-10605969": {
+  "issues": [],
+  "summary": null
+ },
+ "panel-cl-10605198": [
+  {
+   "name": "Reyna",
+   "role": "Author"
+  },
+  {
+   "name": "Cunningham",
+   "role": "Panel"
+  },
+  {
+   "name": "Stark",
+   "role": "Panel"
+  }
+ ],
+ "cl-10605198": {
+  "issues": [],
+  "summary": null
+ },
+ "panel-cl-10605231": [
+  {
+   "name": "Stoll",
+   "role": "Author"
+  },
+  {
+   "name": "Stark",
+   "role": "Panel"
+  },
+  {
+   "name": "Goldberg",
+   "role": "Panel"
+  }
+ ],
+ "cl-10605231": {
+  "issues": [],
+  "summary": null
+ },
+ "panel-cl-10605232": [
+  {
+   "name": "Lourie",
+   "role": "Panel"
+  },
+  {
+   "name": "Reyna",
+   "role": "Panel"
+  },
+  {
+   "name": "Hughes",
+   "role": "Panel"
+  }
+ ],
+ "cl-10605232": {
+  "issues": [],
+  "summary": null
  }
 }

@@ -1,19 +1,19 @@
 {
  "dockets": {
-  "last_attempt": "2026-07-31T16:47:53+00:00",
-  "caught_up": true,
+  "last_attempt": "2026-07-31T18:28:25+00:00",
+  "caught_up": false,
   "last_ok": "2026-07-31T16:47:53+00:00",
-  "backfill_done": true,
+  "backfill_done": false,
   "last_id": 73677137,
   "last_date": "2026-07-20",
   "backfill_completed_at": "2026-07-21",
   "resume_url": null
  },
  "clusters": {
-  "last_attempt": "2026-07-31T16:47:53+00:00",
-  "caught_up": true,
+  "last_attempt": "2026-07-31T18:28:25+00:00",
+  "caught_up": false,
   "last_ok": "2026-07-31T16:47:53+00:00",
-  "backfill_done": true,
+  "backfill_done": false,
   "last_id": 10937654,
   "last_date": "2026-07-31",
   "resume_url": null,
@@ -21,23 +21,23 @@
  },
  "opinions": {
   "last_id": 11405230,
-  "last_attempt": "2026-07-31T16:47:53+00:00",
+  "last_attempt": "2026-07-31T18:28:25+00:00",
   "caught_up": false,
   "backfill_done": false,
-  "resume_url": "https://www.courtlistener.com/api/rest/v4/opinions/?cluster__date_filed__gte=2025-02-06&cluster__docket__court=cafc&cursor=cD0xMTMyNDM2Nw%3D%3D&fields=id%2Ccluster_id%2Cauthor_str%2Cjoined_by_str%2Ctype%2Cauthor_id%2Cjoined_by%2Cper_curiam%2Cdownload_url%2Cabsolute_url&order_by=-id",
+  "resume_url": "https://www.courtlistener.com/api/rest/v4/opinions/?cluster__date_filed__gte=2025-02-06&cluster__docket__court=cafc&cursor=cD0xMTE0NTk4OA%3D%3D&fields=id%2Ccluster_id%2Cauthor_str%2Cjoined_by_str%2Ctype%2Cauthor_id%2Cjoined_by%2Cper_curiam%2Cdownload_url%2Cabsolute_url&order_by=-id",
   "last_ok": "2026-07-31T15:22:45+00:00",
   "backfill_completed_at": "2026-07-31"
  },
  "audio": {
   "last_id": 105721,
-  "last_attempt": "2026-07-31T16:47:53+00:00",
+  "last_attempt": "2026-07-31T18:28:25+00:00",
   "caught_up": false,
   "last_ok": "2026-07-31T15:22:45+00:00",
   "backfill_done": false,
   "resume_url": "https://www.courtlistener.com/api/rest/v4/audio/?cursor=cD0yMDI2LTAxLTA5KzE5JTNBMzElM0E0NC40MzA5MzklMkIwMCUzQTAw&date_created__gte=2025-02-06&docket__court=cafc&fields=id%2Cdocket%2Ccase_name%2Cjudges%2Cabsolute_url&order_by=-date_created",
   "backfill_completed_at": "2026-07-31"
  },
- "run_no": 27,
+ "run_no": 28,
  "schema_v17": true,
  "judge_names": {}
 }

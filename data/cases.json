@@ -1,10 +1,12 @@
 {
- "generated_at": "2026-07-31T16:55:27+00:00",
+ "generated_at": "2026-07-31T18:30:50+00:00",
  "window_since": "2025-02-06",
  "coverage": {
   "complete": false,
   "run_complete": false,
   "backfilling": [
+   "dockets",
+   "clusters",
    "opinions",
    "audio"
   ],
@@ -12,28 +14,25 @@
   "window_months": 18,
   "sources": {
    "dockets": {
-    "complete": true,
-    "reason": "ok",
-    "count": 1,
-    "resume_url": null
+    "complete": false,
+    "reason": "quota exhausted",
+    "count": 0
    },
    "clusters": {
-    "complete": true,
-    "reason": "ok",
-    "count": 28,
-    "resume_url": null
+    "complete": false,
+    "reason": "quota exhausted",
+    "count": 0
    },
    "opinions": {
-    "resume_url": "https://www.courtlistener.com/api/rest/v4/opinions/?cluster__date_filed__gte=2025-02-06&cluster__docket__court=cafc&cursor=cD0xMTMyNDM2Nw%3D%3D&fields=id%2Ccluster_id%2Cauthor_str%2Cjoined_by_str%2Ctype%2Cauthor_id%2Cjoined_by%2Cper_curiam%2Cdownload_url%2Cabsolute_url&order_by=-id",
+    "resume_url": "https://www.courtlistener.com/api/rest/v4/opinions/?cluster__date_filed__gte=2025-02-06&cluster__docket__court=cafc&cursor=cD0xMTE0NTk4OA%3D%3D&fields=id%2Ccluster_id%2Cauthor_str%2Cjoined_by_str%2Ctype%2Cauthor_id%2Cjoined_by%2Cper_curiam%2Cdownload_url%2Cabsolute_url&order_by=-id",
     "complete": false,
-    "reason": "page budget reached",
-    "count": 300
+    "reason": "quota exhausted",
+    "count": 760
    },
    "audio": {
-    "resume_url": "https://www.courtlistener.com/api/rest/v4/audio/?cursor=cD0yMDI2LTAxLTA5KzE5JTNBMzElM0E0NC40MzA5MzklMkIwMCUzQTAw&date_created__gte=2025-02-06&docket__court=cafc&fields=id%2Cdocket%2Ccase_name%2Cjudges%2Cabsolute_url&order_by=-date_created",
     "complete": false,
-    "reason": "page budget reached",
-    "count": 300
+    "reason": "quota exhausted",
+    "count": 0
    },
    "scheduled_arguments": {
     "count": 0,
@@ -44749,7 +44748,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10605969/chinook-landing-llc-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1884.OPINION.6-17-2025_2531777.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Hall",
+     "role": "Author"
+    },
+    {
+     "name": "Prost",
+     "role": "Author"
+    },
+    {
+     "name": "Moore",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10605969/chinook-landing-llc-v-united-states/",
@@ -44809,7 +44821,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10605198/bpi-sports-llc-v-thermolife-international-llc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/23-1068.OPINION.6-16-2025_2530960.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Reyna",
+     "role": "Author"
+    },
+    {
+     "name": "Cunningham",
+     "role": "Panel"
+    },
+    {
+     "name": "Stark",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10605198/bpi-sports-llc-v-thermolife-international-llc/",
@@ -44831,7 +44856,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10605231/boynton-v-collins/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/23-1830.OPINION.6-16-2025_2531004.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Stoll",
+     "role": "Author"
+    },
+    {
+     "name": "Stark",
+     "role": "Panel"
+    },
+    {
+     "name": "Goldberg",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10605231/boynton-v-collins/",
@@ -44853,7 +44891,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10605232/ancora-technologies-inc-v-roku-inc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/23-1674.OPINION.6-16-2025_2531031.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Lourie",
+     "role": "Panel"
+    },
+    {
+     "name": "Reyna",
+     "role": "Panel"
+    },
+    {
+     "name": "Hughes",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10605232/ancora-technologies-inc-v-roku-inc/",
