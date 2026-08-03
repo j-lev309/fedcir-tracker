@@ -18461,5 +18461,59 @@
  "cl-10604372": {
   "issues": [],
   "summary": null
+ },
+ "panel-cl-10603496": [
+  {
+   "name": "Hughes",
+   "role": "Author"
+  },
+  {
+   "name": "Dyk",
+   "role": "Panel"
+  },
+  {
+   "name": "Clevenger",
+   "role": "Panel"
+  }
+ ],
+ "cl-10603496": {
+  "issues": [],
+  "summary": null
+ },
+ "panel-cl-10603497": [
+  {
+   "name": "Chen",
+   "role": "Author"
+  },
+  {
+   "name": "Taranto",
+   "role": "Panel"
+  },
+  {
+   "name": "Schall",
+   "role": "Panel"
+  }
+ ],
+ "cl-10603497": {
+  "issues": [],
+  "summary": null
+ },
+ "panel-cl-10603495": [
+  {
+   "name": "Hughes",
+   "role": "Author"
+  },
+  {
+   "name": "Dyk",
+   "role": "Panel"
+  },
+  {
+   "name": "Clevenger",
+   "role": "Panel"
+  }
+ ],
+ "cl-10603495": {
+  "issues": [],
+  "summary": null
  }
 }
