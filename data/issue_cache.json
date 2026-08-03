@@ -18443,5 +18443,23 @@
  "cl-10604256": {
   "issues": [],
   "summary": null
+ },
+ "panel-cl-10604372": [
+  {
+   "name": "Scarsi",
+   "role": "Author"
+  },
+  {
+   "name": "Moore",
+   "role": "Panel"
+  },
+  {
+   "name": "Cunningham",
+   "role": "Panel"
+  }
+ ],
+ "cl-10604372": {
+  "issues": [],
+  "summary": null
  }
 }

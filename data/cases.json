@@ -1,38 +1,38 @@
 {
- "generated_at": "2026-07-31T22:16:58+00:00",
- "window_since": "2025-02-06",
+ "generated_at": "2026-08-03T16:01:49+00:00",
+ "window_since": "2025-02-09",
  "coverage": {
   "complete": false,
   "run_complete": false,
   "backfilling": [
-   "dockets",
-   "clusters",
-   "opinions",
    "audio"
   ],
-  "window_since": "2025-02-06",
+  "window_since": "2025-02-09",
   "window_months": 18,
   "sources": {
    "dockets": {
-    "complete": false,
-    "reason": "quota exhausted",
-    "count": 0
+    "complete": true,
+    "reason": "ok",
+    "count": 357,
+    "resume_url": null
    },
    "clusters": {
-    "resume_url": "https://www.courtlistener.com/api/rest/v4/clusters/?date_filed__gte=2025-02-06&docket__court=cafc&fields=id%2Cabsolute_url%2Ccase_name%2Cdate_filed%2Cprecedential_status%2Cjudges%2Cpanel%2Cdocket_id%2Cdocket%2Cnature_of_suit%2Csyllabus%2Cheadnotes%2Cdisposition%2Csub_opinions&order_by=-date_filed&page=68",
-    "complete": false,
-    "reason": "quota exhausted",
-    "count": 720
+    "complete": true,
+    "reason": "ok",
+    "count": 530,
+    "resume_url": null
    },
    "opinions": {
-    "complete": false,
-    "reason": "quota exhausted",
-    "count": 0
+    "complete": true,
+    "reason": "ok",
+    "count": 808,
+    "resume_url": null
    },
    "audio": {
+    "resume_url": "https://www.courtlistener.com/api/rest/v4/audio/?cursor=cD0yMDI1LTA2LTA0KzE3JTNBMzMlM0E1Ni4zODUwNzYlMkIwMCUzQTAw&date_created__gte=2025-02-06&docket__court=cafc&fields=id%2Cdocket%2Ccase_name%2Cjudges%2Cabsolute_url&order_by=-date_created",
     "complete": false,
     "reason": "quota exhausted",
-    "count": 0
+    "count": 280
    },
    "scheduled_arguments": {
     "count": 0,
@@ -45249,7 +45249,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10604372/chateau-lynch-bages-v-chateau-angelus-sa/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1197.OPINION.6-13-2025_2530142.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Scarsi",
+     "role": "Author"
+    },
+    {
+     "name": "Moore",
+     "role": "Panel"
+    },
+    {
+     "name": "Cunningham",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10604372/chateau-lynch-bages-v-chateau-angelus-sa/",
