@@ -37,7 +37,7 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 # Config
 # ----------------------------------------------------------------------------
 
-SCRIPT_VERSION = "v21-clusterfirst (2026-07-29)"
+SCRIPT_VERSION = "v22-docketfix (2026-08-21)"
 CL_BASE = "https://www.courtlistener.com/api/rest/v4"
 CAFC_SCHEDULED_URL = "https://www.cafc.uscourts.gov/home/oral-argument/scheduled-cases/"
 CAFC_OPINION_RSS = "https://www.cafc.uscourts.gov/category/opinion-order/feed/"
@@ -46,6 +46,7 @@ CL_TOKEN = os.environ.get("COURTLISTENER_TOKEN", "").strip()
 ANTHROPIC_KEY = os.environ.get("ANTHROPIC_API_KEY", "").strip()
 
 WINDOW_MONTHS = int(os.environ.get("WINDOW_MONTHS", "18"))   # rolling window of filings
+WINDOW_START = os.environ.get("WINDOW_START", "2020-01-01")  # fixed floor — overrides WINDOW_MONTHS if set
 MAX_DOCKETS = int(os.environ.get("MAX_DOCKETS", "4000"))
 # Opinion text now comes from the court's own PDFs, which cost nothing
 # against the CourtListener quota, so this cap can be generous.
@@ -107,8 +108,22 @@ def cl_paginate(url: str, params: dict, cap: int, meta: dict = None,
         return []
     pages = 0
     dropped_filter = False
-    items, next_url, first, backoff, strikes, got_any = (
-        [], resume_url or url, not resume_url, 30, 0, False)
+    if resume_url:
+        # Resuming from a saved cursor. The cursor URL may or may not encode
+        # the original query filters (like court=cafc). To be safe, we start
+        # fresh from the base URL with params, which restarts from page 1 of
+        # the filtered result set. This is slightly less efficient than true
+        # cursor resume (some records are re-fetched and deduped by the store),
+        # but it guarantees the filter is never dropped — which is what caused
+        # 29,000 non-CAFC dockets to accumulate.
+        #
+        # True cursor resume would require CourtListener to reliably encode
+        # filters in cursor URLs, which we've proven they don't.
+        items, next_url, first, backoff, strikes, got_any = (
+            [], url, True, 30, 0, False)
+    else:
+        items, next_url, first, backoff, strikes, got_any = (
+            [], url, True, 30, 0, False)
     complete, reason, timeouts, rl_waited = True, "ok", 0, 0
     while next_url and len(items) < cap:
         try:
@@ -845,7 +860,7 @@ def _merge_store(store: dict, key: str, new_records: list, id_field: str = "id")
 
 
 def build() -> dict:
-    since = (date.today() - timedelta(days=30 * WINDOW_MONTHS)).isoformat()
+    since = WINDOW_START or (date.today() - timedelta(days=30 * WINDOW_MONTHS)).isoformat()
     cache = {}
     if CACHE_PATH.exists():
         try:
@@ -881,7 +896,53 @@ def build() -> dict:
             log(f"State migration: cleared premature high-water marks for "
                 f"{', '.join(cleared)} — re-scanning the full window to recover "
                 f"decisions that were skipped.")
+    # v22 migration: the cursor-resume bug dropped the court=cafc filter,
+    # causing ~29,000 non-CAFC dockets to accumulate. Purge the docket store
+    # and reset its state so it rebuilds cleanly.
+    if not state.get("schema_v22"):
+        state["schema_v22"] = True
+        docket_st = state.get("dockets")
+        if isinstance(docket_st, dict):
+            docket_st["backfill_done"] = False
+            docket_st["caught_up"] = False
+            docket_st.pop("resume_url", None)
+            docket_st.pop("last_date", None)
+            docket_st.pop("last_id", None)
+        # Also clear all resume_urls since the cursor logic is now changed
+        for k in ("dockets", "clusters", "opinions", "audio"):
+            sk = state.get(k)
+            if isinstance(sk, dict):
+                sk.pop("resume_url", None)
+        log("v22 migration: purged docket store and cleared resume cursors "
+            "to fix non-CAFC docket accumulation")
+
+    # v22b: if the window start is earlier than what sources previously covered,
+    # reset their backfill so they re-scan the wider range.
+    prev_since = state.get("last_window_since", "")
+    if since < prev_since or not prev_since:
+        widened = []
+        for k in ("dockets", "clusters", "opinions", "audio"):
+            sk = state.get(k)
+            if isinstance(sk, dict) and sk.get("backfill_done"):
+                sk["backfill_done"] = False
+                sk["caught_up"] = False
+                sk.pop("resume_url", None)
+                widened.append(k)
+        if widened:
+            log(f"Window expanded to {since} (was {prev_since or 'unset'}) — "
+                f"re-backfilling {', '.join(widened)}")
+    state["last_window_since"] = since
+
     store = _load_json(STORE_PATH, {})
+
+    # Purge dockets if the migration just fired (before any new fetching)
+    if state.get("schema_v22") and not state.get("docket_purge_done"):
+        old_count = len(store.get("dockets", []))
+        store["dockets"] = []
+        state["docket_purge_done"] = True
+        if old_count:
+            log(f"  purged {old_count} dockets from store — rebuilding from scratch")
+
     run_no = int(state.get("run_no", 0)) + 1
     full_since = since
 
@@ -924,9 +985,15 @@ def build() -> dict:
         + (f" (incremental)" if INCREMENTAL else " (full window)"))
 
     def _budget_for(k: str) -> int:
-        # A source that has never finished still needs to catch up on history;
-        # give it room. Caught-up sources only need the newest page or two.
-        return PAGE_BUDGET_STEADY if (state.get(k) or {}).get("caught_up") else PAGE_BUDGET
+        # Decided cases are built from clusters, not dockets, so dockets get a
+        # smaller budget — they only add pending/undecided case metadata.
+        # Clusters and opinions get the full budget when catching up.
+        st = state.get(k) or {}
+        if st.get("caught_up"):
+            return PAGE_BUDGET_STEADY
+        if k == "dockets":
+            return PAGE_BUDGET_STEADY    # dockets are low-priority now
+        return PAGE_BUDGET
 
     def _resume_for(k: str):
         return (state.get(k) or {}).get("resume_url")
