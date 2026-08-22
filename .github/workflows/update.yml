@@ -2,14 +2,14 @@ name: Update Federal Circuit data
 
 on:
   schedule:
-    # Weekdays at 15:45 UTC (11:45 a.m. ET) and 21:00 UTC (5:00 p.m. ET).
+    # Every day at 13:00, 15:00, 17:00, 19:00, 21:00 UTC.
     # CAFC dockets opinions between 8:30–11:00 a.m. ET, so the first run
-    # catches the morning release and the second sweeps up stragglers.
-    - cron: "0 13 * * 1-5"
-    - cron: "0 15 * * 1-5"
-    - cron: "0 17 * * 1-5"
-    - cron: "0 19 * * 1-5"
-    - cron: "0 21 * * 1-5"
+    # catches the morning release and the rest sweep up stragglers.
+    - cron: "0 13 * * *"
+    - cron: "0 15 * * *"
+    - cron: "0 17 * * *"
+    - cron: "0 19 * * *"
+    - cron: "0 21 * * *"
   workflow_dispatch: {}   # lets you trigger a refresh manually from the Actions tab
 
 permissions:
