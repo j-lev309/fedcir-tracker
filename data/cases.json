@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-22T17:29:01+00:00",
+ "generated_at": "2026-08-22T19:56:27+00:00",
  "window_since": "2020-01-01",
  "coverage": {
   "complete": false,
@@ -20,15 +20,16 @@
     "count": 300
    },
    "clusters": {
-    "resume_url": "https://www.courtlistener.com/api/rest/v4/clusters/?date_filed__gte=2020-01-01&docket__court=cafc&fields=id%2Cabsolute_url%2Ccase_name%2Cdate_filed%2Cprecedential_status%2Cjudges%2Cpanel%2Cdocket_id%2Cdocket%2Cnature_of_suit%2Csyllabus%2Cheadnotes%2Cdisposition%2Csub_opinions&order_by=-date_filed&page=13",
+    "resume_url": "https://www.courtlistener.com/api/rest/v4/clusters/",
+    "complete": false,
+    "reason": "network timeouts",
+    "count": 0
+   },
+   "opinions": {
+    "resume_url": "https://www.courtlistener.com/api/rest/v4/opinions/?cluster__date_filed__gte=2020-01-01&cluster__docket__court=cafc&cursor=cD0xMTM0MTA1MA%3D%3D&fields=id%2Ccluster_id%2Cauthor_str%2Cjoined_by_str%2Ctype%2Cauthor_id%2Cjoined_by%2Cper_curiam%2Cdownload_url%2Cabsolute_url&order_by=-id",
     "complete": false,
     "reason": "quota exhausted",
     "count": 240
-   },
-   "opinions": {
-    "complete": false,
-    "reason": "quota exhausted",
-    "count": 0
    },
    "audio": {
     "complete": false,
@@ -82,7 +83,7 @@
     "precedential_status": "Published",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10954431/us-inventor-inc-v-squires/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-2378.OPINION.8-21-2026_2742604.pdf"
    },
    "panel": [],
    "patent_issues": [
@@ -106,7 +107,7 @@
     "precedential_status": "Published",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10954432/miller-v-collins/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1790.OPINION.8-21-2026_2742581.pdf"
    },
    "panel": [],
    "patent_issues": [],
@@ -128,7 +129,7 @@
     "precedential_status": "Published",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10954029/gordon-v-collins/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1461.OPINION.8-20-2026_2742006.pdf"
    },
    "panel": [],
    "patent_issues": [],
@@ -150,7 +151,7 @@
     "precedential_status": "Published",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10954028/harris-campbell-v-treasury/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1470.OPINION.8-20-2026_2742017.pdf"
    },
    "panel": [],
    "patent_issues": [],
@@ -172,7 +173,7 @@
     "precedential_status": "Unpublished",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10953722/meyer-v-united-states/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1512.ORDER.8-19-2026_2741748.pdf"
    },
    "panel": [],
    "patent_issues": [],
@@ -194,7 +195,7 @@
     "precedential_status": "Unpublished",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10953455/in-re-printify-inc/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1978.ORDER.8-19-2026_2741466.pdf"
    },
    "panel": [],
    "patent_issues": [
@@ -218,7 +219,7 @@
     "precedential_status": "Published",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10953454/vdpp-llc-v-volkswagen-group-of-america-inc/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-2226.OPINION.8-19-2026_2741445.pdf"
    },
    "panel": [],
    "patent_issues": [],
@@ -240,7 +241,7 @@
     "precedential_status": "Unpublished",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10953456/10x-genomics-inc-v-parse-biosciences-inc/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1199.OPINION.8-19-2026_2741460.pdf"
    },
    "panel": [],
    "patent_issues": [],
@@ -262,7 +263,7 @@
     "precedential_status": "Unpublished",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10953046/robert-bosch-llc-v-westport-fuel-systems-canada-inc/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1455.OPINION.8-18-2026_2740810.pdf"
    },
    "panel": [],
    "patent_issues": [],
@@ -300,7 +301,7 @@
     "precedential_status": "Unpublished",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10952001/netlist-inc-v-samsung-electronics-co-ltd/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-2203.ORDER.8-17-2026_2740281.pdf"
    },
    "panel": [],
    "patent_issues": [],
@@ -322,7 +323,7 @@
     "precedential_status": "Unpublished",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10951826/buford-v-secretary-of-the-air-force/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1818.ORDER.8-17-2026_2740025.pdf"
    },
    "panel": [],
    "patent_issues": [],
@@ -344,7 +345,7 @@
     "precedential_status": "Unpublished",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10951882/jacki-easlick-llc-v-cj-emerald/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1538.ERRATA.8-17-2026_2740054.pdf"
    },
    "panel": [],
    "patent_issues": [],
@@ -366,7 +367,7 @@
     "precedential_status": "Unpublished",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10948670/technatomy-corp-v-united-states/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1907.ORDER.8-14-2026_2739562.pdf"
    },
    "panel": [],
    "patent_issues": [],
@@ -388,7 +389,7 @@
     "precedential_status": "Unpublished",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10948510/jacki-easlick-llc-v-cj-emerald/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1538.OPINION.8-14-2026_2739398.pdf"
    },
    "panel": [],
    "patent_issues": [],
@@ -410,7 +411,7 @@
     "precedential_status": "Published",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10948512/brimer-v-navy/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1388.OPINION.8-14-2026_2739444.pdf"
    },
    "panel": [],
    "patent_issues": [],
@@ -432,7 +433,7 @@
     "precedential_status": "Unpublished",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10948511/brimer-v-navy/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1388.ORDER.8-14-2026_2739434.pdf"
    },
    "panel": [],
    "patent_issues": [],
@@ -454,7 +455,7 @@
     "precedential_status": "Published",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10948452/nielsen-company-us-llc-v-tvision-insights-inc/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1371.OPINION.8-14-2026_2739381.pdf"
    },
    "panel": [],
    "patent_issues": [],
@@ -476,7 +477,7 @@
     "precedential_status": "Unpublished",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10948453/cummins-v-united-states/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-2166.OPINION.8-14-2026_2739357.pdf"
    },
    "panel": [],
    "patent_issues": [],
@@ -498,7 +499,7 @@
     "precedential_status": "Unpublished",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10947265/barto-v-mspb/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1865.ORDER.8-13-2026_2738791.pdf"
    },
    "panel": [],
    "patent_issues": [],
@@ -520,7 +521,7 @@
     "precedential_status": "Unpublished",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10947223/ricks-v-united-states/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1631.ORDER.8-13-2026_2738589.pdf"
    },
    "panel": [],
    "patent_issues": [],
@@ -542,7 +543,7 @@
     "precedential_status": "Unpublished",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10947340/howell-v-dva/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-2027.ORDER.8-13-2026_2738900.pdf"
    },
    "panel": [],
    "patent_issues": [],
@@ -564,7 +565,7 @@
     "precedential_status": "Unpublished",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10945877/dixon-v-collins/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1750.ORDER.8-12-2026_2738008.pdf"
    },
    "panel": [],
    "patent_issues": [],
@@ -586,7 +587,7 @@
     "precedential_status": "Unpublished",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10945777/in-re-byrd/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-143.ORDER.8-12-2026_2737931.pdf"
    },
    "panel": [],
    "patent_issues": [
@@ -610,7 +611,7 @@
     "precedential_status": "Unpublished",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10945696/guttenberg-v-dhs/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1081.ERRATA.8-12-2026_2737779.pdf"
    },
    "panel": [],
    "patent_issues": [],
@@ -632,7 +633,7 @@
     "precedential_status": "Unpublished",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10945697/bradley-v-united-states/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1811.ORDER.8-12-2026_2737854.pdf"
    },
    "panel": [],
    "patent_issues": [],
@@ -654,7 +655,7 @@
     "precedential_status": "Unpublished",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10945776/roberson-v-mspb/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1666.ORDER.8-12-2026_2737910.pdf"
    },
    "panel": [],
    "patent_issues": [],
@@ -676,7 +677,7 @@
     "precedential_status": "Unpublished",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10945778/canadian-solar-inc-v-maxeon-solar-pte-ltd/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1525.ORDER.8-12-2026_2737955.pdf"
    },
    "panel": [],
    "patent_issues": [],
@@ -698,7 +699,7 @@
     "precedential_status": "Published",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10944778/range-of-motion-products-llc-v-armaid-company-inc/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/23-2427.ORDER.8-11-2026_2737015.pdf"
    },
    "panel": [],
    "patent_issues": [],
@@ -720,7 +721,7 @@
     "precedential_status": "Published",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10944730/fusong-jinlong-wooden-group-co-ltd-v-united-states/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1196.OPINION.8-11-2026_2736888.pdf"
    },
    "panel": [],
    "patent_issues": [],
@@ -742,7 +743,7 @@
     "precedential_status": "Published",
     "disposition": "Opinion",
     "url_cl": "https://www.courtlistener.com/opinion/10944731/fedmet-resources-corporation-v-united-states/",
-    "url_pdf": "https://www.cafc.uscourts.gov/08-11-2026-26-1160-fedmet-resources-corporation-v-us-opinion-26-1160-opinion-8-11-2026_2736904/"
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1160.OPINION.8-11-2026_2736904.pdf"
    },
    "panel": [],
    "patent_issues": [],
@@ -764,7 +765,7 @@
     "precedential_status": "Unpublished",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10944777/richard-v-united-states/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1821.ORDER.8-11-2026_2736951.pdf"
    },
    "panel": [],
    "patent_issues": [],
@@ -786,7 +787,7 @@
     "precedential_status": "Unpublished",
     "disposition": "Order",
     "url_cl": "https://www.courtlistener.com/opinion/10944842/lenovo-united-states-inc-v-itc/",
-    "url_pdf": "https://www.cafc.uscourts.gov/08-11-2026-25-2030-lenovo-united-states-inc-v-itc-order-25-2030-order-8-11-2026_2737061/"
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-2030.ORDER.8-11-2026_2737061.pdf"
    },
    "panel": [],
    "patent_issues": [
@@ -810,7 +811,7 @@
     "precedential_status": "Unpublished",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10944145/power2b-inc-v-samsung-electronics-co-ltd/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1833.ORDER.8-10-2026_2736616.pdf"
    },
    "panel": [],
    "patent_issues": [],
@@ -832,7 +833,7 @@
     "precedential_status": "Published",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10943743/hernandez-v-collins/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1301.OPINION.8-10-2026_2735991.pdf"
    },
    "panel": [],
    "patent_issues": [],
@@ -854,7 +855,7 @@
     "precedential_status": "Unpublished",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10943742/vl-collective-ip-llc-v-netflix-inc/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1132.OPINION.8-10-2026_2735947.pdf"
    },
    "panel": [],
    "patent_issues": [],
@@ -876,7 +877,7 @@
     "precedential_status": "Published",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10943744/chitlik-v-hhs/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1804.OPINION.8-10-2026_2735973.pdf"
    },
    "panel": [],
    "patent_issues": [],
@@ -898,7 +899,7 @@
     "precedential_status": "Unpublished",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10943770/icharts-llc-v-tableau-software-llc/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1302.OPINION.8-10-2026_2736010.pdf"
    },
    "panel": [],
    "patent_issues": [],
@@ -920,7 +921,7 @@
     "precedential_status": "Published",
     "disposition": "Opinion",
     "url_cl": "https://www.courtlistener.com/opinion/10943771/dental-monitoring-sas-v-align-technology-inc/",
-    "url_pdf": "https://www.cafc.uscourts.gov/08-10-2026-25-1752-dental-monitoring-sas-v-align-technology-inc-opinion-25-1752-opinion-8-10-2026_2736022/"
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1752.OPINION.8-10-2026_2736022.pdf"
    },
    "panel": [],
    "patent_issues": [
@@ -944,7 +945,7 @@
     "precedential_status": "Unpublished",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10942171/in-re-wag-acquisition-llc/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1971.OPINION.8-7-2026_2735257.pdf"
    },
    "panel": [],
    "patent_issues": [
@@ -968,7 +969,7 @@
     "precedential_status": "Published",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10942105/ley-v-collins/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1425.OPINION.8-7-2026_2735227.pdf"
    },
    "panel": [],
    "patent_issues": [],
@@ -990,7 +991,7 @@
     "precedential_status": "Unpublished",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10942106/guzman-v-collins/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1397.OPINION.8-7-2026_2735242.pdf"
    },
    "panel": [],
    "patent_issues": [],
@@ -1012,7 +1013,7 @@
     "precedential_status": "Published",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10942107/archroma-us-inc-v-commerce/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-2159.OPINION.8-7-2026_2735214.pdf"
    },
    "panel": [],
    "patent_issues": [],
@@ -1034,7 +1035,7 @@
     "precedential_status": "Unpublished",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10940740/ravin-crossbows-llc-v-squires/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-2136.OPINION.8-6-2026_2734624.pdf"
    },
    "panel": [],
    "patent_issues": [
@@ -1074,7 +1075,7 @@
     "precedential_status": "Unpublished",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10939977/nike-inc-v-lululemon-athletica-canada-inc/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-2134.OPINION.8-5-2026_2733934.pdf"
    },
    "panel": [],
    "patent_issues": [],
@@ -1096,7 +1097,7 @@
     "precedential_status": "Unpublished",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10939978/guttenberg-v-dhs/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1081.OPINION.8-5-2026_2733950.pdf"
    },
    "panel": [],
    "patent_issues": [],
@@ -1134,7 +1135,7 @@
     "precedential_status": "Published",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10939353/socket-solutions-llc-v-import-global-llc/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1121.OPINION.8-4-2026_2733079.pdf"
    },
    "panel": [],
    "patent_issues": [],
@@ -1156,7 +1157,7 @@
     "precedential_status": "Published",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10939354/johnson-v-united-states/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1017.OPINION.8-4-2026_2733093.pdf"
    },
    "panel": [],
    "patent_issues": [],
@@ -1178,7 +1179,7 @@
     "precedential_status": "Unpublished",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10939292/scilex-pharmaceuticals-inc-v-aveva-drug-delivery-systems-inc/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1002.OPINION.8-4-2026_2733061.pdf"
    },
    "panel": [],
    "patent_issues": [],
