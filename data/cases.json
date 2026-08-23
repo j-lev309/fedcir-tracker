@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-22T19:56:27+00:00",
+ "generated_at": "2026-08-23T13:37:12+00:00",
  "window_since": "2020-01-01",
  "coverage": {
   "complete": false,
@@ -20,16 +20,15 @@
     "count": 300
    },
    "clusters": {
-    "resume_url": "https://www.courtlistener.com/api/rest/v4/clusters/",
-    "complete": false,
-    "reason": "network timeouts",
-    "count": 0
-   },
-   "opinions": {
-    "resume_url": "https://www.courtlistener.com/api/rest/v4/opinions/?cluster__date_filed__gte=2020-01-01&cluster__docket__court=cafc&cursor=cD0xMTM0MTA1MA%3D%3D&fields=id%2Ccluster_id%2Cauthor_str%2Cjoined_by_str%2Ctype%2Cauthor_id%2Cjoined_by%2Cper_curiam%2Cdownload_url%2Cabsolute_url&order_by=-id",
+    "resume_url": "https://www.courtlistener.com/api/rest/v4/clusters/?date_filed__gte=2020-01-01&docket__court=cafc&fields=id%2Cabsolute_url%2Ccase_name%2Cdate_filed%2Cprecedential_status%2Cjudges%2Cpanel%2Cdocket_id%2Cdocket%2Cnature_of_suit%2Csyllabus%2Cheadnotes%2Cdisposition%2Csub_opinions&order_by=-date_filed&page=16",
     "complete": false,
     "reason": "quota exhausted",
-    "count": 240
+    "count": 300
+   },
+   "opinions": {
+    "complete": false,
+    "reason": "quota exhausted",
+    "count": 0
    },
    "audio": {
     "complete": false,
@@ -47187,7 +47186,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10600955/li-v-apple-inc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-2148.OPINION.6-9-2025_2527172.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Prost",
+     "role": "Panel"
+    },
+    {
+     "name": "Reyna",
+     "role": "Panel"
+    },
+    {
+     "name": "Chen",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10600955/li-v-apple-inc/",
