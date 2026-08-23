@@ -18703,5 +18703,28 @@
  "cl-10600955": {
   "issues": [],
   "summary": null
+ },
+ "panel-cl-10600956": [],
+ "cl-10600956": {
+  "issues": [],
+  "summary": null
+ },
+ "panel-cl-10600993": [
+  {
+   "name": "Hall",
+   "role": "Author"
+  },
+  {
+   "name": "Moore",
+   "role": "Panel"
+  },
+  {
+   "name": "Prost",
+   "role": "Panel"
+  }
+ ],
+ "cl-10600993": {
+  "issues": [],
+  "summary": null
  }
 }
