@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-24T13:53:26+00:00",
+ "generated_at": "2026-08-24T15:48:17+00:00",
  "window_since": "2020-01-01",
  "coverage": {
   "complete": false,
@@ -20,10 +20,10 @@
     "count": 300
    },
    "clusters": {
-    "resume_url": "https://www.courtlistener.com/api/rest/v4/clusters/?date_filed__gte=2020-01-01&docket__court=cafc&fields=id%2Cabsolute_url%2Ccase_name%2Cdate_filed%2Cprecedential_status%2Cjudges%2Cpanel%2Cdocket_id%2Cdocket%2Cnature_of_suit%2Csyllabus%2Cheadnotes%2Cdisposition%2Csub_opinions&order_by=-date_filed&page=22",
+    "resume_url": "https://www.courtlistener.com/api/rest/v4/clusters/?date_filed__gte=2020-01-01&docket__court=cafc&fields=id%2Cabsolute_url%2Ccase_name%2Cdate_filed%2Cprecedential_status%2Cjudges%2Cpanel%2Cdocket_id%2Cdocket%2Cnature_of_suit%2Csyllabus%2Cheadnotes%2Cdisposition%2Csub_opinions&order_by=-date_filed&page=3",
     "complete": false,
     "reason": "quota exhausted",
-    "count": 420
+    "count": 40
    },
    "opinions": {
     "complete": false,
@@ -49,25 +49,47 @@
   "summaries": {
    "enabled": false,
    "have": 0,
-   "expected": 1938,
+   "expected": 1939,
    "complete": true
   },
   "opinion_text_fetches_this_run": 600,
   "opinion_text_fetch_cap": 600,
-  "latest_decision_date": "2026-08-21",
+  "latest_decision_date": "2026-08-24",
   "next_argument_date": null
  },
  "stats": {
-  "total": 2143,
+  "total": 2144,
   "pending": 204,
   "scheduled": 0,
   "awaiting": 1,
-  "decided": 1938,
+  "decided": 1939,
   "precedential": 293,
   "rule36": 0
  },
  "upcoming_argument_docket_numbers": [],
  "cases": [
+  {
+   "docket_number": "CL-10956609",
+   "case_name": "Duran v. DOJ",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-08-24",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10956609/duran-v-doj/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10956609/duran-v-doj/",
+   "url_audio": "https://www.courtlistener.com/audio/104674/duran-v-doj/"
+  },
   {
    "docket_number": "CL-10954431",
    "case_name": "US Inventor, Inc. v. Squires",
