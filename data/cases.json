@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-23T19:47:16+00:00",
+ "generated_at": "2026-08-24T13:53:26+00:00",
  "window_since": "2020-01-01",
  "coverage": {
   "complete": false,
@@ -14,16 +14,16 @@
   "window_months": 18,
   "sources": {
    "dockets": {
-    "resume_url": "https://www.courtlistener.com/api/rest/v4/dockets/",
+    "resume_url": "https://www.courtlistener.com/api/rest/v4/dockets/?court=cafc&date_filed__gte=2020-01-01&fields=id%2Cdocket_number%2Ccase_name%2Ccase_name_short%2Cdate_filed%2Cdate_argued%2Cdate_terminated%2Cappeal_from_str%2Cappeal_from%2Cabsolute_url%2Cnature_of_suit%2Cpanel_str&order_by=-date_filed&page=16",
     "complete": false,
-    "reason": "network timeouts",
-    "count": 0
+    "reason": "page budget reached",
+    "count": 300
    },
    "clusters": {
-    "resume_url": "https://www.courtlistener.com/api/rest/v4/clusters/?date_filed__gte=2020-01-01&docket__court=cafc&fields=id%2Cabsolute_url%2Ccase_name%2Cdate_filed%2Cprecedential_status%2Cjudges%2Cpanel%2Cdocket_id%2Cdocket%2Cnature_of_suit%2Csyllabus%2Cheadnotes%2Cdisposition%2Csub_opinions&order_by=-date_filed&page=21",
+    "resume_url": "https://www.courtlistener.com/api/rest/v4/clusters/?date_filed__gte=2020-01-01&docket__court=cafc&fields=id%2Cabsolute_url%2Ccase_name%2Cdate_filed%2Cprecedential_status%2Cjudges%2Cpanel%2Cdocket_id%2Cdocket%2Cnature_of_suit%2Csyllabus%2Cheadnotes%2Cdisposition%2Csub_opinions&order_by=-date_filed&page=22",
     "complete": false,
     "reason": "quota exhausted",
-    "count": 400
+    "count": 420
    },
    "opinions": {
     "complete": false,
@@ -58,8 +58,8 @@
   "next_argument_date": null
  },
  "stats": {
-  "total": 2142,
-  "pending": 203,
+  "total": 2143,
+  "pending": 204,
   "scheduled": 0,
   "awaiting": 1,
   "decided": 1938,
@@ -46917,6 +46917,22 @@
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10602683/agilent-technologies-inc-v-synthego-corp/",
    "url_audio": "https://www.courtlistener.com/audio/97686/agilent-technologies-inc-v-synthego-corp/"
+  },
+  {
+   "docket_number": "2025-1849",
+   "case_name": "233rd Street Partnership, L.P. v. United States",
+   "case_type": "Federal Claims",
+   "origin": "United States Court of Federal Claims",
+   "status": "Pending / Briefing",
+   "date_filed": "2025-06-11",
+   "date_argued": null,
+   "argument": null,
+   "decision": null,
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/74687864/233rd-street-partnership-lp-v-united-states/",
+   "url_audio": null
   },
   {
    "docket_number": "CL-10601778",
