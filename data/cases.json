@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-24T19:41:43+00:00",
+ "generated_at": "2026-08-24T21:32:23+00:00",
  "window_since": "2020-01-01",
  "coverage": {
   "complete": false,
@@ -14,15 +14,16 @@
   "window_months": 18,
   "sources": {
    "dockets": {
-    "resume_url": "https://www.courtlistener.com/api/rest/v4/dockets/?court=cafc&date_filed__gte=2020-01-01&fields=id%2Cdocket_number%2Ccase_name%2Ccase_name_short%2Cdate_filed%2Cdate_argued%2Cdate_terminated%2Cappeal_from_str%2Cappeal_from%2Cabsolute_url%2Cnature_of_suit%2Cpanel_str&order_by=-date_filed&page=15",
+    "resume_url": "https://www.courtlistener.com/api/rest/v4/dockets/?court=cafc&date_filed__gte=2020-01-01&fields=id%2Cdocket_number%2Ccase_name%2Ccase_name_short%2Cdate_filed%2Cdate_argued%2Cdate_terminated%2Cappeal_from_str%2Cappeal_from%2Cabsolute_url%2Cnature_of_suit%2Cpanel_str&order_by=-date_filed&page=16",
     "complete": false,
-    "reason": "quota exhausted",
-    "count": 280
+    "reason": "page budget reached",
+    "count": 300
    },
    "clusters": {
+    "resume_url": "https://www.courtlistener.com/api/rest/v4/clusters/?date_filed__gte=2020-01-01&docket__court=cafc&fields=id%2Cabsolute_url%2Ccase_name%2Cdate_filed%2Cprecedential_status%2Cjudges%2Cpanel%2Cdocket_id%2Cdocket%2Cnature_of_suit%2Csyllabus%2Cheadnotes%2Cdisposition%2Csub_opinions&order_by=-date_filed&page=7",
     "complete": false,
     "reason": "quota exhausted",
-    "count": 0
+    "count": 120
    },
    "opinions": {
     "complete": false,
@@ -40,7 +41,7 @@
     "reason": "ok"
    },
    "opinion_rss": {
-    "count": 97,
+    "count": 0,
     "complete": true,
     "reason": "ok"
    }
@@ -805,7 +806,7 @@
    "decision": {
     "date": "2026-08-11",
     "precedential_status": "Published",
-    "disposition": "Opinion",
+    "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10944731/fedmet-resources-corporation-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1160.OPINION.8-11-2026_2736904.pdf"
    },
@@ -849,7 +850,7 @@
    "decision": {
     "date": "2026-08-11",
     "precedential_status": "Unpublished",
-    "disposition": "Order",
+    "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10944842/lenovo-united-states-inc-v-itc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-2030.ORDER.8-11-2026_2737061.pdf"
    },
@@ -983,7 +984,7 @@
    "decision": {
     "date": "2026-08-10",
     "precedential_status": "Published",
-    "disposition": "Opinion",
+    "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10943771/dental-monitoring-sas-v-align-technology-inc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1752.OPINION.8-10-2026_2736022.pdf"
    },
@@ -1413,7 +1414,7 @@
    "decision": {
     "date": "2026-07-31",
     "precedential_status": "Unpublished",
-    "disposition": "Order",
+    "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10937650/rj-technology-llc-v-samsung-electronics-co-ltd/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1794.ORDER.7-31-2026_2731142.pdf"
    },
@@ -1981,7 +1982,7 @@
    "decision": {
     "date": "2026-07-28",
     "precedential_status": "Unpublished",
-    "disposition": "Order",
+    "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10935726/vos-selections-inc-v-trump/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1895.ORDER.7-28-2026_2729128.pdf"
    },
@@ -23547,7 +23548,7 @@
    "decision": {
     "date": "2026-01-15",
     "precedential_status": "Unpublished",
-    "disposition": "Order",
+    "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10774997/rj-technology-llc-v-samsung-electronics-co-ltd/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1794.ORDER.1-15-2026_2633534.pdf"
    },
@@ -25246,7 +25247,7 @@
    "decision": {
     "date": "2026-01-05",
     "precedential_status": "Unpublished",
-    "disposition": "Opinion",
+    "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10768891/fedmet-resources-corporation-v-magnesia-carbon-bricks-fair-trade-committee/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1160.ORDER.1-5-2026_2627744.pdf"
    },
