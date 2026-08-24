@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-24T15:48:17+00:00",
+ "generated_at": "2026-08-24T17:44:45+00:00",
  "window_since": "2020-01-01",
  "coverage": {
   "complete": false,
@@ -20,10 +20,10 @@
     "count": 300
    },
    "clusters": {
-    "resume_url": "https://www.courtlistener.com/api/rest/v4/clusters/?date_filed__gte=2020-01-01&docket__court=cafc&fields=id%2Cabsolute_url%2Ccase_name%2Cdate_filed%2Cprecedential_status%2Cjudges%2Cpanel%2Cdocket_id%2Cdocket%2Cnature_of_suit%2Csyllabus%2Cheadnotes%2Cdisposition%2Csub_opinions&order_by=-date_filed&page=3",
+    "resume_url": "https://www.courtlistener.com/api/rest/v4/clusters/?date_filed__gte=2020-01-01&docket__court=cafc&fields=id%2Cabsolute_url%2Ccase_name%2Cdate_filed%2Cprecedential_status%2Cjudges%2Cpanel%2Cdocket_id%2Cdocket%2Cnature_of_suit%2Csyllabus%2Cheadnotes%2Cdisposition%2Csub_opinions&order_by=-date_filed&page=10",
     "complete": false,
     "reason": "quota exhausted",
-    "count": 40
+    "count": 180
    },
    "opinions": {
     "complete": false,
@@ -49,7 +49,7 @@
   "summaries": {
    "enabled": false,
    "have": 0,
-   "expected": 1939,
+   "expected": 1941,
    "complete": true
   },
   "opinion_text_fetches_this_run": 600,
@@ -58,11 +58,11 @@
   "next_argument_date": null
  },
  "stats": {
-  "total": 2144,
+  "total": 2146,
   "pending": 204,
   "scheduled": 0,
   "awaiting": 1,
-  "decided": 1939,
+  "decided": 1941,
   "precedential": 293,
   "rule36": 0
  },
@@ -89,6 +89,50 @@
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10956609/duran-v-doj/",
    "url_audio": "https://www.courtlistener.com/audio/104674/duran-v-doj/"
+  },
+  {
+   "docket_number": "CL-10956646",
+   "case_name": "Absher v. United States",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-08-24",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10956646/absher-v-united-states/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10956646/absher-v-united-states/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "CL-10956645",
+   "case_name": "Singleton v. MSPB",
+   "case_type": "Federal Employment",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-08-24",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10956645/singleton-v-mspb/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10956645/singleton-v-mspb/",
+   "url_audio": null
   },
   {
    "docket_number": "CL-10954431",
