@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-25T17:45:04+00:00",
+ "generated_at": "2026-08-25T19:44:56+00:00",
  "window_since": "2020-01-01",
  "coverage": {
   "complete": false,
@@ -14,16 +14,15 @@
   "window_months": 18,
   "sources": {
    "dockets": {
-    "resume_url": "https://www.courtlistener.com/api/rest/v4/dockets/",
     "complete": false,
-    "reason": "network timeouts",
+    "reason": "HTTP 502",
     "count": 0
    },
    "clusters": {
-    "resume_url": "https://www.courtlistener.com/api/rest/v4/clusters/?date_filed__gte=2020-01-01&docket__court=cafc&fields=id%2Cabsolute_url%2Ccase_name%2Cdate_filed%2Cprecedential_status%2Cjudges%2Cpanel%2Cdocket_id%2Cdocket%2Cnature_of_suit%2Csyllabus%2Cheadnotes%2Cdisposition%2Csub_opinions&order_by=-date_filed&page=26",
+    "resume_url": "https://www.courtlistener.com/api/rest/v4/clusters/?date_filed__gte=2020-01-01&docket__court=cafc&fields=id%2Cabsolute_url%2Ccase_name%2Cdate_filed%2Cprecedential_status%2Cjudges%2Cpanel%2Cdocket_id%2Cdocket%2Cnature_of_suit%2Csyllabus%2Cheadnotes%2Cdisposition%2Csub_opinions&order_by=-date_filed&page=21",
     "complete": false,
     "reason": "quota exhausted",
-    "count": 500
+    "count": 400
    },
    "opinions": {
     "complete": false,
