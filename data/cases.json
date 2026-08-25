@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-25T15:53:43+00:00",
+ "generated_at": "2026-08-25T17:45:04+00:00",
  "window_since": "2020-01-01",
  "coverage": {
   "complete": false,
@@ -14,15 +14,16 @@
   "window_months": 18,
   "sources": {
    "dockets": {
+    "resume_url": "https://www.courtlistener.com/api/rest/v4/dockets/",
     "complete": false,
-    "reason": "HTTP 502",
-    "count": 100
+    "reason": "network timeouts",
+    "count": 0
    },
    "clusters": {
-    "resume_url": "https://www.courtlistener.com/api/rest/v4/clusters/?date_filed__gte=2020-01-01&docket__court=cafc&fields=id%2Cabsolute_url%2Ccase_name%2Cdate_filed%2Cprecedential_status%2Cjudges%2Cpanel%2Cdocket_id%2Cdocket%2Cnature_of_suit%2Csyllabus%2Cheadnotes%2Cdisposition%2Csub_opinions&order_by=-date_filed&page=22",
+    "resume_url": "https://www.courtlistener.com/api/rest/v4/clusters/?date_filed__gte=2020-01-01&docket__court=cafc&fields=id%2Cabsolute_url%2Ccase_name%2Cdate_filed%2Cprecedential_status%2Cjudges%2Cpanel%2Cdocket_id%2Cdocket%2Cnature_of_suit%2Csyllabus%2Cheadnotes%2Cdisposition%2Csub_opinions&order_by=-date_filed&page=26",
     "complete": false,
     "reason": "quota exhausted",
-    "count": 420
+    "count": 500
    },
    "opinions": {
     "complete": false,
@@ -47429,7 +47430,20 @@
     "url_cl": "https://www.courtlistener.com/opinion/10600991/shannon-v-collins/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1784.OPINION.6-9-2025_2527230.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Moore",
+     "role": "Panel"
+    },
+    {
+     "name": "Lourie",
+     "role": "Panel"
+    },
+    {
+     "name": "Bryson",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10600991/shannon-v-collins/",

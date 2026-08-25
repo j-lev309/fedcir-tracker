@@ -18762,5 +18762,23 @@
  "cl-10600957": {
   "issues": [],
   "summary": null
+ },
+ "panel-cl-10600991": [
+  {
+   "name": "Moore",
+   "role": "Panel"
+  },
+  {
+   "name": "Lourie",
+   "role": "Panel"
+  },
+  {
+   "name": "Bryson",
+   "role": "Panel"
+  }
+ ],
+ "cl-10600991": {
+  "issues": [],
+  "summary": null
  }
 }
