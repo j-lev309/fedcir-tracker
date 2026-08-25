@@ -18726,5 +18726,41 @@
  "cl-10600993": {
   "issues": [],
   "summary": null
+ },
+ "panel-cl-10600992": [
+  {
+   "name": "Taranto",
+   "role": "Panel"
+  },
+  {
+   "name": "Hughes",
+   "role": "Panel"
+  },
+  {
+   "name": "Stark",
+   "role": "Panel"
+  }
+ ],
+ "cl-10600992": {
+  "issues": [],
+  "summary": null
+ },
+ "panel-cl-10600957": [
+  {
+   "name": "Lourie",
+   "role": "Author"
+  },
+  {
+   "name": "Dyk",
+   "role": "Panel"
+  },
+  {
+   "name": "Reyna",
+   "role": "Panel"
+  }
+ ],
+ "cl-10600957": {
+  "issues": [],
+  "summary": null
  }
 }
