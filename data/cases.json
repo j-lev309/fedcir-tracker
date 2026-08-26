@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-26T19:37:24+00:00",
+ "generated_at": "2026-08-26T21:57:25+00:00",
  "window_since": "2020-01-01",
  "coverage": {
   "complete": false,
@@ -14,28 +14,26 @@
   "window_months": 18,
   "sources": {
    "dockets": {
-    "resume_url": "https://www.courtlistener.com/api/rest/v4/dockets/",
+    "resume_url": "https://www.courtlistener.com/api/rest/v4/dockets/?court=cafc&date_filed__gte=2020-01-01&fields=id%2Cdocket_number%2Ccase_name%2Ccase_name_short%2Cdate_filed%2Cdate_argued%2Cdate_terminated%2Cappeal_from_str%2Cappeal_from%2Cabsolute_url%2Cnature_of_suit%2Cpanel_str&order_by=-date_filed&page=16",
     "complete": false,
-    "reason": "network timeouts",
-    "count": 0
+    "reason": "page budget reached",
+    "count": 300
    },
    "clusters": {
-    "resume_url": "https://www.courtlistener.com/api/rest/v4/clusters/",
+    "resume_url": "https://www.courtlistener.com/api/rest/v4/clusters/?date_filed__gte=2020-01-01&docket__court=cafc&fields=id%2Cabsolute_url%2Ccase_name%2Cdate_filed%2Cprecedential_status%2Cjudges%2Cpanel%2Cdocket_id%2Cdocket%2Cnature_of_suit%2Csyllabus%2Cheadnotes%2Cdisposition%2Csub_opinions&order_by=-date_filed&page=17",
     "complete": false,
-    "reason": "network timeouts",
-    "count": 0
+    "reason": "quota exhausted",
+    "count": 320
    },
    "opinions": {
-    "resume_url": "https://www.courtlistener.com/api/rest/v4/opinions/",
     "complete": false,
-    "reason": "network timeouts",
+    "reason": "quota exhausted",
     "count": 0
    },
    "audio": {
-    "resume_url": "https://www.courtlistener.com/api/rest/v4/audio/?cursor=cD0yMDI2LTA0LTA3KzE4JTNBMzUlM0EyMC4zMDIxMjElMkIwMCUzQTAw&date_created__gte=2020-01-01&docket__court=cafc&fields=id%2Cdocket%2Ccase_name%2Cjudges%2Cabsolute_url&order_by=-date_created",
     "complete": false,
     "reason": "quota exhausted",
-    "count": 180
+    "count": 0
    },
    "scheduled_arguments": {
     "count": 0,
@@ -51,7 +49,7 @@
   "summaries": {
    "enabled": false,
    "have": 0,
-   "expected": 1948,
+   "expected": 1951,
    "complete": true
   },
   "opinion_text_fetches_this_run": 600,
@@ -60,11 +58,11 @@
   "next_argument_date": null
  },
  "stats": {
-  "total": 2152,
+  "total": 2155,
   "pending": 203,
   "scheduled": 0,
   "awaiting": 1,
-  "decided": 1948,
+  "decided": 1951,
   "precedential": 293,
   "rule36": 0
  },
@@ -205,6 +203,50 @@
    "url_audio": null
   },
   {
+   "docket_number": "CL-10958522",
+   "case_name": "Welytok v. Director of the Uspto",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-08-26",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10958522/welytok-v-director-of-the-uspto/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10958522/welytok-v-director-of-the-uspto/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "CL-10958491",
+   "case_name": "Ricks v. United States",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-08-26",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10958491/ricks-v-united-states/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10958491/ricks-v-united-states/",
+   "url_audio": null
+  },
+  {
    "docket_number": "2026-2120",
    "case_name": "Everett v. United States",
    "case_type": "Federal Claims",
@@ -215,15 +257,37 @@
    "argument": null,
    "decision": {
     "date": "2026-08-26",
-    "precedential_status": null,
+    "precedential_status": "Unpublished",
     "disposition": "Order",
-    "url_cl": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10958492/everett-v-united-states/",
     "url_pdf": "https://www.cafc.uscourts.gov/08-26-2026-26-2120-everett-v-us-order-26-2120-order-8-26-2026_2745762/"
    },
    "panel": [],
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/74664673/everett-v-united-states/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "CL-10958493",
+   "case_name": "Booker v. Ssa",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-08-26",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10958493/booker-v-ssa/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10958493/booker-v-ssa/",
    "url_audio": null
   },
   {
