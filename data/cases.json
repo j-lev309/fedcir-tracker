@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-26T16:39:35+00:00",
+ "generated_at": "2026-08-26T19:37:24+00:00",
  "window_since": "2020-01-01",
  "coverage": {
   "complete": false,
@@ -14,26 +14,28 @@
   "window_months": 18,
   "sources": {
    "dockets": {
-    "resume_url": "https://www.courtlistener.com/api/rest/v4/dockets/?court=cafc&date_filed__gte=2020-01-01&fields=id%2Cdocket_number%2Ccase_name%2Ccase_name_short%2Cdate_filed%2Cdate_argued%2Cdate_terminated%2Cappeal_from_str%2Cappeal_from%2Cabsolute_url%2Cnature_of_suit%2Cpanel_str&order_by=-date_filed&page=16",
+    "resume_url": "https://www.courtlistener.com/api/rest/v4/dockets/",
     "complete": false,
-    "reason": "page budget reached",
-    "count": 300
+    "reason": "network timeouts",
+    "count": 0
    },
    "clusters": {
-    "resume_url": "https://www.courtlistener.com/api/rest/v4/clusters/?date_filed__gte=2020-01-01&docket__court=cafc&fields=id%2Cabsolute_url%2Ccase_name%2Cdate_filed%2Cprecedential_status%2Cjudges%2Cpanel%2Cdocket_id%2Cdocket%2Cnature_of_suit%2Csyllabus%2Cheadnotes%2Cdisposition%2Csub_opinions&order_by=-date_filed&page=16",
+    "resume_url": "https://www.courtlistener.com/api/rest/v4/clusters/",
     "complete": false,
-    "reason": "quota exhausted",
-    "count": 300
+    "reason": "network timeouts",
+    "count": 0
    },
    "opinions": {
+    "resume_url": "https://www.courtlistener.com/api/rest/v4/opinions/",
     "complete": false,
-    "reason": "quota exhausted",
+    "reason": "network timeouts",
     "count": 0
    },
    "audio": {
+    "resume_url": "https://www.courtlistener.com/api/rest/v4/audio/?cursor=cD0yMDI2LTA0LTA3KzE4JTNBMzUlM0EyMC4zMDIxMjElMkIwMCUzQTAw&date_created__gte=2020-01-01&docket__court=cafc&fields=id%2Cdocket%2Ccase_name%2Cjudges%2Cabsolute_url&order_by=-date_created",
     "complete": false,
     "reason": "quota exhausted",
-    "count": 0
+    "count": 180
    },
    "scheduled_arguments": {
     "count": 0,
@@ -49,7 +51,7 @@
   "summaries": {
    "enabled": false,
    "have": 0,
-   "expected": 1947,
+   "expected": 1948,
    "complete": true
   },
   "opinion_text_fetches_this_run": 600,
@@ -59,10 +61,10 @@
  },
  "stats": {
   "total": 2152,
-  "pending": 204,
+  "pending": 203,
   "scheduled": 0,
   "awaiting": 1,
-  "decided": 1947,
+  "decided": 1948,
   "precedential": 293,
   "rule36": 0
  },
@@ -203,6 +205,28 @@
    "url_audio": null
   },
   {
+   "docket_number": "2026-2120",
+   "case_name": "Everett v. United States",
+   "case_type": "Federal Claims",
+   "origin": "United States Court of Federal Claims",
+   "status": "Decided",
+   "date_filed": "2026-08-06",
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-08-26",
+    "precedential_status": null,
+    "disposition": "Order",
+    "url_cl": null,
+    "url_pdf": "https://www.cafc.uscourts.gov/08-26-2026-26-2120-everett-v-us-order-26-2120-order-8-26-2026_2745762/"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/74664673/everett-v-united-states/",
+   "url_audio": null
+  },
+  {
    "docket_number": "CL-10956609",
    "case_name": "Duran v. DOJ",
    "case_type": "Other / Unclassified",
@@ -290,7 +314,7 @@
    ],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10954431/us-inventor-inc-v-squires/",
-   "url_audio": "https://www.courtlistener.com/audio/104756/us-inventor-inc-v-vidal/"
+   "url_audio": "https://www.courtlistener.com/audio/104756/us-inventor-inc-v-squires/"
   },
   {
    "docket_number": "CL-10954432",
@@ -1243,22 +1267,6 @@
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10940740/ravin-crossbows-llc-v-squires/",
    "url_audio": "https://www.courtlistener.com/audio/104758/ravin-crossbows-llc-v-squires/"
-  },
-  {
-   "docket_number": "2026-2120",
-   "case_name": "Everett v. United States",
-   "case_type": "Federal Claims",
-   "origin": "United States Court of Federal Claims",
-   "status": "Pending / Briefing",
-   "date_filed": "2026-08-06",
-   "date_argued": null,
-   "argument": null,
-   "decision": null,
-   "panel": [],
-   "patent_issues": [],
-   "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/74664673/everett-v-united-states/",
-   "url_audio": null
   },
   {
    "docket_number": "CL-10939977",
