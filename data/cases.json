@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-28T01:30:52+00:00",
+ "generated_at": "2026-08-28T22:59:43+00:00",
  "window_since": "2020-01-01",
  "coverage": {
   "complete": false,
@@ -20,10 +20,10 @@
     "count": 300
    },
    "clusters": {
-    "resume_url": "https://www.courtlistener.com/api/rest/v4/clusters/?date_filed__gte=2020-01-01&docket__court=cafc&fields=id%2Cabsolute_url%2Ccase_name%2Cdate_filed%2Cprecedential_status%2Cjudges%2Cpanel%2Cdocket_id%2Cdocket%2Cnature_of_suit%2Csyllabus%2Cheadnotes%2Cdisposition%2Csub_opinions&order_by=-date_filed&page=16",
+    "resume_url": "https://www.courtlistener.com/api/rest/v4/clusters/?date_filed__gte=2020-01-01&docket__court=cafc&fields=id%2Cabsolute_url%2Ccase_name%2Cdate_filed%2Cprecedential_status%2Cjudges%2Cpanel%2Cdocket_id%2Cdocket%2Cnature_of_suit%2Csyllabus%2Cheadnotes%2Cdisposition%2Csub_opinions&order_by=-date_filed&page=11",
     "complete": false,
     "reason": "quota exhausted",
-    "count": 300
+    "count": 200
    },
    "opinions": {
     "complete": false,
@@ -41,7 +41,7 @@
     "reason": "ok"
    },
    "opinion_rss": {
-    "count": 97,
+    "count": 96,
     "complete": true,
     "reason": "ok"
    }
@@ -49,25 +49,115 @@
   "summaries": {
    "enabled": false,
    "have": 0,
-   "expected": 1958,
+   "expected": 1962,
    "complete": true
   },
   "opinion_text_fetches_this_run": 600,
   "opinion_text_fetch_cap": 600,
-  "latest_decision_date": "2026-08-27",
+  "latest_decision_date": "2026-08-28",
   "next_argument_date": null
  },
  "stats": {
-  "total": 2162,
-  "pending": 203,
+  "total": 2165,
+  "pending": 202,
   "scheduled": 0,
   "awaiting": 1,
-  "decided": 1958,
-  "precedential": 293,
+  "decided": 1962,
+  "precedential": 295,
   "rule36": 0
  },
  "upcoming_argument_docket_numbers": [],
  "cases": [
+  {
+   "docket_number": "CL-10961021",
+   "case_name": "T-Mobile US, Inc. v. Kaifi LLC",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-08-28",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10961021/t-mobile-us-inc-v-kaifi-llc/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10961021/t-mobile-us-inc-v-kaifi-llc/",
+   "url_audio": "https://www.courtlistener.com/audio/104696/t-mobile-us-inc-v-kaifi-llc/"
+  },
+  {
+   "docket_number": "2025-2145",
+   "case_name": "Entropic Communications, LLC v. Dish Network L.L.C.",
+   "case_type": "Patent (PTAB)",
+   "origin": "United States Patent and Trademark Office, Patent Trial and Appeal Board",
+   "status": "Decided",
+   "date_filed": "2025-09-25",
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-08-28",
+    "precedential_status": "Unpublished",
+    "disposition": "Order",
+    "url_cl": "https://www.courtlistener.com/opinion/10961023/entropic-communications-llc-v-dish-network-llc/",
+    "url_pdf": "https://www.cafc.uscourts.gov/08-28-2026-25-2145-entropic-communications-llc-v-dish-network-llc-order-25-2145-order-8-28-2026_2747016/"
+   },
+   "panel": [],
+   "patent_issues": [
+    "Other / Procedural"
+   ],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/71733909/entropic-communications-llc-v-dish-network-llc/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "CL-10961022",
+   "case_name": "T-Mobile US, Inc. v. Kaifi LLC",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-08-28",
+    "precedential_status": "Published",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10961022/t-mobile-us-inc-v-kaifi-llc/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10961022/t-mobile-us-inc-v-kaifi-llc/",
+   "url_audio": "https://www.courtlistener.com/audio/104696/t-mobile-us-inc-v-kaifi-llc/"
+  },
+  {
+   "docket_number": "CL-10960932",
+   "case_name": "Aml Ip, LLC v. Bath & Body Works Direct, Inc.",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-08-28",
+    "precedential_status": "Published",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10960932/aml-ip-llc-v-bath-body-works-direct-inc/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10960932/aml-ip-llc-v-bath-body-works-direct-inc/",
+   "url_audio": "https://www.courtlistener.com/audio/104120/aml-ip-llc-v-bath-body-works-llc/"
+  },
   {
    "docket_number": "CL-10960298",
    "case_name": "Astellas Pharma, Inc. v. Ascent Pharmaceuticals, Inc.",
@@ -2342,7 +2432,7 @@
    "decision": {
     "date": "2026-07-28",
     "precedential_status": "Unpublished",
-    "disposition": "Order",
+    "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10935726/vos-selections-inc-v-trump/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1895.ORDER.7-28-2026_2729128.pdf"
    },
@@ -36476,22 +36566,6 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/71734017/entropic-communications-llc-v-dish-network-llc/",
-   "url_audio": null
-  },
-  {
-   "docket_number": "2025-2145",
-   "case_name": "Entropic Communications, LLC v. DISH Network L.L.C.",
-   "case_type": "Patent (PTAB)",
-   "origin": "United States Patent and Trademark Office",
-   "status": "Pending / Briefing",
-   "date_filed": "2025-09-25",
-   "date_argued": null,
-   "argument": null,
-   "decision": null,
-   "panel": [],
-   "patent_issues": [],
-   "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/71733909/entropic-communications-llc-v-dish-network-llc/",
    "url_audio": null
   },
   {
