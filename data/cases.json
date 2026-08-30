@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-30T19:48:55+00:00",
+ "generated_at": "2026-08-30T23:20:51+00:00",
  "window_since": "2020-01-01",
  "coverage": {
   "complete": false,
@@ -14,20 +14,21 @@
   "window_months": 18,
   "sources": {
    "dockets": {
-    "resume_url": "https://www.courtlistener.com/api/rest/v4/dockets/?court=cafc&date_filed__gte=2020-01-01&fields=id%2Cdocket_number%2Ccase_name%2Ccase_name_short%2Cdate_filed%2Cdate_argued%2Cdate_terminated%2Cappeal_from_str%2Cappeal_from%2Cabsolute_url%2Cnature_of_suit%2Cpanel_str&order_by=-date_filed&page=12",
+    "resume_url": "https://www.courtlistener.com/api/rest/v4/dockets/?court=cafc&date_filed__gte=2020-01-01&fields=id%2Cdocket_number%2Ccase_name%2Ccase_name_short%2Cdate_filed%2Cdate_argued%2Cdate_terminated%2Cappeal_from_str%2Cappeal_from%2Cabsolute_url%2Cnature_of_suit%2Cpanel_str&order_by=-date_filed&page=16",
     "complete": false,
-    "reason": "quota exhausted",
-    "count": 220
+    "reason": "page budget reached",
+    "count": 300
    },
    "clusters": {
     "complete": false,
-    "reason": "quota exhausted",
-    "count": 0
+    "reason": "HTTP 502",
+    "count": 120
    },
    "opinions": {
+    "resume_url": "https://www.courtlistener.com/api/rest/v4/opinions/?cluster__date_filed__gte=2020-01-01&cluster__docket__court=cafc&cursor=cD0xMTQwNTIyOA%3D%3D&fields=id%2Ccluster_id%2Cauthor_str%2Cjoined_by_str%2Ctype%2Cauthor_id%2Cjoined_by%2Cper_curiam%2Cdownload_url%2Cabsolute_url&order_by=-id",
     "complete": false,
     "reason": "quota exhausted",
-    "count": 0
+    "count": 80
    },
    "audio": {
     "complete": false,
@@ -81,7 +82,7 @@
     "precedential_status": "Unpublished",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10961021/t-mobile-us-inc-v-kaifi-llc/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1006.ORDER.8-28-2026_2746998.pdf"
    },
    "panel": [],
    "patent_issues": [],
@@ -103,7 +104,7 @@
     "precedential_status": "Unpublished",
     "disposition": "Order",
     "url_cl": "https://www.courtlistener.com/opinion/10961023/entropic-communications-llc-v-dish-network-llc/",
-    "url_pdf": "https://www.cafc.uscourts.gov/08-28-2026-25-2145-entropic-communications-llc-v-dish-network-llc-order-25-2145-order-8-28-2026_2747016/"
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-2145.ORDER.8-28-2026_2747016.pdf"
    },
    "panel": [],
    "patent_issues": [
@@ -127,7 +128,7 @@
     "precedential_status": "Published",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10961022/t-mobile-us-inc-v-kaifi-llc/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1006.OPINION.8-28-2026_2746995.pdf"
    },
    "panel": [],
    "patent_issues": [],
@@ -149,7 +150,7 @@
     "precedential_status": "Published",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10960932/aml-ip-llc-v-bath-body-works-direct-inc/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1280.OPINION.8-28-2026_2746954.pdf"
    },
    "panel": [],
    "patent_issues": [],
