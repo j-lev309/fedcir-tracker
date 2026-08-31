@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-30T23:20:51+00:00",
+ "generated_at": "2026-08-31T19:37:41+00:00",
  "window_since": "2020-01-01",
  "coverage": {
   "complete": false,
@@ -20,15 +20,15 @@
     "count": 300
    },
    "clusters": {
-    "complete": false,
-    "reason": "HTTP 502",
-    "count": 120
-   },
-   "opinions": {
-    "resume_url": "https://www.courtlistener.com/api/rest/v4/opinions/?cluster__date_filed__gte=2020-01-01&cluster__docket__court=cafc&cursor=cD0xMTQwNTIyOA%3D%3D&fields=id%2Ccluster_id%2Cauthor_str%2Cjoined_by_str%2Ctype%2Cauthor_id%2Cjoined_by%2Cper_curiam%2Cdownload_url%2Cabsolute_url&order_by=-id",
+    "resume_url": "https://www.courtlistener.com/api/rest/v4/clusters/?date_filed__gte=2020-01-01&docket__court=cafc&fields=id%2Cabsolute_url%2Ccase_name%2Cdate_filed%2Cprecedential_status%2Cjudges%2Cpanel%2Cdocket_id%2Cdocket%2Cnature_of_suit%2Csyllabus%2Cheadnotes%2Cdisposition%2Csub_opinions&order_by=-date_filed&page=16",
     "complete": false,
     "reason": "quota exhausted",
-    "count": 80
+    "count": 300
+   },
+   "opinions": {
+    "complete": false,
+    "reason": "quota exhausted",
+    "count": 0
    },
    "audio": {
     "complete": false,
@@ -49,25 +49,201 @@
   "summaries": {
    "enabled": false,
    "have": 0,
-   "expected": 1962,
+   "expected": 1970,
    "complete": true
   },
   "opinion_text_fetches_this_run": 600,
   "opinion_text_fetch_cap": 600,
-  "latest_decision_date": "2026-08-28",
+  "latest_decision_date": "2026-08-31",
   "next_argument_date": null
  },
  "stats": {
-  "total": 2165,
+  "total": 2173,
   "pending": 202,
   "scheduled": 0,
   "awaiting": 1,
-  "decided": 1962,
-  "precedential": 295,
+  "decided": 1970,
+  "precedential": 300,
   "rule36": 0
  },
  "upcoming_argument_docket_numbers": [],
  "cases": [
+  {
+   "docket_number": "CL-10962857",
+   "case_name": "Exelixis, Inc. v. Msn Laboratories Private Ltd.",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-08-31",
+    "precedential_status": "Published",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10962857/exelixis-inc-v-msn-laboratories-private-ltd/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10962857/exelixis-inc-v-msn-laboratories-private-ltd/",
+   "url_audio": "https://www.courtlistener.com/audio/105298/exelixis-inc-v-msn-laboratories-private-ltd/"
+  },
+  {
+   "docket_number": "CL-10962856",
+   "case_name": "Jadue v. Dhs",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-08-31",
+    "precedential_status": "Published",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10962856/jadue-v-dhs/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10962856/jadue-v-dhs/",
+   "url_audio": "https://www.courtlistener.com/audio/104276/jadue-v-dhs/"
+  },
+  {
+   "docket_number": "CL-10962855",
+   "case_name": "Spacetime3d, Inc. v. Apple Inc.",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-08-31",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10962855/spacetime3d-inc-v-apple-inc/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10962855/spacetime3d-inc-v-apple-inc/",
+   "url_audio": "https://www.courtlistener.com/audio/105635/spacetime3d-inc-v-apple-inc/"
+  },
+  {
+   "docket_number": "CL-10962860",
+   "case_name": "Apple Inc. v. Spacetime3d, Inc.",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-08-31",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10962860/apple-inc-v-spacetime3d-inc/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10962860/apple-inc-v-spacetime3d-inc/",
+   "url_audio": "https://www.courtlistener.com/audio/105638/apple-inc-v-spacetime3d-inc/"
+  },
+  {
+   "docket_number": "CL-10962858",
+   "case_name": "Estate of Paul Bruyea v. United States",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-08-31",
+    "precedential_status": "Published",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10962858/estate-of-paul-bruyea-v-united-states/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10962858/estate-of-paul-bruyea-v-united-states/",
+   "url_audio": "https://www.courtlistener.com/audio/102927/bruyea-v-united-states/"
+  },
+  {
+   "docket_number": "CL-10962859",
+   "case_name": "Christensen v. United States",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-08-31",
+    "precedential_status": "Published",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10962859/christensen-v-united-states/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10962859/christensen-v-united-states/",
+   "url_audio": "https://www.courtlistener.com/audio/102925/christensen-v-united-states/"
+  },
+  {
+   "docket_number": "CL-10962876",
+   "case_name": "Evolved Wireless, LLC v. Samsung Electronics America, Inc.",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-08-31",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10962876/evolved-wireless-llc-v-samsung-electronics-america-inc/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10962876/evolved-wireless-llc-v-samsung-electronics-america-inc/",
+   "url_audio": "https://www.courtlistener.com/audio/105691/evolved-wireless-llc-v-samsung-electronics-america-inc/"
+  },
+  {
+   "docket_number": "CL-10962877",
+   "case_name": "Constellation Designs, LLC v. Lg Electronics, Inc.",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-08-31",
+    "precedential_status": "Published",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10962877/constellation-designs-llc-v-lg-electronics-inc/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10962877/constellation-designs-llc-v-lg-electronics-inc/",
+   "url_audio": "https://www.courtlistener.com/audio/101539/constellation-designs-llc-v-lg-electronics-inc/"
+  },
   {
    "docket_number": "CL-10961021",
    "case_name": "T-Mobile US, Inc. v. Kaifi LLC",
