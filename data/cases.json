@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-31T23:39:17+00:00",
+ "generated_at": "2026-09-01T19:57:49+00:00",
  "window_since": "2020-01-01",
  "coverage": {
   "complete": false,
@@ -14,28 +14,26 @@
   "window_months": 18,
   "sources": {
    "dockets": {
-    "resume_url": "https://www.courtlistener.com/api/rest/v4/dockets/",
+    "resume_url": "https://www.courtlistener.com/api/rest/v4/dockets/?court=cafc&date_filed__gte=2020-01-01&fields=id%2Cdocket_number%2Ccase_name%2Ccase_name_short%2Cdate_filed%2Cdate_argued%2Cdate_terminated%2Cappeal_from_str%2Cappeal_from%2Cabsolute_url%2Cnature_of_suit%2Cpanel_str&order_by=-date_filed&page=16",
     "complete": false,
-    "reason": "network timeouts",
-    "count": 0
+    "reason": "page budget reached",
+    "count": 300
    },
    "clusters": {
-    "resume_url": "https://www.courtlistener.com/api/rest/v4/clusters/",
+    "resume_url": "https://www.courtlistener.com/api/rest/v4/clusters/?date_filed__gte=2020-01-01&docket__court=cafc&fields=id%2Cabsolute_url%2Ccase_name%2Cdate_filed%2Cprecedential_status%2Cjudges%2Cpanel%2Cdocket_id%2Cdocket%2Cnature_of_suit%2Csyllabus%2Cheadnotes%2Cdisposition%2Csub_opinions&order_by=-date_filed&page=16",
     "complete": false,
-    "reason": "network timeouts",
-    "count": 0
+    "reason": "quota exhausted",
+    "count": 300
    },
    "opinions": {
-    "resume_url": "https://www.courtlistener.com/api/rest/v4/opinions/",
     "complete": false,
-    "reason": "network timeouts",
+    "reason": "quota exhausted",
     "count": 0
    },
    "audio": {
-    "resume_url": "https://www.courtlistener.com/api/rest/v4/audio/?cursor=cD0yMDI2LTA1LTA2KzE5JTNBMzklM0EzNS40NDQ1MTklMkIwMCUzQTAw&date_created__gte=2020-01-01&docket__court=cafc&fields=id%2Cdocket%2Ccase_name%2Cjudges%2Cabsolute_url&order_by=-date_created",
     "complete": false,
     "reason": "quota exhausted",
-    "count": 120
+    "count": 0
    },
    "scheduled_arguments": {
     "count": 0,
@@ -51,25 +49,115 @@
   "summaries": {
    "enabled": false,
    "have": 0,
-   "expected": 1970,
+   "expected": 1974,
    "complete": true
   },
   "opinion_text_fetches_this_run": 600,
   "opinion_text_fetch_cap": 600,
-  "latest_decision_date": "2026-08-31",
+  "latest_decision_date": "2026-09-01",
   "next_argument_date": null
  },
  "stats": {
-  "total": 2173,
+  "total": 2177,
   "pending": 202,
   "scheduled": 0,
   "awaiting": 1,
-  "decided": 1970,
+  "decided": 1974,
   "precedential": 300,
   "rule36": 0
  },
  "upcoming_argument_docket_numbers": [],
  "cases": [
+  {
+   "docket_number": "CL-10963786",
+   "case_name": "Gurvey v. Squires",
+   "case_type": "Patent (PTAB)",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-09-01",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10963786/gurvey-v-squires/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [
+    "Other / Procedural"
+   ],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10963786/gurvey-v-squires/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "CL-10963730",
+   "case_name": "Oliver v. Opm",
+   "case_type": "Federal Employment",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-09-01",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10963730/oliver-v-opm/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10963730/oliver-v-opm/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "CL-10963610",
+   "case_name": "Sanzone v. MSPB",
+   "case_type": "Federal Employment",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-09-01",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10963610/sanzone-v-mspb/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10963610/sanzone-v-mspb/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "CL-10963770",
+   "case_name": "Booth v. MSPB",
+   "case_type": "Federal Employment",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-09-01",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10963770/booth-v-mspb/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10963770/booth-v-mspb/",
+   "url_audio": null
+  },
   {
    "docket_number": "CL-10962857",
    "case_name": "Exelixis, Inc. v. Msn Laboratories Private Ltd.",
