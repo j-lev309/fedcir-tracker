@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-01T23:03:03+00:00",
+ "generated_at": "2026-09-02T17:05:12+00:00",
  "window_since": "2020-01-01",
  "coverage": {
   "complete": false,
@@ -14,15 +14,16 @@
   "window_months": 18,
   "sources": {
    "dockets": {
-    "resume_url": "https://www.courtlistener.com/api/rest/v4/dockets/?court=cafc&date_filed__gte=2020-01-01&fields=id%2Cdocket_number%2Ccase_name%2Ccase_name_short%2Cdate_filed%2Cdate_argued%2Cdate_terminated%2Cappeal_from_str%2Cappeal_from%2Cabsolute_url%2Cnature_of_suit%2Cpanel_str&order_by=-date_filed&page=11",
+    "resume_url": "https://www.courtlistener.com/api/rest/v4/dockets/?court=cafc&date_filed__gte=2020-01-01&fields=id%2Cdocket_number%2Ccase_name%2Ccase_name_short%2Cdate_filed%2Cdate_argued%2Cdate_terminated%2Cappeal_from_str%2Cappeal_from%2Cabsolute_url%2Cnature_of_suit%2Cpanel_str&order_by=-date_filed&page=16",
     "complete": false,
-    "reason": "quota exhausted",
-    "count": 200
+    "reason": "page budget reached",
+    "count": 300
    },
    "clusters": {
+    "resume_url": "https://www.courtlistener.com/api/rest/v4/clusters/?date_filed__gte=2020-01-01&docket__court=cafc&fields=id%2Cabsolute_url%2Ccase_name%2Cdate_filed%2Cprecedential_status%2Cjudges%2Cpanel%2Cdocket_id%2Cdocket%2Cnature_of_suit%2Csyllabus%2Cheadnotes%2Cdisposition%2Csub_opinions&order_by=-date_filed&page=16",
     "complete": false,
     "reason": "quota exhausted",
-    "count": 0
+    "count": 300
    },
    "opinions": {
     "complete": false,
@@ -48,25 +49,157 @@
   "summaries": {
    "enabled": false,
    "have": 0,
-   "expected": 1974,
+   "expected": 1980,
    "complete": true
   },
   "opinion_text_fetches_this_run": 600,
   "opinion_text_fetch_cap": 600,
-  "latest_decision_date": "2026-09-01",
+  "latest_decision_date": "2026-09-02",
   "next_argument_date": null
  },
  "stats": {
-  "total": 2177,
+  "total": 2183,
   "pending": 202,
   "scheduled": 0,
   "awaiting": 1,
-  "decided": 1974,
-  "precedential": 300,
+  "decided": 1980,
+  "precedential": 301,
   "rule36": 0
  },
  "upcoming_argument_docket_numbers": [],
  "cases": [
+  {
+   "docket_number": "CL-10964873",
+   "case_name": "Karp v. United States",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-09-02",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10964873/karp-v-united-states/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10964873/karp-v-united-states/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "CL-10964728",
+   "case_name": "Netlist, Inc. v. Micron Technology, Inc.",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-09-02",
+    "precedential_status": "Published",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10964728/netlist-inc-v-micron-technology-inc/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10964728/netlist-inc-v-micron-technology-inc/",
+   "url_audio": "https://www.courtlistener.com/audio/103023/netlist-inc-v-samsung-electronics-co-ltd/"
+  },
+  {
+   "docket_number": "CL-10964799",
+   "case_name": "Vieth v. Mom Enterprises, LLC",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-09-02",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10964799/vieth-v-mom-enterprises-llc/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10964799/vieth-v-mom-enterprises-llc/",
+   "url_audio": "https://www.courtlistener.com/audio/105322/vieth-v-mom-enterprises-llc/"
+  },
+  {
+   "docket_number": "CL-10964800",
+   "case_name": "Netlist, Inc. v. Micron Technology, Inc.",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-09-02",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10964800/netlist-inc-v-micron-technology-inc/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10964800/netlist-inc-v-micron-technology-inc/",
+   "url_audio": "https://www.courtlistener.com/audio/103020/netlist-inc-v-samsung-electronics-co-ltd/"
+  },
+  {
+   "docket_number": "CL-10964801",
+   "case_name": "Netlist, Inc. v. Micron Technology, Inc.",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-09-02",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10964801/netlist-inc-v-micron-technology-inc/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10964801/netlist-inc-v-micron-technology-inc/",
+   "url_audio": "https://www.courtlistener.com/audio/103022/netlist-inc-v-samsung-electronics-co-ltd/"
+  },
+  {
+   "docket_number": "CL-10964802",
+   "case_name": "Hydraulics International, Inc. v. United States",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-09-02",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10964802/hydraulics-international-inc-v-united-states/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10964802/hydraulics-international-inc-v-united-states/",
+   "url_audio": null
+  },
   {
    "docket_number": "CL-10963786",
    "case_name": "Gurvey v. Squires",
