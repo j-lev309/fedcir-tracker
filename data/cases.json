@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-02T17:05:12+00:00",
+ "generated_at": "2026-09-02T21:55:48+00:00",
  "window_since": "2020-01-01",
  "coverage": {
   "complete": false,
@@ -58,8 +58,8 @@
   "next_argument_date": null
  },
  "stats": {
-  "total": 2183,
-  "pending": 202,
+  "total": 2184,
+  "pending": 203,
   "scheduled": 0,
   "awaiting": 1,
   "decided": 1980,
@@ -1724,6 +1724,22 @@
    ],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/71525944/lenovo-united-states-inc-v-itc/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "2026-2131",
+   "case_name": "Valjakka v. Netflix, Inc.",
+   "case_type": "Patent (District Ct.)",
+   "origin": "United States District Court for the Northern District of California",
+   "status": "Pending / Briefing",
+   "date_filed": "2026-08-11",
+   "date_argued": null,
+   "argument": null,
+   "decision": null,
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/74741334/valjakka-v-netflix-inc/",
    "url_audio": null
   },
   {
