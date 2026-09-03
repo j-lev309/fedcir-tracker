@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-03T18:33:43+00:00",
+ "generated_at": "2026-09-03T23:03:15+00:00",
  "window_since": "2020-01-01",
  "coverage": {
   "complete": false,
@@ -20,10 +20,10 @@
     "count": 300
    },
    "clusters": {
-    "resume_url": "https://www.courtlistener.com/api/rest/v4/clusters/?date_filed__gte=2020-01-01&docket__court=cafc&fields=id%2Cabsolute_url%2Ccase_name%2Cdate_filed%2Cprecedential_status%2Cjudges%2Cpanel%2Cdocket_id%2Cdocket%2Cnature_of_suit%2Csyllabus%2Cheadnotes%2Cdisposition%2Csub_opinions&order_by=-date_filed&page=13",
+    "resume_url": "https://www.courtlistener.com/api/rest/v4/clusters/?date_filed__gte=2020-01-01&docket__court=cafc&fields=id%2Cabsolute_url%2Ccase_name%2Cdate_filed%2Cprecedential_status%2Cjudges%2Cpanel%2Cdocket_id%2Cdocket%2Cnature_of_suit%2Csyllabus%2Cheadnotes%2Cdisposition%2Csub_opinions&order_by=-date_filed&page=16",
     "complete": false,
     "reason": "quota exhausted",
-    "count": 240
+    "count": 300
    },
    "opinions": {
     "complete": false,
@@ -49,7 +49,7 @@
   "summaries": {
    "enabled": false,
    "have": 0,
-   "expected": 1982,
+   "expected": 1983,
    "complete": true
   },
   "opinion_text_fetches_this_run": 600,
@@ -58,11 +58,11 @@
   "next_argument_date": null
  },
  "stats": {
-  "total": 2187,
+  "total": 2188,
   "pending": 204,
   "scheduled": 0,
   "awaiting": 1,
-  "decided": 1982,
+  "decided": 1983,
   "precedential": 302,
   "rule36": 0
  },
@@ -110,6 +110,28 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10965839/biofer-spa-v-vifor-international-ag/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "CL-10966116",
+   "case_name": "Davitt v. Army",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-09-03",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10966116/davitt-v-army/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10966116/davitt-v-army/",
    "url_audio": null
   },
   {
