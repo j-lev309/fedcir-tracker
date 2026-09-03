@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-03T16:53:30+00:00",
+ "generated_at": "2026-09-03T18:33:43+00:00",
  "window_since": "2020-01-01",
  "coverage": {
   "complete": false,
@@ -14,15 +14,16 @@
   "window_months": 18,
   "sources": {
    "dockets": {
-    "resume_url": "https://www.courtlistener.com/api/rest/v4/dockets/?court=cafc&date_filed__gte=2020-01-01&fields=id%2Cdocket_number%2Ccase_name%2Ccase_name_short%2Cdate_filed%2Cdate_argued%2Cdate_terminated%2Cappeal_from_str%2Cappeal_from%2Cabsolute_url%2Cnature_of_suit%2Cpanel_str&order_by=-date_filed&page=6",
+    "resume_url": "https://www.courtlistener.com/api/rest/v4/dockets/?court=cafc&date_filed__gte=2020-01-01&fields=id%2Cdocket_number%2Ccase_name%2Ccase_name_short%2Cdate_filed%2Cdate_argued%2Cdate_terminated%2Cappeal_from_str%2Cappeal_from%2Cabsolute_url%2Cnature_of_suit%2Cpanel_str&order_by=-date_filed&page=16",
     "complete": false,
-    "reason": "quota exhausted",
-    "count": 100
+    "reason": "page budget reached",
+    "count": 300
    },
    "clusters": {
+    "resume_url": "https://www.courtlistener.com/api/rest/v4/clusters/?date_filed__gte=2020-01-01&docket__court=cafc&fields=id%2Cabsolute_url%2Ccase_name%2Cdate_filed%2Cprecedential_status%2Cjudges%2Cpanel%2Cdocket_id%2Cdocket%2Cnature_of_suit%2Csyllabus%2Cheadnotes%2Cdisposition%2Csub_opinions&order_by=-date_filed&page=13",
     "complete": false,
     "reason": "quota exhausted",
-    "count": 0
+    "count": 240
    },
    "opinions": {
     "complete": false,
@@ -48,25 +49,69 @@
   "summaries": {
    "enabled": false,
    "have": 0,
-   "expected": 1980,
+   "expected": 1982,
    "complete": true
   },
   "opinion_text_fetches_this_run": 600,
   "opinion_text_fetch_cap": 600,
-  "latest_decision_date": "2026-09-02",
+  "latest_decision_date": "2026-09-03",
   "next_argument_date": null
  },
  "stats": {
-  "total": 2184,
-  "pending": 203,
+  "total": 2187,
+  "pending": 204,
   "scheduled": 0,
   "awaiting": 1,
-  "decided": 1980,
-  "precedential": 301,
+  "decided": 1982,
+  "precedential": 302,
   "rule36": 0
  },
  "upcoming_argument_docket_numbers": [],
  "cases": [
+  {
+   "docket_number": "CL-10965838",
+   "case_name": "Loomis v. Collins",
+   "case_type": "Veterans",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-09-03",
+    "precedential_status": "Published",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10965838/loomis-v-collins/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10965838/loomis-v-collins/",
+   "url_audio": "https://www.courtlistener.com/audio/105653/loomis-v-collins/"
+  },
+  {
+   "docket_number": "CL-10965839",
+   "case_name": "Biofer S.P.A. v. Vifor (International) Ag.",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-09-03",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10965839/biofer-spa-v-vifor-international-ag/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10965839/biofer-spa-v-vifor-international-ag/",
+   "url_audio": null
+  },
   {
    "docket_number": "CL-10964873",
    "case_name": "Karp v. United States",
@@ -287,6 +332,22 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10963770/booth-v-mspb/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "2026-2220",
+   "case_name": "In re: Sanofi",
+   "case_type": "Patent (PTAB)",
+   "origin": "United States Patent and Trademark Office",
+   "status": "Pending / Briefing",
+   "date_filed": "2026-09-01",
+   "date_argued": null,
+   "argument": null,
+   "decision": null,
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/74745096/in-re-sanofi/",
    "url_audio": null
   },
   {
