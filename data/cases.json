@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-03T23:03:15+00:00",
+ "generated_at": "2026-09-04T16:49:49+00:00",
  "window_since": "2020-01-01",
  "coverage": {
   "complete": false,
@@ -49,25 +49,113 @@
   "summaries": {
    "enabled": false,
    "have": 0,
-   "expected": 1983,
+   "expected": 1987,
    "complete": true
   },
   "opinion_text_fetches_this_run": 600,
   "opinion_text_fetch_cap": 600,
-  "latest_decision_date": "2026-09-03",
+  "latest_decision_date": "2026-09-04",
   "next_argument_date": null
  },
  "stats": {
-  "total": 2188,
+  "total": 2192,
   "pending": 204,
   "scheduled": 0,
   "awaiting": 1,
-  "decided": 1983,
-  "precedential": 302,
+  "decided": 1987,
+  "precedential": 303,
   "rule36": 0
  },
  "upcoming_argument_docket_numbers": [],
  "cases": [
+  {
+   "docket_number": "CL-10967374",
+   "case_name": "Jetblack Cycling Pty Ltd. v. Wahoo Fitness L.L.C.",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-09-04",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10967374/jetblack-cycling-pty-ltd-v-wahoo-fitness-llc/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10967374/jetblack-cycling-pty-ltd-v-wahoo-fitness-llc/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "CL-10967330",
+   "case_name": "Inari Medical, Inc. v. Imperative Care, Inc.",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-09-04",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10967330/inari-medical-inc-v-imperative-care-inc/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10967330/inari-medical-inc-v-imperative-care-inc/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "CL-10967331",
+   "case_name": "Connecticut Yankee Atomic Power Company v. United States",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-09-04",
+    "precedential_status": "Published",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10967331/connecticut-yankee-atomic-power-company-v-united-states/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10967331/connecticut-yankee-atomic-power-company-v-united-states/",
+   "url_audio": "https://www.courtlistener.com/audio/105661/connecticut-yankee-atomic-power-company-v-united-states/"
+  },
+  {
+   "docket_number": "CL-10967329",
+   "case_name": "Wirelesswerx Ip, LLC v. Audi of America, Inc.",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-09-04",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10967329/wirelesswerx-ip-llc-v-audi-of-america-inc/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10967329/wirelesswerx-ip-llc-v-audi-of-america-inc/",
+   "url_audio": null
+  },
   {
    "docket_number": "CL-10965838",
    "case_name": "Loomis v. Collins",
@@ -8054,12 +8142,12 @@
    "url_audio": "https://www.courtlistener.com/audio/105349/burns-v-dhs/"
   },
   {
-   "docket_number": "CL-10873028",
+   "docket_number": "2025-2031",
    "case_name": "Coleman v. MSPB",
    "case_type": "Federal Employment",
-   "origin": null,
+   "origin": "Merit Systems Protection Board",
    "status": "Decided",
-   "date_filed": null,
+   "date_filed": "2025-08-19",
    "date_argued": null,
    "argument": null,
    "decision": {
@@ -8085,7 +8173,7 @@
    ],
    "patent_issues": [],
    "summary": null,
-   "url_cl": "https://www.courtlistener.com/opinion/10873028/coleman-v-mspb/",
+   "url_cl": "https://www.courtlistener.com/docket/73464419/coleman-v-mspb/",
    "url_audio": null
   },
   {
