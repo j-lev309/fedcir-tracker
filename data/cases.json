@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-07T22:06:35+00:00",
+ "generated_at": "2026-09-08T18:30:09+00:00",
  "window_since": "2020-01-01",
  "coverage": {
   "complete": false,
@@ -20,10 +20,10 @@
     "count": 300
    },
    "clusters": {
-    "resume_url": "https://www.courtlistener.com/api/rest/v4/clusters/?date_filed__gte=2020-01-01&docket__court=cafc&fields=id%2Cabsolute_url%2Ccase_name%2Cdate_filed%2Cprecedential_status%2Cjudges%2Cpanel%2Cdocket_id%2Cdocket%2Cnature_of_suit%2Csyllabus%2Cheadnotes%2Cdisposition%2Csub_opinions&order_by=-date_filed&page=16",
+    "resume_url": "https://www.courtlistener.com/api/rest/v4/clusters/?date_filed__gte=2020-01-01&docket__court=cafc&fields=id%2Cabsolute_url%2Ccase_name%2Cdate_filed%2Cprecedential_status%2Cjudges%2Cpanel%2Cdocket_id%2Cdocket%2Cnature_of_suit%2Csyllabus%2Cheadnotes%2Cdisposition%2Csub_opinions&order_by=-date_filed&page=17",
     "complete": false,
     "reason": "quota exhausted",
-    "count": 300
+    "count": 320
    },
    "opinions": {
     "complete": false,
@@ -41,7 +41,7 @@
     "reason": "ok"
    },
    "opinion_rss": {
-    "count": 96,
+    "count": 95,
     "complete": true,
     "reason": "ok"
    }
@@ -49,25 +49,113 @@
   "summaries": {
    "enabled": false,
    "have": 0,
-   "expected": 1987,
+   "expected": 1991,
    "complete": true
   },
   "opinion_text_fetches_this_run": 600,
   "opinion_text_fetch_cap": 600,
-  "latest_decision_date": "2026-09-04",
+  "latest_decision_date": "2026-09-08",
   "next_argument_date": null
  },
  "stats": {
-  "total": 2192,
+  "total": 2196,
   "pending": 204,
   "scheduled": 0,
   "awaiting": 1,
-  "decided": 1987,
-  "precedential": 303,
+  "decided": 1991,
+  "precedential": 304,
   "rule36": 0
  },
  "upcoming_argument_docket_numbers": [],
  "cases": [
+  {
+   "docket_number": "CL-10969176",
+   "case_name": "Asafi v. Western Digital Technologies, Inc.",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-09-08",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10969176/asafi-v-western-digital-technologies-inc/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10969176/asafi-v-western-digital-technologies-inc/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "CL-10968982",
+   "case_name": "Viavi Solutions Inc. v. Platinum Optics Technology Inc.",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-09-08",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10968982/viavi-solutions-inc-v-platinum-optics-technology-inc/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10968982/viavi-solutions-inc-v-platinum-optics-technology-inc/",
+   "url_audio": "https://www.courtlistener.com/audio/105296/viavi-solutions-inc-v-platinum-optics-technology-inc/"
+  },
+  {
+   "docket_number": "CL-10968983",
+   "case_name": "Brack v. Collins",
+   "case_type": "Veterans",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-09-08",
+    "precedential_status": "Published",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10968983/brack-v-collins/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10968983/brack-v-collins/",
+   "url_audio": "https://www.courtlistener.com/audio/104732/brack-v-collins/"
+  },
+  {
+   "docket_number": "CL-10969002",
+   "case_name": "Christensen v. United States",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-09-08",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10969002/christensen-v-united-states/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10969002/christensen-v-united-states/",
+   "url_audio": "https://www.courtlistener.com/audio/102925/christensen-v-united-states/"
+  },
   {
    "docket_number": "CL-10967374",
    "case_name": "Jetblack Cycling Pty Ltd. v. Wahoo Fitness L.L.C.",
