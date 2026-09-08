@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-08T18:30:09+00:00",
+ "generated_at": "2026-09-08T19:54:37+00:00",
  "window_since": "2020-01-01",
  "coverage": {
   "complete": false,
@@ -14,21 +14,20 @@
   "window_months": 18,
   "sources": {
    "dockets": {
-    "resume_url": "https://www.courtlistener.com/api/rest/v4/dockets/?court=cafc&date_filed__gte=2020-01-01&fields=id%2Cdocket_number%2Ccase_name%2Ccase_name_short%2Cdate_filed%2Cdate_argued%2Cdate_terminated%2Cappeal_from_str%2Cappeal_from%2Cabsolute_url%2Cnature_of_suit%2Cpanel_str&order_by=-date_filed&page=16",
     "complete": false,
-    "reason": "page budget reached",
-    "count": 300
+    "reason": "HTTP 502",
+    "count": 60
    },
    "clusters": {
-    "resume_url": "https://www.courtlistener.com/api/rest/v4/clusters/?date_filed__gte=2020-01-01&docket__court=cafc&fields=id%2Cabsolute_url%2Ccase_name%2Cdate_filed%2Cprecedential_status%2Cjudges%2Cpanel%2Cdocket_id%2Cdocket%2Cnature_of_suit%2Csyllabus%2Cheadnotes%2Cdisposition%2Csub_opinions&order_by=-date_filed&page=17",
     "complete": false,
-    "reason": "quota exhausted",
-    "count": 320
+    "reason": "HTTP 502",
+    "count": 20
    },
    "opinions": {
+    "resume_url": "https://www.courtlistener.com/api/rest/v4/opinions/?cluster__date_filed__gte=2020-01-01&cluster__docket__court=cafc&cursor=cD0xMTMyMTUyMQ%3D%3D&fields=id%2Ccluster_id%2Cauthor_str%2Cjoined_by_str%2Ctype%2Cauthor_id%2Cjoined_by%2Cper_curiam%2Cdownload_url%2Cabsolute_url&order_by=-id",
     "complete": false,
     "reason": "quota exhausted",
-    "count": 0
+    "count": 420
    },
    "audio": {
     "complete": false,
@@ -82,7 +81,7 @@
     "precedential_status": "Unpublished",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10969176/asafi-v-western-digital-technologies-inc/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1889.ORDER.9-8-2026_2752106.pdf"
    },
    "panel": [],
    "patent_issues": [],
@@ -104,7 +103,7 @@
     "precedential_status": "Unpublished",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10968982/viavi-solutions-inc-v-platinum-optics-technology-inc/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1362.OPINION.9-8-2026_2751857.pdf"
    },
    "panel": [],
    "patent_issues": [],
@@ -126,7 +125,7 @@
     "precedential_status": "Published",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10968983/brack-v-collins/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1205.OPINION.9-8-2026_2751845.pdf"
    },
    "panel": [],
    "patent_issues": [],
@@ -148,7 +147,7 @@
     "precedential_status": "Unpublished",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10969002/christensen-v-united-states/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1284.ERRATA.9-8-2026_2751863.pdf"
    },
    "panel": [],
    "patent_issues": [],
@@ -170,7 +169,7 @@
     "precedential_status": "Unpublished",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10967374/jetblack-cycling-pty-ltd-v-wahoo-fitness-llc/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-2038.ORDER.9-4-2026_2751110.pdf"
    },
    "panel": [],
    "patent_issues": [],
@@ -192,7 +191,7 @@
     "precedential_status": "Unpublished",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10967330/inari-medical-inc-v-imperative-care-inc/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1552.ORDER.9-4-2026_2751082.pdf"
    },
    "panel": [],
    "patent_issues": [],
@@ -214,7 +213,7 @@
     "precedential_status": "Published",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10967331/connecticut-yankee-atomic-power-company-v-united-states/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1395.OPINION.9-4-2026_2751042.pdf"
    },
    "panel": [],
    "patent_issues": [],
@@ -236,7 +235,7 @@
     "precedential_status": "Unpublished",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10967329/wirelesswerx-ip-llc-v-audi-of-america-inc/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1736.ORDER.9-4-2026_2751067.pdf"
    },
    "panel": [],
    "patent_issues": [],
@@ -258,7 +257,7 @@
     "precedential_status": "Published",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10965838/loomis-v-collins/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1063.OPINION.9-3-2026_2750250.pdf"
    },
    "panel": [],
    "patent_issues": [],
@@ -280,7 +279,7 @@
     "precedential_status": "Unpublished",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10965839/biofer-spa-v-vifor-international-ag/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1005.OPINION.9-3-2026_2750224.pdf"
    },
    "panel": [],
    "patent_issues": [],
@@ -302,7 +301,7 @@
     "precedential_status": "Unpublished",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10966116/davitt-v-army/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1993.ORDER.9-3-2026_2750758.pdf"
    },
    "panel": [],
    "patent_issues": [],
@@ -324,7 +323,7 @@
     "precedential_status": "Unpublished",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10964873/karp-v-united-states/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-2205.ORDER.9-2-2026_2749679.pdf"
    },
    "panel": [],
    "patent_issues": [],
@@ -346,7 +345,7 @@
     "precedential_status": "Published",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10964728/netlist-inc-v-micron-technology-inc/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1707.OPINION.9-2-2026_2749527.pdf"
    },
    "panel": [],
    "patent_issues": [],
@@ -368,7 +367,7 @@
     "precedential_status": "Unpublished",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10964799/vieth-v-mom-enterprises-llc/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1159.OPINION.9-2-2026_2749585.pdf"
    },
    "panel": [],
    "patent_issues": [],
@@ -390,7 +389,7 @@
     "precedential_status": "Unpublished",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10964800/netlist-inc-v-micron-technology-inc/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-2240.OPINION.9-2-2026_2749568.pdf"
    },
    "panel": [],
    "patent_issues": [],
@@ -412,7 +411,7 @@
     "precedential_status": "Unpublished",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10964801/netlist-inc-v-micron-technology-inc/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1859.OPINION.9-2-2026_2749553.pdf"
    },
    "panel": [],
    "patent_issues": [],
@@ -434,7 +433,7 @@
     "precedential_status": "Unpublished",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10964802/hydraulics-international-inc-v-united-states/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1216.ORDER.9-2-2026_2749544.pdf"
    },
    "panel": [],
    "patent_issues": [],
@@ -456,7 +455,7 @@
     "precedential_status": "Unpublished",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10963786/gurvey-v-squires/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1913.ORDER.9-1-2026_2749138.pdf"
    },
    "panel": [],
    "patent_issues": [
@@ -480,7 +479,7 @@
     "precedential_status": "Unpublished",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10963730/oliver-v-opm/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1985.ORDER.9-1-2026_2748873.pdf"
    },
    "panel": [],
    "patent_issues": [],
@@ -502,7 +501,7 @@
     "precedential_status": "Unpublished",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10963610/sanzone-v-mspb/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-2033.ORDER.9-1-2026_2748784.pdf"
    },
    "panel": [],
    "patent_issues": [],
@@ -524,7 +523,7 @@
     "precedential_status": "Unpublished",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10963770/booth-v-mspb/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1447.ORDER.9-1-2026_2749039.pdf"
    },
    "panel": [],
    "patent_issues": [],
