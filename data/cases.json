@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-08T23:16:49+00:00",
+ "generated_at": "2026-09-09T18:25:33+00:00",
  "window_since": "2020-01-01",
  "coverage": {
   "complete": false,
@@ -14,18 +14,17 @@
   "window_months": 18,
   "sources": {
    "dockets": {
-    "resume_url": "https://www.courtlistener.com/api/rest/v4/dockets/?court=cafc&date_filed__gte=2020-01-01&fields=id%2Cdocket_number%2Ccase_name%2Ccase_name_short%2Cdate_filed%2Cdate_argued%2Cdate_terminated%2Cappeal_from_str%2Cappeal_from%2Cabsolute_url%2Cnature_of_suit%2Cpanel_str&order_by=-date_filed&page=16",
+    "resume_url": "https://www.courtlistener.com/api/rest/v4/dockets/?court=cafc&date_filed__gte=2020-01-01&fields=id%2Cdocket_number%2Ccase_name%2Ccase_name_short%2Cdate_filed%2Cdate_argued%2Cdate_terminated%2Cappeal_from_str%2Cappeal_from%2Cabsolute_url%2Cnature_of_suit%2Cpanel_str&order_by=-date_filed&page=13",
     "complete": false,
-    "reason": "page budget reached",
-    "count": 300
+    "reason": "quota exhausted",
+    "count": 240
    },
    "clusters": {
     "complete": false,
-    "reason": "HTTP 502",
-    "count": 160
+    "reason": "quota exhausted",
+    "count": 0
    },
    "opinions": {
-    "resume_url": "https://www.courtlistener.com/api/rest/v4/opinions/",
     "complete": false,
     "reason": "quota exhausted",
     "count": 0
@@ -41,7 +40,7 @@
     "reason": "ok"
    },
    "opinion_rss": {
-    "count": 95,
+    "count": 96,
     "complete": true,
     "reason": "ok"
    }
@@ -58,8 +57,8 @@
   "next_argument_date": null
  },
  "stats": {
-  "total": 2196,
-  "pending": 204,
+  "total": 2197,
+  "pending": 205,
   "scheduled": 0,
   "awaiting": 1,
   "decided": 1991,
@@ -12596,6 +12595,22 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/74656035/acceleration-bay-llc-v-amazon-web-services-inc/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "2026-1775",
+   "case_name": "ABC IP LLC v. Hoffman",
+   "case_type": "Patent (District Ct.)",
+   "origin": "United States District Court for the Eastern District of Texas",
+   "status": "Pending / Briefing",
+   "date_filed": "2026-05-05",
+   "date_argued": null,
+   "argument": null,
+   "decision": null,
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/74765129/abc-ip-llc-v-hoffman/",
    "url_audio": null
   },
   {
