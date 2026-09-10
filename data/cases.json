@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-10T19:38:00+00:00",
+ "generated_at": "2026-09-10T21:42:33+00:00",
  "window_since": "2020-01-01",
  "coverage": {
   "complete": false,
@@ -20,10 +20,10 @@
     "count": 300
    },
    "clusters": {
-    "resume_url": "https://www.courtlistener.com/api/rest/v4/clusters/?date_filed__gte=2020-01-01&docket__court=cafc&fields=id%2Cabsolute_url%2Ccase_name%2Cdate_filed%2Cprecedential_status%2Cjudges%2Cpanel%2Cdocket_id%2Cdocket%2Cnature_of_suit%2Csyllabus%2Cheadnotes%2Cdisposition%2Csub_opinions&order_by=-date_filed&page=8",
+    "resume_url": "https://www.courtlistener.com/api/rest/v4/clusters/?date_filed__gte=2020-01-01&docket__court=cafc&fields=id%2Cabsolute_url%2Ccase_name%2Cdate_filed%2Cprecedential_status%2Cjudges%2Cpanel%2Cdocket_id%2Cdocket%2Cnature_of_suit%2Csyllabus%2Cheadnotes%2Cdisposition%2Csub_opinions&order_by=-date_filed&page=16",
     "complete": false,
     "reason": "quota exhausted",
-    "count": 140
+    "count": 300
    },
    "opinions": {
     "complete": false,
@@ -59,9 +59,9 @@
  },
  "stats": {
   "total": 2207,
-  "pending": 203,
+  "pending": 202,
   "scheduled": 0,
-  "awaiting": 3,
+  "awaiting": 4,
   "decided": 2001,
   "precedential": 305,
   "rule36": 0
@@ -17926,9 +17926,9 @@
    "case_name": "ABC IP LLC v. Peak Tactical LLC",
    "case_type": "Patent (District Ct.)",
    "origin": "United States District Court for the District of Wyoming",
-   "status": "Pending / Briefing",
+   "status": "Argued \u2014 Awaiting Decision",
    "date_filed": "2026-03-17",
-   "date_argued": null,
+   "date_argued": "2026-09-10",
    "argument": null,
    "decision": null,
    "panel": [],
