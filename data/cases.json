@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-10T16:56:45+00:00",
+ "generated_at": "2026-09-10T19:38:00+00:00",
  "window_since": "2020-01-01",
  "coverage": {
   "complete": false,
@@ -20,10 +20,10 @@
     "count": 300
    },
    "clusters": {
-    "resume_url": "https://www.courtlistener.com/api/rest/v4/clusters/?date_filed__gte=2020-01-01&docket__court=cafc&fields=id%2Cabsolute_url%2Ccase_name%2Cdate_filed%2Cprecedential_status%2Cjudges%2Cpanel%2Cdocket_id%2Cdocket%2Cnature_of_suit%2Csyllabus%2Cheadnotes%2Cdisposition%2Csub_opinions&order_by=-date_filed&page=9",
+    "resume_url": "https://www.courtlistener.com/api/rest/v4/clusters/?date_filed__gte=2020-01-01&docket__court=cafc&fields=id%2Cabsolute_url%2Ccase_name%2Cdate_filed%2Cprecedential_status%2Cjudges%2Cpanel%2Cdocket_id%2Cdocket%2Cnature_of_suit%2Csyllabus%2Cheadnotes%2Cdisposition%2Csub_opinions&order_by=-date_filed&page=8",
     "complete": false,
     "reason": "quota exhausted",
-    "count": 160
+    "count": 140
    },
    "opinions": {
     "complete": false,
@@ -49,7 +49,7 @@
   "summaries": {
    "enabled": false,
    "have": 0,
-   "expected": 2000,
+   "expected": 2001,
    "complete": true
   },
   "opinion_text_fetches_this_run": 600,
@@ -58,11 +58,11 @@
   "next_argument_date": null
  },
  "stats": {
-  "total": 2206,
-  "pending": 204,
+  "total": 2207,
+  "pending": 203,
   "scheduled": 0,
-  "awaiting": 2,
-  "decided": 2000,
+  "awaiting": 3,
+  "decided": 2001,
   "precedential": 305,
   "rule36": 0
  },
@@ -200,6 +200,30 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10970411/burgan-v-collins/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "CL-10970591",
+   "case_name": "In Re TEXTNOW INC.",
+   "case_type": "Patent (PTAB)",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-09-10",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/10970591/in-re-textnow-inc/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [
+    "Other / Procedural"
+   ],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/10970591/in-re-textnow-inc/",
    "url_audio": null
   },
   {
@@ -50940,9 +50964,9 @@
    "case_name": "Caddo Systems, Inc. v. Jetbrains Americas, Inc.",
    "case_type": "Patent (District Ct.)",
    "origin": "United States District Court for the District of Delaware",
-   "status": "Pending / Briefing",
+   "status": "Argued \u2014 Awaiting Decision",
    "date_filed": "2025-05-13",
-   "date_argued": null,
+   "date_argued": "2026-09-10",
    "argument": null,
    "decision": null,
    "panel": [],
