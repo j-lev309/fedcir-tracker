@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-11T21:52:41+00:00",
+ "generated_at": "2026-09-11T22:59:58+00:00",
  "window_since": "2020-01-01",
  "coverage": {
   "complete": false,
@@ -25,16 +25,15 @@
     "count": 0
    },
    "opinions": {
-    "resume_url": "https://www.courtlistener.com/api/rest/v4/opinions/",
     "complete": false,
-    "reason": "network timeouts",
+    "reason": "quota exhausted",
     "count": 0
    },
    "audio": {
-    "resume_url": "https://www.courtlistener.com/api/rest/v4/audio/?cursor=cD0yMDI1LTA2LTAyKzE3JTNBMzAlM0E1Mi4xNjAwNDAlMkIwMCUzQTAw&date_created__gte=2020-01-01&docket__court=cafc&fields=id%2Cdocket%2Ccase_name%2Cjudges%2Cabsolute_url&order_by=-date_created",
+    "resume_url": "https://www.courtlistener.com/api/rest/v4/audio/?cursor=cD0yMDI0LTA4LTA2KzE3JTNBMzAlM0E1OC4zOTc5NjklMkIwMCUzQTAw&date_created__gte=2020-01-01&docket__court=cafc&fields=id%2Cdocket%2Ccase_name%2Cjudges%2Cabsolute_url&order_by=-date_created",
     "complete": false,
     "reason": "quota exhausted",
-    "count": 480
+    "count": 400
    },
    "scheduled_arguments": {
     "count": 0,
@@ -22711,7 +22710,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10783998/lashify-inc-v-itc/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/96116/lashify-inc-v-itc/"
   },
   {
    "docket_number": "CL-10783896",
@@ -23365,7 +23364,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10781845/lesko-v-united-states/",
-   "url_audio": "https://www.courtlistener.com/audio/100301/lesko-v-united-states/"
+   "url_audio": "https://www.courtlistener.com/audio/94491/lesko-v-united-states/"
   },
   {
    "docket_number": "CL-10781864",
@@ -24909,7 +24908,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10775402/sunoco-partners-marketing-terminals-lp-v-powder-springs-logistics-llc/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/96107/sunoco-partners-marketing-terminals-lp-v-powder-springs-logistics-llc/"
   },
   {
    "docket_number": "CL-10775403",
@@ -27523,7 +27522,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10762972/ablan-v-united-states/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/95160/ablan-v-united-states/"
   },
   {
    "docket_number": "2026-1277",
@@ -28702,7 +28701,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10754707/lesko-v-united-states/",
-   "url_audio": "https://www.courtlistener.com/audio/100301/lesko-v-united-states/"
+   "url_audio": "https://www.courtlistener.com/audio/94491/lesko-v-united-states/"
   },
   {
    "docket_number": "CL-10754496",
@@ -37494,7 +37493,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10677621/hmtx-industries-llc-v-united-states/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/96065/hmtx-industries-llc-v-united-states/"
   },
   {
    "docket_number": "CL-10677624",
@@ -39147,7 +39146,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10667733/corinth-pipeworks-pipe-industry-sa-v-united-states/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/96067/corinth-pipeworks-pipe-industry-sa-v-united-states/"
   },
   {
    "docket_number": "2025-1421",
@@ -39689,7 +39688,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10666145/samsung-electronics-co-ltd-v-power2b-inc/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/95006/samsung-electronics-co-ltd-v-power2b-inc/"
   },
   {
    "docket_number": "2025-2079",
@@ -41442,7 +41441,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10653002/jiaxing-super-lighting-electric-appliance-co-v-ch-lighting-technology/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/94534/jiaxing-super-lighting-electric-appliance-co-v-ch-lighting-technology/"
   },
   {
    "docket_number": "CL-10652228",
@@ -42559,7 +42558,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10647882/sunspec-alliance-v-tigo-energy-inc/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/94992/sunspec-alliance-v-tigo-energy-inc/"
   },
   {
    "docket_number": "CL-10648012",
@@ -42736,7 +42735,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10647038/tau-ken-temir-llp-v-united-states/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/96098/tau-ken-temir-llp-v-united-states/"
   },
   {
    "docket_number": "CL-10646196",
@@ -42758,7 +42757,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10646196/kroy-ip-holdings-llc-v-groupon-inc/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/94387/kroy-ip-holdings-llc-v-groupon-inc/"
   },
   {
    "docket_number": "2025-142",
@@ -43029,7 +43028,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10645300/dinh-v-united-states/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/96048/dinh-v-united-states/"
   },
   {
    "docket_number": "CL-10645348",
@@ -43292,7 +43291,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10642244/jiaxing-super-lighting-electric-appliance-co-v-ch-lighting-technology/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/94534/jiaxing-super-lighting-electric-appliance-co-v-ch-lighting-technology/"
   },
   {
    "docket_number": "CL-10642207",
@@ -43483,7 +43482,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10641052/arellanes-v-defense/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/95516/arellanes-v-defense/"
   },
   {
    "docket_number": "2025-1963",
@@ -44021,7 +44020,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10636368/murray-v-united-states/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/96096/murray-v-united-states/"
   },
   {
    "docket_number": "2025-136",
@@ -45869,7 +45868,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10623644/egenera-inc-v-cisco-systems-inc/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/94543/egenera-inc-v-cisco-systems-inc/"
   },
   {
    "docket_number": "CL-10623666",
@@ -45937,7 +45936,7 @@
    ],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10622673/in-re-pt-medisafe-technologies/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/93097/in-re-pt-medisafe-technologies/"
   },
   {
    "docket_number": "CL-10622904",
@@ -46106,7 +46105,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10620891/louvall-v-collins/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/96027/louvall-v-collins/"
   },
   {
    "docket_number": "2024-2061",
@@ -47462,7 +47461,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10606068/xerox-corporation-v-meta-platforms-inc/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/95704/xerox-corporation-v-meta-platforms-inc/"
   },
   {
    "docket_number": "CL-10605968",
@@ -47637,7 +47636,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10606069/xerox-corp-v-x-corp/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/95705/xerox-corp-v-x-corp/"
   },
   {
    "docket_number": "CL-10605967",
@@ -47815,7 +47814,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10605198/bpi-sports-llc-v-thermolife-international-llc/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/96097/bpi-sports-llc-v-thermolife-international-llc/"
   },
   {
    "docket_number": "CL-10605231",
@@ -48278,7 +48277,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10603496/united-services-automobile-association-v-pnc-bank-na/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/95108/united-services-automobile-association-v-pnc-bank-na/"
   },
   {
    "docket_number": "CL-10603497",
@@ -48348,7 +48347,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10603495/united-services-automobile-association-v-pnc-bank-na/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/95107/united-services-automobile-association-v-pnc-bank-na/"
   },
   {
    "docket_number": "CL-10603583",
@@ -48683,7 +48682,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10600958/edwards-lifesciences-corporation-v-cardiovalve-ltd/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/94455/edwards-lifesciences-corporation-v-cardiovalve-ltd/"
   },
   {
    "docket_number": "CL-10600994",
@@ -49209,7 +49208,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10599824/stratton-v-hhs/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/93809/stratton-v-hhs/"
   },
   {
    "docket_number": "CL-10599785",
@@ -49431,7 +49430,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10598960/la-molisana-spa-v-united-states/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/95150/la-molisana-spa-v-united-states/"
   },
   {
    "docket_number": "2024-2182",
@@ -49497,7 +49496,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10598127/bannister-v-united-states/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/96136/bannister-v-united-states/"
   },
   {
    "docket_number": "CL-10598134",
@@ -50109,7 +50108,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10592924/stylwan-ip-holding-llc-v-stress-engineering-services-inc/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/95671/stylwan-ip-holding-llc-v-stress-engineering-services-inc/"
   },
   {
    "docket_number": "2025-1808",
@@ -50169,7 +50168,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10590682/atos-llc-v-allstate-insurance-company/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/95517/atos-llc-v-allstate-insurance-company/"
   },
   {
    "docket_number": "CL-10589832",
@@ -51373,7 +51372,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10580645/natures-touch-frozen-foods-west-inc-v-united-states/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/95570/natures-touch-frozen-foods-west-inc-v-united-states/"
   },
   {
    "docket_number": "CL-10580650",
@@ -51851,7 +51850,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10551615/ingenico-inc-v-ioengine-llc/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/96100/ingenico-inc-v-ingenico-corp/"
   },
   {
    "docket_number": "CL-10551617",
@@ -51875,7 +51874,7 @@
    ],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10551617/in-re-thomas-d-foster-apc/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/95572/in-re-thomas-d-foster-apc/"
   },
   {
    "docket_number": "CL-10533731",
@@ -51921,7 +51920,7 @@
    ],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10533730/in-re-kostic/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/96108/in-re-kostic/"
   },
   {
    "docket_number": "CL-10532939",
@@ -52027,7 +52026,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10513861/ats-ford-drive-investment-llc-v-united-states/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/95113/ats-ford-drive-investment-llc-v-united-states/"
   },
   {
    "docket_number": "CL-10513862",
@@ -52385,7 +52384,7 @@
    ],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10401328/in-re-pt-medisafe-technologies/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/93097/in-re-pt-medisafe-technologies/"
   },
   {
    "docket_number": "CL-10404015",
@@ -52636,7 +52635,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10385036/oman-fasteners-llc-v-united-states/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/95139/oman-fasteners-llc-v-united-states/"
   },
   {
    "docket_number": "CL-10385119",
@@ -52768,7 +52767,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10384195/mypaq-holdings-ltd-v-samsung-electronics-co-ltd/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/94423/mypaq-holdings-ltd-v-samsung-electronics-co-ltd/"
   },
   {
    "docket_number": "CL-10384135",
@@ -52982,7 +52981,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10382636/qualcomm-incorporated-v-apple-inc/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/93089/qualcomm-incorporated-v-apple-inc/"
   },
   {
    "docket_number": "CL-10382639",
@@ -53026,7 +53025,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10382634/valve-corporation-v-ironburg-inventions-ltd/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/95611/valve-corporation-v-ironburg-inventions-ltd/"
   },
   {
    "docket_number": "CL-10382638",
@@ -53138,7 +53137,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10382299/marmen-inc-v-united-states/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/96115/marmen-inc-v-united-states/"
   },
   {
    "docket_number": "CL-10382302",
@@ -53198,7 +53197,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10381881/target-corporation-v-united-states/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/95670/target-corporation-v-united-states/"
   },
   {
    "docket_number": "CL-10381882",
@@ -53220,7 +53219,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10381882/dongkuk-sc-co-ltd-v-united-states/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/95072/dongkuk-sc-co-ltd-v-united-states/"
   },
   {
    "docket_number": "CL-10381884",
@@ -53560,7 +53559,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10379702/witricity-corp-v-inductev-inc/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/95472/witricity-corp-v-inductev-inc/"
   },
   {
    "docket_number": "CL-10379705",
@@ -53672,7 +53671,7 @@
    ],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10378731/sage-products-llc-v-stewart/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/96095/sage-products-llc-v-stewart/"
   },
   {
    "docket_number": "CL-10378796",
@@ -54385,7 +54384,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10376242/azurity-pharmaceuticals-inc-v-alkem-laboratories-ltd/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/93773/azurity-pharmaceuticals-inc-v-alkem-laboratories-ltd/"
   },
   {
    "docket_number": "CL-10376240",
@@ -54720,7 +54719,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10371318/united-water-conservation-district-v-united-states/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/96064/united-water-conservation-district-v-united-states/"
   },
   {
    "docket_number": "CL-10370632",
@@ -54764,7 +54763,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10369010/samsung-electronics-co-ltd-v-power2b-inc/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/95006/samsung-electronics-co-ltd-v-power2b-inc/"
   },
   {
    "docket_number": "CL-10369012",
@@ -54830,7 +54829,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10366494/cook-v-collins/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/94494/cook-v-collins/"
   },
   {
    "docket_number": "CL-10366493",
@@ -54938,7 +54937,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10365349/roland-corporation-v-inmusic-brands-inc/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/96037/roland-corporation-v-inmusic-brands-inc/"
   },
   {
    "docket_number": "2025-121",
@@ -55254,7 +55253,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10362536/wash-world-inc-v-belanger-inc/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/94503/wash-world-inc-v-belanger-inc/"
   },
   {
    "docket_number": "2024-2256",
@@ -55366,7 +55365,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10362542/cloud-v-collins/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/95574/cloud-v-collins/"
   },
   {
    "docket_number": "2025-1581",
@@ -55404,7 +55403,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10360838/maquet-cardiovascular-llc-v-abiomed-inc/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/95158/maquet-cardiovascular-llc-v-abiomed-inc/"
   },
   {
    "docket_number": "CL-10360911",
@@ -55612,7 +55611,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10357960/dollar-financial-group-inc-v-brittex-financial-inc/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/93860/dollar-financial-group-inc-v-brittex-financial-inc/"
   },
   {
    "docket_number": "CL-10357962",
@@ -55656,7 +55655,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10357887/associated-energy-group-llc-v-united-states/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/94536/associated-energy-group-llc-v-united-states/"
   },
   {
    "docket_number": "CL-10357959",
@@ -55678,7 +55677,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10357959/williams-v-collins/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/95106/williams-v-collins/"
   },
   {
    "docket_number": "CL-10357885",
@@ -55870,7 +55869,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10357473/realtek-semiconductor-corporation-v-itc/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/95615/realtek-semiconductor-corporation-v-itc/"
   },
   {
    "docket_number": "CL-10357534",
@@ -55914,7 +55913,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10357800/lesko-v-united-states/",
-   "url_audio": "https://www.courtlistener.com/audio/100301/lesko-v-united-states/"
+   "url_audio": "https://www.courtlistener.com/audio/94491/lesko-v-united-states/"
   },
   {
    "docket_number": "CL-10357154",
@@ -56040,7 +56039,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10356521/gonzalez-v-education/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/95707/gonzalez-v-education/"
   },
   {
    "docket_number": "CL-10356522",
@@ -56084,7 +56083,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10356520/home-depot-usa-inc-v-lynk-labs-inc/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/96101/home-depot-usa-inc-v-lynk-labs-inc/"
   },
   {
    "docket_number": "2024-2351",
@@ -56108,7 +56107,7 @@
    ],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/69217798/regeneron-pharmaceuticals-inc-v-mylan-pharmaceuticals-inc/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/96134/regeneron-pharmaceuticals-inc-v-mylan-pharmaceuticals-inc/"
   },
   {
    "docket_number": "2025-1543",
@@ -56262,7 +56261,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10356070/lashify-inc-v-itc/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/96116/lashify-inc-v-itc/"
   },
   {
    "docket_number": "CL-10356069",
@@ -56330,7 +56329,7 @@
    ],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10356071/in-re-xencor-inc/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/95571/in-re-xencor-inc/"
   },
   {
    "docket_number": "CL-10355161",
@@ -56374,7 +56373,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10355266/metz-v-opm/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/95616/metz-v-opm/"
   },
   {
    "docket_number": "CL-10355179",
@@ -56396,7 +56395,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10355179/bullshine-distillery-llc-v-sazerac-brands-llc/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/95618/bullshine-distillery-llc-v-sazerac-brands-llc/"
   },
   {
    "docket_number": "2025-1524",
@@ -56516,7 +56515,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10353941/hinton-v-hhs/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/96109/hinton-v-hhs/"
   },
   {
    "docket_number": "CL-10353942",
@@ -56732,7 +56731,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10353018/sierra-wireless-ulc-v-sisvel-spa/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/95137/sierra-wireless-ulc-v-sisvel-spa/"
   },
   {
    "docket_number": "CL-10353022",
@@ -56986,7 +56985,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10352048/iqris-technologies-llc-v-point-blank-enterprises-inc/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/93854/iqris-technologies-llc-v-point-blank-enterprises-inc/"
   },
   {
    "docket_number": "CL-10352047",
@@ -57100,7 +57099,7 @@
    ],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10351255/odyssey-logistics-technology-corp-v-stewart/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/96026/odyssey-logistics-technology-corp-v-stewart/"
   },
   {
    "docket_number": "CL-10351257",
@@ -57122,7 +57121,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10351257/military-veterans-advocacy-v-secretary-of-veterans-affairs/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/96046/military-veterans-advocacy-v-secretary-of-veterans-affairs/"
   },
   {
    "docket_number": "CL-10351256",
@@ -57234,7 +57233,7 @@
    ],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10351258/immunogen-inc-v-stewart/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/95617/immunogen-inc-v-stewart/"
   },
   {
    "docket_number": "CL-10351254",
@@ -57300,7 +57299,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10350314/lashify-inc-v-itc/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/96116/lashify-inc-v-itc/"
   },
   {
    "docket_number": "CL-10350309",
@@ -57322,7 +57321,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10350309/united-services-automobile-association-v-pnc-bank-na/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/96075/united-services-automobile-association-v-pnc-bank-na/"
   },
   {
    "docket_number": "CL-10350312",
@@ -57472,7 +57471,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10349489/restem-llc-v-jadi-cell-llc/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/95138/restem-llc-v-jadi-cell-llc/"
   },
   {
    "docket_number": "2024-2114",
@@ -57582,7 +57581,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10349493/apple-inc-v-gesture-technology-partners-llc/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/95576/apple-inc-v-gesture-technology-partners-llc/"
   },
   {
    "docket_number": "CL-10349693",
@@ -57718,7 +57717,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10349492/gesture-technology-partners-llc-v-unified-patents-llc/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/95573/gesture-technology-partners-llc-v-unified-patents-llc/"
   },
   {
    "docket_number": "2025-1496",
@@ -57844,7 +57843,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10348560/doe-no-1-v-united-states/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/94994/doe-no-1-v-united-states/"
   },
   {
    "docket_number": "CL-10347747",
@@ -57888,7 +57887,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10347629/flightsafety-international-inc-v-air-force/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/94993/flightsafety-international-inc-v-air-force/"
   },
   {
    "docket_number": "CL-10347627",
@@ -57934,7 +57933,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10347628/halo-electronics-inc-v-pulse-electronics-inc/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/95478/halo-electronics-inc-v-pulse-electronics-inc/"
   },
   {
    "docket_number": "CL-10347571",
@@ -57956,7 +57955,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10347571/harrington-v-dva/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/95673/harrington-v-dva/"
   },
   {
    "docket_number": "CL-10347626",
@@ -58176,7 +58175,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10346791/all-one-god-faith-inc-v-united-states/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/94457/all-one-god-faith-inc-v-united-states/"
   },
   {
    "docket_number": "CL-10339828",
@@ -58358,7 +58357,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10338940/sadler-v-army/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/95109/sadler-v-army/"
   },
   {
    "docket_number": "CL-10339021",
@@ -58478,7 +58477,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10338069/kerry-group-services-international-ltd-v-florida-food-products-llc/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/96030/kerry-group-services-international-ltd-v-florida-food-products-llc/"
   },
   {
    "docket_number": "CL-10337152",
@@ -58568,7 +58567,7 @@
    ],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10336297/in-re-agadia-systems-inc/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/95476/in-re-agadia-systems-inc/"
   },
   {
    "docket_number": "CL-10335470",
@@ -58722,7 +58721,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10334528/williams-v-collins/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/96106/williams-v-collins/"
   },
   {
    "docket_number": "CL-10334477",
@@ -58746,7 +58745,7 @@
    ],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10334477/in-re-mcleay/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/96047/in-re-mcleay/"
   },
   {
    "docket_number": "CL-10333460",
@@ -58768,7 +58767,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10333460/dna-genotek-inc-v-spectrum-solutions-llc/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/96066/dna-genotek-inc-v-spectrum-solutions-llc/"
   },
   {
    "docket_number": "CL-10333459",
@@ -58856,7 +58855,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10332562/us-synthetic-corp-v-itc/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/94451/us-synthetic-corp-v-itc/"
   },
   {
    "docket_number": "CL-10332620",
@@ -58962,7 +58961,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10332018/hd-silicon-solutions-llc-v-microchip-technology-inc/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/96135/hd-silicon-solutions-llc-v-microchip-technology-inc/"
   },
   {
    "docket_number": "CL-10331831",
@@ -58984,7 +58983,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10331831/washington-v-bop/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/95569/washington-v-bop/"
   },
   {
    "docket_number": "CL-10331890",
@@ -59028,7 +59027,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10331832/samsung-electronics-co-ltd-v-power2b-inc/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/95005/samsung-electronics-co-ltd-v-power2b-inc/"
   },
   {
    "docket_number": "2024-2171",
@@ -59112,7 +59111,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10330919/pirelli-tyre-co-ltd-v-united-states/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/96029/pirelli-tyre-co-ltd-v-united-states/"
   },
   {
    "docket_number": "CL-10330920",
@@ -59246,7 +59245,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10331007/apple-inc-v-gesture-technology-partners-llc/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/95665/apple-inc-v-gesture-technology-partners-llc/"
   },
   {
    "docket_number": "CL-10331180",
@@ -59312,7 +59311,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10330108/cotter-corp-nsl-v-united-states/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/95515/cotter-corp-nsl-v-united-states/"
   },
   {
    "docket_number": "CL-10330104",
@@ -59422,7 +59421,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10330106/kroy-ip-holdings-llc-v-groupon-inc/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/94387/kroy-ip-holdings-llc-v-groupon-inc/"
   },
   {
    "docket_number": "CL-10330101",
@@ -59488,7 +59487,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10330113/trudell-medical-international-inc-v-d-r-burton-healthcare-llc/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/94490/trudell-medical-international-inc-v-d-r-burton-healthcare-llc/"
   },
   {
    "docket_number": "CL-10330115",
@@ -59532,7 +59531,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10330114/siples-v-collins/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/95142/siples-v-collins/"
   },
   {
    "docket_number": "CL-10330111",
@@ -59554,7 +59553,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10330111/wuhan-healthgen-biotechnology-corp-v-itc/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/93764/wuhan-healthgen-biotechnology-corp-v-itc/"
   },
   {
    "docket_number": "CL-10330110",
@@ -59576,7 +59575,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10330110/wuhan-healthgen-biotechnology-corp-v-itc/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/93764/wuhan-healthgen-biotechnology-corp-v-itc/"
   },
   {
    "docket_number": "CL-10330112",
@@ -59752,7 +59751,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10330126/hd-silicon-solutions-llc-v-microchip-technology-inc/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/95111/hd-silicon-solutions-llc-v-microchip-technology-inc/"
   },
   {
    "docket_number": "CL-10330127",
@@ -60148,7 +60147,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10330144/27-35-jackson-ave-llc-v-united-states/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/94468/27-35-jackson-ave-llc-v-united-states/"
   },
   {
    "docket_number": "CL-10330142",
@@ -60282,7 +60281,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10330146/telit-cinterion-deutschland-gmbh-v-3g-licensing-sa/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/96133/telit-cinterion-deutschland-gmbh-v-3g-licensing-sa/"
   },
   {
    "docket_number": "2025-1008",
@@ -60326,7 +60325,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10330145/united-services-automobile-association-v-pnc-bank-na/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/96077/united-services-automobile-association-v-pnc-bank-na/"
   },
   {
    "docket_number": "2025-1405",
@@ -61430,7 +61429,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/69039804/novartis-pharmaceuticals-corporation-v-msn-pharmaceuticals-inc/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/95206/novartis-pharmaceuticals-corporation-v-msn-pharmaceuticals-inc/"
   },
   {
    "docket_number": "2024-2195",
