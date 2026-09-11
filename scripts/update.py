@@ -28,6 +28,7 @@ import xml.etree.ElementTree as ET
 from datetime import date, datetime, timedelta, timezone
 from io import BytesIO
 from pathlib import Path
+from urllib.parse import parse_qs, urlparse
 
 import requests
 import urllib3
@@ -89,6 +90,24 @@ def log(msg: str) -> None:
     print(f"[{datetime.now(timezone.utc).strftime('%H:%M:%S')}] {msg}", flush=True)
 
 
+def _resume_still_valid(resume_url: str, params: dict) -> bool:
+    """A saved resume cursor is only safe to use if its filters still match
+    what we'd request fresh. Comparing every filter param (not just the court
+    one) guards against the failure mode that caused the 29,000 non-CAFC
+    docket incident: a stale cursor left over from before the date window (or
+    any other filter) changed, silently fetching the wrong slice."""
+    try:
+        saved = parse_qs(urlparse(resume_url).query)
+    except Exception:  # noqa: BLE001
+        return False
+    for k, v in params.items():
+        if k in ("fields", "order_by"):
+            continue
+        if saved.get(k, [None])[0] != str(v):
+            return False
+    return True
+
+
 # ----------------------------------------------------------------------------
 # CourtListener helpers
 # ----------------------------------------------------------------------------
@@ -108,20 +127,18 @@ def cl_paginate(url: str, params: dict, cap: int, meta: dict = None,
         return []
     pages = 0
     dropped_filter = False
-    if resume_url:
-        # Resuming from a saved cursor. The cursor URL may or may not encode
-        # the original query filters (like court=cafc). To be safe, we start
-        # fresh from the base URL with params, which restarts from page 1 of
-        # the filtered result set. This is slightly less efficient than true
-        # cursor resume (some records are re-fetched and deduped by the store),
-        # but it guarantees the filter is never dropped — which is what caused
-        # 29,000 non-CAFC dockets to accumulate.
-        #
-        # True cursor resume would require CourtListener to reliably encode
-        # filters in cursor URLs, which we've proven they don't.
+    if resume_url and _resume_still_valid(resume_url, params):
+        # Resume exactly where the last run's page budget cut it off. The
+        # cursor's querystring is checked against `params` above, so this
+        # can't repeat the 29,000-non-CAFC-docket incident (a stale cursor
+        # from before a filter changed) — but it lets backfill actually make
+        # progress instead of re-walking the same pages every run.
         items, next_url, first, backoff, strikes, got_any = (
-            [], url, True, 30, 0, False)
+            [], resume_url, False, 30, 0, False)
     else:
+        if resume_url:
+            log("  saved resume cursor's filters don't match this run's — "
+                "restarting from page 1")
         items, next_url, first, backoff, strikes, got_any = (
             [], url, True, 30, 0, False)
     complete, reason, timeouts, rl_waited = True, "ok", 0, 0
@@ -975,6 +992,14 @@ def build() -> dict:
     # last in the list, so we sort by (caught_up, last_ok) instead — never
     # caught up sorts first, then oldest success.
     order = ["dockets", "clusters", "opinions", "audio"]
+    # last_attempt is stamped (to the second) for every source at the end of
+    # every run, so in practice it ties across all four sources almost every
+    # time — leaving the staleness sort below no real signal to break ties
+    # with, which silently fell back to this fixed list order run after run
+    # and let dockets/clusters exhaust quota before opinions/audio got a
+    # turn. Rotating the tie-break order by run number fixes that: when
+    # staleness genuinely ties, priority still cycles fairly.
+    order = order[run_no % len(order):] + order[:run_no % len(order)]
 
     def _staleness(k):
         st = state.get(k) or {}
