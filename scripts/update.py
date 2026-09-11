@@ -888,6 +888,7 @@ def build() -> dict:
             if isinstance(st, dict) and st.get("last_date"):
                 st.pop("last_date", None)
                 st.pop("last_id", None)
+                st.pop("frontier_date", None)
                 st["backfill_done"] = False
                 st["caught_up"] = False
                 cleared.append(k)
@@ -908,6 +909,7 @@ def build() -> dict:
             docket_st.pop("resume_url", None)
             docket_st.pop("last_date", None)
             docket_st.pop("last_id", None)
+            docket_st.pop("frontier_date", None)
         # Also clear all resume_urls since the cursor logic is now changed
         for k in ("dockets", "clusters", "opinions", "audio"):
             sk = state.get(k)
@@ -927,6 +929,7 @@ def build() -> dict:
                 sk["backfill_done"] = False
                 sk["caught_up"] = False
                 sk.pop("resume_url", None)
+                sk.pop("frontier_date", None)
                 widened.append(k)
         if widened:
             log(f"Window expanded to {since} (was {prev_since or 'unset'}) — "
@@ -1038,6 +1041,14 @@ def build() -> dict:
             dates = [d for d in dates if d]
             if dates:
                 st["last_date"] = max(st.get("last_date", ""), max(dates))[:10]
+                # frontier_date is the oldest date this source's current
+                # backfill pass has scanned down to so far. Pages are fetched
+                # newest-first and resumed in order, so everything between
+                # frontier_date and today is confirmed fully fetched for this
+                # source even while the pass as a whole is still incomplete.
+                if not st.get("backfill_done"):
+                    oldest = min(dates)[:10]
+                    st["frontier_date"] = min(st.get("frontier_date") or oldest, oldest)
         if ok:
             st["caught_up"] = True
             st["last_ok"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
@@ -1047,6 +1058,7 @@ def build() -> dict:
             # older than the newest record can be skipped.
             if _since_for(key) == full_since:
                 st["backfill_done"] = True
+                st["frontier_date"] = full_since
                 if not st.get("backfill_completed_at"):
                     st["backfill_completed_at"] = date.today().isoformat()
                     log(f"  {key}: full-window backfill complete — "
@@ -1422,6 +1434,17 @@ def build() -> dict:
     all_complete = all(cov[k].get("complete", True) for k in cov)
     backfilling = [k for k in ("dockets", "clusters", "opinions", "audio")
                    if not (state.get(k) or {}).get("backfill_done")]
+    # complete_since: the date from which every source has confirmed full
+    # coverage through today. Each source's own frontier is either the whole
+    # window (once its backfill pass is done) or the oldest date it has
+    # scanned back to so far; the site-wide figure is the latest (most
+    # restrictive) of those, since a date only counts as fully filled in once
+    # *all* sources have reached it.
+    frontiers = {}
+    for k in ("dockets", "clusters", "opinions", "audio"):
+        st = state.get(k) or {}
+        frontiers[k] = full_since if st.get("backfill_done") else st.get("frontier_date")
+    complete_since = max(frontiers.values()) if all(frontiers.values()) else None
     latest_decision = max((c["decision"]["date"] for c in cases
                            if (c.get("decision") or {}).get("date")), default=None)
     next_arg = min((c["argument"]["date"] for c in cases
@@ -1433,6 +1456,7 @@ def build() -> dict:
         "backfilling": backfilling,
         "window_since": since,
         "window_months": WINDOW_MONTHS,
+        "complete_since": complete_since,
         "sources": {
             "dockets": cov["dockets"], "clusters": cov["clusters"],
             "opinions": cov["opinions"], "audio": cov["audio"],

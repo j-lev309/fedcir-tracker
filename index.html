@@ -311,6 +311,9 @@ function buildScope(){
         <dt>Window</dt><dd>${backfilling
           ? `Target: all CAFC appeals docketed since <b>${winStart}</b> (${c.window_months} months). <b style="color:var(--stamp)">Still backfilling ${esc((c.backfilling||[]).join(", "))}</b> — older cases in this range are not all loaded yet, so treat coverage as partial.`
           : `All CAFC appeals docketed since <b>${winStart}</b> (${c.window_months} months), plus every decision and scheduled argument in that span.`}</dd>
+        ${backfilling ? `<dt>Confirmed complete</dt><dd>${c.complete_since
+          ? `<b>${fmtD(c.complete_since)} &rarr; today</b> — every source has fully loaded this range. Cases before that are still backfilling and will fill in over upcoming runs.`
+          : `Not yet established — check back after the next run.`}</dd>` : ``}
         <dt>Latest decision</dt><dd>${fmtD(c.latest_decision_date)}${backfilling?' <span style="color:var(--steel)">(newest loaded — not necessarily the newest that exists)</span>':''}</dd>
         <dt>Next argument</dt><dd>${fmtD(c.next_argument_date)}</dd>
       </dl>
