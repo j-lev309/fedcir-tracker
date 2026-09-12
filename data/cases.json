@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-12T21:27:49+00:00",
+ "generated_at": "2026-09-12T22:51:32+00:00",
  "window_since": "2020-01-01",
  "coverage": {
   "complete": false,
@@ -25,15 +25,15 @@
     "count": 0
    },
    "opinions": {
-    "resume_url": "https://www.courtlistener.com/api/rest/v4/opinions/?cluster__date_filed__gte=2020-01-01&cluster__docket__court=cafc&cursor=cD0xMTMyNjEwNQ%3D%3D&fields=id%2Ccluster_id%2Cauthor_str%2Cjoined_by_str%2Ctype%2Cauthor_id%2Cjoined_by%2Cper_curiam%2Cdownload_url%2Cabsolute_url&order_by=-id",
-    "complete": false,
-    "reason": "quota exhausted",
-    "count": 400
-   },
-   "audio": {
     "complete": false,
     "reason": "quota exhausted",
     "count": 0
+   },
+   "audio": {
+    "resume_url": "https://www.courtlistener.com/api/rest/v4/audio/?cursor=cD0yMDIzLTA3LTEyKzE4JTNBMzIlM0ExNS45NDAxMDclMkIwMCUzQTAw&date_created__gte=2020-01-01&docket__court=cafc&fields=id%2Cdocket%2Ccase_name%2Cjudges%2Cabsolute_url&order_by=-date_created",
+    "complete": false,
+    "reason": "quota exhausted",
+    "count": 400
    },
    "scheduled_arguments": {
     "count": 0,
@@ -41,7 +41,7 @@
     "reason": "ok"
    },
    "opinion_rss": {
-    "count": 0,
+    "count": 96,
     "complete": true,
     "reason": "ok"
    }
@@ -49,25 +49,69 @@
   "summaries": {
    "enabled": false,
    "have": 0,
-   "expected": 2001,
+   "expected": 2002,
    "complete": true
   },
   "opinion_text_fetches_this_run": 600,
   "opinion_text_fetch_cap": 600,
-  "latest_decision_date": "2026-09-10",
+  "latest_decision_date": "2026-09-11",
   "next_argument_date": null
  },
  "stats": {
   "total": 2394,
   "pending": 361,
   "scheduled": 0,
-  "awaiting": 32,
-  "decided": 2001,
+  "awaiting": 30,
+  "decided": 2003,
   "precedential": 305,
-  "rule36": 0
+  "rule36": 1
  },
  "upcoming_argument_docket_numbers": [],
  "cases": [
+  {
+   "docket_number": "2025-1764",
+   "case_name": "Caddo Systems, Inc. v. Jetbrains Americas, Inc.",
+   "case_type": "Patent (District Ct.)",
+   "origin": "United States District Court for the District of Delaware",
+   "status": "Decided",
+   "date_filed": "2025-05-13",
+   "date_argued": "2026-09-10",
+   "argument": null,
+   "decision": {
+    "date": "2026-09-11",
+    "precedential_status": "Unpublished",
+    "disposition": "Rule 36 Judgment",
+    "url_cl": null,
+    "url_pdf": "https://www.cafc.uscourts.gov/09-11-2026-25-1764-caddo-systems-inc-v-jetbrains-americas-inc-rule-36-judgment-25-1764-rule_36_judgment-9-11-2026_2754034/"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/73573446/caddo-systems-inc-v-jetbrains-americas-inc/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "2024-1696",
+   "case_name": "Moskowitz Family LLC v. Globus Medical, Inc.",
+   "case_type": "Patent (District Ct.)",
+   "origin": "United States District Court for the Eastern District of Pennsylvania",
+   "status": "Decided",
+   "date_filed": "2024-04-16",
+   "date_argued": "2026-05-04",
+   "argument": null,
+   "decision": {
+    "date": "2026-09-11",
+    "precedential_status": null,
+    "disposition": "Opinion",
+    "url_cl": null,
+    "url_pdf": "https://www.cafc.uscourts.gov/09-11-2026-24-1696-moskowitz-family-llc-v-globus-medical-inc-opinion-24-1696-opinion-9-11-2026_2754043/"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/69935576/moskowitz-family-llc-v-globus-medical-inc/",
+   "url_audio": "https://www.courtlistener.com/audio/104665/moskowitz-family-llc-v-globus-medical-inc/"
+  },
   {
    "docket_number": "CL-10970372",
    "case_name": "Bell v. Opm",
@@ -326,7 +370,7 @@
    "decision": {
     "date": "2026-09-08",
     "precedential_status": "Unpublished",
-    "disposition": null,
+    "disposition": "Opinion",
     "url_cl": "https://www.courtlistener.com/opinion/10968982/viavi-solutions-inc-v-platinum-optics-technology-inc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1362.OPINION.9-8-2026_2751857.pdf"
    },
@@ -438,7 +482,7 @@
    "decision": {
     "date": "2026-09-04",
     "precedential_status": "Published",
-    "disposition": null,
+    "disposition": "Opinion",
     "url_cl": "https://www.courtlistener.com/opinion/10967331/connecticut-yankee-atomic-power-company-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1395.OPINION.9-4-2026_2751042.pdf"
    },
@@ -570,7 +614,7 @@
    "decision": {
     "date": "2026-09-02",
     "precedential_status": "Published",
-    "disposition": null,
+    "disposition": "Opinion",
     "url_cl": "https://www.courtlistener.com/opinion/10964728/netlist-inc-v-micron-technology-inc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1707.OPINION.9-2-2026_2749527.pdf"
    },
@@ -616,7 +660,7 @@
    "decision": {
     "date": "2026-09-02",
     "precedential_status": "Unpublished",
-    "disposition": null,
+    "disposition": "Opinion",
     "url_cl": "https://www.courtlistener.com/opinion/10964800/netlist-inc-v-micron-technology-inc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-2240.OPINION.9-2-2026_2749568.pdf"
    },
@@ -640,7 +684,7 @@
    "decision": {
     "date": "2026-09-02",
     "precedential_status": "Unpublished",
-    "disposition": null,
+    "disposition": "Opinion",
     "url_cl": "https://www.courtlistener.com/opinion/10964801/netlist-inc-v-micron-technology-inc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1859.OPINION.9-2-2026_2749553.pdf"
    },
@@ -792,7 +836,7 @@
    "decision": {
     "date": "2026-08-31",
     "precedential_status": "Published",
-    "disposition": null,
+    "disposition": "Opinion",
     "url_cl": "https://www.courtlistener.com/opinion/10962857/exelixis-inc-v-msn-laboratories-private-ltd/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1236.OPINION.8-31-2026_2747765.pdf"
    },
@@ -860,7 +904,7 @@
    "decision": {
     "date": "2026-08-31",
     "precedential_status": "Unpublished",
-    "disposition": null,
+    "disposition": "Opinion",
     "url_cl": "https://www.courtlistener.com/opinion/10962860/apple-inc-v-spacetime3d-inc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1022.OPINION.8-31-2026_2747741.pdf"
    },
@@ -884,7 +928,7 @@
    "decision": {
     "date": "2026-08-31",
     "precedential_status": "Published",
-    "disposition": null,
+    "disposition": "Opinion",
     "url_cl": "https://www.courtlistener.com/opinion/10962858/estate-of-paul-bruyea-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1563.OPINION.8-31-2026_2747795.pdf"
    },
@@ -950,7 +994,7 @@
    "decision": {
     "date": "2026-08-31",
     "precedential_status": "Published",
-    "disposition": null,
+    "disposition": "Opinion",
     "url_cl": "https://www.courtlistener.com/opinion/10962877/constellation-designs-llc-v-lg-electronics-inc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1822.OPINION.8-31-2026_2747874.pdf"
    },
@@ -996,7 +1040,7 @@
    "decision": {
     "date": "2026-08-28",
     "precedential_status": "Unpublished",
-    "disposition": null,
+    "disposition": "Order",
     "url_cl": "https://www.courtlistener.com/opinion/10961023/entropic-communications-llc-v-dish-network-llc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-2145.ORDER.8-28-2026_2747016.pdf"
    },
@@ -1262,7 +1306,7 @@
    "decision": {
     "date": "2026-08-26",
     "precedential_status": "Unpublished",
-    "disposition": null,
+    "disposition": "Order",
     "url_cl": "https://www.courtlistener.com/opinion/10958336/ascend-elements-inc-v-duesenfeld-gmbh/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1357.ORDER.8-26-2026_2745476.pdf"
    },
@@ -1286,7 +1330,7 @@
    "decision": {
     "date": "2026-08-26",
     "precedential_status": "Unpublished",
-    "disposition": null,
+    "disposition": "Opinion",
     "url_cl": "https://www.courtlistener.com/opinion/10958335/printing-textiles-llc-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1213.OPINION.8-26-2026_2745453.pdf"
    },
@@ -1396,7 +1440,7 @@
    "decision": {
     "date": "2026-08-26",
     "precedential_status": "Unpublished",
-    "disposition": null,
+    "disposition": "Order",
     "url_cl": "https://www.courtlistener.com/opinion/10958492/everett-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-2120.ORDER.8-26-2026_2745762.pdf"
    },
@@ -1440,7 +1484,7 @@
    "decision": {
     "date": "2026-08-24",
     "precedential_status": "Unpublished",
-    "disposition": null,
+    "disposition": "Opinion",
     "url_cl": "https://www.courtlistener.com/opinion/10956609/duran-v-doj/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1803.OPINION.8-24-2026_2743524.pdf"
    },
@@ -1506,7 +1550,7 @@
    "decision": {
     "date": "2026-08-21",
     "precedential_status": "Published",
-    "disposition": null,
+    "disposition": "Opinion",
     "url_cl": "https://www.courtlistener.com/opinion/10954431/us-inventor-inc-v-squires/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-2378.OPINION.8-21-2026_2742604.pdf"
    },
@@ -1642,7 +1686,7 @@
    "decision": {
     "date": "2026-08-19",
     "precedential_status": "Published",
-    "disposition": null,
+    "disposition": "Opinion",
     "url_cl": "https://www.courtlistener.com/opinion/10953454/vdpp-llc-v-volkswagen-group-of-america-inc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-2226.OPINION.8-19-2026_2741445.pdf"
    },
@@ -1666,7 +1710,7 @@
    "decision": {
     "date": "2026-08-19",
     "precedential_status": "Unpublished",
-    "disposition": null,
+    "disposition": "Opinion",
     "url_cl": "https://www.courtlistener.com/opinion/10953456/10x-genomics-inc-v-parse-biosciences-inc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1199.OPINION.8-19-2026_2741460.pdf"
    },
@@ -1728,7 +1772,7 @@
    "decision": {
     "date": "2026-08-17",
     "precedential_status": "Unpublished",
-    "disposition": null,
+    "disposition": "Order",
     "url_cl": "https://www.courtlistener.com/opinion/10952001/netlist-inc-v-samsung-electronics-co-ltd/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-2203.ORDER.8-17-2026_2740281.pdf"
    },
@@ -1884,7 +1928,7 @@
    "decision": {
     "date": "2026-08-14",
     "precedential_status": "Published",
-    "disposition": null,
+    "disposition": "Opinion",
     "url_cl": "https://www.courtlistener.com/opinion/10948452/nielsen-company-us-llc-v-tvision-insights-inc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1371.OPINION.8-14-2026_2739381.pdf"
    },
@@ -4863,7 +4907,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10931832/amarin-pharma-inc-v-hikma-pharmaceuticals-usa-inc/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/91395/amarin-pharma-inc-v-hikma-pharmaceuticals-usa-inc/"
   },
   {
    "docket_number": "CL-10928256",
@@ -13709,7 +13753,7 @@
    "decision": {
     "date": "2026-04-28",
     "precedential_status": "Published",
-    "disposition": null,
+    "disposition": "Opinion",
     "url_cl": "https://www.courtlistener.com/opinion/10848983/constellation-designs-llc-v-lg-electronics-inc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1822.OPINION.4-28-2026_2683894.pdf"
    },
@@ -40301,7 +40345,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10662526/percipientai-inc-v-united-states/",
-   "url_audio": "https://www.courtlistener.com/audio/99421/percipientai-inc-v-united-states/"
+   "url_audio": "https://www.courtlistener.com/audio/88876/percipientai-inc-v-united-states/"
   },
   {
    "docket_number": "CL-10662528",
@@ -44024,7 +44068,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10636602/soto-v-united-states/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/88403/soto-v-united-states/"
   },
   {
    "docket_number": "CL-10636314",
@@ -48612,7 +48656,7 @@
    "decision": {
     "date": "2025-06-10",
     "precedential_status": "Unpublished",
-    "disposition": null,
+    "disposition": "Opinion",
     "url_cl": "https://www.courtlistener.com/opinion/10601778/exelixis-inc-v-msn-laboratories-private-ltd/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1236.ORDER.6-10-2025_2528251.pdf"
    },
@@ -49187,7 +49231,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10599895/darby-development-company-inc-v-united-states/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/87942/darby-development-company-inc-v-united-states/"
   },
   {
    "docket_number": "CL-10599825",
@@ -50457,7 +50501,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10588426/ecofactor-inc-v-google-llc/",
-   "url_audio": "https://www.courtlistener.com/audio/98343/ecofactor-inc-v-google-llc/"
+   "url_audio": "https://www.courtlistener.com/audio/89187/ecofactor-inc-v-google-llc/"
   },
   {
    "docket_number": "2025-119",
@@ -50965,7 +51009,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10585695/lessors-of-abchakan-village-v-defense/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/92976/lessors-of-abchakan-village-v-defense/"
   },
   {
    "docket_number": "CL-10585635",
@@ -51222,22 +51266,6 @@
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10583138/in-re-international-insulation-products-llc/",
    "url_audio": "https://www.courtlistener.com/audio/98871/in-re-international-insulation-products-llc/"
-  },
-  {
-   "docket_number": "2025-1764",
-   "case_name": "Caddo Systems, Inc. v. Jetbrains Americas, Inc.",
-   "case_type": "Patent (District Ct.)",
-   "origin": "United States District Court for the District of Delaware",
-   "status": "Argued \u2014 Awaiting Decision",
-   "date_filed": "2025-05-13",
-   "date_argued": "2026-09-10",
-   "argument": null,
-   "decision": null,
-   "panel": [],
-   "patent_issues": [],
-   "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/73573446/caddo-systems-inc-v-jetbrains-americas-inc/",
-   "url_audio": null
   },
   {
    "docket_number": "2025-1768",
@@ -52525,7 +52553,7 @@
    "decision": {
     "date": "2025-04-28",
     "precedential_status": "Unpublished",
-    "disposition": null,
+    "disposition": "Opinion",
     "url_cl": "https://www.courtlistener.com/opinion/10386212/duran-v-doj/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1803.ORDER.4-28-2025_2505428.pdf"
    },
@@ -54744,7 +54772,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10372078/textron-aviation-defense-llc-v-united-states/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/91353/textron-aviation-defense-llc-v-united-states/"
   },
   {
    "docket_number": "CL-10372077",
@@ -56860,7 +56888,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10353022/cqv-co-ltd-v-merck-patent-gmbh/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/91888/cqv-co-ltd-v-merck-patent-gmbh/"
   },
   {
    "docket_number": "CL-10353010",
@@ -57160,7 +57188,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10352050/alivecor-inc-v-apple-inc/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/92960/alivecor-inc-v-apple-inc/"
   },
   {
    "docket_number": "CL-10352049",
@@ -57182,7 +57210,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10352049/alivecor-inc-v-itc/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/92959/alivecor-inc-v-itc/"
   },
   {
    "docket_number": "CL-10351255",
@@ -57362,7 +57390,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10351254/vandewater-international-inc-v-united-states/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/91396/vandewater-international-inc-v-united-states/"
   },
   {
    "docket_number": "CL-10350310",
@@ -58606,7 +58634,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10337152/wsp-usa-solutions-inc-v-secretary-of-the-army/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/91419/wsp-usa-solutions-inc-v-secretary-of-the-army/"
   },
   {
    "docket_number": "CL-10337153",
@@ -62561,22 +62589,6 @@
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/69157085/in-re-haptic-inc/",
    "url_audio": null
-  },
-  {
-   "docket_number": "2024-1696",
-   "case_name": "Moskowitz Family LLC v. Globus Medical, Inc.",
-   "case_type": "Patent (District Ct.)",
-   "origin": "United States District Court for the Eastern District of Pennsylvania",
-   "status": "Argued \u2014 Awaiting Decision",
-   "date_filed": "2024-04-16",
-   "date_argued": "2026-05-04",
-   "argument": null,
-   "decision": null,
-   "panel": [],
-   "patent_issues": [],
-   "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/69935576/moskowitz-family-llc-v-globus-medical-inc/",
-   "url_audio": "https://www.courtlistener.com/audio/104665/moskowitz-family-llc-v-globus-medical-inc/"
   },
   {
    "docket_number": "2024-1685",
