@@ -3877,7 +3877,9 @@
   }
  ],
  "cl-10864216": {
-  "issues": [],
+  "issues": [
+   "\u00a7 112 / Claim Construction"
+  ],
   "summary": null
  },
  "panel-cl-10864188": [
@@ -7707,7 +7709,9 @@
   }
  ],
  "cl-10800815": {
-  "issues": [],
+  "issues": [
+   "\u00a7\u00a7 102/103 Prior Art"
+  ],
   "summary": null
  },
  "panel-cl-10800859": [],
@@ -9610,7 +9614,10 @@
   }
  ],
  "cl-10777373": {
-  "issues": [],
+  "issues": [
+   "\u00a7 112 / Claim Construction",
+   "\u00a7\u00a7 102/103 Prior Art"
+  ],
   "summary": null
  },
  "panel-cl-10776707": [
@@ -10633,7 +10640,9 @@
   }
  ],
  "cl-10760762": {
-  "issues": [],
+  "issues": [
+   "Damages & Remedies"
+  ],
   "summary": null
  },
  "panel-cl-10760761": [
@@ -10748,7 +10757,10 @@
   }
  ],
  "cl-10759844": {
-  "issues": [],
+  "issues": [
+   "\u00a7 112 / Claim Construction",
+   "Damages & Remedies"
+  ],
   "summary": null
  },
  "panel-cl-10759847": [
@@ -11802,7 +11814,10 @@
   }
  ],
  "cl-10736430": {
-  "issues": [],
+  "issues": [
+   "PTAB Procedure & Standing",
+   "\u00a7\u00a7 102/103 Prior Art"
+  ],
   "summary": null
  },
  "panel-cl-10736431": [
@@ -11958,7 +11973,9 @@
   }
  ],
  "cl-10735204": {
-  "issues": [],
+  "issues": [
+   "\u00a7\u00a7 102/103 Prior Art"
+  ],
   "summary": null
  },
  "panel-cl-10734119": [
@@ -12504,7 +12521,9 @@
   }
  ],
  "cl-10708781": {
-  "issues": [],
+  "issues": [
+   "PTAB Procedure & Standing"
+  ],
   "summary": null
  },
  "panel-cl-10708907": [],
@@ -12740,7 +12759,9 @@
   }
  ],
  "cl-10704288": {
-  "issues": [],
+  "issues": [
+   "PTAB Procedure & Standing"
+  ],
   "summary": null
  },
  "panel-cl-10704326": [
@@ -13258,7 +13279,11 @@
   }
  ],
  "cl-10690198": {
-  "issues": [],
+  "issues": [
+   "\u00a7\u00a7 102/103 Prior Art",
+   "PTAB Procedure & Standing",
+   "\u00a7 112 / Claim Construction"
+  ],
   "summary": null
  },
  "panel-cl-10688415": [],
@@ -13349,7 +13374,10 @@
   }
  ],
  "cl-10681614": {
-  "issues": [],
+  "issues": [
+   "Damages & Remedies",
+   "\u00a7 112 / Claim Construction"
+  ],
   "summary": null
  },
  "panel-cl-10681611": [
@@ -14427,7 +14455,12 @@
   }
  ],
  "cl-10679442": {
-  "issues": [],
+  "issues": [
+   "\u00a7\u00a7 102/103 Prior Art",
+   "\u00a7 112 / Claim Construction",
+   "\u00a7 101 Eligibility",
+   "PTAB Procedure & Standing"
+  ],
   "summary": null
  },
  "panel-cl-10678328": [

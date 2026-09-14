@@ -1,17 +1,17 @@
 {
  "dockets": {
-  "last_attempt": "2026-09-13T22:47:02+00:00",
+  "last_attempt": "2026-09-14T18:26:21+00:00",
   "caught_up": false,
   "last_ok": "2026-08-03T15:54:20+00:00",
   "backfill_done": false,
   "backfill_completed_at": "2026-07-21",
   "last_id": 74765129,
   "last_date": "2026-09-01",
-  "resume_url": "https://www.courtlistener.com/api/rest/v4/dockets/?court=cafc&date_filed__gte=2020-01-01&fields=id%2Cdocket_number%2Ccase_name%2Ccase_name_short%2Cdate_filed%2Cdate_argued%2Cdate_terminated%2Cappeal_from_str%2Cappeal_from%2Cabsolute_url%2Cnature_of_suit%2Cpanel_str&order_by=-date_filed&page=53",
-  "frontier_date": "2023-07-11"
+  "resume_url": "https://www.courtlistener.com/api/rest/v4/dockets/?court=cafc&date_filed__gte=2020-01-01&fields=id%2Cdocket_number%2Ccase_name%2Ccase_name_short%2Cdate_filed%2Cdate_argued%2Cdate_terminated%2Cappeal_from_str%2Cappeal_from%2Cabsolute_url%2Cnature_of_suit%2Cpanel_str&order_by=-date_filed&page=68",
+  "frontier_date": "2023-01-20"
  },
  "clusters": {
-  "last_attempt": "2026-09-13T22:47:02+00:00",
+  "last_attempt": "2026-09-14T18:26:21+00:00",
   "caught_up": false,
   "last_ok": "2026-08-03T17:22:20+00:00",
   "backfill_done": false,
@@ -23,23 +23,23 @@
  },
  "opinions": {
   "last_id": 11439718,
-  "last_attempt": "2026-09-13T22:47:02+00:00",
+  "last_attempt": "2026-09-14T18:26:21+00:00",
   "caught_up": false,
   "backfill_done": false,
   "last_ok": "2026-08-03T15:54:20+00:00",
   "backfill_completed_at": "2026-07-31",
-  "resume_url": "https://www.courtlistener.com/api/rest/v4/opinions/?cluster__date_filed__gte=2020-01-01&cluster__docket__court=cafc&cursor=cD0xMTIxNjM1NQ%3D%3D&fields=id%2Ccluster_id%2Cauthor_str%2Cjoined_by_str%2Ctype%2Cauthor_id%2Cjoined_by%2Cper_curiam%2Cdownload_url%2Cabsolute_url&order_by=-id"
+  "resume_url": "https://www.courtlistener.com/api/rest/v4/opinions/?cluster__date_filed__gte=2020-01-01&cluster__docket__court=cafc&cursor=cD0xMTA5OTA1NQ%3D%3D&fields=id%2Ccluster_id%2Cauthor_str%2Cjoined_by_str%2Ctype%2Cauthor_id%2Cjoined_by%2Cper_curiam%2Cdownload_url%2Cabsolute_url&order_by=-id"
  },
  "audio": {
   "last_id": 105721,
-  "last_attempt": "2026-09-13T22:47:02+00:00",
+  "last_attempt": "2026-09-14T18:26:21+00:00",
   "caught_up": false,
   "last_ok": "2026-08-03T17:22:20+00:00",
   "backfill_done": false,
   "backfill_completed_at": "2026-07-31",
   "resume_url": "https://www.courtlistener.com/api/rest/v4/audio/?cursor=cD0yMDIxLTA2LTA3KzE4JTNBNDUlM0E1NC41NTc5MzUlMkIwMCUzQTAw&date_created__gte=2020-01-01&docket__court=cafc&fields=id%2Cdocket%2Ccase_name%2Cjudges%2Cabsolute_url&order_by=-date_created"
  },
- "run_no": 179,
+ "run_no": 180,
  "schema_v17": true,
  "judge_names": {},
  "schema_v22": true,
