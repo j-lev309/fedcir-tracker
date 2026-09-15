@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-15T20:15:55+00:00",
+ "generated_at": "2026-09-15T23:24:27+00:00",
  "window_since": "2020-01-01",
  "coverage": {
   "complete": false,
@@ -21,14 +21,14 @@
    },
    "clusters": {
     "complete": false,
-    "reason": "HTTP 404",
-    "count": 220
+    "reason": "quota exhausted",
+    "count": 0
    },
    "opinions": {
-    "resume_url": "https://www.courtlistener.com/api/rest/v4/opinions/?cluster__date_filed__gte=2020-01-01&cluster__docket__court=cafc&cursor=cD0xMDU2NDI1Nw%3D%3D&fields=id%2Ccluster_id%2Cauthor_str%2Cjoined_by_str%2Ctype%2Cauthor_id%2Cjoined_by%2Cper_curiam%2Cdownload_url%2Cabsolute_url&order_by=-id",
+    "resume_url": "https://www.courtlistener.com/api/rest/v4/opinions/?cluster__date_filed__gte=2020-01-01&cluster__docket__court=cafc&cursor=cD05OTc3MTY4&fields=id%2Ccluster_id%2Cauthor_str%2Cjoined_by_str%2Ctype%2Cauthor_id%2Cjoined_by%2Cper_curiam%2Cdownload_url%2Cabsolute_url&order_by=-id",
     "complete": false,
     "reason": "quota exhausted",
-    "count": 200
+    "count": 400
    },
    "audio": {
     "complete": false,
@@ -1864,7 +1864,7 @@
    "decision": {
     "date": "2026-08-17",
     "precedential_status": "Unpublished",
-    "disposition": "Errata",
+    "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10951882/jacki-easlick-llc-v-cj-emerald/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1538.ERRATA.8-17-2026_2740054.pdf"
    },
@@ -1910,7 +1910,7 @@
    "decision": {
     "date": "2026-08-14",
     "precedential_status": "Unpublished",
-    "disposition": "Errata",
+    "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10948510/jacki-easlick-llc-v-cj-emerald/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1538.OPINION.8-14-2026_2739398.pdf"
    },
