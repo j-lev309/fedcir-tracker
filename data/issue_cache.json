@@ -3589,7 +3589,11 @@
   }
  ],
  "cl-10870026": {
-  "issues": [],
+  "issues": [
+   "\u00a7 101 Eligibility",
+   "\u00a7\u00a7 102/103 Prior Art",
+   "\u00a7 112 / Claim Construction"
+  ],
   "summary": null
  },
  "panel-cl-10870058": [
@@ -8747,7 +8751,9 @@
   }
  ],
  "cl-10783998": {
-  "issues": [],
+  "issues": [
+   "\u00a7 112 / Claim Construction"
+  ],
   "summary": null
  },
  "panel-cl-10783896": [
@@ -9660,7 +9666,9 @@
   }
  ],
  "cl-10775402": {
-  "issues": [],
+  "issues": [
+   "Damages & Remedies"
+  ],
   "summary": null
  },
  "panel-cl-10775403": [
@@ -14743,7 +14751,9 @@
   }
  ],
  "cl-10673016": {
-  "issues": [],
+  "issues": [
+   "\u00a7 112 / Claim Construction"
+  ],
   "summary": null
  },
  "panel-cl-10673017": [
