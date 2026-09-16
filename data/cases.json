@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-16T20:03:23+00:00",
+ "generated_at": "2026-09-16T22:19:19+00:00",
  "window_since": "2020-01-01",
  "coverage": {
   "complete": false,
@@ -16,8 +16,8 @@
   "sources": {
    "dockets": {
     "complete": false,
-    "reason": "HTTP 404",
-    "count": 60
+    "reason": "quota exhausted",
+    "count": 0
    },
    "clusters": {
     "complete": false,
@@ -25,15 +25,16 @@
     "count": 140
    },
    "opinions": {
-    "resume_url": "https://www.courtlistener.com/api/rest/v4/opinions/?cluster__date_filed__gte=2020-01-01&cluster__docket__court=cafc&cursor=cD05OTQ4MTE2&fields=id%2Ccluster_id%2Cauthor_str%2Cjoined_by_str%2Ctype%2Cauthor_id%2Cjoined_by%2Cper_curiam%2Cdownload_url%2Cabsolute_url&order_by=-id",
+    "resume_url": "https://www.courtlistener.com/api/rest/v4/opinions/?cluster__date_filed__gte=2020-01-01&cluster__docket__court=cafc&cursor=cD05OTQ2MjQ2&fields=id%2Ccluster_id%2Cauthor_str%2Cjoined_by_str%2Ctype%2Cauthor_id%2Cjoined_by%2Cper_curiam%2Cdownload_url%2Cabsolute_url&order_by=-id",
     "complete": false,
-    "reason": "quota exhausted",
-    "count": 460
+    "reason": "network timeouts",
+    "count": 40
    },
    "audio": {
+    "resume_url": "https://www.courtlistener.com/api/rest/v4/audio/?cursor=cD0yMDI2LTA0LTA5KzE3JTNBMzYlM0EyOC45NzE5MjAlMkIwMCUzQTAw&date_created__gte=2020-01-01&docket__court=cafc&fields=id%2Cdocket%2Ccase_name%2Cjudges%2Cabsolute_url&order_by=-date_created",
     "complete": false,
     "reason": "quota exhausted",
-    "count": 0
+    "count": 200
    },
    "scheduled_arguments": {
     "count": 0,
@@ -110,7 +111,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/72520567/abc-ip-llc-v-peak-tactical-llc/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/106231/abc-ip-llc-v-peak-tactical-llc/"
   },
   {
    "docket_number": "2025-1868",
@@ -154,7 +155,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/73573446/caddo-systems-inc-v-jetbrains-americas-inc/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/106221/caddo-systems-inc-v-jetbrains-americas-inc/"
   },
   {
    "docket_number": "2024-1696",
@@ -312,7 +313,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10970411/burgan-v-collins/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/106197/burgan-v-collins/"
   },
   {
    "docket_number": "CL-10970591",
@@ -380,7 +381,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10969847/mummert-v-army/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/106175/mummert-v-army/"
   },
   {
    "docket_number": "CL-10969990",
@@ -45120,7 +45121,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/71590498/netlist-inc-v-micron-technology-texas-llc/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/106195/netlist-inc-v-micron-technology-texas-llc/"
   },
   {
    "docket_number": "CL-10632470",
@@ -56323,7 +56324,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/69756541/kaptan-demir-celik-endustrisi-ve-ticaret-as-v-united-states/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/106253/kaptan-demir-celik-endustrisi-ve-ticaret-as-v-united-states/"
   },
   {
    "docket_number": "CL-10357532",
@@ -58043,7 +58044,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/74687855/walker-v-collins/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/106178/walker-v-collins/"
   },
   {
    "docket_number": "CL-10349489",
@@ -58331,7 +58332,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/74687848/traxcell-technologies-llc-v-cellco-partnership/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/106174/traxcell-technologies-llc-v-cellco-partnership/"
   },
   {
    "docket_number": "CL-10348592",
@@ -61065,7 +61066,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/69924630/google-llc-v-sonos-inc/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/106255/google-llc-v-sonos-inc/"
   },
   {
    "docket_number": "2025-1342",
@@ -61081,7 +61082,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/74655333/university-of-massachusetts-v-forte-biosciences-inc/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/106179/university-of-massachusetts-v-forte-biosciences-inc/"
   },
   {
    "docket_number": "2025-1334",
@@ -61241,7 +61242,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/69849096/netlist-inc-v-samsung-electronics-co-ltd/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/106193/netlist-inc-v-micron-technology-inc/"
   },
   {
    "docket_number": "2025-1277",
@@ -61273,7 +61274,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/69451843/truinject-corp-v-galderma-sa/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/106251/truinject-corp-v-galderma-sa/"
   },
   {
    "docket_number": "2025-1262",
@@ -61385,7 +61386,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/74691470/cooper-v-collins/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/106220/cooper-v-collins/"
   },
   {
    "docket_number": "2025-108",
@@ -61433,7 +61434,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/69697177/alexsam-inc-v-simon-property-group-lp/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/106270/alexsam-inc-v-simon-property-group-lp/"
   },
   {
    "docket_number": "2025-106",
@@ -61497,7 +61498,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/74687852/edge-systems-llc-v-cartessa-aesthetics-llc/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/106180/edge-systems-llc-v-cartessa-aesthetics-llc/"
   },
   {
    "docket_number": "2025-1122",
@@ -61561,7 +61562,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/74687819/cheyenne-river-sioux-tribe-v-united-states/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/106177/cheyenne-river-sioux-tribe-v-united-states/"
   },
   {
    "docket_number": "2025-1068",
@@ -61737,7 +61738,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/69849095/netlist-inc-v-samsung-electronics-co-ltd/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/106194/netlist-inc-v-micron-technology-inc/"
   },
   {
    "docket_number": "2024-2293",
@@ -61865,7 +61866,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/74687854/mcginley-v-luv-n-care-ltd/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/106176/mcginley-v-luv-n-care-ltd/"
   },
   {
    "docket_number": "2024-2243",
