@@ -1,23 +1,21 @@
 {
- "generated_at": "2026-09-18T21:48:54+00:00",
+ "generated_at": "2026-09-18T23:09:32+00:00",
  "window_since": "2020-01-01",
  "coverage": {
   "complete": false,
   "run_complete": false,
   "backfilling": [
    "dockets",
-   "clusters",
-   "opinions",
-   "audio"
+   "clusters"
   ],
   "window_since": "2020-01-01",
   "window_months": 18,
-  "complete_since": null,
+  "complete_since": "2025-02-05",
   "sources": {
    "dockets": {
     "complete": false,
-    "reason": "quota exhausted",
-    "count": 0
+    "reason": "HTTP 404",
+    "count": 60
    },
    "clusters": {
     "complete": false,
@@ -25,15 +23,16 @@
     "count": 140
    },
    "opinions": {
-    "resume_url": "https://www.courtlistener.com/api/rest/v4/opinions/?cluster__date_filed__gte=2020-01-01&cluster__docket__court=cafc&cursor=cD00NjUwNDA2&fields=id%2Ccluster_id%2Cauthor_str%2Cjoined_by_str%2Ctype%2Cauthor_id%2Cjoined_by%2Cper_curiam%2Cdownload_url%2Cabsolute_url&order_by=-id",
-    "complete": false,
-    "reason": "quota exhausted",
-    "count": 640
+    "complete": true,
+    "reason": "ok",
+    "count": 833,
+    "resume_url": null
    },
    "audio": {
-    "complete": false,
-    "reason": "quota exhausted",
-    "count": 0
+    "complete": true,
+    "reason": "ok",
+    "count": 109,
+    "resume_url": null
    },
    "scheduled_arguments": {
     "count": 0,
