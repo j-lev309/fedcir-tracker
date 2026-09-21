@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-21T18:32:44+00:00",
+ "generated_at": "2026-09-21T19:59:35+00:00",
  "window_since": "2020-01-01",
  "coverage": {
   "complete": false,
@@ -25,15 +25,15 @@
     "count": 0
    },
    "opinions": {
-    "resume_url": "https://www.courtlistener.com/api/rest/v4/opinions/?cluster__date_filed__gte=2020-01-01&cluster__docket__court=cafc&cursor=cD05Njg1NzYx&fields=id%2Ccluster_id%2Cauthor_str%2Cjoined_by_str%2Ctype%2Cauthor_id%2Cjoined_by%2Cper_curiam%2Cdownload_url%2Cabsolute_url&order_by=-id",
-    "complete": false,
-    "reason": "quota exhausted",
-    "count": 800
-   },
-   "audio": {
     "complete": false,
     "reason": "quota exhausted",
     "count": 0
+   },
+   "audio": {
+    "resume_url": "https://www.courtlistener.com/api/rest/v4/audio/?cursor=cD0yMDIxLTA0LTA4KzE2JTNBMzElM0EwMi4zNjI4NjIlMkIwMCUzQTAw&date_created__gte=2020-01-01&docket__court=cafc&fields=id%2Cdocket%2Ccase_name%2Cjudges%2Cabsolute_url&order_by=-date_created",
+    "complete": false,
+    "reason": "quota exhausted",
+    "count": 800
    },
    "scheduled_arguments": {
     "count": 0,
