@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-21T23:55:30+00:00",
+ "generated_at": "2026-09-22T18:56:23+00:00",
  "window_since": "2020-01-01",
  "coverage": {
   "complete": false,
@@ -15,25 +15,26 @@
   "complete_since": "2025-02-05",
   "sources": {
    "dockets": {
+    "resume_url": "https://www.courtlistener.com/api/rest/v4/dockets/?court=cafc&date_filed__gte=2020-01-01&fields=id%2Cdocket_number%2Ccase_name%2Ccase_name_short%2Cdate_filed%2Cdate_argued%2Cdate_terminated%2Cappeal_from_str%2Cappeal_from%2Cabsolute_url%2Cnature_of_suit%2Cpanel_str&order_by=-date_filed&page=98",
     "complete": false,
-    "reason": "quota exhausted",
+    "reason": "network timeouts",
     "count": 0
    },
    "clusters": {
     "complete": false,
-    "reason": "quota exhausted",
-    "count": 0
+    "reason": "HTTP 404",
+    "count": 100
    },
    "opinions": {
-    "resume_url": "https://www.courtlistener.com/api/rest/v4/opinions/?cluster__date_filed__gte=2020-01-01&cluster__docket__court=cafc&cursor=cD05MzY2NzQ1&fields=id%2Ccluster_id%2Cauthor_str%2Cjoined_by_str%2Ctype%2Cauthor_id%2Cjoined_by%2Cper_curiam%2Cdownload_url%2Cabsolute_url&order_by=-id",
+    "resume_url": "https://www.courtlistener.com/api/rest/v4/opinions/?cluster__date_filed__gte=2020-01-01&cluster__docket__court=cafc&cursor=cD05MzIzNzkw&fields=id%2Ccluster_id%2Cauthor_str%2Cjoined_by_str%2Ctype%2Cauthor_id%2Cjoined_by%2Cper_curiam%2Cdownload_url%2Cabsolute_url&order_by=-id",
     "complete": false,
     "reason": "quota exhausted",
-    "count": 860
+    "count": 140
    },
    "audio": {
     "complete": false,
-    "reason": "quota exhausted",
-    "count": 0
+    "reason": "HTTP 502",
+    "count": 460
    },
    "scheduled_arguments": {
     "count": 0,
