@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-22T23:29:25+00:00",
+ "generated_at": "2026-09-23T17:41:41+00:00",
  "window_since": "2020-01-01",
  "coverage": {
   "complete": false,
@@ -25,15 +25,15 @@
     "count": 0
    },
    "opinions": {
-    "resume_url": "https://www.courtlistener.com/api/rest/v4/opinions/?cluster__date_filed__gte=2020-01-01&cluster__docket__court=cafc&cursor=cD00NTUzMDU0&fields=id%2Ccluster_id%2Cauthor_str%2Cjoined_by_str%2Ctype%2Cauthor_id%2Cjoined_by%2Cper_curiam%2Cdownload_url%2Cabsolute_url&order_by=-id",
-    "complete": false,
-    "reason": "quota exhausted",
-    "count": 800
-   },
-   "audio": {
     "complete": false,
     "reason": "quota exhausted",
     "count": 0
+   },
+   "audio": {
+    "resume_url": "https://www.courtlistener.com/api/rest/v4/audio/?cursor=cD0yMDI1LTAyLTI2KzAwJTNBNDUlM0EwNi4wODIzNjclMkIwMCUzQTAw&date_created__gte=2020-01-01&docket__court=cafc&fields=id%2Cdocket%2Ccase_name%2Cjudges%2Cabsolute_url&order_by=-date_created",
+    "complete": false,
+    "reason": "quota exhausted",
+    "count": 800
    },
    "scheduled_arguments": {
     "count": 0,
@@ -49,25 +49,47 @@
   "summaries": {
    "enabled": false,
    "have": 0,
-   "expected": 2009,
+   "expected": 2010,
    "complete": true
   },
   "opinion_text_fetches_this_run": 600,
   "opinion_text_fetch_cap": 600,
-  "latest_decision_date": "2026-09-21",
+  "latest_decision_date": "2026-09-23",
   "next_argument_date": null
  },
  "stats": {
   "total": 3342,
   "pending": 1020,
   "scheduled": 0,
-  "awaiting": 311,
-  "decided": 2011,
+  "awaiting": 310,
+  "decided": 2012,
   "precedential": 305,
   "rule36": 2
  },
  "upcoming_argument_docket_numbers": [],
  "cases": [
+  {
+   "docket_number": "2025-1503",
+   "case_name": "Walker v. Collins",
+   "case_type": "Veterans",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": "2025-03-05",
+   "date_argued": "2026-09-08",
+   "argument": null,
+   "decision": {
+    "date": "2026-09-23",
+    "precedential_status": null,
+    "disposition": "Opinion",
+    "url_cl": null,
+    "url_pdf": "https://www.cafc.uscourts.gov/09-23-2026-25-1503-walker-v-collins-opinion-25-1503-opinion-9-23-2026_2760101/"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/74687855/walker-v-collins/",
+   "url_audio": "https://www.courtlistener.com/audio/106178/walker-v-collins/"
+  },
   {
    "docket_number": "2024-2353",
    "case_name": "BerkeleyIEOR v. W.W. Grainger Inc.",
@@ -58090,22 +58112,6 @@
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10350308/young-v-mspb/",
    "url_audio": null
-  },
-  {
-   "docket_number": "2025-1503",
-   "case_name": "Walker v. Collins",
-   "case_type": "Veterans",
-   "origin": null,
-   "status": "Argued \u2014 Awaiting Decision",
-   "date_filed": "2025-03-05",
-   "date_argued": "2026-09-08",
-   "argument": null,
-   "decision": null,
-   "panel": [],
-   "patent_issues": [],
-   "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/74687855/walker-v-collins/",
-   "url_audio": "https://www.courtlistener.com/audio/106178/walker-v-collins/"
   },
   {
    "docket_number": "CL-10349489",
