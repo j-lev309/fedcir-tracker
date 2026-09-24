@@ -1,6 +1,6 @@
 {
  "dockets": {
-  "last_attempt": "2026-09-24T22:17:28+00:00",
+  "last_attempt": "2026-09-24T23:43:26+00:00",
   "caught_up": false,
   "last_ok": "2026-08-03T15:54:20+00:00",
   "backfill_done": false,
@@ -11,7 +11,7 @@
   "frontier_date": "2020-08-05"
  },
  "clusters": {
-  "last_attempt": "2026-09-24T22:17:28+00:00",
+  "last_attempt": "2026-09-24T23:43:26+00:00",
   "caught_up": false,
   "last_ok": "2026-08-03T17:22:20+00:00",
   "backfill_done": false,
@@ -23,17 +23,17 @@
  },
  "opinions": {
   "last_id": 11448154,
-  "last_attempt": "2026-09-24T22:17:28+00:00",
+  "last_attempt": "2026-09-24T23:43:26+00:00",
   "caught_up": false,
   "backfill_done": false,
   "last_ok": "2026-09-23T18:57:19+00:00",
   "backfill_completed_at": "2026-07-31",
-  "resume_url": "https://www.courtlistener.com/api/rest/v4/opinions/?cluster__date_filed__gte=2020-01-01&cluster__docket__court=cafc&cursor=cD0xMDI4ODU0Nw%3D%3D&fields=id%2Ccluster_id%2Cauthor_str%2Cjoined_by_str%2Ctype%2Cauthor_id%2Cjoined_by%2Cper_curiam%2Cdownload_url%2Cabsolute_url&order_by=-id",
+  "resume_url": "https://www.courtlistener.com/api/rest/v4/opinions/?cluster__date_filed__gte=2020-01-01&cluster__docket__court=cafc&cursor=cD05OTI1NjM5&fields=id%2Ccluster_id%2Cauthor_str%2Cjoined_by_str%2Ctype%2Cauthor_id%2Cjoined_by%2Cper_curiam%2Cdownload_url%2Cabsolute_url&order_by=-id",
   "frontier_date": "2020-01-01"
  },
  "audio": {
   "last_id": 106270,
-  "last_attempt": "2026-09-24T22:17:28+00:00",
+  "last_attempt": "2026-09-24T23:43:26+00:00",
   "caught_up": false,
   "last_ok": "2026-09-24T17:49:15+00:00",
   "backfill_done": false,
@@ -41,7 +41,7 @@
   "resume_url": null,
   "frontier_date": "2020-01-01"
  },
- "run_no": 221,
+ "run_no": 222,
  "schema_v17": true,
  "judge_names": {},
  "schema_v22": true,
