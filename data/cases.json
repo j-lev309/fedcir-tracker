@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-24T17:55:29+00:00",
+ "generated_at": "2026-09-24T18:56:54+00:00",
  "window_since": "2020-01-01",
  "coverage": {
   "complete": false,
@@ -7,7 +7,8 @@
   "backfilling": [
    "dockets",
    "clusters",
-   "opinions"
+   "opinions",
+   "audio"
   ],
   "window_since": "2020-01-01",
   "window_months": 18,
@@ -24,16 +25,15 @@
     "count": 100
    },
    "opinions": {
-    "resume_url": "https://www.courtlistener.com/api/rest/v4/opinions/?cluster__date_filed__gte=2020-01-01&cluster__docket__court=cafc&cursor=cD0xMTA2NDcyMQ%3D%3D&fields=id%2Ccluster_id%2Cauthor_str%2Cjoined_by_str%2Ctype%2Cauthor_id%2Cjoined_by%2Cper_curiam%2Cdownload_url%2Cabsolute_url&order_by=-id",
+    "resume_url": "https://www.courtlistener.com/api/rest/v4/opinions/?cluster__date_filed__gte=2020-01-01&cluster__docket__court=cafc&cursor=cD0xMDYyNjc4Mw%3D%3D&fields=id%2Ccluster_id%2Cauthor_str%2Cjoined_by_str%2Ctype%2Cauthor_id%2Cjoined_by%2Cper_curiam%2Cdownload_url%2Cabsolute_url&order_by=-id",
     "complete": false,
     "reason": "quota exhausted",
-    "count": 820
+    "count": 800
    },
    "audio": {
-    "complete": true,
-    "reason": "ok",
-    "count": 649,
-    "resume_url": null
+    "complete": false,
+    "reason": "quota exhausted",
+    "count": 0
    },
    "scheduled_arguments": {
     "count": 0,
