@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-24T23:46:45+00:00",
+ "generated_at": "2026-09-25T17:49:43+00:00",
  "window_since": "2020-01-01",
  "coverage": {
   "complete": false,
@@ -25,15 +25,15 @@
     "count": 0
    },
    "opinions": {
-    "resume_url": "https://www.courtlistener.com/api/rest/v4/opinions/?cluster__date_filed__gte=2020-01-01&cluster__docket__court=cafc&cursor=cD05OTI1NjM5&fields=id%2Ccluster_id%2Cauthor_str%2Cjoined_by_str%2Ctype%2Cauthor_id%2Cjoined_by%2Cper_curiam%2Cdownload_url%2Cabsolute_url&order_by=-id",
-    "complete": false,
-    "reason": "quota exhausted",
-    "count": 800
-   },
-   "audio": {
     "complete": false,
     "reason": "quota exhausted",
     "count": 0
+   },
+   "audio": {
+    "resume_url": "https://www.courtlistener.com/api/rest/v4/audio/?cursor=cD0yMDI1LTAxLTA2KzIyJTNBMzElM0EwNi45NjI2MjklMkIwMCUzQTAw&date_created__gte=2020-01-01&docket__court=cafc&fields=id%2Cdocket%2Ccase_name%2Cjudges%2Cabsolute_url&order_by=-date_created",
+    "complete": false,
+    "reason": "quota exhausted",
+    "count": 860
    },
    "scheduled_arguments": {
     "count": 0,
@@ -41,7 +41,7 @@
     "reason": "ok"
    },
    "opinion_rss": {
-    "count": 98,
+    "count": 99,
     "complete": true,
     "reason": "ok"
    }
@@ -49,25 +49,47 @@
   "summaries": {
    "enabled": false,
    "have": 0,
-   "expected": 2010,
+   "expected": 2011,
    "complete": true
   },
   "opinion_text_fetches_this_run": 600,
   "opinion_text_fetch_cap": 600,
-  "latest_decision_date": "2026-09-23",
+  "latest_decision_date": "2026-09-25",
   "next_argument_date": null
  },
  "stats": {
   "total": 3342,
   "pending": 1020,
   "scheduled": 0,
-  "awaiting": 310,
-  "decided": 2012,
+  "awaiting": 309,
+  "decided": 2013,
   "precedential": 305,
   "rule36": 2
  },
  "upcoming_argument_docket_numbers": [],
  "cases": [
+  {
+   "docket_number": "2024-1825",
+   "case_name": "Receivership Estate of AudienceScience Inc. v. Google LLC",
+   "case_type": "Patent (District Ct.)",
+   "origin": "United States District Court for the Northern District of California",
+   "status": "Decided",
+   "date_filed": "2024-05-20",
+   "date_argued": "2026-02-09",
+   "argument": null,
+   "decision": {
+    "date": "2026-09-25",
+    "precedential_status": null,
+    "disposition": "Opinion",
+    "url_cl": null,
+    "url_pdf": "https://www.cafc.uscourts.gov/09-25-2026-24-1825-receivership-estate-of-audiencescience-inc-v-google-llc-opinion-24-1825-opinion-9-25-2026_2761456/"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/68912094/receivership-estate-of-audiencescience-inc-v-google-llc/",
+   "url_audio": "https://www.courtlistener.com/audio/102578/receivership-estate-of-audiencescience-inc-v-google-llc/"
+  },
   {
    "docket_number": "2025-1503",
    "case_name": "Walker v. Collins",
@@ -62782,22 +62804,6 @@
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/69207166/armstead-v-bragg/",
    "url_audio": null
-  },
-  {
-   "docket_number": "2024-1825",
-   "case_name": "Receivership Estate of AudienceScience Inc. v. Google LLC",
-   "case_type": "Patent (District Ct.)",
-   "origin": "United States District Court for the Northern District of California",
-   "status": "Argued \u2014 Awaiting Decision",
-   "date_filed": "2024-05-20",
-   "date_argued": "2026-02-09",
-   "argument": null,
-   "decision": null,
-   "panel": [],
-   "patent_issues": [],
-   "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/68912094/receivership-estate-of-audiencescience-inc-v-google-llc/",
-   "url_audio": "https://www.courtlistener.com/audio/102578/receivership-estate-of-audiencescience-inc-v-google-llc/"
   },
   {
    "docket_number": "2024-1829",
