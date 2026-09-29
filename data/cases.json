@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-29T20:22:10+00:00",
+ "generated_at": "2026-09-29T21:31:31+00:00",
  "window_since": "2020-01-01",
  "coverage": {
   "complete": false,
@@ -20,22 +20,20 @@
     "count": 0
    },
    "clusters": {
-    "resume_url": "https://www.courtlistener.com/api/rest/v4/clusters/?date_filed__gte=2020-01-01&docket__court=cafc&fields=id%2Cabsolute_url%2Ccase_name%2Cdate_filed%2Cprecedential_status%2Cjudges%2Cpanel%2Cdocket_id%2Cdocket%2Cnature_of_suit%2Csyllabus%2Cheadnotes%2Cdisposition%2Csub_opinions&order_by=-date_filed&page=96",
     "complete": false,
-    "reason": "network timeouts",
+    "reason": "quota exhausted",
     "count": 0
    },
    "opinions": {
-    "resume_url": "https://www.courtlistener.com/api/rest/v4/opinions/?cluster__date_filed__gte=2020-01-01&cluster__docket__court=cafc&cursor=cD05MzgzOTEz&fields=id%2Ccluster_id%2Cauthor_str%2Cjoined_by_str%2Ctype%2Cauthor_id%2Cjoined_by%2Cper_curiam%2Cdownload_url%2Cabsolute_url&order_by=-id",
-    "complete": false,
-    "reason": "network timeouts",
-    "count": 0
-   },
-   "audio": {
-    "resume_url": "https://www.courtlistener.com/api/rest/v4/audio/?cursor=cD0yMDIxLTA0LTA1KzE4JTNBMzElM0ExMi45MzUwOTElMkIwMCUzQTAw&date_created__gte=2020-01-01&docket__court=cafc&fields=id%2Cdocket%2Ccase_name%2Cjudges%2Cabsolute_url&order_by=-date_created",
+    "resume_url": "https://www.courtlistener.com/api/rest/v4/opinions/?cluster__date_filed__gte=2020-01-01&cluster__docket__court=cafc&cursor=cD02NDk4NzIx&fields=id%2Ccluster_id%2Cauthor_str%2Cjoined_by_str%2Ctype%2Cauthor_id%2Cjoined_by%2Cper_curiam%2Cdownload_url%2Cabsolute_url&order_by=-id",
     "complete": false,
     "reason": "quota exhausted",
-    "count": 1000
+    "count": 800
+   },
+   "audio": {
+    "complete": false,
+    "reason": "quota exhausted",
+    "count": 0
    },
    "scheduled_arguments": {
     "count": 0,
@@ -43,7 +41,7 @@
     "reason": "ok"
    },
    "opinion_rss": {
-    "count": 99,
+    "count": 0,
     "complete": true,
     "reason": "ok"
    }
@@ -51,311 +49,25 @@
   "summaries": {
    "enabled": false,
    "have": 0,
-   "expected": 2012,
+   "expected": 2001,
    "complete": true
   },
   "opinion_text_fetches_this_run": 600,
   "opinion_text_fetch_cap": 600,
-  "latest_decision_date": "2026-09-29",
+  "latest_decision_date": "2026-09-10",
   "next_argument_date": null
  },
  "stats": {
   "total": 3342,
-  "pending": 1019,
+  "pending": 1024,
   "scheduled": 0,
-  "awaiting": 309,
-  "decided": 2014,
+  "awaiting": 317,
+  "decided": 2001,
   "precedential": 305,
-  "rule36": 2
+  "rule36": 0
  },
  "upcoming_argument_docket_numbers": [],
  "cases": [
-  {
-   "docket_number": "2026-1449",
-   "case_name": "North East Mobile Health Services v. Secretary of Veterans Affairs",
-   "case_type": "Other / Unclassified",
-   "origin": "Civilian Board of Contract Appeals",
-   "status": "Decided",
-   "date_filed": "2026-02-19",
-   "date_argued": null,
-   "argument": null,
-   "decision": {
-    "date": "2026-09-29",
-    "precedential_status": null,
-    "disposition": "Order",
-    "url_cl": null,
-    "url_pdf": "https://www.cafc.uscourts.gov/09-29-2026-26-1449-north-east-mobile-health-services-v-secretary-of-veterans-affairs-order-26-1449-order-9-29-2026_2763572/"
-   },
-   "panel": [],
-   "patent_issues": [],
-   "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/73383324/north-east-mobile-health-services-v-secretary-of-veterans-affairs/",
-   "url_audio": null
-  },
-  {
-   "docket_number": "2024-1825",
-   "case_name": "Receivership Estate of AudienceScience Inc. v. Google LLC",
-   "case_type": "Patent (District Ct.)",
-   "origin": "United States District Court for the Northern District of California",
-   "status": "Decided",
-   "date_filed": "2024-05-20",
-   "date_argued": "2026-02-09",
-   "argument": null,
-   "decision": {
-    "date": "2026-09-25",
-    "precedential_status": null,
-    "disposition": "Opinion",
-    "url_cl": null,
-    "url_pdf": "https://www.cafc.uscourts.gov/09-25-2026-24-1825-receivership-estate-of-audiencescience-inc-v-google-llc-opinion-24-1825-opinion-9-25-2026_2761456/"
-   },
-   "panel": [],
-   "patent_issues": [],
-   "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/68912094/receivership-estate-of-audiencescience-inc-v-google-llc/",
-   "url_audio": "https://www.courtlistener.com/audio/102578/receivership-estate-of-audiencescience-inc-v-google-llc/"
-  },
-  {
-   "docket_number": "2025-1503",
-   "case_name": "Walker v. Collins",
-   "case_type": "Veterans",
-   "origin": null,
-   "status": "Decided",
-   "date_filed": "2025-03-05",
-   "date_argued": "2026-09-08",
-   "argument": null,
-   "decision": {
-    "date": "2026-09-23",
-    "precedential_status": null,
-    "disposition": "Opinion",
-    "url_cl": null,
-    "url_pdf": "https://www.cafc.uscourts.gov/09-23-2026-25-1503-walker-v-collins-opinion-25-1503-opinion-9-23-2026_2760101/"
-   },
-   "panel": [],
-   "patent_issues": [],
-   "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/74687855/walker-v-collins/",
-   "url_audio": "https://www.courtlistener.com/audio/106178/walker-v-collins/"
-  },
-  {
-   "docket_number": "2024-2353",
-   "case_name": "BerkeleyIEOR v. W.W. Grainger Inc.",
-   "case_type": "Patent (District Ct.)",
-   "origin": "United States District Court for the Northern District of Illinois",
-   "status": "Decided",
-   "date_filed": "2024-09-24",
-   "date_argued": "2026-06-03",
-   "argument": null,
-   "decision": {
-    "date": "2026-09-21",
-    "precedential_status": null,
-    "disposition": "Opinion",
-    "url_cl": null,
-    "url_pdf": "https://www.cafc.uscourts.gov/09-21-2026-24-2353-berkeley%2Aieor-v-ww-grainger-inc-opinion-24-2353-opinion-9-21-2026_2758411/"
-   },
-   "panel": [],
-   "patent_issues": [],
-   "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/70311570/berkeleyieor-v-ww-grainger-inc/",
-   "url_audio": "https://www.courtlistener.com/audio/105257/berkeleyieor-v-ww-grainger-inc/"
-  },
-  {
-   "docket_number": "2026-2022",
-   "case_name": "Richards v. Kallish",
-   "case_type": "Patent (District Ct.)",
-   "origin": "United States District Court for the Southern District of New York",
-   "status": "Decided",
-   "date_filed": "2026-07-10",
-   "date_argued": null,
-   "argument": null,
-   "decision": {
-    "date": "2026-09-18",
-    "precedential_status": null,
-    "disposition": "Order",
-    "url_cl": null,
-    "url_pdf": "https://www.cafc.uscourts.gov/09-18-2026-26-2022-richards-v-kallish-order-26-2022-order-9-18-2026_2757939/"
-   },
-   "panel": [],
-   "patent_issues": [],
-   "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/73612944/richards-v-kallish/",
-   "url_audio": null
-  },
-  {
-   "docket_number": "2026-1335",
-   "case_name": "Strong v. United States",
-   "case_type": "Federal Claims",
-   "origin": "United States Court of Federal Claims",
-   "status": "Decided",
-   "date_filed": "2026-01-13",
-   "date_argued": null,
-   "argument": null,
-   "decision": {
-    "date": "2026-09-18",
-    "precedential_status": null,
-    "disposition": "Opinion",
-    "url_cl": null,
-    "url_pdf": "https://www.cafc.uscourts.gov/09-18-2026-26-1335-strong-v-us-opinion-26-1335-opinion-9-18-2026_2757725/"
-   },
-   "panel": [],
-   "patent_issues": [],
-   "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/72244289/strong-v-united-states/",
-   "url_audio": null
-  },
-  {
-   "docket_number": "2025-1382",
-   "case_name": "Tenaris Bay City, Inc. v. United States",
-   "case_type": "Trade (CIT)",
-   "origin": "United States Court of International Trade",
-   "status": "Decided",
-   "date_filed": "2025-01-23",
-   "date_argued": "2026-07-08",
-   "argument": null,
-   "decision": {
-    "date": "2026-09-18",
-    "precedential_status": null,
-    "disposition": "Opinion",
-    "url_cl": null,
-    "url_pdf": "https://www.cafc.uscourts.gov/09-18-2026-25-1382-tenaris-bay-city-inc-v-us-opinion-25-1382-opinion-9-18-2026_2757740/"
-   },
-   "panel": [],
-   "patent_issues": [],
-   "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/69571599/tenaris-bay-city-inc-v-united-states/",
-   "url_audio": "https://www.courtlistener.com/audio/105685/tenaris-bay-city-inc-v-united-states/"
-  },
-  {
-   "docket_number": "2026-149",
-   "case_name": "In re: Patel",
-   "case_type": "Trade (CIT)",
-   "origin": "United States Court of International Trade",
-   "status": "Decided",
-   "date_filed": "2026-08-05",
-   "date_argued": null,
-   "argument": null,
-   "decision": {
-    "date": "2026-09-17",
-    "precedential_status": null,
-    "disposition": "Order",
-    "url_cl": null,
-    "url_pdf": "https://www.cafc.uscourts.gov/09-17-2026-26-149-in-re-patel-order-26-149-order-9-17-2026_2757049/"
-   },
-   "panel": [],
-   "patent_issues": [],
-   "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/73740750/in-re-patel/",
-   "url_audio": null
-  },
-  {
-   "docket_number": "2025-1140",
-   "case_name": "Island Creek Associates, LLC v. United States",
-   "case_type": "Federal Claims",
-   "origin": "United States Court of Federal Claims",
-   "status": "Decided",
-   "date_filed": "2024-11-01",
-   "date_argued": "2026-05-05",
-   "argument": null,
-   "decision": {
-    "date": "2026-09-16",
-    "precedential_status": null,
-    "disposition": "Opinion",
-    "url_cl": null,
-    "url_pdf": "https://www.cafc.uscourts.gov/09-16-2026-25-1140-island-creek-associates-llc-v-us-opinion-25-1140-opinion-9-16-2026_2756263/"
-   },
-   "panel": [],
-   "patent_issues": [],
-   "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/69937933/island-creek-associates-llc-v-united-states/",
-   "url_audio": "https://www.courtlistener.com/audio/104687/island-creek-associates-llc-v-united-states/"
-  },
-  {
-   "docket_number": "2026-1527",
-   "case_name": "ABC IP LLC v. Peak Tactical LLC",
-   "case_type": "Patent (District Ct.)",
-   "origin": "United States District Court for the District of Wyoming",
-   "status": "Decided",
-   "date_filed": "2026-03-17",
-   "date_argued": "2026-09-10",
-   "argument": null,
-   "decision": {
-    "date": "2026-09-15",
-    "precedential_status": "Unpublished",
-    "disposition": "Rule 36 Judgment",
-    "url_cl": null,
-    "url_pdf": "https://www.cafc.uscourts.gov/09-15-2026-26-1527-abc-ip-llc-v-peak-tactical-llc-rule-36-judgment-26-1527-rule_36_judgment-9-15-2026_2755593/"
-   },
-   "panel": [],
-   "patent_issues": [],
-   "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/72520567/abc-ip-llc-v-peak-tactical-llc/",
-   "url_audio": "https://www.courtlistener.com/audio/106231/abc-ip-llc-v-peak-tactical-llc/"
-  },
-  {
-   "docket_number": "2025-1868",
-   "case_name": "Butenhoff v. Collins",
-   "case_type": "Veterans",
-   "origin": "United States Court of Appeals for Veterans Claims",
-   "status": "Decided",
-   "date_filed": "2025-06-17",
-   "date_argued": null,
-   "argument": null,
-   "decision": {
-    "date": "2026-09-14",
-    "precedential_status": null,
-    "disposition": "Opinion",
-    "url_cl": null,
-    "url_pdf": "https://www.cafc.uscourts.gov/09-14-2026-25-1868-butenhoff-v-collins-opinion-25-1868-opinion-9-14-2026_2754645/"
-   },
-   "panel": [],
-   "patent_issues": [],
-   "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/70567940/butenhoff-v-collins/",
-   "url_audio": null
-  },
-  {
-   "docket_number": "2025-1764",
-   "case_name": "Caddo Systems, Inc. v. Jetbrains Americas, Inc.",
-   "case_type": "Patent (District Ct.)",
-   "origin": "United States District Court for the District of Delaware",
-   "status": "Decided",
-   "date_filed": "2025-05-13",
-   "date_argued": "2026-09-10",
-   "argument": null,
-   "decision": {
-    "date": "2026-09-11",
-    "precedential_status": "Unpublished",
-    "disposition": "Rule 36 Judgment",
-    "url_cl": null,
-    "url_pdf": "https://www.cafc.uscourts.gov/09-11-2026-25-1764-caddo-systems-inc-v-jetbrains-americas-inc-rule-36-judgment-25-1764-rule_36_judgment-9-11-2026_2754034/"
-   },
-   "panel": [],
-   "patent_issues": [],
-   "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/73573446/caddo-systems-inc-v-jetbrains-americas-inc/",
-   "url_audio": "https://www.courtlistener.com/audio/106221/caddo-systems-inc-v-jetbrains-americas-inc/"
-  },
-  {
-   "docket_number": "2024-1696",
-   "case_name": "Moskowitz Family LLC v. Globus Medical, Inc.",
-   "case_type": "Patent (District Ct.)",
-   "origin": "United States District Court for the Eastern District of Pennsylvania",
-   "status": "Decided",
-   "date_filed": "2024-04-16",
-   "date_argued": "2026-05-04",
-   "argument": null,
-   "decision": {
-    "date": "2026-09-11",
-    "precedential_status": null,
-    "disposition": "Opinion",
-    "url_cl": null,
-    "url_pdf": "https://www.cafc.uscourts.gov/09-11-2026-24-1696-moskowitz-family-llc-v-globus-medical-inc-opinion-24-1696-opinion-9-11-2026_2754043/"
-   },
-   "panel": [],
-   "patent_issues": [],
-   "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/69935576/moskowitz-family-llc-v-globus-medical-inc/",
-   "url_audio": "https://www.courtlistener.com/audio/104665/moskowitz-family-llc-v-globus-medical-inc/"
-  },
   {
    "docket_number": "CL-10970372",
    "case_name": "Bell v. Opm",
@@ -412,7 +124,7 @@
    "decision": {
     "date": "2026-09-10",
     "precedential_status": "Published",
-    "disposition": "Opinion",
+    "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10970408/versata-software-llc-v-ford-motor-company/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1140.OPINION.9-10-2026_2753457.pdf"
    },
@@ -616,7 +328,7 @@
    "decision": {
     "date": "2026-09-08",
     "precedential_status": "Unpublished",
-    "disposition": "Opinion",
+    "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10968982/viavi-solutions-inc-v-platinum-optics-technology-inc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1362.OPINION.9-8-2026_2751857.pdf"
    },
@@ -662,7 +374,7 @@
    "decision": {
     "date": "2026-09-08",
     "precedential_status": "Unpublished",
-    "disposition": "Errata",
+    "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10969002/christensen-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1284.ERRATA.9-8-2026_2751863.pdf"
    },
@@ -728,7 +440,7 @@
    "decision": {
     "date": "2026-09-04",
     "precedential_status": "Published",
-    "disposition": "Opinion",
+    "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10967331/connecticut-yankee-atomic-power-company-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1395.OPINION.9-4-2026_2751042.pdf"
    },
@@ -860,7 +572,7 @@
    "decision": {
     "date": "2026-09-02",
     "precedential_status": "Published",
-    "disposition": "Opinion",
+    "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10964728/netlist-inc-v-micron-technology-inc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1707.OPINION.9-2-2026_2749527.pdf"
    },
@@ -906,7 +618,7 @@
    "decision": {
     "date": "2026-09-02",
     "precedential_status": "Unpublished",
-    "disposition": "Opinion",
+    "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10964800/netlist-inc-v-micron-technology-inc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-2240.OPINION.9-2-2026_2749568.pdf"
    },
@@ -930,7 +642,7 @@
    "decision": {
     "date": "2026-09-02",
     "precedential_status": "Unpublished",
-    "disposition": "Opinion",
+    "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10964801/netlist-inc-v-micron-technology-inc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1859.OPINION.9-2-2026_2749553.pdf"
    },
@@ -1082,7 +794,7 @@
    "decision": {
     "date": "2026-08-31",
     "precedential_status": "Published",
-    "disposition": "Opinion",
+    "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10962857/exelixis-inc-v-msn-laboratories-private-ltd/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1236.OPINION.8-31-2026_2747765.pdf"
    },
@@ -1174,7 +886,7 @@
    "decision": {
     "date": "2026-08-31",
     "precedential_status": "Published",
-    "disposition": "Opinion",
+    "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10962858/estate-of-paul-bruyea-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1563.OPINION.8-31-2026_2747795.pdf"
    },
@@ -1196,7 +908,7 @@
    "decision": {
     "date": "2026-08-31",
     "precedential_status": "Published",
-    "disposition": "Errata",
+    "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10962859/christensen-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1284.OPINION.8-31-2026_2747783.pdf"
    },
@@ -1240,7 +952,7 @@
    "decision": {
     "date": "2026-08-31",
     "precedential_status": "Published",
-    "disposition": "Opinion",
+    "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10962877/constellation-designs-llc-v-lg-electronics-inc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1822.OPINION.8-31-2026_2747874.pdf"
    },
@@ -2837,6 +2549,22 @@
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10939978/guttenberg-v-dhs/",
    "url_audio": "https://www.courtlistener.com/audio/105256/guttenberg-v-dhs/"
+  },
+  {
+   "docket_number": "2026-149",
+   "case_name": "In re: Patel",
+   "case_type": "Trade (CIT)",
+   "origin": "United States Court of International Trade",
+   "status": "Pending / Briefing",
+   "date_filed": "2026-08-05",
+   "date_argued": null,
+   "argument": null,
+   "decision": null,
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/73740750/in-re-patel/",
+   "url_audio": null
   },
   {
    "docket_number": "2025-1121",
@@ -5982,6 +5710,22 @@
    "url_audio": null
   },
   {
+   "docket_number": "2026-2022",
+   "case_name": "Richards v. Kallish",
+   "case_type": "Patent (District Ct.)",
+   "origin": "United States District Court for the Southern District of New York",
+   "status": "Pending / Briefing",
+   "date_filed": "2026-07-10",
+   "date_argued": null,
+   "argument": null,
+   "decision": null,
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/73612944/richards-v-kallish/",
+   "url_audio": null
+  },
+  {
    "docket_number": "2025-1410",
    "case_name": "In Re GE VERNOVA HITACHI NUCLEAR ENERGY AMERICAS LLC",
    "case_type": "Patent (PTAB)",
@@ -7933,7 +7677,7 @@
    "decision": {
     "date": "2026-06-23",
     "precedential_status": "Published",
-    "disposition": "Errata",
+    "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10878465/enanta-pharmaceuticals-inc-v-pfizer-inc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1427.OPINION.6-23-2026_2712960.pdf"
    },
@@ -10707,7 +10451,7 @@
    "decision": {
     "date": "2026-05-22",
     "precedential_status": "Published",
-    "disposition": "Opinion",
+    "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10863248/versata-software-llc-v-ford-motor-company/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1140.OPINION.5-22-2026_2698249.pdf"
    },
@@ -13989,7 +13733,7 @@
    "decision": {
     "date": "2026-04-28",
     "precedential_status": "Published",
-    "disposition": "Opinion",
+    "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10848983/constellation-designs-llc-v-lg-electronics-inc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1822.OPINION.4-28-2026_2683894.pdf"
    },
@@ -18359,6 +18103,22 @@
    "url_audio": "https://www.courtlistener.com/audio/99643/apple-inc-v-itc/"
   },
   {
+   "docket_number": "2026-1527",
+   "case_name": "ABC IP LLC v. Peak Tactical LLC",
+   "case_type": "Patent (District Ct.)",
+   "origin": "United States District Court for the District of Wyoming",
+   "status": "Argued \u2014 Awaiting Decision",
+   "date_filed": "2026-03-17",
+   "date_argued": "2026-09-10",
+   "argument": null,
+   "decision": null,
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/72520567/abc-ip-llc-v-peak-tactical-llc/",
+   "url_audio": "https://www.courtlistener.com/audio/106231/abc-ip-llc-v-peak-tactical-llc/"
+  },
+  {
    "docket_number": "2026-1523",
    "case_name": "Bprotocol Foundation v. Universal Navigation Inc.",
    "case_type": "Patent (District Ct.)",
@@ -21093,6 +20853,22 @@
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/71823798/genuine-enabling-technology-llc-v-sony-group-corporation/",
    "url_audio": "https://www.courtlistener.com/audio/101153/genuine-enabling-technology-llc-v-sony-group-corporation/"
+  },
+  {
+   "docket_number": "2026-1449",
+   "case_name": "North East Mobile Health Services v. Secretary of Veterans Affairs",
+   "case_type": "Other / Unclassified",
+   "origin": "Civilian Board of Contract Appeals",
+   "status": "Pending / Briefing",
+   "date_filed": "2026-02-19",
+   "date_argued": null,
+   "argument": null,
+   "decision": null,
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/73383324/north-east-mobile-health-services-v-secretary-of-veterans-affairs/",
+   "url_audio": null
   },
   {
    "docket_number": "CL-10795534",
@@ -25956,6 +25732,22 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10773862/ouster-inc-v-hesai-technology-co-ltd/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "2026-1335",
+   "case_name": "Strong v. United States",
+   "case_type": "Federal Claims",
+   "origin": "United States Court of Federal Claims",
+   "status": "Pending / Briefing",
+   "date_filed": "2026-01-13",
+   "date_argued": null,
+   "argument": null,
+   "decision": null,
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/72244289/strong-v-united-states/",
    "url_audio": null
   },
   {
@@ -48360,6 +48152,22 @@
    "url_audio": "https://www.courtlistener.com/audio/98821/roku-inc-v-universal-electronics-inc/"
   },
   {
+   "docket_number": "2025-1868",
+   "case_name": "Butenhoff v. Collins",
+   "case_type": "Veterans",
+   "origin": "United States Court of Appeals for Veterans Claims",
+   "status": "Pending / Briefing",
+   "date_filed": "2025-06-17",
+   "date_argued": null,
+   "argument": null,
+   "decision": null,
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/70567940/butenhoff-v-collins/",
+   "url_audio": null
+  },
+  {
    "docket_number": "CL-10605198",
    "case_name": "Bpi Sports, LLC v. Thermolife International LLC",
    "case_type": "Other / Unclassified",
@@ -49113,7 +48921,7 @@
    "decision": {
     "date": "2025-06-10",
     "precedential_status": "Unpublished",
-    "disposition": "Opinion",
+    "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10601778/exelixis-inc-v-msn-laboratories-private-ltd/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1236.ORDER.6-10-2025_2528251.pdf"
    },
@@ -51753,6 +51561,22 @@
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10583138/in-re-international-insulation-products-llc/",
    "url_audio": "https://www.courtlistener.com/audio/98871/in-re-international-insulation-products-llc/"
+  },
+  {
+   "docket_number": "2025-1764",
+   "case_name": "Caddo Systems, Inc. v. Jetbrains Americas, Inc.",
+   "case_type": "Patent (District Ct.)",
+   "origin": "United States District Court for the District of Delaware",
+   "status": "Argued \u2014 Awaiting Decision",
+   "date_filed": "2025-05-13",
+   "date_argued": "2026-09-10",
+   "argument": null,
+   "decision": null,
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/73573446/caddo-systems-inc-v-jetbrains-americas-inc/",
+   "url_audio": "https://www.courtlistener.com/audio/106221/caddo-systems-inc-v-jetbrains-americas-inc/"
   },
   {
    "docket_number": "2025-1768",
@@ -58144,6 +57968,22 @@
    "url_audio": null
   },
   {
+   "docket_number": "2025-1503",
+   "case_name": "Walker v. Collins",
+   "case_type": "Veterans",
+   "origin": null,
+   "status": "Argued \u2014 Awaiting Decision",
+   "date_filed": "2025-03-05",
+   "date_argued": "2026-09-08",
+   "argument": null,
+   "decision": null,
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/74687855/walker-v-collins/",
+   "url_audio": "https://www.courtlistener.com/audio/106178/walker-v-collins/"
+  },
+  {
    "docket_number": "CL-10349489",
    "case_name": "Restem, LLC v. Jadi Cell, LLC",
    "case_type": "Other / Unclassified",
@@ -61086,6 +60926,22 @@
    "url_audio": null
   },
   {
+   "docket_number": "2025-1382",
+   "case_name": "Tenaris Bay City, Inc. v. United States",
+   "case_type": "Trade (CIT)",
+   "origin": "United States Court of International Trade",
+   "status": "Argued \u2014 Awaiting Decision",
+   "date_filed": "2025-01-23",
+   "date_argued": "2026-07-08",
+   "argument": null,
+   "decision": null,
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/69571599/tenaris-bay-city-inc-v-united-states/",
+   "url_audio": "https://www.courtlistener.com/audio/105685/tenaris-bay-city-inc-v-united-states/"
+  },
+  {
    "docket_number": "2025-1377",
    "case_name": "Intel Corporation v. BeSang Inc.",
    "case_type": "Patent (PTAB)",
@@ -61502,6 +61358,22 @@
    "url_audio": null
   },
   {
+   "docket_number": "2025-1140",
+   "case_name": "Island Creek Associates, LLC v. United States",
+   "case_type": "Federal Claims",
+   "origin": "United States Court of Federal Claims",
+   "status": "Argued \u2014 Awaiting Decision",
+   "date_filed": "2024-11-01",
+   "date_argued": "2026-05-05",
+   "argument": null,
+   "decision": null,
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/69937933/island-creek-associates-llc-v-united-states/",
+   "url_audio": "https://www.courtlistener.com/audio/104687/island-creek-associates-llc-v-united-states/"
+  },
+  {
    "docket_number": "2025-1138",
    "case_name": "Alexsam, Inc. v. Simon Property Group, L.P.",
    "case_type": "Patent (District Ct.)",
@@ -61772,6 +61644,22 @@
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/70862539/kove-io-inc-v-amazon-web-services-inc/",
    "url_audio": "https://www.courtlistener.com/audio/104792/kove-io-inc-v-amazon-web-services-inc/"
+  },
+  {
+   "docket_number": "2024-2353",
+   "case_name": "BerkeleyIEOR v. W.W. Grainger Inc.",
+   "case_type": "Patent (District Ct.)",
+   "origin": "United States District Court for the Northern District of Illinois",
+   "status": "Argued \u2014 Awaiting Decision",
+   "date_filed": "2024-09-24",
+   "date_argued": "2026-06-03",
+   "argument": null,
+   "decision": null,
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/70311570/berkeleyieor-v-ww-grainger-inc/",
+   "url_audio": "https://www.courtlistener.com/audio/105257/berkeleyieor-v-ww-grainger-inc/"
   },
   {
    "docket_number": "2024-2342",
@@ -62814,6 +62702,22 @@
    "url_audio": null
   },
   {
+   "docket_number": "2024-1825",
+   "case_name": "Receivership Estate of AudienceScience Inc. v. Google LLC",
+   "case_type": "Patent (District Ct.)",
+   "origin": "United States District Court for the Northern District of California",
+   "status": "Argued \u2014 Awaiting Decision",
+   "date_filed": "2024-05-20",
+   "date_argued": "2026-02-09",
+   "argument": null,
+   "decision": null,
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/68912094/receivership-estate-of-audiencescience-inc-v-google-llc/",
+   "url_audio": "https://www.courtlistener.com/audio/102578/receivership-estate-of-audiencescience-inc-v-google-llc/"
+  },
+  {
    "docket_number": "2024-1829",
    "case_name": "Alexion Pharmaceuticals, Inc. v. Samsung Bioepis Co. Ltd.",
    "case_type": "Patent (District Ct.)",
@@ -63116,6 +63020,22 @@
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/69157085/in-re-haptic-inc/",
    "url_audio": null
+  },
+  {
+   "docket_number": "2024-1696",
+   "case_name": "Moskowitz Family LLC v. Globus Medical, Inc.",
+   "case_type": "Patent (District Ct.)",
+   "origin": "United States District Court for the Eastern District of Pennsylvania",
+   "status": "Argued \u2014 Awaiting Decision",
+   "date_filed": "2024-04-16",
+   "date_argued": "2026-05-04",
+   "argument": null,
+   "decision": null,
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/69935576/moskowitz-family-llc-v-globus-medical-inc/",
+   "url_audio": "https://www.courtlistener.com/audio/104665/moskowitz-family-llc-v-globus-medical-inc/"
   },
   {
    "docket_number": "2024-1685",
