@@ -2,14 +2,17 @@ name: Update Federal Circuit data
 
 on:
   schedule:
-    # Every day at 13:00, 15:00, 17:00, 19:00, 21:00 UTC.
+    # Every day at roughly 13:00, 15:00, 17:00, 19:00, 21:00 UTC — nudged a
+    # few minutes off the hour. GitHub's scheduler gets flooded with every
+    # repo's cron landing on :00/:30, and silently drops some fires under
+    # that load; off-the-hour minutes dodge the thundering herd.
     # CAFC dockets opinions between 8:30–11:00 a.m. ET, so the first run
     # catches the morning release and the rest sweep up stragglers.
-    - cron: "0 13 * * *"
-    - cron: "0 15 * * *"
-    - cron: "0 17 * * *"
-    - cron: "0 19 * * *"
-    - cron: "0 21 * * *"
+    - cron: "6 13 * * *"
+    - cron: "11 15 * * *"
+    - cron: "4 17 * * *"
+    - cron: "9 19 * * *"
+    - cron: "14 21 * * *"
   workflow_dispatch: {}   # lets you trigger a refresh manually from the Actions tab
 
 permissions:
