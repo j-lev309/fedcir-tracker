@@ -250,36 +250,46 @@ def cl_paginate(url: str, params: dict, cap: int, meta: dict = None,
     return items[:cap]
 
 
-def fetch_dockets(since: str, meta: dict = None, budget: int = None, resume: str = None) -> list:
-    log(f"Fetching CAFC dockets filed since {since} …")
+def fetch_dockets(since: str, meta: dict = None, budget: int = None, resume: str = None,
+                   until: str = None) -> list:
+    """`until` bounds a backfill-in-progress query at the oldest date already
+    confirmed (frontier_date), instead of relying on a raw page-offset resume.
+    This endpoint paginates by page number, not a date/id cursor, so against
+    a dataset that gets new rows filed in every day, resuming at a fixed page
+    N drifts: each new day's filings push everything after them back by one
+    page, so "page N" increasingly re-covers recent days instead of
+    advancing into history. Bounding by date_filed__lte is immune to that —
+    new filings land above the bound and are excluded — so every run's page
+    1 starts exactly where the last one left off, by date, not by offset."""
+    log(f"Fetching CAFC dockets filed since {since}" + (f" through {until}" if until else "") + " …")
     fields = ",".join([
         "id", "docket_number", "case_name", "case_name_short", "date_filed",
         "date_argued", "date_terminated", "appeal_from_str", "appeal_from",
         "absolute_url", "nature_of_suit", "panel_str",
     ])
-    items = cl_paginate(
-        f"{CL_BASE}/dockets/",
-        {"court": "cafc", "date_filed__gte": since, "order_by": "-date_filed", "fields": fields},
-        MAX_DOCKETS, meta, budget or PAGE_BUDGET, resume,
-    )
+    params = {"court": "cafc", "date_filed__gte": since, "order_by": "-date_filed", "fields": fields}
+    if until:
+        params["date_filed__lte"] = until
+    items = cl_paginate(f"{CL_BASE}/dockets/", params, MAX_DOCKETS, meta, budget or PAGE_BUDGET, resume)
     log(f"  {len(items)} dockets")
     return items
 
 
-def fetch_clusters(since: str, meta: dict = None, budget: int = None, resume: str = None) -> list:
-    """Decisions (opinion clusters) — carries precedential status + panel judges."""
-    log(f"Fetching CAFC opinion clusters since {since} …")
+def fetch_clusters(since: str, meta: dict = None, budget: int = None, resume: str = None,
+                    until: str = None) -> list:
+    """Decisions (opinion clusters) — carries precedential status + panel judges.
+    `until` — see fetch_dockets docstring; same page-offset-drift fix applies here."""
+    log(f"Fetching CAFC opinion clusters since {since}" + (f" through {until}" if until else "") + " …")
     fields = ",".join([
         "id", "absolute_url", "case_name", "date_filed", "precedential_status",
         "judges", "panel", "docket_id", "docket", "nature_of_suit", "syllabus",
         "headnotes", "disposition", "sub_opinions",
     ])
-    items = cl_paginate(
-        f"{CL_BASE}/clusters/",
-        {"docket__court": "cafc", "date_filed__gte": since,
-         "order_by": "-date_filed", "fields": fields},
-        MAX_DOCKETS, meta, budget or PAGE_BUDGET, resume,
-    )
+    params = {"docket__court": "cafc", "date_filed__gte": since,
+              "order_by": "-date_filed", "fields": fields}
+    if until:
+        params["date_filed__lte"] = until
+    items = cl_paginate(f"{CL_BASE}/clusters/", params, MAX_DOCKETS, meta, budget or PAGE_BUDGET, resume)
     log(f"  {len(items)} clusters")
     return items
 
@@ -296,7 +306,7 @@ def fetch_opinions(since: str, meta: dict = None, after_id: int = 0, budget: int
     fields = ",".join([
         "id", "cluster_id", "author_str", "joined_by_str", "type",
         "author_id", "joined_by", "per_curiam",
-        "download_url", "absolute_url",
+        "download_url", "absolute_url", "date_created",
     ])
     items = cl_paginate(
         f"{CL_BASE}/opinions/",
@@ -344,7 +354,7 @@ def fetch_audio(since: str, meta: dict = None, after_id: int = 0, budget: int = 
     Note: the v4 audio endpoint doesn't support docket__date_argued__gte,
     so we filter by the recording's own date_created (argument day)."""
     log("Fetching CAFC oral-argument audio metadata …")
-    fields = ",".join(["id", "docket", "case_name", "judges", "absolute_url"])
+    fields = ",".join(["id", "docket", "case_name", "judges", "absolute_url", "date_created"])
     items = cl_paginate(
         f"{CL_BASE}/audio/",
         {"docket__court": "cafc", "date_created__gte": since,
@@ -1026,14 +1036,25 @@ def build() -> dict:
     def _resume_for(k: str):
         return (state.get(k) or {}).get("resume_url")
 
+    def _until_for(k: str):
+        # dockets/clusters paginate by raw page number, which drifts when
+        # resumed across runs against a dataset that gets new rows filed in
+        # every day (see fetch_dockets docstring). Bounding at frontier_date
+        # instead of trusting a saved page offset sidesteps that entirely —
+        # so these two no longer pass a resume_url at all, only this bound.
+        st = state.get(k) or {}
+        if st.get("backfill_done"):
+            return None
+        return st.get("frontier_date")
+
     results: dict = {}
     for key in order:
         if key == "dockets":
             results[key] = fetch_dockets(_since_for(key), cov[key], _budget_for(key),
-                                         _resume_for(key))
+                                         None, _until_for(key))
         elif key == "clusters":
             results[key] = fetch_clusters(_since_for(key), cov[key], _budget_for(key),
-                                          _resume_for(key))
+                                          None, _until_for(key))
         elif key == "opinions":
             results[key] = fetch_opinions(_since_for(key), cov[key],
                                           (state.get(key) or {}).get("last_id", 0),
