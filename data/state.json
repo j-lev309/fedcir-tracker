@@ -1,8 +1,8 @@
 {
  "dockets": {
-  "last_attempt": "2026-10-07T23:40:17+00:00",
+  "last_attempt": "2026-10-08T01:08:27+00:00",
   "caught_up": true,
-  "last_ok": "2026-10-07T23:40:17+00:00",
+  "last_ok": "2026-10-08T01:08:27+00:00",
   "backfill_done": true,
   "backfill_completed_at": "2026-07-21",
   "last_id": 74925204,
@@ -11,9 +11,9 @@
   "frontier_date": "2020-01-01"
  },
  "clusters": {
-  "last_attempt": "2026-10-07T23:40:17+00:00",
+  "last_attempt": "2026-10-08T01:08:27+00:00",
   "caught_up": true,
-  "last_ok": "2026-10-07T23:40:17+00:00",
+  "last_ok": "2026-10-08T01:08:27+00:00",
   "backfill_done": true,
   "last_id": 11013833,
   "last_date": "2026-10-07",
@@ -23,27 +23,27 @@
  },
  "opinions": {
   "last_id": 11480492,
-  "last_attempt": "2026-10-07T23:40:17+00:00",
+  "last_attempt": "2026-10-08T01:08:27+00:00",
   "caught_up": false,
   "backfill_done": false,
   "last_ok": "2026-10-06T23:05:19+00:00",
   "backfill_completed_at": "2026-07-31",
-  "resume_url": "https://www.courtlistener.com/api/rest/v4/opinions/?cluster__date_filed__gte=2020-01-01&cluster__docket__court=cafc&cursor=cD05Mzc0NTI1&fields=id%2Ccluster_id%2Cauthor_str%2Cjoined_by_str%2Ctype%2Cauthor_id%2Cjoined_by%2Cper_curiam%2Cdownload_url%2Cabsolute_url%2Cdate_created&order_by=-id",
+  "resume_url": "https://www.courtlistener.com/api/rest/v4/opinions/?cluster__date_filed__gte=2020-01-01&cluster__docket__court=cafc&cursor=cD02MzI2MDg3&fields=id%2Ccluster_id%2Cauthor_str%2Cjoined_by_str%2Ctype%2Cauthor_id%2Cjoined_by%2Cper_curiam%2Cdownload_url%2Cabsolute_url%2Cdate_created&order_by=-id",
   "frontier_date": "2020-01-01",
   "last_date": "2026-10-06"
  },
  "audio": {
   "last_id": 106822,
-  "last_attempt": "2026-10-07T23:40:17+00:00",
+  "last_attempt": "2026-10-08T01:08:27+00:00",
   "caught_up": true,
-  "last_ok": "2026-10-07T23:40:17+00:00",
+  "last_ok": "2026-10-08T01:08:27+00:00",
   "backfill_done": true,
   "backfill_completed_at": "2026-07-31",
   "resume_url": null,
   "frontier_date": "2020-01-01",
   "last_date": "2026-10-07"
  },
- "run_no": 276,
+ "run_no": 277,
  "schema_v17": true,
  "judge_names": {},
  "schema_v22": true,
