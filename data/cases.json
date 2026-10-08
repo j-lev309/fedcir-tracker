@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-08T20:51:44+00:00",
+ "generated_at": "2026-10-08T22:01:19+00:00",
  "window_since": "2020-01-01",
  "coverage": {
   "complete": true,
@@ -24,7 +24,7 @@
    "opinions": {
     "complete": true,
     "reason": "ok",
-    "count": 728,
+    "count": 15,
     "resume_url": null
    },
    "audio": {
@@ -80,7 +80,7 @@
     "precedential_status": "Unpublished",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/11016643/avery-v-united-states/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1632.OPINION.10-8-2026_2768410.pdf"
    },
    "panel": [],
    "patent_issues": [],
@@ -102,7 +102,7 @@
     "precedential_status": "Unpublished",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/11016642/in-re-gonthier/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1477.RULE_36_JUDGMENT.10-8-2026_2768372.pdf"
    },
    "panel": [],
    "patent_issues": [
@@ -126,7 +126,7 @@
     "precedential_status": "Unpublished",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/11016641/ortiz-v-collins/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1066.OPINION.10-8-2026_2768377.pdf"
    },
    "panel": [],
    "patent_issues": [],
@@ -148,7 +148,7 @@
     "precedential_status": "Unpublished",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/11016640/thorogood-v-mspb/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1588.OPINION.10-8-2026_2768423.pdf"
    },
    "panel": [],
    "patent_issues": [],
@@ -170,7 +170,7 @@
     "precedential_status": "Unpublished",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/11018487/sarepta-therapeutics-inc-v-trustees-of-the-university-of-pennsylvania/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1071.ORDER.10-8-2026_2768688.pdf"
    },
    "panel": [],
    "patent_issues": [],
@@ -192,7 +192,7 @@
     "precedential_status": "Unpublished",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/11013548/myer-v-united-states/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1302.OPINION.10-7-2026_2767543.pdf"
    },
    "panel": [],
    "patent_issues": [],
@@ -214,7 +214,7 @@
     "precedential_status": "Unpublished",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/11013549/in-re-gamble/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1126.OPINION.10-7-2026_2767557.pdf"
    },
    "panel": [],
    "patent_issues": [
@@ -238,7 +238,7 @@
     "precedential_status": "Unpublished",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/11013643/ulik-pritchard-v-collins/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-2158.OPINION.10-7-2026_2767577.pdf"
    },
    "panel": [],
    "patent_issues": [],
@@ -260,7 +260,7 @@
     "precedential_status": "Unpublished",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/11013644/bautista-v-collins/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1128.OPINION.10-7-2026_2767583.pdf"
    },
    "panel": [],
    "patent_issues": [],
@@ -282,7 +282,7 @@
     "precedential_status": "Unpublished",
     "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/11013833/schofield-v-collins/",
-    "url_pdf": null
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-2021.ORDER.10-7-2026_2767879.pdf"
    },
    "panel": [],
    "patent_issues": [],
