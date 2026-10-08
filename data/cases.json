@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-08T01:15:57+00:00",
+ "generated_at": "2026-10-08T19:30:18+00:00",
  "window_since": "2020-01-01",
  "coverage": {
   "complete": false,
@@ -20,11 +20,11 @@
    "clusters": {
     "complete": true,
     "reason": "ok",
-    "count": 10,
+    "count": 14,
     "resume_url": null
    },
    "opinions": {
-    "resume_url": "https://www.courtlistener.com/api/rest/v4/opinions/?cluster__date_filed__gte=2020-01-01&cluster__docket__court=cafc&cursor=cD02MzI2MDg3&fields=id%2Ccluster_id%2Cauthor_str%2Cjoined_by_str%2Ctype%2Cauthor_id%2Cjoined_by%2Cper_curiam%2Cdownload_url%2Cabsolute_url%2Cdate_created&order_by=-id",
+    "resume_url": "https://www.courtlistener.com/api/rest/v4/opinions/?cluster__date_filed__gte=2020-01-01&cluster__docket__court=cafc&cursor=cD00NjM4NDQy&fields=id%2Ccluster_id%2Cauthor_str%2Cjoined_by_str%2Ctype%2Cauthor_id%2Cjoined_by%2Cper_curiam%2Cdownload_url%2Cabsolute_url%2Cdate_created&order_by=-id",
     "complete": false,
     "reason": "page budget reached",
     "count": 1200
@@ -32,7 +32,7 @@
    "audio": {
     "complete": true,
     "reason": "ok",
-    "count": 28,
+    "count": 32,
     "resume_url": null
    },
    "scheduled_arguments": {
@@ -49,25 +49,115 @@
   "summaries": {
    "enabled": false,
    "have": 0,
-   "expected": 7903,
+   "expected": 7907,
    "complete": true
   },
   "opinion_text_fetches_this_run": 600,
   "opinion_text_fetch_cap": 600,
-  "latest_decision_date": "2026-10-07",
+  "latest_decision_date": "2026-10-08",
   "next_argument_date": null
  },
  "stats": {
-  "total": 8814,
+  "total": 8818,
   "pending": 862,
   "scheduled": 0,
   "awaiting": 47,
-  "decided": 7905,
+  "decided": 7909,
   "precedential": 1444,
   "rule36": 2
  },
  "upcoming_argument_docket_numbers": [],
  "cases": [
+  {
+   "docket_number": "CL-11016643",
+   "case_name": "Avery v. United States",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-10-08",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/11016643/avery-v-united-states/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/11016643/avery-v-united-states/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "CL-11016642",
+   "case_name": "In Re GONTHIER",
+   "case_type": "Patent (PTAB)",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-10-08",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/11016642/in-re-gonthier/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [
+    "Other / Procedural"
+   ],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/11016642/in-re-gonthier/",
+   "url_audio": "https://www.courtlistener.com/audio/106740/in-re-gonthier/"
+  },
+  {
+   "docket_number": "CL-11016641",
+   "case_name": "Ortiz v. Collins",
+   "case_type": "Veterans",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-10-08",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/11016641/ortiz-v-collins/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/11016641/ortiz-v-collins/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "CL-11016640",
+   "case_name": "Thorogood v. MSPB",
+   "case_type": "Federal Employment",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-10-08",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/11016640/thorogood-v-mspb/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/11016640/thorogood-v-mspb/",
+   "url_audio": null
+  },
   {
    "docket_number": "CL-11013548",
    "case_name": "Myer v. United States",
@@ -54668,7 +54758,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/70026463/applied-predictive-technologies-inc-v-marketdial-inc/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/106833/applied-predictive-technologies-inc-v-marketdial-inc/"
   },
   {
    "docket_number": "CL-10401328",
@@ -58759,7 +58849,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/72151040/drake-v-collins/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/106832/drake-v-collins/"
   },
   {
    "docket_number": "2025-1525",
