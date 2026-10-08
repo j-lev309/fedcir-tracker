@@ -1,12 +1,10 @@
 {
- "generated_at": "2026-10-08T19:30:18+00:00",
+ "generated_at": "2026-10-08T20:51:44+00:00",
  "window_since": "2020-01-01",
  "coverage": {
-  "complete": false,
-  "run_complete": false,
-  "backfilling": [
-   "opinions"
-  ],
+  "complete": true,
+  "run_complete": true,
+  "backfilling": [],
   "window_since": "2020-01-01",
   "window_months": 18,
   "complete_since": "2020-01-01",
@@ -20,19 +18,19 @@
    "clusters": {
     "complete": true,
     "reason": "ok",
-    "count": 14,
+    "count": 15,
     "resume_url": null
    },
    "opinions": {
-    "resume_url": "https://www.courtlistener.com/api/rest/v4/opinions/?cluster__date_filed__gte=2020-01-01&cluster__docket__court=cafc&cursor=cD00NjM4NDQy&fields=id%2Ccluster_id%2Cauthor_str%2Cjoined_by_str%2Ctype%2Cauthor_id%2Cjoined_by%2Cper_curiam%2Cdownload_url%2Cabsolute_url%2Cdate_created&order_by=-id",
-    "complete": false,
-    "reason": "page budget reached",
-    "count": 1200
+    "complete": true,
+    "reason": "ok",
+    "count": 728,
+    "resume_url": null
    },
    "audio": {
     "complete": true,
     "reason": "ok",
-    "count": 32,
+    "count": 36,
     "resume_url": null
    },
    "scheduled_arguments": {
@@ -49,7 +47,7 @@
   "summaries": {
    "enabled": false,
    "have": 0,
-   "expected": 7907,
+   "expected": 7908,
    "complete": true
   },
   "opinion_text_fetches_this_run": 600,
@@ -58,11 +56,11 @@
   "next_argument_date": null
  },
  "stats": {
-  "total": 8818,
+  "total": 8819,
   "pending": 862,
   "scheduled": 0,
   "awaiting": 47,
-  "decided": 7909,
+  "decided": 7910,
   "precedential": 1444,
   "rule36": 2
  },
@@ -156,6 +154,28 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/11016640/thorogood-v-mspb/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "CL-11018487",
+   "case_name": "Sarepta Therapeutics, Inc. v. Trustees of the University of Pennsylvania",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-10-08",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/11018487/sarepta-therapeutics-inc-v-trustees-of-the-university-of-pennsylvania/",
+    "url_pdf": null
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/11018487/sarepta-therapeutics-inc-v-trustees-of-the-university-of-pennsylvania/",
    "url_audio": null
   },
   {
@@ -74733,7 +74753,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/70493279/district-of-columbia-water-and-sewer-authority-v-united-states/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/106837/district-of-columbia-water-and-sewer-authority-v-united-states/"
   },
   {
    "docket_number": "2023-1270",
