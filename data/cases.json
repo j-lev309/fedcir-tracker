@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-09T01:16:19+00:00",
+ "generated_at": "2026-10-09T18:48:49+00:00",
  "window_since": "2020-01-01",
  "coverage": {
   "complete": true,
@@ -18,13 +18,13 @@
    "clusters": {
     "complete": true,
     "reason": "ok",
-    "count": 15,
+    "count": 17,
     "resume_url": null
    },
    "opinions": {
     "complete": true,
     "reason": "ok",
-    "count": 15,
+    "count": 17,
     "resume_url": null
    },
    "audio": {
@@ -47,25 +47,69 @@
   "summaries": {
    "enabled": false,
    "have": 0,
-   "expected": 7908,
+   "expected": 7910,
    "complete": true
   },
   "opinion_text_fetches_this_run": 600,
   "opinion_text_fetch_cap": 600,
-  "latest_decision_date": "2026-10-08",
+  "latest_decision_date": "2026-10-09",
   "next_argument_date": null
  },
  "stats": {
-  "total": 8819,
+  "total": 8821,
   "pending": 862,
   "scheduled": 0,
   "awaiting": 47,
-  "decided": 7910,
+  "decided": 7912,
   "precedential": 1444,
   "rule36": 2
  },
  "upcoming_argument_docket_numbers": [],
  "cases": [
+  {
+   "docket_number": "CL-11024265",
+   "case_name": "Walker v. Army",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-10-09",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/11024265/walker-v-army/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1693.OPINION.10-9-2026_2768979.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/11024265/walker-v-army/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "CL-11024266",
+   "case_name": "Walker v. Army",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-10-09",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/11024266/walker-v-army/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1691.OPINION.10-9-2026_2768964.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/11024266/walker-v-army/",
+   "url_audio": null
+  },
   {
    "docket_number": "CL-11016643",
    "case_name": "Avery v. United States",
@@ -2226,7 +2270,7 @@
    "decision": {
     "date": "2026-09-10",
     "precedential_status": "Published",
-    "disposition": "Opinion",
+    "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10970408/versata-software-llc-v-ford-motor-company/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1140.OPINION.9-10-2026_2753457.pdf"
    },
@@ -12521,7 +12565,7 @@
    "decision": {
     "date": "2026-05-22",
     "precedential_status": "Published",
-    "disposition": "Opinion",
+    "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10863248/versata-software-llc-v-ford-motor-company/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1140.OPINION.5-22-2026_2698249.pdf"
    },
