@@ -106,6 +106,12 @@ main{max-width:1060px;margin:0 auto;padding:10px 20px 70px}
 
 .summary{font-family:var(--serif);font-size:14px;line-height:1.65;margin-top:11px;color:#2A3342;border-top:1px solid var(--line);padding-top:9px}
 .summary .sumlabel{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--steel);display:block;margin-bottom:3px}
+.summary .segment{margin-top:8px}
+.summary .segment:first-of-type{margin-top:0}
+.summary .segissue{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--federal);display:block;margin-bottom:2px}
+.summary .segloc{font-style:italic;color:var(--steel);font-size:.85em}
+.summary .holding{margin-top:10px;padding:9px 11px;border-left:3px solid var(--stamp);background:rgba(140,31,20,.05);border-radius:0 3px 3px 0}
+.summary .holdlabel{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--stamp);display:block;margin-bottom:3px}
 .panel-line{font-family:var(--serif);font-size:14.5px;margin-top:10px;border-top:1px solid var(--line);padding-top:10px}
 .panel-line .before{font-style:italic;color:var(--steel)}
 .panel-line .j{font-variant:small-caps;font-weight:600}
@@ -365,6 +371,32 @@ function cleanJudge(n){
   return String(n||"").replace(/,?\s*(Chief |Circuit |District |Senior )?Judge.*/i,"").replace(/^(Judge|Hon\.?)\s+/i,"").trim();
 }
 
+function summaryText(c){
+  // Flattens either shape for search: legacy flat-string summaries, or the
+  // newer {segments:[{issue,text,location}], holding} structure.
+  const s=c.summary;
+  if(!s)return "";
+  if(typeof s==="string")return s;
+  const segs=(s.segments||[]).map(x=>`${x.issue||""} ${x.text||""}`).join(" ");
+  return `${segs} ${s.holding||""}`;
+}
+
+function renderSummary(c){
+  const s=c.summary;
+  if(!s)return "";
+  if(typeof s==="string")
+    return `<div class="summary"><span class="sumlabel">Summary</span>${esc(s)}</div>`;
+  const segs=(s.segments||[]).map(seg=>{
+    const label=seg.issue?`<span class="segissue">${esc(seg.issue)}</span>`:"";
+    const loc=seg.location?` <span class="segloc">(${esc(seg.location)})</span>`:"";
+    return `<div class="segment">${label}${esc(seg.text||"")}${loc}</div>`;
+  }).join("");
+  const holding=s.holding
+    ? `<div class="holding"><span class="holdlabel">Holding</span>${esc(s.holding)}</div>`
+    : "";
+  return `<div class="summary"><span class="sumlabel">Summary</span>${segs}${holding}</div>`;
+}
+
 function decoKind(c){
   const d=c.decision||{};
   if(/rule\s*36/i.test(d.disposition||""))return "r36";
@@ -399,7 +431,7 @@ function filtered(){
       if(to && d>to)return false;
     }
     if(q){
-      const hay=[c.case_name,c.docket_number,c.origin,c.summary,(c.decision||{}).disposition,
+      const hay=[c.case_name,c.docket_number,c.origin,summaryText(c),(c.decision||{}).disposition,
                  ...(c.panel||[]).map(p=>p.name)].join(" ").toLowerCase();
       if(!hay.includes(q))return false;
     }
@@ -455,7 +487,7 @@ function cardHTML(c){
     clLink?`<a href="${esc(clLink)}" target="_blank" rel="noopener">${ok(d.url_cl)||ok(c.url_cl)?"CourtListener":"Search CourtListener"} ↗</a>`:"",
     ok(c.url_audio)?`<a href="${esc(c.url_audio)}" target="_blank" rel="noopener">Argument audio ↗</a>`:"",
   ].filter(Boolean).join("");
-  const summary=c.summary?`<div class="summary"><span class="sumlabel">Summary</span>${esc(c.summary)}</div>`:"";
+  const summary=renderSummary(c);
 
   return `<article class="card">
     ${stamp}

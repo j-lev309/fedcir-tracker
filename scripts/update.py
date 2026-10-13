@@ -37,7 +37,19 @@ from urllib.parse import parse_qs, urlparse
 import anthropic
 import requests
 import urllib3
+from pydantic import BaseModel
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+
+
+class _SummarySegment(BaseModel):
+    issue: str
+    text: str
+    location: str | None = None
+
+
+class _CaseAnalysis(BaseModel):
+    segments: list[_SummarySegment]
+    holding: str | None = None
 
 # ----------------------------------------------------------------------------
 # Config
@@ -792,25 +804,51 @@ def classify_issues_claude(case_name: str, text: str) -> list:
     return labels
 
 
-def summarize_claude(case_name: str, text: str) -> str | None:
-    """2–3 sentence neutral summary of a decision. Requires Anthropic credentials
-    (ANTHROPIC_API_KEY or Workload Identity Federation — see ANTHROPIC_ENABLED)."""
+def summarize_claude(case_name: str, text: str, is_precedential: bool = False) -> dict | None:
+    """Structured case analysis: one segment per distinct legal issue the
+    opinion actually addresses (most cases need only one), each with the
+    disposition/holding and key reasoning, plus — only when the model can
+    actually see a section heading or page marker in the text — a short,
+    self-reported location reference. This is the model's own observation,
+    not an independently verified citation. Precedential cases also get a
+    `holding` field: the model's own assessment of whether this decision
+    actually clarifies, confirms, or changes the law, as opposed to a
+    routine, fact-bound application of settled law.
+
+    Returns {"segments": [{"issue", "text", "location"}], "holding"} or None.
+    Requires Anthropic credentials (ANTHROPIC_API_KEY or Workload Identity
+    Federation — see ANTHROPIC_ENABLED)."""
     if not ANTHROPIC_ENABLED or not text or len(text) < 400:
         return None
+    holding_instruction = ""
+    if is_precedential:
+        holding_instruction = (
+            "\n\nThis is a PRECEDENTIAL decision. Also set \"holding\": 1-3 "
+            "sentences on specifically how this decision clarifies, confirms, "
+            "or changes Federal Circuit or patent law — its significance as "
+            "precedent, not just a restatement of the outcome. If the opinion "
+            "is fact-bound and doesn't meaningfully change the law, say that "
+            "plainly rather than overstating its significance."
+        )
     prompt = (
-        "Summarize this Federal Circuit decision in 2-3 sentences for a law-student "
-        "reader: state the disposition/holding and the key reasoning. Be neutral, "
-        "specific, and concrete (name the statute/doctrine at issue). No preamble, "
-        "no markdown — just the sentences.\n\n"
+        "Analyze this Federal Circuit decision for a legal-research reader. "
+        "Break the analysis into one segment per distinct legal issue the "
+        "opinion actually addresses — most cases need only one segment. For "
+        "each segment, state the disposition/holding and key reasoning: be "
+        "neutral, specific, and concrete, naming the statute/doctrine at "
+        "issue. Only set \"location\" if you can see an actual section "
+        "heading or page marker in the text below for that segment — leave "
+        "it unset rather than guess one."
+        f"{holding_instruction}\n\n"
         f"Case: {case_name}\n\nOpinion text:\n{text[:14000]}"
     )
     try:
-        r = _anthropic_client.with_options(timeout=90).messages.create(
-            model="claude-haiku-4-5", max_tokens=300,
+        r = _anthropic_client.with_options(timeout=90).messages.parse(
+            model="claude-haiku-4-5", max_tokens=700,
             messages=[{"role": "user", "content": prompt}],
+            output_format=_CaseAnalysis,
         )
-        out = "".join(b.text for b in r.content if b.type == "text").strip()
-        return out[:1200] or None
+        return r.parsed_output.model_dump()
     except Exception as e:  # noqa: BLE001
         log(f"  Claude summary failed: {e}")
         return None
@@ -1368,12 +1406,20 @@ def build() -> dict:
                 issues = (classify_issues_keywords(opinion_text)
                           or classify_issues_claude(cl.get("case_name") or dn, opinion_text))
             if ANTHROPIC_ENABLED and not summary and not is_r36_case:
-                summary = summarize_claude(cl.get("case_name") or dn, opinion_text)
+                is_precedential = str(prec).startswith("Pub")
+                summary = summarize_claude(cl.get("case_name") or dn, opinion_text, is_precedential)
             cache[cache_key] = {"issues": issues, "summary": summary}
 
         if is_r36_case and not summary:
-            summary = ("Judgment of the tribunal below summarily affirmed without "
-                       "opinion under Federal Circuit Rule 36.")
+            summary = {
+                "segments": [{
+                    "issue": "Rule 36 Summary Affirmance",
+                    "text": ("Judgment of the tribunal below summarily affirmed "
+                              "without opinion under Federal Circuit Rule 36."),
+                    "location": None,
+                }],
+                "holding": None,
+            }
         if is_patent and not issues:
             issues = ["Other / Procedural"]
 
