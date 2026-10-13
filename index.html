@@ -75,11 +75,25 @@ header{border-bottom:3px double var(--federal);background:var(--card)}
 .row2 input{flex:1;min-width:190px}
 .row2 button{font-weight:600;color:var(--federal);white-space:nowrap}
 
+.morefilters{border:1px solid var(--line);border-radius:3px;background:var(--card);margin:2px 0 6px}
+.morefilters summary{cursor:pointer;padding:7px 12px;font-size:12.5px;font-weight:600;color:var(--steel);display:flex;align-items:center;gap:8px;list-style:none}
+.morefilters summary::-webkit-details-marker{display:none}
+.morefilters summary .caret{transition:transform .15s;color:var(--steel);font-size:10px}
+.morefilters[open] summary .caret{transform:rotate(90deg)}
+.morefilters .row3{padding:0 12px 10px}
+
+.organize-row{background:var(--paper);border:1px solid var(--line);border-radius:3px;padding:8px 10px}
+.rowlabel{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--steel);white-space:nowrap}
+
 .bulkbar{display:flex;align-items:center;gap:10px;padding:8px 12px;margin:2px 0 6px;background:var(--paper);border:1px solid var(--federal);border-radius:3px;font-size:13px}
 .bulkbar span{font-weight:600;color:var(--federal)}
 .bulkbar button{font-family:var(--mono);font-size:12px;background:var(--card);border:1px solid var(--line);border-radius:3px;padding:5px 10px;cursor:pointer;color:var(--ink)}
 .bulkbar button:hover{border-color:var(--federal)}
 .selectchk{margin-right:8px;vertical-align:middle}
+.foldercount{font-family:var(--mono);font-size:11px;color:var(--federal)}
+.notebadge{font-size:12px}
+.annottoggle{font-family:var(--mono);font-size:11px;background:none;border:none;color:var(--steel);cursor:pointer;margin-left:auto}
+.annottoggle:hover{color:var(--federal)}
 .row2 button:hover{background:var(--paper)}
 .row3{display:flex;gap:8px;flex-wrap:wrap;align-items:center;padding:2px 0 6px}
 .row3 select,.row3 input[type=date]{border:1px solid var(--line);background:var(--card);border-radius:3px;padding:6px 9px;font-size:12.5px;font-family:var(--sans);color:var(--ink)}
@@ -202,42 +216,48 @@ footer{border-top:1px solid var(--line);padding:18px 20px 40px;max-width:1060px;
       <option value="r36">Rule 36</option>
     </select>
     <select id="judgeSel" aria-label="Filter by judge"><option value="">All judges</option></select>
-    <select id="folderSel" aria-label="Filter by folder"><option value="">All folders</option></select>
     <label style="display:flex;align-items:center;gap:5px;font-size:13px;font-family:var(--sans);color:var(--ink);white-space:nowrap">
       <input type="checkbox" id="hasSummaryChk"> Has summary
     </label>
+    <input id="search" type="search" placeholder="Search caption, docket no., origin…" aria-label="Search cases">
+    <span class="count" id="count"></span>
+  </div>
+  <details class="morefilters">
+    <summary><span class="caret">▶</span>More filters (date range)</summary>
+    <div class="row3">
+      <select id="dateField" aria-label="Which date to filter on">
+        <option value="decision">Decision date</option>
+        <option value="argument">Argument date</option>
+        <option value="filed">Docketed date</option>
+      </select>
+      <div class="presets" id="datePresets">
+        <button data-p="30">Last 30 days</button>
+        <button data-p="90">Last 90 days</button>
+        <button data-p="term">This term</button>
+        <button data-p="ytd">Year to date</button>
+        <button data-p="upcoming">Upcoming</button>
+      </div>
+      <label class="dlab">from <input type="date" id="dateFrom" aria-label="From date"></label>
+      <label class="dlab">to <input type="date" id="dateTo" aria-label="To date"></label>
+      <button id="dateClear" class="clearbtn" hidden>Clear dates</button>
+    </div>
+  </details>
+  <div class="row2 organize-row">
+    <span class="rowlabel">Your research</span>
+    <select id="folderSel" aria-label="Filter by folder"><option value="">All folders</option></select>
     <label style="display:flex;align-items:center;gap:5px;font-size:13px;font-family:var(--sans);color:var(--ink);white-space:nowrap">
       <input type="checkbox" id="starredChk"> ★ Starred
     </label>
-    <input id="search" type="search" placeholder="Search caption, docket no., origin…" aria-label="Search cases">
-    <button type="button" onclick="exportMemo()" title="Export starred cases (or the selected folder) as a Markdown memo with links to the real opinion PDFs">Export ↓</button>
     <label style="display:flex;align-items:center;gap:5px;font-size:13px;font-family:var(--sans);color:var(--ink);white-space:nowrap">
       <input type="checkbox" id="selectAllChk" onchange="toggleSelectAll(this.checked)"> Select all matching
     </label>
-    <span class="count" id="count"></span>
+    <button type="button" onclick="exportMemo()" title="Export starred cases (or the selected folder) as a Markdown memo with links to the real opinion PDFs">Export ↓</button>
   </div>
   <div class="bulkbar" id="bulkBar" hidden>
     <span id="bulkCount"></span>
     <button type="button" onclick="bulkAddFolder()">+ Add to folder</button>
     <button type="button" onclick="bulkStar()">★ Star all</button>
     <button type="button" onclick="clearSelection()">Clear selection</button>
-  </div>
-  <div class="row3">
-    <select id="dateField" aria-label="Which date to filter on">
-      <option value="decision">Decision date</option>
-      <option value="argument">Argument date</option>
-      <option value="filed">Docketed date</option>
-    </select>
-    <div class="presets" id="datePresets">
-      <button data-p="30">Last 30 days</button>
-      <button data-p="90">Last 90 days</button>
-      <button data-p="term">This term</button>
-      <button data-p="ytd">Year to date</button>
-      <button data-p="upcoming">Upcoming</button>
-    </div>
-    <label class="dlab">from <input type="date" id="dateFrom" aria-label="From date"></label>
-    <label class="dlab">to <input type="date" id="dateTo" aria-label="To date"></label>
-    <button id="dateClear" class="clearbtn" hidden>Clear dates</button>
   </div>
 </section>
 
@@ -257,6 +277,7 @@ const TYPE_ORDER  = ["Patent (PTAB)","Patent (District Ct.)","ITC / § 337","Tra
 let DATA=null, view="cases", typeF="", issueF="", shown=60;
 let embeddingsPromise=null, similarTo=null, similarResults=[];
 let selected=new Set();
+let expandedAnnots=new Set();
 
 const $ = id => document.getElementById(id);
 const esc = s => String(s??"").replace(/[&<>"']/g, c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
@@ -750,17 +771,28 @@ function cardHTML(c){
   let annot="";
   if(dn){
     const starred=isStarred(dn), note=getNote(dn), folders=getFolders(dn);
-    const chips=folders.map(f=>`<span class="folderchip" data-dn="${esc(dn)}" data-folder="${esc(f)}" title="Click to remove from this folder">${esc(f)} ×</span>`).join("");
     const checked=selected.has(dn)?"checked":"";
-    annot=`<div class="annot">
-      <div class="annot-row">
+    const isOpen=expandedAnnots.has(dn);
+    const folderBadge=folders.length?`<span class="foldercount">📁 ${folders.length}</span>`:"";
+    const noteBadge=note?`<span class="notebadge" title="Has a note">📝</span>`:"";
+    const compact=`
         <input type="checkbox" class="selectchk" data-dn="${esc(dn)}" ${checked} title="Select for bulk actions" aria-label="Select case">
         <button class="star${starred?" on":""}" data-dn="${esc(dn)}" title="${starred?"Remove star":"Star this case"}" aria-label="Toggle star">${starred?"★":"☆"}</button>
+        ${folderBadge}${noteBadge}
+        <button class="annottoggle" data-dn="${esc(dn)}">${isOpen?"▴ Less":"▾ More"}</button>`;
+    let expanded="";
+    if(isOpen){
+      const chips=folders.map(f=>`<span class="folderchip" data-dn="${esc(dn)}" data-folder="${esc(f)}" title="Click to remove from this folder">${esc(f)} ×</span>`).join("");
+      expanded=`<div class="annot-row">
         ${chips}
         <button class="addfolder" data-dn="${esc(dn)}">+ folder</button>
         <button class="findsimilar" data-dn="${esc(dn)}">Find similar cases →</button>
       </div>
-      <textarea class="note" data-dn="${esc(dn)}" placeholder="Add a note… (saved on this device only)">${esc(note)}</textarea>
+      <textarea class="note" data-dn="${esc(dn)}" placeholder="Add a note… (saved on this device only)">${esc(note)}</textarea>`;
+    }
+    annot=`<div class="annot">
+      <div class="annot-row">${compact}</div>
+      ${expanded}
     </div>`;
   }
 
@@ -819,6 +851,11 @@ function bindAnnotEvents(){
   });
   [...$("main").querySelectorAll(".findsimilar")].forEach(b=>b.onclick=()=>{
     findSimilar(b.dataset.dn);
+  });
+  [...$("main").querySelectorAll(".annottoggle")].forEach(b=>b.onclick=()=>{
+    const dn=b.dataset.dn;
+    if(expandedAnnots.has(dn))expandedAnnots.delete(dn); else expandedAnnots.add(dn);
+    render();
   });
 }
 
