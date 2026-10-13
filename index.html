@@ -74,6 +74,12 @@ header{border-bottom:3px double var(--federal);background:var(--card)}
 .row2 select,.row2 input,.row2 button{border:1px solid var(--line);background:var(--card);border-radius:3px;padding:7px 10px;font-size:13px;font-family:var(--sans);color:var(--ink)}
 .row2 input{flex:1;min-width:190px}
 .row2 button{font-weight:600;color:var(--federal);white-space:nowrap}
+
+.bulkbar{display:flex;align-items:center;gap:10px;padding:8px 12px;margin:2px 0 6px;background:var(--paper);border:1px solid var(--federal);border-radius:3px;font-size:13px}
+.bulkbar span{font-weight:600;color:var(--federal)}
+.bulkbar button{font-family:var(--mono);font-size:12px;background:var(--card);border:1px solid var(--line);border-radius:3px;padding:5px 10px;cursor:pointer;color:var(--ink)}
+.bulkbar button:hover{border-color:var(--federal)}
+.selectchk{margin-right:8px;vertical-align:middle}
 .row2 button:hover{background:var(--paper)}
 .row3{display:flex;gap:8px;flex-wrap:wrap;align-items:center;padding:2px 0 6px}
 .row3 select,.row3 input[type=date]{border:1px solid var(--line);background:var(--card);border-radius:3px;padding:6px 9px;font-size:12.5px;font-family:var(--sans);color:var(--ink)}
@@ -205,7 +211,16 @@ footer{border-top:1px solid var(--line);padding:18px 20px 40px;max-width:1060px;
     </label>
     <input id="search" type="search" placeholder="Search caption, docket no., origin…" aria-label="Search cases">
     <button type="button" onclick="exportMemo()" title="Export starred cases (or the selected folder) as a Markdown memo with links to the real opinion PDFs">Export ↓</button>
+    <label style="display:flex;align-items:center;gap:5px;font-size:13px;font-family:var(--sans);color:var(--ink);white-space:nowrap">
+      <input type="checkbox" id="selectAllChk" onchange="toggleSelectAll(this.checked)"> Select all matching
+    </label>
     <span class="count" id="count"></span>
+  </div>
+  <div class="bulkbar" id="bulkBar" hidden>
+    <span id="bulkCount"></span>
+    <button type="button" onclick="bulkAddFolder()">+ Add to folder</button>
+    <button type="button" onclick="bulkStar()">★ Star all</button>
+    <button type="button" onclick="clearSelection()">Clear selection</button>
   </div>
   <div class="row3">
     <select id="dateField" aria-label="Which date to filter on">
@@ -241,6 +256,7 @@ const ISSUE_ORDER = ["§ 101 Eligibility","§§ 102/103 Prior Art","§ 112 / Cla
 const TYPE_ORDER  = ["Patent (PTAB)","Patent (District Ct.)","ITC / § 337","Trade (CIT)","Veterans","Federal Claims","Federal Employment","Other / Unclassified"];
 let DATA=null, view="cases", typeF="", issueF="", shown=60;
 let embeddingsPromise=null, similarTo=null, similarResults=[];
+let selected=new Set();
 
 const $ = id => document.getElementById(id);
 const esc = s => String(s??"").replace(/[&<>"']/g, c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
@@ -579,6 +595,61 @@ function clearSimilar(){
   render();
 }
 
+// ---------- bulk selection ----------
+function updateBulkBar(){
+  const bar=$("bulkBar");
+  if(selected.size>0){
+    bar.hidden=false;
+    $("bulkCount").textContent=`${selected.size} selected`;
+  }else{
+    bar.hidden=true;
+  }
+  $("selectAllChk").checked = selected.size>0 && filtered().every(c=>!c.docket_number || selected.has(c.docket_number));
+}
+
+function toggleSelect(dn){
+  if(selected.has(dn))selected.delete(dn); else selected.add(dn);
+  updateBulkBar();
+}
+
+function toggleSelectAll(checked){
+  const list=filtered();
+  if(checked){
+    list.forEach(c=>{ if(c.docket_number)selected.add(c.docket_number); });
+  }else{
+    list.forEach(c=>{ if(c.docket_number)selected.delete(c.docket_number); });
+  }
+  updateBulkBar();
+  render();
+}
+
+function clearSelection(){
+  selected.clear();
+  updateBulkBar();
+  render();
+}
+
+function bulkAddFolder(){
+  if(!selected.size)return;
+  const existing=allFolderNames();
+  const hint=existing.length?` Existing: ${existing.join(", ")}.`:"";
+  const name=prompt(`Add ${selected.size} selected case(s) to a folder (new or existing).${hint}`);
+  if(name && name.trim()){
+    selected.forEach(dn=>addToFolder(dn, name.trim()));
+    buildFolderSel();
+    clearSelection();
+  }
+}
+
+function bulkStar(){
+  if(!selected.size)return;
+  const a=loadAnnotations();
+  a.stars=a.stars||{};
+  selected.forEach(dn=>{ a.stars[dn]=true; });
+  saveAnnotations(a);
+  clearSelection();
+}
+
 function decoKind(c){
   const d=c.decision||{};
   if(/rule\s*36/i.test(d.disposition||""))return "r36";
@@ -680,8 +751,10 @@ function cardHTML(c){
   if(dn){
     const starred=isStarred(dn), note=getNote(dn), folders=getFolders(dn);
     const chips=folders.map(f=>`<span class="folderchip" data-dn="${esc(dn)}" data-folder="${esc(f)}" title="Click to remove from this folder">${esc(f)} ×</span>`).join("");
+    const checked=selected.has(dn)?"checked":"";
     annot=`<div class="annot">
       <div class="annot-row">
+        <input type="checkbox" class="selectchk" data-dn="${esc(dn)}" ${checked} title="Select for bulk actions" aria-label="Select case">
         <button class="star${starred?" on":""}" data-dn="${esc(dn)}" title="${starred?"Remove star":"Star this case"}" aria-label="Toggle star">${starred?"★":"☆"}</button>
         ${chips}
         <button class="addfolder" data-dn="${esc(dn)}">+ folder</button>
@@ -728,6 +801,10 @@ function render(){
 }
 
 function bindAnnotEvents(){
+  updateBulkBar();
+  [...$("main").querySelectorAll(".selectchk")].forEach(chk=>chk.onchange=()=>{
+    toggleSelect(chk.dataset.dn);
+  });
   [...$("main").querySelectorAll(".star")].forEach(b=>b.onclick=()=>{
     toggleStar(b.dataset.dn); render();
   });
