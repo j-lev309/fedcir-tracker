@@ -844,7 +844,7 @@ def summarize_claude(case_name: str, text: str, is_precedential: bool = False) -
     )
     try:
         r = _anthropic_client.with_options(timeout=90).messages.parse(
-            model="claude-haiku-4-5", max_tokens=700,
+            model="claude-haiku-4-5", max_tokens=1200,
             messages=[{"role": "user", "content": prompt}],
             output_format=_CaseAnalysis,
         )
