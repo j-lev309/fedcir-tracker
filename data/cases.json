@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-13T02:39:49+00:00",
+ "generated_at": "2026-10-13T18:19:35+00:00",
  "window_since": "2020-01-01",
  "coverage": {
   "complete": true,
@@ -18,13 +18,13 @@
    "clusters": {
     "complete": true,
     "reason": "ok",
-    "count": 15,
+    "count": 19,
     "resume_url": null
    },
    "opinions": {
     "complete": true,
     "reason": "ok",
-    "count": 15,
+    "count": 4,
     "resume_url": null
    },
    "audio": {
@@ -45,27 +45,115 @@
    }
   },
   "summaries": {
-   "enabled": false,
+   "enabled": true,
    "have": 0,
-   "expected": 7910,
-   "complete": true
+   "expected": 7914,
+   "complete": false
   },
   "opinion_text_fetches_this_run": 600,
   "opinion_text_fetch_cap": 600,
-  "latest_decision_date": "2026-10-09",
+  "latest_decision_date": "2026-10-13",
   "next_argument_date": null
  },
  "stats": {
-  "total": 8821,
+  "total": 8825,
   "pending": 862,
   "scheduled": 0,
   "awaiting": 47,
-  "decided": 7912,
+  "decided": 7916,
   "precedential": 1444,
   "rule36": 2
  },
  "upcoming_argument_docket_numbers": [],
  "cases": [
+  {
+   "docket_number": "CL-11032139",
+   "case_name": "Brightex Bio-Photonics, LLC v. L'oreal USA, Inc.",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-10-13",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/11032139/brightex-bio-photonics-llc-v-loreal-usa-inc/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1835.RULE_36_JUDGMENT.10-13-2026_2769801.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/11032139/brightex-bio-photonics-llc-v-loreal-usa-inc/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "CL-11032138",
+   "case_name": "Noble Innovations Nc LLC v. Colgate-Palmolive Company",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-10-13",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/11032138/noble-innovations-nc-llc-v-colgate-palmolive-company/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1488.RULE_36_JUDGMENT.10-13-2026_2769789.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/11032138/noble-innovations-nc-llc-v-colgate-palmolive-company/",
+   "url_audio": "https://www.courtlistener.com/audio/106835/noble-innovations-nc-llc-v-colgate-palmolive-company/"
+  },
+  {
+   "docket_number": "CL-11032137",
+   "case_name": "Sunrez Corp. v. United States",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-10-13",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/11032137/sunrez-corp-v-united-states/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1744.RULE_36_JUDGMENT.10-13-2026_2769794.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/11032137/sunrez-corp-v-united-states/",
+   "url_audio": "https://www.courtlistener.com/audio/106825/sunrez-corp-v-united-states/"
+  },
+  {
+   "docket_number": "CL-11032136",
+   "case_name": "Yieldmo, Inc. v. Teads, Inc.",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-10-13",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/11032136/yieldmo-inc-v-teads-inc/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-2012.RULE_36_JUDGMENT.10-13-2026_2769806.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/11032136/yieldmo-inc-v-teads-inc/",
+   "url_audio": null
+  },
   {
    "docket_number": "CL-11024265",
    "case_name": "Walker v. Army",
