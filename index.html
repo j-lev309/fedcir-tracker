@@ -85,6 +85,13 @@ header{border-bottom:3px double var(--federal);background:var(--card)}
 /* ---------- case cards: the slip-opinion caption ---------- */
 main{max-width:1060px;margin:0 auto;padding:10px 20px 70px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:2px;padding:20px 22px 16px;margin:14px 0;position:relative;box-shadow:0 1px 0 rgba(23,32,46,.04)}
+
+.jtable{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:13.5px}
+.jtable th{text-align:left;font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--steel);padding:9px 12px;border-bottom:1px solid var(--line);background:var(--paper)}
+.jtable td{padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+.jtable tr.jrow{cursor:pointer}
+.jtable tr.jrow:hover td{background:var(--paper)}
+.jtable td:first-child{font-weight:600;font-variant:small-caps;white-space:nowrap}
 .card .courtline{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--steel);margin-bottom:8px}
 .caption{font-family:var(--serif);font-size:clamp(16px,2.2vw,20px);font-weight:600;letter-spacing:.015em;padding-right:118px;font-variant:small-caps}
 .caption .vs{font-variant:normal;font-style:italic;font-weight:400;font-size:.85em;padding:0 .25em;color:var(--steel)}
@@ -163,6 +170,7 @@ footer{border-top:1px solid var(--line);padding:18px 20px 40px;max-width:1060px;
   <div class="viewtoggle" role="tablist">
     <button id="vCases" class="on" onclick="setView('cases')">Cases</button>
     <button id="vCal" onclick="setView('calendar')">Argument Calendar</button>
+    <button id="vAnalytics" onclick="setView('analytics')">Judge Analytics</button>
   </div>
   <div class="tabs" id="typeTabs"></div>
   <div class="chips" id="issueChips" hidden></div>
@@ -615,6 +623,7 @@ function render(){
   $("count").textContent=list.length+" case"+(list.length===1?"":"s")
     +(hasDate?` · by ${fieldLabel}`:"");
   if(view==="calendar"){renderCalendar(list);return;}
+  if(view==="analytics"){renderAnalytics(list);return;}
   if(!list.length){
     $("main").innerHTML='<div class="empty">No cases match these filters.'
       +(hasDate?`<br><span style="font-size:14px">Cases without a ${esc(fieldLabel)} are excluded by a date range — try a different date field or clear the range.</span>`:"")
@@ -660,10 +669,60 @@ function renderCalendar(list){
   bindAnnotEvents();
 }
 
+function renderAnalytics(list){
+  $("main").innerHTML=judgeStatsHTML(list);
+  bindJudgeTableEvents();
+}
+
+function judgeStatsHTML(list){
+  const stats={}; // judge name -> {total, prec, nonprec, r36, issues:{}, co:{}}
+  list.forEach(c=>{
+    const names=[...new Set((c.panel||[]).map(p=>cleanJudge(p.name)).filter(Boolean))];
+    const kind=decoKind(c);
+    names.forEach(n=>{
+      const s=stats[n]=stats[n]||{total:0,prec:0,nonprec:0,r36:0,issues:{},co:{}};
+      s.total++;
+      if(kind==="prec")s.prec++;
+      else if(kind==="r36")s.r36++;
+      else if(kind==="nonprec")s.nonprec++;
+      (c.patent_issues||[]).forEach(i=>{s.issues[i]=(s.issues[i]||0)+1;});
+      names.forEach(o=>{if(o!==n)s.co[o]=(s.co[o]||0)+1;});
+    });
+  });
+  const rows=Object.entries(stats).sort((a,b)=>b[1].total-a[1].total);
+  if(!rows.length)return '<div class="empty">No judges in the current filter.</div>';
+  const body=rows.map(([name,s])=>{
+    const topIssues=Object.entries(s.issues).sort((a,b)=>b[1]-a[1]).slice(0,3)
+      .map(([i,n])=>`${esc(i)} (${n})`).join(", ")||"—";
+    const topCo=Object.entries(s.co).sort((a,b)=>b[1]-a[1])[0];
+    const coStr=topCo?`${esc(topCo[0])} (${topCo[1]})`:"—";
+    return `<tr class="jrow" data-judge="${esc(name)}">
+      <td>${esc(name)}</td>
+      <td>${s.total}</td>
+      <td>${s.prec}${s.r36?` + ${s.r36} R36`:""}</td>
+      <td>${topIssues}</td>
+      <td>${coStr}</td>
+    </tr>`;
+  }).join("");
+  return `<table class="jtable">
+    <thead><tr><th>Judge</th><th>Cases</th><th>Precedential</th><th>Top issues</th><th>Most frequent co-panelist</th></tr></thead>
+    <tbody>${body}</tbody>
+  </table>
+  <div style="margin-top:9px;font-size:12px;color:var(--steel)">Based on the ${list.length} case(s) matching the current filters. Click a judge to see just their cases.</div>`;
+}
+
+function bindJudgeTableEvents(){
+  [...$("main").querySelectorAll(".jrow")].forEach(tr=>tr.onclick=()=>{
+    $("judgeSel").value=tr.dataset.judge;
+    setView("cases");
+  });
+}
+
 function setView(v){
   view=v;
   $("vCases").classList.toggle("on",v==="cases");
   $("vCal").classList.toggle("on",v==="calendar");
+  $("vAnalytics").classList.toggle("on",v==="analytics");
   render();
 }
 
