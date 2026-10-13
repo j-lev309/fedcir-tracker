@@ -514,7 +514,21 @@
    "Damages & Remedies",
    "\u00a7\u00a7 102/103 Prior Art"
   ],
-  "summary": "The Federal Circuit affirmed the district court's claim construction holding that the terms \"dextromethorphan\" and \"quinidine\" in the weight-to-weight ratio limitation of claim 1 of the '282 patent refer to the compounds in both free base and salt forms, rejecting Hetero's argument that the ratio must be calculated using only the active moiety components of the salts, which supported a finding of likely infringement by Hetero's generic Nuedexta product. However, the Court vacated the district court's waiver of the Rule 65(c) bond requirement for the preliminary injunction pending appeal, applying Third Circuit law holding that bond waivers are appropriate only under limited exceptions."
+  "summary": {
+   "segments": [
+    {
+     "issue": "Claim Construction: Salt Form Ratio",
+     "text": "The court affirmed the district court's construction that the weight-to-weight ratio limitation in claim 1 refers to the compounds in either free base or salt form, not requiring conversion to active moiety components. Intrinsic evidence\u2014including dependent claims expressly reciting salt forms and specification language defining active ingredients to include salts\u2014supports interpreting \"dextromethorphan\" and \"quinidine\" consistently throughout the patent to encompass both forms.",
+     "location": null
+    },
+    {
+     "issue": "Bond Waiver Under Rule 65(c)",
+     "text": "The court vacated the district court's waiver of the Rule 65(c) bond requirement pending appeal, holding that such waivers are strictly construed and permitted only under limited exceptions under Third Circuit law. The district court's finding that \"the equities weigh strongly in favor of waiving\" the bond was insufficient to satisfy the stringent standard for waiver.",
+     "location": null
+    }
+   ],
+   "holding": "This decision clarifies that in patent claim construction disputes involving pharmaceutical compounds administered in salt form, courts should interpret compound names consistently throughout the patent to include salt forms unless the patent explicitly distinguishes between them. The decision also reaffirms that Rule 65(c) bond waivers in preliminary injunction appeals are narrowly construed, and regional circuit law (here, Third Circuit precedent) governs the scope of permissible waivers in patent cases, even when the underlying substantive issue involves patent law."
+  }
  },
  "panel-cl-10830456": [],
  "panel-cl-10707958": [],
