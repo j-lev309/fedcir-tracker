@@ -71,8 +71,10 @@ header{border-bottom:3px double var(--federal);background:var(--card)}
 .chips button{border:1px solid var(--line);background:var(--card);border-radius:99px;padding:5px 13px;font-size:12.5px;font-weight:500;color:var(--ink)}
 .chips button.on{background:var(--federal);border-color:var(--federal);color:#fff}
 .row2{display:flex;gap:10px;flex-wrap:wrap;padding:10px 0 4px;align-items:center}
-.row2 select,.row2 input{border:1px solid var(--line);background:var(--card);border-radius:3px;padding:7px 10px;font-size:13px;font-family:var(--sans);color:var(--ink)}
+.row2 select,.row2 input,.row2 button{border:1px solid var(--line);background:var(--card);border-radius:3px;padding:7px 10px;font-size:13px;font-family:var(--sans);color:var(--ink)}
 .row2 input{flex:1;min-width:190px}
+.row2 button{font-weight:600;color:var(--federal);white-space:nowrap}
+.row2 button:hover{background:var(--paper)}
 .row3{display:flex;gap:8px;flex-wrap:wrap;align-items:center;padding:2px 0 6px}
 .row3 select,.row3 input[type=date]{border:1px solid var(--line);background:var(--card);border-radius:3px;padding:6px 9px;font-size:12.5px;font-family:var(--sans);color:var(--ink)}
 .row3 .dlab{font-family:var(--mono);font-size:11px;color:var(--steel);display:flex;align-items:center;gap:5px}
@@ -197,6 +199,7 @@ footer{border-top:1px solid var(--line);padding:18px 20px 40px;max-width:1060px;
       <input type="checkbox" id="starredChk"> ★ Starred
     </label>
     <input id="search" type="search" placeholder="Search caption, docket no., origin…" aria-label="Search cases">
+    <button type="button" onclick="exportMemo()" title="Export starred cases (or the selected folder) as a Markdown memo with links to the real opinion PDFs">Export ↓</button>
     <span class="count" id="count"></span>
   </div>
   <div class="row3">
@@ -488,6 +491,50 @@ function promptAddFolder(dn){
   const hint=existing.length?` Existing: ${existing.join(", ")}.`:"";
   const name=prompt(`Add this case to a folder (new or existing).${hint}`);
   if(name && name.trim()){ addToFolder(dn, name.trim()); buildFolderSel(); render(); }
+}
+
+function exportMemo(){
+  const folder=$("folderSel").value;
+  const a=loadAnnotations();
+  const dns=folder ? ((a.folders||{})[folder]||[]) : Object.keys(a.stars||{});
+  if(!dns.length){
+    alert(folder ? `No cases in folder "${folder}".` : "No starred cases to export — star some cases, or pick a folder above, first.");
+    return;
+  }
+  const cases=DATA.cases.filter(c=>dns.includes(c.docket_number));
+  const title=folder?`Folder: ${folder}`:"Starred Cases";
+  let md=`# ${title}\n\n_Exported ${new Date().toLocaleDateString("en-US",{month:"long",day:"numeric",year:"numeric"})} — ${cases.length} case(s) — Federal Circuit Tracker_\n\n---\n\n`;
+  cases.forEach(c=>{
+    const d=c.decision||{};
+    md+=`## ${c.case_name}\n\n`;
+    md+=`**Citation:** Fed. Cir. No. ${c.docket_number||"—"}`;
+    if(d.date)md+=`, decided ${fmtD(d.date)}`;
+    md+=`\n\n`;
+    if(d.precedential_status)md+=`**Status:** ${d.precedential_status}${d.disposition?` — ${d.disposition}`:""}\n\n`;
+    const s=c.summary;
+    if(s){
+      if(typeof s==="string"){
+        md+=`**Summary:** ${s}\n\n`;
+      }else{
+        (s.segments||[]).forEach(seg=>{ md+=`**${seg.issue||"Summary"}:** ${seg.text}\n\n`; });
+        if(s.holding)md+=`**Holding:** ${s.holding}\n\n`;
+      }
+    }
+    const note=getNote(c.docket_number);
+    if(note)md+=`**Your note:** ${note}\n\n`;
+    const links=[d.url_pdf?`[Opinion PDF](${d.url_pdf})`:"",d.url_cl?`[CourtListener](${d.url_cl})`:""].filter(Boolean).join(" · ");
+    if(links)md+=links+"\n\n";
+    md+=`---\n\n`;
+  });
+  const blob=new Blob([md],{type:"text/markdown"});
+  const url=URL.createObjectURL(blob);
+  const a2=document.createElement("a");
+  a2.href=url;
+  a2.download=(folder?`fedcir-folder-${folder}`:"fedcir-starred-cases").replace(/[^a-z0-9-]+/gi,"_")+".md";
+  document.body.appendChild(a2);
+  a2.click();
+  a2.remove();
+  URL.revokeObjectURL(url);
 }
 
 function decoKind(c){
