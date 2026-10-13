@@ -119,6 +119,15 @@ main{max-width:1060px;margin:0 auto;padding:10px 20px 70px}
 .issues{margin-top:10px;display:flex;gap:6px;flex-wrap:wrap}
 .issue{font-family:var(--mono);font-size:11px;letter-spacing:.03em;background:var(--paper);border:1px solid var(--line);border-radius:2px;padding:3px 8px;color:var(--federal)}
 .links{margin-top:11px;display:flex;gap:16px;flex-wrap:wrap;font-size:13px;font-weight:600}
+
+.annot{margin-top:11px;border-top:1px solid var(--line);padding-top:9px;display:flex;flex-direction:column;gap:7px}
+.annot-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.star{font-size:18px;line-height:1;background:none;border:none;color:var(--line);padding:0;cursor:pointer}
+.star.on{color:var(--seal)}
+.folderchip{font-family:var(--mono);font-size:11px;background:var(--paper);border:1px solid var(--line);border-radius:2px;padding:3px 7px;color:var(--federal);cursor:pointer}
+.folderchip:hover{border-color:var(--stamp);color:var(--stamp)}
+.addfolder{font-family:var(--mono);font-size:11px;background:none;border:1px dashed var(--line);border-radius:2px;padding:3px 7px;color:var(--steel);cursor:pointer}
+.note{width:100%;min-height:42px;font-family:var(--sans);font-size:13px;border:1px solid var(--line);border-radius:3px;padding:6px 8px;color:var(--ink);background:var(--card);resize:vertical}
 .arg-note{margin-top:10px;font-size:13px;background:rgba(168,135,50,.08);border-left:3px solid var(--seal);padding:7px 11px;font-family:var(--mono);font-size:12px}
 
 /* ---------- calendar view ---------- */
@@ -172,8 +181,12 @@ footer{border-top:1px solid var(--line);padding:18px 20px 40px;max-width:1060px;
       <option value="r36">Rule 36</option>
     </select>
     <select id="judgeSel" aria-label="Filter by judge"><option value="">All judges</option></select>
+    <select id="folderSel" aria-label="Filter by folder"><option value="">All folders</option></select>
     <label style="display:flex;align-items:center;gap:5px;font-size:13px;font-family:var(--sans);color:var(--ink);white-space:nowrap">
       <input type="checkbox" id="hasSummaryChk"> Has summary
+    </label>
+    <label style="display:flex;align-items:center;gap:5px;font-size:13px;font-family:var(--sans);color:var(--ink);white-space:nowrap">
+      <input type="checkbox" id="starredChk"> ★ Starred
     </label>
     <input id="search" type="search" placeholder="Search caption, docket no., origin…" aria-label="Search cases">
     <span class="count" id="count"></span>
@@ -231,8 +244,8 @@ async function load(){
   }else{
     $("updated").innerHTML="Last updated <b>"+new Date(DATA.generated_at).toLocaleString("en-US",{month:"short",day:"numeric",hour:"numeric",minute:"2-digit"})+"</b>";
   }
-  buildStats(); buildTabs(); buildChips(); buildJudges(); buildScope();
-  ["statusSel","precSel","judgeSel","hasSummaryChk"].forEach(id=>$(id).addEventListener("change",()=>{shown=60;render();}));
+  buildStats(); buildTabs(); buildChips(); buildJudges(); buildFolderSel(); buildScope();
+  ["statusSel","precSel","judgeSel","folderSel","hasSummaryChk","starredChk"].forEach(id=>$(id).addEventListener("change",()=>{shown=60;render();}));
   $("search").addEventListener("input",()=>{shown=60;render();});
   setupDateFilter();
   render();
@@ -367,6 +380,13 @@ function buildJudges(){
   $("judgeSel").innerHTML='<option value="">All judges</option>'+[...names].sort().map(n=>`<option>${esc(n)}</option>`).join("");
 }
 
+function buildFolderSel(){
+  const cur=$("folderSel").value;
+  const names=allFolderNames();
+  $("folderSel").innerHTML='<option value="">All folders</option>'+names.map(n=>`<option>${esc(n)}</option>`).join("");
+  if(names.includes(cur))$("folderSel").value=cur;
+}
+
 function cleanJudge(n){
   return String(n||"").replace(/,?\s*(Chief |Circuit |District |Senior )?Judge.*/i,"").replace(/^(Judge|Hon\.?)\s+/i,"").trim();
 }
@@ -397,6 +417,71 @@ function renderSummary(c){
   return `<div class="summary"><span class="sumlabel">Summary</span>${segs}${holding}</div>`;
 }
 
+// ---------- personal annotations (bookmarks/notes/folders) ----------
+// Stored entirely in this browser's localStorage, keyed by docket_number.
+// Private to this device — never sent anywhere, never touched by the pipeline.
+const ANNOT_KEY="fedcir_annotations";
+function loadAnnotations(){
+  try{ return JSON.parse(localStorage.getItem(ANNOT_KEY)||"{}"); }
+  catch(e){ return {}; }
+}
+function saveAnnotations(a){
+  try{ localStorage.setItem(ANNOT_KEY, JSON.stringify(a)); }
+  catch(e){ /* storage unavailable (private mode, quota, etc.) — fail silently */ }
+}
+function isStarred(dn){
+  const a=loadAnnotations();
+  return !!(a.stars && a.stars[dn]);
+}
+function toggleStar(dn){
+  const a=loadAnnotations();
+  a.stars=a.stars||{};
+  if(a.stars[dn])delete a.stars[dn]; else a.stars[dn]=true;
+  saveAnnotations(a);
+}
+function getNote(dn){
+  const a=loadAnnotations();
+  return (a.notes && a.notes[dn]) || "";
+}
+function setNote(dn, text){
+  const a=loadAnnotations();
+  a.notes=a.notes||{};
+  if(text && text.trim())a.notes[dn]=text; else delete a.notes[dn];
+  saveAnnotations(a);
+}
+function getFolders(dn){
+  const a=loadAnnotations(), out=[];
+  for(const f in (a.folders||{})) if((a.folders[f]||[]).includes(dn)) out.push(f);
+  return out.sort();
+}
+function allFolderNames(){
+  const a=loadAnnotations();
+  return Object.keys(a.folders||{}).filter(f=>(a.folders[f]||[]).length>0).sort();
+}
+function addToFolder(dn, folder){
+  folder=(folder||"").trim();
+  if(!folder)return;
+  const a=loadAnnotations();
+  a.folders=a.folders||{};
+  a.folders[folder]=a.folders[folder]||[];
+  if(!a.folders[folder].includes(dn))a.folders[folder].push(dn);
+  saveAnnotations(a);
+}
+function removeFromFolder(dn, folder){
+  const a=loadAnnotations();
+  if(a.folders && a.folders[folder]){
+    a.folders[folder]=a.folders[folder].filter(x=>x!==dn);
+    if(!a.folders[folder].length)delete a.folders[folder];
+  }
+  saveAnnotations(a);
+}
+function promptAddFolder(dn){
+  const existing=allFolderNames();
+  const hint=existing.length?` Existing: ${existing.join(", ")}.`:"";
+  const name=prompt(`Add this case to a folder (new or existing).${hint}`);
+  if(name && name.trim()){ addToFolder(dn, name.trim()); buildFolderSel(); render(); }
+}
+
 function decoKind(c){
   const d=c.decision||{};
   if(/rule\s*36/i.test(d.disposition||""))return "r36";
@@ -414,7 +499,8 @@ function caseDate(c, field){
 
 function filtered(){
   const st=$("statusSel").value, pr=$("precSel").value, jg=$("judgeSel").value,
-        hs=$("hasSummaryChk").checked,
+        hs=$("hasSummaryChk").checked, sred=$("starredChk").checked,
+        fld=$("folderSel").value,
         q=$("search").value.trim().toLowerCase(),
         df=$("dateField").value, from=$("dateFrom").value, to=$("dateTo").value;
   return DATA.cases.filter(c=>{
@@ -424,6 +510,8 @@ function filtered(){
     if(pr && decoKind(c)!==pr)return false;
     if(jg && !(c.panel||[]).some(p=>cleanJudge(p.name)===jg))return false;
     if(hs && !c.summary)return false;
+    if(sred && !isStarred(c.docket_number))return false;
+    if(fld && !getFolders(c.docket_number).includes(fld))return false;
     if(from||to){
       const d=caseDate(c,df);
       if(!d)return false;              // no date of that kind = excluded
@@ -432,6 +520,7 @@ function filtered(){
     }
     if(q){
       const hay=[c.case_name,c.docket_number,c.origin,summaryText(c),(c.decision||{}).disposition,
+                 getNote(c.docket_number),...getFolders(c.docket_number),
                  ...(c.panel||[]).map(p=>p.name)].join(" ").toLowerCase();
       if(!hay.includes(q))return false;
     }
@@ -489,6 +578,21 @@ function cardHTML(c){
   ].filter(Boolean).join("");
   const summary=renderSummary(c);
 
+  const dn=c.docket_number;
+  let annot="";
+  if(dn){
+    const starred=isStarred(dn), note=getNote(dn), folders=getFolders(dn);
+    const chips=folders.map(f=>`<span class="folderchip" data-dn="${esc(dn)}" data-folder="${esc(f)}" title="Click to remove from this folder">${esc(f)} ×</span>`).join("");
+    annot=`<div class="annot">
+      <div class="annot-row">
+        <button class="star${starred?" on":""}" data-dn="${esc(dn)}" title="${starred?"Remove star":"Star this case"}" aria-label="Toggle star">${starred?"★":"☆"}</button>
+        ${chips}
+        <button class="addfolder" data-dn="${esc(dn)}">+ folder</button>
+      </div>
+      <textarea class="note" data-dn="${esc(dn)}" placeholder="Add a note… (saved on this device only)">${esc(note)}</textarea>
+    </div>`;
+  }
+
   return `<article class="card">
     ${stamp}
     <div class="courtline">Fed. Cir. · No. ${esc(c.docket_number||"—")}${c.origin?" · from "+esc(c.origin):""}</div>
@@ -500,6 +604,7 @@ function cardHTML(c){
     ${panelHTML(c)}
     ${issues?`<div class="issues">${issues}</div>`:""}
     ${links?`<div class="links">${links}</div>`:""}
+    ${annot}
   </article>`;
 }
 
@@ -519,6 +624,22 @@ function render(){
   let html=list.slice(0,shown).map(cardHTML).join("");
   if(list.length>shown)html+='<button class="loadmore" onclick="shown+=60;render()">Show more ('+(list.length-shown)+' remaining)</button>';
   $("main").innerHTML=html;
+  bindAnnotEvents();
+}
+
+function bindAnnotEvents(){
+  [...$("main").querySelectorAll(".star")].forEach(b=>b.onclick=()=>{
+    toggleStar(b.dataset.dn); render();
+  });
+  [...$("main").querySelectorAll(".folderchip")].forEach(ch=>ch.onclick=()=>{
+    removeFromFolder(ch.dataset.dn, ch.dataset.folder); buildFolderSel(); render();
+  });
+  [...$("main").querySelectorAll(".addfolder")].forEach(b=>b.onclick=()=>{
+    promptAddFolder(b.dataset.dn);
+  });
+  [...$("main").querySelectorAll(".note")].forEach(t=>t.onblur=()=>{
+    setNote(t.dataset.dn, t.value);
+  });
 }
 
 function renderCalendar(list){
@@ -536,6 +657,7 @@ function renderCalendar(list){
     html+=cardHTML(c);
   });
   $("main").innerHTML=html;
+  bindAnnotEvents();
 }
 
 function setView(v){
