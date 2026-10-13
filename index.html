@@ -166,6 +166,9 @@ footer{border-top:1px solid var(--line);padding:18px 20px 40px;max-width:1060px;
       <option value="r36">Rule 36</option>
     </select>
     <select id="judgeSel" aria-label="Filter by judge"><option value="">All judges</option></select>
+    <label style="display:flex;align-items:center;gap:5px;font-size:13px;font-family:var(--sans);color:var(--ink);white-space:nowrap">
+      <input type="checkbox" id="hasSummaryChk"> Has summary
+    </label>
     <input id="search" type="search" placeholder="Search caption, docket no., origin…" aria-label="Search cases">
     <span class="count" id="count"></span>
   </div>
@@ -223,7 +226,7 @@ async function load(){
     $("updated").innerHTML="Last updated <b>"+new Date(DATA.generated_at).toLocaleString("en-US",{month:"short",day:"numeric",hour:"numeric",minute:"2-digit"})+"</b>";
   }
   buildStats(); buildTabs(); buildChips(); buildJudges(); buildScope();
-  ["statusSel","precSel","judgeSel"].forEach(id=>$(id).addEventListener("change",()=>{shown=60;render();}));
+  ["statusSel","precSel","judgeSel","hasSummaryChk"].forEach(id=>$(id).addEventListener("change",()=>{shown=60;render();}));
   $("search").addEventListener("input",()=>{shown=60;render();});
   setupDateFilter();
   render();
@@ -379,6 +382,7 @@ function caseDate(c, field){
 
 function filtered(){
   const st=$("statusSel").value, pr=$("precSel").value, jg=$("judgeSel").value,
+        hs=$("hasSummaryChk").checked,
         q=$("search").value.trim().toLowerCase(),
         df=$("dateField").value, from=$("dateFrom").value, to=$("dateTo").value;
   return DATA.cases.filter(c=>{
@@ -387,6 +391,7 @@ function filtered(){
     if(st && c.status!==st)return false;
     if(pr && decoKind(c)!==pr)return false;
     if(jg && !(c.panel||[]).some(p=>cleanJudge(p.name)===jg))return false;
+    if(hs && !c.summary)return false;
     if(from||to){
       const d=caseDate(c,df);
       if(!d)return false;              // no date of that kind = excluded
