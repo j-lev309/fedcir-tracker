@@ -10,9 +10,13 @@ Sources:
   3. CAFC Opinions & Orders RSS feed (same-day releases, incl. Rule 36 judgments)
 
 Optional:
-  ANTHROPIC_API_KEY — if set, cases the keyword classifier can't bucket are
-  classified with Claude (claude-haiku-4-5). Results are cached in
-  data/issue_cache.json so each opinion is only classified once, ever.
+  Anthropic credentials (either ANTHROPIC_API_KEY, or the Workload Identity
+  Federation env vars: ANTHROPIC_FEDERATION_RULE_ID, ANTHROPIC_ORGANIZATION_ID,
+  ANTHROPIC_SERVICE_ACCOUNT_ID, and ANTHROPIC_IDENTITY_TOKEN_FILE) — if
+  present, cases the keyword classifier can't bucket are classified with
+  Claude (claude-haiku-4-5), and decided cases get a short AI summary.
+  Results are cached in data/issue_cache.json so each opinion is only
+  classified/summarized once, ever.
 
 Output: data/cases.json consumed by index.html.
 
@@ -30,6 +34,7 @@ from io import BytesIO
 from pathlib import Path
 from urllib.parse import parse_qs, urlparse
 
+import anthropic
 import requests
 import urllib3
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
@@ -45,6 +50,16 @@ CAFC_OPINION_RSS = "https://www.cafc.uscourts.gov/category/opinion-order/feed/"
 
 CL_TOKEN = os.environ.get("COURTLISTENER_TOKEN", "").strip()
 ANTHROPIC_KEY = os.environ.get("ANTHROPIC_API_KEY", "").strip()
+# Either a plain API key or Workload Identity Federation counts as "enabled" —
+# the SDK client (constructed with no args, below) resolves whichever is
+# present from the environment on its own.
+ANTHROPIC_ENABLED = bool(ANTHROPIC_KEY) or bool(
+    os.environ.get("ANTHROPIC_FEDERATION_RULE_ID")
+    and os.environ.get("ANTHROPIC_ORGANIZATION_ID")
+    and os.environ.get("ANTHROPIC_SERVICE_ACCOUNT_ID")
+    and (os.environ.get("ANTHROPIC_IDENTITY_TOKEN_FILE") or os.environ.get("ANTHROPIC_IDENTITY_TOKEN"))
+)
+_anthropic_client = anthropic.Anthropic() if ANTHROPIC_ENABLED else None
 
 WINDOW_MONTHS = int(os.environ.get("WINDOW_MONTHS", "18"))   # rolling window of filings
 WINDOW_START = os.environ.get("WINDOW_START", "2020-01-01")  # fixed floor — overrides WINDOW_MONTHS if set
@@ -299,8 +314,15 @@ def fetch_opinions(since: str, meta: dict = None, after_id: int = 0, budget: int
 
     Ordered newest-first: the cases a user is looking at are the ones recently
     decided, so authorship for those must land in the first page, not after a
-    full backfill from the start of the window. Incremental progress is tracked
-    by the cluster date filter (`since`), not by an ascending id cursor.
+    full backfill from the start of the window.
+
+    `after_id` (only once backfill is done — see build()'s _after_id_for) adds
+    an id__gt floor for true incremental mode. Date-based incremental doesn't
+    work here: CourtListener's /opinions/ response silently drops date_created
+    from the fields projection even when it's requested, so last_date can
+    never populate. last_id, by contrast, is already correct (captured on
+    page 1 of the very first run, since this endpoint pages newest-id-first)
+    — this just wires that existing value into the query.
     """
     log("Fetching CAFC opinions (authorship / roles) …")
     fields = ",".join([
@@ -308,12 +330,11 @@ def fetch_opinions(since: str, meta: dict = None, after_id: int = 0, budget: int
         "author_id", "joined_by", "per_curiam",
         "download_url", "absolute_url", "date_created",
     ])
-    items = cl_paginate(
-        f"{CL_BASE}/opinions/",
-        {"cluster__docket__court": "cafc", "cluster__date_filed__gte": since,
-         "order_by": "-id", "fields": fields},
-        MAX_DOCKETS, meta, budget or PAGE_BUDGET, resume,
-    )
+    params = {"cluster__docket__court": "cafc", "cluster__date_filed__gte": since,
+              "order_by": "-id", "fields": fields}
+    if after_id:
+        params["id__gt"] = after_id
+    items = cl_paginate(f"{CL_BASE}/opinions/", params, MAX_DOCKETS, meta, budget or PAGE_BUDGET, resume)
     log(f"  {len(items)} opinions")
     return items
 
@@ -748,7 +769,7 @@ def classify_issues_keywords(text: str) -> list:
 
 def classify_issues_claude(case_name: str, text: str) -> list:
     """Optional fallback via Claude for opinions the keyword pass missed."""
-    if not ANTHROPIC_KEY or not text:
+    if not ANTHROPIC_ENABLED or not text:
         return []
     buckets = list(ISSUE_RULES.keys()) + ["Other"]
     prompt = (
@@ -758,16 +779,11 @@ def classify_issues_claude(case_name: str, text: str) -> list:
         'Respond with ONLY a JSON array of strings, e.g. ["§ 101 Eligibility"].'
     )
     try:
-        r = requests.post(
-            "https://api.anthropic.com/v1/messages",
-            headers={"x-api-key": ANTHROPIC_KEY, "anthropic-version": "2023-06-01",
-                     "content-type": "application/json"},
-            json={"model": "claude-haiku-4-5", "max_tokens": 100,
-                  "messages": [{"role": "user", "content": prompt}]},
-            timeout=60,
+        r = _anthropic_client.with_options(timeout=60).messages.create(
+            model="claude-haiku-4-5", max_tokens=100,
+            messages=[{"role": "user", "content": prompt}],
         )
-        r.raise_for_status()
-        raw = "".join(b.get("text", "") for b in r.json().get("content", []))
+        raw = "".join(b.text for b in r.content if b.type == "text")
         labels = [x for x in json.loads(re.sub(r"```(json)?", "", raw).strip())
                   if x in buckets and x != "Other"]
     except Exception as e:  # noqa: BLE001
@@ -777,8 +793,9 @@ def classify_issues_claude(case_name: str, text: str) -> list:
 
 
 def summarize_claude(case_name: str, text: str) -> str | None:
-    """2–3 sentence neutral summary of a decision. Requires ANTHROPIC_API_KEY."""
-    if not ANTHROPIC_KEY or not text or len(text) < 400:
+    """2–3 sentence neutral summary of a decision. Requires Anthropic credentials
+    (ANTHROPIC_API_KEY or Workload Identity Federation — see ANTHROPIC_ENABLED)."""
+    if not ANTHROPIC_ENABLED or not text or len(text) < 400:
         return None
     prompt = (
         "Summarize this Federal Circuit decision in 2-3 sentences for a law-student "
@@ -788,16 +805,11 @@ def summarize_claude(case_name: str, text: str) -> str | None:
         f"Case: {case_name}\n\nOpinion text:\n{text[:14000]}"
     )
     try:
-        r = requests.post(
-            "https://api.anthropic.com/v1/messages",
-            headers={"x-api-key": ANTHROPIC_KEY, "anthropic-version": "2023-06-01",
-                     "content-type": "application/json"},
-            json={"model": "claude-haiku-4-5", "max_tokens": 300,
-                  "messages": [{"role": "user", "content": prompt}]},
-            timeout=90,
+        r = _anthropic_client.with_options(timeout=90).messages.create(
+            model="claude-haiku-4-5", max_tokens=300,
+            messages=[{"role": "user", "content": prompt}],
         )
-        r.raise_for_status()
-        out = "".join(b.get("text", "") for b in r.json().get("content", [])).strip()
+        out = "".join(b.text for b in r.content if b.type == "text").strip()
         return out[:1200] or None
     except Exception as e:  # noqa: BLE001
         log(f"  Claude summary failed: {e}")
@@ -1047,6 +1059,18 @@ def build() -> dict:
             return None
         return st.get("frontier_date")
 
+    def _after_id_for(k: str):
+        # Opinions can't track last_date (see fetch_opinions docstring), so
+        # it uses an id__gt floor for incremental mode instead — but only
+        # once backfill is actually done. last_id holds the newest id ever
+        # seen, captured during backfill's descending-id pass; applying it
+        # as a floor *during* backfill would wrongly exclude everything
+        # older than the very first page.
+        st = state.get(k) or {}
+        if not st.get("backfill_done"):
+            return 0
+        return st.get("last_id", 0)
+
     results: dict = {}
     for key in order:
         if key == "dockets":
@@ -1057,7 +1081,7 @@ def build() -> dict:
                                           None, _until_for(key))
         elif key == "opinions":
             results[key] = fetch_opinions(_since_for(key), cov[key],
-                                          (state.get(key) or {}).get("last_id", 0),
+                                          _after_id_for(key),
                                           _budget_for(key), _resume_for(key))
         elif key == "audio":
             results[key] = fetch_audio(_since_for(key), cov[key],
@@ -1276,7 +1300,7 @@ def build() -> dict:
         opinion_text = ""
         needs_panel = not panel
         needs_issues = case_type.startswith(("Patent", "ITC"))
-        needs_summary = bool(ANTHROPIC_KEY) and not is_r36_case
+        needs_summary = ANTHROPIC_ENABLED and not is_r36_case
 
         if enrich_pdf and text_fetches < MAX_OPINION_TEXT_FETCHES \
                 and (needs_panel or needs_issues or needs_summary):
@@ -1332,7 +1356,7 @@ def build() -> dict:
             if not enrich_pdf2:
                 enrich_pdf2 = decision.get("url_pdf")
             need_issues = is_patent and not issues
-            need_summary = (bool(ANTHROPIC_KEY) and not summary and not is_r36_case)
+            need_summary = (ANTHROPIC_ENABLED and not summary and not is_r36_case)
             if enrich_pdf2 and (need_issues or need_summary) \
                     and text_fetches < MAX_OPINION_TEXT_FETCHES:
                 opinion_text = fetch_opinion_text(
@@ -1343,7 +1367,7 @@ def build() -> dict:
             if is_patent and not issues:
                 issues = (classify_issues_keywords(opinion_text)
                           or classify_issues_claude(cl.get("case_name") or dn, opinion_text))
-            if bool(ANTHROPIC_KEY) and not summary and not is_r36_case:
+            if ANTHROPIC_ENABLED and not summary and not is_r36_case:
                 summary = summarize_claude(cl.get("case_name") or dn, opinion_text)
             cache[cache_key] = {"issues": issues, "summary": summary}
 
@@ -1511,10 +1535,10 @@ def build() -> dict:
             "opinion_rss": {"count": len(rss), "complete": True, "reason": "ok"},
         },
         "summaries": {
-            "enabled": bool(ANTHROPIC_KEY),
+            "enabled": ANTHROPIC_ENABLED,
             "have": summarized,
             "expected": decided_summarizable,
-            "complete": (not ANTHROPIC_KEY) or summarized >= decided_summarizable,
+            "complete": (not ANTHROPIC_ENABLED) or summarized >= decided_summarizable,
         },
         "opinion_text_fetches_this_run": text_fetches,
         "opinion_text_fetch_cap": MAX_OPINION_TEXT_FETCHES,

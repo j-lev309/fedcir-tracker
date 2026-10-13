@@ -17,6 +17,7 @@ on:
 
 permissions:
   contents: write
+  id-token: write   # lets the job request a GitHub OIDC token for Anthropic WIF
 
 concurrency:
   group: data-update
@@ -36,11 +37,34 @@ jobs:
       - name: Install dependencies
         run: pip install -r scripts/requirements.txt
 
+      - name: Fetch GitHub OIDC token for Anthropic (refreshed in the background)
+        run: |
+          fetch_token() {
+            curl -sS -H "Authorization: Bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" \
+              "$ACTIONS_ID_TOKEN_REQUEST_URL&audience=https://api.anthropic.com" \
+              | jq -r .value > /tmp/gha-jwt
+          }
+          fetch_token
+          # GitHub's OIDC tokens expire in ~5 minutes, but this job runs
+          # 10-20 minutes and the Anthropic SDK re-reads this file on every
+          # token refresh — so a single fetch at the start would go stale
+          # mid-run. Keep it current for the rest of the job.
+          ( while true; do sleep 180; fetch_token; done ) &
+          echo $! > /tmp/gha-jwt-refresh.pid
+
       - name: Run pipeline
         env:
           COURTLISTENER_TOKEN: ${{ secrets.COURTLISTENER_TOKEN }}
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}   # optional
+          ANTHROPIC_FEDERATION_RULE_ID: ${{ vars.ANTHROPIC_FEDERATION_RULE_ID }}
+          ANTHROPIC_ORGANIZATION_ID: ${{ vars.ANTHROPIC_ORGANIZATION_ID }}
+          ANTHROPIC_SERVICE_ACCOUNT_ID: ${{ vars.ANTHROPIC_SERVICE_ACCOUNT_ID }}
+          ANTHROPIC_WORKSPACE_ID: ${{ vars.ANTHROPIC_WORKSPACE_ID }}
+          ANTHROPIC_IDENTITY_TOKEN_FILE: /tmp/gha-jwt
         run: python scripts/update.py
+
+      - name: Stop OIDC token refresh loop
+        if: always()
+        run: kill "$(cat /tmp/gha-jwt-refresh.pid)" 2>/dev/null || true
 
       - name: Commit refreshed data
         run: |
