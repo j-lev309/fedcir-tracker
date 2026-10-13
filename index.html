@@ -136,6 +136,11 @@ main{max-width:1060px;margin:0 auto;padding:10px 20px 70px}
 .folderchip{font-family:var(--mono);font-size:11px;background:var(--paper);border:1px solid var(--line);border-radius:2px;padding:3px 7px;color:var(--federal);cursor:pointer}
 .folderchip:hover{border-color:var(--stamp);color:var(--stamp)}
 .addfolder{font-family:var(--mono);font-size:11px;background:none;border:1px dashed var(--line);border-radius:2px;padding:3px 7px;color:var(--steel);cursor:pointer}
+.findsimilar{font-family:var(--mono);font-size:11px;background:none;border:none;color:var(--federal);cursor:pointer;margin-left:auto;font-weight:600}
+.findsimilar:hover{text-decoration:underline}
+.simbar{display:flex;align-items:center;gap:10px;padding:10px 0;font-size:13px;color:var(--steel)}
+.simbar button{font-family:var(--mono);font-size:12px;background:none;border:1px solid var(--line);border-radius:3px;padding:5px 10px;cursor:pointer;color:var(--ink)}
+.simscore{font-family:var(--mono);font-size:11px;color:var(--seal);font-weight:600;margin-bottom:6px}
 .note{width:100%;min-height:42px;font-family:var(--sans);font-size:13px;border:1px solid var(--line);border-radius:3px;padding:6px 8px;color:var(--ink);background:var(--card);resize:vertical}
 .arg-note{margin-top:10px;font-size:13px;background:rgba(168,135,50,.08);border-left:3px solid var(--seal);padding:7px 11px;font-family:var(--mono);font-size:12px}
 
@@ -235,6 +240,7 @@ footer{border-top:1px solid var(--line);padding:18px 20px 40px;max-width:1060px;
 const ISSUE_ORDER = ["§ 101 Eligibility","§§ 102/103 Prior Art","§ 112 / Claim Construction","PTAB Procedure & Standing","Damages & Remedies","Other / Procedural"];
 const TYPE_ORDER  = ["Patent (PTAB)","Patent (District Ct.)","ITC / § 337","Trade (CIT)","Veterans","Federal Claims","Federal Employment","Other / Unclassified"];
 let DATA=null, view="cases", typeF="", issueF="", shown=60;
+let embeddingsPromise=null, similarTo=null, similarResults=[];
 
 const $ = id => document.getElementById(id);
 const esc = s => String(s??"").replace(/[&<>"']/g, c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
@@ -537,6 +543,42 @@ function exportMemo(){
   URL.revokeObjectURL(url);
 }
 
+// ---------- similar cases (Voyage AI embeddings, lazy-loaded) ----------
+function loadEmbeddings(){
+  if(!embeddingsPromise){
+    embeddingsPromise=fetch("data/embeddings.json").then(r=>r.json()).catch(()=>({}));
+  }
+  return embeddingsPromise;
+}
+
+function cosineSim(a,b){
+  let dot=0,na=0,nb=0;
+  for(let i=0;i<a.length;i++){ dot+=a[i]*b[i]; na+=a[i]*a[i]; nb+=b[i]*b[i]; }
+  return dot/(Math.sqrt(na)*Math.sqrt(nb));
+}
+
+async function findSimilar(dn){
+  const emb=await loadEmbeddings();
+  const mine=emb[dn];
+  if(!mine){ alert("No similarity data for this case yet — it may not have been processed in this run."); return; }
+  const sims=[];
+  for(const other in emb){
+    if(other===dn)continue;
+    sims.push([other, cosineSim(mine.vec, emb[other].vec)]);
+  }
+  sims.sort((a,b)=>b[1]-a[1]);
+  similarTo=dn;
+  similarResults=sims.slice(0,8);
+  view="cases";
+  render();
+}
+
+function clearSimilar(){
+  similarTo=null;
+  similarResults=[];
+  render();
+}
+
 function decoKind(c){
   const d=c.decision||{};
   if(/rule\s*36/i.test(d.disposition||""))return "r36";
@@ -643,6 +685,7 @@ function cardHTML(c){
         <button class="star${starred?" on":""}" data-dn="${esc(dn)}" title="${starred?"Remove star":"Star this case"}" aria-label="Toggle star">${starred?"★":"☆"}</button>
         ${chips}
         <button class="addfolder" data-dn="${esc(dn)}">+ folder</button>
+        <button class="findsimilar" data-dn="${esc(dn)}">Find similar cases →</button>
       </div>
       <textarea class="note" data-dn="${esc(dn)}" placeholder="Add a note… (saved on this device only)">${esc(note)}</textarea>
     </div>`;
@@ -664,6 +707,7 @@ function cardHTML(c){
 }
 
 function render(){
+  if(similarTo){renderSimilar();return;}
   const list=filtered();
   const df=$("dateField").value, hasDate=$("dateFrom").value||$("dateTo").value;
   const fieldLabel={decision:"decision date",argument:"argument date",filed:"docketed date"}[df];
@@ -696,6 +740,31 @@ function bindAnnotEvents(){
   [...$("main").querySelectorAll(".note")].forEach(t=>t.onblur=()=>{
     setNote(t.dataset.dn, t.value);
   });
+  [...$("main").querySelectorAll(".findsimilar")].forEach(b=>b.onclick=()=>{
+    findSimilar(b.dataset.dn);
+  });
+}
+
+function renderSimilar(){
+  const src=DATA.cases.find(c=>c.docket_number===similarTo);
+  const scoreByDn=Object.fromEntries(similarResults);
+  const matches=similarResults
+    .map(([dn])=>DATA.cases.find(c=>c.docket_number===dn))
+    .filter(Boolean);
+  $("count").textContent=matches.length+" similar case"+(matches.length===1?"":"s");
+  const bar=`<div class="simbar">Similar to <b>${esc(src?src.case_name:similarTo)}</b><button onclick="clearSimilar()">× Clear</button></div>`;
+  if(!matches.length){
+    $("main").innerHTML=bar+'<div class="empty">No similarity data available yet for this case.</div>';
+    return;
+  }
+  const cards=matches.map(c=>{
+    const score=scoreByDn[c.docket_number];
+    const html=cardHTML(c);
+    // Drop a similarity-score badge in right after the opening <article> tag
+    return html.replace('<article class="card">', `<article class="card"><div class="simscore">Similarity: ${score.toFixed(2)}</div>`);
+  }).join("");
+  $("main").innerHTML=bar+cards;
+  bindAnnotEvents();
 }
 
 function renderCalendar(list){
@@ -767,6 +836,7 @@ function bindJudgeTableEvents(){
 
 function setView(v){
   view=v;
+  similarTo=null; similarResults=[];  // switching views exits the similarity overlay
   $("vCases").classList.toggle("on",v==="cases");
   $("vCal").classList.toggle("on",v==="calendar");
   $("vAnalytics").classList.toggle("on",v==="analytics");

@@ -73,6 +73,14 @@ ANTHROPIC_ENABLED = bool(ANTHROPIC_KEY) or bool(
 )
 _anthropic_client = anthropic.Anthropic() if ANTHROPIC_ENABLED else None
 
+VOYAGE_API_KEY = os.environ.get("VOYAGE_API_KEY", "").strip()
+VOYAGE_ENABLED = bool(VOYAGE_API_KEY)
+# Per-run cap on NEW embeddings generated (not a quality cap — Voyage is cheap
+# and batched, this just bounds one run's work the same way other sources are
+# bounded). Already-embedded cases are never re-embedded.
+MAX_EMBEDDINGS_PER_RUN = int(os.environ.get("MAX_EMBEDDINGS_PER_RUN", "4000"))
+VOYAGE_BATCH_SIZE = 100  # well under Voyage's 1,000-input / 320K-token request limits
+
 WINDOW_MONTHS = int(os.environ.get("WINDOW_MONTHS", "18"))   # rolling window of filings
 WINDOW_START = os.environ.get("WINDOW_START", "2020-01-01")  # fixed floor — overrides WINDOW_MONTHS if set
 MAX_DOCKETS = int(os.environ.get("MAX_DOCKETS", "4000"))
@@ -106,6 +114,7 @@ OUT_PATH = DATA_DIR / "cases.json"
 CACHE_PATH = DATA_DIR / "issue_cache.json"
 STATE_PATH = DATA_DIR / "state.json"      # per-source high-water marks
 STORE_PATH = DATA_DIR / "store.json"      # accumulated raw records across runs
+EMBEDDINGS_PATH = DATA_DIR / "embeddings.json"  # per-case similarity vectors (Voyage AI)
 
 SESSION = requests.Session()
 SESSION.headers.update({"User-Agent": "fedcir-tracker (personal research dashboard)"})
@@ -862,6 +871,54 @@ def summarize_claude(case_name: str, text: str, is_precedential: bool = False) -
         return None
 
 
+def embed_texts(texts: list[str]) -> list[list[float]] | None:
+    """Batched Voyage AI embedding call (<=100 texts, well under Voyage's
+    1,000-input/320K-token request limits). Returns one 256-dim vector per
+    input text, in order, or None for the whole batch on any failure — the
+    caller just retries those docket numbers on a later run, same as any
+    other source."""
+    if not VOYAGE_ENABLED or not texts:
+        return None
+    try:
+        r = requests.post(
+            "https://api.voyageai.com/v1/embeddings",
+            headers={"Authorization": f"Bearer {VOYAGE_API_KEY}", "content-type": "application/json"},
+            json={"input": texts, "model": "voyage-4", "input_type": "document", "output_dimension": 256},
+            timeout=60,
+        )
+        r.raise_for_status()
+        data = r.json()
+        return [d["embedding"] for d in data["data"]]
+    except Exception as e:  # noqa: BLE001
+        log(f"  Voyage embedding batch failed: {e}")
+        return None
+
+
+def embed_text_for_case(c: dict) -> tuple[str, str]:
+    """Best available text to embed for similarity search, and which basis
+    it came from ("summary" or "fallback"). The summary is the richest
+    signal; the fallback (case name/type/disposition/issues) just ensures
+    every case gets *some* embedding before its real summary arrives — basis
+    is tracked so a fallback embedding can be upgraded once a summary lands,
+    rather than being stuck with the weak version forever."""
+    s = c.get("summary")
+    if isinstance(s, str) and s.strip():
+        return s, "summary"
+    if isinstance(s, dict):
+        parts = [seg.get("text", "") for seg in (s.get("segments") or [])]
+        if s.get("holding"):
+            parts.append(s["holding"])
+        joined = " ".join(p for p in parts if p).strip()
+        if joined:
+            return joined, "summary"
+    d = c.get("decision") or {}
+    fallback = " ".join(str(x) for x in (
+        c.get("case_name"), c.get("case_type"), d.get("disposition"),
+        ", ".join(c.get("patent_issues") or []),
+    ) if x)
+    return fallback.strip(), "fallback"
+
+
 JUDGE_NAME_CACHE: dict = {}
 
 
@@ -1544,10 +1601,43 @@ def build() -> dict:
             r"rule\s*36", str((c.get("decision") or {}).get("disposition") or ""), re.I)),
     }
 
+    # ---- similarity embeddings (Voyage AI) ----------------------------------
+    embeddings = {}
+    if EMBEDDINGS_PATH.exists():
+        try:
+            embeddings = json.loads(EMBEDDINGS_PATH.read_text())
+        except Exception:  # noqa: BLE001
+            embeddings = {}
+
+    if VOYAGE_ENABLED:
+        pending = [
+            c for c in cases if c.get("docket_number") and (
+                c["docket_number"] not in embeddings
+                or (embeddings[c["docket_number"]].get("basis") == "fallback"
+                    and embed_text_for_case(c)[1] == "summary")
+            )
+        ][:MAX_EMBEDDINGS_PER_RUN]
+        if pending:
+            log(f"Embedding {len(pending)} case(s) for similarity search …")
+            embedded_count = 0
+            for i in range(0, len(pending), VOYAGE_BATCH_SIZE):
+                batch = pending[i:i + VOYAGE_BATCH_SIZE]
+                texts_and_basis = [embed_text_for_case(c) for c in batch]
+                vectors = embed_texts([t for t, _ in texts_and_basis])
+                if vectors is None:
+                    break  # stop this run; already-saved embeddings persist, retried next run
+                for c, (_, basis), vec in zip(batch, texts_and_basis, vectors):
+                    embeddings[c["docket_number"]] = {
+                        "vec": [round(x, 5) for x in vec], "basis": basis,
+                    }
+                embedded_count += len(batch)
+            log(f"  embedded {embedded_count} case(s) this run, {len(embeddings)} total")
+
     DATA_DIR.mkdir(exist_ok=True)
     CACHE_PATH.write_text(json.dumps(cache, indent=1))
     STATE_PATH.write_text(json.dumps(state, indent=1))
     STORE_PATH.write_text(json.dumps(store, separators=(",", ":")))
+    EMBEDDINGS_PATH.write_text(json.dumps(embeddings, separators=(",", ":")))
 
     # ---- coverage: what this file actually contains, and how complete -----
     summarized = sum(1 for c in cases if c.get("summary"))
