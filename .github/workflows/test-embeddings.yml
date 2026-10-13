@@ -12,43 +12,41 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Embed 3 real case summaries and check similarity
+      - name: Call the real embed_texts()/embed_text_for_case() from update.py against real cases
         env:
           VOYAGE_API_KEY: ${{ secrets.VOYAGE_API_KEY }}
         run: |
-          pip install --quiet requests
-          python3 << 'PYEOF'
-          import requests, os, math, json
+          pip install --quiet -r scripts/requirements.txt
+          python3 -c "
+          import sys, json, math
+          sys.path.insert(0, 'scripts')
+          import update as u
 
-          texts = {
-            "a_101 (Dental Monitoring, §101)": "The Federal Circuit affirmed the district court's summary judgment that claims 1 and 14 of the '248 patent and claims 1, 7, and 12 of the '409 patent are invalid under 35 U.S.C. § 101 because they are directed to patent-ineligible abstract ideas and lack an inventive concept to transform them into eligible subject matter under the two-step Alice framework. The court concluded that both patents are directed to abstract ideas—the '248 patent to collecting and analyzing image information using deep learning, and the '409 patent to image acquisition, analysis, comparison, and transmittal—and that the claims employ only generic hardware to accomplish these abstract concepts without sufficient technical innovation.",
-            "b_101 (Etison/ClickFunnels, §101)": "The Federal Circuit affirmed the district court's judgment dismissing ClickFunnels' patent infringement suit on the grounds that all claims of the '357 and '047 patents were invalid under 35 U.S.C. Section 101, though the court found error in the district court's treatment of a single claim as representative of all challenged claims without adequate consideration of whether ClickFunnels had presented non-frivolous arguments distinguishing other claims. The court concluded that although the district court erred procedurally by not sufficiently engaging with ClickFunnels' representativeness arguments under the framework established in Mobile Acuity and Berkheimer, this error was harmless because the claims all satisfied the Alice Corp. v. CLS Bank test for ineligibility.",
-            "c_veterans (Conyers, unrelated)": "The Federal Circuit affirmed the Veterans Court's decision denying Conyers's Veteran Readiness and Employment program benefits, holding that the Veterans Court correctly applied the \"relevance and reasonableness\" standard for constructive possession established in Euzebio II when determining which documents should be added to the administrative record. The court rejected Conyers's arguments that the Veterans Court misapplied the standard or exceeded its jurisdiction, as such fact-finding and application-of-law-to-facts arguments fall outside the Federal Circuit's limited jurisdiction under 38 U.S.C. § 7292(d)(2).",
-          }
+          print('VOYAGE_ENABLED:', u.VOYAGE_ENABLED)
 
-          keys = list(texts.keys())
-          r = requests.post(
-              "https://api.voyageai.com/v1/embeddings",
-              headers={"Authorization": f"Bearer {os.environ['VOYAGE_API_KEY']}", "content-type": "application/json"},
-              json={"input": [texts[k] for k in keys], "model": "voyage-4", "input_type": "document", "output_dimension": 256},
-              timeout=60,
-          )
-          print("STATUS:", r.status_code)
-          data = r.json()
-          print("TOP-LEVEL KEYS:", list(data.keys()))
-          print("USAGE:", data.get("usage"))
-          embs = [d["embedding"] for d in data["data"]]
-          print("NUM EMBEDDINGS:", len(embs), "DIM:", len(embs[0]))
+          d = json.load(open('data/cases.json'))
+          cases = d['cases']
+          # Same three real cases used in the earlier raw-API sanity check
+          names = ['Dental Monitoring', 'Etison', 'Conyers']
+          picks = []
+          for n in names:
+              c = next((c for c in cases if n in c['case_name']), None)
+              if c: picks.append(c)
+          print('PICKED:', [c['case_name'] for c in picks])
 
-          def cosine(a, b):
-              dot = sum(x*y for x, y in zip(a, b))
-              na = math.sqrt(sum(x*x for x in a))
-              nb = math.sqrt(sum(x*x for x in b))
-              return dot / (na * nb)
+          texts_and_basis = [u.embed_text_for_case(c) for c in picks]
+          for (t, basis), c in zip(texts_and_basis, picks):
+              print(c['case_name'], '-> basis:', basis, '| text[:80]:', t[:80])
 
-          print()
-          for i in range(len(keys)):
-              for j in range(i+1, len(keys)):
-                  sim = cosine(embs[i], embs[j])
-                  print(f"similarity({keys[i]}, {keys[j]}) = {sim:.4f}")
-          PYEOF
+          vectors = u.embed_texts([t for t, _ in texts_and_basis])
+          print('VECTORS IS NONE:', vectors is None)
+          if vectors:
+              print('NUM VECTORS:', len(vectors), 'DIM:', len(vectors[0]))
+              def cosine(a, b):
+                  dot = sum(x*y for x, y in zip(a, b))
+                  na = math.sqrt(sum(x*x for x in a)); nb = math.sqrt(sum(x*x for x in b))
+                  return dot / (na * nb)
+              for i in range(len(picks)):
+                  for j in range(i+1, len(picks)):
+                      print(f'similarity({picks[i][\"case_name\"]}, {picks[j][\"case_name\"]}) = {cosine(vectors[i], vectors[j]):.4f}')
+          "
