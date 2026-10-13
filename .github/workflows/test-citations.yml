@@ -1,0 +1,47 @@
+name: Test citation API shape (read-only, no commit)
+
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Query opinions-cited for a known case
+        env:
+          COURTLISTENER_TOKEN: ${{ secrets.COURTLISTENER_TOKEN }}
+        run: |
+          python3 -c "
+          import requests, json, os
+
+          token = os.environ['COURTLISTENER_TOKEN']
+          headers = {'Authorization': f'Token {token}'}
+          base = 'https://www.courtlistener.com/api/rest/v4'
+
+          # Amgen Inc. v. Amneal Pharmaceuticals LLC, opinion id 4469830 (2020, precedential)
+          r = requests.get(f'{base}/opinions-cited/', params={'cited_opinion': 4469830}, headers=headers, timeout=60)
+          print('STATUS:', r.status_code)
+          data = r.json()
+          print('COUNT FIELD PRESENT:', 'count' in data)
+          print('TOP-LEVEL KEYS:', list(data.keys()))
+          results = data.get('results', [])
+          print('RESULTS IN THIS PAGE:', len(results))
+          print('NEXT:', data.get('next'))
+          if results:
+              print('SAMPLE RECORD:', json.dumps(results[0], indent=2))
+
+          # Try resolving a citing_opinion URL to an opinion id, then batch-resolve to cluster/case info
+          if results:
+              citing_url = results[0]['citing_opinion']
+              citing_id = int(citing_url.rstrip('/').split('/')[-1])
+              print()
+              print('Resolving citing_opinion id:', citing_id)
+              r2 = requests.get(f'{base}/opinions/', params={'id': citing_id, 'fields': 'id,cluster_id,absolute_url'}, headers=headers, timeout=60)
+              print('OPINIONS LOOKUP STATUS:', r2.status_code)
+              print(json.dumps(r2.json(), indent=2)[:1500])
+          "
