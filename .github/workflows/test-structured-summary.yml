@@ -1,0 +1,62 @@
+name: Test structured summary (one case, no commit)
+
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r scripts/requirements.txt
+
+      - name: Fetch GitHub OIDC token for Anthropic (refreshed in the background)
+        run: |
+          fetch_token() {
+            curl -sS -H "Authorization: Bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" \
+              "$ACTIONS_ID_TOKEN_REQUEST_URL&audience=https://api.anthropic.com" \
+              | jq -r .value > /tmp/gha-jwt
+          }
+          fetch_token
+          ( while true; do sleep 180; fetch_token; done ) &
+          echo $! > /tmp/gha-jwt-refresh.pid
+
+      - name: Run one-case test (read-only, no commit)
+        env:
+          ANTHROPIC_FEDERATION_RULE_ID: ${{ vars.ANTHROPIC_FEDERATION_RULE_ID }}
+          ANTHROPIC_ORGANIZATION_ID: ${{ vars.ANTHROPIC_ORGANIZATION_ID }}
+          ANTHROPIC_SERVICE_ACCOUNT_ID: ${{ vars.ANTHROPIC_SERVICE_ACCOUNT_ID }}
+          ANTHROPIC_WORKSPACE_ID: ${{ vars.ANTHROPIC_WORKSPACE_ID }}
+          ANTHROPIC_IDENTITY_TOKEN_FILE: /tmp/gha-jwt
+        run: |
+          python3 -c "
+          import sys, json
+          sys.path.insert(0, 'scripts')
+          import update as u
+
+          case_name = 'Otsuka America Pharmaceutical, Inc. v. Hetero Labs Limited'
+          pdf_url = 'https://cafc.uscourts.gov/opinions-orders/25-2016.OPINION.7-1-2026_2717310.pdf'
+
+          print('ANTHROPIC_ENABLED:', u.ANTHROPIC_ENABLED)
+          text = u.fetch_opinion_text(0, pdf_url)
+          print('opinion text length:', len(text))
+
+          result = u.summarize_claude(case_name, text, is_precedential=True)
+          print('=== RESULT ===')
+          print(json.dumps(result, indent=2))
+          "
+
+      - name: Stop OIDC token refresh loop
+        if: always()
+        run: kill "$(cat /tmp/gha-jwt-refresh.pid)" 2>/dev/null || true
