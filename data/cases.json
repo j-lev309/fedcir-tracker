@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-14T18:03:56+00:00",
+ "generated_at": "2026-10-14T19:30:56+00:00",
  "window_since": "2020-01-01",
  "coverage": {
   "complete": true,
@@ -24,7 +24,7 @@
    "opinions": {
     "complete": true,
     "reason": "ok",
-    "count": 4,
+    "count": 0,
     "resume_url": null
    },
    "audio": {
@@ -22734,7 +22734,7 @@
    },
    "panel": [],
    "patent_issues": [
-    "Other / Procedural"
+    "Damages & Remedies"
    ],
    "summary": "The Federal Circuit affirmed the district court's judgment that Sandoz infringed Duke University's patent claims covering a chemical compound characterized by a triple bond structure (\u2014C\u2261C\u2014), rejecting Sandoz's arguments regarding claim construction and willfulness under 35 U.S.C. \u00a7 271. The court's reasoning emphasized the proper interpretation of the disputed chemical notation in the patent specification and affirmed the damages calculation based on the parties' expert testimony regarding the infringing product's value.",
    "url_cl": "https://www.courtlistener.com/docket/69829128/duke-university-v-sandoz-inc/",
