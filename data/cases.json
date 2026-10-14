@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-14T00:24:21+00:00",
+ "generated_at": "2026-10-14T18:03:56+00:00",
  "window_since": "2020-01-01",
  "coverage": {
   "complete": true,
@@ -12,19 +12,19 @@
    "dockets": {
     "complete": true,
     "reason": "ok",
-    "count": 0,
+    "count": 1,
     "resume_url": null
    },
    "clusters": {
     "complete": true,
     "reason": "ok",
-    "count": 4,
+    "count": 8,
     "resume_url": null
    },
    "opinions": {
     "complete": true,
     "reason": "ok",
-    "count": 0,
+    "count": 4,
     "resume_url": null
    },
    "audio": {
@@ -47,25 +47,117 @@
   "summaries": {
    "enabled": true,
    "have": 600,
-   "expected": 7914,
+   "expected": 7919,
    "complete": false
   },
   "opinion_text_fetches_this_run": 600,
   "opinion_text_fetch_cap": 600,
-  "latest_decision_date": "2026-10-13",
+  "latest_decision_date": "2026-10-14",
   "next_argument_date": null
  },
  "stats": {
-  "total": 8825,
+  "total": 8829,
   "pending": 862,
   "scheduled": 0,
   "awaiting": 47,
-  "decided": 7916,
+  "decided": 7920,
   "precedential": 1444,
-  "rule36": 2
+  "rule36": 1
  },
  "upcoming_argument_docket_numbers": [],
  "cases": [
+  {
+   "docket_number": "CL-11033619",
+   "case_name": "In Re BURANDT",
+   "case_type": "Patent (PTAB)",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-10-14",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/11033619/in-re-burandt/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1336.RULE_36_JUDGMENT.10-14-2026_2770770.pdf"
+   },
+   "panel": [],
+   "patent_issues": [
+    "Other / Procedural"
+   ],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/11033619/in-re-burandt/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "CL-11033618",
+   "case_name": "In Re SPECULATIVE PRODUCT DESIGN, LLC",
+   "case_type": "Patent (PTAB)",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-10-14",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/11033618/in-re-speculative-product-design-llc/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-163.ORDER.10-14-2026_2770725.pdf"
+   },
+   "panel": [],
+   "patent_issues": [
+    "Other / Procedural"
+   ],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/11033618/in-re-speculative-product-design-llc/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "CL-11033617",
+   "case_name": "Piranha Media Distribution LLC v. Hulu, LLC",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-10-14",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/11033617/piranha-media-distribution-llc-v-hulu-llc/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1038.OPINION.10-14-2026_2770728.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/11033617/piranha-media-distribution-llc-v-hulu-llc/",
+   "url_audio": "https://www.courtlistener.com/audio/104671/piranha-media-distribution-llc-v-hulu-llc/"
+  },
+  {
+   "docket_number": "CL-11033616",
+   "case_name": "Syngenta Crop Protection Ag v. Upl Ltd.",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-10-14",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/11033616/syngenta-crop-protection-ag-v-upl-ltd/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1018.OPINION.10-14-2026_2770744.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/11033616/syngenta-crop-protection-ag-v-upl-ltd/",
+   "url_audio": "https://www.courtlistener.com/audio/106192/syngenta-crop-protection-ag-v-upl-ltd/"
+  },
   {
    "docket_number": "CL-11032139",
    "case_name": "Brightex Bio-Photonics, LLC v. L'oreal USA, Inc.",
@@ -2112,7 +2204,7 @@
    "decision": {
     "date": "2026-09-11",
     "precedential_status": "Unpublished",
-    "disposition": "Rule 36 Judgment",
+    "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10971912/caddo-systems-inc-v-jetbrains-americas-inc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1764.RULE_36_JUDGMENT.9-11-2026_2754034.pdf"
    },
@@ -2290,7 +2382,7 @@
    "decision": {
     "date": "2026-09-11",
     "precedential_status": "Published",
-    "disposition": "Opinion",
+    "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10971910/moskowitz-family-llc-v-globus-medical-inc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1696.OPINION.9-11-2026_2754043.pdf"
    },
