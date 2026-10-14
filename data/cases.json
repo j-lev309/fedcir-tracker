@@ -1,21 +1,19 @@
 {
- "generated_at": "2026-10-13T23:31:32+00:00",
+ "generated_at": "2026-10-14T00:24:21+00:00",
  "window_since": "2020-01-01",
  "coverage": {
-  "complete": false,
-  "run_complete": false,
-  "backfilling": [
-   "dockets"
-  ],
+  "complete": true,
+  "run_complete": true,
+  "backfilling": [],
   "window_since": "2020-01-01",
   "window_months": 18,
   "complete_since": "2020-01-01",
   "sources": {
    "dockets": {
-    "resume_url": "https://www.courtlistener.com/api/rest/v4/dockets/",
-    "complete": false,
-    "reason": "network timeouts",
-    "count": 0
+    "complete": true,
+    "reason": "ok",
+    "count": 0,
+    "resume_url": null
    },
    "clusters": {
     "complete": true,
@@ -15252,7 +15250,7 @@
    },
    "panel": [],
    "patent_issues": [
-    "Other / Procedural"
+    "PTAB Procedure & Standing"
    ],
    "summary": "The Federal Circuit dismissed BadgeCert's appeal from the Patent Trial and Appeal Board under Federal Rule of Appellate Procedure 42(b) based on the parties' agreement, with each party bearing its own costs. The dismissal was issued as a nonprecedential order, indicating the parties settled or otherwise reached a stipulated resolution before the court decided the underlying merits of the patent dispute.",
    "url_cl": "https://www.courtlistener.com/opinion/10852635/in-re-badgecert-inc/",
@@ -17406,7 +17404,7 @@
     }
    ],
    "patent_issues": [
-    "Other / Procedural"
+    "PTAB Procedure & Standing"
    ],
    "summary": "The Federal Circuit denied Sansone's petition for a writ of mandamus challenging the PTO's handling of two patent applications, holding that mandamus is an extraordinary remedy available only when a petitioner demonstrates a clear and indisputable right to relief with no adequate alternative remedy. As to application 16/255,511, the court found no jurisdiction to review the Director's petition decisions under In re Makari and noted Sansone had an alternative remedy through pending district court litigation; as to application 17/490,525, Sansone failed to demonstrate inadequacy of the PTO's procedures for establishing filing dates under MPEP \u00a7 503.IV or otherwise show entitlement to relief.",
    "url_cl": "https://www.courtlistener.com/opinion/10843922/in-re-sansone/",
