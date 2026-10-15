@@ -1653,7 +1653,16 @@
   "issues": [
    "PTAB Procedure & Standing"
   ],
-  "summary": null
+  "summary": {
+   "segments": [
+    {
+     "issue": "Mandamus to Postpone Trial",
+     "text": "The court denied Fintiv's petition for a writ of mandamus seeking to postpone trial and its motion to stay. The court applied the exceptional-case standard requiring clear abuse of discretion or usurpation of judicial power, finding Fintiv failed to demonstrate it had no adequate alternative remedy (such as appeal after final judgment) or a clear and indisputable right to relief, particularly since Fintiv had indicated willingness to proceed and the scheduling conflict was ameliorated by the other court's rescheduling.",
+     "location": null
+    }
+   ],
+   "holding": "A mandamus petition to postpone trial does not meet the exceptional-circumstances standard when the petitioner has indicated ability to proceed and has an adequate alternative remedy through post-judgment appeal, even where counsel faces a scheduling conflict with another proceeding."
+  }
  },
  "panel-cl-10669912": [
   {
@@ -1858,7 +1867,16 @@
  "panel-cl-10646195": [],
  "cl-10646195": {
   "issues": [],
-  "summary": null
+  "summary": {
+   "segments": [
+    {
+     "issue": "Appeal Dismissal",
+     "text": "The Federal Circuit dismissed the entire proceeding upon the parties' agreement pursuant to Federal Rule of Appellate Procedure 42(b), which permits dismissal of appeals by stipulation. Each party was ordered to bear its own costs.",
+     "location": null
+    }
+   ],
+   "holding": null
+  }
  },
  "panel-cl-10625847": [],
  "cl-10625847": {
@@ -13827,7 +13845,9 @@
  },
  "panel-cl-10754007": [],
  "cl-10754007": {
-  "issues": [],
+  "issues": [
+   "PTAB Procedure & Standing"
+  ],
   "summary": {
    "segments": [
     {
@@ -16603,7 +16623,9 @@
  },
  "panel-cl-10710509": [],
  "cl-10710509": {
-  "issues": [],
+  "issues": [
+   "PTAB Procedure & Standing"
+  ],
   "summary": {
    "segments": [
     {
@@ -24325,7 +24347,9 @@
  },
  "panel-cl-10655877": [],
  "cl-10655877": {
-  "issues": [],
+  "issues": [
+   "PTAB Procedure & Standing"
+  ],
   "summary": {
    "segments": [
     {
@@ -25462,7 +25486,16 @@
  ],
  "cl-10648630": {
   "issues": [],
-  "summary": null
+  "summary": {
+   "segments": [
+    {
+     "issue": "MSPB Jurisdiction over Whistleblower Appeal",
+     "text": "The Federal Circuit affirmed the Board's dismissal for lack of jurisdiction, holding that Yomi failed to non-frivolously allege protected whistleblowing activity under 5 U.S.C. \u00a7 2302(b)(8). Yomi's statements about selection discretion and merit-based hiring did not clearly implicate any identifiable violation of law, rule, or regulation, nor did they evidence gross mismanagement or abuse of authority under the objective standard requiring that a disinterested observer with knowledge of essential facts would reasonably conclude wrongdoing occurred.",
+     "location": null
+    }
+   ],
+   "holding": "The Merit Systems Protection Board properly dismissed Yomi's individual right of action appeal for lack of jurisdiction because his alleged disclosures did not constitute protected whistleblowing activity under the Whistleblower Protection Enhancement Act."
+  }
  },
  "panel-cl-10647882": [
   {
@@ -25479,13 +25512,44 @@
   }
  ],
  "cl-10647882": {
-  "issues": [],
-  "summary": null
+  "issues": [
+   "\u00a7\u00a7 102/103 Prior Art",
+   "\u00a7 112 / Claim Construction"
+  ],
+  "summary": {
+   "segments": [
+    {
+     "issue": "Claim Construction\u2014'Predetermined Number'",
+     "text": "The Board implicitly construed 'predetermined number' of skips as requiring at least one skip, excluding zero skips, and not being satisfied by merely detecting an interruption. The Federal Circuit affirmed, finding no error in this interpretation because the claim language, specification, and prosecution history all support requiring that skips be actually measured and counted, and SunSpec's interpretation would render the amendment made to overcome prior art superfluous.",
+     "location": null
+    },
+    {
+     "issue": "Claim Differentiation\u2014'770 Patent",
+     "text": "The Board distinguished 'predetermined number of skips of the heartbeat signals' in dependent claims 14\u201315 from 'anomaly in heartbeat signals' in independent claim 12 and 'anomaly includes skips' in dependent claim 13. The Federal Circuit affirmed, holding that SunSpec's interpretation equating the dependent claims to the independent claims would violate the principle of claim differentiation and render the additional limitation superfluous.",
+     "location": null
+    },
+    {
+     "issue": "Substantial Evidence\u2014Prior Art Combination",
+     "text": "The Board found that SunSpec relied only on Moine to disclose a 'predetermined number' of skips and failed to analyze the Moine-Kronberg combination. The Federal Circuit vacated this finding as unsupported by substantial evidence, because SunSpec's reply brief explicitly argued that Kronberg in combination with Moine discloses the limitation, directly contradicting the Board's characterization of SunSpec's reliance.",
+     "location": null
+    }
+   ],
+   "holding": "The Federal Circuit affirmed in part the Board's holdings that the challenged claims of the '321 patent and certain claims of the '770 patent are not unpatentable, vacated in part the Board's finding regarding SunSpec's argument about the Moine-Kronberg combination, and remanded for the Board to analyze whether Kronberg in combination with Moine teaches the 'predetermined number' limitation."
+  }
  },
  "panel-cl-10648012": [],
  "cl-10648012": {
   "issues": [],
-  "summary": null
+  "summary": {
+   "segments": [
+    {
+     "issue": "Appeal Dismissal",
+     "text": "The Federal Circuit dismissed the entire appeal pursuant to Fed. R. App. P. 42(b) based on the parties' agreement to dismiss the proceeding. The dismissal was entered as a nonprecedential order with each party bearing its own costs.",
+     "location": null
+    }
+   ],
+   "holding": null
+  }
  },
  "panel-cl-10647883": [
   {
@@ -25505,7 +25569,16 @@
   "issues": [
    "\u00a7 112 / Claim Construction"
   ],
-  "summary": null
+  "summary": {
+   "segments": [
+    {
+     "issue": "Written Description Adequacy",
+     "text": "The Federal Circuit affirmed the Board's rejection of claims 77\u201383 and 85\u201394 under 35 U.S.C. \u00a7 112(a) for failing to provide adequate written description. The court held that although claim 77 recites a specific amino acid sequence for CDR3, it imposes no comparable structural limitations on CDR1 and CDR2 regions, making the claimed VHH antigen-binding protein genus broad, while the specification discloses only one protein meeting all claim limitations and no common structural features across the genus, falling short of the written description requirement established in Ariad Pharms., Inc. v. Eli Lilly & Co.",
+     "location": null
+    }
+   ],
+   "holding": "Affirmed the Patent Trial and Appeal Board's rejection of claims 77\u201383 and 85\u201394 of U.S. Patent Application 16/282,082 for lack of adequate written description under 35 U.S.C. \u00a7 112(a), finding the specification fails to convey possession of the broad genus of VHH antigen-binding proteins claimed."
+  }
  },
  "panel-cl-10647853": [
   {
@@ -25523,7 +25596,26 @@
  ],
  "cl-10647853": {
   "issues": [],
-  "summary": null
+  "summary": {
+   "segments": [
+    {
+     "issue": "Tucker Act Jurisdiction",
+     "text": "The Court of Federal Claims lacked jurisdiction over McCrory's claim because 26 U.S.C. \u00a7 7623(a) and its implementing regulations at 26 C.F.R. \u00a7 301.7623-1\u20134 are discretionary, not money-mandating. A statute or regulation is money-mandating for jurisdictional purposes only if it can fairly be interpreted as mandating compensation for damages sustained as a result of breach of duties it imposes, and \u00a7 7623(a) grants the Secretary discretionary authority to pay awards with no statutory entitlement to monetary damages.",
+     "location": null
+    },
+    {
+     "issue": "Regulatory Effect on Statutory Discretion",
+     "text": "The 2014 promulgation of regulations at 26 C.F.R. \u00a7 301.7623-1\u20134 did not transform the discretionary nature of \u00a7 7623(a) into a money-mandating provision. The regulation's language providing for the WBO to \"pay all awards\" under \u00a7 7623(a)\u2014as opposed to \"determine and pay\" under the mandatory \u00a7 7623(b)\u2014reflects and reinforces the differing legal treatment between discretionary and mandatory award schemes and does not create an enforceable statutory entitlement.",
+     "location": null
+    },
+    {
+     "issue": "Statutory Preemption of Tucker Act",
+     "text": "Section 7623's specific statutory scheme, which provides for judicial review in Tax Court for certain claims meeting the \u00a7 7623(b) threshold, excludes relief under the general terms of the Tucker Act. The fact that \u00a7 7623(a) claimants may lack recourse to judicial review if they fail to satisfy the \u00a7 7623(b)(5) thresholds does not prevent this preemption, as Congress contemplated this result.",
+     "location": null
+    }
+   ],
+   "holding": "Affirmed the dismissal for lack of jurisdiction because \u00a7 7623(a) and its implementing regulations are discretionary rather than money-mandating, and thus the Court of Federal Claims has no jurisdiction to review whistleblower awards under the Tucker Act."
+  }
  },
  "panel-cl-10647038": [
   {
@@ -25541,12 +25633,40 @@
  ],
  "cl-10647038": {
   "issues": [],
-  "summary": null
+  "summary": {
+   "segments": [
+    {
+     "issue": "Timeliness of Submission",
+     "text": "The Court vacated Commerce's rejection of Tau-Ken's September 16 submission as untimely filed 1 hour 41 minutes past the 8:30 a.m. deadline. Commerce had not decided Tau-Ken's timely-filed one-day-extension request before the deadline, triggering an automatic extension policy under 19 U.S.C. \u00a7 1671b and Commerce's established procedures, which entitled Tau-Ken to rely on that automatic extension.",
+     "location": null
+    },
+    {
+     "issue": "Application of Adverse Inference",
+     "text": "The Court addressed Commerce's use of adverse inference in applying facts otherwise available under 19 U.S.C. \u00a7 1677e(b) based on the rejected submission. Because the underlying basis for rejection (untimeliness) was vacated, the propriety of the adverse inference determination and resulting 160% countervailable subsidy rate required reconsideration by Commerce on remand.",
+     "location": null
+    }
+   ],
+   "holding": "This decision clarifies that Commerce's deadline procedures must account for its own extension policies, including automatic extensions triggered by untimely extension requests made before the deadline. When Commerce fails to decide an extension request before a 5:00 p.m. deadline, the automatic extension to 8:30 a.m. the next day applies, and parties may rely on that extended deadline. The decision does not establish broad precedent but rather enforces procedural requirements against Commerce's own prior determinations and administrative law principles regarding fairness in deadline enforcement."
+  }
  },
  "panel-cl-10646196": [],
  "cl-10646196": {
   "issues": [],
-  "summary": null
+  "summary": {
+   "segments": [
+    {
+     "issue": "Collateral Estoppel and Burden of Proof",
+     "text": "The panel held that collateral estoppel does not apply when a prior PTAB proceeding uses a preponderance-of-the-evidence standard while a subsequent district court proceeding requires clear-and-convincing evidence, because the differing burden of proof materially alters the question of invalidity. The court relied on B & B Hardware and Grogan v. Garner to support the proposition that collateral estoppel is unavailable when the legal standard differs between proceedings, rejecting patent-specific departures from well-established common-law principles.",
+     "location": "Page 3-4"
+    },
+    {
+     "issue": "Petition for Rehearing En Banc",
+     "text": "The Federal Circuit denied both the petition for panel rehearing and the petition for rehearing en banc filed by Groupon. The court conducted a poll on the en banc petition, which failed to secure the necessary votes for rehearing.",
+     "location": "Page 2"
+    }
+   ],
+   "holding": "The decision confirms that traditional collateral estoppel doctrine, including the burden-of-proof exception, applies uniformly across patent and non-patent contexts without patent-specific modifications, even where PTAB and district court proceedings involve different standards of proof. This clarifies that the differing burdens between IPR (preponderance) and district court invalidity challenges (clear and convincing) prevent issue preclusion under settled collateral estoppel law, rejecting arguments that the AIA's efficiency goals warrant departing from common-law preclusion principles."
+  }
  },
  "panel-cl-10646194": [
   {
@@ -25564,7 +25684,21 @@
  ],
  "cl-10646194": {
   "issues": [],
-  "summary": null
+  "summary": {
+   "segments": [
+    {
+     "issue": "Scope of Section 3562 Nonduplication Bar",
+     "text": "The court held that 38 U.S.C. \u00a7 3562(2) permanently bars a disabled veteran from receiving additional compensation under \u00a7 1115(1)(F) once the veteran's child elects to receive DEA benefits, regardless of whether the child later exhausts those benefits. The statutory language \"additional amounts, of compensation\" in \u00a7 3562(2) encompasses all monthly payments under \u00a7 1115 that the veteran would otherwise receive, not merely future increases to an existing benefit level.",
+     "location": null
+    },
+    {
+     "issue": "Statutory Interpretation: Related Provisions",
+     "text": "The court's holding was supported by interpreting \u00a7 3562(1) and \u00a7 3562(2) as having a common scope and purpose, despite their textual differences, because both provisions implement the same nonduplication policy for children of disabled and deceased veterans respectively. The legislative history showed that Congress expanded the DEA program to children of disabled veterans in 1964 with the same nonduplication intent as applied to children of deceased veterans.",
+     "location": null
+    }
+   ],
+   "holding": "This decision clarifies that the nonduplication provision of 38 U.S.C. \u00a7 3562 operates as a permanent bar to \u00a7 1115 dependent compensation once a child elects DEA benefits, even after those DEA benefits are exhausted, establishing that the two statutory subsections operate in parallel despite textual variations. The holding confirms that identical statutory terms receive consistent meanings across related provisions and rejects the interpretation that \"additional amounts\" refers only to future rate increases rather than the underlying monthly payments themselves."
+  }
  },
  "panel-cl-10646198": [
   {
@@ -25581,8 +25715,35 @@
   }
  ],
  "cl-10646198": {
-  "issues": [],
-  "summary": null
+  "issues": [
+   "\u00a7\u00a7 102/103 Prior Art",
+   "\u00a7 112 / Claim Construction"
+  ],
+  "summary": {
+   "segments": [
+    {
+     "issue": "Claim Construction",
+     "text": "The Board's role-based constructions of \"client device\" and \"second server\" are affirmed. Both terms refer to the functional role a communication device plays in the network (client, peer, or agent) rather than to fixed hardware structures, as the specification teaches that structurally identical devices toggle between roles via software modules depending on network requirements. Bright Data's narrower hardware-based constructions requiring specific device types are rejected.",
+     "location": null
+    },
+    {
+     "issue": "Anticipation by Crowds",
+     "text": "The Board's finding that the Crowds reference anticipated the challenged claims is affirmed as supported by substantial evidence. Crowds proposes a system for web transactions allowing users to join a crowd that collectively issues requests, and this system is found to disclose all elements of the claimed patents.",
+     "location": null
+    },
+    {
+     "issue": "Obviousness over Crowds",
+     "text": "The Board's determination that the claims would have been obvious over the Crowds reference is affirmed as a matter of law. The ultimate question of obviousness is reviewed de novo, and the underlying factual findings regarding what Crowds discloses and the motivation to combine references are reviewed for substantial evidence, with the Board's conclusions supported by the record.",
+     "location": null
+    },
+    {
+     "issue": "Secondary Considerations",
+     "text": "The Board's rejection of Bright Data's evidence of secondary considerations of non-obviousness is affirmed. Bright Data failed to demonstrate the requisite nexus between its proffered evidence and the claims at issue, rendering such evidence lacking in probative value under the Graham factors.",
+     "location": null
+    }
+   ],
+   "holding": "The Patent Trial and Appeal Board's decisions finding the challenged claims of four Bright Data patents unpatentable under 35 U.S.C. \u00a7 102 and \u00a7 103 are affirmed in their entirety."
+  }
  },
  "panel-cl-10646197": [
   {
@@ -25604,22 +25765,73 @@
    "\u00a7 112 / Claim Construction",
    "Damages & Remedies"
   ],
-  "summary": null
+  "summary": {
+   "segments": [
+    {
+     "issue": "Claim Construction of Composition",
+     "text": "The district court erred in construing the term \"composition\" to limit claims to stable compositions only, relying on stability disclosures in the earlier provisional application and related patent that were deliberately deleted from the asserted patents' specification. Under DDR Holdings precedent, a skilled artisan would understand that deletion of textual references to stability from the provisional application to the final patent indicates an evolution in the applicant's intended meaning, and therefore \"composition\" should not be limited to stable formulations based on disclosures that do not appear in the asserted patents themselves.",
+     "location": "I. Claim Construction"
+    },
+    {
+     "issue": "Preliminary Injunction Standard",
+     "text": "The Federal Circuit reviews preliminary injunction decisions under Third Circuit law for abuse of discretion, but gives dominant effect to Federal Circuit patent-specific precedent; an abuse of discretion occurs when the district court made a clear error of judgment in weighing factors, exercised discretion based on an error of law, or relied on clearly erroneous factual findings.",
+     "location": null
+    },
+    {
+     "issue": "Invalidity Defense\u2014Anticipation and Obviousness",
+     "text": "Because the district court's claim construction was erroneous, its rejection of Sharda's anticipation and obviousness defenses based on the McKenzie reference was necessarily erroneous, as the reference may disclose unstable compositions that would fall within the properly construed term \"composition\" and thus raise a substantial invalidity question.",
+     "location": null
+    }
+   ],
+   "holding": "The decision confirms that Federal Circuit precedent, particularly DDR Holdings, requires courts to treat deliberate deletions from a provisional application to a final patent specification as significant evidence of narrowed or redefined claim scope, and such deletions override reliance on disclosures in earlier filings when construing claim terms. This precedent rejects importing limitations from abandoned provisional application language into granted claims."
+  }
  },
  "panel-cl-10645559": [],
  "cl-10645559": {
   "issues": [],
-  "summary": null
+  "summary": {
+   "segments": [
+    {
+     "issue": "Appeal Dismissal",
+     "text": "The Federal Circuit dismissed the appeal in its entirety pursuant to Fed. R. App. P. 42(b) based on the parties' agreement to settle or withdraw the case. This dismissal terminated both consolidated IPR proceedings (IPR2023-01275 and IPR2023-01274) from the Patent Trial and Appeal Board without adjudication of the merits.",
+     "location": null
+    },
+    {
+     "issue": "Cost Allocation",
+     "text": "Each party was ordered to bear its own costs under the settlement agreement, rather than awarding costs to the prevailing party as would otherwise occur in appellate proceedings.",
+     "location": null
+    }
+   ],
+   "holding": "The appeal was dismissed by stipulation of the parties, and costs were allocated equally to each side."
+  }
  },
  "panel-cl-10645347": [],
  "cl-10645347": {
   "issues": [],
-  "summary": null
+  "summary": {
+   "segments": [
+    {
+     "issue": "Appeal Dismissal",
+     "text": "Appeal No. 2025-1846 (Salesforce's cross-appeal) was voluntarily dismissed pursuant to Federal Rule of Appellate Procedure 42(b) by joint stipulation of the parties. Each side bears its own costs as to the dismissed appeal.",
+     "location": null
+    }
+   ],
+   "holding": "The court dismissed Salesforce's cross-appeal (2025-1846) by stipulation, leaving Appeal No. 2025-1810 (WSOU's appeal of the district court judgment) to proceed on the merits."
+  }
  },
  "panel-cl-10645558": [],
  "cl-10645558": {
   "issues": [],
-  "summary": null
+  "summary": {
+   "segments": [
+    {
+     "issue": "Cross-Appeal Voluntary Dismissal",
+     "text": "The court granted the parties' joint stipulation to voluntarily dismiss Salesforce's cross-appeal (Appeal No. 2025-1235) pursuant to Federal Rule of Appellate Procedure 42(b). Each party bears its own costs as to the dismissed cross-appeal, and the motion to sever and stay was denied as moot.",
+     "location": "Page 2-3"
+    }
+   ],
+   "holding": "Cross-appeal voluntarily dismissed with each party bearing its own costs; merits panel to proceed on WSOU's primary appeal."
+  }
  },
  "panel-cl-10645300": [
   {
@@ -25637,17 +25849,59 @@
  ],
  "cl-10645300": {
   "issues": [],
-  "summary": null
+  "summary": {
+   "segments": [
+    {
+     "issue": "Tucker Act Jurisdiction",
+     "text": "The Federal Circuit affirmed the Court of Federal Claims' determination that it possessed subject matter jurisdiction over plaintiffs' Fifth Amendment takings claim under 28 U.S.C. \u00a7 1491(a)(1), rejecting the Government's argument that PROMESA implicitly displaced Tucker Act jurisdiction. The court found no clear congressional intent in PROMESA to displace the Claims Court's traditional jurisdiction over constitutional takings claims, and the Tucker Act's waiver of sovereign immunity extends to Fifth Amendment takings claims.",
+     "location": null
+    },
+    {
+     "issue": "Government Action Requirement",
+     "text": "The Federal Circuit affirmed the dismissal for failure to state a claim, holding that plaintiffs could not establish a taking effected by the United States because Congress's enactment of PROMESA alone did not constitute sufficient federal government action to support a takings claim under the framework established in A & D Auto Sales, Inc. v. United States, 748 F.3d 1142 (Fed. Cir. 2014). The court concluded that plaintiffs could not establish either an agency relationship or coercion between the Government and the independent actors (the Oversight Board and Title III court) whose actions directly caused the diminution in bond value.",
+     "location": null
+    },
+    {
+     "issue": "Leave to Amend",
+     "text": "The Federal Circuit affirmed the Claims Court's denial of plaintiffs' request to amend their complaint, finding no abuse of discretion where the amended allegations would still fail to state a claim for a taking under established law regarding the necessity of federal government action.",
+     "location": null
+    }
+   ],
+   "holding": "This decision clarifies that Fifth Amendment takings claims based on federal legislation are subject to Tucker Act jurisdiction in the Court of Federal Claims, but confirms that plaintiffs must still allege direct federal government action\u2014not merely legislative authorization of third-party conduct\u2014to state a viable takings claim. The decision does not significantly advance takings jurisprudence beyond applying existing A & D Auto Sales precedent to the specific factual circumstances of PROMESA's debt restructuring scheme."
+  }
  },
  "panel-cl-10645560": [],
  "cl-10645560": {
   "issues": [],
-  "summary": null
+  "summary": {
+   "segments": [
+    {
+     "issue": "Appeal Dismissal",
+     "text": "The Federal Circuit dismissed the appeal by stipulated agreement of the parties pursuant to Federal Rule of Appellate Procedure 42(b), rendering the underlying PTAB decisions in IPR2023-01275 and IPR2023-01274 final.",
+     "location": null
+    },
+    {
+     "issue": "Costs",
+     "text": "Each party bears its own costs in the appeal, with no fee-shifting imposed on either side.",
+     "location": null
+    }
+   ],
+   "holding": null
+  }
  },
  "panel-cl-10644322": [],
  "cl-10644322": {
   "issues": [],
-  "summary": null
+  "summary": {
+   "segments": [
+    {
+     "issue": "Statutory Citation Correction",
+     "text": "The court issued an errata correcting a citation on page 2, line 31, from 35 U.S.C. \u00a7 503 to 38 U.S.C. \u00a7 503 in the underlying opinion.",
+     "location": "Errata"
+    }
+   ],
+   "holding": null
+  }
  },
  "panel-cl-10643561": [
   {
@@ -25665,7 +25919,36 @@
  ],
  "cl-10643561": {
   "issues": [],
-  "summary": null
+  "summary": {
+   "segments": [
+    {
+     "issue": "Vaccine Act Causation Standard",
+     "text": "A petitioner seeking compensation for an off-Table vaccine injury under 42 U.S.C. \u00a7 300aa-13(a)(1) must prove causation by a preponderance of the evidence using the three-prong Althen test: (1) a medical theory causally connecting vaccination and injury, (2) a logical sequence of cause and effect showing vaccination was the reason for injury, and (3) a proximate temporal relationship between vaccination and injury. All three prongs must be proven by preponderance of the evidence.",
+     "location": null
+    },
+    {
+     "issue": "Molecular Mimicry Theory Rejected",
+     "text": "The special master and Court of Federal Claims properly found that petitioner failed to meet his burden of proof on the first Althen prong regarding molecular mimicry as a causation theory. While molecular mimicry has general scientific basis, the expert's opinion lacked the specific evidence needed to support its application to ulcerative colitis in this particular case, and temporal factors (81-day delay between vaccination and symptom onset) undermined the causal connection.",
+     "location": null
+    },
+    {
+     "issue": "Timing and Symptom Progression",
+     "text": "The court affirmed the special master's finding that the timing of symptom progression, as documented in medical records, weighed against petitioner's causation theory. The respondent's expert credibly testified that no gastrointestinal bleeding was recorded until February 13, 2016\u2014over four months after the October 2015 vaccination\u2014and that self-reported decreased stamina in November 2015 was speculative, supporting the conclusion that vaccines did not cause the ulcerative colitis.",
+     "location": null
+    },
+    {
+     "issue": "Standard of Review Application",
+     "text": "On appeal from the Court of Federal Claims in Vaccine Act cases, the Federal Circuit conducts de novo review of the special master's legal rulings while applying the arbitrary and capricious standard to factual findings. The court performs independent review without deference to the lower court, though it pays close attention to the Court of Federal Claims' careful analysis.",
+     "location": null
+    },
+    {
+     "issue": "Off-Table Injury Determination",
+     "text": "Petitioner's claimed vaccine-induced ulcerative colitis constitutes an off-Table injury under the Vaccine Act because it does not fall within any designated Table injury (42 U.S.C. \u00a7\u00a7 300aa-11(c), 300aa-14). In off-Table cases, the presumption of causation does not apply, and petitioner bears the full burden of proving causation by preponderance of the evidence rather than merely triggering a rebuttable presumption.",
+     "location": null
+    }
+   ],
+   "holding": "This decision affirms well-established Federal Circuit precedent on Vaccine Act off-Table injury claims, confirming that petitioners must satisfy all three Althen prongs by preponderance of the evidence and that general scientific theories like molecular mimicry, without specific evidentiary support, cannot meet the causation standard. The opinion does not materially change existing law but demonstrates the continued rigorous application of Althen's requirements to speculative immunological causation theories lacking adequate factual grounding."
+  }
  },
  "panel-cl-10643560": [
   {
@@ -25683,7 +25966,21 @@
  ],
  "cl-10643560": {
   "issues": [],
-  "summary": null
+  "summary": {
+   "segments": [
+    {
+     "issue": "Normal Value Calculation Currency",
+     "text": "The court affirmed Commerce's use of lira-denominated sales values rather than dollar values to calculate normal value for Haba\u015f's home-market sales under the Tariff Act of 1930, 19 U.S.C. \u00a7 1677b(a)(1)(B)(i). Commerce's decision was supported by substantial evidence because Haba\u015f could only reconcile its lira prices to its audited financial records and could not provide payment dates or exchange rates linking its dollar invoice prices to actual payments, thereby failing to demonstrate that dollar prices controlled the transaction.",
+     "location": null
+    },
+    {
+     "issue": "Precedent Consistency",
+     "text": "The court held that Commerce did not deviate from its prior precedent in similar Turkish steel cases by using lira values instead of dollars. Unlike prior respondents who successfully reconciled dollar prices through payment documentation showing the USD price controlled, Haba\u015f failed to demonstrate that its dollar invoice prices controlled the amounts actually paid, making the cases factually distinguishable under the reconciliation requirement.",
+     "location": null
+    }
+   ],
+   "holding": "Affirmed Commerce's final antidumping determination using lira-denominated sales values to calculate a 24.32 percent dumping margin, finding the methodology complied with statutory obligations and was supported by substantial evidence."
+  }
  },
  "panel-cl-10643505": [
   {
@@ -25701,7 +25998,21 @@
  ],
  "cl-10643505": {
   "issues": [],
-  "summary": null
+  "summary": {
+   "segments": [
+    {
+     "issue": "Appellate Jurisdiction Over Non-Final Remand",
+     "text": "The Federal Circuit dismissed the appeal because the Veterans Court issued a non-final remand order, which is generally not reviewable under 38 U.S.C. \u00a7 7292 absent narrow exceptions. The court held that finality is a jurisdictional requirement and that remand orders are categorically non-final for purposes of Federal Circuit review.",
+     "location": "Section II"
+    },
+    {
+     "issue": "Williams Exception Not Satisfied",
+     "text": "The court held that Jenkins failed to satisfy all three conditions of the Williams v. Principi exception to the finality requirement because: (1) the Veterans Court made no definitive legal ruling separate from the remand proceedings; (2) Jenkins was not adversely affected by the remand order, which favored him by requiring better reasons; and (3) there was no substantial risk his legal arguments about the presumption of soundness would be mooted on remand. 275 F.3d 1361 (Fed. Cir. 2002).",
+     "location": "Section III"
+    }
+   ],
+   "holding": "The Federal Circuit dismissed Jenkins's appeal from the Veterans Court's non-final remand order because neither the general finality requirement nor the narrow Williams exception permitted review."
+  }
  },
  "panel-cl-10642208": [
   {
@@ -25719,7 +26030,16 @@
  ],
  "cl-10642208": {
   "issues": [],
-  "summary": null
+  "summary": {
+   "segments": [
+    {
+     "issue": "NME presumption and country-wide rate legality",
+     "text": "The court held that Commerce lawfully applied the rebuttable presumption of government control to exporters in nonmarket economy countries and assigned a single country-wide antidumping duty rate to Jilin, which failed to rebut the presumption despite cooperating with the investigation. The Tariff Act recognizes a close correlation between nonmarket economy status and government control of prices, output, and resource allocation, and Sigma Corp. v. United States, 117 F.3d 1401 (Fed. Cir. 1997), established that Commerce has broad authority to employ such presumptions and place the burden on exporters to demonstrate independence from government control.",
+     "location": null
+    }
+   ],
+   "holding": "This decision confirms, consistent with Sigma and subsequent Federal Circuit precedent, that Commerce may lawfully apply a rebuttable presumption of government control and assign a single country-wide rate to exporters in nonmarket economy countries that fail to rebut the presumption, even when they cooperate fully with the investigation. The decision affirms that this practice is authorized by the Tariff Act and does not require Commerce to calculate individual rates for each exporter simply because it failed to demonstrate independence."
+  }
  },
  "panel-cl-10642244": [
   {
@@ -25736,8 +26056,39 @@
   }
  ],
  "cl-10642244": {
-  "issues": [],
-  "summary": null
+  "issues": [
+   "\u00a7\u00a7 102/103 Prior Art"
+  ],
+  "summary": {
+   "segments": [
+    {
+     "issue": "On-Sale Bar Evidence Exclusion",
+     "text": "The district court erred in granting judgment as a matter of law on the on-sale bar defense for the '125 and '540 patents because it improperly excluded evidence offered by CH Lighting to demonstrate that prior art tubes embodying the claimed inventions were on sale before the patents' 2015 effective filing dates. Although the invalidity expert's testimony alone might have been insufficient, excluding the evidence altogether deprived the jury of material factual evidence necessary to adjudicate the AIA on-sale bar defense and therefore violated CH Lighting's right to present its validity defense.",
+     "location": null
+    },
+    {
+     "issue": "Validity of '125 and '540 Patents",
+     "text": "The JMOL of non-invalidity on the on-sale bar for the '125 and '540 patents is reversed and vacated, and a new trial is required on the validity of these patents. The district court was required to permit CH Lighting to present admissible evidence of prior sales to allow the jury to determine whether the on-sale bar under 35 U.S.C. \u00a7 102(b)(1)(A) applied.",
+     "location": null
+    },
+    {
+     "issue": "Infringement and Validity of '140 Patent",
+     "text": "Substantial evidence supports the jury's verdicts that CH Lighting infringed the '140 patent and that the patent was not invalid. The district court's findings and the jury verdict regarding the '140 patent are affirmed on the infringement and invalidity issues, though damages are vacated pending reassessment of expert testimony.",
+     "location": null
+    },
+    {
+     "issue": "Expert Testimony Reliability",
+     "text": "The district court must reassess the reliability of Ms. Kindler's damages testimony consistent with the Federal Circuit's en banc decision in EcoFactor and under Federal Rule of Evidence 702. The prior admission of her testimony over Daubert objection requires reconsideration under the updated standard, necessitating a new trial as to damages for all three patents.",
+     "location": null
+    },
+    {
+     "issue": "Damages Remedy",
+     "text": "The damages award and the district court's grant of enhanced damages are vacated. A new trial on damages is required for all three asserted patents, conditioned upon proper Daubert review of the damages expert's testimony and reassessment of the on-sale bar validity defense for the tube patents.",
+     "location": null
+    }
+   ],
+   "holding": "The decision clarifies that in patent infringement cases, district courts may not grant JMOL on invalidity defenses by excluding evidence altogether, even when expert testimony standing alone might be insufficient; parties have a right to present material evidence supporting affirmative defenses that would allow a jury to evaluate them. The opinion also reinforces the application of EcoFactor's en banc standard to expert testimony reliability determinations, requiring renewed Daubert scrutiny when such objections are raised on appeal. The judgment is largely fact-bound but establishes that procedural exclusion of evidence supporting validity defenses violates due process principles in patent trials."
+  }
  },
  "panel-cl-10642207": [
   {
@@ -25755,7 +26106,36 @@
  ],
  "cl-10642207": {
   "issues": [],
-  "summary": null
+  "summary": {
+   "segments": [
+    {
+     "issue": "Claim Construction\u2014Adding or Deleting",
+     "text": "The court affirmed the district court's plain and ordinary meaning construction of the \"adding or deleting\" limitation and held that WhereverTV failed to present evidence that X1 users could subscribe to new channels not already on the IPG or remove apps entirely, requiring reversal of the JMOL because the evidence could support a different interpretation of whether user subscription management constitutes the claimed functionality.",
+     "location": null
+    },
+    {
+     "issue": "Claim Construction\u2014IPG Application",
+     "text": "The court vacated the JMOL on the \"IPG application installed on the device\" limitation, holding that the district court erred in finding uncontested evidence that the XRE receiver (on the set-top box device) does not constitute an IPG application, as the specification and Figures did not definitively resolve whether a thin-client receiver could perform the claimed IPG functions.",
+     "location": null
+    },
+    {
+     "issue": "Claim Construction\u2014Functional Distinctness",
+     "text": "The court affirmed the district court's construction that \"distinct\" in the server limitation means \"functionally distinct,\" rejecting Comcast's alternative interpretation based on ownership or control, and held this construction was supported by intrinsic evidence and the patent's goal of shifting control to users rather than MSOs.",
+     "location": null
+    },
+    {
+     "issue": "Indefiniteness\u2014Streaming Language",
+     "text": "The court affirmed the district court's rejection of Comcast's challenge under 35 U.S.C. \u00a7 112 to the term \"only or virtually entirely streaming video programming,\" finding that the language is not indefinite because persons skilled in the art could understand it, as evidenced by Comcast's own proposed construction of the related limitation.",
+     "location": null
+    },
+    {
+     "issue": "JMOL Reversal",
+     "text": "The court vacated the district court's judgment as a matter of law of noninfringement and remanded for further proceedings, holding that WhereverTV presented sufficient evidence on the \"adding or deleting\" and \"IPG application\" limitations to survive Comcast's Rule 50(a) motion and proceed to or return to the jury.",
+     "location": null
+    }
+   ],
+   "holding": "The Federal Circuit vacated the district court's judgment as a matter of law of noninfringement on U.S. Patent No. 8,656,431 claim 1, reversing the erroneous claim constructions and rejecting Comcast's indefiniteness challenge, and remanded the case for proceedings consistent with the proper constructions of the \"adding or deleting\" limitation and \"IPG application\" limitation, which require functional rather than ownership-based distinctness of the server."
+  }
  },
  "panel-cl-10641103": [
   {
@@ -25772,8 +26152,31 @@
   }
  ],
  "cl-10641103": {
-  "issues": [],
-  "summary": null
+  "issues": [
+   "\u00a7\u00a7 102/103 Prior Art",
+   "PTAB Procedure & Standing",
+   "\u00a7 112 / Claim Construction"
+  ],
+  "summary": {
+   "segments": [
+    {
+     "issue": "Claim Construction",
+     "text": "The Board was not required to resolve the parties' express dispute over whether the \"target\" and \"first\" protocols must be different or can be identical, because the Board determined that Duncan disclosed the \"translating\" claim limitation under either party's proposed construction. Under the principle that the Board need only construe claim terms that are in controversy and only to the extent necessary to resolve that controversy, the Board did not commit legal error by abstaining from the disputed construction.",
+     "location": null
+    },
+    {
+     "issue": "Obviousness of Translating Limitation",
+     "text": "The Board's finding that Duncan's protocol converters taught the claimed \"translating\" limitation is supported by substantial evidence. Duncan discloses protocol converters that convert data from one protocol to a target protocol, and DocuSign's expert testified that Duncan contemplates conversion to a different protocol in appropriate circumstances, rendering the translating limitation obvious by a preponderance of the evidence.",
+     "location": null
+    },
+    {
+     "issue": "Overall Obviousness Determination",
+     "text": "The Board's final determination that claims 1 of the '066 patent, claims 1\u20133 of the '957 patent, and claim 1 of the '214 patent were unpatentable as obvious in light of Duncan alone or in combination with other prior art is affirmed, as Dr. Clark conceded that all claim limitations other than the \"translating\" limitation were obvious.",
+     "location": null
+    }
+   ],
+   "holding": "The Federal Circuit affirmed the Patent Trial and Appeal Board's decisions in all three inter partes review proceedings, holding that the challenged patents were obvious in light of prior art, particularly Duncan's protocol converter technology."
+  }
  },
  "panel-cl-10641051": [
   {
@@ -25791,7 +26194,16 @@
  ],
  "cl-10641051": {
   "issues": [],
-  "summary": null
+  "summary": {
+   "segments": [
+    {
+     "issue": "Jurisdictional limitation on as-applied challenges",
+     "text": "The Federal Circuit dismissed Evans's appeal for lack of jurisdiction. Under 38 U.S.C. \u00a7 7292(d)(2), the Federal Circuit lacks jurisdiction over challenges to a law or regulation as applied to the facts of a particular case, and Evans's argument that the Veterans Court erred in applying the Rice v. Shinseki standard to his facts fell within this jurisdictional bar.",
+     "location": null
+    }
+   ],
+   "holding": "Appeal dismissed for lack of jurisdiction over as-applied legal standard claim."
+  }
  },
  "panel-cl-10641104": [
   {
@@ -25809,7 +26221,21 @@
  ],
  "cl-10641104": {
   "issues": [],
-  "summary": null
+  "summary": {
+   "segments": [
+    {
+     "issue": "Federal Circuit Jurisdiction",
+     "text": "The Federal Circuit lacks appellate jurisdiction over Acorda's petition to modify the arbitral award on manifest-disregard grounds. Under 28 U.S.C. \u00a7 1295(a)(1), the Federal Circuit's jurisdiction extends to appeals from district court decisions on patent matters, but review of arbitration awards for manifest disregard of law falls outside this statutory grant and instead belongs to the regional circuit court of appeals.",
+     "location": null
+    },
+    {
+     "issue": "Arbitration Award Confirmation",
+     "text": "The district court's confirmation of the arbitration tribunal's award\u2014including the tribunal's holding that Brulotte renders royalty provisions unenforceable upon patent expiration and the award of $16.5 million for protested post-expiration payments under the License Agreement\u2014was affirmed, as the tribunal's application of the New York Voluntary Pay Doctrine and requirement of written protest was not manifestly disregarded under applicable law.",
+     "location": null
+    }
+   ],
+   "holding": "This decision clarifies the jurisdictional boundaries between the Federal Circuit and regional circuits in reviewing arbitration awards: manifest-disregard challenges to arbitral awards, even when they involve patent law arguments, fall within the appellate jurisdiction of regional circuit courts of appeals under 9 U.S.C. chapters 1 and 2, not the Federal Circuit under 28 U.S.C. \u00a7 1295(a)(1). The opinion does not substantively alter patent or arbitration law but rather reaffirms the jurisdictional allocation framework for appellate review of arbitration matters."
+  }
  },
  "panel-cl-10641052": [
   {
@@ -25827,17 +26253,49 @@
  ],
  "cl-10641052": {
   "issues": [],
-  "summary": null
+  "summary": {
+   "segments": [
+    {
+     "issue": "WPA Remedial Principles",
+     "text": "The Board erred by failing to apply fundamental corrective remedy principles when determining reinstatement relief for a whistleblower. Under the Whistleblower Protection Act (5 U.S.C. \u00a7 1221(g)(1)(A)(i)), an employee must be restored \"as nearly as possible\" to the position they would have occupied but for the wrongful personnel action, and the Board failed to address whether the employee would have chosen disability retirement absent the removal.",
+     "location": "Page 5-8, Section III.A"
+    },
+    {
+     "issue": "Back Pay Entitlement",
+     "text": "The Board's denial of back pay was based on an incomplete analysis that did not address causation between the wrongful removal and the employee's disability retirement or his inability to work. Under principles applied to Back Pay Act cases, denying back pay for a period of disability without examining whether that disability resulted from the unlawful discharge is unreasonable and contrary to the make-whole purpose of remedies.",
+     "location": "Page 7-8"
+    }
+   ],
+   "holding": "The Merit Systems Protection Board's final order denying reinstatement and back pay is vacated and remanded because the Board failed to apply proper remedial principles under the Whistleblower Protection Act by not addressing whether the employee would have pursued disability retirement absent the wrongful removal, and failed to conduct proper causation analysis regarding the employee's eligibility for back pay."
+  }
  },
  "panel-cl-10640507": [],
  "cl-10640507": {
   "issues": [],
-  "summary": null
+  "summary": {
+   "segments": [
+    {
+     "issue": "Entry of Appearance Requirement",
+     "text": "The Court dismissed the petition for review because petitioner failed to file the required Entry of Appearance form by an attorney admitted to the bar of the Federal Circuit, in violation of the Federal Circuit's procedural rules. Dismissal was entered for failure to prosecute in accordance with the rules.",
+     "location": null
+    }
+   ],
+   "holding": "Petition for review of an MSPB decision dismissed due to petitioner's failure to comply with the Federal Circuit's procedural requirement of filing an Entry of Appearance by an admitted attorney."
+  }
  },
  "panel-cl-10640508": [],
  "cl-10640508": {
   "issues": [],
-  "summary": null
+  "summary": {
+   "segments": [
+    {
+     "issue": "Petition Dismissal for Procedural Non-Compliance",
+     "text": "The Federal Circuit dismissed the petition for review of the Merit Systems Protection Board decision for failure to file the required Statement Concerning Discrimination in accordance with the Federal Circuit's rules. The dismissal was entered as a sanction for failure to prosecute.",
+     "location": null
+    }
+   ],
+   "holding": null
+  }
  },
  "panel-cl-10640271": [
   {
@@ -25854,8 +26312,30 @@
   }
  ],
  "cl-10640271": {
-  "issues": [],
-  "summary": null
+  "issues": [
+   "PTAB Procedure & Standing",
+   "\u00a7 112 / Claim Construction"
+  ],
+  "summary": {
+   "segments": [
+    {
+     "issue": "Claim Construction",
+     "text": "The Board correctly construed the claim limitation \"determining whether the received response matches the expected response\" to require only a single determination of whether the received response matches the expected response, without requiring an explicit disclosure or possibility of an unexpected response. The claims do not recite an unexpected response, the specification never mentions an \"unexpected response,\" and Xerox's proposed substitute claims (which explicitly addressed expected versus unexpected responses) demonstrate that the original claims lack this limitation.",
+     "location": "Page 6-9"
+    },
+    {
+     "issue": "Obviousness Under Snap IPR",
+     "text": "All claims of the '599 patent are unpatentable as obvious under the prior art cited by Snap, given the Board's claim construction. The parties stipulated that if the claim construction were affirmed, the Board's decision holding all claims unpatentable under Snap's IPR could be affirmed.",
+     "location": null
+    },
+    {
+     "issue": "Substitute Claims",
+     "text": "The Board's determination that Xerox's substitute claims (claims 26-40) are unpatentable as obvious and patent-ineligible is not challenged on appeal and therefore remains undisturbed. Xerox limited its appeal to the Board's decision on the original claims only.",
+     "location": null
+    }
+   ],
+   "holding": "Affirmed. The Board's claim construction is correct, and therefore all claims of the '599 patent are properly held unpatentable as obvious under the prior art."
+  }
  },
  "panel-cl-10639430": [
   {
@@ -26054,7 +26534,10 @@
   }
  ],
  "cl-10636372": {
-  "issues": [],
+  "issues": [
+   "\u00a7 112 / Claim Construction",
+   "PTAB Procedure & Standing"
+  ],
   "summary": null
  },
  "panel-cl-10635285": [],
@@ -26267,7 +26750,10 @@
   }
  ],
  "cl-10632468": {
-  "issues": [],
+  "issues": [
+   "\u00a7\u00a7 102/103 Prior Art",
+   "PTAB Procedure & Standing"
+  ],
   "summary": null
  },
  "panel-cl-10627296": [],
@@ -26667,7 +27153,16 @@
  "panel-cl-10645348": [],
  "cl-10645348": {
   "issues": [],
-  "summary": null
+  "summary": {
+   "segments": [
+    {
+     "issue": "Cross-Appeal Dismissal",
+     "text": "Salesforce's cross-appeal (Appeal No. 2025-1235) was voluntarily dismissed pursuant to Federal Rule of Appellate Procedure 42(b) upon joint stipulation of the parties. Each side bears its own costs as to the dismissed cross-appeal.",
+     "location": null
+    }
+   ],
+   "holding": null
+  }
  },
  "panel-cl-10625207": [
   {
@@ -26702,7 +27197,9 @@
   }
  ],
  "cl-10623644": {
-  "issues": [],
+  "issues": [
+   "\u00a7 112 / Claim Construction"
+  ],
   "summary": null
  },
  "panel-cl-10623666": [],
@@ -26788,7 +27285,11 @@
   }
  ],
  "cl-10619984": {
-  "issues": [],
+  "issues": [
+   "\u00a7\u00a7 102/103 Prior Art",
+   "PTAB Procedure & Standing",
+   "\u00a7 112 / Claim Construction"
+  ],
   "summary": null
  },
  "panel-cl-10619985": [
@@ -26824,7 +27325,11 @@
   }
  ],
  "cl-10619983": {
-  "issues": [],
+  "issues": [
+   "\u00a7\u00a7 102/103 Prior Art",
+   "\u00a7 112 / Claim Construction",
+   "PTAB Procedure & Standing"
+  ],
   "summary": null
  },
  "panel-cl-10618460": [
@@ -26996,7 +27501,9 @@
   }
  ],
  "cl-10616871": {
-  "issues": [],
+  "issues": [
+   "Damages & Remedies"
+  ],
   "summary": null
  },
  "panel-cl-10616084": [
