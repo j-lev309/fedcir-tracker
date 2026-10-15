@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-15T22:25:03+00:00",
+ "generated_at": "2026-10-15T23:50:27+00:00",
  "window_since": "2020-01-01",
  "coverage": {
   "complete": true,
@@ -46,7 +46,7 @@
   },
   "summaries": {
    "enabled": true,
-   "have": 1338,
+   "have": 1410,
    "expected": 7923,
    "complete": false
   },
@@ -17206,7 +17206,7 @@
     }
    ],
    "patent_issues": [
-    "Other / Procedural"
+    "Damages & Remedies"
    ],
    "summary": "The Federal Circuit denied the petition for mandamus seeking to overturn the district court's disqualification of counsel under New Jersey Rules of Professional Conduct 1.7(a) and 1.8(f), holding that the petitioners failed to demonstrate clear abuse of discretion because the record supported findings that Lincoln's fee-payment arrangement and involvement in litigation decisions materially limited counsel's loyalty to the petitioners in violation of the ethical rules. The court applied Third Circuit law governing disqualification decisions as discretionary matters and found the district court reasonably balanced relevant factors, including petitioners' delayed disclosure of Lincoln's involvement and the limited scope of the case, in concluding disqualification was the appropriate remedy.",
    "url_cl": "https://www.courtlistener.com/opinion/10846154/in-re-arbit/",
@@ -48048,7 +48048,7 @@
     }
    ],
    "patent_issues": [
-    "Other / Procedural"
+    "\u00a7\u00a7 102/103 Prior Art"
    ],
    "summary": {
     "segments": [
@@ -61434,7 +61434,16 @@
     }
    ],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Appellate Jurisdiction over Factual Findings",
+      "text": "The Federal Circuit dismissed the appeal for lack of jurisdiction because Mr. Boynton's challenge fundamentally contested the factual findings and weight of evidence regarding his PTSD disability rating, matters outside the court's authority to review. Under Lennox v. Principi, 353 F.3d 941 (Fed. Cir. 2003), the Federal Circuit lacks jurisdiction to determine whether application of established law to facts satisfies a clearly erroneous standard.",
+      "location": null
+     }
+    ],
+    "holding": "Appeal dismissed for lack of jurisdiction because the challenge constitutes an impermissible attempt to reweigh evidence and contest factual findings rather than present a legal question for Federal Circuit review."
+   },
    "url_cl": "https://www.courtlistener.com/opinion/10605231/boynton-v-collins/",
    "url_audio": "https://www.courtlistener.com/audio/97407/boynton-v-collins/"
   },
@@ -61469,9 +61478,29 @@
     }
    ],
    "patent_issues": [
-    "Other / Procedural"
+    "\u00a7\u00a7 102/103 Prior Art",
+    "\u00a7 112 / Claim Construction"
    ],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Claim Construction of 'Agent'",
+      "text": "The Board construed the claim term 'agent' as 'a software program or routine' without limitation to OS-level use or exclusion of hardware. The Federal Circuit affirmed, finding no clear and unmistakable disclaimer in the intrinsic evidence requiring such limitations and determining the plain and ordinary meaning of 'agent' permits the Board's broader construction.",
+      "location": null
+     },
+     {
+      "issue": "Obviousness Over Prior Art",
+      "text": "The Board found claims 1\u20133, 6\u201314, and 16 unpatentable as obvious over a combination of Hellman, Chou, and a third reference under 35 U.S.C. \u00a7 103. The Federal Circuit vacated this determination, holding that the Board erred in its analysis of secondary considerations of nonobviousness, particularly regarding the nexus between license evidence and the claimed invention.",
+      "location": null
+     },
+     {
+      "issue": "Secondary Considerations\u2014Nexus to License Evidence",
+      "text": "The Board failed to properly apply Federal Circuit precedent on nexus when evaluating Ancora's objective indicia of nonobviousness based on license evidence. The court vacated and remanded on this issue, indicating that the Board must reconsider whether the licensing evidence has a sufficient nexus to the claimed invention as a whole, not merely to isolated elements or features.",
+      "location": null
+     }
+    ],
+    "holding": "This decision clarifies that the Board must properly apply nexus analysis when evaluating objective indicia of nonobviousness tied to licensing or commercial success evidence in obviousness proceedings. The opinion reinforces that secondary considerations require a nexus between the evidence of nonobviousness (such as licensing) and the claimed invention itself, rejecting an analysis limited to individual claim elements. The holding does not change the substantive test but remands for proper application of established Federal Circuit precedent regarding the evidentiary foundation for secondary considerations in IPR proceedings."
+   },
    "url_cl": "https://www.courtlistener.com/docket/67747206/ancora-technologies-inc-v-roku-inc/",
    "url_audio": null
   },
@@ -61506,7 +61535,26 @@
     }
    ],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Territorial Sea Standard",
+      "text": "The court vacated the Veterans Court's decision and remanded to the Board for clarification on whether it applied the correct legal standard under 38 U.S.C. \u00a7 1116A(d)\u2014measuring 12 nautical miles from baseline as defined by geographical coordinates\u2014rather than 12 nautical miles from shoreline. The Board's language stating ships were \"12 nautical miles or closer to the Vietnam shore\" created ambiguity about which standard was applied, and the record did not affirmatively establish the correct baseline standard was used.",
+      "location": null
+     },
+     {
+      "issue": "Factual Findings Jurisdiction",
+      "text": "The court dismissed Mr. Crawford's challenges to the Board's factual findings regarding whether he set foot in Da Nang and whether his ship served in Vietnam's territorial sea, holding that these challenges constitute impermissible reviews of factual determinations and law-as-applied under 38 U.S.C. \u00a7 7292(d)(2), which lies outside the Federal Circuit's appellate jurisdiction.",
+      "location": null
+     },
+     {
+      "issue": "Judicial Notice Denial",
+      "text": "The court dismissed Mr. Crawford's challenge to the Veterans Court's denial of his motion to take judicial notice of extra-record evidence about USS Hancock's location, holding that review of this discretionary evidentiary ruling constitutes an impermissible challenge to law as applied to the facts of the case under 38 U.S.C. \u00a7 7292(d)(2)(B).",
+      "location": null
+     }
+    ],
+    "holding": "Vacated in part and dismissed in part the Veterans Court's affirmance of the Board's denial of service connection for herbicide-related conditions; remanded for the Board to clarify which territorial sea standard it applied, but dismissed challenges to the Board's factual findings and the judicial notice ruling as outside the Federal Circuit's jurisdiction under 38 U.S.C. \u00a7 7292."
+   },
    "url_cl": "https://www.courtlistener.com/opinion/10605197/crawford-v-collins/",
    "url_audio": "https://www.courtlistener.com/audio/99408/crawford-v-collins/"
   },
@@ -61528,7 +61576,16 @@
    },
    "panel": [],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Failure to Pay Docketing Fee",
+      "text": "The Court dismissed the notice of appeal for failure to pay the docketing fee required by Federal Circuit Rule 52(a)(1) within the prescribed time period. Dismissal was entered for failure to prosecute in accordance with the Federal Circuit's procedural rules.",
+      "location": null
+     }
+    ],
+    "holding": null
+   },
    "url_cl": "https://www.courtlistener.com/opinion/10605196/tanner-v-collins/",
    "url_audio": null
   },
@@ -61563,7 +61620,36 @@
     }
    ],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "SEP Licensing Obligation Evidence",
+      "text": "The court vacated the damages judgments and remanded for a new trial because the district court erred in granting a new trial limited only to damages amount while excluding evidence of Optis's FRAND licensing obligation. The court held that Apple was entitled to evidence regarding the SEPs' FRAND commitment, which is material to determining a reasonable royalty under 35 U.S.C. \u00a7 1400d and Federal Rule of Evidence 403.",
+      "location": null
+     },
+     {
+      "issue": "\u00a7 101 Patent-Eligibility ('332 Patent)",
+      "text": "The court reversed the district court's finding that claims 6 and 7 of the '332 patent are not directed to an abstract idea under 35 U.S.C. \u00a7 101. The claims directed to a PDCCH search space algorithm were determined to recite abstract ideas without sufficient inventive concept to qualify as patent-eligible subject matter.",
+      "location": null
+     },
+     {
+      "issue": "\u00a7 112(f) Means-Plus-Function ('557 Patent)",
+      "text": "The court reversed the district court's finding that claim 1 of the '557 patent does not invoke 35 U.S.C. \u00a7 112(f). The claim's language requiring certain functional limitations was found to trigger the means-plus-function requirement under \u00a7 112(f), necessitating corresponding structure in the specification.",
+      "location": null
+     },
+     {
+      "issue": "Claim Construction ('833 Patent)",
+      "text": "The court affirmed the district court's construction of claim 8 of the '833 patent, indicating no error in the trial court's interpretation of the technical claim language regarding uplink signal transmission and resource mapping.",
+      "location": null
+     },
+     {
+      "issue": "Apple-Qualcomm Settlement Admissibility",
+      "text": "The court held that the district court abused its discretion under Federal Rule of Evidence 403 by admitting the Apple-Qualcomm settlement agreement and Optis's damages expert testimony concerning that agreement. The prejudicial effect of the settlement outweighed its probative value in establishing a reasonable royalty for SEP licensing.",
+      "location": null
+     }
+    ],
+    "holding": "This decision clarifies that SEP owners asserting standard-essential patents must present evidence of their FRAND licensing obligations during damages trials, and settlement agreements with third parties may be excludable under FRE 403 in reasonable-royalty litigation. The decision also reaffirms strict application of \u00a7 101 abstract-idea doctrine to software-implemented telecommunications claims and \u00a7 112(f) to functional claim language, reversing the district court's findings on two SEPs and requiring new trials on infringement and damages."
+   },
    "url_cl": "https://www.courtlistener.com/opinion/10605230/optis-wireless-technology-llc-v-apple-inc/",
    "url_audio": null
   },
@@ -61585,7 +61671,16 @@
    },
    "panel": [],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Petition Dismissal for Rule Noncompliance",
+      "text": "The Court dismissed the petition for review under Federal Circuit Rule 52(a)(1) because the petitioner failed to pay the required docketing fee and failed to file the required Statement Concerning Discrimination. Dismissal was entered for failure to prosecute in accordance with the rules.",
+      "location": null
+     }
+    ],
+    "holding": null
+   },
    "url_cl": "https://www.courtlistener.com/opinion/10605263/jones-v-army/",
    "url_audio": null
   },
@@ -61700,7 +61795,16 @@
     }
    ],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Briefing Schedule and Procedural Management",
+      "text": "The Federal Circuit adopted the parties' jointly proposed briefing schedule for the appeals, establishing deadlines for opening briefs (June 24-26, 2025), response briefs (July 8-10, 2025), reply briefs (July 18-21, 2025), and setting oral argument for July 31, 2025 at 45 minutes per side. The court permitted the V.O.S. and Oregon appellees to file separate response briefs and required compliance with Federal Circuit Rule 32(b)(1) regarding word count limitations.",
+      "location": null
+     }
+    ],
+    "holding": null
+   },
    "url_cl": "https://www.courtlistener.com/docket/70394463/vos-selections-inc-v-trump/",
    "url_audio": "https://www.courtlistener.com/audio/99869/vos-selections-inc-v-trump/"
   },
@@ -61724,7 +61828,16 @@
    "patent_issues": [
     "Other / Procedural"
    ],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Appeal Dismissal",
+      "text": "The Federal Circuit dismissed the appeal pursuant to Fed. R. App. P. 42(b) based on the parties' agreement to dismiss the proceeding. Each side bears its own costs.",
+      "location": "Page 1"
+     }
+    ],
+    "holding": null
+   },
    "url_cl": "https://www.courtlistener.com/docket/70531389/novartis-pharmaceuticals-corporation-v-msn-pharmaceuticals-inc/",
    "url_audio": null
   },
@@ -61759,7 +61872,16 @@
     }
    ],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Federal Circuit Jurisdiction over Mixed Cases",
+      "text": "The Federal Circuit lacks jurisdiction to review MSPB decisions in cases alleging covered discrimination under 5 U.S.C. \u00a7 7703(b)(2), even after the district court dismisses the discrimination claim. Under 5 U.S.C. \u00a7 7703(b)(2), the entire action falls within district court jurisdiction where a mixed case is involved, and the Federal Circuit has no jurisdiction to review any remaining claims.",
+      "location": "Pages 2-3"
+     }
+    ],
+    "holding": "The case is retransferred to the District Court for the Western District of Oklahoma under 28 U.S.C. \u00a7 1631 for the district court to conduct appropriate proceedings or enter final judgment, as the Federal Circuit lacks jurisdiction over this mixed case involving discrimination allegations under federal employment law."
+   },
    "url_cl": "https://www.courtlistener.com/opinion/10604257/stevenson-v-dva/",
    "url_audio": null
   },
@@ -61794,7 +61916,26 @@
     }
    ],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Military Service FERS Credit Bar",
+      "text": "A federal employee receiving military retired pay generally cannot receive credit for that same military service when calculating a FERS civilian annuity unless one of two narrow statutory exceptions applies under 5 U.S.C. \u00a7 8411(c)(2). The Court affirmed that Mr. Stuart's military service could not be credited toward his FERS annuity because he was receiving military retired pay based on his military service and did not waive that pay or fall within either statutory exception.",
+      "location": null
+     },
+     {
+      "issue": "Disability-Based Military Retirement Calculation",
+      "text": "Military retired pay calculated based on disability percentage, rather than years of service, still constitutes 'retired pay based on any period of military service' under 5 U.S.C. \u00a7 8411(c)(2) and triggers the bar against double crediting. The Court held that Mr. Stuart's argument that disability-calculated pay should be treated differently than service-length-calculated pay conflicted with the plain statutory language, which contemplates disability-based retirement as a type of military service-based pay subject to the double-crediting rule.",
+      "location": null
+     },
+     {
+      "issue": "Statutory Exception Interpretation",
+      "text": "The two statutory exceptions to the double-crediting bar\u2014for combat-incurred or war-instrumentality-caused service-connected disabilities, and for non-regular service retirement under 10 U.S.C. chapter 1223\u2014apply only to specific categories of military retirement and cannot be extended to cover all disability-based retirements. The Court affirmed that Mr. Stuart failed to establish that his disability fell within either exception, rejecting his analogy to combat-injured service members.",
+      "location": null
+     }
+    ],
+    "holding": "This decision clarifies that the statutory bar against double crediting military service for both FERS and military retired pay applies regardless of whether the military retired pay was calculated based on disability percentage or years of service, provided the pay is 'based on any period of military service.' The holding reinforces that the narrow statutory exceptions are exhaustive and cannot be expanded by analogy, establishing that the remedy for a federal employee seeking FERS credit for military service while receiving military retired pay is waiver of the military pay, subject only to the specified statutory exceptions."
+   },
    "url_cl": "https://www.courtlistener.com/opinion/10604256/stuart-v-opm/",
    "url_audio": "https://www.courtlistener.com/audio/98721/stuart-v-opm/"
   },
@@ -61831,7 +61972,26 @@
    "patent_issues": [
     "Other / Procedural"
    ],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "House Mark Findings",
+      "text": "The Board's determination that the competing marks contained house marks lacked substantial evidence and was erroneous. The Board failed to establish that either 'ANG\u00c9LUS' or 'LYNCH BAGES' had the broad commercial use required to qualify as house marks under trademark law, relying instead on the mere existence of multiple registrations and company letterhead without citation to supporting authority or findings of actual commerce use.",
+      "location": null
+     },
+     {
+      "issue": "Mark Similarity Analysis",
+      "text": "Because the Board's house mark findings were critical and nearly dispositive to its conclusion that the marks were dissimilar, the Board's similarity analysis under the DuPont factors lacked substantial evidence. The court vacated and remanded because it was unclear whether the Board would have reached the same no-likelihood-of-confusion conclusion absent the erroneous house mark analysis, which received predominant weight in the overall DuPont balancing.",
+      "location": null
+     },
+     {
+      "issue": "Likelihood of Confusion",
+      "text": "The Board's ultimate finding of no likelihood of confusion under Section 2(d) of the Lanham Act was vacated and remanded for reconsideration. The de novo review of the DuPont factors' weighing revealed that the Board's flawed similarity analysis, grounded in unsupported house mark findings, undermined the legal conclusion that confusion was unlikely.",
+      "location": null
+     }
+    ],
+    "holding": "Vacated and remanded the Board's decision dismissing the opposition to the 'ECHO D'ANG\u00c9LUS' trademark application, holding that the Board's house mark findings lacked substantial evidence and that its resulting mark similarity analysis was therefore deficient under the DuPont likelihood-of-confusion framework."
+   },
    "url_cl": "https://www.courtlistener.com/docket/68413720/chateau-lynch-bages-v-chateau-angelus-sa/",
    "url_audio": "https://www.courtlistener.com/audio/98713/chateau-lynch-bages-v-chateau-angelus-sa/"
   },
@@ -61866,9 +62026,24 @@
     }
    ],
    "patent_issues": [
-    "Other / Procedural"
+    "\u00a7 101 Eligibility",
+    "\u00a7\u00a7 102/103 Prior Art"
    ],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Patent Eligibility Under Section 101",
+      "text": "The Federal Circuit reversed the district court's grant of summary judgment on patent eligibility, holding that claim 20 of the '638 patent is directed to an abstract idea\u2014depositing a check using a handheld mobile device\u2014and does not contain an inventive concept sufficient to satisfy step two of the Alice test. The court found that the claim recites routine data collection and analysis steps (reviewing checks, recognizing data, checking for errors, storing data) traditionally performed by banks and people, merely computerized through a generic handheld mobile device without sufficient specificity or nonobvious technological improvement.",
+      "location": null
+     },
+     {
+      "issue": "Collateral Estoppel Effect of IPR Decisions",
+      "text": "The court affirmed invalidity findings from inter partes reviews of the '598 and '136 patents under 35 U.S.C. \u00a7 103 in separate decisions, which had collateral estoppel effect precluding reconsideration of the \u00a7 101 eligibility question as to those patents under the rule established in XY, LLC v. Trans Ova Genetics. Because those patents were separately determined unpatentable, the court declined to reach the \u00a7 101 issue for them in this appeal.",
+      "location": null
+     }
+    ],
+    "holding": "This decision clarifies that claims directed to routine business processes (such as remote check deposit) that have been traditionally performed by banks and people, merely implemented on a generic computer or mobile device without a specific technological improvement or inventive algorithmic advance actually recited in the claims themselves, constitute abstract ideas under 35 U.S.C. \u00a7 101 and fail step one of the Alice inquiry. The opinion reinforces that computer-based implementation of abstract ideas, without more, is insufficient to establish patent eligibility, and that the focus must be on whether the claims themselves demonstrate a specific improvement in computer capabilities rather than invoking generic computing devices as tools to perform traditional business functions."
+   },
    "url_cl": "https://www.courtlistener.com/docket/68149553/united-services-automobile-association-v-pnc-bank-na/",
    "url_audio": "https://www.courtlistener.com/audio/95108/united-services-automobile-association-v-pnc-bank-na/"
   },
@@ -61903,9 +62078,43 @@
     }
    ],
    "patent_issues": [
-    "Other / Procedural"
+    "PTAB Procedure & Standing"
    ],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Declaratory Judgment Jurisdiction\u2014Direct Infringement",
+      "text": "The court affirmed that Mitek failed to establish reasonable apprehension of a direct infringement suit based on the factual record, including the parties' admissions about how MiSnap works, its implementation by banks, and trial evidence from the Wells Fargo case. Under the Declaratory Judgment Act, 28 U.S.C. \u00a7 2201(a), jurisdiction requires an actual case or controversy, and the district court's factual findings on this issue were reviewed for clear error.",
+      "location": "Page 5"
+     },
+     {
+      "issue": "Declaratory Judgment Jurisdiction\u2014Induced Infringement",
+      "text": "The court affirmed the district court's finding that Mitek could not reasonably apprehend induced infringement liability because USAA never pointed to Mitek documents or manuals instructing users to perform all claim limitations, consistent with the standard in Microsoft Corp. v. DataTern, Inc., 755 F.3d 899 (Fed. Cir. 2014).",
+      "location": "Page 5"
+     },
+     {
+      "issue": "Declaratory Judgment Jurisdiction\u2014Contributory Infringement",
+      "text": "The court affirmed that no reasonable apprehension of contributory infringement existed because there was never a suggestion that MiSnap lacked substantial non-infringing uses or that Mitek knew the software was especially made or adapted for infringing use, as required under the contributory infringement standard.",
+      "location": "Page 5"
+     },
+     {
+      "issue": "Declaratory Judgment Jurisdiction\u2014Indemnity Basis",
+      "text": "The court affirmed the district court's conclusion that Mitek's indemnification agreements with its licensees did not create a reasonable potential for indemnification liability sufficient to establish subject-matter jurisdiction under the Declaratory Judgment Act.",
+      "location": "Page 6"
+     },
+     {
+      "issue": "Post-Filing Events and Case Controversy",
+      "text": "The court affirmed that even if a case or controversy existed when Mitek's complaint was filed in 2019, it was extinguished by USAA's subsequent settlement with Wells Fargo in 2021, as permissible under Mitek I's recognition that post-filing events can show a controversy ceased to exist.",
+      "location": "Page 6"
+     },
+     {
+      "issue": "Discretionary Decline of Jurisdiction",
+      "text": "The court affirmed the district court's exercise of discretion to decline declaratory judgment jurisdiction, reviewing for abuse of discretion under Wilton v. Seven Falls Co., 515 U.S. 277 (1995), where the district court found intervention in future USAA litigation against Mitek customers was preferable and that the declaratory judgment action would require extensive involvement of end-user banks.",
+      "location": "Page 6"
+     }
+    ],
+    "holding": "This decision confirms that under the Declaratory Judgment Act, 28 U.S.C. \u00a7 2201(a), a party must show a substantial, immediately real case or controversy with adverse legal interests, and that post-filing events extinguishing the controversy defeat jurisdiction even if one existed at filing. The court also reaffirms that even where subject-matter jurisdiction exists, a district court may discretionarily decline to entertain a declaratory judgment action based on practical and judicial economy considerations, particularly where intervention in future litigation provides an adequate alternative forum. The decision is largely fact-bound but reinforces the rigorous requirements for declaratory judgment jurisdiction in patent cases and the proper scope of post-filing event analysis."
+   },
    "url_cl": "https://www.courtlistener.com/docket/68149579/mitek-systems-inc-v-united-services-automobile-association/",
    "url_audio": "https://www.courtlistener.com/audio/97422/mitek-systems-inc-v-united-services-automobile-association/"
   },
@@ -61940,9 +62149,19 @@
     }
    ],
    "patent_issues": [
-    "Other / Procedural"
+    "\u00a7 101 Eligibility",
+    "PTAB Procedure & Standing"
    ],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Patent Eligibility under \u00a7 101",
+      "text": "The Court reversed the district court's grant of summary judgment finding the asserted claims of the '605, '681, and '432 patents patent-eligible under 35 U.S.C. \u00a7 101. Applying the Alice two-step test, the Court concluded the claims are directed to the abstract idea of depositing a check using a mobile device and contain no inventive concept sufficient to transform the abstract idea into a patent-eligible application, as they merely recite routine and well-known check-depositing steps implemented on generic devices without specific technical advances or software solutions.",
+      "location": null
+     }
+    ],
+    "holding": "The asserted claims of the '605, '681, and '432 patents are not patent-eligible under 35 U.S.C. \u00a7 101 because they are directed to an abstract idea (mobile check deposits) without an inventive concept, and the district court's summary judgment in favor of USAA was reversed. The Court also did not reach PNC's post-trial motions as moot because the claims were rendered invalid by the patent-eligibility reversal."
+   },
    "url_cl": "https://www.courtlistener.com/docket/68149577/united-services-automobile-association-v-pnc-bank-na/",
    "url_audio": "https://www.courtlistener.com/audio/95107/united-services-automobile-association-v-pnc-bank-na/"
   },
@@ -61964,7 +62183,21 @@
    },
    "panel": [],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Appeal Dismissal",
+      "text": "The Federal Circuit dismissed the appeal under Federal Rule of Appellate Procedure 42(b) upon the parties' stipulation, indicating voluntary dismissal by agreement of the parties.",
+      "location": null
+     },
+     {
+      "issue": "Cost Allocation",
+      "text": "Each party was ordered to bear its own costs, rejecting any shifting of appellate costs to either side.",
+      "location": null
+     }
+    ],
+    "holding": null
+   },
    "url_cl": "https://www.courtlistener.com/opinion/10603583/watson-v-uzzo/",
    "url_audio": null
   },
@@ -62031,7 +62264,21 @@
     }
    ],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Stay of Injunction Pending Appeal",
+      "text": "The Federal Circuit granted the United States's motions for a stay of the Court of International Trade's injunctions against Executive Orders imposing tariffs, applying the traditional stay factors under Fed. R. App. P. 8 and Nken v. Holder, 556 U.S. 418 (2009). The court concluded that a stay was warranted under the circumstances, noting that interim equitable relief aims to balance equities rather than conclusively determine the parties' rights.",
+      "location": null
+     },
+     {
+      "issue": "En Banc Expedited Consideration",
+      "text": "The Federal Circuit consolidated the cases and ordered expedited en banc consideration of the merits in the first instance under 28 U.S.C. \u00a7 46 and Federal Rule of Appellate Procedure 40(g), finding that the cases presented issues of exceptional importance. The court directed the parties to jointly propose an expedited briefing schedule to enable oral argument on July 31, 2025.",
+      "location": null
+     }
+    ],
+    "holding": "The Federal Circuit stayed the Court of International Trade's injunctions enjoining certain Executive Orders imposing tariffs and ordered expedited en banc review of the underlying merits."
+   },
    "url_cl": "https://www.courtlistener.com/docket/70394463/vos-selections-inc-v-trump/",
    "url_audio": "https://www.courtlistener.com/audio/99869/vos-selections-inc-v-trump/"
   },
@@ -62066,7 +62313,21 @@
     }
    ],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Petition Filing Deadline",
+      "text": "The court dismissed Graham's petition for review as untimely under 5 U.S.C. \u00a7 7703(b)(1), which requires petitions to be filed within 60 days of the Board's final order. Graham's petition was filed seven days late (October 21, 2024, instead of October 14, 2024), and he failed to argue or establish equitable tolling despite the DOJ raising the issue.",
+      "location": null
+     },
+     {
+      "issue": "Merits of Disciplinary Charges",
+      "text": "The court did not address the merits of whether Graham's 30-day suspension for misuse of official position and lack of candor was proper, as the dismissal on jurisdictional grounds rendered that analysis unnecessary.",
+      "location": null
+     }
+    ],
+    "holding": "Petition for review dismissed as untimely filed; no decision on the underlying disciplinary charges."
+   },
    "url_cl": "https://www.courtlistener.com/opinion/10602682/graham-v-doj/",
    "url_audio": null
   },
@@ -62130,7 +62391,21 @@
    "patent_issues": [
     "Other / Procedural"
    ],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Cross-Appeal Dismissal",
+      "text": "Exelixis's cross-appeal (No. 2025-1241) was dismissed by agreement of the parties under Federal Rule of Appellate Procedure 42(b), which permits dismissal of an appeal when the parties so stipulate. Each side was ordered to bear its own costs.",
+      "location": null
+     },
+     {
+      "issue": "Main Appeal Status",
+      "text": "The main appeal in No. 2025-1236 remains pending before the Federal Circuit, as the order addresses only the dismissal of the cross-appeal and does not dispose of the principal appellate issues.",
+      "location": null
+     }
+    ],
+    "holding": null
+   },
    "url_cl": "https://www.courtlistener.com/docket/70499623/exelixis-inc-v-msn-laboratories-private-ltd/",
    "url_audio": "https://www.courtlistener.com/audio/105298/exelixis-inc-v-msn-laboratories-private-ltd/"
   },
@@ -62152,7 +62427,16 @@
    },
    "panel": [],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Petition Dismissal for Procedural Noncompliance",
+      "text": "The Court dismissed the petition for review of the MSPB decision for failure to prosecute in accordance with the Federal Circuit's rules. The petitioner failed to file both the required Statement Concerning Discrimination and the required Entry of Appearance form by an attorney admitted to the bar of this court.",
+      "location": null
+     }
+    ],
+    "holding": "A petition for review before the Federal Circuit may be dismissed for failure to comply with mandatory procedural requirements, including filing a Statement Concerning Discrimination and an Entry of Appearance by a court-admitted attorney."
+   },
    "url_cl": "https://www.courtlistener.com/opinion/10601786/johnson-v-mspb/",
    "url_audio": null
   },
@@ -62187,7 +62471,16 @@
     }
    ],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Whistleblower Retaliation Claim",
+      "text": "The court affirmed the Board's denial of Platt's individual right of action claim alleging whistleblower retaliation under 5 U.S.C. \u00a7 1221(e). Although Platt established a prima facie case that his 2011 protected disclosure was a contributing factor to his 2013 suspension, the Board properly found that TSA met its burden under the clear and convincing evidence standard to show it would have suspended Platt regardless of the disclosure, applying the three-factor Carr test.",
+      "location": null
+     }
+    ],
+    "holding": "The Federal Circuit affirmed the Merit Systems Protection Board's final order denying Platt's whistleblower retaliation claim under the applicable burden-shifting framework and substantial evidence standard of review."
+   },
    "url_cl": "https://www.courtlistener.com/opinion/10601642/platt-v-dhs/",
    "url_audio": null
   },
@@ -62209,7 +62502,16 @@
    },
    "panel": [],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Court of Federal Claims judgment",
+      "text": "The Federal Circuit affirmed the judgment of the United States Court of Federal Claims in its entirety pursuant to Federal Circuit Rule 36, which permits affirmance without opinion when the decision is based on a nonprecedential disposition.",
+      "location": "JUDGMENT; AFFIRMED"
+     }
+    ],
+    "holding": "The Court of Federal Claims' judgment against plaintiff-appellant J. Star Enterprises, Inc. was affirmed on appeal."
+   },
    "url_cl": "https://www.courtlistener.com/docket/69455789/j-star-enterprises-inc-v-united-states/",
    "url_audio": "https://www.courtlistener.com/audio/99406/j-star-enterprises-inc-v-united-states/"
   },
@@ -62244,7 +62546,26 @@
     }
    ],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Arbitrator Authority Over Remedy",
+      "text": "The arbitrator did not exceed his authority in imposing conditions of random drug testing and medical record release as part of Ms. Gribble's reinstatement remedy. Because the parties submitted the broad issue of \"appropriate remedy\" to arbitration, and these conditions directly related to her underlying drug misconduct, they fell within the arbitrator's broad discretion to \"fashion a just award\" consistent with the CBA.",
+      "location": null
+     },
+     {
+      "issue": "Back Pay Limitation",
+      "text": "Any error in the arbitrator's limitation of back pay to the date of the award rather than reinstatement was harmless because Ms. Gribble was not entitled to pay until reinstatement, which could not occur until she complied with the condition of completing an approved drug rehabilitation program\u2014a condition for which she had produced no evidence of compliance.",
+      "location": null
+     },
+     {
+      "issue": "Random Drug Testing Duration",
+      "text": "The arbitrator reasonably extended random drug testing beyond the one-year limit ordinarily applicable under the EAP, as that limit applies only to employees voluntarily participating in the EAP program. Here, Ms. Gribble pursued a non-EAP program and thus was not bound by that temporal restriction, though the reasonableness of the duration remains subject to future reconsideration based on changed circumstances.",
+      "location": null
+     }
+    ],
+    "holding": "The arbitrator's decision mitigating Ms. Gribble's removal to a 90-day suspension and imposing conditions of drug rehabilitation program completion, random drug testing, and medical record release was affirmed as within the arbitrator's authority, supported by substantial evidence, and not arbitrary or capricious."
+   },
    "url_cl": "https://www.courtlistener.com/opinion/10601644/gribble-v-dva-sioux-falls-va-health-system/",
    "url_audio": "https://www.courtlistener.com/audio/98878/gribble-v-dva-sioux-falls-va-health-system/"
   },
@@ -62279,7 +62600,31 @@
     }
    ],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Motion to Amend\u2014Grant Standard",
+      "text": "The Federal Circuit affirmed the Board's grant of Cardiovalve's Motions to Amend (and Revised Supplemental Motion to Amend) under 37 C.F.R. \u00a7 42.121. The Board found that Edwards failed to demonstrate by a preponderance of the evidence that the substitute claims 11\u201320 were unpatentable, which is the statutory standard for denying a motion to amend in inter partes review proceedings.",
+      "location": null
+     },
+     {
+      "issue": "Support Portion\u2014Factual Finding",
+      "text": "The Federal Circuit held that the Board made a factual finding (reviewable for substantial evidence) that Goldfarb's coupling member constitutes a single, unitary structure, and that all of its elements together\u2014including the male element\u2014perform the functions required by the 'support portion' limitation of substitute claim 11. The Board was not adopting an implicit claim construction excluding the male element but rather making a factual determination about Goldfarb's disclosure.",
+      "location": null
+     },
+     {
+      "issue": "Collar as Support Portion",
+      "text": "The Federal Circuit addressed Edwards' argument that Goldfarb's collar element satisfies the 'support portion' limitation but affirmed the Board's factual finding that the male element of the coupling member (not the collar alone) constitutes the relevant supporting structure that satisfies the claim element.",
+      "location": null
+     },
+     {
+      "issue": "Advancing Limitation\u2014Disclosure",
+      "text": "The Federal Circuit affirmed the Board's finding that Goldfarb discloses or renders obvious the 'advancing' limitation requiring that the ends of the clip arms be advanced out of the delivery tube before the support portion exits the tube. The Board's determination that this sequence was disclosed by the reference was a factual finding supported by substantial evidence.",
+      "location": null
+     }
+    ],
+    "holding": "Edwards Lifesciences' appeal from the Patent Trial and Appeal Board's decision in IPR2021-01051 was affirmed, upholding the Board's grant of Cardiovalve's Motion to Amend and Supplemental Motion to Amend, and the Board's conclusion that Edwards failed to show that substitute claims 11\u201320 are unpatentable."
+   },
    "url_cl": "https://www.courtlistener.com/opinion/10600958/edwards-lifesciences-corporation-v-cardiovalve-ltd/",
    "url_audio": "https://www.courtlistener.com/audio/94455/edwards-lifesciences-corporation-v-cardiovalve-ltd/"
   },
@@ -62314,7 +62659,21 @@
     }
    ],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Line of Duty Causation Burden",
+      "text": "The court vacated the Bureau Director's denial of PSOB disability benefits, holding that the Bureau failed to make sufficient efforts to obtain information material to determining whether Mr. Lobo contracted pneumonia in the line of duty, as required by 34 U.S.C. \u00a7 10288(a) and (b). The statute obligates the Bureau to use available investigative tools, including subpoenas, to obtain third-party information when necessary to adjudicate claims, but the Bureau relied instead on negative inferences and incomplete medical expert analysis without pursuing available evidence about pneumonia prevalence in the particular jail facilities.",
+      "location": null
+     },
+     {
+      "issue": "Investigative Duty Under PSOB Act",
+      "text": "The court held that the Bureau's obligations under 34 U.S.C. \u00a7 10288(a)\u2013(b), effective June 2, 2017, require the Bureau to make diligent efforts to obtain material information and documentation, including through investigative tools and subpoenas when appropriate. The Bureau's failure to investigate whether pneumonia-infected inmates were present at the specific jails where Mr. Lobo worked, despite acknowledgment that such information was material to the locus-of-origin determination, constituted insufficient compliance with the statutory duty to expeditiously attempt to obtain necessary information.",
+      "location": null
+     }
+    ],
+    "holding": "This decision clarifies that the Public Safety Officers' Benefits Act imposes a nondelegable investigative obligation on the Bureau of Justice Assistance to actively pursue material third-party evidence when a claim cannot be fully adjudicated without it, rather than permitting denial based on an applicant's failure to affirmatively prove line-of-duty causation when the Bureau has not exhausted available investigative tools. The holding does not resolve the ultimate merits of Mr. Lobo's eligibility but establishes that courts will scrutinize whether the Bureau complied with its statutory investigative duties before affirming a denial."
+   },
    "url_cl": "https://www.courtlistener.com/docket/70191471/lobo-v-doj/",
    "url_audio": "https://www.courtlistener.com/audio/98749/lobo-v-doj/"
   },
@@ -62336,7 +62695,16 @@
    },
    "panel": [],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "District Court Judgment",
+      "text": "The Federal Circuit affirmed the district court's judgment in its entirety under Federal Circuit Rule 36, which permits nonprecedential affirmance without detailed opinion when the court agrees with the lower court's reasoning and result.",
+      "location": "Page 2"
+     }
+    ],
+    "holding": "The district court's judgment in favor of Uber Technologies, Inc. was affirmed without modification."
+   },
    "url_cl": "https://www.courtlistener.com/opinion/10600990/surgetech-m-llc-v-uber-technologies-inc/",
    "url_audio": "https://www.courtlistener.com/audio/99377/surgetech-m-llc-v-uber-technologies-inc/"
   },
@@ -62358,9 +62726,18 @@
    },
    "panel": [],
    "patent_issues": [
-    "Other / Procedural"
+    "PTAB Procedure & Standing"
    ],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "PTAB IPR Decisions",
+      "text": "The Federal Circuit affirmed the Patent Trial and Appeal Board's decisions in three inter partes review proceedings (IPR2022-00513, IPR2022-00514, IPR2022-00515) on appeal from Agis Software Development LLC. The court applied Federal Circuit Rule 36, which permits affirmance without detailed opinion when the decision is not precedential.",
+      "location": null
+     }
+    ],
+    "holding": null
+   },
    "url_cl": "https://www.courtlistener.com/opinion/10600996/agis-software-development-llc-v-stewart/",
    "url_audio": "https://www.courtlistener.com/audio/99411/agis-software-development-llc-v-stewart/"
   },
@@ -62395,7 +62772,21 @@
     }
    ],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Obviousness under \u00a7 103",
+      "text": "The court affirmed the Board's final written decision that claims 1\u20136, 8\u201312, 14\u201316, and 18\u201320 of the '564 patent were unpatentable under 35 U.S.C. \u00a7 103 based on a combination of the Ryu, Hodge, and Stallings references. Substantial evidence supported the Board's finding that Ryu's primary embodiment discloses the claimed \"only after\" limitation\u2014that gaze detection is performed only after detecting physical movement\u2014because Ryu disclosed proximity sensors only in separate embodiments and thus the primary embodiment contained no alternative sensor triggers.",
+      "location": null
+     },
+     {
+      "issue": "Negative Limitation Disclosure",
+      "text": "The court rejected the appellant's argument that prior art references must expressly state the absence of a feature to disclose a negative limitation, holding that under AC Techs. S.A. v. Amazon.com, Inc., 912 F.3d 1358 (Fed. Cir. 2019), references need not state a feature's absence in order to disclose a negative limitation. The Board reasonably inferred the \"only after\" requirement from Ryu's disclosure of a device with a motion sensor and no other trigger mechanisms in the primary embodiment.",
+      "location": null
+     }
+    ],
+    "holding": "Affirmed the Patent Trial and Appeal Board's final written decision holding claims 1\u20136, 8\u201312, 14\u201316, and 18\u201320 of U.S. Patent No. 11,016,564 unpatentable under 35 U.S.C. \u00a7 103 based on a combination of prior art references, finding substantial evidence that Ryu discloses the \"only after\" limitation without requiring express statement of the absence of alternative triggering mechanisms."
+   },
    "url_cl": "https://www.courtlistener.com/opinion/10600955/li-v-apple-inc/",
    "url_audio": null
   },
@@ -62417,7 +62808,26 @@
    },
    "panel": [],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Claims Court Subject Matter Jurisdiction",
+      "text": "The Federal Circuit affirmed the Claims Court's sua sponte dismissal for lack of subject matter jurisdiction. The Tucker Act limits the Claims Court's jurisdiction to contract claims against the United States, 28 U.S.C. \u00a7 1491(a)(1), and does not extend to claims against state entities, individuals, tort claims, or Eighth Amendment claims, all of which the plaintiff raised in his complaint.",
+      "location": null
+     },
+     {
+      "issue": "Breach of Contract Claim Elements",
+      "text": "The Court affirmed dismissal of the breach of contract claims, holding that plaintiff failed to allege the four required elements under Hometown Fin., Inc. v. United States: mutuality of intent to contract, offer and acceptance, consideration, and a government representative with actual authority to bind the United States. The plaintiff's conclusory allegations regarding Social Security account registration did not plausibly establish any contractual relationship, and Social Security benefits are noncontractual under Flemming v. Nestor, 363 U.S. 603 (1960).",
+      "location": null
+     },
+     {
+      "issue": "Fiduciary Duty Claims",
+      "text": "The Court rejected plaintiff's argument that the United States owed him fiduciary duties comparable to those in Native American trust cases. The Court held that fiduciary duties arise only from specific statutes and regulations, and the issuance of Social Security numbers does not establish a fiduciary relationship; moreover, the Claims Court lacks jurisdiction over Social Security benefit claims under 42 U.S.C. \u00a7 405(g), which directs such claims to federal district court.",
+      "location": null
+     }
+    ],
+    "holding": "The Federal Circuit affirmed the Claims Court's dismissal of plaintiff's complaint for lack of subject matter jurisdiction, finding that the Tucker Act does not confer jurisdiction over claims against non-federal defendants, tort claims, Eighth Amendment claims, or unsubstantiated contract claims, and that Social Security-related claims fall outside the Claims Court's jurisdiction."
+   },
    "url_cl": "https://www.courtlistener.com/opinion/10600956/gorrio-v-united-states/",
    "url_audio": null
   },
@@ -62452,7 +62862,16 @@
     }
    ],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Appellate Jurisdiction",
+      "text": "The Federal Circuit lacks jurisdiction to review the MSPB decision because Dr. Morris is not adversely affected or aggrieved by it. Under 28 U.S.C. \u00a7 1295(a)(9) and 5 U.S.C. \u00a7 7703, appellate review requires a final Board decision that has adversely affected an employee, but here the Board reversed the agency's removal and ordered reinstatement with back pay in Dr. Morris's favor, rendering the decision favorable to him rather than adverse.",
+      "location": null
+     }
+    ],
+    "holding": "The petition for review is dismissed for lack of jurisdiction."
+   },
    "url_cl": "https://www.courtlistener.com/opinion/10600993/morris-v-department-of-transportation/",
    "url_audio": null
   },
@@ -62487,7 +62906,26 @@
     }
    ],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Settlement Agreement Enforceability",
+      "text": "The court affirmed the MSPB's determination that the settlement agreement was enforceable and that Ms. Payton's appeal was properly dismissed as settled. The Board found the agreement was signed by all parties, lawful on its face, and constituted a full and complete settlement of all non-age-discrimination issues in the 2016 IRA appeal, and Ms. Payton's post-signature revocation attempts were untimely and ineffective as to those claims.",
+      "location": null
+     },
+     {
+      "issue": "Breach of Contract Remedy",
+      "text": "The court held that Ms. Payton's claim of VA's breach due to alleged nonpayment must be pursued through a separate petition for enforcement under 5 C.F.R. \u00a7 1201.182, not through rescission of the settlement within an appeal dismissal proceeding. The court rejected rescission as a remedy because VA did not repudiate the contract, there was no total breach, and any late payment does not substantially impair the contract's value.",
+      "location": null
+     },
+     {
+      "issue": "Forfeited Arguments",
+      "text": "The court declined to address Ms. Payton's arguments regarding voluntary entry into and power to revoke her acceptance of the settlement agreement because she did not raise those arguments in her opening brief to the appellate court, and arguments not raised in the opening brief are forfeited.",
+      "location": null
+     }
+    ],
+    "holding": "Affirmed the MSPB's dismissal of the appeal as settled and enforcement of the settlement agreement, while directing that any breach-based rescission claim must proceed through the separate petition-for-enforcement process."
+   },
    "url_cl": "https://www.courtlistener.com/opinion/10600992/payton-v-dva/",
    "url_audio": null
   },
@@ -62522,9 +62960,38 @@
     }
    ],
    "patent_issues": [
-    "Other / Procedural"
+    "PTAB Procedure & Standing"
    ],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Equitable Estoppel\u2014Misleading Conduct",
+      "text": "The court affirmed that Fraunhofer's silence from 2010 to 2015 regarding SXM's potential infringement constituted misleading conduct under the first element of equitable estoppel. Although silence alone does not create estoppel absent a duty to speak, here Fraunhofer's continued silence after reacquiring patent rights in 2010 reasonably led SXM to infer that Fraunhofer did not intend to assert its patents.",
+      "location": null
+     },
+     {
+      "issue": "Equitable Estoppel\u2014Reliance",
+      "text": "The court found no clear evidence that SXM actually relied on Fraunhofer's silence when making its business decisions to migrate manufacturers to the high-band system, reversing the district court's summary judgment on this element. The record did not establish that SXM's technology choices between 2010 and 2015 were motivated by reliance on Fraunhofer's silence rather than independent business pragmatism.",
+      "location": null
+     },
+     {
+      "issue": "Equitable Estoppel\u2014Prejudice",
+      "text": "The court reversed the district court's finding that SXM would suffer material prejudice if litigation proceeded, holding that SXM's investment in the high-band system was a business choice made in 2008 when SXM was formed, not a reliance-based commitment undertaken only because of Fraunhofer's silence. Prejudice requires a causal link between the accused infringer's detrimental reliance and the patentee's conduct.",
+      "location": null
+     },
+     {
+      "issue": "Summary Judgment\u2014Disputed Material Facts",
+      "text": "The court reversed the grant of summary judgment, finding genuine disputes of material fact regarding whether SXM actually relied on Fraunhofer's silence and whether any such reliance caused material prejudice, precluding summary judgment under Third Circuit law applied de novo. The district court improperly resolved factual disputes in SXM's favor rather than drawing inferences in Fraunhofer's favor as the non-movant.",
+      "location": null
+     },
+     {
+      "issue": "Equitable Estoppel Affirmation",
+      "text": "The court reversed the district court's judgment in favor of SXM based on equitable estoppel, holding that the defense requires more than delay and silence; it requires proof that the accused infringer actually relied on the patentee's conduct to its detriment. The case was remanded for further proceedings on the merits.",
+      "location": null
+     }
+    ],
+    "holding": "This decision clarifies that equitable estoppel in patent law requires a genuine causal nexus between the patentee's misleading conduct and the accused infringer's detrimental reliance, and that a trial court may not resolve the reliance and prejudice elements on summary judgment when material facts remain disputed. The ruling confirms that delay alone, even substantial delay in asserting patent rights, does not establish equitable estoppel absent proof of actual reliance and causally connected harm."
+   },
    "url_cl": "https://www.courtlistener.com/docket/67905683/fraunhofer-gesellschaft-v-sirius-xm-radio-inc/",
    "url_audio": "https://www.courtlistener.com/audio/97710/fraunhofer-gesellschaft-v-sirius-xm-radio-inc/"
   },
@@ -62559,7 +63026,16 @@
     }
    ],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Federal Circuit Jurisdiction over Veterans Claims",
+      "text": "The Federal Circuit dismissed the appeal for lack of jurisdiction because Mr. Shannon's arguments challenged factual determinations and applications of law to facts, which fall outside the limited jurisdiction granted by 38 U.S.C. \u00a7 7292(d)(2). The court held that merely characterizing arguments as presenting constitutional issues is insufficient to confer jurisdiction when the underlying challenge concerns factual findings or case-specific regulatory application.",
+      "location": "DISCUSSION"
+     }
+    ],
+    "holding": "Appeal dismissed for lack of Federal Circuit jurisdiction over veterans disability rating determination."
+   },
    "url_cl": "https://www.courtlistener.com/opinion/10600991/shannon-v-collins/",
    "url_audio": null
   },
@@ -62581,7 +63057,16 @@
    },
    "panel": [],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "PTAB IPR Decision",
+      "text": "The Federal Circuit affirmed the Patent Trial and Appeal Board's decision in inter partes review No. IPR2022-00200. The affirmance was entered summarily under Federal Circuit Rule 36, indicating the panel found no reversible error in the PTAB's proceedings or substantive determinations.",
+      "location": "JUDGMENT/ORDERED and ADJUDGED"
+     }
+    ],
+    "holding": null
+   },
    "url_cl": "https://www.courtlistener.com/opinion/10600995/igt-v-zynga-inc/",
    "url_audio": "https://www.courtlistener.com/audio/99379/igt-v-zynga-inc/"
   },
@@ -62603,9 +63088,18 @@
    },
    "panel": [],
    "patent_issues": [
-    "Other / Procedural"
+    "PTAB Procedure & Standing"
    ],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "IPR Final Decision",
+      "text": "The Federal Circuit affirmed the Patent Trial and Appeal Board's final decision in IPR2022-00610 without issuing a precedential opinion, applying the summary affirmance procedure under Federal Circuit Rule 36.",
+      "location": "JUDGMENT"
+     }
+    ],
+    "holding": "The Board's determination in the inter partes review proceeding was upheld in its entirety."
+   },
    "url_cl": "https://www.courtlistener.com/opinion/10600989/us-well-services-llc-v-stewart/",
    "url_audio": "https://www.courtlistener.com/audio/99376/us-well-services-llc-v-stewart/"
   },
@@ -62625,11 +63119,33 @@
     "url_cl": "https://www.courtlistener.com/opinion/10600997/acadia-pharmaceuticals-inc-v-aurobindo-pharma-ltd/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1401.OPINION.6-9-2025_2527287.pdf"
    },
-   "panel": [],
-   "patent_issues": [
-    "Other / Procedural"
+   "panel": [
+    {
+     "name": "Moore",
+     "role": "Author"
+    },
+    {
+     "name": "Lourie",
+     "role": "Panel"
+    },
+    {
+     "name": "Bryson",
+     "role": "Panel"
+    }
    ],
-   "summary": null,
+   "patent_issues": [
+    "\u00a7\u00a7 102/103 Prior Art"
+   ],
+   "summary": {
+    "segments": [
+     {
+      "issue": "Obviousness-Type Double Patenting Reference",
+      "text": "The court affirmed the district court's grant of summary judgment that claim 5 of U.S. Patent No. 9,566,271 cannot serve as an obviousness-type double patenting (ODP) reference to invalidate claim 26 of U.S. Patent No. 7,601,740. Applying the holding from Allergan USA, Inc. v. MSN Laboratories Private Ltd., 111 F.4th 1358 (Fed. Cir. 2024), the court held that a first-filed, first-issued, later-expiring claim cannot be invalidated by a later-filed, later-issued, earlier-expiring reference claim with a common priority date.",
+      "location": null
+     }
+    ],
+    "holding": "Affirmed the district court's summary judgment of no invalidity on obviousness-type double patenting grounds, applying controlling precedent that a first-filed patent claim cannot be invalidated by a later-filed reference claim despite sharing a common priority date."
+   },
    "url_cl": "https://www.courtlistener.com/docket/68843099/acadia-pharmaceuticals-inc-v-aurobindo-pharma-ltd/",
    "url_audio": null
   },
@@ -62653,7 +63169,21 @@
    "patent_issues": [
     "Other / Procedural"
    ],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Dismissal of Appeal",
+      "text": "The Federal Circuit dismissed the appeal from the Patent Trial and Appeal Board pursuant to Federal Rule of Appellate Procedure 42(b), which permits dismissal when the parties agree to terminate the proceeding.",
+      "location": "(1)"
+     },
+     {
+      "issue": "Cost Allocation",
+      "text": "Each party bears its own costs in the dismissed appeal, meaning neither party may recover litigation expenses from the other.",
+      "location": "(2)"
+     }
+    ],
+    "holding": null
+   },
    "url_cl": "https://www.courtlistener.com/docket/70028051/geoscope-technologies-pte-ltd-v-google-llc/",
    "url_audio": null
   },
@@ -62675,9 +63205,23 @@
    },
    "panel": [],
    "patent_issues": [
-    "Other / Procedural"
+    "PTAB Procedure & Standing"
    ],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Appeal Dismissal",
+      "text": "The Federal Circuit dismissed the appeal by stipulated agreement of the parties under Federal Rule of Appellate Procedure 42(b), which permits dismissal when parties jointly request termination of the proceeding.",
+      "location": null
+     },
+     {
+      "issue": "Cost Allocation",
+      "text": "Each party shall bear its own costs, reflecting the parties' agreement to resolve the matter without imposing fee liability on either side.",
+      "location": null
+     }
+    ],
+    "holding": "The appeal was dismissed by stipulation, and each party bears its own costs."
+   },
    "url_cl": "https://www.courtlistener.com/docket/70162139/geoscope-technologies-pte-ltd-v-google-llc/",
    "url_audio": null
   },
@@ -62697,9 +63241,64 @@
     "url_cl": "https://www.courtlistener.com/opinion/10599895/darby-development-company-inc-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/22-1929.ORDER.6-6-2025_2526499.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Moore",
+     "role": "Panel"
+    },
+    {
+     "name": "Lourie",
+     "role": "Panel"
+    },
+    {
+     "name": "Dyk",
+     "role": "Panel"
+    },
+    {
+     "name": "Prost",
+     "role": "Panel"
+    },
+    {
+     "name": "Reyna",
+     "role": "Panel"
+    },
+    {
+     "name": "Taranto",
+     "role": "Panel"
+    },
+    {
+     "name": "Chen",
+     "role": "Panel"
+    },
+    {
+     "name": "Stoll",
+     "role": "Panel"
+    },
+    {
+     "name": "Cunningham",
+     "role": "Panel"
+    },
+    {
+     "name": "Stark",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Takings Liability for Unauthorized Government Action",
+      "text": "The court affirmed the holding that government officials' actions constitute an authorized taking for purposes of Fifth Amendment takings liability if undertaken within the general scope of their duties and in good faith implementation of a Congressional Act, even if later determined to violate statutory limits. The majority applied Del-Rio Drilling's framework holding that the relevant question is whether the property invasion is chargeable to the government as a natural consequence of congressionally approved measures, rather than requiring actual statutory authority.",
+      "location": null
+     },
+     {
+      "issue": "Petition for Rehearing En Banc",
+      "text": "The Federal Circuit denied both the petition for panel rehearing and the petition for rehearing en banc filed by the United States. The court conducted a poll of circuit judges in regular active service, and the poll failed to produce the necessary votes for en banc reconsideration.",
+      "location": null
+     }
+    ],
+    "holding": "The court affirmed the panel decision upholding takings liability based on government agents' actions within the scope of their duties and pursuant to good faith implementation of Congressional Acts, rejecting the narrower requirement of actual statutory authority."
+   },
    "url_cl": "https://www.courtlistener.com/docket/67708020/darby-development-company-inc-v-united-states/",
    "url_audio": "https://www.courtlistener.com/audio/87942/darby-development-company-inc-v-united-states/"
   },
@@ -62719,9 +63318,46 @@
     "url_cl": "https://www.courtlistener.com/opinion/10599825/onyems-v-navy/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-2289.OPINION.6-6-2025_2526441.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Moore",
+     "role": "Panel"
+    },
+    {
+     "name": "Hughes",
+     "role": "Panel"
+    },
+    {
+     "name": "Stark",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Subject Matter Jurisdiction",
+      "text": "The court dismissed the appeal for lack of subject matter jurisdiction under the Contract Disputes Act because Mr. Onyems, not CB Portable, filed the notice of appeal. Under 41 U.S.C. \u00a7 7107(a)(1)(A), only a \"contractor\"\u2014defined as a party to the federal contract\u2014may appeal a Board decision to the Federal Circuit, and Mr. Onyems was not a party to the contract; CB Portable is a separate legal entity.",
+      "location": null
+     },
+     {
+      "issue": "Party Standing and Representation",
+      "text": "Even if the notice of appeal could be amended to identify CB Portable as the appellant, the appeal must be dismissed because CB Portable, as a limited liability company, must be represented by licensed counsel in federal court under Fed. Cir. R. 47.3(a) and case law, and the record shows no evidence CB Portable retained counsel.",
+      "location": null
+     },
+     {
+      "issue": "FLSA Claim",
+      "text": "Mr. Onyems lacks standing to pursue a Fair Labor Standards Act claim because he does not appear to qualify as an \"employee\" under 29 U.S.C. \u00a7 207(a)(1)-(2), and regardless, he is not a \"contractor\" within the meaning of the Federal Circuit's jurisdictional statute.",
+      "location": null
+     },
+     {
+      "issue": "CARES Act Reimbursement",
+      "text": "Mr. Onyems cannot recover reimbursement of employee leave costs under the CARES Act, Pub. L. No. 117-2 \u00a7 4015, because that statute permitted agencies to reimburse contractors only for expenses incurred through September 30, 2021, and Mr. Onyems' contract was not awarded until 2022.",
+      "location": null
+     }
+    ],
+    "holding": "The Federal Circuit dismissed the appeal entirely for lack of subject matter jurisdiction because Mr. Onyems, a non-attorney sole member of CB Portable LLC, filed the notice of appeal in his personal capacity rather than on behalf of the company, and neither he nor the company properly qualified to appeal a Board decision under the Contract Disputes Act."
+   },
    "url_cl": "https://www.courtlistener.com/opinion/10599825/onyems-v-navy/",
    "url_audio": null
   },
@@ -62743,7 +63379,31 @@
    },
    "panel": [],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Combat Related Special Compensation Rating",
+      "text": "Combat Related Special Compensation must be calculated using the servicemember's VA disability rating, not the Army's rating. Because Mr. Hutchinson's VA rating for PTSD was 50%, he was not entitled to a calculation at the 70% rate, notwithstanding any higher Army rating.",
+      "location": null
+     },
+     {
+      "issue": "Concurrent Retirement and Disability Pay Eligibility",
+      "text": "Servicemembers retired due to permanent disability with fewer than 20 years of service are ineligible for Concurrent Retirement and Disability Pay under 10 U.S.C. \u00a7 1414(b)(2). Mr. Hutchinson did not meet the 20-year service requirement and was therefore ineligible.",
+      "location": null
+     },
+     {
+      "issue": "Retroactive Rank Backdating",
+      "text": "A servicemember cannot receive retirement benefits at a higher rank before the date his promotion was signed by the President. The Federal Circuit lacks authority to retroactively promote someone to a rank for which he was not duly appointed under Dysart v. United States, 369 F.3d 1303, 1317 (Fed. Cir. 2004).",
+      "location": null
+     },
+     {
+      "issue": "Section 1372 Retroactive Promotion",
+      "text": "Under 10 U.S.C. \u00a7 1372, a servicemember must demonstrate he was actually and lawfully promoted to a higher position to receive benefits at that rank. Mr. Hutchinson failed to identify record support for any actual and lawful promotion to a higher position.",
+      "location": null
+     }
+    ],
+    "holding": "The Federal Circuit affirmed the Court of Federal Claims' judgment upholding the Army Board for Correction of Military Records' denial of various compensation claims related to Mr. Hutchinson's military service and retirement."
+   },
    "url_cl": "https://www.courtlistener.com/opinion/10599826/hutchinson-v-united-states/",
    "url_audio": null
   },
@@ -62765,7 +63425,16 @@
    },
    "panel": [],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Appeal Dismissal",
+      "text": "The Federal Circuit dismissed the appeal from the Patent Trial and Appeal Board pursuant to Federal Rule of Appellate Procedure 42(b), which permits dismissal when the parties stipulate to termination of the proceeding. The dismissal was entered on the parties' agreement.",
+      "location": "ORDER"
+     }
+    ],
+    "holding": null
+   },
    "url_cl": "https://www.courtlistener.com/opinion/10599912/geoscope-technologies-pte-ltd-v-google-llc/",
    "url_audio": null
   },
@@ -62785,9 +63454,46 @@
     "url_cl": "https://www.courtlistener.com/opinion/10599784/lee-v-opm/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1737.OPINION.6-6-2025_2526409.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Prost",
+     "role": "Panel"
+    },
+    {
+     "name": "Reyna",
+     "role": "Panel"
+    },
+    {
+     "name": "Taranto",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Jurisdictional Determination",
+      "text": "The court affirmed its jurisdiction over the appeal under 5 U.S.C. \u00a7 7703(b)(1)(A), rejecting the characterization of the case as a \"mixed case\" requiring district court review. Although Mr. Lee noted a discrimination claim on Form 10, he did not raise discrimination against OPM (the respondent here) before the MSPB, but only against SSA, his former employer, which is not subject to this appeal.",
+      "location": null
+     },
+     {
+      "issue": "Disability Retirement Denial",
+      "text": "The court affirmed the MSPB's final decision denying Mr. Lee's FERS disability retirement application. The Board correctly found that Mr. Lee failed to establish by preponderant evidence that his hip condition was incompatible with useful and efficient service or retention, and that reasonable accommodation was unreasonable. The court applied its narrow scope of review for disability determinations, which does not permit review of factual findings under 5 U.S.C. \u00a7 8347(c).",
+      "location": null
+     },
+     {
+      "issue": "Evidence-Weighing Challenge",
+      "text": "The court rejected Mr. Lee's argument that the Board overlooked medical records and evidence, holding that such challenges to the weighing of evidence fall outside the limited scope of review for disability retirement appeals. The Board's consideration of the flagged evidence and ultimate factual determinations regarding disability are final and conclusive.",
+      "location": null
+     },
+     {
+      "issue": "Legal Arguments on Multiple Statutes",
+      "text": "The court rejected Mr. Lee's assertions that the Board failed to consider Due Process, Discovery, FMLA, Weingarten Rights, and Loudermill Rights, finding no legal error implicating these laws and noting that most were irrelevant to the disability retirement appeal.",
+      "location": null
+     }
+    ],
+    "holding": "The Federal Circuit affirmed the MSPB's final decision denying Mr. Lee's application for disability retirement under FERS, holding that he failed to establish the requisite elements of disability and that the court retained jurisdiction despite his Form 10 reference to discrimination, which was not raised against the respondent OPM before the MSPB."
+   },
    "url_cl": "https://www.courtlistener.com/opinion/10599784/lee-v-opm/",
    "url_audio": null
   },
@@ -62807,9 +63513,31 @@
     "url_cl": "https://www.courtlistener.com/opinion/10599824/stratton-v-hhs/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/23-2230.OPINION.6-6-2025_2526487.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Cunningham",
+     "role": "Author"
+    },
+    {
+     "name": "Taranto",
+     "role": "Panel"
+    },
+    {
+     "name": "Hughes",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Reasonable Basis Explanation",
+      "text": "The Federal Circuit vacated the Chief Special Master's award of attorneys' fees and costs under the Vaccine Act, 42 U.S.C. \u00a7 300aa\u201315(e)(1), holding that the special master failed to adequately explain why Ms. Stratton's petition satisfied the \"reasonable basis\" standard required for fee eligibility. The court found the special master's explanation inadequate for appellate review because it consisted of only a conclusory assertion that medical records were sufficient, without addressing the Secretary's specific and reasonable concerns about the medical evidence or explaining why those concerns did not defeat the reasonable basis finding.",
+      "location": null
+     }
+    ],
+    "holding": "This decision clarifies that under the Vaccine Act, a special master's determination that a claim has a reasonable basis must be supported by reasoned explanation addressing material objections to the evidence, not merely conclusory statements that the evidentiary standard is \"easy to satisfy.\" The court confirms that while the reasonable basis standard is a low threshold (more than a scintilla but less than a preponderance), special masters remain obligated to articulate a rational basis for their findings and consider evidence that detracts from the weight of the record, consistent with administrative law principles of adequate explanation."
+   },
    "url_cl": "https://www.courtlistener.com/opinion/10599824/stratton-v-hhs/",
    "url_audio": "https://www.courtlistener.com/audio/93809/stratton-v-hhs/"
   },
@@ -62829,9 +63557,41 @@
     "url_cl": "https://www.courtlistener.com/opinion/10599785/carey-v-collins/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/23-2014.OPINION.6-6-2025_2526383.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Taranto",
+     "role": "Author"
+    },
+    {
+     "name": "Prost",
+     "role": "Panel"
+    },
+    {
+     "name": "Reyna",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Final Agency Decision",
+      "text": "The court affirmed that VA's July 1971 rating decision denying benefits for the nervous condition constituted a final agency decision, even though the notice of that decision was not present in the claims folder. The court held that the presumption of regularity, combined with documentary evidence (the veteran's notice of disagreement and the RO's statement of the case), sufficiently established that notice was given, and an agency record gap does not defeat finality as a matter of law.",
+      "location": null
+     },
+     {
+      "issue": "Implicit Denial Doctrine",
+      "text": "The court affirmed that VA may implicitly deny a claim without expressly addressing it in its decision, and that an implicit denial becomes final when VA provides sufficient information for a reasonable claimant to understand he would not be awarded benefits for the asserted disability. The court rejected the claimant's contention that explicitly raised claims must be explicitly denied under 38 C.F.R. \u00a7 3.103, and held that requiring express reasons for an implicit denial would be illogical.",
+      "location": null
+     },
+     {
+      "issue": "Clear and Unmistakable Error",
+      "text": "The court affirmed that the Board of Veterans' Appeals correctly rejected the claimant's request for revision of the 1971 decision based on clear and unmistakable error under 38 U.S.C. \u00a7 5109A, because the 1971 decision constituted a final agency action denying the nervous-condition claim, thus making the CUE standard applicable rather than allowing collateral challenge.",
+      "location": null
+     }
+    ],
+    "holding": "The Federal Circuit affirmed the Veterans Court's affirmance of the Board's denial of revision based on clear and unmistakable error, holding that VA's 1971 rating decision constituted a final denial of the nervous-condition claim (either explicitly or implicitly), and that the presumption of regularity and collateral documentary evidence establish finality despite the absence of the notice letter from the administrative record."
+   },
    "url_cl": "https://www.courtlistener.com/opinion/10599785/carey-v-collins/",
    "url_audio": null
   },
@@ -62853,7 +63613,21 @@
    },
    "panel": [],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Conduct Unbecoming Charge",
+      "text": "The court affirmed the Board's finding that substantial evidence supports the charge of Conduct Unbecoming a Law Enforcement Officer based on Specifications 1 and 2. The Administrative Judge credited Agency witness testimony regarding Mr. Bradbury's conduct at the October 20, 2021 meeting (removing and throwing his firearm on a table, making disparaging remarks) and his December 17, 2021 email containing ambiguous statements and disparaging remarks about management, and the Board found no reason to overturn these determinations.",
+      "location": null
+     },
+     {
+      "issue": "Penalty Reasonableness",
+      "text": "The court affirmed the Agency's penalty of removal as reasonable under the Douglas factors analysis. The Board concluded that the serious nature of conduct unbecoming, combined with Mr. Bradbury's lack of remorse and his repetitive misconduct shortly after a prior counseling letter, supported removal as reasonably promoting the efficiency of the service, and the court found the penalty was not 'totally unwarranted in light of all the factors.'",
+      "location": null
+     }
+    ],
+    "holding": "The Federal Circuit affirmed the Merit Systems Protection Board's final order sustaining the Department of Homeland Security's removal of Criminal Investigator David Bradbury for Conduct Unbecoming a Law Enforcement Officer, finding substantial evidence supported both the charge and the penalty determination under applicable law."
+   },
    "url_cl": "https://www.courtlistener.com/opinion/10599827/bradbury-v-dhs/",
    "url_audio": null
   },
@@ -62875,9 +63649,18 @@
    },
    "panel": [],
    "patent_issues": [
-    "Other / Procedural"
+    "PTAB Procedure & Standing"
    ],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "TTAB Trademark Decision",
+      "text": "The Federal Circuit affirmed the Trademark Trial and Appeal Board's decision in appeal No. 91265174 concerning Eden Foods' trademark matter. The court applied the summary affirmance procedure under Federal Circuit Rule 36, indicating the decision below presented no reversible error warranting detailed opinion analysis.",
+      "location": null
+     }
+    ],
+    "holding": "TTAB trademark decision affirmed in full; appeal dismissed as nonprecedential per Fed. Cir. R. 36."
+   },
    "url_cl": "https://www.courtlistener.com/opinion/10598962/eden-foods-inc-v-stewart/",
    "url_audio": "https://www.courtlistener.com/audio/99314/eden-foods-inc-v-stewart/"
   },
@@ -62897,9 +63680,41 @@
     "url_cl": "https://www.courtlistener.com/opinion/10598965/craft-v-mspb/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-2138.OPINION.6-5-2025_2525736.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Taranto",
+     "role": "Panel"
+    },
+    {
+     "name": "Stoll",
+     "role": "Panel"
+    },
+    {
+     "name": "Stark",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "MSPB Jurisdiction Over Claims",
+      "text": "The Merit Systems Protection Board dismissed Craft's appeal on the ground that 5 U.S.C. \u00a7 8128 precluded the Board from reviewing determinations made by the Office of Workers' Compensation Programs (OWCP). The Board did not address whether Craft's claims\u2014such as reduction in grade, failure to restore/reemploy, or denial of within-grade increase\u2014fell within an affirmative grant of the Board's authority under 5 U.S.C. \u00a7 7701(a) or other statutory provisions.",
+      "location": null
+     },
+     {
+      "issue": "Whistleblower Reprisal Claim Timeliness",
+      "text": "The Board declined to review Craft's whistleblower-reprisal claim because she failed to present it to the administrative judge and did not explain the omission, treating it as an untimely claim under the principle that claimants generally may not newly present claims on full Board review that were not presented to the initial administrative judge.",
+      "location": null
+     },
+     {
+      "issue": "Federal Circuit Jurisdiction and Remand",
+      "text": "The Federal Circuit determined it lacked sufficient information to resolve its own jurisdiction and the correctness of the Board's decision because the Board's opinion and the administrative judge's opinion were too brief and did not provide the necessary analysis to parse Craft's allegations against the relevant legal standards. The court remanded for additional proceedings requiring a significantly closer analysis from the Board.",
+      "location": null
+     }
+    ],
+    "holding": "On remand, the Merit Systems Protection Board must conduct further proceedings to determine whether Craft's claimed agency actions (reduction in grade, failure to restore/reemploy, denial of within-grade increase) fall within an affirmative grant of the Board's statutory authority before relying solely on the \u00a7 8128 bar to OWCP decisions."
+   },
    "url_cl": "https://www.courtlistener.com/opinion/10598965/craft-v-mspb/",
    "url_audio": null
   },
@@ -62921,7 +63736,16 @@
    },
    "panel": [],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Cross-Appeal Dismissal",
+      "text": "LifeCore Fitness's cross-appeal (No. 2025-1345) was dismissed as unopposed pursuant to Federal Rule of Appellate Procedure 42(b), with each party bearing its own costs on that appeal.",
+      "location": null
+     }
+    ],
+    "holding": "The voluntary dismissal of the cross-appeal leaves Appeal No. 2025-1323 (Woodway's appeal from the PTAB) as the remaining proceeding before the Federal Circuit."
+   },
    "url_cl": "https://www.courtlistener.com/opinion/10599004/woodway-usa-inc-v-lifecore-fitness-llc/",
    "url_audio": "https://www.courtlistener.com/audio/105164/woodway-usa-inc-v-lifecore-fitness-llc/"
   },
@@ -62943,7 +63767,16 @@
    },
    "panel": [],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Dismissal for Failure to Pay Docketing Fee",
+      "text": "The Federal Circuit dismissed the notice of appeal under Federal Circuit Rule 52(a)(1) because the appellant failed to pay the required docketing fee within the time permitted by the rules. The dismissal was for failure to prosecute in accordance with the court's procedural rules.",
+      "location": null
+     }
+    ],
+    "holding": "Appeal dismissed for failure to pay docketing fee as required by Federal Circuit Rule 52(a)(1)."
+   },
    "url_cl": "https://www.courtlistener.com/opinion/10599269/payne-v-united-states/",
    "url_audio": null
   },
@@ -62963,9 +63796,31 @@
     "url_cl": "https://www.courtlistener.com/opinion/10598966/beacon-point-associates-llc-v-dva/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1076.OPINION.6-5-2025_2525700.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Hughes",
+     "role": "Author"
+    },
+    {
+     "name": "Mayer",
+     "role": "Panel"
+    },
+    {
+     "name": "Stoll",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Incorporation by Reference",
+      "text": "The court held that Beacon Point's Quote, though identified in block 29 of the SF 1449 contract form as \"ACCEPTED,\" was not incorporated by reference to bring its terms and conditions into the contract. Under the established standard from CSI Aviation and Northrop Grumman, incorporation requires clear and express language that unambiguously communicates the purpose to incorporate the referenced material; a mere reference to a document, or acceptance language that leaves items blank (\"ACCEPTED AS TO ITEMS: [Blank]\"), does not suffice. The court rejected reliance on extrinsic evidence of contract formation (email exchanges) to establish incorporation, holding that contract interpretation must begin with the written agreement's plain language.",
+      "location": null
+     }
+    ],
+    "holding": "This decision confirms that incorporation by reference into Federal Acquisition Regulation (FAR) contracts requires clear, express language in the integrating document itself that unambiguously communicates the intent to incorporate\u2014mere identification or acceptance of a referenced offer is insufficient, particularly when the incorporating clause leaves material terms (such as which items are accepted) blank. The decision reinforces that extrinsic evidence of the parties' intent cannot overcome ambiguous or incomplete contract language on incorporation, establishing a strict textual standard for federal procurement disputes."
+   },
    "url_cl": "https://www.courtlistener.com/docket/68002341/beacon-point-associates-llc-v-dva/",
    "url_audio": "https://www.courtlistener.com/audio/97507/beacon-point-associates-llc-v-dva/"
   },
@@ -62989,7 +63844,16 @@
    "patent_issues": [
     "Other / Procedural"
    ],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "District Court Judgment",
+      "text": "The Federal Circuit affirmed the district court's judgment in its entirety pursuant to Federal Circuit Rule 36, which permits summary affirmance without opinion when the court determines the decision presents no substantial question of law or fact warranting written analysis.",
+      "location": "Page 2"
+     }
+    ],
+    "holding": "Affirmed the district court judgment in cases 1:19-cv-01388-SLD-JEH and 4:20-cv-04069-SLD-JEH."
+   },
    "url_cl": "https://www.courtlistener.com/docket/68360842/dura-systems-barriers-inc-v-van-packer-co/",
    "url_audio": "https://www.courtlistener.com/audio/99317/dura-systems-barriers-inc-v-van-packer-co/"
   },
@@ -63009,11 +63873,38 @@
     "url_cl": "https://www.courtlistener.com/opinion/10598964/dolby-laboratories-licensing-corporation-v-unified-patents-llc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/23-2110.OPINION.6-5-2025_2525678.pdf"
    },
-   "panel": [],
-   "patent_issues": [
-    "Other / Procedural"
+   "panel": [
+    {
+     "name": "Moore",
+     "role": "Author"
+    },
+    {
+     "name": "Clevenger",
+     "role": "Panel"
+    },
+    {
+     "name": "Chen",
+     "role": "Panel"
+    }
    ],
-   "summary": null,
+   "patent_issues": [
+    "PTAB Procedure & Standing"
+   ],
+   "summary": {
+    "segments": [
+     {
+      "issue": "Article III Standing to Appeal",
+      "text": "Dolby lacks Article III standing to appeal the Board's final written decision because it failed to establish an injury in fact. The court rejected three bases for standing: (1) 35 U.S.C. \u00a7 319's statutory right of a \"dissatisfied\" party does not obviate Article III injury-in-fact requirements; (2) 35 U.S.C. \u00a7 312(a)(2) does not create a freestanding informational right, and the AIA bars judicial review of institution decisions concerning RPI identification; and (3) alleged harms from the Board's refusal to adjudicate the RPI dispute\u2014including potential license breaches, judicial conflicts of interest, estoppel problems, and reduced IPR incentives\u2014are too speculative and conjectural to constitute concrete injury.",
+      "location": "Pages 3\u20138"
+     },
+     {
+      "issue": "RPI Identification Adjudication",
+      "text": "The Board properly declined to adjudicate whether nine other entities should have been named as real parties in interest (RPIs) under 37 C.F.R. \u00a7 42.8(b)(1), following the precedential SharkNinja decision and the PTO's practice of only resolving RPI disputes when material to the proceeding. The Board determined adjudication was unnecessary because there was no evidence the alleged RPIs were time-barred or estopped under 35 U.S.C. \u00a7 315 or that Unified purposefully omitted them to gain advantage.",
+      "location": "Pages 2\u20133"
+     }
+    ],
+    "holding": "This decision clarifies that Article III standing requirements apply to appeals of PTAB final decisions in IPR proceedings, notwithstanding statutory appeal rights under 35 U.S.C. \u00a7 319, and confirms that the AIA does not create a freestanding informational right to disclosure of RPI identities. The decision also affirms the Board's practice of adjudicating RPI disputes only when material to the proceeding rather than routinely, consistent with cost and efficiency considerations. The ruling significantly narrows patent owners' ability to challenge IPR procedure on grounds of incomplete RPI disclosure when they cannot demonstrate concrete, particularized injury."
+   },
    "url_cl": "https://www.courtlistener.com/docket/68822179/dolby-laboratories-licensing-corporation-v-unified-patents-llc/",
    "url_audio": "https://www.courtlistener.com/audio/98690/dolby-laboratories-licensing-corporation-v-unified-patents-llc/"
   },
@@ -63033,9 +63924,46 @@
     "url_cl": "https://www.courtlistener.com/opinion/10598960/la-molisana-spa-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/23-2060.OPINION.6-5-2025_2525658.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Stoll",
+     "role": "Author"
+    },
+    {
+     "name": "Lourie",
+     "role": "Panel"
+    },
+    {
+     "name": "Schall",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "FDA Rounding Impact on Protein Content",
+      "text": "The court vacated Commerce's determination that FDA-mandated rounding rules for protein content labeling were not commercially significant. The Tariff Act requires comparison of merchandise identical in physical characteristics, and Commerce's failure to account for how rounding artificially inflates U.S. product labels (causing products under 12.5% protein to appear above the threshold) undermines accurate model-match coding under 19 U.S.C. \u00a7 1677(16)(A).",
+      "location": null
+     },
+     {
+      "issue": "Nitrogen Conversion Factor Adjustment",
+      "text": "The court vacated Commerce's rejection of La Molisana's argument that different U.S. and Italian nitrogen-to-protein conversion factors should be adjusted for in model-match coding. The methodology must reflect identical physical characteristics as required by the Tariff Act, and systematic differences in how protein is calculated between markets create non-comparable measurements that warrant adjustment or explanation.",
+      "location": null
+     },
+     {
+      "issue": "Protein Content Breakpoint (12.5%)",
+      "text": "The court affirmed Commerce's determination that the 12.5% protein breakpoint between standard and premium pasta remained appropriate, finding substantial evidence that La Molisana's Market Report (based on limited U.S. retailers) and the single Bologna Grain Exchange's 13.5% proposal were insufficient to demonstrate an industry-wide change warranting revision of the model-match criterion.",
+      "location": null
+     },
+     {
+      "issue": "Model-Match Methodology - Physical Characteristics",
+      "text": "The court held that Commerce's reliance on packaging label information to define physical characteristics for CONNUM assignment departs from the statutory requirement to compare merchandise identical in physical characteristics, as the Tariff Act focuses on the product itself, not its packaging, though the court noted this as an observation rather than a basis for reversal on rounding and conversion factors alone.",
+      "location": null
+     }
+    ],
+    "holding": "This decision clarifies that under 19 U.S.C. \u00a7 1677(16)(A), Commerce's model-match methodology for determining dumping margins must account for systematic measurement differences (such as FDA rounding and nitrogen conversion factors) that artificially create apparent dissimilarities between physically identical products sold in different markets, and cannot rely on packaging labels as a proxy for physical characteristics of the merchandise itself. The decision does not establish a bright-line rule but requires Commerce to address how measurement protocols affect comparisons of merchandise that should be treated as identical in physical characteristics."
+   },
    "url_cl": "https://www.courtlistener.com/docket/67523839/la-molisana-spa-v-united-states/",
    "url_audio": "https://www.courtlistener.com/audio/95150/la-molisana-spa-v-united-states/"
   },
@@ -63055,9 +63983,41 @@
     "url_cl": "https://www.courtlistener.com/opinion/10598961/gavin-v-opm/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-2182.OPINION.6-5-2025_2525748.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Hall",
+     "role": "Author"
+    },
+    {
+     "name": "Moore",
+     "role": "Panel"
+    },
+    {
+     "name": "Prost",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "FERS Overpayment Waiver",
+      "text": "The court affirmed the Board's denial of Ms. Gavin's waiver request for repayment of a $52,186 FERS disability benefit overpayment under 5 U.S.C. \u00a7 8346(b). Although Ms. Gavin was without fault in causing the overpayment, the set-aside rule applied because she knew or should have known the payment was erroneous after receiving multiple OPM notices instructing her to hold retroactive Social Security payments to cover the anticipated overpayment.",
+      "location": null
+     },
+     {
+      "issue": "Exceptional Circumstances Finding",
+      "text": "The court affirmed that Ms. Gavin identified no exceptional circumstances warranting waiver under OPM's policy guidelines. While OPM's three-year response delay to her waiver request was lengthy, it fell short of the four-year threshold for egregious delay, and Ms. Gavin made no inquiries during that period; additionally, financial hardship is explicitly excluded as an exceptional circumstance.",
+      "location": null
+     },
+     {
+      "issue": "Forfeiture of Overpayment Amount Challenge",
+      "text": "The court declined to address Ms. Gavin's argument, raised for the first time on appeal, that the overpayment amount should be reduced to account for life insurance, health insurance deductions, and tax implications. The argument was forfeited because Ms. Gavin failed to raise it before the Board and did not submit the required Financial Resources Questionnaire needed for a recovery schedule adjustment.",
+      "location": null
+     }
+    ],
+    "holding": "The Federal Circuit affirmed the Merit Systems Protection Board's final decision upholding OPM's denial of a waiver from repayment of FERS overpayment, finding that the set-aside rule applied, no exceptional circumstances justified waiver, and financial hardship alone cannot excuse repayment obligations."
+   },
    "url_cl": "https://www.courtlistener.com/docket/69574985/gavin-v-opm/",
    "url_audio": null
   },
@@ -63081,7 +64041,16 @@
    "patent_issues": [
     "Other / Procedural"
    ],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "District court judgment",
+      "text": "The Federal Circuit affirmed the district court's judgment in its entirety under Federal Circuit Rule 36, which permits summary affirmance of district court decisions without further opinion when the result is obvious or the prior proceedings adequately address the issues.",
+      "location": null
+     }
+    ],
+    "holding": "The district court's judgment was affirmed without additional written analysis."
+   },
    "url_cl": "https://www.courtlistener.com/docket/68182327/personal-audio-llc-v-google-llc/",
    "url_audio": "https://www.courtlistener.com/audio/99267/personal-audio-llc-v-google-llc/"
   },
@@ -63101,9 +64070,36 @@
     "url_cl": "https://www.courtlistener.com/opinion/10598127/bannister-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/23-1978.OPINION.6-4-2025_2524969.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Moore",
+     "role": "Author"
+    },
+    {
+     "name": "Lourie",
+     "role": "Panel"
+    },
+    {
+     "name": "Stark",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Applicable SBP Statute Section",
+      "text": "Section 1448(d) governs entitlement to General Bannister's Survivor Benefit Plan annuity, not section 1448(a), because General Bannister died on active duty before becoming entitled to retired pay. The plain language of \u00a7 1448(d)(1)(A)(i) applies to servicemembers \"who die[] while on active duty after . . . becoming eligible to receive retired pay,\" which matches the facts here, whereas \u00a7 1448(a) applies only to those already \"entitled to retired pay.\"",
+      "location": "Section I"
+     },
+     {
+      "issue": "Surviving Spouse SBP Entitlement",
+      "text": "Mrs. Bannister, the surviving spouse, is the proper beneficiary of the SBP annuity under 10 U.S.C. \u00a7 1448(d)(3) because the former spouse exception does not apply. The statute requires a former spouse to submit a timely written request for a deemed election under \u00a7 1450(f)(3), which Ms. Erickson failed to do; reading subparts (A) and (B) together as an interconnected unit shows the written request requirement applies to both election scenarios in the preamble, not just one.",
+      "location": "Section II"
+     }
+    ],
+    "holding": "The decision clarifies that under 10 U.S.C. \u00a7 1448(d)(3), the written request requirement for a former spouse's deemed election is mandatory and applies to both the court-order-or-spousal-agreement scenario and the voluntary-election scenario enumerated in the preamble. The holding confirms that failure to timely submit such a written request defeats a former spouse's claim and restores entitlement to the default beneficiary (surviving spouse), preventing a gap where neither spouse would receive benefits."
+   },
    "url_cl": "https://www.courtlistener.com/opinion/10598127/bannister-v-united-states/",
    "url_audio": "https://www.courtlistener.com/audio/96136/bannister-v-united-states/"
   },
@@ -63123,11 +64119,38 @@
     "url_cl": "https://www.courtlistener.com/opinion/10598134/alnylam-pharmaceuticals-inc-v-moderna-inc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/23-2357.OPINION.6-4-2025_2525006.pdf"
    },
-   "panel": [],
-   "patent_issues": [
-    "Other / Procedural"
+   "panel": [
+    {
+     "name": "Taranto",
+     "role": "Author"
+    },
+    {
+     "name": "Chen",
+     "role": "Panel"
+    },
+    {
+     "name": "Hughes",
+     "role": "Panel"
+    }
    ],
-   "summary": null,
+   "patent_issues": [
+    "\u00a7 112 / Claim Construction"
+   ],
+   "summary": {
+    "segments": [
+     {
+      "issue": "Lexicographer Definition of 'Branched Alkyl'",
+      "text": "The district court correctly held that Alnylam acted as lexicographer by providing an explicit definition of 'branched alkyl' in the patent specification requiring that \"one carbon atom in the group (1) is bound to at least three other carbon atoms and (2) is not a ring atom of a cyclic group.\" Under patent law, a patentee may adopt special definitions that depart from ordinary meaning if clearly stated in the specification, and Alnylam's definition satisfied that requirement. The Court affirmed that this lexicographic definition governs the construction of the disputed claim terms without deference under the de novo review standard applied when intrinsic evidence alone determines claim construction.",
+      "location": "Page 8-9"
+     },
+     {
+      "issue": "'Unless Otherwise Specified' Proviso",
+      "text": "Even accepting the column 412 definition as lexicographic, Alnylam argued that the definition's \"[u]nless otherwise specified\" language allowed the claims at issue to be interpreted more broadly to include secondary carbons at the alpha position. The Court rejected this argument, holding that Alnylam did not otherwise specify different requirements in the asserted claims themselves, and therefore the strict lexicographic definition applied uniformly across all claims. Alnylam failed to point to any clear and unmistakable departure from the stated definition within the claim language or written description.",
+      "location": "Page 9"
+     }
+    ],
+    "holding": "The decision confirms that when a patentee provides an explicit, unambiguous definition in the specification using lexicographic language, that definition governs claim construction unless the patentee clearly marks a departure within the specific claims at issue. The opinion does not establish new precedent on lexicography doctrine but applies established principles to affirm the district court's construction based on the intrinsic record, making it a fact-bound application rather than a meaningful clarification of patent law."
+   },
    "url_cl": "https://www.courtlistener.com/docket/68282436/alnylam-pharmaceuticals-inc-v-moderna-inc/",
    "url_audio": "https://www.courtlistener.com/audio/98364/alnylam-pharmaceuticals-inc-v-moderna-inc/"
   },
@@ -63149,9 +64172,18 @@
    },
    "panel": [],
    "patent_issues": [
-    "Other / Procedural"
+    "PTAB Procedure & Standing"
    ],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "PTAB IPR Decisions",
+      "text": "The court affirmed the Patent Trial and Appeal Board's decisions in all four inter partes review proceedings (IPR2022-00423, IPR2022-00590, IPR2022-00591, IPR2022-00592) brought by Microsoft against Surfcast's patents. The affirmance was entered summarily under Federal Circuit Rule 36, indicating no precedential opinion was warranted.",
+      "location": "Page 2"
+     }
+    ],
+    "holding": "All four PTAB inter partes review decisions against Surfcast were affirmed."
+   },
    "url_cl": "https://www.courtlistener.com/docket/70447057/surfcast-inc-v-microsoft-corporation/",
    "url_audio": "https://www.courtlistener.com/audio/99264/surfcast-inc-v-microsoft-corporation/"
   },
@@ -63173,7 +64205,16 @@
    },
    "panel": [],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Petition Dismissal for Rule Non-Compliance",
+      "text": "The Federal Circuit dismissed the petition for review under its procedural rules because the petitioner failed to pay the docketing fee required by Federal Circuit Rule 52(a)(1) and failed to file the required Statement Concerning Discrimination. The dismissal was ordered for failure to prosecute in accordance with the court's rules.",
+      "location": null
+     }
+    ],
+    "holding": null
+   },
    "url_cl": "https://www.courtlistener.com/opinion/10598458/binns-v-mspb/",
    "url_audio": null
   },
@@ -63193,9 +64234,31 @@
     "url_cl": "https://www.courtlistener.com/opinion/10598126/butler-v-army/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-2337.OPINION.6-4-2025_2524984.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Dyk",
+     "role": "Panel"
+    },
+    {
+     "name": "Schall",
+     "role": "Panel"
+    },
+    {
+     "name": "Chen",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "MSPB Dismissal for Non-Cooperation",
+      "text": "The Board's dismissal of Butler's petition for enforcement was affirmed as supported by substantial evidence under 5 U.S.C. \u00a7 7703(c). Butler failed to provide dates of incapacity due to illness or injury required by 5 C.F.R. \u00a7 550.805(c)(1) to calculate back pay, despite the Army's requests and the Board's explicit order to do so, warranting dismissal for failure to cooperate.",
+      "location": null
+     }
+    ],
+    "holding": "The Federal Circuit affirmed the Merit Systems Protection Board's dismissal of Butler's petition for enforcement of a back pay order, finding the dismissal was supported by substantial evidence where Butler failed to provide required information about periods of incapacity despite agency requests and a Board order to do so."
+   },
    "url_cl": "https://www.courtlistener.com/opinion/10598126/butler-v-army/",
    "url_audio": null
   },
@@ -63239,7 +64302,21 @@
    },
    "panel": [],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Appeal Dismissal",
+      "text": "The Federal Circuit dismissed the appeal from the PTAB pursuant to Fed. R. App. P. 42(b) based on the parties' agreement to dismiss. The court found no bar to dismissal and ordered the proceeding terminated.",
+      "location": null
+     },
+     {
+      "issue": "Cost Allocation",
+      "text": "Each party was ordered to bear its own costs in the dismissed appeal, declining to award costs to either side despite the termination of the case.",
+      "location": null
+     }
+    ],
+    "holding": "Appeal dismissed by stipulation under Fed. R. App. P. 42(b) with each party bearing its own costs."
+   },
    "url_cl": "https://www.courtlistener.com/opinion/10597421/hanshow-america-inc-v-ses-imagotag-inc/",
    "url_audio": null
   },
@@ -63261,7 +64338,16 @@
    },
    "panel": [],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Appeal Dismissal",
+      "text": "The Federal Circuit dismissed the appeal under Federal Rule of Appellate Procedure 42(b) upon agreement of the parties. The parties' stipulation to dismiss rendered the underlying Patent Trial and Appeal Board proceeding in IPR2024-00188 moot on appeal.",
+      "location": null
+     }
+    ],
+    "holding": "Appeal dismissed by stipulation; each party bears its own costs."
+   },
    "url_cl": "https://www.courtlistener.com/opinion/10597422/hanshow-america-inc-v-ses-imagotag-gmbh/",
    "url_audio": null
   },
@@ -63283,7 +64369,16 @@
    },
    "panel": [],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Voluntary Dismissal of Appeal",
+      "text": "Kinze's unopposed motion to voluntarily dismiss Appeal No. 2025-1720 was granted under Fed. R. App. P. 42(b), resulting in dismissal of that appeal. Each party bears its own costs with respect to the dismissed appeal.",
+      "location": "Page 2"
+     }
+    ],
+    "holding": null
+   },
    "url_cl": "https://www.courtlistener.com/opinion/10597399/jm-manufacturing-co-inc-v-kinze-manufacturing-inc/",
    "url_audio": "https://www.courtlistener.com/audio/106745/jm-manufacturing-co-inc-v-kinze-manufacturing-inc/"
   },
@@ -63321,7 +64416,21 @@
    },
    "panel": [],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Appeal Dismissal",
+      "text": "The court dismissed the entire proceeding under Federal Rules of Appellate Procedure 42(b) pursuant to the parties' agreement, vacating the appeal from the United States Court of Federal Claims.",
+      "location": "Order (1)"
+     },
+     {
+      "issue": "Cost Allocation",
+      "text": "Each party bears its own costs as a result of the dismissal agreed to by both sides.",
+      "location": "Order (2)"
+     }
+    ],
+    "holding": null
+   },
    "url_cl": "https://www.courtlistener.com/opinion/10596592/red-cedar-harmonia-llc-v-united-states/",
    "url_audio": null
   },
@@ -63345,7 +64454,16 @@
    "patent_issues": [
     "Other / Procedural"
    ],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Appeal Dismissal",
+      "text": "The Court dismissed the entire proceeding pursuant to Fed. R. App. P. 42(b) based on the parties' agreement to settlement or withdrawal of the appeal.",
+      "location": null
+     }
+    ],
+    "holding": null
+   },
    "url_cl": "https://www.courtlistener.com/docket/69459583/qorvo-inc-v-akoustis-technologies-inc/",
    "url_audio": null
   },
@@ -63381,9 +64499,31 @@
     "url_cl": "https://www.courtlistener.com/opinion/10595504/herrington-v-collins/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/23-2358.OPINION.5-30-2025_2522915.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Moore",
+     "role": "Author"
+    },
+    {
+     "name": "Cunningham",
+     "role": "Panel"
+    },
+    {
+     "name": "Scarsi",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Standard of Review for Analogous Diagnostic Code Selection",
+      "text": "The Federal Circuit held that selection of an analogous diagnostic code under 38 C.F.R. \u00a7 4.20 for rating unlisted conditions constitutes a question of fact or application of law to facts, not a pure question of law, and therefore is reviewed under the deferential \"arbitrary, capricious, an abuse of discretion, or otherwise not in accordance with law\" standard of 38 U.S.C. \u00a7 7261(a)(3)(A), not de novo review. The court reasoned that the regulation's requirement to evaluate \"functions affected,\" \"anatomical localization,\" and \"symptomatology\" is fact-intensive and requires specialized expertise analogous to diagnostic code selection for listed conditions, which Federal Circuit precedent already reviewed deferentially.",
+      "location": "Pages 3-4"
+     }
+    ],
+    "holding": "The Federal Circuit clarified that the deferential abuse-of-discretion standard applies to the Board of Veterans' Appeals' selection of analogous diagnostic codes for unlisted disabilities under 38 C.F.R. \u00a7 4.20, resolving a question of first impression. This precedent establishes that such decisions are treated as factual or mixed fact-law determinations subject to Chevron-style deference rather than de novo appellate review, consistent with the Supreme Court's recent statement in Bufkin v. Collins regarding the appropriate level of deference for fact-intensive administrative determinations."
+   },
    "url_cl": "https://www.courtlistener.com/opinion/10595504/herrington-v-collins/",
    "url_audio": "https://www.courtlistener.com/audio/98712/herrington-v-collins/"
   },
@@ -63405,7 +64545,21 @@
    },
    "panel": [],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Appeal Dismissal",
+      "text": "The Federal Circuit dismissed the appeal by stipulated agreement of the parties pursuant to Fed. R. App. P. 42(b), which permits dismissal when both parties consent to termination of the proceedings.",
+      "location": null
+     },
+     {
+      "issue": "Cost Allocation",
+      "text": "Each party shall bear its own costs, reflecting an equal allocation of expenses with no prevailing party fee award or cost-shifting.",
+      "location": null
+     }
+    ],
+    "holding": null
+   },
    "url_cl": "https://www.courtlistener.com/opinion/10595729/hanshow-america-inc-v-ses-imagotag-inc/",
    "url_audio": null
   },
@@ -63427,7 +64581,16 @@
    },
    "panel": [],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Appeal Dismissal",
+      "text": "The Federal Circuit dismissed the entire appeal pursuant to Federal Rule of Appellate Procedure 42(b) by agreement of the parties. Each party bears its own costs.",
+      "location": null
+     }
+    ],
+    "holding": null
+   },
    "url_cl": "https://www.courtlistener.com/opinion/10595690/nortrup-v-general-motors-llc/",
    "url_audio": null
   },
@@ -63479,9 +64642,68 @@
     "url_cl": "https://www.courtlistener.com/opinion/10594911/vos-selections-inc-v-trump/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1812.ORDER.5-29-2025_2522636.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Moore",
+     "role": "Panel"
+    },
+    {
+     "name": "Lourie",
+     "role": "Panel"
+    },
+    {
+     "name": "Dyk",
+     "role": "Panel"
+    },
+    {
+     "name": "Prost",
+     "role": "Panel"
+    },
+    {
+     "name": "Reyna",
+     "role": "Panel"
+    },
+    {
+     "name": "Taranto",
+     "role": "Panel"
+    },
+    {
+     "name": "Chen",
+     "role": "Panel"
+    },
+    {
+     "name": "Hughes",
+     "role": "Panel"
+    },
+    {
+     "name": "Stoll",
+     "role": "Panel"
+    },
+    {
+     "name": "Cunningham",
+     "role": "Panel"
+    },
+    {
+     "name": "Stark",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Appeal Consolidation",
+      "text": "The Federal Circuit granted the United States's motion to consolidate two related appeals from the Court of International Trade, directing that only one set of briefs be filed for both cases rather than separate briefs for each appeal.",
+      "location": null
+     },
+     {
+      "issue": "Administrative Stay Pending Appeal",
+      "text": "The court granted an immediate administrative stay of the judgments and permanent injunctions entered by the Court of International Trade, temporarily staying those orders pending the court's consideration of the United States's full stay motions on the merits.",
+      "location": null
+     }
+    ],
+    "holding": null
+   },
    "url_cl": "https://www.courtlistener.com/docket/70394463/vos-selections-inc-v-trump/",
    "url_audio": "https://www.courtlistener.com/audio/99869/vos-selections-inc-v-trump/"
   },
@@ -63503,7 +64725,16 @@
    },
    "panel": [],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Appeal Dismissal",
+      "text": "The Federal Circuit dismissed the entire proceeding pursuant to Fed. R. App. P. 42(b) based on the parties' agreement to do so. Each party bears its own costs.",
+      "location": null
+     }
+    ],
+    "holding": "The appeal was dismissed by stipulated agreement of the parties under Federal Rule of Appellate Procedure 42(b)."
+   },
    "url_cl": "https://www.courtlistener.com/opinion/10594700/med-el-elektromedizinische-gerate-gmbh-v-advanced-bionics-llc/",
    "url_audio": null
   },
@@ -63523,9 +64754,31 @@
     "url_cl": "https://www.courtlistener.com/opinion/10593646/belger-v-collins/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1034.OPINION.5-28-2025_2521383.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Reyna",
+     "role": "Author"
+    },
+    {
+     "name": "Schall",
+     "role": "Panel"
+    },
+    {
+     "name": "Hughes",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Federal Circuit Jurisdiction",
+      "text": "The court dismissed the appeal for lack of jurisdiction under 38 U.S.C. \u00a7 7292(d)(2). Mr. Belger's challenge to the Veterans Court's application of issue exhaustion constituted a challenge to law as applied to facts rather than a pure issue of legal interpretation, placing it outside the Federal Circuit's exclusive jurisdiction over statutory and regulatory interpretation.",
+      "location": "DISCUSSION"
+     }
+    ],
+    "holding": "Appeal dismissed for lack of jurisdiction because the appellant's challenge to the Veterans Court's invocation of issue exhaustion doctrine presented only an application of law to facts, not a pure legal question within the Federal Circuit's exclusive jurisdiction under 38 U.S.C. \u00a7 7292."
+   },
    "url_cl": "https://www.courtlistener.com/opinion/10593646/belger-v-collins/",
    "url_audio": "https://www.courtlistener.com/audio/97547/belger-v-collins/"
   },
@@ -63547,7 +64800,16 @@
    },
    "panel": [],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Federal Circuit Jurisdiction",
+      "text": "The Federal Circuit lacks jurisdiction over this appeal because the case does not arise under patent law, do not involve patent matters, and does not fall within the court's limited jurisdiction under 28 U.S.C. \u00a7 1295(a). The case was therefore transferred to the United States Court of Appeals for the Sixth Circuit pursuant to 28 U.S.C. \u00a7 1631.",
+      "location": "Page 2"
+     }
+    ],
+    "holding": "Appeal transferred to Sixth Circuit due to lack of Federal Circuit jurisdiction."
+   },
    "url_cl": "https://www.courtlistener.com/opinion/10593645/lowery-v-cheboygan-area-public-schools/",
    "url_audio": null
   },
