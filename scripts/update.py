@@ -1400,10 +1400,34 @@ def build() -> dict:
         if cached_panel:
             panel = list(cached_panel)
 
+        # ---- load cached issues + summary FIRST — the very next block needs
+        # to know whether a summary already exists to decide whether this
+        # case actually needs a text fetch. (Previously this load happened
+        # after that decision, so every non-Rule-36 case looked like it
+        # needed a summary regardless of whether it already had one — the
+        # text-fetch budget got burned re-fetching already-complete cases
+        # every run instead of ever reaching the ones that still needed it.)
+        issues, summary = [], None
+        is_patent = case_type.startswith(("Patent", "ITC"))
+        cache_key = f"cl-{clid}"
+
+        cached = cache.get(cache_key)
+        if isinstance(cached, list):
+            cached = {"issues": cached, "summary": None}
+        if cached:
+            issues = cached.get("issues") or []
+            summary = cached.get("summary")
+
+        if is_patent and not issues:
+            seed_text = " ".join(str(x or "") for x in (
+                cl.get("syllabus"), cl.get("headnotes"),
+                cl.get("disposition"), cl.get("case_name")))
+            issues = classify_issues_keywords(seed_text)
+
         opinion_text = ""
         needs_panel = not panel
-        needs_issues = case_type.startswith(("Patent", "ITC"))
-        needs_summary = ANTHROPIC_ENABLED and not is_r36_case
+        needs_issues = is_patent and not issues
+        needs_summary = ANTHROPIC_ENABLED and not summary and not is_r36_case
 
         if enrich_pdf and text_fetches < MAX_OPINION_TEXT_FETCHES \
                 and (needs_panel or needs_issues or needs_summary):
@@ -1429,24 +1453,6 @@ def build() -> dict:
                       if cl.get("absolute_url") else None,
             "url_pdf": enrich_pdf or (rss_hit.get("url") or None),
         }
-
-        # ---- issues + summary from the same text --------------------------
-        issues, summary = [], None
-        is_patent = case_type.startswith(("Patent", "ITC"))
-        cache_key = f"cl-{clid}"
-
-        cached = cache.get(cache_key)
-        if isinstance(cached, list):
-            cached = {"issues": cached, "summary": None}
-        if cached:
-            issues = cached.get("issues") or []
-            summary = cached.get("summary")
-
-        if is_patent and not issues:
-            seed_text = " ".join(str(x or "") for x in (
-                cl.get("syllabus"), cl.get("headnotes"),
-                cl.get("disposition"), cl.get("case_name")))
-            issues = classify_issues_keywords(seed_text)
 
         if not opinion_text and cache_key:
             lead_ops = ops_by_cluster.get(clid, [])
