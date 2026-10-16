@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-16T18:56:39+00:00",
+ "generated_at": "2026-10-16T19:58:40+00:00",
  "window_since": "2020-01-01",
  "coverage": {
   "complete": true,
@@ -12,19 +12,19 @@
    "dockets": {
     "complete": true,
     "reason": "ok",
-    "count": 0,
+    "count": 1,
     "resume_url": null
    },
    "clusters": {
     "complete": true,
     "reason": "ok",
-    "count": 0,
+    "count": 17,
     "resume_url": null
    },
    "opinions": {
     "complete": true,
     "reason": "ok",
-    "count": 2,
+    "count": 0,
     "resume_url": null
    },
    "audio": {
@@ -39,33 +39,145 @@
     "reason": "ok"
    },
    "opinion_rss": {
-    "count": 0,
+    "count": 100,
     "complete": true,
     "reason": "ok"
    }
   },
   "summaries": {
    "enabled": true,
-   "have": 1477,
-   "expected": 7924,
+   "have": 1492,
+   "expected": 7928,
    "complete": false
   },
   "opinion_text_fetches_this_run": 600,
   "opinion_text_fetch_cap": 600,
-  "latest_decision_date": "2026-10-15",
+  "latest_decision_date": "2026-10-16",
   "next_argument_date": null
  },
  "stats": {
-  "total": 8833,
+  "total": 8837,
   "pending": 862,
   "scheduled": 0,
-  "awaiting": 47,
-  "decided": 7924,
+  "awaiting": 46,
+  "decided": 7929,
   "precedential": 1444,
-  "rule36": 0
+  "rule36": 1
  },
  "upcoming_argument_docket_numbers": [],
  "cases": [
+  {
+   "docket_number": "CL-11037057",
+   "case_name": "Bevirt v. United States",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-10-16",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/11037057/bevirt-v-united-states/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1703.ORDER.10-16-2026_2772432.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/11037057/bevirt-v-united-states/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "CL-11037056",
+   "case_name": "Micron Technology, Inc. v. Netlist, Inc.",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-10-16",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/11037056/micron-technology-inc-v-netlist-inc/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1671.ORDER.10-16-2026_2772439.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/11037056/micron-technology-inc-v-netlist-inc/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "2024-2281",
+   "case_name": "Micron Technology, Inc. v. Netlist, Inc.",
+   "case_type": "Patent (District Ct.)",
+   "origin": "United States District Court for the District of Idaho",
+   "status": "Decided",
+   "date_filed": "2024-09-03",
+   "date_argued": "2026-06-05",
+   "argument": null,
+   "decision": {
+    "date": "2026-10-16",
+    "precedential_status": "Unpublished",
+    "disposition": "Order",
+    "url_cl": "https://www.courtlistener.com/opinion/11036986/micron-technology-inc-v-netlist-inc/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-2281.ORDER.10-16-2026_2772309.pdf"
+   },
+   "panel": [],
+   "patent_issues": [
+    "Other / Procedural"
+   ],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/70803592/micron-technology-inc-v-netlist-inc/",
+   "url_audio": "https://www.courtlistener.com/audio/105317/micron-technology-inc-v-netlist-inc/"
+  },
+  {
+   "docket_number": "CL-11036901",
+   "case_name": "Abreu Velez v. Hhs",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-10-16",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/11036901/abreu-velez-v-hhs/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1715.OPINION.10-16-2026_2772133.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/11036901/abreu-velez-v-hhs/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "CL-11036900",
+   "case_name": "Linden v. Resmed, Inc.",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-10-16",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/11036900/linden-v-resmed-inc/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1517.OPINION.10-16-2026_2772123.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/11036900/linden-v-resmed-inc/",
+   "url_audio": null
+  },
   {
    "docket_number": "CL-11035220",
    "case_name": "Moralez-Piper v. MSPB",
@@ -660,7 +772,7 @@
    "decision": {
     "date": "2026-10-06",
     "precedential_status": "Unpublished",
-    "disposition": null,
+    "disposition": "Order",
     "url_cl": "https://www.courtlistener.com/opinion/11012804/inari-agriculture-inc-v-corteva-agriscience-llc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1323.ORDER.10-6-2026_2767008.pdf"
    },
@@ -684,7 +796,7 @@
    "decision": {
     "date": "2026-10-05",
     "precedential_status": "Unpublished",
-    "disposition": null,
+    "disposition": "Opinion",
     "url_cl": "https://www.courtlistener.com/opinion/11010501/alexsam-inc-v-simon-property-group-lp/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1138.OPINION.10-5-2026_2766082.pdf"
    },
@@ -798,7 +910,7 @@
    "decision": {
     "date": "2026-10-01",
     "precedential_status": "Unpublished",
-    "disposition": null,
+    "disposition": "Opinion",
     "url_cl": "https://www.courtlistener.com/opinion/11007605/truinject-corp-v-galderma-sa/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1268.OPINION.10-1-2026_2764692.pdf"
    },
@@ -844,7 +956,7 @@
    "decision": {
     "date": "2026-09-30",
     "precedential_status": "Published",
-    "disposition": null,
+    "disposition": "Order",
     "url_cl": "https://www.courtlistener.com/opinion/10990709/teva-pharmaceuticals-international-gmbh-v-eli-lilly-and-company/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1094.ORDER.9-30-2026_2764316.pdf"
    },
@@ -958,7 +1070,7 @@
    "decision": {
     "date": "2026-09-30",
     "precedential_status": "Published",
-    "disposition": null,
+    "disposition": "Opinion",
     "url_cl": "https://www.courtlistener.com/opinion/10988015/parkervision-inc-v-qualcomm-incorporated/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1033.OPINION.9-30-2026_2763891.pdf"
    },
@@ -982,7 +1094,7 @@
    "decision": {
     "date": "2026-09-30",
     "precedential_status": "Published",
-    "disposition": null,
+    "disposition": "Opinion",
     "url_cl": "https://www.courtlistener.com/opinion/10988017/epic-tech-llc-v-pen-tech-associates-inc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1624.OPINION.9-30-2026_2763904.pdf"
    },
@@ -1096,7 +1208,7 @@
    "decision": {
     "date": "2026-09-29",
     "precedential_status": "Unpublished",
-    "disposition": null,
+    "disposition": "Order",
     "url_cl": "https://www.courtlistener.com/opinion/10986190/north-east-mobile-health-services-v-secretary-of-veterans-affairs/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1449.ORDER.9-29-2026_2763572.pdf"
    },
@@ -1246,7 +1358,7 @@
    "decision": {
     "date": "2026-09-25",
     "precedential_status": "Unpublished",
-    "disposition": null,
+    "disposition": "Opinion",
     "url_cl": "https://www.courtlistener.com/opinion/10983489/receivership-estate-of-audiencescience-inc-v-google-llc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1825.OPINION.9-25-2026_2761456.pdf"
    },
@@ -1286,7 +1398,7 @@
    "decision": {
     "date": "2026-09-23",
     "precedential_status": "Unpublished",
-    "disposition": null,
+    "disposition": "Opinion",
     "url_cl": "https://www.courtlistener.com/opinion/10980493/walker-v-collins/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1503.OPINION.9-23-2026_2760101.pdf"
    },
@@ -1510,7 +1622,7 @@
    "decision": {
     "date": "2026-09-21",
     "precedential_status": "Unpublished",
-    "disposition": null,
+    "disposition": "Opinion",
     "url_cl": "https://www.courtlistener.com/opinion/10978232/berkeleyieor-v-ww-grainger-inc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-2353.OPINION.9-21-2026_2758411.pdf"
    },
@@ -1666,7 +1778,7 @@
    "decision": {
     "date": "2026-09-18",
     "precedential_status": "Unpublished",
-    "disposition": null,
+    "disposition": "Order",
     "url_cl": "https://www.courtlistener.com/opinion/10976829/richards-v-kallish/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-2022.ORDER.9-18-2026_2757939.pdf"
    },
@@ -1690,7 +1802,7 @@
    "decision": {
     "date": "2026-09-18",
     "precedential_status": "Published",
-    "disposition": null,
+    "disposition": "Opinion",
     "url_cl": "https://www.courtlistener.com/opinion/10976772/tenaris-bay-city-inc-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1382.OPINION.9-18-2026_2757740.pdf"
    },
@@ -1712,7 +1824,7 @@
    "decision": {
     "date": "2026-09-18",
     "precedential_status": "Unpublished",
-    "disposition": null,
+    "disposition": "Opinion",
     "url_cl": "https://www.courtlistener.com/opinion/10976773/strong-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1335.OPINION.9-18-2026_2757725.pdf"
    },
@@ -1734,7 +1846,7 @@
    "decision": {
     "date": "2026-09-17",
     "precedential_status": "Unpublished",
-    "disposition": null,
+    "disposition": "Errata",
     "url_cl": "https://www.courtlistener.com/opinion/10975538/enanta-pharmaceuticals-inc-v-pfizer-inc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1427.ERRATA.9-17-2026_2757023.pdf"
    },
@@ -1758,7 +1870,7 @@
    "decision": {
     "date": "2026-09-17",
     "precedential_status": "Unpublished",
-    "disposition": null,
+    "disposition": "Order",
     "url_cl": "https://www.courtlistener.com/opinion/10975591/in-re-patel/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-149.ORDER.9-17-2026_2757049.pdf"
    },
@@ -1894,7 +2006,7 @@
    "decision": {
     "date": "2026-09-16",
     "precedential_status": "Published",
-    "disposition": null,
+    "disposition": "Opinion",
     "url_cl": "https://www.courtlistener.com/opinion/10974581/island-creek-associates-llc-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1140.OPINION.9-16-2026_2756263.pdf"
    },
@@ -2004,7 +2116,7 @@
    "decision": {
     "date": "2026-09-15",
     "precedential_status": "Unpublished",
-    "disposition": null,
+    "disposition": "Rule 36 Judgment",
     "url_cl": "https://www.courtlistener.com/opinion/10974176/abc-ip-llc-v-peak-tactical-llc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1527.RULE_36_JUDGMENT.9-15-2026_2755593.pdf"
    },
@@ -10386,7 +10498,7 @@
    "decision": {
     "date": "2026-06-23",
     "precedential_status": "Published",
-    "disposition": null,
+    "disposition": "Errata",
     "url_cl": "https://www.courtlistener.com/opinion/10878465/enanta-pharmaceuticals-inc-v-pfizer-inc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1427.OPINION.6-23-2026_2712960.pdf"
    },
@@ -17677,7 +17789,7 @@
    "decision": {
     "date": "2026-04-16",
     "precedential_status": "Published",
-    "disposition": null,
+    "disposition": "Order",
     "url_cl": "https://www.courtlistener.com/opinion/10843880/teva-pharmaceuticals-international-gmbh-v-eli-lilly-and-company/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1094.OPINION.4-16-2026_2677411.pdf"
    },
@@ -68205,9 +68317,41 @@
     "url_cl": "https://www.courtlistener.com/opinion/10551619/alshara-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1853.OPINION.5-7-2025_2510590.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Moore",
+     "role": "Panel"
+    },
+    {
+     "name": "Clevenger",
+     "role": "Panel"
+    },
+    {
+     "name": "Chen",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Tucker Act Jurisdictional Bars",
+      "text": "The Federal Circuit affirmed the Claims Court's dismissal of plaintiff's tort, criminal misconduct, and habeas corpus claims for lack of subject matter jurisdiction under the Tucker Act, 28 U.S.C. \u00a7 1491(a)(1), which does not grant the Claims Court jurisdiction over tort claims or review of other court decisions. The court applied the rule that jurisdictional requirements cannot be viewed leniently even for pro se litigants.",
+      "location": null
+     },
+     {
+      "issue": "Constitutional Claims Monetary Component",
+      "text": "The Federal Circuit affirmed dismissal of plaintiff's First, Eighth, Fourteenth Amendment, and Privacy Act claims for lack of Tucker Act jurisdiction because these claims lacked the requisite monetary component necessary to establish jurisdiction. The court held that \"[t]he absence of a money-mandating source is fatal to the [Claims Court's] jurisdiction under the Tucker Act.\"",
+      "location": null
+     },
+     {
+      "issue": "Fifth Amendment and Unjust Imprisonment",
+      "text": "The Federal Circuit affirmed dismissal of plaintiff's Fifth Amendment takings and unjust imprisonment claims for failure to state a claim upon which relief can be granted under RCFC 12(b)(6), finding that plaintiff had not sufficiently pleaded facts to meet the Twombly standard requiring factual allegations sufficient to raise a right to relief above the speculative level.",
+      "location": null
+     }
+    ],
+    "holding": "The Claims Court's dismissal of all claims for lack of subject matter jurisdiction and failure to state a claim was affirmed."
+   },
    "url_cl": "https://www.courtlistener.com/opinion/10551619/alshara-v-united-states/",
    "url_audio": null
   },
@@ -68229,7 +68373,16 @@
    },
    "panel": [],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Veterans Benefits Denial",
+      "text": "The Federal Circuit affirmed the Veterans Court's decision upholding the Secretary of Veterans Affairs' denial of claimant-appellant's veterans benefits claim. The court applied Federal Circuit Rule 36, indicating affirmance without precedential opinion on the merits.",
+      "location": null
+     }
+    ],
+    "holding": "The Secretary of Veterans Affairs' denial of Howard C. Modlin, Jr.'s veterans benefits claim was affirmed."
+   },
    "url_cl": "https://www.courtlistener.com/opinion/10551614/modlin-v-collins/",
    "url_audio": "https://www.courtlistener.com/audio/98688/modlin-v-collins/"
   },
@@ -68251,7 +68404,16 @@
    },
    "panel": [],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "ASBC Decision",
+      "text": "The Federal Circuit affirmed the Armed Services Board of Contract Appeals' decision without opinion pursuant to Federal Circuit Rule 36, which permits affirmance when the panel unanimously agrees that precedent clearly governs and no substantial question of law or policy is presented.",
+      "location": null
+     }
+    ],
+    "holding": "The ASBC's judgment in consolidated cases 63280 and 63402 was affirmed."
+   },
    "url_cl": "https://www.courtlistener.com/docket/68514283/delfasco-llc-v-secretary-of-the-army/",
    "url_audio": "https://www.courtlistener.com/audio/98684/delfasco-llc-v-secretary-of-the-army/"
   },
@@ -68271,11 +68433,54 @@
     "url_cl": "https://www.courtlistener.com/opinion/10552441/incyte-corporation-v-sun-pharmaceutical-industries-inc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/23-1300.OPINION.5-7-2025_2510640.pdf"
    },
-   "panel": [],
-   "patent_issues": [
-    "Other / Procedural"
+   "panel": [
+    {
+     "name": "Moore",
+     "role": "Author"
+    },
+    {
+     "name": "Hughes",
+     "role": "Concurrence"
+    },
+    {
+     "name": "Cunningham",
+     "role": "Panel"
+    }
    ],
-   "summary": null,
+   "patent_issues": [
+    "PTAB Procedure & Standing",
+    "\u00a7\u00a7 102/103 Prior Art"
+   ],
+   "summary": {
+    "segments": [
+     {
+      "issue": "Article III Standing to Appeal",
+      "text": "Incyte must establish Article III standing\u2014an injury in fact fairly traceable to the challenged conduct and likely redressable by judicial review\u2014as a threshold jurisdictional requirement to appeal the Board's PGR decision. The burden rests on the appellant, and standing must be established as of the date the notice of appeal was filed (December 12, 2022). Article III standing is required before reaching the merits, even though standing is not needed to file a PGR petition or obtain a Board decision.",
+      "location": null
+     },
+     {
+      "issue": "Supplemental Declaration Admissibility",
+      "text": "Incyte's supplemental Lee declaration, submitted with the reply brief rather than with the opening brief despite notice that standing would be contested, was properly excluded because Incyte failed to show good cause for the delayed submission. Under Federal Circuit precedent, standing evidence must be submitted at the earliest appropriate opportunity absent good cause; here, the supplemental declaration introduced a new theory about the dosage limitation and did not make standing patently obvious, weighing against discretionary allowance.",
+      "location": null
+     },
+     {
+      "issue": "Concrete Plans for Infringement",
+      "text": "Incyte failed to establish concrete plans for future activity creating a substantial risk of future infringement sufficient to confer standing based on potential infringement liability. The declarations showed only that Incyte allocated minimal funding one month before appeal for initial development of topical ruxolitinib products, with significant unresolved manufacturing, formulation, testing, and regulatory hurdles ahead; these speculative plans did not satisfy the requirement to demonstrate concrete plans to develop and commercialize a deuterated ruxolitinib product at the specific claimed dosages of 16 or 24 mg/day.",
+      "location": null
+     },
+     {
+      "issue": "Competitor Standing Doctrine",
+      "text": "The court did not reach Incyte's alternative argument that the competitor standing doctrine applied, as Incyte's failure to establish concrete plans on the potential infringement liability theory was dispositive of the standing issue.",
+      "location": null
+     },
+     {
+      "issue": "Appeal Dismissal",
+      "text": "The Federal Circuit dismissed Incyte's appeal for lack of Article III standing because Incyte failed to establish an injury in fact sufficient to confer jurisdiction, thereby vacating review of the Board's decision without reaching the merits of the patentability challenge.",
+      "location": null
+     }
+    ],
+    "holding": "This decision clarifies that Article III standing is a mandatory jurisdictional threshold in appeals of PTAB decisions and cannot be waived or presumed. The decision reinforces that an appellant relying on potential infringement liability as injury in fact must present concrete, non-speculative plans for commercial activity at the time of appeal, and that preliminary development efforts with minimal funding allocation and unresolved regulatory hurdles do not satisfy this standard. Additionally, the court confirms that appellants must submit standing evidence at the first appropriate opportunity\u2014typically the opening brief\u2014and that delayed supplemental submissions in reply are permitted only upon showing good cause, with discretion retained by the court based on whether the evidence makes standing patently obvious or raises new theories."
+   },
    "url_cl": "https://www.courtlistener.com/docket/66803376/incyte-corporation-v-sun-pharmaceutical-industries-inc/",
    "url_audio": "https://www.courtlistener.com/audio/97403/incyte-corporation-v-sun-pharmaceutical-industries-inc/"
   },
@@ -68295,11 +68500,33 @@
     "url_cl": "https://www.courtlistener.com/opinion/10551616/incyte-corporation-v-sun-pharmaceutical-industries-ltd/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1162.OPINION.5-7-2025_2510579.pdf"
    },
-   "panel": [],
-   "patent_issues": [
-    "Other / Procedural"
+   "panel": [
+    {
+     "name": "Moore",
+     "role": "Author"
+    },
+    {
+     "name": "Prost",
+     "role": "Panel"
+    },
+    {
+     "name": "Hughes",
+     "role": "Panel"
+    }
    ],
-   "summary": null,
+   "patent_issues": [
+    "Damages & Remedies"
+   ],
+   "summary": {
+    "segments": [
+     {
+      "issue": "Preliminary Injunction\u2014Irreparable Harm",
+      "text": "The Federal Circuit reversed the district court's grant of a preliminary injunction, holding that the district court clearly erred in finding irreparable harm. The court determined that Incyte's claimed harm from Sun's head start was inevitable because Sun's multi-year market lead would continue even after patent expiration in December 2026, when Incyte could not legally prevent Sun's continued sales, and Incyte's own product would not launch until years after that expiration regardless of the injunction.",
+      "location": "II"
+     }
+    ],
+    "holding": "The decision clarifies that a patentee seeking a preliminary injunction based on an alleged infringer's head start or first-mover advantage must demonstrate that the irreparable harm is actually contingent on the injunction\u2014not inevitable. When the patent's expiration date ensures that the competitor's market lead will persist regardless of judicial relief, the patentee fails to satisfy the irreparable harm prong and cannot obtain a preliminary injunction under Winter v. Natural Resources Defense Council."
+   },
    "url_cl": "https://www.courtlistener.com/docket/69874878/incyte-corporation-v-sun-pharmaceutical-industries-ltd/",
    "url_audio": "https://www.courtlistener.com/audio/98322/incyte-corporation-v-sun-pharmaceutical-industries-ltd/"
   },
@@ -68319,11 +68546,49 @@
     "url_cl": "https://www.courtlistener.com/opinion/10551615/ingenico-inc-v-ioengine-llc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/23-1367.OPINION.5-7-2025_2510618.pdf"
    },
-   "panel": [],
-   "patent_issues": [
-    "Other / Procedural"
+   "panel": [
+    {
+     "name": "Hughes",
+     "role": "Author"
+    },
+    {
+     "name": "Dyk",
+     "role": "Panel"
+    },
+    {
+     "name": "Prost",
+     "role": "Panel"
+    }
    ],
-   "summary": null,
+   "patent_issues": [
+    "\u00a7\u00a7 102/103 Prior Art",
+    "PTAB Procedure & Standing"
+   ],
+   "summary": {
+    "segments": [
+     {
+      "issue": "Public Use Bar - Actual Use",
+      "text": "The court affirmed that substantial circumstantial evidence supports a finding that the Firmware Upgrader was in public use under 35 U.S.C. \u00a7 102(b) (pre-AIA). The court held that direct evidence of actual use is not required; circumstantial evidence\u2014including an internal email encouraging employees to share information with customers, a press release, a user guide, and the availability of the software for download from the company's website\u2014suffices to establish that a reasonable jury could conclude the invention was accessible to the public and actually used.",
+      "location": null
+     },
+     {
+      "issue": "Jury Instructions and Presumption of Validity",
+      "text": "The court affirmed the district court's denial of IOENGINE's motion for a new trial challenging various jury instructions (conception and diligence, public use, and on sale) and the failure to instruct on presumption of validity. The Third Circuit abuse-of-discretion standard governed review, and the court found no reversible error in the instructions provided.",
+      "location": null
+     },
+     {
+      "issue": "IPR Estoppel - Collateral Estoppel Scope",
+      "text": "The court implicitly affirmed the district court's summary judgment ruling that allowed Ingenico to introduce the Firmware Upgrader evidence at trial despite IPR estoppel under 35 U.S.C. \u00a7 315(e)(2), on the basis that it was used as part of a substantively different combination of references that could not reasonably have been raised during the IPR proceedings.",
+      "location": null
+     },
+     {
+      "issue": "Anticipation and Obviousness Verdict",
+      "text": "The court affirmed the jury's general verdict that the asserted claims (claim 3 of U.S. Patent No. 9,059,969 and claims 56, 90, 101, 105, and 124 of U.S. Patent No. 9,774,703) were invalid as anticipated and obvious. Under the rule that a general invalidity verdict is upheld if sufficient evidence supports any alternative theory of invalidity, the court did not need to address whether the on-sale or known-or-used-by-others theories independently supported the verdict.",
+      "location": null
+     }
+    ],
+    "holding": "This decision confirms that in establishing the public use bar under pre-AIA \u00a7 102(b), circumstantial evidence of public accessibility and use (such as promotional materials, availability for download, and user guides) is sufficient to satisfy the requirement of 'actual use,' without direct testimony that the product was definitively used by a specific individual. The decision also clarifies that a general jury verdict of invalidity is upheld if any single theory of invalidity is supported by substantial evidence. The case is primarily fact-bound and does not establish new legal principles, though it provides useful guidance on the sufficiency of circumstantial evidence in public use inquiries."
+   },
    "url_cl": "https://www.courtlistener.com/docket/69533661/ingenico-inc-v-ingenico-corp/",
    "url_audio": "https://www.courtlistener.com/audio/96100/ingenico-inc-v-ingenico-corp/"
   },
@@ -68343,11 +68608,58 @@
     "url_cl": "https://www.courtlistener.com/opinion/10551617/in-re-thomas-d-foster-apc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/23-1527.OPINION.5-7-2025_2510558.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Moore",
+     "role": "Author"
+    },
+    {
+     "name": "Prost",
+     "role": "Panel"
+    },
+    {
+     "name": "Stoll",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [
     "Other / Procedural"
    ],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "False Suggestion of Connection - Timing",
+      "text": "The Board may assess facts in a false connection analysis under \u00a7 2(a) as of the time of examination, including evidence arising during the pendency of the application, rather than only facts existing at the application filing date. The Court held that for refusals to register (unlike cancellations), the appropriate timing is \"the time of examination,\" consistent with prior precedent for other \u00a7 2 inquiries and for consistency with \u00a7 2(f) distinctiveness analysis through the Board's decision date.",
+      "location": null
+     },
+     {
+      "issue": "False Connection - Same/Close Approximation",
+      "text": "The Board's finding that \"US SPACE FORCE\" was the same as or a close approximation of a name or identity of the United States was supported by substantial evidence, including President Trump's March 2018 announcement of the Space Force, national news coverage establishing the name's association with the U.S. military, and the government's subsequent official establishment of the U.S. Space Force entity. The mark need not be identical to trigger \u00a7 2(a) protection; it suffices if it falsely suggests a connection to the United States.",
+      "location": null
+     },
+     {
+      "issue": "False Connection - Recognition/Unique Pointer",
+      "text": "The Board's finding that the mark would be recognized as pointing uniquely and unmistakably to the United States was supported by substantial evidence demonstrating that \"US SPACE FORCE\" was widely known and associated with the U.S. government and military branch through extensive national media coverage and official government statements.",
+      "location": null
+     },
+     {
+      "issue": "False Connection - Non-Connection with Applicant",
+      "text": "The Board properly found that Thomas D. Foster, APC was not connected with the U.S. Space Force or U.S. government activities, satisfying the third prong of the false connection test under the record evidence.",
+      "location": null
+     },
+     {
+      "issue": "False Connection - Fame/Reputation",
+      "text": "The Board's finding that the United States and its Space Force branch possessed sufficient fame and reputation such that consumers would presume a connection when the mark was used was supported by substantial evidence and satisfied the fourth prong of the false connection test.",
+      "location": null
+     },
+     {
+      "issue": "\u00a7 2(a) Registration Refusal - Affirmed",
+      "text": "The Federal Circuit affirmed the Board's and examining attorney's refusal to register the mark \"US SPACE FORCE\" under \u00a7 2(a) of the Lanham Act based on false suggestion of a connection with the United States, holding all four elements of the false connection test were satisfied by substantial evidence.",
+      "location": null
+     }
+    ],
+    "holding": "This decision clarifies the timing framework for \u00a7 2(a) false connection analysis in examination/refusal proceedings: such analysis occurs as of the time of examination (through the Board's final decision), not limited to the filing date, making it consistent with timing rules for other \u00a7 2 grounds. The decision also confirms that the four-part false connection test is not exhaustive and may be supplemented by factors from Notre Dame (such as intent to create false association) and relevant DuPont factors, strengthening the analytical flexibility available to the Board in false connection cases."
+   },
    "url_cl": "https://www.courtlistener.com/opinion/10551617/in-re-thomas-d-foster-apc/",
    "url_audio": "https://www.courtlistener.com/audio/95572/in-re-thomas-d-foster-apc/"
   },
@@ -68367,11 +68679,38 @@
     "url_cl": "https://www.courtlistener.com/opinion/10533731/focus-products-group-international-llc-v-kartri-sales-co-inc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/23-1446.ORDER.5-6-2025_2509937.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Moore",
+     "role": "Panel"
+    },
+    {
+     "name": "Clevenger",
+     "role": "Panel"
+    },
+    {
+     "name": "Chen",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [
     "Other / Procedural"
    ],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Brief Noncompliance and Word Count",
+      "text": "The court struck appellants' opening briefs for violating Federal Circuit Rule 32(b)(1)'s 14,000-word limit by improperly incorporating by reference and dividing issues between two separate briefs. The court ordered resubmission, explaining that incorporated material counts against word count and cannot be used to exceed limits, citing Microsoft Corp. v. DataTern, Inc., 755 F.3d 899 (Fed. Cir. 2014).",
+      "location": null
+     },
+     {
+      "issue": "Sanctions for Continued Violations",
+      "text": "After appellants resubmitted briefs that again divided issues between Kartri and Marquis despite the court's prior order, the court ordered counsel to show cause why they should not be sanctioned under Federal Circuit Rule 32(b)(1) and the court's prior order, and directed appellants to file separate briefs not exceeding 10 pages each, double-spaced by May 15, 2025. The court rejected appellants' apparent strategy of seeking benefit of any winning argument regardless of which appellant presented it.",
+      "location": null
+     }
+    ],
+    "holding": null
+   },
    "url_cl": "https://www.courtlistener.com/docket/67092713/focus-products-group-international-llc-v-kartri-sales-co-inc/",
    "url_audio": "https://www.courtlistener.com/audio/98689/focus-products-group-international-llc-v-kartri-sales-co-inc/"
   },
@@ -68391,11 +68730,39 @@
     "url_cl": "https://www.courtlistener.com/opinion/10533730/in-re-kostic/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/23-1437.OPINION.5-6-2025_2509915.pdf"
    },
-   "panel": [],
-   "patent_issues": [
-    "Other / Procedural"
+   "panel": [
+    {
+     "name": "Cunningham",
+     "role": "Author"
+    },
+    {
+     "name": "Stoll",
+     "role": "Panel"
+    },
+    {
+     "name": "Clevenger",
+     "role": "Panel"
+    }
    ],
-   "summary": null,
+   "patent_issues": [
+    "\u00a7\u00a7 102/103 Prior Art",
+    "\u00a7 112 / Claim Construction"
+   ],
+   "summary": {
+    "segments": [
+     {
+      "issue": "Broadening Reissue \u2014 Claim Scope",
+      "text": "The court affirmed the PTAB's rejection of reissue claim 3 as an improper broadening reissue under 35 U.S.C. \u00a7 251(d). The Board correctly determined that reissue claim 3, which permits either a trial process or a direct exchange without trial, is broader in scope than original claim 3, which was dependent on claim 1 and necessarily incorporated claim 1's trial requirements. Because the reissue application was filed more than two years after the original patent issued, broadening amendments are prohibited.",
+      "location": null
+     },
+     {
+      "issue": "Claim Construction \u2014 Dependent Claim",
+      "text": "The court held that original dependent claim 3 should be construed consistently with its antecedent claim 1, meaning it necessarily includes all of claim 1's limitations, including the trial process. The original claim 3 did not independently recite a method without trial but rather permitted direct exchange as an alternative within the framework already defined by claim 1.",
+      "location": null
+     }
+    ],
+    "holding": "This decision confirms the Federal Circuit's standard that reissue claim scope is analyzed under claim construction principles and that dependent claims must be interpreted to include all limitations of their antecedent claims. The decision does not establish new law but applies existing precedent to hold that appellants cannot use reissue to broaden dependent claims outside the two-year window by effectively converting them into independent claims that omit antecedent-claim requirements."
+   },
    "url_cl": "https://www.courtlistener.com/opinion/10533730/in-re-kostic/",
    "url_audio": "https://www.courtlistener.com/audio/96108/in-re-kostic/"
   },
@@ -68417,7 +68784,16 @@
    },
    "panel": [],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Claims Court Subject-Matter Jurisdiction",
+      "text": "The court affirmed the dismissal of all claims for lack of subject-matter jurisdiction under the Tucker Act, 28 U.S.C. \u00a7 1491(a)(1)\u2013(2). The appellants failed to plead substantive allegations against the United States itself, as their complaints concerned only state enforcement of traffic laws, and failed to identify any money-mandating source of substantive law, rendering their claims non-justiciable in the Court of Federal Claims.",
+      "location": null
+     }
+    ],
+    "holding": "The Federal Circuit affirmed the dismissal of appellants' complaints for lack of subject-matter jurisdiction because the claims did not involve actions of the United States and were not founded in any money-mandating source of law as required by the Tucker Act."
+   },
    "url_cl": "https://www.courtlistener.com/opinion/10532939/parenteau-v-united-states/",
    "url_audio": null
   },
@@ -68437,11 +68813,53 @@
     "url_cl": "https://www.courtlistener.com/opinion/10532940/jazz-pharmaceuticals-inc-v-avadel-cns-pharmaceuticals-llc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-2274.OPINION.5-6-2025_2509887.pdf"
    },
-   "panel": [],
-   "patent_issues": [
-    "Other / Procedural"
+   "panel": [
+    {
+     "name": "Lourie",
+     "role": "Author"
+    },
+    {
+     "name": "Reyna",
+     "role": "Panel"
+    },
+    {
+     "name": "Taranto",
+     "role": "Panel"
+    }
    ],
-   "summary": null,
+   "patent_issues": [
+    "Damages & Remedies"
+   ],
+   "summary": {
+    "segments": [
+     {
+      "issue": "Patent Claim Validity",
+      "text": "The district court found Avadel failed to prove invalidity of claim 24 of the '782 patent covering sodium oxybate formulations with immediate and modified release particles. A jury verdict upheld this finding, establishing the patent claim as valid and enforceable against Avadel's product Lumryz.",
+      "location": null
+     },
+     {
+      "issue": "Direct Infringement under \u00a7271(a)\u2013(c)",
+      "text": "The parties stipulated that Lumryz would infringe claim 24 of the '782 patent if the claim was valid. Following the jury's validity finding, the district court entered judgment of infringement under 35 U.S.C. \u00a7\u00a7 271(a)\u2013(c) based on Avadel's manufacture, use, and sale of the FDA-approved drug.",
+      "location": null
+     },
+     {
+      "issue": "Permanent Injunction Scope",
+      "text": "The district court granted a limited permanent injunction prohibiting Avadel from seeking FDA approval for new indications (including idiopathic hypersomnia) and from offering open-label extensions to clinical trial participants after the injunction's effective date, while permitting continued supply to existing patients and continuation of ongoing clinical trials. The Federal Circuit reversed in part, vacated in part, and remanded, requiring reconsideration of the injunction's scope regarding the clinical trial restrictions and new indication approvals.",
+      "location": null
+     },
+     {
+      "issue": "Damages for Past Infringement",
+      "text": "A jury awarded Jazz a reasonable royalty of $233,562.83 for Avadel's past infringement of the '782 patent from the FDA approval date (May 1, 2023) through trial. This damages award was affirmed as part of the partial affirmance.",
+      "location": null
+     },
+     {
+      "issue": "Application of Hatch-Waxman Safe Harbor",
+      "text": "Jazz initially alleged artificial infringement under 35 U.S.C. \u00a7 271(e)(2) based solely on Avadel's paper NDA filing, but because the '782 patent was not listed in the Orange Book for Jazz's Xyrem or Xywav products, it did not trigger the 30-month regulatory stay. After FDA approval and commercial launch, Jazz amended to assert only direct infringement under \u00a7\u00a7 271(a)\u2013(c), avoiding the artificial-infringement framework.",
+      "location": null
+     }
+    ],
+    "holding": "This decision clarifies the application of permanent injunctive relief under 35 U.S.C. \u00a7 283 in pharmaceutical patent cases where a drug has already been approved and launched by the time the patent issued, requiring the district court to reconsider whether broad restrictions on new clinical trials and FDA submissions for new indications comply with the patent-specific injunction standards, rather than applying the general Hatch-Waxman framework designed for pre-approval stays."
+   },
    "url_cl": "https://www.courtlistener.com/docket/69224548/jazz-pharmaceuticals-inc-v-avadel-cns-pharmaceuticals-llc/",
    "url_audio": "https://www.courtlistener.com/audio/97382/jazz-pharmaceuticals-inc-v-avadel-cns-pharmaceuticals-llc/"
   },
@@ -68499,9 +68917,41 @@
     "url_cl": "https://www.courtlistener.com/opinion/10513861/ats-ford-drive-investment-llc-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/23-1760.OPINION.5-5-2025_2508965.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Cunningham",
+     "role": "Author"
+    },
+    {
+     "name": "Lourie",
+     "role": "Panel"
+    },
+    {
+     "name": "Stoll",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Property Interest Conveyance",
+      "text": "The Court of Federal Claims held that Releases executed under Indiana law in 1853 conveyed fee simple estates to the Peru and Indianapolis Railroad Company, not easements, based on the Charter's plain language and Indiana Supreme Court precedent in Newcastle & Richmond Railroad Co. v. Peru & Indianapolis Railroad Co. (1852) and Indianapolis, Peru, & Chicago Railway Co. v. Rayl (1880). Because Plaintiffs lacked any property interest in the land, they had no compensable taking claim under the Fifth Amendment.",
+      "location": "Section III.A"
+     },
+     {
+      "issue": "Certification to State Court",
+      "text": "The Federal Circuit affirmed the trial court's denial of certification to the Indiana Supreme Court, exercising independent discretion under Lehman Bros. v. Schein to conclude that Indiana precedent was directly applicable and certification unnecessary, making the issue of the trial court's abuse of discretion unreviewable but immaterial given the court's independent judgment.",
+      "location": "Section II"
+     },
+     {
+      "issue": "Summary Judgment",
+      "text": "The Court of Federal Claims properly granted summary judgment to the United States under Federal Rule of Civil Procedure 56(a) because no genuine dispute of material fact existed and the United States was entitled to judgment as a matter of law based on settled Indiana property law regarding the scope of the Releases.",
+      "location": null
+     }
+    ],
+    "holding": "This decision establishes that under Indiana law, Releases executed pursuant to an 1846 railroad charter's authorization conveyed fee simple title to land rather than easements, as established by binding Indiana Supreme Court precedent. The ruling reaffirms that in takings cases under the Fifth Amendment, the federal court need not certify novel or unclear state law questions when prior state precedent directly resolves the property interest issue, and that federal courts apply settled state law to takings claims de novo on summary judgment without requiring state court certification."
+   },
    "url_cl": "https://www.courtlistener.com/opinion/10513861/ats-ford-drive-investment-llc-v-united-states/",
    "url_audio": "https://www.courtlistener.com/audio/95113/ats-ford-drive-investment-llc-v-united-states/"
   },
@@ -68521,9 +68971,36 @@
     "url_cl": "https://www.courtlistener.com/opinion/10513862/amezquita-v-collins/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/23-1975.OPINION.5-5-2025_2508957.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Prost",
+     "role": "Author"
+    },
+    {
+     "name": "Linn",
+     "role": "Panel"
+    },
+    {
+     "name": "Stoll",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Asymptomatic Condition as Noted Defect",
+      "text": "The court affirmed that 38 U.S.C. \u00a7 1111's presumption of soundness does not apply when a preexisting condition is noted at service entry, even if that condition is asymptomatic at the time of examination. The statutory language \"defects, infirmities, or disorders noted at the time of the examination, acceptance, and enrollment\" contains no limitation to only symptomatic conditions, and the court endorsed the precedent from Verdon v. Brown that an asymptomatic condition can qualify as a noted defect under \u00a7 1111.",
+      "location": null
+     },
+     {
+      "issue": "Factual Determination Jurisdiction",
+      "text": "The court dismissed Mr. Amezquita's arguments challenging whether his left shoulder condition was resolved upon service entry, as such arguments require reviewing factual findings that fall outside the Federal Circuit's limited jurisdiction under 38 U.S.C. \u00a7 7292(d)(2). The court may only review rules of law and statutory interpretation, not the application of law to particular facts or challenges to factual determinations made by the Board and Veterans Court.",
+      "location": null
+     }
+    ],
+    "holding": "This decision clarifies that the presumption of soundness under 38 U.S.C. \u00a7 1111 is defeated when a preexisting condition appears in service-entrance medical records as a noted defect, regardless of whether that condition is symptomatic or asymptomatic at examination. The ruling confirms the longstanding Veterans Court precedent in Verdon and establishes that notation of a condition in medical records, not the veteran's symptomatology, is the operative legal standard for finding soundness presumption waived."
+   },
    "url_cl": "https://www.courtlistener.com/opinion/10513862/amezquita-v-collins/",
    "url_audio": "https://www.courtlistener.com/audio/97634/amezquita-v-collins/"
   },
@@ -68543,9 +69020,46 @@
     "url_cl": "https://www.courtlistener.com/opinion/10458283/hatfield-v-collins/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/23-2280.OPINION.5-2-2025_2508296.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Lourie",
+     "role": "Author"
+    },
+    {
+     "name": "Bryson",
+     "role": "Panel"
+    },
+    {
+     "name": "Stark",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Jurisdiction to Review Veterans Court Decision",
+      "text": "The Federal Circuit has jurisdiction under 38 U.S.C. \u00a7 7292(a) to review decisions of the United States Court of Appeals for Veterans Claims and may review challenges to the validity of statutes, regulations, and their interpretations.",
+      "location": null
+     },
+     {
+      "issue": "Clear and Unmistakable Error Standard",
+      "text": "A motion for revision based on clear and unmistakable error (CUE) requires demonstrating that either the correct facts known at the time were not before the adjudicator or that statutory or regulatory provisions extant at the time were incorrectly applied, and the error must be outcome-determinative and undebatable such that reasonable minds could not differ.",
+      "location": null
+     },
+     {
+      "issue": "Informed Consent as Negligence Claim",
+      "text": "The failure to obtain a patient's informed consent under 38 U.S.C. \u00a7 4131 does not undebatably constitute a compensable negligence claim under 38 U.S.C. \u00a7 351 in 1980, because the plain statutory language of neither provision cross-references the other, and their legislative and regulatory histories do not suggest such an interpretation.",
+      "location": null
+     },
+     {
+      "issue": "Board Decision Not CUE",
+      "text": "The 1980 Board decision denying benefits did not constitute clear and unmistakable error, and therefore Hatfield is not entitled to retroactive benefits from October 1980 to July 2010; the affirmance of the Veterans Court's decision is affirmed.",
+      "location": null
+     }
+    ],
+    "holding": "This decision clarifies that CUE review requires examining whether the law as it existed at the time of the original Board decision\u2014not law enacted or interpreted thereafter\u2014undebatably mandated a particular outcome; Congress's failure to cross-reference informed consent requirements in negligence liability statutes constitutes powerful evidence against implying such a requirement, and changes to regulation or interpretation after the original decision do not retroactively create CUE."
+   },
    "url_cl": "https://www.courtlistener.com/opinion/10458283/hatfield-v-collins/",
    "url_audio": "https://www.courtlistener.com/audio/97598/hatfield-v-collins/"
   },
@@ -68567,7 +69081,16 @@
    },
    "panel": [],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Failure to Comply with Filing Requirements",
+      "text": "The Court dismissed the petition for review because petitioner failed to pay the docketing fee required by Federal Circuit Rule 52(a)(1) and failed to file the required Statement Concerning Discrimination. Dismissal was warranted under the Court's procedural rules for failure to prosecute in accordance with applicable requirements.",
+      "location": null
+     }
+    ],
+    "holding": null
+   },
    "url_cl": "https://www.courtlistener.com/opinion/10463613/smith-v-dva/",
    "url_audio": null
   },
@@ -89411,22 +89934,6 @@
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10103032/tribe-of-two-llc-v-vidal/",
    "url_audio": "https://www.courtlistener.com/audio/93096/tribe-of-two-llc-v-vidal/"
-  },
-  {
-   "docket_number": "2024-2281",
-   "case_name": "Micron Technology, Inc. v. Netlist, Inc.",
-   "case_type": "Patent (District Ct.)",
-   "origin": "United States District Court for the District of Idaho",
-   "status": "Argued \u2014 Awaiting Decision",
-   "date_filed": "2024-09-03",
-   "date_argued": "2026-06-05",
-   "argument": null,
-   "decision": null,
-   "panel": [],
-   "patent_issues": [],
-   "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/70803592/micron-technology-inc-v-netlist-inc/",
-   "url_audio": "https://www.courtlistener.com/audio/105317/micron-technology-inc-v-netlist-inc/"
   },
   {
    "docket_number": "2024-2282",
