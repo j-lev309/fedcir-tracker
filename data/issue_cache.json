@@ -28319,7 +28319,9 @@
  },
  "panel-cl-10623689": [],
  "cl-10623689": {
-  "issues": [],
+  "issues": [
+   "PTAB Procedure & Standing"
+  ],
   "summary": {
    "segments": [
     {
@@ -34345,6 +34347,108 @@
     }
    ],
    "holding": "Appeal dismissed as moot due to controlling concurrent Federal Circuit decision invalidating the patent claims at issue."
+  }
+ },
+ "panel-cl-10419642": [
+  {
+   "name": "Prost",
+   "role": "Author"
+  },
+  {
+   "name": "Taranto",
+   "role": "Panel"
+  },
+  {
+   "name": "Stark",
+   "role": "Panel"
+  }
+ ],
+ "cl-10419642": {
+  "issues": [],
+  "summary": {
+   "segments": [
+    {
+     "issue": "\u00a7 112 \u00b6 6 Applicability",
+     "text": "The court affirmed that the payment-handler terms invoke 35 U.S.C. \u00a7 112 \u00b6 6 (means-plus-function), despite lacking the word \"means,\" because they recite function without reciting sufficient structure for performing that function. The district court properly overcame the rebuttable presumption against applicability by showing the terms were drafted in a format consistent with traditional means-plus-function limitations, with the prefix \"payment\" merely describing function rather than imparting structure.",
+     "location": null
+    },
+    {
+     "issue": "Indefiniteness\u2014Lack of Adequate Structure",
+     "text": "The court affirmed that the asserted patent claims are invalid as indefinite under \u00a7 112 \u00b6 6 because the specifications fail to disclose adequate corresponding structure\u2014specifically, no algorithm or structural implementation\u2014for the claimed functions of using APIs of different payment processors or exposing a common API. The generic term \"handler\" and the extrinsic source IOTP, which suggested multiple possible structures, did not cure this deficiency.",
+     "location": null
+    }
+   ],
+   "holding": "This decision confirms that claim terms lacking the word \"means\" can nevertheless invoke \u00a7 112 \u00b6 6 when they recite abstract function without sufficient structural limitation, and that mere functional prefixes do not supply structure for means-plus-function compliance. The opinion clarifies that a specification's failure to disclose a concrete algorithm or structural implementation renders such claims indefinite under pre-AIA \u00a7 112 \u00b6 6."
+  }
+ },
+ "panel-cl-10401328": [
+  {
+   "name": "Stark",
+   "role": "Author"
+  },
+  {
+   "name": "Prost",
+   "role": "Panel"
+  },
+  {
+   "name": "Clevenger",
+   "role": "Panel"
+  }
+ ],
+ "cl-10401328": {
+  "issues": [],
+  "summary": {
+   "segments": [
+    {
+     "issue": "Correct Legal Standard for Color Mark Genericness",
+     "text": "The Board applied the two-step test from Milwaukee Electric Tool Corp. v. Freud America, Inc., a modification of the H. Marvin Ginn test tailored to color marks: (1) identify the genus of goods or services at issue, and (2) determine whether the color is understood by the relevant public primarily as a category or type of trade dress for that genus rather than as indicating a unique source. The Federal Circuit affirmed that this Milwaukee test is the proper legal standard for assessing color mark genericness and hereby adopted it.",
+     "location": null
+    },
+    {
+     "issue": "Genericness Finding Supported by Evidence",
+     "text": "The Board's determination that dark green (Pantone 3285 c) on chloroprene medical examination gloves is generic was supported by substantial evidence, including 25 screenshots of third-party manufacturers selling chloroprene/neoprene medical gloves in the same or nearly the same dark green color, demonstrating the color is so common in the industry that it cannot identify a single source. The Court rejected Medisafe's alternative evidence regarding other-colored gloves, customer declarations, and a flawed survey as insufficient to rebut the prima facie case of genericness.",
+     "location": null
+    },
+    {
+     "issue": "Genus Definition for Color Marks",
+     "text": "The Board properly rejected Medisafe's proposed narrow genus (gloves sold only to authorized resellers) and instead correctly defined the applicable genus as all chloroprene medical examination gloves, with the relevant public consisting of all persons or businesses who purchase such gloves. This broader genus definition was appropriate because it reflects how consumers in the industry actually perceive and purchase the goods.",
+     "location": null
+    },
+    {
+     "issue": "Supplemental Register Ineligibility",
+     "text": "Because Medisafe's color mark is generic, it is barred from registration on both the principal and supplemental registers, as genericness serves as an absolute bar to registration. The Board therefore properly refused to register the mark on the supplemental register as an alternative to the principal register.",
+     "location": null
+    }
+   ],
+   "holding": "The Federal Circuit clarified that the Milwaukee Electric Tool two-step test\u2014adapted from H. Marvin Ginn to require examination of whether a color is understood as a category of trade dress rather than identifying a unique source\u2014is the proper legal standard for determining whether a color mark is generic. This decision confirms that color marks are subject to genericness analysis under the same fundamental framework as word marks and other trade dress, though tailored to the particular characteristics of color, and that genericness operates as an absolute bar to registration on either principal or supplemental registers."
+  }
+ },
+ "panel-cl-10404015": [],
+ "cl-10404015": {
+  "issues": [],
+  "summary": {
+   "segments": [
+    {
+     "issue": "Petition Dismissal for Procedural Default",
+     "text": "The Federal Circuit dismissed the petition for review under its procedural rules because petitioner failed to file the required Statement Concerning Discrimination. All pending motions were denied as moot.",
+     "location": null
+    }
+   ],
+   "holding": null
+  }
+ },
+ "panel-cl-10386212": [],
+ "cl-10386212": {
+  "issues": [],
+  "summary": {
+   "segments": [
+    {
+     "issue": "Failure to File Appendix",
+     "text": "The petition for review was dismissed pursuant to Federal Circuit Rule 30(a) because the petitioner failed to file the required appendix within the time permitted by the rules. The dismissal was entered for failure to prosecute in accordance with the court's procedural requirements.",
+     "location": null
+    }
+   ],
+   "holding": null
   }
  }
 }
