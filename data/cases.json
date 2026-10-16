@@ -1,33 +1,30 @@
 {
- "generated_at": "2026-10-16T17:44:43+00:00",
+ "generated_at": "2026-10-16T18:56:39+00:00",
  "window_since": "2020-01-01",
  "coverage": {
-  "complete": false,
-  "run_complete": false,
-  "backfilling": [
-   "dockets",
-   "clusters"
-  ],
+  "complete": true,
+  "run_complete": true,
+  "backfilling": [],
   "window_since": "2020-01-01",
   "window_months": 18,
   "complete_since": "2020-01-01",
   "sources": {
    "dockets": {
-    "resume_url": "https://www.courtlistener.com/api/rest/v4/dockets/",
-    "complete": false,
-    "reason": "network timeouts",
-    "count": 0
+    "complete": true,
+    "reason": "ok",
+    "count": 0,
+    "resume_url": null
    },
    "clusters": {
-    "resume_url": "https://www.courtlistener.com/api/rest/v4/clusters/",
-    "complete": false,
-    "reason": "network timeouts",
-    "count": 0
+    "complete": true,
+    "reason": "ok",
+    "count": 0,
+    "resume_url": null
    },
    "opinions": {
     "complete": true,
     "reason": "ok",
-    "count": 3,
+    "count": 2,
     "resume_url": null
    },
    "audio": {
@@ -42,55 +39,33 @@
     "reason": "ok"
    },
    "opinion_rss": {
-    "count": 100,
+    "count": 0,
     "complete": true,
     "reason": "ok"
    }
   },
   "summaries": {
    "enabled": true,
-   "have": 1450,
+   "have": 1477,
    "expected": 7924,
    "complete": false
   },
   "opinion_text_fetches_this_run": 600,
   "opinion_text_fetch_cap": 600,
-  "latest_decision_date": "2026-10-16",
+  "latest_decision_date": "2026-10-15",
   "next_argument_date": null
  },
  "stats": {
   "total": 8833,
   "pending": 862,
   "scheduled": 0,
-  "awaiting": 46,
-  "decided": 7925,
+  "awaiting": 47,
+  "decided": 7924,
   "precedential": 1444,
-  "rule36": 1
+  "rule36": 0
  },
  "upcoming_argument_docket_numbers": [],
  "cases": [
-  {
-   "docket_number": "2024-2281",
-   "case_name": "Micron Technology, Inc. v. Netlist, Inc.",
-   "case_type": "Patent (District Ct.)",
-   "origin": "United States District Court for the District of Idaho",
-   "status": "Decided",
-   "date_filed": "2024-09-03",
-   "date_argued": "2026-06-05",
-   "argument": null,
-   "decision": {
-    "date": "2026-10-16",
-    "precedential_status": null,
-    "disposition": "Order",
-    "url_cl": null,
-    "url_pdf": "https://www.cafc.uscourts.gov/10-16-2026-24-2281-micron-technology-inc-v-netlist-inc-order-24-2281-order-10-16-2026_2772309/"
-   },
-   "panel": [],
-   "patent_issues": [],
-   "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/70803592/micron-technology-inc-v-netlist-inc/",
-   "url_audio": "https://www.courtlistener.com/audio/105317/micron-technology-inc-v-netlist-inc/"
-  },
   {
    "docket_number": "CL-11035220",
    "case_name": "Moralez-Piper v. MSPB",
@@ -685,7 +660,7 @@
    "decision": {
     "date": "2026-10-06",
     "precedential_status": "Unpublished",
-    "disposition": "Order",
+    "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/11012804/inari-agriculture-inc-v-corteva-agriscience-llc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1323.ORDER.10-6-2026_2767008.pdf"
    },
@@ -709,7 +684,7 @@
    "decision": {
     "date": "2026-10-05",
     "precedential_status": "Unpublished",
-    "disposition": "Opinion",
+    "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/11010501/alexsam-inc-v-simon-property-group-lp/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1138.OPINION.10-5-2026_2766082.pdf"
    },
@@ -823,7 +798,7 @@
    "decision": {
     "date": "2026-10-01",
     "precedential_status": "Unpublished",
-    "disposition": "Opinion",
+    "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/11007605/truinject-corp-v-galderma-sa/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1268.OPINION.10-1-2026_2764692.pdf"
    },
@@ -869,7 +844,7 @@
    "decision": {
     "date": "2026-09-30",
     "precedential_status": "Published",
-    "disposition": "Order",
+    "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10990709/teva-pharmaceuticals-international-gmbh-v-eli-lilly-and-company/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1094.ORDER.9-30-2026_2764316.pdf"
    },
@@ -983,7 +958,7 @@
    "decision": {
     "date": "2026-09-30",
     "precedential_status": "Published",
-    "disposition": "Opinion",
+    "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10988015/parkervision-inc-v-qualcomm-incorporated/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1033.OPINION.9-30-2026_2763891.pdf"
    },
@@ -1007,7 +982,7 @@
    "decision": {
     "date": "2026-09-30",
     "precedential_status": "Published",
-    "disposition": "Opinion",
+    "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10988017/epic-tech-llc-v-pen-tech-associates-inc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1624.OPINION.9-30-2026_2763904.pdf"
    },
@@ -1121,7 +1096,7 @@
    "decision": {
     "date": "2026-09-29",
     "precedential_status": "Unpublished",
-    "disposition": "Order",
+    "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10986190/north-east-mobile-health-services-v-secretary-of-veterans-affairs/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1449.ORDER.9-29-2026_2763572.pdf"
    },
@@ -1271,7 +1246,7 @@
    "decision": {
     "date": "2026-09-25",
     "precedential_status": "Unpublished",
-    "disposition": "Opinion",
+    "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10983489/receivership-estate-of-audiencescience-inc-v-google-llc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1825.OPINION.9-25-2026_2761456.pdf"
    },
@@ -1311,7 +1286,7 @@
    "decision": {
     "date": "2026-09-23",
     "precedential_status": "Unpublished",
-    "disposition": "Opinion",
+    "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10980493/walker-v-collins/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1503.OPINION.9-23-2026_2760101.pdf"
    },
@@ -1535,7 +1510,7 @@
    "decision": {
     "date": "2026-09-21",
     "precedential_status": "Unpublished",
-    "disposition": "Opinion",
+    "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10978232/berkeleyieor-v-ww-grainger-inc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-2353.OPINION.9-21-2026_2758411.pdf"
    },
@@ -1691,7 +1666,7 @@
    "decision": {
     "date": "2026-09-18",
     "precedential_status": "Unpublished",
-    "disposition": "Order",
+    "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10976829/richards-v-kallish/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-2022.ORDER.9-18-2026_2757939.pdf"
    },
@@ -1715,7 +1690,7 @@
    "decision": {
     "date": "2026-09-18",
     "precedential_status": "Published",
-    "disposition": "Opinion",
+    "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10976772/tenaris-bay-city-inc-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1382.OPINION.9-18-2026_2757740.pdf"
    },
@@ -1737,7 +1712,7 @@
    "decision": {
     "date": "2026-09-18",
     "precedential_status": "Unpublished",
-    "disposition": "Opinion",
+    "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10976773/strong-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1335.OPINION.9-18-2026_2757725.pdf"
    },
@@ -1759,7 +1734,7 @@
    "decision": {
     "date": "2026-09-17",
     "precedential_status": "Unpublished",
-    "disposition": "Errata",
+    "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10975538/enanta-pharmaceuticals-inc-v-pfizer-inc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1427.ERRATA.9-17-2026_2757023.pdf"
    },
@@ -1783,7 +1758,7 @@
    "decision": {
     "date": "2026-09-17",
     "precedential_status": "Unpublished",
-    "disposition": "Order",
+    "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10975591/in-re-patel/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-149.ORDER.9-17-2026_2757049.pdf"
    },
@@ -1919,7 +1894,7 @@
    "decision": {
     "date": "2026-09-16",
     "precedential_status": "Published",
-    "disposition": "Opinion",
+    "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10974581/island-creek-associates-llc-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1140.OPINION.9-16-2026_2756263.pdf"
    },
@@ -2029,7 +2004,7 @@
    "decision": {
     "date": "2026-09-15",
     "precedential_status": "Unpublished",
-    "disposition": "Rule 36 Judgment",
+    "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10974176/abc-ip-llc-v-peak-tactical-llc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1527.RULE_36_JUDGMENT.9-15-2026_2755593.pdf"
    },
@@ -10411,7 +10386,7 @@
    "decision": {
     "date": "2026-06-23",
     "precedential_status": "Published",
-    "disposition": "Errata",
+    "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10878465/enanta-pharmaceuticals-inc-v-pfizer-inc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1427.OPINION.6-23-2026_2712960.pdf"
    },
@@ -17702,7 +17677,7 @@
    "decision": {
     "date": "2026-04-16",
     "precedential_status": "Published",
-    "disposition": "Order",
+    "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10843880/teva-pharmaceuticals-international-gmbh-v-eli-lilly-and-company/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1094.OPINION.4-16-2026_2677411.pdf"
    },
@@ -56196,7 +56171,7 @@
    },
    "panel": [],
    "patent_issues": [
-    "Other / Procedural"
+    "PTAB Procedure & Standing"
    ],
    "summary": {
     "segments": [
@@ -63192,7 +63167,7 @@
    },
    "panel": [],
    "patent_issues": [
-    "Other / Procedural"
+    "PTAB Procedure & Standing"
    ],
    "summary": {
     "segments": [
@@ -66937,9 +66912,46 @@
     "url_cl": "https://www.courtlistener.com/opinion/10583911/medwetz-v-mspb/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1969.OPINION.5-14-2025_2514227.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Lourie",
+     "role": "Panel"
+    },
+    {
+     "name": "Dyk",
+     "role": "Panel"
+    },
+    {
+     "name": "Chen",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "MSPB Jurisdiction Over Resignation",
+      "text": "The Board properly dismissed the appeal for lack of jurisdiction because Medwetz failed to raise a nonfrivolous allegation that his resignation was involuntary. Under 5 U.S.C. \u00a7 7703 and established precedent, employee resignations are presumed voluntary, and to overcome this presumption, an appellant must allege that the agency imposed the resignation terms, the employee had no realistic alternative, and the resignation resulted from improper agency acts. Although the Army gave Medwetz only one day to resign or face removal, this one-day deadline alone does not establish involuntariness where, as here, the agency had reasonable grounds for the threatened adverse action and Medwetz himself acknowledged engaging in the charged misconduct.",
+      "location": null
+     },
+     {
+      "issue": "Board's Jurisdiction Order Procedure",
+      "text": "The Board's order requiring Medwetz to file evidence and argument regarding jurisdiction was proper and indeed required by regulation. 5 C.F.R. \u00a7 1201.56(d) mandates that an administrative judge \"inform the parties of the proof required as to the issues of jurisdiction,\" which derives from the Board's inherent authority to determine its own jurisdiction.",
+      "location": null
+     },
+     {
+      "issue": "Forfeited Security Clearance Argument",
+      "text": "Medwetz's argument that the Army misled him about his security clearance suspension was forfeited because he did not present this issue to the Merit Systems Protection Board, and the Federal Circuit does not consider arguments not raised before the Board on appeal.",
+      "location": null
+     },
+     {
+      "issue": "Harmless Error: Coerced Statement",
+      "text": "Even assuming arguendo that reliance on a coerced confession would be improper in a removal proceeding (a question the court did not decide), any reliance on Medwetz's coerced November statement constitutes harmless error because Medwetz has not alleged and in fact concedes that he engaged in the underlying misconduct charged\u2014making the statement's reliability immaterial to the involuntariness determination.",
+      "location": null
+     }
+    ],
+    "holding": "The Merit Systems Protection Board's dismissal of Medwetz's appeal for lack of jurisdiction is affirmed under the deferential standard of 5 U.S.C. \u00a7 7703(c), with jurisdictional determinations reviewed de novo, because Medwetz failed to make a nonfrivolous showing that his resignation was involuntary rather than a voluntary choice made under the threat of removal for which the agency had reasonable grounds."
+   },
    "url_cl": "https://www.courtlistener.com/opinion/10583911/medwetz-v-mspb/",
    "url_audio": null
   },
@@ -66959,9 +66971,41 @@
     "url_cl": "https://www.courtlistener.com/opinion/10583912/bradley-v-collins/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1198.OPINION.5-14-2025_2514211.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Moore",
+     "role": "Panel"
+    },
+    {
+     "name": "Chen",
+     "role": "Panel"
+    },
+    {
+     "name": "Cunningham",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Jurisdictional Limitations",
+      "text": "The court lacks jurisdiction to review Mr. Bradley's challenges to the Board's weighing of evidence, the VA's duty to assist, the scope of his claim as a factual matter, and his asserted constitutional claims under the Fifth Amendment, as 38 U.S.C. \u00a7 7292(d)(2) precludes review of factual determinations and applications of law to facts, and the constitutional arguments amount to factual disagreements rather than true constitutional issues.",
+      "location": null
+     },
+     {
+      "issue": "Claim Scope Legal Standard",
+      "text": "The Board and Veterans Court properly applied both the \"reasonable expectations\" standard from Clemons v. Shinseki and the \"distinct factual bases\" standard from Boggs v. Peake to determine claim scope, as these standards are not mutually exclusive; additionally, Boggs does not require that a claim have a specific diagnosis before finding distinct factual bases from another claim.",
+      "location": null
+     },
+     {
+      "issue": "Reconsideration Requirement",
+      "text": "Section 38 C.F.R. \u00a7 3.156(c) sets forth circumstances requiring VA reconsideration of a claim but does not mandate favorable resolution upon reconsideration; the Board and Veterans Court properly complied with \u00a7 3.156(c) by reconsidering Mr. Bradley's chest pain claim and finding he failed to prove he claimed a gastrointestinal disability before May 2012.",
+      "location": null
+     }
+    ],
+    "holding": "The Federal Circuit affirmed in part and dismissed in part, dismissing Mr. Bradley's appeals on jurisdictional grounds regarding factual and evidentiary matters, and affirming on the merits that the Board and Veterans Court properly applied the legal standards for determining claim scope and did not err in finding Mr. Bradley's March 1994 chest pain claim distinct from his May 2012 GERD claim."
+   },
    "url_cl": "https://www.courtlistener.com/opinion/10583912/bradley-v-collins/",
    "url_audio": null
   },
@@ -67005,7 +67049,16 @@
    },
    "panel": [],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Entry of Appearance Filing",
+      "text": "The appeal was dismissed for failure to file the required Entry of Appearance form by an attorney admitted to the bar of the Federal Circuit, constituting a failure to prosecute in accordance with the court's rules.",
+      "location": null
+     }
+    ],
+    "holding": "Appeal dismissed for failure to prosecute."
+   },
    "url_cl": "https://www.courtlistener.com/opinion/10583215/stoxdox-inc-v-stoxx-ltd/",
    "url_audio": null
   },
@@ -67025,9 +67078,31 @@
     "url_cl": "https://www.courtlistener.com/opinion/10583139/bowles-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-2354.OPINION.5-13-2025_2513442.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Lourie",
+     "role": "Panel"
+    },
+    {
+     "name": "Dyk",
+     "role": "Panel"
+    },
+    {
+     "name": "Chen",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Claims Court Subject Matter Jurisdiction",
+      "text": "The Federal Circuit affirmed the Claims Court's dismissal for lack of subject matter jurisdiction under the Tucker Act, 28 U.S.C. \u00a7 1491, holding that none of the fourteen statutory provisions cited by plaintiffs\u2014including federal criminal statutes, the International Religious Freedom Act, social security fraud provisions, civil rights statutes, and ADA provisions\u2014provided the requisite \"money-mandating\" source of law. The court rejected plaintiffs' arguments that the First and Fourteenth Amendments or the Tucker Act alone could establish jurisdiction, and confirmed that tort claims are expressly excluded from the Claims Court's jurisdiction.",
+      "location": null
+     }
+    ],
+    "holding": "Affirmed the dismissal of the complaint for lack of subject matter jurisdiction in the Claims Court, as none of the identified statutes provided a money-mandating source of law required under the Tucker Act, and tort claims are categorically outside the Claims Court's jurisdiction."
+   },
    "url_cl": "https://www.courtlistener.com/opinion/10583139/bowles-v-united-states/",
    "url_audio": null
   },
@@ -67049,9 +67124,18 @@
    },
    "panel": [],
    "patent_issues": [
-    "Other / Procedural"
+    "PTAB Procedure & Standing"
    ],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "PTAB Decision Affirmance",
+      "text": "The Federal Circuit affirmed the Patent Trial and Appeal Board's decision in inter partes review proceeding No. 15/316,624. The court entered judgment affirming the PTAB's determination without issuing a full written opinion, citing Federal Circuit Rule 36.",
+      "location": null
+     }
+    ],
+    "holding": "The PTAB's decision in the inter partes review was affirmed."
+   },
    "url_cl": "https://www.courtlistener.com/opinion/10583138/in-re-international-insulation-products-llc/",
    "url_audio": "https://www.courtlistener.com/audio/98871/in-re-international-insulation-products-llc/"
   },
@@ -67089,9 +67173,18 @@
    },
    "panel": [],
    "patent_issues": [
-    "Other / Procedural"
+    "PTAB Procedure & Standing"
    ],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "IPR Patent Validity",
+      "text": "The Federal Circuit affirmed the Patent Trial and Appeal Board's decision in inter partes review proceeding IPR2021-01249 regarding patent validity. The affirmance was entered under Federal Circuit Rule 36, which permits nonprecedential affirmance when no reversible error is found.",
+      "location": null
+     }
+    ],
+    "holding": "The PTAB's decision in the inter partes review was affirmed in full."
+   },
    "url_cl": "https://www.courtlistener.com/docket/70191484/bruker-cellular-analysis-inc-v-university-of-british-columbia/",
    "url_audio": "https://www.courtlistener.com/audio/98752/bruker-cellular-analysis-inc-v-university-of-british-columbia/"
   },
@@ -67113,9 +67206,18 @@
    },
    "panel": [],
    "patent_issues": [
-    "Other / Procedural"
+    "PTAB Procedure & Standing"
    ],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "PTAB IPR Decision",
+      "text": "The Federal Circuit affirmed the Patent Trial and Appeal Board's decision in the inter partes review proceedings (IPR2021-01236 and IPR2021-01237) appealed by CUPP Computing AS. The affirmance was entered under Federal Circuit Rule 36, indicating a nonprecedential affirmance of the PTAB's disposition.",
+      "location": null
+     }
+    ],
+    "holding": null
+   },
    "url_cl": "https://www.courtlistener.com/docket/70222574/cupp-computing-as-v-stewart/",
    "url_audio": "https://www.courtlistener.com/audio/98824/cupp-computing-as-v-stewart/"
   },
@@ -67137,9 +67239,18 @@
    },
    "panel": [],
    "patent_issues": [
-    "Other / Procedural"
+    "PTAB Procedure & Standing"
    ],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Appeal Dismissal for Procedural Default",
+      "text": "The Court dismissed the appeal for failure to file the required brief within the time permitted by Federal Circuit Rule 31(a). Under the Federal Circuit Rules, failure to timely prosecute an appeal, including failure to file the opening brief, results in automatic dismissal of the notice of appeal.",
+      "location": null
+     }
+    ],
+    "holding": null
+   },
    "url_cl": "https://www.courtlistener.com/docket/69655133/sma-solar-technology-america-llc-v-tigo-energy-inc/",
    "url_audio": null
   },
@@ -67161,9 +67272,18 @@
    },
    "panel": [],
    "patent_issues": [
-    "Other / Procedural"
+    "PTAB Procedure & Standing"
    ],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "PTAB IPR Decisions",
+      "text": "The Federal Circuit affirmed the Patent Trial and Appeal Board's decisions in all three inter partes review proceedings (IPR2022-00384, IPR2022-00414, IPR2022-00415) without detailed opinion, applying the nonprecedential summary affirmance procedure under Federal Circuit Rule 36.",
+      "location": null
+     }
+    ],
+    "holding": "Affirmed the PTAB's IPR rulings in their entirety."
+   },
    "url_cl": "https://www.courtlistener.com/docket/70238330/sydnexis-inc-v-eyenovia-inc/",
    "url_audio": "https://www.courtlistener.com/audio/98865/sydnexis-inc-v-eyenovia-inc/"
   },
@@ -67183,9 +67303,41 @@
     "url_cl": "https://www.courtlistener.com/opinion/10581969/schultz-v-dva/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-2326.OPINION.5-12-2025_2512659.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Prost",
+     "role": "Panel"
+    },
+    {
+     "name": "Reyna",
+     "role": "Panel"
+    },
+    {
+     "name": "Stark",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Lost Wages Under VEOA",
+      "text": "The court affirmed the MSPB's denial of lost wages under 5 U.S.C. \u00a7 3330c(a), holding that although the VA violated Schultz's veterans' preference rights, he failed to establish that he would have been selected for the position but for the violation because he declined to participate in the reconstructed selection process. The statute requires both a violation and proof of lost wages resulting from that violation, and absent participation in reconstruction, it is unknown whether Schultz would have obtained the position.",
+      "location": null
+     },
+     {
+      "issue": "Liquidated Damages",
+      "text": "The court affirmed the MSPB's denial of liquidated damages under 5 U.S.C. \u00a7 3330c(a), finding that Schultz presented no evidence of willfulness as required by the statute to support an award of liquidated damages equal to backpay.",
+      "location": null
+     },
+     {
+      "issue": "Consequential Damages and Expenses",
+      "text": "The court affirmed the MSPB's denial of Schultz's request for additional damages including mileage, time, and out-of-pocket expenses, concluding that the MSPB lacks statutory authority under VEOA to award consequential damages, out-of-pocket expenses, or front pay, and Schultz presented no contrary authority on appeal.",
+      "location": null
+     }
+    ],
+    "holding": "The Federal Circuit affirmed the MSPB's decision denying all damages to Schultz for the VA's violation of his veterans' preference rights, because he failed to prove he would have been selected for the position absent the violation and presented no evidence of willfulness or legal authority for alternative remedies."
+   },
    "url_cl": "https://www.courtlistener.com/opinion/10581969/schultz-v-dva/",
    "url_audio": null
   },
@@ -67207,7 +67359,16 @@
    },
    "panel": [],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Trade Remedy Determination",
+      "text": "The Court affirmed the United States Court of International Trade's judgment in its entirety under Federal Circuit Rule 36, upholding the underlying trade remedy or tariff determination challenged by Hyundai Steel Company without opinion or detailed reasoning.",
+      "location": null
+     }
+    ],
+    "holding": "Affirmed the CIT judgment upholding the trade remedy determination."
+   },
    "url_cl": "https://www.courtlistener.com/docket/67931149/hyundai-steel-company-v-united-states/",
    "url_audio": "https://www.courtlistener.com/audio/98868/hyundai-steel-company-v-united-states/"
   },
@@ -67227,9 +67388,46 @@
     "url_cl": "https://www.courtlistener.com/opinion/10581972/askan-v-faro-technologies-inc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-2258.OPINION.5-12-2025_2512634.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Prost",
+     "role": "Panel"
+    },
+    {
+     "name": "Reyna",
+     "role": "Panel"
+    },
+    {
+     "name": "Stark",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Rule 12(b)(6) Dismissal for Failure to Plead Infringement",
+      "text": "The court affirmed dismissal of the Second Amended Complaint for failure to state a plausible claim of patent infringement under Rule 12(b)(6). Mr. Askan's allegations were conclusory and failed to articulate sufficient factual detail regarding how the accused products infringed the patents; his own admissions that he would need to reverse-engineer products or obtain confidential source code to establish plausibility demonstrated the deficiency in pleading.",
+      "location": null
+     },
+     {
+      "issue": "Reconsideration of Judgment; Rule 60(b) Motion",
+      "text": "The court properly exercised its discretion to reconsider the dismissal judgment sua sponte after discovering it had erroneously overlooked Mr. Askan's opposition brief, and upon reconsideration affirmed the dismissal on the merits. District courts have discretion to reconsider judgments or orders, and the reconsideration properly addressed the error that prompted the Rule 60(b) motion.",
+      "location": null
+     },
+     {
+      "issue": "Striking of Answer Pleading",
+      "text": "The court did not abuse its discretion in striking FARO's answer to the Second Amended Complaint pursuant to its inherent authority to manage its docket and ensure orderly disposition. The striking was appropriate particularly because FARO had legitimate grounds for confusion regarding the proper timing of its answer.",
+      "location": null
+     },
+     {
+      "issue": "Discovery Before Rule 12(b)(6) Adjudication",
+      "text": "The court properly declined Mr. Askan's request for discovery under Rule 56(d) to obtain confidential source code necessary to plead infringement. Facial challenges to legal sufficiency of claims must be resolved before discovery begins, and Rule 56(d) applies only to summary judgment motions, not Rule 12(b)(6) motions to dismiss.",
+      "location": null
+     }
+    ],
+    "holding": "Affirmed the district court's reconsideration order, the striking of FARO's answer, and the dismissal with prejudice of the complaint, along with the denial of discovery."
+   },
    "url_cl": "https://www.courtlistener.com/opinion/10581972/askan-v-faro-technologies-inc/",
    "url_audio": null
   },
@@ -67251,7 +67449,16 @@
    },
    "panel": [],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Appeal Dismissal",
+      "text": "The Federal Circuit dismissed the consolidated appeals under Federal Rule of Appellate Procedure 42(b) based on the parties' agreement to settle or withdraw. Each side bears its own costs.",
+      "location": null
+     }
+    ],
+    "holding": null
+   },
    "url_cl": "https://www.courtlistener.com/opinion/10582050/hyatt-v-united-states/",
    "url_audio": null
   },
@@ -67271,11 +67478,38 @@
     "url_cl": "https://www.courtlistener.com/opinion/10582006/the-broad-institute-inc-v-the-regents-of-the-university-of-california/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/22-1653.OPINION.5-12-2025_2512679.pdf"
    },
-   "panel": [],
-   "patent_issues": [
-    "Other / Procedural"
+   "panel": [
+    {
+     "name": "Reyna",
+     "role": "Author"
+    },
+    {
+     "name": "Hughes",
+     "role": "Panel"
+    },
+    {
+     "name": "Cunningham",
+     "role": "Panel"
+    }
    ],
-   "summary": null,
+   "patent_issues": [
+    "\u00a7\u00a7 102/103 Prior Art"
+   ],
+   "summary": {
+    "segments": [
+     {
+      "issue": "Conception of CRISPR-Cas9 Eukaryotic System",
+      "text": "The court vacated and remanded the PTAB's finding that Broad achieved conception of a CRISPR-Cas9 system for editing eukaryotic DNA, holding that the Board's determination lacked sufficient evidence of a definite and permanent idea of the complete invention with all its essential characteristics. The doctrine of conception requires that an inventor possess a clear idea of the means for accomplishing the desired result, not merely a hope or plan to develop such means.",
+      "location": null
+     },
+     {
+      "issue": "Priority in Interference Proceeding",
+      "text": "The court affirmed-in-part the PTAB's conclusion that priority must be determined through proper application of conception doctrine, but vacated the Board's specific priority determination favoring Broad pending reconsideration on remand. The decision leaves unresolved which party\u2014Regents or Broad\u2014qualifies as the first to conceive the claimed CRISPR-Cas9 single-guide RNA system for eukaryotic DNA editing.",
+      "location": null
+     }
+    ],
+    "holding": "This decision clarifies that in patent interference proceedings involving biotechnology inventions, the PTAB must apply rigorous evidentiary standards to establish conception under 35 U.S.C. \u00a7 102, requiring clear proof of a definite and permanent idea of all essential characteristics of the invention rather than preliminary plans or experiments. The opinion does not substantively change conception doctrine but reinforces that the PTAB's factual findings on conception are subject to meaningful appellate review and cannot rest on speculative or inferential reasoning alone."
+   },
    "url_cl": "https://www.courtlistener.com/docket/68945974/the-broad-institute-inc-v-the-regents-of-the-university-of-california/",
    "url_audio": null
   },
@@ -67295,9 +67529,36 @@
     "url_cl": "https://www.courtlistener.com/opinion/10580645/natures-touch-frozen-foods-west-inc-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/23-2093.OPINION.5-9-2025_2512206.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Schroeder",
+     "role": "Author"
+    },
+    {
+     "name": "Hughes",
+     "role": "Author"
+    },
+    {
+     "name": "Stark",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Classification of mixed frozen fruits under HTSUS",
+      "text": "The court affirmed the classification of frozen fruit mixtures under HTSUS heading 0811 (frozen fruit) rather than heading 2106 (food preparations not elsewhere specified), holding that the common meaning of the term \"fruit\" encompasses mixed fruits and is not limited to individual types of fruit. The court rejected Nature's Touch's argument that the heading language and subheadings describe only individual fruits, finding that dictionary definitions and common usage (e.g., \"fruit bowl,\" \"fruit plate\") support the plural, mixed interpretation of \"fruit.\"",
+      "location": null
+     },
+     {
+      "issue": "Catch-all provision interpretation",
+      "text": "The court upheld the use of subheading 0811.90.80 (\"Other\") as a proper catch-all provision for frozen fruits not enumerated in other subheadings of heading 0811, applying the General Rules of Interpretation under the HTSUS. The court agreed with the trial court that \"other\" functions as an appropriate residual category when products fall within the parent heading but are not specifically listed elsewhere.",
+      "location": null
+     }
+    ],
+    "holding": "Affirmed the classification of frozen fruit mixtures, whether containing only fruit or fruit with vegetables, under HTSUS heading 0811 and subheading 0811.90.80, rejecting classification under heading 2106 as a food preparation."
+   },
    "url_cl": "https://www.courtlistener.com/docket/67539036/natures-touch-frozen-foods-west-inc-v-united-states/",
    "url_audio": "https://www.courtlistener.com/audio/95570/natures-touch-frozen-foods-west-inc-v-united-states/"
   },
@@ -67317,9 +67578,51 @@
     "url_cl": "https://www.courtlistener.com/opinion/10580650/carbon-activated-tianjin-co-ltd-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/23-2413.OPINION.5-9-2025_2512190.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Schall",
+     "role": "Author"
+    },
+    {
+     "name": "Taranto",
+     "role": "Panel"
+    },
+    {
+     "name": "Chen",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Surrogate Country Selection",
+      "text": "The court affirmed Commerce's selection of Malaysia as the primary surrogate country for valuing factors of production in the antidumping duty proceeding. Commerce properly applied the Policy Bulletin's four-step approach and determined that Malaysia was the only country among the six candidates that qualified as a significant producer by meeting the \"net exporter\" criterion, and reliance on this Policy Bulletin methodology does not violate the \"best available information\" standard of 19 U.S.C. \u00a7 1677b(c)(1)(B).",
+      "location": null
+     },
+     {
+      "issue": "Surrogate Financial Ratios",
+      "text": "The court affirmed Commerce's determination that the financial statements of Malaysian activated carbon producers Century Chemical Works and Bravo Green were the best available information for calculating surrogate financial ratios. Commerce reasonably preferred these statements because they came from companies whose principal business was activated carbon manufacturing, and using multiple financial statements from the primary surrogate country ensured consistency in valuing all factors of production.",
+      "location": null
+     },
+     {
+      "issue": "Surrogate Factor Values",
+      "text": "The court affirmed Commerce's valuation of four factors of production\u2014coal-based carbonized material, coal tar, hydrochloric acid, and steam\u2014using Malaysian data under the corresponding Harmonized Tariff Schedule headings. The selections were supported by substantial evidence and in accordance with the statutory requirement to base valuations on market economy country data comparable to the non-market economy country.",
+      "location": null
+     },
+     {
+      "issue": "Ocean Freight Valuation",
+      "text": "The court affirmed Commerce's selection of Maersk shipping data over Descartes Systems Group data for valuing ocean freight expenses. The determination was supported by substantial evidence in the administrative record and in accordance with 19 U.S.C. \u00a7 1516a(b)(1)(B)(i).",
+      "location": null
+     },
+     {
+      "issue": "Overall Affirmance",
+      "text": "The Federal Circuit affirmed the Court of International Trade's decision sustaining Commerce's final results of the thirteenth administrative review of the antidumping duty order on certain activated carbon from China for April 1, 2019 through March 31, 2020. All of Carbon Activated's challenges to Commerce's determinations were rejected under the substantial evidence standard of review.",
+      "location": "Page 3"
+     }
+    ],
+    "holding": "The court affirmed Commerce's antidumping duty determination in its entirety, upholding the selection of Malaysia as the surrogate country, the choice of Malaysian producer financial statements for calculating expense ratios, the valuation of four factors of production using Malaysian Harmonized Tariff Schedule data, and the selection of Maersk data for ocean freight valuation, all of which were supported by substantial evidence and consistent with the Tariff Act of 1930 and Commerce's Policy Bulletin."
+   },
    "url_cl": "https://www.courtlistener.com/docket/67820494/carbon-activated-tianjin-co-ltd-v-united-states/",
    "url_audio": "https://www.courtlistener.com/audio/97427/carbon-activated-tianjin-co-ltd-v-united-states/"
   },
@@ -67343,7 +67646,16 @@
    "patent_issues": [
     "Other / Procedural"
    ],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Appeal Dismissal",
+      "text": "The Federal Circuit dismissed the entire appeal under Fed. R. App. P. 42(b) pursuant to the parties' stipulated agreement to dismiss the proceeding. Each party bears its own costs.",
+      "location": null
+     }
+    ],
+    "holding": null
+   },
    "url_cl": "https://www.courtlistener.com/docket/69930077/multiscan-technologies-usa-llc-v-cohn/",
    "url_audio": null
   },
@@ -67363,9 +67675,31 @@
     "url_cl": "https://www.courtlistener.com/opinion/10580651/carbon-activated-tianjin-co-ltd-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/23-2135.OPINION.5-9-2025_2512176.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Schall",
+     "role": "Author"
+    },
+    {
+     "name": "Taranto",
+     "role": "Panel"
+    },
+    {
+     "name": "Chen",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Surrogate Value Selection",
+      "text": "The court affirmed Commerce's selection of Malaysian import data under HS 4402.90.1000 (coconut shell charcoal) as the surrogate value for coal-based carbonized material used by Carbon Activated, rejecting the company's argument that the broader HS 4402.90 category (wood charcoal) should have been used. Commerce's determination was supported by substantial evidence, including its consistent past practice of selecting coconut shell charcoal, the distinction between activation processes (steam/thermal for coal versus chemical for wood), and the ITC's statement that chemically activated carbon is generally made from wood, under 19 U.S.C. \u00a7 1677b(c).",
+      "location": null
+     }
+    ],
+    "holding": "Commerce's antidumping duty determination for activated carbon from China in the twelfth administrative review was sustained because its selection of coconut shell charcoal as the surrogate value for coal-based carbonized material was supported by substantial evidence and in accordance with law, even though one factual statement in Commerce's reasoning was inaccurate, because the critical foundational statement regarding past practice was properly supported."
+   },
    "url_cl": "https://www.courtlistener.com/docket/67595510/carbon-activated-tianjin-co-ltd-v-united-states/",
    "url_audio": "https://www.courtlistener.com/audio/97428/carbon-activated-tianjin-co-ltd-v-united-states/"
   },
@@ -67385,9 +67719,41 @@
     "url_cl": "https://www.courtlistener.com/opinion/10580591/knight-v-opm/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1125.OPINION.5-9-2025_2512062.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Lourie",
+     "role": "Panel"
+    },
+    {
+     "name": "Dyk",
+     "role": "Panel"
+    },
+    {
+     "name": "Reyna",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Timeliness of Disability Retirement Application",
+      "text": "The court affirmed the Board's determination that Knight's disability retirement application filed in May 2022, more than seven years after her 2015 separation, was untimely under 5 U.S.C. \u00a7 8453, which requires applications to be filed before separation or within one year thereafter. The court found substantial evidence supported the Board's finding that Knight failed to establish by a preponderance of the evidence that she was mentally incompetent at or within one year of separation, the sole ground for waiving the statutory deadline.",
+      "location": null
+     },
+     {
+      "issue": "Mental Incompetence Standard",
+      "text": "The court affirmed that mental incompetence under 5 U.S.C. \u00a7 8453 requires an inability to handle one's personal affairs due to physical or mental disease or injury, and this standard differs from disability eligibility for Social Security benefits. Knight's evidence\u2014her own statements, Social Security documents, telephone records, and an uncited medical document\u2014was found substantially insufficient to meet this burden, particularly lacking typical documentation such as guardianship orders or treating provider statements.",
+      "location": null
+     },
+     {
+      "issue": "Fraud Allegations Credibility",
+      "text": "The court upheld the Board's determination that Knight's allegations of fraud regarding Dr. Milne's psychological report lacked credibility, noting that Knight herself had requested the report be sent to OPM and only repudiated it after OPM determined it did not support her incompetency claim. The court found no error in the Administrative Judge's assessment that the allegations were \"entirely incredible.\"",
+      "location": null
+     }
+    ],
+    "holding": "The Federal Circuit affirmed the Merit Systems Protection Board's final order denying Knight's application for disability retirement as untimely and finding she did not qualify for waiver of the one-year filing deadline under 5 U.S.C. \u00a7 8453 based on mental incompetence, with substantial evidence supporting the Board's determinations."
+   },
    "url_cl": "https://www.courtlistener.com/opinion/10580591/knight-v-opm/",
    "url_audio": null
   },
@@ -67407,9 +67773,46 @@
     "url_cl": "https://www.courtlistener.com/opinion/10580647/hawker-v-mspb/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1697.OPINION.5-9-2025_2512191.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Taranto",
+     "role": "Panel"
+    },
+    {
+     "name": "Stoll",
+     "role": "Panel"
+    },
+    {
+     "name": "Scarsi",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "IRA Jurisdictional Requirements",
+      "text": "The court affirmed the Board's dismissal for lack of jurisdiction in this Individual Right of Action whistleblower reprisal appeal. Under 5 U.S.C. \u00a7 7703, the Board must establish jurisdiction by applying the de novo standard to determine whether the appellant made non-frivolous allegations that he engaged in protected whistleblowing and that the protected disclosure was a contributing factor to a personnel action.",
+      "location": "DISCUSSION"
+     },
+     {
+      "issue": "Protected Disclosure Allegations",
+      "text": "The court affirmed the Board's finding that Dr. Hawker's disclosure allegations in paragraph (2)\u2014concerning allegedly questionable and poor practices and safety concerns about supervisor procedures\u2014failed to state a non-frivolous protected disclosure claim because the allegations were vague, conclusory, and did not reveal circumstances from which a disinterested person could reasonably conclude the VA's actions evidenced violations under 5 U.S.C. \u00a7 2302(b)(8).",
+      "location": "DISCUSSION"
+     },
+     {
+      "issue": "Contributing Factor Test",
+      "text": "The court affirmed that Dr. Hawker's disclosures in paragraphs (1), (3), (4), and (5) failed to satisfy the knowledge/timing test for establishing contributing factor because the record did not indicate that VA officials who took the challenged personnel actions had knowledge of his disclosures.",
+      "location": null
+     },
+     {
+      "issue": "Due Process Right to Hearing",
+      "text": "The court rejected Dr. Hawker's due process challenge to dismissal without an evidentiary hearing, holding that neither 5 U.S.C. \u00a7 7701(a) nor the Fifth Amendment Due Process Clause guarantees a hearing on jurisdictional questions unless the employee makes a non-frivolous allegation that, if proved, would establish Board jurisdiction.",
+      "location": null
+     }
+    ],
+    "holding": "The Board did not err in dismissing Dr. Hawker's Individual Right of Action appeal for lack of jurisdiction without a hearing, because he failed to make non-frivolous allegations of both a protected disclosure and that such disclosure was a contributing factor to any VA personnel action."
+   },
    "url_cl": "https://www.courtlistener.com/opinion/10580647/hawker-v-mspb/",
    "url_audio": null
   },
@@ -67505,11 +67908,54 @@
     "url_cl": "https://www.courtlistener.com/opinion/10572335/in-re-gamble/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1133.OPINION.5-8-2025_2511552.pdf"
    },
-   "panel": [],
-   "patent_issues": [
-    "Other / Procedural"
+   "panel": [
+    {
+     "name": "Taranto",
+     "role": "Panel"
+    },
+    {
+     "name": "Stoll",
+     "role": "Panel"
+    },
+    {
+     "name": "Scarsi",
+     "role": "Panel"
+    }
    ],
-   "summary": null,
+   "patent_issues": [
+    "\u00a7 112 / Claim Construction",
+    "\u00a7\u00a7 102/103 Prior Art"
+   ],
+   "summary": {
+    "segments": [
+     {
+      "issue": "Indefiniteness\u2014Forfeiture",
+      "text": "The court affirmed the Board's indefiniteness rejections of claims 1, 3\u20136, 11, 14, and 17 under 35 U.S.C. \u00a7 112(b) because Gamble failed to contest these rejections before the Board and thus forfeited any challenge. The court held that when an appellant fails to present arguments before the Board, the Board has no burden to consider the merits and may treat the argument as waived.",
+      "location": null
+     },
+     {
+      "issue": "Indefiniteness\u2014Dependent Claims",
+      "text": "The court affirmed the Board's new ground of rejection holding claims 2, 13, and 18 indefinite because they depend on independent claims 1 and 14 already determined to be indefinite. The Board's logic based on the relationship of dependent to independent claims was sound, and Gamble did not identify any evidence or assert compliance with procedures necessary to preserve an appeal of those rejections.",
+      "location": null
+     },
+     {
+      "issue": "Obviousness\u2014Substantial Evidence",
+      "text": "The court affirmed the Board's affirmance of the examiner's obviousness rejections of claims 1, 2, and 6\u201318 under 35 U.S.C. \u00a7 103 based on the combination of Castell and Engstrom prior-art references. The Board's finding that a relevant artisan would have been motivated to combine the references to arrive at the claimed invention was supported by substantial evidence.",
+      "location": null
+     },
+     {
+      "issue": "Appeal Jurisdiction",
+      "text": "The court exercised jurisdiction over the appeal from the Patent Trial and Appeal Board's final written decision under 28 U.S.C. \u00a7 1295(a)(4)(A).",
+      "location": null
+     },
+     {
+      "issue": "Procedural Forfeiture\u2014Opening Brief",
+      "text": "The court held that Gamble forfeited his indefiniteness and obviousness challenges by providing only conclusory statements and no developed argument in his opening brief, as an appellant cannot wait until the reply brief to present meaningful argument. Per In re Killian and related precedent, skeletal or conclusory arguments are insufficient to preserve a point on appeal.",
+      "location": null
+     }
+    ],
+    "holding": "The Federal Circuit affirmed the Patent Trial and Appeal Board's final written decision rejecting all claims of the '124 application as unpatentable for indefiniteness and obviousness, holding that Gamble forfeited his challenges through lack of adequate briefing before both the Board and the appellate court."
+   },
    "url_cl": "https://www.courtlistener.com/opinion/10572335/in-re-gamble/",
    "url_audio": null
   },
@@ -67531,7 +67977,16 @@
    },
    "panel": [],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Failure to Pay Docketing Fee",
+      "text": "The Federal Circuit dismissed the notice of appeal pursuant to Federal Circuit Rule 52(a)(1) because appellant failed to pay the required docketing fee within the time permitted by the rules. The dismissal was entered for failure to prosecute in accordance with the Federal Circuit's procedural rules.",
+      "location": null
+     }
+    ],
+    "holding": null
+   },
    "url_cl": "https://www.courtlistener.com/opinion/10573988/laudermilk-v-collins/",
    "url_audio": null
   },
@@ -67553,7 +68008,16 @@
    },
    "panel": [],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Appeal Dismissal",
+      "text": "The court granted respondent's motion to voluntarily dismiss the appeal pursuant to Federal Rule of Appellate Procedure 42(b). Each party bears its own costs.",
+      "location": null
+     }
+    ],
+    "holding": null
+   },
    "url_cl": "https://www.courtlistener.com/opinion/10570611/mohamad-v-hhs/",
    "url_audio": null
   },
@@ -67573,9 +68037,31 @@
     "url_cl": "https://www.courtlistener.com/opinion/10572333/mulligan-v-mspb/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-2084.OPINION.5-8-2025_2511532.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Moore",
+     "role": "Panel"
+    },
+    {
+     "name": "Clevenger",
+     "role": "Panel"
+    },
+    {
+     "name": "Chen",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Petition Timeliness",
+      "text": "The court dismissed the petition for review as untimely under 5 U.S.C. \u00a7 7703(b)(1), which requires filing within 60 days of the Board's final order. Although the petitioner mailed his petition on the deadline of July 9, 2024, it was not received by the court until July 11, 2024, and the court held that filing requires actual receipt, not merely timely mailing. The court further held that even if equitable tolling were available, the petitioner failed to carry his burden of establishing the two required elements for equitable tolling relief.",
+      "location": null
+     }
+    ],
+    "holding": "Petition for review dismissed as untimely filed."
+   },
    "url_cl": "https://www.courtlistener.com/opinion/10572333/mulligan-v-mspb/",
    "url_audio": null
   },
@@ -67595,9 +68081,31 @@
     "url_cl": "https://www.courtlistener.com/opinion/10571415/davie-v-mspb/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-2318.OPINION.5-8-2025_2511514.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Moore",
+     "role": "Panel"
+    },
+    {
+     "name": "Cunningham",
+     "role": "Panel"
+    },
+    {
+     "name": "Scarsi",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Appeal Timeliness",
+      "text": "The court affirmed the Board's dismissal of Harold Davie's appeal to the MSPB as untimely filed under 5 C.F.R. \u00a7 1201.22(b)(1), which requires appeals be filed within 30 calendar days after the OPM decision or receipt, whichever is later. Mr. Davie received the December 7, 2017 OPM decision on December 13, 2017, but did not appeal until February 10, 2018\u201464 days later\u2014and provided no evidence or argument of timeliness or good cause for delay when ordered to do so by the administrative judge.",
+      "location": null
+     }
+    ],
+    "holding": "The Board's final order dismissing the appeal as untimely and denying the petition for review was affirmed because substantial evidence supported the dismissal under the Administrative Procedure Act standard of review (5 U.S.C. \u00a7 7703(c))."
+   },
    "url_cl": "https://www.courtlistener.com/opinion/10571415/davie-v-mspb/",
    "url_audio": null
   },
@@ -67617,9 +68125,36 @@
     "url_cl": "https://www.courtlistener.com/opinion/10572334/lacroix-v-army/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-2340.OPINION.5-8-2025_2511571.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Lourie",
+     "role": "Panel"
+    },
+    {
+     "name": "Dyk",
+     "role": "Panel"
+    },
+    {
+     "name": "Reyna",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "FERS Law Enforcement Coverage Timeliness",
+      "text": "The Federal Circuit affirmed the Merit Systems Protection Board's determination that Lacroix failed to timely request law enforcement officer retirement coverage under 5 C.F.R. \u00a7 842.804(c), which requires a formal written request within six months of entering the position or any significant change in position. The Board's finding that no formal written request appeared in the record from within six months of Lacroix's March 18, 2007 assignment to the task force was supported by substantial evidence, and Lacroix's later sworn statement claiming he had submitted such a request in 2007 was insufficient to overcome this finding under the arbitrary and capricious standard of review.",
+      "location": null
+     },
+     {
+      "issue": "Good Cause Exception Denial",
+      "text": "The court affirmed the Board's ruling that Lacroix failed to demonstrate good cause for his untimely request, thereby precluding any exception to the six-month filing deadline under 5 C.F.R. \u00a7 842.804(c). Once an employee fails to timely request coverage and shows no good cause, the agency's determination regarding position designation becomes conclusive and nonreviewable by the Board.",
+      "location": null
+     }
+    ],
+    "holding": "The Merit Systems Protection Board's decision denying Lacroix law enforcement officer retirement coverage under the Federal Employees Retirement System was affirmed because Lacroix failed to submit a formal written request for coverage within six months of his position change in March 2007, as required by 5 C.F.R. \u00a7 842.804(c), and failed to demonstrate good cause for the delay."
+   },
    "url_cl": "https://www.courtlistener.com/opinion/10572334/lacroix-v-army/",
    "url_audio": null
   },
@@ -67641,7 +68176,16 @@
    },
    "panel": [],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Appeal Dismissal for Failure to Prosecute",
+      "text": "The Federal Circuit dismissed Tajimier's appeal for failure to prosecute, specifically citing the appellant's failure to pay the docketing fee and failure to file an entry of appearance as required by the court's March 12, 2025 order. The dismissal was entered pursuant to the court's prior order and applicable rules governing appellate procedure.",
+      "location": null
+     }
+    ],
+    "holding": null
+   },
    "url_cl": "https://www.courtlistener.com/opinion/10551613/tajimier-inc-v-united-states/",
    "url_audio": null
   },
@@ -88867,6 +89411,22 @@
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10103032/tribe-of-two-llc-v-vidal/",
    "url_audio": "https://www.courtlistener.com/audio/93096/tribe-of-two-llc-v-vidal/"
+  },
+  {
+   "docket_number": "2024-2281",
+   "case_name": "Micron Technology, Inc. v. Netlist, Inc.",
+   "case_type": "Patent (District Ct.)",
+   "origin": "United States District Court for the District of Idaho",
+   "status": "Argued \u2014 Awaiting Decision",
+   "date_filed": "2024-09-03",
+   "date_argued": "2026-06-05",
+   "argument": null,
+   "decision": null,
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/70803592/micron-technology-inc-v-netlist-inc/",
+   "url_audio": "https://www.courtlistener.com/audio/105317/micron-technology-inc-v-netlist-inc/"
   },
   {
    "docket_number": "2024-2282",
