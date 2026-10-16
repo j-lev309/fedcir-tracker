@@ -34133,5 +34133,218 @@
    ],
    "holding": null
   }
+ },
+ "panel-cl-10463614": [],
+ "cl-10463614": {
+  "issues": [],
+  "summary": {
+   "segments": [
+    {
+     "issue": "Petition Dismissal for Non-Compliance",
+     "text": "The court dismissed the petition for review of the Merit Systems Protection Board decision pursuant to Federal Circuit Rules 25(c)(4) and 31(d) because petitioner failed to file a corrected opening brief within the time permitted after receiving notice of non-compliance on March 13, 2025. The opening brief and any corrected version were stricken from the record.",
+     "location": "page 2"
+    }
+   ],
+   "holding": null
+  }
+ },
+ "panel-cl-10458284": [
+  {
+   "name": "Hughes",
+   "role": "Panel"
+  },
+  {
+   "name": "Mayer",
+   "role": "Panel"
+  },
+  {
+   "name": "Stoll",
+   "role": "Panel"
+  }
+ ],
+ "cl-10458284": {
+  "issues": [
+   "\u00a7 101 Eligibility",
+   "\u00a7 112 / Claim Construction"
+  ],
+  "summary": {
+   "segments": [
+    {
+     "issue": "Claim Eligibility Under 35 U.S.C. \u00a7 101",
+     "text": "The Federal Circuit affirmed that the asserted claims of the '753 patent and '104 patent family were patent ineligible under 35 U.S.C. \u00a7 101 because they were directed to the abstract idea of collecting and comparing calibration data to determine mobile device location. The court found that although the claims related to a particular subject matter (location data), they involved only conventional components and disclosed no inventive concept sufficient to transform the abstract idea into patent-eligible subject matter under the Alice two-step framework.",
+     "location": "Section II.B, II.C"
+    }
+   ],
+   "holding": "Affirmed district court judgments holding asserted claims of the '753 patent and '104 patent family patent ineligible under 35 U.S.C. \u00a7 101 as directed to the abstract idea of data collection, comparison, and analysis."
+  }
+ },
+ "panel-cl-10463615": [],
+ "cl-10463615": {
+  "issues": [],
+  "summary": {
+   "segments": [
+    {
+     "issue": "Petition Dismissal for Lack of Prosecution",
+     "text": "The court dismissed the petition for review of the MSPB decision because petitioner failed to file the required brief within the time period set by the court's March 12, 2025 order. Dismissal was appropriate under the Federal Circuit's rules governing failure to prosecute.",
+     "location": null
+    }
+   ],
+   "holding": null
+  }
+ },
+ "panel-cl-10437467": [
+  {
+   "name": "Linn",
+   "role": "Author"
+  },
+  {
+   "name": "Prost",
+   "role": "Panel"
+  },
+  {
+   "name": "Reyna",
+   "role": "Panel"
+  }
+ ],
+ "cl-10437467": {
+  "issues": [],
+  "summary": {
+   "segments": [
+    {
+     "issue": "Jurisdiction and Standard of Review",
+     "text": "The Federal Circuit has jurisdiction under 38 U.S.C. \u00a7 7292(a), (c) to review legal interpretations of rules of law, statutes, or regulations relied upon by the Veterans Court, but cannot review factual determinations or applications of law to fact. The court emphasized its jurisdiction is tightly circumscribed by statute and limited to pure questions of law or constitutional concerns.",
+     "location": null
+    },
+    {
+     "issue": "Implicit Denial and Notice Requirements",
+     "text": "The court held that a VA regional office decision may implicitly deny a related claim when the reasons for an explicit denial put a reasonable person on notice that a related claim was being considered and rejected, even without expressly addressing that claim. The implicit denial doctrine applies when the decision discusses the related claim in terms sufficient to provide adequate notice and an opportunity to respond, satisfying the notice requirements of 38 C.F.R. \u00a7 3.103(f) for both the explicit and implicit denials.",
+     "location": "Section II.B"
+    },
+    {
+     "issue": "1991 Headache Claim Implicitly Denied",
+     "text": "The court affirmed the Board's determination that Steele's 1991 claim for service-connected headaches was implicitly denied in the 1991 RO Decision and thus finally adjudicated. The 1991 RO Decision expressly granted service connection only for the scalp scar as the sole residual of the head injury and noted that headaches were occasional and non-disabling, which provided a reasonable person with notice that the headache claim was being rejected.",
+     "location": null
+    },
+    {
+     "issue": "Ruel Notice Requirements and Implicit Denial",
+     "text": "The court clarified that its holding in Ruel v. Wilkie requiring express identification of claims, reasons, and appeal rights applies only to explicit denials, not implicit denials. For implicit denials, the requirement to provide reasons for the decision is satisfied when the explicit denial's reasoning makes clear to a reasonable person that a related claim is being disposed of, even if not separately identified or reasoned in the notice letter.",
+     "location": "Section III.A"
+    },
+    {
+     "issue": "Effective Date for Later-Filed Claim",
+     "text": "Because the 1991 headache claim was finally adjudicated as implicitly denied, it did not remain pending and did not hold open the June 13, 1991 filing date for a later effective date. Steele's 2016 headache claim was therefore entitled to an effective date no earlier than March 6, 2013\u2014the date of his related TBI claim that was construed to include residuals of traumatic brain injury.",
+     "location": null
+    }
+   ],
+   "holding": "This decision confirms that the implicit denial doctrine applies to VA disability decisions when a regional office's discussion of an explicit denial puts a reasonable person on notice that a related claim is being rejected, even without express identification or separate reasoning for the related claim. The court clarified that Ruel's express notice requirements apply only to explicit denials, not implicit denials, which may satisfy due process and regulatory notice obligations through the reasoning provided for the explicit denial. This distinction allows the VA to finally adjudicate related claims without separately identifying each denied claim in the notice letter."
+  }
+ },
+ "panel-cl-10438278": [],
+ "cl-10438278": {
+  "issues": [],
+  "summary": {
+   "segments": [
+    {
+     "issue": "Appeal Dismissal",
+     "text": "The Federal Circuit dismissed the appeal pursuant to Fed. R. App. P. 42(b) following agreement by both parties. Each party bears its own costs.",
+     "location": null
+    },
+    {
+     "issue": "Cost Allocation",
+     "text": "The court ordered that each side shall bear their own costs, declining to impose costs on either party despite the dismissal.",
+     "location": null
+    }
+   ],
+   "holding": null
+  }
+ },
+ "panel-cl-10438279": [],
+ "cl-10438279": {
+  "issues": [],
+  "summary": {
+   "segments": [
+    {
+     "issue": "In Forma Pauperis Motion",
+     "text": "The court denied as moot petitioner's motion to proceed in forma pauperis because the petition for review was dismissed for failure to prosecute before the motion could be decided on its merits.",
+     "location": null
+    },
+    {
+     "issue": "Petition for Review Dismissal",
+     "text": "The petition for review was dismissed for failure to prosecute in accordance with Federal Circuit Rule 31(a), as petitioner failed to file a corrected opening brief after receiving an overdue notice on April 2, 2025.",
+     "location": null
+    }
+   ],
+   "holding": "Petition dismissed for failure to prosecute."
+  }
+ },
+ "panel-cl-10419022": [],
+ "cl-10419022": {
+  "issues": [],
+  "summary": {
+   "segments": [
+    {
+     "issue": "Appeal Dismissal",
+     "text": "The appeal was dismissed pursuant to Federal Rule of Appellate Procedure 42(b) based on the parties' agreement to dismiss the proceeding. Each party was ordered to bear its own costs.",
+     "location": null
+    }
+   ],
+   "holding": "When parties to a Federal Circuit appeal mutually agree to dismiss, the court may dismiss the proceeding under Fed. R. App. P. 42(b) with each party bearing its own costs."
+  }
+ },
+ "panel-cl-10419641": [
+  {
+   "name": "Dyk",
+   "role": "Author"
+  },
+  {
+   "name": "Lourie",
+   "role": "Panel"
+  },
+  {
+   "name": "Chen",
+   "role": "Panel"
+  }
+ ],
+ "cl-10419641": {
+  "issues": [],
+  "summary": {
+   "segments": [
+    {
+     "issue": "Patent Eligibility Under \u00a7 101",
+     "text": "The Federal Circuit affirmed the district court's dismissal of the four patent claims as patent ineligible under 35 U.S.C. \u00a7 101. Applying the two-step Alice framework, the court held at step one that the claims are directed to the abstract idea of improving image quality by adjusting various aspects of an image based on features of the main object, and at step two found no inventive concept that would transform the claims into a patent-eligible application. The claims were functional and results-oriented, merely implementing a longstanding human activity (image retouching) using generic computing components without explaining how the specific improvement was achieved.",
+     "location": null
+    }
+   ],
+   "holding": "The Federal Circuit affirmed the district court's judgment dismissing Longitude's patent infringement complaint for lack of patent eligibility under 35 U.S.C. \u00a7 101, holding that claims directed to digital image correction techniques that functionally describe adjusting image quality based on main object properties constitute abstract ideas lacking an inventive concept and are therefore unpatentable."
+  }
+ },
+ "panel-cl-10419643": [
+  {
+   "name": "Prost",
+   "role": "Author"
+  },
+  {
+   "name": "Taranto",
+   "role": "Panel"
+  },
+  {
+   "name": "Stark",
+   "role": "Panel"
+  }
+ ],
+ "cl-10419643": {
+  "issues": [
+   "PTAB Procedure & Standing"
+  ],
+  "summary": {
+   "segments": [
+    {
+     "issue": "Appeal Mootness",
+     "text": "The Court dismissed the appeal as moot because the Federal Circuit's contemporaneous decision in Fintiv, Inc. v. PayPal Holdings, Inc., holding claims 1\u20133 of the '386 patent invalid as indefinite, compelled dismissal of this appeal challenging the PTAB's unpatentability holding on the same claims. No relief could be granted that would not be foreclosed by the parallel ruling.",
+     "location": null
+    }
+   ],
+   "holding": "Appeal dismissed as moot due to controlling concurrent Federal Circuit decision invalidating the patent claims at issue."
+  }
  }
 }
