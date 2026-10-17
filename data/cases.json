@@ -1,21 +1,19 @@
 {
- "generated_at": "2026-10-16T23:51:44+00:00",
+ "generated_at": "2026-10-17T16:23:53+00:00",
  "window_since": "2020-01-01",
  "coverage": {
-  "complete": false,
-  "run_complete": false,
-  "backfilling": [
-   "dockets"
-  ],
+  "complete": true,
+  "run_complete": true,
+  "backfilling": [],
   "window_since": "2020-01-01",
   "window_months": 18,
   "complete_since": "2020-01-01",
   "sources": {
    "dockets": {
-    "resume_url": "https://www.courtlistener.com/api/rest/v4/dockets/",
-    "complete": false,
-    "reason": "network timeouts",
-    "count": 0
+    "complete": true,
+    "reason": "ok",
+    "count": 0,
+    "resume_url": null
    },
    "clusters": {
     "complete": true,
@@ -48,7 +46,7 @@
   },
   "summaries": {
    "enabled": true,
-   "have": 1505,
+   "have": 1506,
    "expected": 7928,
    "complete": false
   },
@@ -65716,7 +65714,7 @@
     }
    ],
    "patent_issues": [
-    "Other / Procedural"
+    "PTAB Procedure & Standing"
    ],
    "summary": {
     "segments": [
@@ -69700,7 +69698,21 @@
    },
    "panel": [],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Tucker Act Jurisdiction",
+      "text": "The Federal Circuit summarily affirmed the Court of Federal Claims' dismissal for lack of jurisdiction under the Tucker Act, 28 U.S.C. \u00a7 1491(a)(1). The court held that the Court of Federal Claims lacks authority to review challenges to district court rulings, that oath-of-office violations do not constitute breach-of-contract claims cognizable under the Tucker Act, and that constitutional provisions invoked (First, Ninth, Fourteenth Amendments, and Fifth Amendment Due Process Clause) do not mandate federal compensation as required for Tucker Act jurisdiction under United States v. Navajo Nation.",
+      "location": null
+     },
+     {
+      "issue": "Exclusive District Court Jurisdiction",
+      "text": "The court held that certain claims\u2014including Federal Torts Claims Act claims and Civil Rights Act claims\u2014fall within the exclusive original jurisdiction of federal district courts under 28 U.S.C. \u00a7\u00a7 1346(b)(1) and 1343(a)(4), respectively, and thus lie outside the Court of Federal Claims' jurisdiction.",
+      "location": null
+     }
+    ],
+    "holding": "The judgment of the United States Court of Federal Claims dismissing the case for lack of jurisdiction is summarily affirmed."
+   },
    "url_cl": "https://www.courtlistener.com/opinion/10386079/barksdale-v-united-states/",
    "url_audio": null
   },
