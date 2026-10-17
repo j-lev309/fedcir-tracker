@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-17T16:23:53+00:00",
+ "generated_at": "2026-10-17T17:58:23+00:00",
  "window_since": "2020-01-01",
  "coverage": {
   "complete": true,
@@ -12,7 +12,7 @@
    "dockets": {
     "complete": true,
     "reason": "ok",
-    "count": 0,
+    "count": 1,
     "resume_url": null
    },
    "clusters": {
@@ -46,7 +46,7 @@
   },
   "summaries": {
    "enabled": true,
-   "have": 1506,
+   "have": 1507,
    "expected": 7928,
    "complete": false
   },
@@ -57891,7 +57891,7 @@
    },
    "panel": [],
    "patent_issues": [
-    "Other / Procedural"
+    "PTAB Procedure & Standing"
    ],
    "summary": {
     "segments": [
@@ -69732,9 +69732,36 @@
     "url_cl": "https://www.courtlistener.com/opinion/10386117/amos-v-opm/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1331.ORDER.4-28-2025_2505296.pdf"
    },
-   "panel": [],
+   "panel": [
+    {
+     "name": "Taranto",
+     "role": "Panel"
+    },
+    {
+     "name": "Wallach",
+     "role": "Panel"
+    },
+    {
+     "name": "Cunningham",
+     "role": "Panel"
+    }
+   ],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Federal Circuit Jurisdiction",
+      "text": "The Federal Circuit lacks jurisdiction over the action because Mr. Amos is not appealing a Merit Systems Protection Board decision and the Federal Circuit has no authority to directly review OPM decisions under 28 U.S.C. \u00a7 1295. The parties' joint motion to transfer was based on a mischaracterization of the claims as affecting FERS rights when the operative claims concern FEGLI benefits, which fall outside the court's jurisdiction.",
+      "location": "Page 2-3"
+     },
+     {
+      "issue": "Transfer to District Court",
+      "text": "The case is transferred back to the United States District Court for the District of Maryland under 28 U.S.C. \u00a7 1631 because Mr. Amos is pursuing an original action challenging denial of FEGLI benefits, which are subject to exclusive federal district court jurisdiction under 5 U.S.C. \u00a7 8715, not appellate jurisdiction in the Federal Circuit. The court takes no position on OPM's timeliness arguments in the transfer.",
+      "location": null
+     }
+    ],
+    "holding": "The Federal Circuit reversed the district court's transfer order and remanded the action to the United States District Court for the District of Maryland under 28 U.S.C. \u00a7 1631, holding that the Federal Circuit lacks jurisdiction because Mr. Amos's claims concern FEGLI benefits subject to exclusive district court jurisdiction under 5 U.S.C. \u00a7 8715 and do not constitute an appeal from a Merit Systems Protection Board decision."
+   },
    "url_cl": "https://www.courtlistener.com/opinion/10386117/amos-v-opm/",
    "url_audio": null
   },
