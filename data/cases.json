@@ -1,21 +1,19 @@
 {
- "generated_at": "2026-10-17T21:42:48+00:00",
+ "generated_at": "2026-10-17T23:14:00+00:00",
  "window_since": "2020-01-01",
  "coverage": {
-  "complete": false,
-  "run_complete": false,
-  "backfilling": [
-   "dockets"
-  ],
+  "complete": true,
+  "run_complete": true,
+  "backfilling": [],
   "window_since": "2020-01-01",
   "window_months": 18,
   "complete_since": "2020-01-01",
   "sources": {
    "dockets": {
-    "resume_url": "https://www.courtlistener.com/api/rest/v4/dockets/",
-    "complete": false,
-    "reason": "network timeouts",
-    "count": 0
+    "complete": true,
+    "reason": "ok",
+    "count": 0,
+    "resume_url": null
    },
    "clusters": {
     "complete": true,
@@ -48,7 +46,7 @@
   },
   "summaries": {
    "enabled": true,
-   "have": 1508,
+   "have": 1509,
    "expected": 7928,
    "complete": false
   },
@@ -69841,7 +69839,16 @@
    },
    "panel": [],
    "patent_issues": [],
-   "summary": null,
+   "summary": {
+    "segments": [
+     {
+      "issue": "Appeal Dismissal",
+      "text": "The Federal Circuit dismissed the entire appeal under Fed. R. App. P. 42(b) following the parties' agreement to do so. Each party bears its own costs.",
+      "location": null
+     }
+    ],
+    "holding": null
+   },
    "url_cl": "https://www.courtlistener.com/opinion/10388936/lumentum-operations-llc-v-nlight-inc/",
    "url_audio": null
   },

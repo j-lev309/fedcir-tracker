@@ -34526,5 +34526,19 @@
    ],
    "holding": "The Federal Circuit reversed the district court's transfer order and remanded the action to the United States District Court for the District of Maryland under 28 U.S.C. \u00a7 1631, holding that the Federal Circuit lacks jurisdiction because Mr. Amos's claims concern FEGLI benefits subject to exclusive district court jurisdiction under 5 U.S.C. \u00a7 8715 and do not constitute an appeal from a Merit Systems Protection Board decision."
   }
+ },
+ "panel-cl-10388936": [],
+ "cl-10388936": {
+  "issues": [],
+  "summary": {
+   "segments": [
+    {
+     "issue": "Appeal Dismissal",
+     "text": "The Federal Circuit dismissed the entire appeal under Fed. R. App. P. 42(b) following the parties' agreement to do so. Each party bears its own costs.",
+     "location": null
+    }
+   ],
+   "holding": null
+  }
  }
 }
