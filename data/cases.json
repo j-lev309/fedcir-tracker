@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-18T23:13:42+00:00",
+ "generated_at": "2026-10-19T19:26:41+00:00",
  "window_since": "2020-01-01",
  "coverage": {
   "complete": true,
@@ -18,13 +18,13 @@
    "clusters": {
     "complete": true,
     "reason": "ok",
-    "count": 17,
+    "count": 19,
     "resume_url": null
    },
    "opinions": {
     "complete": true,
     "reason": "ok",
-    "count": 0,
+    "count": 2,
     "resume_url": null
    },
    "audio": {
@@ -47,25 +47,71 @@
   "summaries": {
    "enabled": true,
    "have": 1509,
-   "expected": 7928,
+   "expected": 7930,
    "complete": false
   },
   "opinion_text_fetches_this_run": 600,
   "opinion_text_fetch_cap": 600,
-  "latest_decision_date": "2026-10-16",
+  "latest_decision_date": "2026-10-19",
   "next_argument_date": null
  },
  "stats": {
-  "total": 8837,
+  "total": 8838,
   "pending": 862,
   "scheduled": 0,
-  "awaiting": 46,
-  "decided": 7929,
-  "precedential": 1444,
+  "awaiting": 45,
+  "decided": 7931,
+  "precedential": 1445,
   "rule36": 1
  },
  "upcoming_argument_docket_numbers": [],
  "cases": [
+  {
+   "docket_number": "CL-11038117",
+   "case_name": "Ruth v. United States",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-10-19",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/11038117/ruth-v-united-states/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1983.ORDER.10-19-2026_2772805.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/11038117/ruth-v-united-states/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "2024-1945",
+   "case_name": "Google LLC v. Valtrus Innovations Ltd.",
+   "case_type": "Patent (PTAB)",
+   "origin": "United States Patent and Trademark Office",
+   "status": "Decided",
+   "date_filed": "2024-06-14",
+   "date_argued": "2026-03-04",
+   "argument": null,
+   "decision": {
+    "date": "2026-10-19",
+    "precedential_status": "Published",
+    "disposition": "Opinion",
+    "url_cl": "https://www.courtlistener.com/opinion/11038135/google-llc-v-valtrus-innovations-ltd/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1945.OPINION.10-19-2026_2772810.pdf"
+   },
+   "panel": [],
+   "patent_issues": [
+    "Other / Procedural"
+   ],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/69103610/google-llc-v-valtrus-innovations-ltd/",
+   "url_audio": "https://www.courtlistener.com/audio/102962/google-llc-v-valtrus-innovations-ltd/"
+  },
   {
    "docket_number": "CL-11037057",
    "case_name": "Bevirt v. United States",
@@ -98595,22 +98641,6 @@
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/68912091/network-1-technologies-inc-v-google-llc/",
    "url_audio": null
-  },
-  {
-   "docket_number": "2024-1945",
-   "case_name": "Google LLC v. Valtrus Innovations Ltd.",
-   "case_type": "Patent (PTAB)",
-   "origin": "United States Patent and Trademark Office",
-   "status": "Argued \u2014 Awaiting Decision",
-   "date_filed": "2024-06-14",
-   "date_argued": "2026-03-04",
-   "argument": null,
-   "decision": null,
-   "panel": [],
-   "patent_issues": [],
-   "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/69103610/google-llc-v-valtrus-innovations-ltd/",
-   "url_audio": "https://www.courtlistener.com/audio/102962/google-llc-v-valtrus-innovations-ltd/"
   },
   {
    "docket_number": "2024-1947",
