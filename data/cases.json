@@ -1,30 +1,32 @@
 {
- "generated_at": "2026-10-20T20:28:27+00:00",
+ "generated_at": "2026-10-20T22:26:07+00:00",
  "window_since": "2020-01-01",
  "coverage": {
-  "complete": true,
-  "run_complete": true,
-  "backfilling": [],
+  "complete": false,
+  "run_complete": false,
+  "backfilling": [
+   "dockets"
+  ],
   "window_since": "2020-01-01",
   "window_months": 18,
   "complete_since": "2020-01-01",
   "sources": {
    "dockets": {
-    "complete": true,
-    "reason": "ok",
-    "count": 1,
-    "resume_url": null
+    "resume_url": "https://www.courtlistener.com/api/rest/v4/dockets/",
+    "complete": false,
+    "reason": "network timeouts",
+    "count": 0
    },
    "clusters": {
     "complete": true,
     "reason": "ok",
-    "count": 3,
+    "count": 4,
     "resume_url": null
    },
    "opinions": {
     "complete": true,
     "reason": "ok",
-    "count": 0,
+    "count": 1,
     "resume_url": null
    },
    "audio": {
@@ -39,7 +41,7 @@
     "reason": "ok"
    },
    "opinion_rss": {
-    "count": 0,
+    "count": 100,
     "complete": true,
     "reason": "ok"
    }
@@ -56,13 +58,13 @@
   "next_argument_date": null
  },
  "stats": {
-  "total": 8838,
+  "total": 8839,
   "pending": 861,
   "scheduled": 0,
   "awaiting": 45,
-  "decided": 7932,
+  "decided": 7933,
   "precedential": 1445,
-  "rule36": 0
+  "rule36": 1
  },
  "upcoming_argument_docket_numbers": [],
  "cases": [
@@ -78,7 +80,7 @@
    "decision": {
     "date": "2026-10-20",
     "precedential_status": "Unpublished",
-    "disposition": null,
+    "disposition": "Opinion",
     "url_cl": "https://www.courtlistener.com/opinion/11039826/233rd-street-partnership-lp-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1849.OPINION.10-20-2026_2773402.pdf"
    },
@@ -87,6 +89,28 @@
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/74687864/233rd-street-partnership-lp-v-united-states/",
    "url_audio": "https://www.courtlistener.com/audio/106734/233rd-street-partnership-lp-v-united-states/"
+  },
+  {
+   "docket_number": "CL-11040741",
+   "case_name": "Jbs Hair Inc. v. Itc",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-10-20",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/11040741/jbs-hair-inc-v-itc/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/27-1016.ORDER.10-20-2026_2773849.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/11040741/jbs-hair-inc-v-itc/",
+   "url_audio": null
   },
   {
    "docket_number": "CL-11038117",
@@ -122,7 +146,7 @@
    "decision": {
     "date": "2026-10-19",
     "precedential_status": "Published",
-    "disposition": null,
+    "disposition": "Opinion",
     "url_cl": "https://www.courtlistener.com/opinion/11038135/google-llc-v-valtrus-innovations-ltd/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1945.OPINION.10-19-2026_2772810.pdf"
    },
@@ -190,7 +214,7 @@
    "decision": {
     "date": "2026-10-16",
     "precedential_status": "Unpublished",
-    "disposition": null,
+    "disposition": "Order",
     "url_cl": "https://www.courtlistener.com/opinion/11036986/micron-technology-inc-v-netlist-inc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-2281.ORDER.10-16-2026_2772309.pdf"
    },
@@ -840,7 +864,7 @@
    "decision": {
     "date": "2026-10-06",
     "precedential_status": "Unpublished",
-    "disposition": null,
+    "disposition": "Order",
     "url_cl": "https://www.courtlistener.com/opinion/11012804/inari-agriculture-inc-v-corteva-agriscience-llc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1323.ORDER.10-6-2026_2767008.pdf"
    },
@@ -864,7 +888,7 @@
    "decision": {
     "date": "2026-10-05",
     "precedential_status": "Unpublished",
-    "disposition": null,
+    "disposition": "Opinion",
     "url_cl": "https://www.courtlistener.com/opinion/11010501/alexsam-inc-v-simon-property-group-lp/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1138.OPINION.10-5-2026_2766082.pdf"
    },
@@ -978,7 +1002,7 @@
    "decision": {
     "date": "2026-10-01",
     "precedential_status": "Unpublished",
-    "disposition": null,
+    "disposition": "Opinion",
     "url_cl": "https://www.courtlistener.com/opinion/11007605/truinject-corp-v-galderma-sa/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1268.OPINION.10-1-2026_2764692.pdf"
    },
@@ -1024,7 +1048,7 @@
    "decision": {
     "date": "2026-09-30",
     "precedential_status": "Published",
-    "disposition": null,
+    "disposition": "Order",
     "url_cl": "https://www.courtlistener.com/opinion/10990709/teva-pharmaceuticals-international-gmbh-v-eli-lilly-and-company/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1094.ORDER.9-30-2026_2764316.pdf"
    },
@@ -1138,7 +1162,7 @@
    "decision": {
     "date": "2026-09-30",
     "precedential_status": "Published",
-    "disposition": null,
+    "disposition": "Opinion",
     "url_cl": "https://www.courtlistener.com/opinion/10988015/parkervision-inc-v-qualcomm-incorporated/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1033.OPINION.9-30-2026_2763891.pdf"
    },
@@ -1162,7 +1186,7 @@
    "decision": {
     "date": "2026-09-30",
     "precedential_status": "Published",
-    "disposition": null,
+    "disposition": "Opinion",
     "url_cl": "https://www.courtlistener.com/opinion/10988017/epic-tech-llc-v-pen-tech-associates-inc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1624.OPINION.9-30-2026_2763904.pdf"
    },
@@ -1276,7 +1300,7 @@
    "decision": {
     "date": "2026-09-29",
     "precedential_status": "Unpublished",
-    "disposition": null,
+    "disposition": "Order",
     "url_cl": "https://www.courtlistener.com/opinion/10986190/north-east-mobile-health-services-v-secretary-of-veterans-affairs/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1449.ORDER.9-29-2026_2763572.pdf"
    },
@@ -1426,7 +1450,7 @@
    "decision": {
     "date": "2026-09-25",
     "precedential_status": "Unpublished",
-    "disposition": null,
+    "disposition": "Opinion",
     "url_cl": "https://www.courtlistener.com/opinion/10983489/receivership-estate-of-audiencescience-inc-v-google-llc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1825.OPINION.9-25-2026_2761456.pdf"
    },
@@ -1466,7 +1490,7 @@
    "decision": {
     "date": "2026-09-23",
     "precedential_status": "Unpublished",
-    "disposition": null,
+    "disposition": "Opinion",
     "url_cl": "https://www.courtlistener.com/opinion/10980493/walker-v-collins/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1503.OPINION.9-23-2026_2760101.pdf"
    },
@@ -1690,7 +1714,7 @@
    "decision": {
     "date": "2026-09-21",
     "precedential_status": "Unpublished",
-    "disposition": null,
+    "disposition": "Opinion",
     "url_cl": "https://www.courtlistener.com/opinion/10978232/berkeleyieor-v-ww-grainger-inc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-2353.OPINION.9-21-2026_2758411.pdf"
    },
@@ -1846,7 +1870,7 @@
    "decision": {
     "date": "2026-09-18",
     "precedential_status": "Unpublished",
-    "disposition": null,
+    "disposition": "Order",
     "url_cl": "https://www.courtlistener.com/opinion/10976829/richards-v-kallish/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-2022.ORDER.9-18-2026_2757939.pdf"
    },
@@ -1870,7 +1894,7 @@
    "decision": {
     "date": "2026-09-18",
     "precedential_status": "Published",
-    "disposition": null,
+    "disposition": "Opinion",
     "url_cl": "https://www.courtlistener.com/opinion/10976772/tenaris-bay-city-inc-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1382.OPINION.9-18-2026_2757740.pdf"
    },
@@ -1892,7 +1916,7 @@
    "decision": {
     "date": "2026-09-18",
     "precedential_status": "Unpublished",
-    "disposition": null,
+    "disposition": "Opinion",
     "url_cl": "https://www.courtlistener.com/opinion/10976773/strong-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1335.OPINION.9-18-2026_2757725.pdf"
    },
@@ -1914,7 +1938,7 @@
    "decision": {
     "date": "2026-09-17",
     "precedential_status": "Unpublished",
-    "disposition": null,
+    "disposition": "Errata",
     "url_cl": "https://www.courtlistener.com/opinion/10975538/enanta-pharmaceuticals-inc-v-pfizer-inc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1427.ERRATA.9-17-2026_2757023.pdf"
    },
@@ -1938,7 +1962,7 @@
    "decision": {
     "date": "2026-09-17",
     "precedential_status": "Unpublished",
-    "disposition": null,
+    "disposition": "Order",
     "url_cl": "https://www.courtlistener.com/opinion/10975591/in-re-patel/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-149.ORDER.9-17-2026_2757049.pdf"
    },
@@ -2074,7 +2098,7 @@
    "decision": {
     "date": "2026-09-16",
     "precedential_status": "Published",
-    "disposition": null,
+    "disposition": "Opinion",
     "url_cl": "https://www.courtlistener.com/opinion/10974581/island-creek-associates-llc-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1140.OPINION.9-16-2026_2756263.pdf"
    },
@@ -2184,7 +2208,7 @@
    "decision": {
     "date": "2026-09-15",
     "precedential_status": "Unpublished",
-    "disposition": null,
+    "disposition": "Rule 36 Judgment",
     "url_cl": "https://www.courtlistener.com/opinion/10974176/abc-ip-llc-v-peak-tactical-llc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1527.RULE_36_JUDGMENT.9-15-2026_2755593.pdf"
    },
@@ -10566,7 +10590,7 @@
    "decision": {
     "date": "2026-06-23",
     "precedential_status": "Published",
-    "disposition": null,
+    "disposition": "Errata",
     "url_cl": "https://www.courtlistener.com/opinion/10878465/enanta-pharmaceuticals-inc-v-pfizer-inc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1427.OPINION.6-23-2026_2712960.pdf"
    },
@@ -17857,7 +17881,7 @@
    "decision": {
     "date": "2026-04-16",
     "precedential_status": "Published",
-    "disposition": null,
+    "disposition": "Order",
     "url_cl": "https://www.courtlistener.com/opinion/10843880/teva-pharmaceuticals-international-gmbh-v-eli-lilly-and-company/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1094.OPINION.4-16-2026_2677411.pdf"
    },
