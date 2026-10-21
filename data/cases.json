@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-21T18:02:27+00:00",
+ "generated_at": "2026-10-21T20:33:14+00:00",
  "window_since": "2020-01-01",
  "coverage": {
   "complete": true,
@@ -18,13 +18,13 @@
    "clusters": {
     "complete": true,
     "reason": "ok",
-    "count": 7,
+    "count": 8,
     "resume_url": null
    },
    "opinions": {
     "complete": true,
     "reason": "ok",
-    "count": 3,
+    "count": 1,
     "resume_url": null
    },
    "audio": {
@@ -47,7 +47,7 @@
   "summaries": {
    "enabled": true,
    "have": 1509,
-   "expected": 7936,
+   "expected": 7937,
    "complete": false
   },
   "opinion_text_fetches_this_run": 600,
@@ -56,11 +56,11 @@
   "next_argument_date": null
  },
  "stats": {
-  "total": 8841,
+  "total": 8842,
   "pending": 861,
   "scheduled": 0,
   "awaiting": 44,
-  "decided": 7936,
+  "decided": 7937,
   "precedential": 1445,
   "rule36": 0
  },
@@ -130,6 +130,28 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/11041791/alvarez-v-opm/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "CL-11042003",
+   "case_name": "Mackey v. Opm",
+   "case_type": "Federal Employment",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-10-21",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/11042003/mackey-v-opm/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-2306.ORDER.10-21-2026_2774397.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/11042003/mackey-v-opm/",
    "url_audio": null
   },
   {
@@ -19215,7 +19237,7 @@
     }
    ],
    "patent_issues": [
-    "Other / Procedural"
+    "PTAB Procedure & Standing"
    ],
    "summary": "The Federal Circuit affirmed the Trademark Trial and Appeal Board's dismissal of Fuente Marketing's opposition to Vaporous Technologies' trademark application, holding that there was no likelihood of confusion between Vaporous's stylized stick-figure mark (with a circle above two intersecting diagonal lines) and Fuente's registered standard character X marks under the Lanham Act, 15 U.S.C. \u00a7 1052(d). The court applied the DuPont factors de novo for the ultimate likelihood-of-confusion conclusion and found substantial evidence supporting the Board's factual findings that Vaporous's mark would be perceived by consumers as a stick figure rather than the letter X, creating a distinct commercial impression sufficiently dissimilar to negate confusion despite related goods and overlapping trade channels.",
    "url_cl": "https://www.courtlistener.com/docket/71983738/fuente-marketing-ltd-v-vaporous-technologies-llc/",
@@ -20893,7 +20915,7 @@
     }
    ],
    "patent_issues": [
-    "Other / Procedural"
+    "Damages & Remedies"
    ],
    "summary": "The Federal Circuit affirmed the district court's approval of a $125 million settlement in a class action challenging PACER fees under the Little Tucker Act, 28 U.S.C. \u00a7 1346(a)(2), holding that the district court retained subject matter jurisdiction despite some class members' individual recoveries exceeding $10,000 because each download of a court record constituted a separate claim under the statutory scheme. The court rejected the objector's arguments that the settlement was unfair, the attorneys' fees excessive, and the incentive awards unlawful, finding no abuse of discretion in the district court's application of Federal Rule of Civil Procedure 23(e)(2) fairness factors and relevant precedent regarding class action settlements.",
    "url_cl": "https://www.courtlistener.com/docket/68504646/nvlsp-v-united-states/",
@@ -29410,7 +29432,7 @@
     }
    ],
    "patent_issues": [
-    "Other / Procedural"
+    "PTAB Procedure & Standing"
    ],
    "summary": {
     "segments": [
@@ -33651,7 +33673,7 @@
     }
    ],
    "patent_issues": [
-    "Other / Procedural"
+    "PTAB Procedure & Standing"
    ],
    "summary": {
     "segments": [
@@ -40885,7 +40907,7 @@
    },
    "panel": [],
    "patent_issues": [
-    "Other / Procedural"
+    "PTAB Procedure & Standing"
    ],
    "summary": {
     "segments": [
@@ -55414,7 +55436,7 @@
     }
    ],
    "patent_issues": [
-    "Other / Procedural"
+    "Damages & Remedies"
    ],
    "summary": {
     "segments": [
@@ -68763,7 +68785,7 @@
     }
    ],
    "patent_issues": [
-    "Other / Procedural"
+    "PTAB Procedure & Standing"
    ],
    "summary": {
     "segments": [
