@@ -1,0 +1,48 @@
+name: TEST reasoning notes (throwaway)
+
+on:
+  push:
+    branches: [test/reasoning-notes]
+    paths: [scripts/test_reasoning_notes.py, .github/workflows/test-reasoning.yml]
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r scripts/requirements.txt
+
+      - name: Fetch GitHub OIDC token for Anthropic (refreshed in the background)
+        run: |
+          fetch_token() {
+            curl -sS -H "Authorization: Bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" \
+              "$ACTIONS_ID_TOKEN_REQUEST_URL&audience=https://api.anthropic.com" \
+              | jq -r .value > /tmp/gha-jwt
+          }
+          fetch_token
+          ( while true; do sleep 180; fetch_token; done ) &
+
+      - name: Run comparison
+        env:
+          ANTHROPIC_FEDERATION_RULE_ID: ${{ vars.ANTHROPIC_FEDERATION_RULE_ID }}
+          ANTHROPIC_ORGANIZATION_ID: ${{ vars.ANTHROPIC_ORGANIZATION_ID }}
+          ANTHROPIC_SERVICE_ACCOUNT_ID: ${{ vars.ANTHROPIC_SERVICE_ACCOUNT_ID }}
+          ANTHROPIC_WORKSPACE_ID: ${{ vars.ANTHROPIC_WORKSPACE_ID }}
+          ANTHROPIC_IDENTITY_TOKEN_FILE: /tmp/gha-jwt
+        run: python scripts/test_reasoning_notes.py
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: reasoning-test
+          path: reasoning-test/
