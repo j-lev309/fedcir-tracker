@@ -51,6 +51,10 @@ class _CaseAnalysis(BaseModel):
     segments: list[_SummarySegment]
     holding: str | None = None
 
+
+class _IssueLabels(BaseModel):
+    labels: list[str]
+
 # ----------------------------------------------------------------------------
 # Config
 # ----------------------------------------------------------------------------
@@ -788,29 +792,38 @@ def classify_issues_keywords(text: str) -> list:
     return [lbl for _, lbl in sorted(found, reverse=True)]
 
 
-def classify_issues_claude(case_name: str, text: str) -> list:
-    """Optional fallback via Claude for opinions the keyword pass missed."""
+def classify_issues_claude(case_name: str, text: str) -> tuple[list, bool]:
+    """Optional fallback via Claude for opinions the keyword pass missed.
+
+    Returns (labels, ok). ok=False means the call/parse itself failed —
+    a transient problem that should be retried on a later run. ok=True
+    means the model was successfully invoked, even if it found no matching
+    label — a genuine negative that should NOT be retried forever. Prior to
+    this, both cases cached identically as issues=[], which looked
+    indistinguishable from "never attempted" and caused every case the
+    model couldn't classify (including ones that failed only because of
+    JSON-parsing fragility) to re-fetch its PDF and re-call Claude on every
+    single run, forever."""
     if not ANTHROPIC_ENABLED or not text:
-        return []
+        return [], False
     buckets = list(ISSUE_RULES.keys()) + ["Other"]
     prompt = (
         "You are classifying a Federal Circuit patent decision by primary legal "
         f"issue. Case: {case_name}\n\nOpinion excerpt:\n{text[:6000]}\n\n"
         f"Choose up to 2 labels from this list only: {json.dumps(buckets)}. "
-        'Respond with ONLY a JSON array of strings, e.g. ["§ 101 Eligibility"].'
+        "If none clearly apply, return an empty list."
     )
     try:
-        r = _anthropic_client.with_options(timeout=60).messages.create(
+        r = _anthropic_client.with_options(timeout=60).messages.parse(
             model="claude-haiku-4-5", max_tokens=100,
             messages=[{"role": "user", "content": prompt}],
+            output_format=_IssueLabels,
         )
-        raw = "".join(b.text for b in r.content if b.type == "text")
-        labels = [x for x in json.loads(re.sub(r"```(json)?", "", raw).strip())
-                  if x in buckets and x != "Other"]
+        labels = [x for x in r.parsed_output.labels if x in buckets and x != "Other"]
+        return labels, True
     except Exception as e:  # noqa: BLE001
         log(f"  Claude classify failed: {e}")
-        labels = []
-    return labels
+        return [], False
 
 
 def summarize_claude(case_name: str, text: str, is_precedential: bool = False) -> dict | None:
@@ -1408,6 +1421,7 @@ def build() -> dict:
         # text-fetch budget got burned re-fetching already-complete cases
         # every run instead of ever reaching the ones that still needed it.)
         issues, summary = [], None
+        issues_done = False
         is_patent = case_type.startswith(("Patent", "ITC"))
         cache_key = f"cl-{clid}"
 
@@ -1417,16 +1431,23 @@ def build() -> dict:
         if cached:
             issues = cached.get("issues") or []
             summary = cached.get("summary")
+            # issues_done distinguishes "classified, genuinely no match" (stop
+            # retrying) from "never attempted / attempt failed" (keep trying).
+            # Absent on cache entries written before this field existed, which
+            # correctly re-attempts them once under the fixed classifier below.
+            issues_done = bool(cached.get("issues_done"))
 
         if is_patent and not issues:
             seed_text = " ".join(str(x or "") for x in (
                 cl.get("syllabus"), cl.get("headnotes"),
                 cl.get("disposition"), cl.get("case_name")))
             issues = classify_issues_keywords(seed_text)
+            if issues:
+                issues_done = True
 
         opinion_text = ""
         needs_panel = not panel
-        needs_issues = is_patent and not issues
+        needs_issues = is_patent and not issues and not issues_done
         needs_summary = ANTHROPIC_ENABLED and not summary and not is_r36_case
 
         if enrich_pdf and text_fetches < MAX_OPINION_TEXT_FETCHES \
@@ -1464,7 +1485,7 @@ def build() -> dict:
                         break
             if not enrich_pdf2:
                 enrich_pdf2 = decision.get("url_pdf")
-            need_issues = is_patent and not issues
+            need_issues = is_patent and not issues and not issues_done
             need_summary = (ANTHROPIC_ENABLED and not summary and not is_r36_case)
             if enrich_pdf2 and (need_issues or need_summary) \
                     and text_fetches < MAX_OPINION_TEXT_FETCHES:
@@ -1473,13 +1494,17 @@ def build() -> dict:
                 text_fetches += 1
 
         if opinion_text and cache_key:
-            if is_patent and not issues:
-                issues = (classify_issues_keywords(opinion_text)
-                          or classify_issues_claude(cl.get("case_name") or dn, opinion_text))
+            if is_patent and not issues and not issues_done:
+                issues = classify_issues_keywords(opinion_text)
+                if issues:
+                    issues_done = True
+                else:
+                    issues, issues_done = classify_issues_claude(
+                        cl.get("case_name") or dn, opinion_text)
             if ANTHROPIC_ENABLED and not summary and not is_r36_case:
                 is_precedential = str(prec).startswith("Pub")
                 summary = summarize_claude(cl.get("case_name") or dn, opinion_text, is_precedential)
-            cache[cache_key] = {"issues": issues, "summary": summary}
+            cache[cache_key] = {"issues": issues, "summary": summary, "issues_done": issues_done}
 
         if is_r36_case and not summary:
             summary = {
