@@ -29,10 +29,8 @@ OPINIONS = [
      "https://cafc.uscourts.gov/opinions-orders/23-2424.OPINION.12-2-2025_2612088.pdf"),
 ]
 
-MODELS = {
-    "claude-sonnet-5-5": (2.00, 10.00),
-    "claude-haiku-5-5": (0.10, 0.50),
-}
+PRICE = {"claude-sonnet-5-5": (2.00, 10.00)}
+CONFIGS = [("claude-sonnet-5-5", "low"), ("claude-sonnet-5-5", "medium"), ("claude-sonnet-5-5", "high")]
 
 Doctrine = Literal[
     "§ 101 eligibility", "anticipation", "obviousness", "written description",
@@ -63,15 +61,18 @@ class OpinionNotes(BaseModel):
 
 PROMPT = """You are building a research file for an incoming Federal Circuit law clerk who wants to understand how individual judges reason about specific doctrines, especially in close cases.
 
-Read the full opinion below (including any concurrences or dissents) and write one note for each doctrine the court or a separate writer actually ANALYZES — not doctrines merely mentioned or recited in background. If a concurrence or dissent addresses a doctrine, write a separate note for that separate opinion, attributed to its writer.
+Read the full opinion below (including any concurrences or dissents) and write one note per doctrine PER WRITER, for each doctrine the court or a separate writer actually ANALYZES — not doctrines merely mentioned or recited in background. Keep doctrines apart: if the court decides claim construction and then applies it to infringement, that is two notes. If a concurrence or dissent addresses a doctrine, write a separate note for that separate opinion, attributed to its writer. A sub-question that is part of a doctrine's analysis (e.g. whether fact disputes preclude summary judgment at § 101 step two) belongs in that doctrine's note, not under "other"; use "other" only when no listed doctrine fits.
 
 For each note:
 - writer: surname of the judge who wrote that text (the authoring judge for the majority; "Per Curiam" if unsigned).
 - framing: 2-4 sentences on how the writer framed and applied the governing test — which precedents and which version of the test they emphasized, and any interpretive choices that a different judge might have made differently.
 - decisive_considerations: 1-3 sentences on the specific facts or arguments that drove the result on this doctrine.
-- closeness: "contested" if another panel member disagreed on this doctrine; "close" if the opinion itself signals the question was close (acknowledging contrary authority, strong arguments on both sides, a reversal of a fact finding, language like "close question"); otherwise "clear".
+- closeness — apply these definitions strictly:
+  - "contested": a judge on the panel wrote separately (dissent, or concurrence disagreeing with the reasoning) on THIS doctrine. Reversing the trial court or a jury is not by itself "contested".
+  - "close": no panel disagreement on this doctrine, but the outcome was genuinely debatable — the court reversed or vacated a jury verdict or trial-court finding on this doctrine, acknowledged substantial contrary authority or strong arguments on the other side, or described the question as close or difficult.
+  - "clear": none of the above.
 - closeness_basis: one sentence citing what in the opinion supports that closeness rating.
-- passages: 1-3 passages that best capture the writer's reasoning on this doctrine, each 1-3 sentences, copied EXACTLY character for character from the text below. No ellipses, no brackets, no paraphrase, no stitching non-adjacent sentences together. Omit internal citations only if they cannot be avoided — prefer passages without citations.
+- passages: 1-3 passages that best capture the writer's reasoning on this doctrine, each 1-3 sentences, copied EXACTLY character for character from the text below. No ellipses, no brackets, no paraphrase, no reordering, no stitching together pieces of different sentences, and never include the [[PDF page N]] markers. Prefer passages without internal citations.
 
 Record what the text does. Do not characterize the judge's general philosophy; that comes later from many opinions.
 
@@ -114,12 +115,13 @@ def split_page(page_text: str) -> tuple[str | None, str]:
 
 def norm(s: str) -> str:
     s = s.replace("’", "'").replace("‘", "'").replace("“", '"').replace("”", '"')
-    s = re.sub(r"(\w)-\s+(\w)", r"\1\2", s)   # rejoin words hyphenated across lines
-    return re.sub(r"[^a-z0-9]+", " ", s.lower()).strip()
+    # letters and digits only: immune to line-break hyphenation, real hyphens
+    # ("non-abstract" split across lines), and whitespace differences
+    return re.sub(r"[^a-z0-9]", "", s.lower())
 
 
 def locate(passage: str, pages: list[str]) -> dict:
-    q = norm(passage)
+    q = norm(re.sub(r"\[\[PDF page \d+\]\]", "", passage))
     if len(q) < 20:
         return {"verified": False, "reason": "too short"}
     split = [split_page(p) for p in pages]
@@ -128,7 +130,7 @@ def locate(passage: str, pages: list[str]) -> dict:
         if q in p:
             return {"verified": True, "pdf_page": i + 1, "printed_page": split[i][0]}
     for i in range(len(normed) - 1):        # quote spanning a page break
-        if q in normed[i] + " " + normed[i + 1]:
+        if q in normed[i] + normed[i + 1]:
             return {"verified": True, "pdf_page": i + 1, "printed_page": split[i][0],
                     "spans_pages": True}
     return {"verified": False, "reason": "not found verbatim"}
@@ -141,14 +143,16 @@ def main() -> int:
         pages = fetch_pages(url)
         marked = "\n".join(f"[[PDF page {i + 1}]]\n{split_page(t)[1]}" for i, t in enumerate(pages))
         print(f"\n### {case}: {len(pages)} pages, {len(marked):,} chars", flush=True)
-        for model, (pin, pout) in MODELS.items():
+        for model, effort in CONFIGS:
+            pin, pout = PRICE[model]
             t0 = time.time()
-            entry = {"case": case, "url": url, "model": model, "pages": len(pages)}
+            entry = {"case": case, "url": url, "model": f"{model}@{effort}", "pages": len(pages)}
             try:
                 r = client.with_options(timeout=900).messages.parse(
                     model=model, max_tokens=16000,
                     messages=[{"role": "user", "content": PROMPT.format(case=case, text=marked)}],
                     output_format=OpinionNotes,
+                    output_config={"effort": effort},
                 )
                 u = r.usage
                 entry.update({
@@ -169,7 +173,7 @@ def main() -> int:
             results.append(entry)
             nq = sum(len(n["passages"]) for n in entry.get("notes", []))
             nv = sum(p["verified"] for n in entry.get("notes", []) for p in n["passages"])
-            print(f"  {model}: {len(entry.get('notes', []))} notes, {nv}/{nq} quotes verified, "
+            print(f"  {entry['model']}: {len(entry.get('notes', []))} notes, {nv}/{nq} quotes verified, "
                   f"${entry.get('cost_usd')}, {entry.get('seconds')}s {entry.get('error', '')}", flush=True)
 
     out = Path("reasoning-test")
