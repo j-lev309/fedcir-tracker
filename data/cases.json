@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-22T18:02:18+00:00",
+ "generated_at": "2026-10-22T19:19:05+00:00",
  "window_since": "2020-01-01",
  "coverage": {
   "complete": true,
@@ -18,13 +18,13 @@
    "clusters": {
     "complete": true,
     "reason": "ok",
-    "count": 13,
+    "count": 14,
     "resume_url": null
    },
    "opinions": {
     "complete": true,
     "reason": "ok",
-    "count": 5,
+    "count": 1,
     "resume_url": null
    },
    "audio": {
@@ -47,7 +47,7 @@
   "summaries": {
    "enabled": true,
    "have": 1584,
-   "expected": 7942,
+   "expected": 7943,
    "complete": false
   },
   "opinion_text_fetches_this_run": 600,
@@ -56,11 +56,11 @@
   "next_argument_date": null
  },
  "stats": {
-  "total": 8846,
+  "total": 8847,
   "pending": 860,
   "scheduled": 0,
   "awaiting": 44,
-  "decided": 7942,
+  "decided": 7943,
   "precedential": 1446,
   "rule36": 0
  },
@@ -179,6 +179,28 @@
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/11042959/barron-v-united-states/",
    "url_audio": "https://www.courtlistener.com/audio/106269/barron-v-united-states/"
+  },
+  {
+   "docket_number": "CL-11043182",
+   "case_name": "Lashify, Inc. v. Qingdao Lashbeauty Cosmetic Co., Ltd.",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-10-22",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/11043182/lashify-inc-v-qingdao-lashbeauty-cosmetic-co-ltd/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1123.ORDER.10-22-2026_2775262.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/11043182/lashify-inc-v-qingdao-lashbeauty-cosmetic-co-ltd/",
+   "url_audio": null
   },
   {
    "docket_number": "2025-1086",
