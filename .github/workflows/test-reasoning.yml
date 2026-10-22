@@ -3,7 +3,7 @@ name: TEST reasoning notes (throwaway)
 on:
   push:
     branches: [test/reasoning-notes]
-    paths: [scripts/test_reasoning_notes.py, .github/workflows/test-reasoning.yml]
+    paths: [scripts/test_judge_profiles.py, scripts/test_profile_pairs.json, .github/workflows/test-reasoning.yml]
 
 permissions:
   contents: read
@@ -32,17 +32,17 @@ jobs:
           fetch_token
           ( while true; do sleep 180; fetch_token; done ) &
 
-      - name: Run comparison
+      - name: Run profile test
         env:
           ANTHROPIC_FEDERATION_RULE_ID: ${{ vars.ANTHROPIC_FEDERATION_RULE_ID }}
           ANTHROPIC_ORGANIZATION_ID: ${{ vars.ANTHROPIC_ORGANIZATION_ID }}
           ANTHROPIC_SERVICE_ACCOUNT_ID: ${{ vars.ANTHROPIC_SERVICE_ACCOUNT_ID }}
           ANTHROPIC_WORKSPACE_ID: ${{ vars.ANTHROPIC_WORKSPACE_ID }}
           ANTHROPIC_IDENTITY_TOKEN_FILE: /tmp/gha-jwt
-        run: python scripts/test_reasoning_notes.py
+        run: python scripts/test_judge_profiles.py
 
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: reasoning-test
-          path: reasoning-test/
+          name: profile-test
+          path: profile-test/
