@@ -2201,7 +2201,8 @@
  ],
  "cl-10372863": {
   "issues": [],
-  "summary": null
+  "summary": null,
+  "issues_done": false
  },
  "panel-cl-10386078": [
   {
@@ -2331,7 +2332,27 @@
  ],
  "cl-10376232": {
   "issues": [],
-  "summary": null
+  "summary": {
+   "segments": [
+    {
+     "issue": "Section 1404(a) Transfer Standard",
+     "text": "The Federal Circuit affirmed the district court's denial of SAP's motion to transfer venue from Marshall to Sherman division under 28 U.S.C. \u00a7 1404(a), applying Fifth Circuit law and reviewing for clear abuse of discretion. Although the court identified two errors in the district court's reasoning\u2014improper reliance on a dismissed co-pending case and misapplication of the court-congestion factor\u2014these errors did not constitute patent error sufficient to warrant mandamus relief given SAP's burden to show Sherman was clearly more convenient and its failure to adequately identify physical evidence, unwilling witnesses, or case-specific connections to Sherman.",
+     "location": "DISCUSSION"
+    },
+    {
+     "issue": "Willing-Witness Factor Standard",
+     "text": "The Federal Circuit clarified that under \u00a7 1404(a) transfer analysis, requiring a defendant to identify specific individuals as trial witnesses and explain their knowledge in detail before the discovery and summary judgment phases is an overly demanding standard that exceeds what the law requires. The court held that a party need only show potential witnesses have relevant and material information to satisfy this factor, citing In re Genentech, Inc., 566 F.3d 1338 (Fed. Cir. 2009).",
+     "location": "DISCUSSION"
+    },
+    {
+     "issue": "Mandamus Jurisdiction",
+     "text": "The Federal Circuit reaffirmed its jurisdiction to review a district court's \u00a7 1404(a) transfer order under the mandamus statute, 28 U.S.C. \u00a7\u00a7 1295(a)(1) and 1651(a), applying the three-part Cheney test and applying Fifth Circuit law to the substantive transfer analysis.",
+     "location": "DISCUSSION"
+    }
+   ],
+   "holding": "This decision clarifies the law on \u00a7 1404(a) transfer practice in two respects: (1) dismissed co-pending litigation cannot support denying transfer based on judicial economy once it has been dismissed for unrelated reasons, and (2) courts may not rely on post-motion progress or general case management as the sole basis for the court-congestion factor. The opinion also reaffirms that the willing-witness factor does not require parties to formally designate trial witnesses or provide detailed explanations of their knowledge at the motion stage, reinforcing a more flexible pleading standard. The decision is largely fact-bound and applies existing Fifth Circuit precedent rather than establishing novel Federal Circuit doctrine."
+  },
+  "issues_done": true
  },
  "panel-cl-10803701": [],
  "cl-10803701": {
@@ -36541,6 +36562,833 @@
    ],
    "holding": "The Federal Circuit affirmed the Merit Systems Protection Board's dismissal of Martin Akerman's appeal for lack of jurisdiction, holding that the appeal was not a mixed case and that Mr. Akerman failed to exhaust required OSC remedies before filing his IRA appeal challenging OIG decisions."
   },
+  "issues_done": false
+ },
+ "panel-cl-10377961": [
+  {
+   "name": "Schall",
+   "role": "Author"
+  },
+  {
+   "name": "Reyna",
+   "role": "Panel"
+  },
+  {
+   "name": "Hughes",
+   "role": "Panel"
+  }
+ ],
+ "cl-10377961": {
+  "issues": [
+   "PTAB Procedure & Standing"
+  ],
+  "summary": {
+   "segments": [
+    {
+     "issue": "Likelihood of Confusion - Mark Similarity",
+     "text": "The Board found the proposed mark \"CHICKEN SCRATCH\" for beer and the cited mark \"CHICKEN SCRATCH\" for restaurant services are identical in sight, sound, and appearance, satisfying the first DuPont factor. The Court affirmed, holding that substantial evidence supports this finding because the marks are identical and both convey a relation to \"chicken,\" imparting similar commercial impressions regardless of differing contexts or specimen graphics.",
+     "location": null
+    },
+    {
+     "issue": "Mark Strength - Conceptual Weakness",
+     "text": "The Board found the cited mark is not conceptually weak and deserves normal scope of protection, citing dictionary definitions of \"chicken scratch\" as meaning \"bad handwriting.\" The Court affirmed, holding that these dictionary definitions provide substantial evidence supporting the Board's finding that the mark is not weak, and that the Court does not reweigh evidence or second-guess the Board's weighing of evidence on appeal.",
+     "location": null
+    },
+    {
+     "issue": "Similarity of Goods/Services - \"Something More\"",
+     "text": "The Board found beer and restaurant services are related goods/services, satisfying the \"something more\" standard required under Coors. The Court affirmed, distinguishing Coors by finding the record here contained greater evidence of relatedness between beer sources and restaurant sources than the de minimis overlap found insufficient in Coors, including evidence of overlapping trade channels and the registrant's services.",
+     "location": null
+    },
+    {
+     "issue": "Section 2(d) Likelihood of Confusion",
+     "text": "The Board upheld the examining attorney's rejection of the application under Section 2(d) of the Trademark Act, 15 U.S.C. \u00a7 1052(d), finding likelihood of confusion between the identical marks for related goods/services. The Court affirmed the entire rejection, concluding that the combination of identical marks, the relatedness of beer and restaurant services supported by evidence, and overlapping trade channels established a likelihood of confusion.",
+     "location": null
+    }
+   ],
+   "holding": "The Federal Circuit affirmed the Board's rejection of Lipman's application to register \"CHICKEN SCRATCH\" for beer under Section 2(d) of the Trademark Act, finding substantial evidence supported the Board's findings that the proposed mark is identical to the cited mark for restaurant services, the cited mark is not weak, beer and restaurant services are sufficiently related, and likelihood of confusion exists."
+  },
+  "issues_done": true
+ },
+ "panel-cl-10377959": [
+  {
+   "name": "Taranto",
+   "role": "Author"
+  },
+  {
+   "name": "Chen",
+   "role": "Panel"
+  },
+  {
+   "name": "Hughes",
+   "role": "Panel"
+  }
+ ],
+ "cl-10377959": {
+  "issues": [],
+  "summary": {
+   "segments": [
+    {
+     "issue": "Constitutional Sex Discrimination Challenge",
+     "text": "The Veterans Court affirmed the Board's benefits denial without addressing Ms. Pereida's constitutional challenge to the sex-based distinction in 38 U.S.C. \u00a7 1815, which limits non-spina-bifida birth-defect benefits to children of women Vietnam veterans but not men. The Federal Circuit vacated and remanded, holding that the Veterans Court must address on remand why it rejected the sex-discrimination challenge\u2014whether based on forfeiture, lack of authority, insufficient development, lack of merit, or other grounds\u2014because the court's silence on a legal challenge to a statute creates reviewable error under 38 U.S.C. \u00a7 7292.",
+     "location": null
+    }
+   ],
+   "holding": "The Federal Circuit vacated the Veterans Court's decision and remanded for the Veterans Court to undertake proper consideration and provide explicit reasoning on Ms. Pereida's constitutional challenge to the sex-based distinction in the statute, addressing forfeiture doctrine, jurisdictional limits, applicable constitutional scrutiny standards, and the legislative background of the provision."
+  },
+  "issues_done": false
+ },
+ "panel-cl-10377960": [
+  {
+   "name": "Moore",
+   "role": "Panel"
+  },
+  {
+   "name": "Prost",
+   "role": "Panel"
+  },
+  {
+   "name": "Stark",
+   "role": "Panel"
+  }
+ ],
+ "cl-10377960": {
+  "issues": [],
+  "summary": {
+   "segments": [
+    {
+     "issue": "Article III Standing",
+     "text": "The court dismissed the appeal for lack of Article III standing, holding that Messier failed to demonstrate a concrete and particularized injury-in-fact required under Lujan v. Defenders of Wildlife. Messier alleged only hypothetical or future possible injury, family historical use of fleur-de-lis designs unconnected to commerce, and speculation about potential future licensing, none of which satisfied the standing requirement for federal court review of an administrative decision.",
+     "location": null
+    }
+   ],
+   "holding": "Appeal dismissed for lack of Article III standing; Messier failed to allege any concrete, particularized injury or commercial interest in the fleur-de-lis mark necessary to maintain a trademark cancellation action or to press review in federal court."
+  },
+  "issues_done": false
+ },
+ "panel-cl-10377962": [],
+ "cl-10377962": {
+  "issues": [],
+  "summary": {
+   "segments": [
+    {
+     "issue": "Contract Claim on Merits",
+     "text": "The Federal Circuit affirmed the Court of Federal Claims' dismissal or decision on the Government of Greece Hellenic Air Force's contract claim against the United States. The court applied Federal Circuit Rule 36, indicating a summary affirmance without detailed opinion on the underlying merits.",
+     "location": null
+    }
+   ],
+   "holding": "Affirmed the Court of Federal Claims judgment in favor of the United States."
+  },
+  "issues_done": false
+ },
+ "panel-cl-10377963": [
+  {
+   "name": "Lourie",
+   "role": "Panel"
+  },
+  {
+   "name": "Chen",
+   "role": "Panel"
+  },
+  {
+   "name": "Hughes",
+   "role": "Panel"
+  }
+ ],
+ "cl-10377963": {
+  "issues": [],
+  "summary": {
+   "segments": [
+    {
+     "issue": "FERS Overpayment Calculation",
+     "text": "The court affirmed the Board's finding that OPM correctly calculated a $61,531 overpayment of Casarez's FERS disability annuity benefits. Under 5 U.S.C. \u00a7 8452, FERS disability annuities must be reduced by Social Security disability benefits received; OPM's calculation reducing Casarez's monthly FERS benefit by her full $2,132 monthly SSA benefit was supported by substantial evidence, and workers' compensation offsets to SSA benefits and health insurance premium deductions were properly excluded from the FERS overpayment calculation.",
+     "location": null
+    },
+    {
+     "issue": "Waiver of Overpayment Recovery",
+     "text": "The court affirmed OPM's denial of waiver for the overpayment under 5 U.S.C. \u00a7 8470(b). Although Casarez was without fault, the Board properly applied the Set-Aside Rule and found that recovery was not against equity and good conscience because Casarez received clear notice through OPM's June 2016, November 2016, and March 2018 letters that she was required to set aside any retroactive Social Security payment to repay the agency, and her financial hardships did not rise to exceptional circumstances.",
+     "location": null
+    },
+    {
+     "issue": "Reduction of Repayment Installments",
+     "text": "The court affirmed the Board's rejection of Casarez's alternative request to reduce her monthly repayment installment amounts, as this challenge was dependent on the waiver determination being overturned, which the court upheld.",
+     "location": null
+    },
+    {
+     "issue": "Standard of Review",
+     "text": "The court applied the deferential standard under 5 U.S.C. \u00a7 7703(c), reviewing the Board's legal conclusions de novo and its factual findings for substantial evidence, while construing Casarez's pro se briefs liberally under Erickson v. Pardus.",
+     "location": null
+    }
+   ],
+   "holding": "The Federal Circuit affirmed the Merit Systems Protection Board's final decision upholding OPM's $61,531 overpayment calculation and denial of waiver, finding the overpayment amount supported by substantial evidence under 5 U.S.C. \u00a7 8452 and the waiver denial justified under the Set-Aside Rule because Casarez received adequate notice of her obligation to set aside retroactive Social Security benefits."
+  },
+  "issues_done": false
+ },
+ "panel-cl-10376867": [
+  {
+   "name": "Moore",
+   "role": "Panel"
+  },
+  {
+   "name": "Prost",
+   "role": "Panel"
+  },
+  {
+   "name": "Stark",
+   "role": "Panel"
+  }
+ ],
+ "cl-10376867": {
+  "issues": [],
+  "summary": {
+   "segments": [
+    {
+     "issue": "Collateral Estoppel Application",
+     "text": "The court affirmed the Board's determination that Slater was collaterally estopped from relitigating whether his position qualified for Federal Employees' Retirement System Law Enforcement Officer retirement coverage under 5 U.S.C. \u00a7 8412. All four prongs of collateral estoppel were satisfied: the issue was identical to the 2015 appeal, actually litigated then, necessary to that judgment, and Slater had a full and fair opportunity to litigate it.",
+     "location": null
+    },
+    {
+     "issue": "Standard of Review",
+     "text": "The court applied de novo review to the collateral estoppel determination as a question of law, while reviewing any underlying factual findings for substantial evidence support. The Board's findings on each prong of collateral estoppel were reviewed and found supported by substantial evidence.",
+     "location": null
+    }
+   ],
+   "holding": "Affirmed the Merit Systems Protection Board's decision applying collateral estoppel to bar Slater's repeated claim for LEO retirement coverage, as the identical issue had been litigated and resolved against him in the 2015 appeal."
+  },
+  "issues_done": false
+ },
+ "panel-cl-10376868": [],
+ "cl-10376868": {
+  "issues": [],
+  "summary": {
+   "segments": [
+    {
+     "issue": "Vaccine Injury Compensation Award",
+     "text": "The Federal Circuit affirmed the Court of Federal Claims' judgment in favor of the petitioner-appellant regarding vaccine injury compensation. The court applied the substantive law governing claims under the National Vaccine Injury Compensation Program (NVICP) and found no reversible error in the lower court's decision.",
+     "location": null
+    }
+   ],
+   "holding": "Affirmed the Court of Federal Claims' judgment in favor of Larson regarding vaccine injury compensation under the National Vaccine Injury Compensation Program."
+  },
+  "issues_done": false
+ },
+ "panel-cl-10376984": [],
+ "cl-10376984": {
+  "issues": [],
+  "summary": {
+   "segments": [
+    {
+     "issue": "Voluntary Dismissal",
+     "text": "Appeal No. 2025-1481 between Luxer Corp. and Butterfly MX, Inc. was voluntarily dismissed pursuant to Federal Rule of Appellate Procedure 42(b)(1) based on the parties' stipulation to dismiss. Each side bears its own costs as to this appeal.",
+     "location": null
+    }
+   ],
+   "holding": null
+  },
+  "issues_done": false
+ },
+ "panel-cl-10376234": [
+  {
+   "name": "Dyk",
+   "role": "Panel"
+  },
+  {
+   "name": "Reyna",
+   "role": "Panel"
+  },
+  {
+   "name": "Stark",
+   "role": "Panel"
+  }
+ ],
+ "cl-10376234": {
+  "issues": [],
+  "summary": {
+   "segments": [
+    {
+     "issue": "Whistleblower Retaliation\u2014Carr Factors",
+     "text": "The Federal Circuit affirmed the Board's application of the three-factor test from Carr v. Social Security Administration to evaluate whistleblower retaliation claims. The Board found that the Air Force demonstrated by clear and convincing evidence that it would have terminated Bradberry absent his protected disclosure, based on the strength of the Air Force's performance-related evidence, the absence of personal motive to retaliate on the part of Major Hernandez, and the neutral third factor due to lack of comparator evidence. The Board's credibility determinations and substantial-evidence-supported conclusions were upheld on deferential review under 5 U.S.C. \u00a7 7703(c).",
+     "location": null
+    },
+    {
+     "issue": "Probationary Employee Status",
+     "text": "Although the administrative judge assumed arguendo that Bradberry was not a probationary employee when applying the Carr factors, the Board's decision proceeded on that assumption without definitively resolving Bradberry's probationary status. The Federal Circuit did not disturb this assumption, implicitly accepting that the whistleblower retaliation analysis under Carr could apply regardless of probationary status in this case.",
+     "location": null
+    }
+   ],
+   "holding": "The Board's decision denying Bradberry's individual right of action appeal for whistleblower retaliation was affirmed; the Air Force demonstrated by clear and convincing evidence that it would have terminated Bradberry for legitimate performance-related reasons independent of his protected disclosure."
+  },
+  "issues_done": false
+ },
+ "panel-cl-10376229": [],
+ "cl-10376229": {
+  "issues": [],
+  "summary": {
+   "segments": [
+    {
+     "issue": "IPR Board Decision",
+     "text": "The Federal Circuit affirmed the Patent Trial and Appeal Board's decision in inter partes review proceeding IPR2022-00278 without further explanation, applying the nonprecedential summary affirmance procedure of Federal Circuit Rule 36.",
+     "location": null
+    }
+   ],
+   "holding": "The PTAB's decision in the inter partes review was affirmed."
+  },
+  "issues_done": false
+ },
+ "panel-cl-10376236": [],
+ "cl-10376236": {
+  "issues": [],
+  "summary": {
+   "segments": [
+    {
+     "issue": "Veterans Benefits Decision",
+     "text": "The Federal Circuit affirmed the Veterans Court's judgment in its entirety, upholding the lower court's decision regarding claimant-appellant's veterans benefits claim against the Secretary of Veterans Affairs. The court invoked Federal Circuit Rule 36, indicating a nonprecedential summary affirmance based on the appellate record and briefs.",
+     "location": null
+    }
+   ],
+   "holding": "The Veterans Court's judgment was affirmed without modification."
+  },
+  "issues_done": false
+ },
+ "panel-cl-10376235": [
+  {
+   "name": "Moore",
+   "role": "Panel"
+  },
+  {
+   "name": "Prost",
+   "role": "Panel"
+  },
+  {
+   "name": "Hughes",
+   "role": "Panel"
+  }
+ ],
+ "cl-10376235": {
+  "issues": [],
+  "summary": {
+   "segments": [
+    {
+     "issue": "Claims Court Subject Matter Jurisdiction",
+     "text": "The Federal Circuit affirmed the Claims Court's dismissal for lack of subject matter jurisdiction under the Tucker Act, 28 U.S.C. \u00a7 1491. The court held that Boultbee failed to establish any cognizable basis for jurisdiction: his claim was not pursuant to a contract (the implied contract theory lacked required elements), not based on illegal exaction (which he disclaimed), and not grounded in any money-mandating statute, regulation, executive order, or constitutional provision. The court further held that the pardon power cannot restore property vested in third parties or transferred to the U.S. Treasury absent express congressional authorization, and the Claims Court has no power to compel a district court to refund payments.",
+     "location": null
+    },
+    {
+     "issue": "Transfer to District Court",
+     "text": "The Federal Circuit affirmed the Claims Court's denial of transfer under 28 U.S.C. \u00a7 1631. The court held that the Claims Court did not abuse its discretion in concluding it was not in the interest of justice to transfer, because the factual record established that Boultbee's payments had vested in third parties or the U.S. Treasury before his 2020 pardon, and the District Court for the Northern District of Illinois no longer held the funds.",
+     "location": null
+    },
+    {
+     "issue": "Standard of Review",
+     "text": "The court applied de novo review to the jurisdictional dismissal and abuse-of-discretion review to the denial of transfer, placing the burden on Boultbee to establish jurisdiction by a preponderance of the evidence.",
+     "location": null
+    }
+   ],
+   "holding": "Affirmed. The Claims Court lacked subject matter jurisdiction over Boultbee's refund claim following his presidential pardon, as the claim fell outside Tucker Act grounds and pardons cannot restore vested property or treasury funds absent congressional authorization. Transfer was properly denied as not in the interest of justice."
+  },
+  "issues_done": false
+ },
+ "panel-cl-10376227": [
+  {
+   "name": "Dyk",
+   "role": "Panel"
+  },
+  {
+   "name": "Reyna",
+   "role": "Panel"
+  },
+  {
+   "name": "Stark",
+   "role": "Panel"
+  }
+ ],
+ "cl-10376227": {
+  "issues": [],
+  "summary": {
+   "segments": [
+    {
+     "issue": "Appellate Jurisdiction",
+     "text": "The Federal Circuit dismissed the appeal for lack of jurisdiction under 38 U.S.C. \u00a7 7292(a) and (d)(2). The court held that it may only review a Veterans Court decision on questions of law, statutory interpretation, or constitutional challenges, and may not review factual determinations or the application of law to facts. Because Mr. Perry's briefs raised only factual and merit-based arguments rather than legal or constitutional issues concerning the Veterans Court's June 2024 order denying extraordinary relief, his appeal fell outside the court's narrow appellate jurisdiction.",
+     "location": "DISCUSSION"
+    }
+   ],
+   "holding": "The Federal Circuit dismissed Mr. Perry's appeal for lack of jurisdiction because he failed to raise any legal or constitutional challenge to the Veterans Court's June 2024 order denying his petition for extraordinary relief to recall its 2007 mandate, presenting instead only factual and merit-based arguments that fall outside the court's statutory jurisdiction."
+  },
+  "issues_done": false
+ },
+ "panel-cl-10376231": [
+  {
+   "name": "Moore",
+   "role": "Panel"
+  },
+  {
+   "name": "Prost",
+   "role": "Panel"
+  },
+  {
+   "name": "Hughes",
+   "role": "Panel"
+  }
+ ],
+ "cl-10376231": {
+  "issues": [
+   "Damages & Remedies"
+  ],
+  "summary": {
+   "segments": [
+    {
+     "issue": "Preliminary Injunction",
+     "text": "The district court's order granting Incyte's motion for a preliminary injunction is vacated effective immediately. The Federal Circuit exercised sua sponte jurisdiction to overturn the injunction pending issuance of the full opinion.",
+     "location": null
+    }
+   ],
+   "holding": "Vacated the preliminary injunction granted by the district court."
+  },
+  "issues_done": true
+ },
+ "panel-cl-10376230": [
+  {
+   "name": "Dyk",
+   "role": "Panel"
+  },
+  {
+   "name": "Stoll",
+   "role": "Panel"
+  },
+  {
+   "name": "Stark",
+   "role": "Panel"
+  }
+ ],
+ "cl-10376230": {
+  "issues": [],
+  "summary": {
+   "segments": [
+    {
+     "issue": "Federal Circuit Jurisdiction",
+     "text": "The Federal Circuit dismissed the appeal for lack of jurisdiction because the appellant failed to challenge the Veterans Court's interpretation of any rule of law, statute, or regulation, and did not develop a non-frivolous legal question for review under 38 U.S.C. \u00a7 7292(a). The court found that the appellant's vague assertions about settlement agreement law and due process were unsupported by facts in the record and were constitutional claims in name only, insufficient to invoke jurisdiction.",
+     "location": "II"
+    }
+   ],
+   "holding": "Appeal dismissed for lack of jurisdiction; the Federal Circuit lacks authority to review the Veterans Court's denial of mandamus relief where the appellant raises no cognizable legal challenge to the court's interpretation of law or regulation."
+  },
+  "issues_done": false
+ },
+ "panel-cl-10376233": [],
+ "cl-10376233": {
+  "issues": [],
+  "summary": {
+   "segments": [
+    {
+     "issue": "Appeal Dismissal",
+     "text": "The Federal Circuit dismissed the appeal pursuant to Fed. R. App. P. 42(b) based on the parties' stipulated agreement to dismiss the proceeding. Each party bears its own costs.",
+     "location": null
+    }
+   ],
+   "holding": "The appeal was dismissed by stipulation of the parties with no costs award to either side."
+  },
+  "issues_done": true
+ },
+ "panel-cl-10376228": [],
+ "cl-10376228": {
+  "issues": [],
+  "summary": {
+   "segments": [
+    {
+     "issue": "Appeal Dismissal by Stipulation",
+     "text": "The Federal Circuit dismissed the entire appeal under Federal Rule of Appellate Procedure 42(b) pursuant to the parties' agreement. Each party bears its own costs. The order is nonprecedential.",
+     "location": null
+    }
+   ],
+   "holding": null
+  },
+  "issues_done": true
+ },
+ "panel-cl-10376238": [],
+ "cl-10376238": {
+  "issues": [],
+  "summary": {
+   "segments": [
+    {
+     "issue": "Appeal Dismissal",
+     "text": "The Federal Circuit dismissed the appeal under Federal Rule of Appellate Procedure 42(b) based upon the parties' agreement to do so. The dismissal was entered as a nonprecedential order.",
+     "location": "Page 1"
+    }
+   ],
+   "holding": "The appeal from the Patent Trial and Appeal Board proceeding No. 15/314,565 was dismissed by stipulation of the parties, with each side bearing its own costs."
+  },
+  "issues_done": true
+ },
+ "panel-cl-10376237": [],
+ "cl-10376237": {
+  "issues": [],
+  "summary": {
+   "segments": [
+    {
+     "issue": "Petition Dismissal",
+     "text": "The Court granted Rodriguez's motion to withdraw her petition for review pursuant to Federal Rule of Appellate Procedure 42(b), dismissing the appeal from the Merit Systems Protection Board. The parties stipulated that each party would bear its own costs upon dismissal.",
+     "location": null
+    },
+    {
+     "issue": "Cost Allocation",
+     "text": "Each party was ordered to bear its own costs, reflecting the parties' agreement regarding fee allocation upon dismissal of the petition.",
+     "location": null
+    }
+   ],
+   "holding": null
+  },
+  "issues_done": false
+ },
+ "panel-cl-10376239": [
+  {
+   "name": "Taranto",
+   "role": "Author"
+  },
+  {
+   "name": "Prost",
+   "role": "Panel"
+  },
+  {
+   "name": "Stark",
+   "role": "Panel"
+  }
+ ],
+ "cl-10376239": {
+  "issues": [],
+  "summary": {
+   "segments": [
+    {
+     "issue": "Descriptiveness of iVoterGuide Marks",
+     "text": "The Board found Heritage's iVoterGuide and iVoterGuide.com marks to be highly descriptive because the prefix 'i' signifies Internet, 'VoterGuide' describes the service, and '.com' lacks source-identifying significance, with the combination conveying no distinctive source-identifying impression. The Federal Circuit affirmed, finding substantial evidence supported the Board's determination that the marks were highly descriptive as a matter of fact, even when analyzing individual components of the mark as permitted under trademark law.",
+     "location": null
+    },
+    {
+     "issue": "Acquired Distinctiveness (Secondary Meaning)",
+     "text": "Heritage failed to establish that its iVoterGuide marks had acquired distinctiveness by the time APR filed its competing application on January 22, 2019. The Board's review of Heritage's evidence\u2014including length of use and volunteer declarations\u2014found it insufficient to demonstrate secondary meaning, and the Federal Circuit affirmed, noting that acquired distinctiveness is more difficult to establish for highly descriptive terms and requires preponderance-of-the-evidence proof by the opposer.",
+     "location": null
+    },
+    {
+     "issue": "Protectability and Priority Requirement",
+     "text": "The Federal Circuit affirmed that Heritage's marks lacked cognizable priority for opposing APR's application because the marks were not protectable trademarks under 15 U.S.C. \u00a7 1052(d); absent trademark rights in the prior-use marks, Heritage could not demonstrate the priority necessary to support its opposition, even though APR effectively conceded likelihood of confusion.",
+     "location": null
+    }
+   ],
+   "holding": "The decision confirms that to oppose a trademark application under 15 U.S.C. \u00a7 1052(d) on grounds of likelihood of confusion, the opposer must first establish that its own asserted marks are themselves protectable\u2014possessing either inherent or acquired distinctiveness. Highly descriptive marks face a heightened burden in demonstrating acquired distinctiveness, and the opposer bears the burden of proving distinctiveness by a preponderance of the evidence. This precedent clarifies that protectability of the opposer's mark is a threshold requirement for standing and priority in trademark opposition proceedings."
+  },
+  "issues_done": false
+ },
+ "panel-cl-10376241": [
+  {
+   "name": "Taranto",
+   "role": "Panel"
+  },
+  {
+   "name": "Clevenger",
+   "role": "Panel"
+  },
+  {
+   "name": "Hughes",
+   "role": "Panel"
+  }
+ ],
+ "cl-10376241": {
+  "issues": [
+   "\u00a7\u00a7 102/103 Prior Art"
+  ],
+  "summary": {
+   "segments": [
+    {
+     "issue": "Obviousness of all claims",
+     "text": "The court affirmed the Board's decision that all pending claims (1-7, 10, 13-25, 27, 29, and 31-33) of the '565 application are obvious under 35 U.S.C. \u00a7 103 over Chinese Patent Publication No. 1664074A (\"Li\"). The Board correctly determined that the prior art reference discloses the key limitations regarding regenerated catalyst coolers, catalyst mixing buffer spaces, and temperature control methods, and applicants' evidence of objective indicia of nonobviousness was insufficient to overcome the prima facie case of obviousness.",
+     "location": null
+    },
+    {
+     "issue": "Claim construction",
+     "text": "The court upheld the Board's constructions of independent claims 1, 13, and 20 as not requiring only a single catalyst cooler or requiring the mixing buffer space to be structurally separate from the catalyst cooler itself. The claims use the open-ended term \"comprising,\" which does not exclude additional catalyst coolers, and the specification does not require particular structural independence for the buffer space beyond it being a lower part of the cooler.",
+     "location": null
+    }
+   ],
+   "holding": "The Board's affirmance of the examiner's final rejection of all pending claims for obviousness is affirmed."
+  },
+  "issues_done": true
+ },
+ "panel-cl-10376242": [
+  {
+   "name": "Murphy",
+   "role": "Author"
+  },
+  {
+   "name": "Moore",
+   "role": "Panel"
+  },
+  {
+   "name": "Chen",
+   "role": "Panel"
+  }
+ ],
+ "cl-10376242": {
+  "issues": [
+   "\u00a7\u00a7 102/103 Prior Art",
+   "\u00a7 112 / Claim Construction"
+  ],
+  "summary": {
+   "segments": [
+    {
+     "issue": "Prosecution Disclaimer of Propylene Glycol",
+     "text": "The court affirmed the district court's finding that Azurity clearly and unmistakably disclaimed propylene glycol from the '948 patent claims during prosecution history. Through amendments introducing \"consisting of\" closed-ended language, explicit arguments distinguishing Palepu's propylene glycol formulations, and a supporting declaration, Azurity narrowed the scope of its claims to exclude propylene glycol. This disclaimer is reviewed de novo under patent law and was properly applied to find no infringement.",
+     "location": null
+    },
+    {
+     "issue": "Stipulation Effect on Disclaimer",
+     "text": "The court affirmed that a stipulation regarding \"flavoring agents with or without propylene glycol\" does not overcome or preclude Azurity's earlier prosecution disclaimer of propylene glycol. The district court found Azurity's interpretation of the stipulation \"unpersuasive,\" and the court deferred to this finding under the clear-error standard, holding that the stipulation cannot contradict the closed nature of the \"consisting of\" claims and the propylene glycol disclaimer.",
+     "location": null
+    },
+    {
+     "issue": "Infringement Finding",
+     "text": "The court affirmed that Alkem's ANDA product does not infringe any of the asserted claims (5, 7, 8, and 9) of the '948 patent because the product contains propylene glycol while all asserted claims use closed \"consisting of\" language that excludes propylene glycol. Under the clear-error standard for factual infringement determinations, the district court's finding was supported by the claim language and prosecution history.",
+     "location": null
+    },
+    {
+     "issue": "Claim Construction Standards",
+     "text": "The court applied de novo review to claim construction issues, while reviewing any underlying factual determinations for clear error per Teva Pharmaceuticals. The \"consisting of\" language operates as a closed-ended transition that excludes components not expressly listed, consistent with established patent law doctrines governing claim scope.",
+     "location": null
+    }
+   ],
+   "holding": "This decision confirms that prosecution disclaimers made through clear amendments, explicit arguments distinguishing prior art, and closed claim language cannot be overcome by later-entered discovery stipulations between the parties. The court reinforces that stipulations, though ordinarily binding, do not override the substantive scope limitations established during prosecution history under the doctrine of prosecution disclaimer, maintaining the integrity of claim amendments made to overcome examiner rejections."
+  },
+  "issues_done": true
+ },
+ "panel-cl-10376240": [],
+ "cl-10376240": {
+  "issues": [],
+  "summary": {
+   "segments": [
+    {
+     "issue": "Substantial Evidence for Threat Misconduct",
+     "text": "The court affirmed the Board's finding that Randall made threatening statements to his supervisor on August 30, 2017, as substantially supported by evidence under 5 U.S.C. \u00a7 7703(c). The Board credited the supervisor's testimony and corroborating witness over Randall's contrary account, and this credibility determination is virtually unreviewable on appeal under the deferential standard.",
+     "location": null
+    },
+    {
+     "issue": "Whistleblower Retaliation Claim Waived",
+     "text": "The court declined to consider Randall's argument that his removal violated the Whistleblower Protection Act because he failed to raise this complaint before the Board in the first instance. Under Bosley v. MSPB, arguments not presented to the administrative body are not reviewed de novo on petition for review.",
+     "location": null
+    }
+   ],
+   "holding": "The Merit Systems Protection Board's decision to affirm Randall's termination for threatening conduct was affirmed in full, as the threat was supported by substantial evidence and the whistleblower retaliation claim was waived for failure to raise it before the Board."
+  },
+  "issues_done": false
+ },
+ "panel-cl-10373644": [],
+ "cl-10373644": {
+  "issues": [],
+  "summary": {
+   "segments": [
+    {
+     "issue": "Appeal Dismissal",
+     "text": "The Federal Circuit dismissed the appeal pursuant to Fed. R. App. P. 42(b) upon agreement of the parties. Each side bears its own costs.",
+     "location": null
+    }
+   ],
+   "holding": null
+  },
+  "issues_done": false
+ },
+ "panel-cl-10373630": [],
+ "cl-10373630": {
+  "issues": [],
+  "summary": {
+   "segments": [
+    {
+     "issue": "Appeal Dismissal",
+     "text": "The Court lifted its prior stay and dismissed the proceeding pursuant to Federal Rule of Appellate Procedure 42(b) based on the parties' Joint Stipulation for Voluntary Dismissal.",
+     "location": null
+    },
+    {
+     "issue": "Cost Allocation",
+     "text": "Each party shall bear its own costs in connection with the appeal.",
+     "location": null
+    }
+   ],
+   "holding": null
+  },
+  "issues_done": false
+ },
+ "panel-cl-10373631": [
+  {
+   "name": "Barnett",
+   "role": "Author"
+  },
+  {
+   "name": "Taranto",
+   "role": "Author"
+  },
+  {
+   "name": "Hughes",
+   "role": "Panel"
+  }
+ ],
+ "cl-10373631": {
+  "issues": [],
+  "summary": {
+   "segments": [
+    {
+     "issue": "Federal Circuit Jurisdiction",
+     "text": "The Federal Circuit lacks jurisdiction to review the Veterans Court's decision because Mr. Jackson's arguments amount to disagreement over application of law to fact rather than identification of an incorrect rule of law. Under 38 U.S.C. \u00a7 7292, jurisdiction requires the Veterans Court decision to rest on an incorrect legal standard, not merely a factual or evidentiary assessment; Mr. Jackson's sympathetic-reading argument does not identify such a legal error since the Veterans Court did not articulate a standard inconsistent with that requirement.",
+     "location": "Section II.A"
+    },
+    {
+     "issue": "Clear and Unmistakable Error\u2014Evidence Inconsistency",
+     "text": "The Federal Circuit does not reach the merits of Mr. Jackson's inconsistency-based argument that the Board's 2022 grant of benefits necessarily establishes CUE in the 1993 denial, because Mr. Jackson failed to adequately preserve or develop this argument and the Veterans Court opinion does not address the factual premise of no material evidentiary difference between 1993 and 2022.",
+     "location": "Section II.B"
+    },
+    {
+     "issue": "Appeal Dismissal",
+     "text": "The court dismisses Mr. Jackson's appeal for lack of jurisdiction given the limited and unpreserved arguments presented and the lack of any identifiable incorrect legal rule upon which the Veterans Court decision rested.",
+     "location": null
+    }
+   ],
+   "holding": "The Federal Circuit dismisses the appeal for lack of jurisdiction under 38 U.S.C. \u00a7 7292 because Mr. Jackson has not identified an incorrect rule of law adopted by the Veterans Court, and his arguments amount to disagreement with factual findings and evidentiary applications rather than legal error."
+  },
+  "issues_done": false
+ },
+ "panel-cl-10372864": [
+  {
+   "name": "Taranto",
+   "role": "Author"
+  },
+  {
+   "name": "Schall",
+   "role": "Panel"
+  },
+  {
+   "name": "Chen",
+   "role": "Panel"
+  }
+ ],
+ "cl-10372864": {
+  "issues": [
+   "Damages & Remedies"
+  ],
+  "summary": {
+   "segments": [
+    {
+     "issue": "Trade Secret Disgorgement Calculation",
+     "text": "The court affirmed the district court's disgorgement award of $8,546,000 for Intersil's ISL29003 sales, rejecting Intersil's challenge to the methodology. The court agreed with the district court that the trade secret became properly accessible to Intersil in January 2006 through reverse engineering, and that the 26-month head-start period was correctly determined, making the disgorgement calculation sound despite acknowledging one analytical error by the trial court that ultimately did not affect the award.",
+     "location": null
+    },
+    {
+     "issue": "Exemplary Damages for Trade Secret Misappropriation",
+     "text": "The court affirmed the exemplary damages award of $17,092,000 (double the disgorgement sum), applied pursuant to Texas Civil Practice & Remedies Code \u00a7 41.008. The jury's finding that Intersil's misappropriation resulted from fraud, malice, or gross negligence remained valid, and the doubling cap imposed by the district court on the jury's higher award of $64,000,000 was consistent with Texas law limiting exemplary damages.",
+     "location": null
+    },
+    {
+     "issue": "Breach of Contract Remedy",
+     "text": "The court affirmed TAOS's award of reasonable-royalty damages for Intersil's breach of the confidentiality agreement. TAOS was permitted to elect and recover $6,637,693 for Derivative Products (which do not include the ISL29003), while the Primary Products damages were properly limited to exclude ISL29003 to avoid duplication with the trade secret remedy.",
+     "location": null
+    },
+    {
+     "issue": "Attorneys' Fees Award",
+     "text": "The court affirmed the award of attorneys' fees for TAOS's work on the contract claim. The ruling upheld the district court's allocation of fees attributable to the contract breach theory, which became a separate basis for recovery after the trade secret remedy was narrowed on remand.",
+     "location": null
+    },
+    {
+     "issue": "Prejudgment Interest",
+     "text": "The court found error in the district court's analysis of prejudgment interest and remanded that issue for recalculation. The specific nature of the error in computing prejudgment interest rates or periods was identified as requiring further proceedings on remand, without affirming the trial court's prejudgment interest determination.",
+     "location": null
+    }
+   ],
+   "holding": "This decision confirms that in trade secret misappropriation cases, disgorgement of profits is an equitable remedy to be determined by the judge rather than the jury, and exemplary damages may be awarded for such misappropriation when the jury finds fraud, malice, or gross negligence. The decision also establishes that when multiple remedies are available (trade secret disgorgement and breach of contract royalties), a plaintiff may elect remedies provided they do not result in duplicative recovery for the same infringement. The holding is primarily fact-bound regarding the specific calculations for the parties' ambient-light sensor technology, but it clarifies the procedural allocation of damages decisions and the permissible interaction between equitable and legal remedies under Texas law."
+  },
+  "issues_done": true
+ },
+ "panel-cl-10372862": [
+  {
+   "name": "Reyna",
+   "role": "Author"
+  },
+  {
+   "name": "Dyk",
+   "role": "Panel"
+  },
+  {
+   "name": "Mayer",
+   "role": "Panel"
+  }
+ ],
+ "cl-10372862": {
+  "issues": [],
+  "summary": {
+   "segments": [
+    {
+     "issue": "Appeal Mootness",
+     "text": "The court dismissed the appeal as moot under Article III's case-or-controversy requirement, holding that even if Mr. Smith prevailed on the merits and obtained an earlier effective date for his deceased father's benefits, he could recover only the $1,143 in funeral and burial expenses under 38 U.S.C. \u00a7 5121(a)(6), which cap an adult child substituted claimant's entitlement. Since unaccounted-for accrued benefits exceeded $9,000, any increase in the total accrued benefit pool from an earlier effective date would not change Mr. Smith's recoverable amount, rendering the appeal of no practical consequence.",
+     "location": "DISCUSSION"
+    }
+   ],
+   "holding": "The court clarifies that a substituted adult-child claimant under 38 U.S.C. \u00a7 5121A is bound by the limitations in \u00a7 5121(a)(6), which restricts recovery to last sickness and burial expenses, and that an appeal seeking an earlier effective date becomes moot when the additional accrued benefits, even if granted, would exceed the claimant's statutory entitlement ceiling. This decision does not change substantive law but confirms how mootness doctrine applies in the veterans benefits context where statutory caps on recovery eliminate the practical relief sought."
+  },
+  "issues_done": false
+ },
+ "panel-cl-10372032": [],
+ "cl-10372032": {
+  "issues": [],
+  "summary": null,
+  "issues_done": false
+ },
+ "panel-cl-10372079": [
+  {
+   "name": "Chen",
+   "role": "Author"
+  },
+  {
+   "name": "Taranto",
+   "role": "Panel"
+  },
+  {
+   "name": "Schall",
+   "role": "Panel"
+  }
+ ],
+ "cl-10372079": {
+  "issues": [],
+  "summary": null,
+  "issues_done": false
+ },
+ "panel-cl-10372078": [
+  {
+   "name": "Cunningham",
+   "role": "Author"
+  },
+  {
+   "name": "Prost",
+   "role": "Panel"
+  },
+  {
+   "name": "Clevenger",
+   "role": "Panel"
+  }
+ ],
+ "cl-10372078": {
+  "issues": [],
+  "summary": null,
+  "issues_done": false
+ },
+ "panel-cl-10372077": [
+  {
+   "name": "Schall",
+   "role": "Author"
+  },
+  {
+   "name": "Chen",
+   "role": "Panel"
+  },
+  {
+   "name": "Stoll",
+   "role": "Panel"
+  }
+ ],
+ "cl-10372077": {
+  "issues": [],
+  "summary": null,
   "issues_done": false
  }
 }
