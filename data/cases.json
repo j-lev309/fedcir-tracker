@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-23T00:06:21+00:00",
+ "generated_at": "2026-10-23T17:54:53+00:00",
  "window_since": "2020-01-01",
  "coverage": {
   "complete": true,
@@ -12,19 +12,19 @@
    "dockets": {
     "complete": true,
     "reason": "ok",
-    "count": 0,
+    "count": 1,
     "resume_url": null
    },
    "clusters": {
     "complete": true,
     "reason": "ok",
-    "count": 14,
+    "count": 20,
     "resume_url": null
    },
    "opinions": {
     "complete": true,
     "reason": "ok",
-    "count": 0,
+    "count": 6,
     "resume_url": null
    },
    "audio": {
@@ -47,25 +47,161 @@
   "summaries": {
    "enabled": true,
    "have": 1584,
-   "expected": 7943,
+   "expected": 7949,
    "complete": false
   },
   "opinion_text_fetches_this_run": 600,
   "opinion_text_fetch_cap": 600,
-  "latest_decision_date": "2026-10-22",
+  "latest_decision_date": "2026-10-23",
   "next_argument_date": null
  },
  "stats": {
-  "total": 8847,
-  "pending": 860,
+  "total": 8852,
+  "pending": 859,
   "scheduled": 0,
   "awaiting": 44,
-  "decided": 7943,
+  "decided": 7949,
   "precedential": 1446,
   "rule36": 0
  },
  "upcoming_argument_docket_numbers": [],
  "cases": [
+  {
+   "docket_number": "CL-11043920",
+   "case_name": "Wells v. U.S. Court of Appeals",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-10-23",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/11043920/wells-v-us-court-of-appeals/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-2117.ORDER.10-23-2026_2775814.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/11043920/wells-v-us-court-of-appeals/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "2026-153",
+   "case_name": "In Re CARTER",
+   "case_type": "Patent (District Ct.)",
+   "origin": "United States District Court for the District of Massachusetts",
+   "status": "Decided",
+   "date_filed": "2026-08-18",
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-10-23",
+    "precedential_status": "Unpublished",
+    "disposition": "Order",
+    "url_cl": "https://www.courtlistener.com/opinion/11044234/in-re-carter/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-153.ORDER.10-23-2026_2775835.pdf"
+   },
+   "panel": [],
+   "patent_issues": [
+    "Other / Procedural"
+   ],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/74667798/in-re-carter/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "CL-11044235",
+   "case_name": "Dawson-Paschall v. United States",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-10-23",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/11044235/dawson-paschall-v-united-states/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-2066.ORDER.10-23-2026_2775844.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/11044235/dawson-paschall-v-united-states/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "CL-11044233",
+   "case_name": "Sampson v. United States",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-10-23",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/11044233/sampson-v-united-states/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1941.ORDER.10-23-2026_2775885.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/11044233/sampson-v-united-states/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "CL-11043921",
+   "case_name": "Lee v. Dhs",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-10-23",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/11043921/lee-v-dhs/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1602.OPINION.10-23-2026_2775748.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/11043921/lee-v-dhs/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "CL-11043922",
+   "case_name": "In Re STORM",
+   "case_type": "Patent (PTAB)",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-10-23",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/11043922/in-re-storm/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-156.ORDER.10-23-2026_2775754.pdf"
+   },
+   "panel": [],
+   "patent_issues": [
+    "Other / Procedural"
+   ],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/11043922/in-re-storm/",
+   "url_audio": null
+  },
   {
    "docket_number": "CL-11042958",
    "case_name": "Bedoya v. MSPB",
@@ -2116,7 +2252,7 @@
    "decision": {
     "date": "2026-09-18",
     "precedential_status": "Published",
-    "disposition": "Opinion",
+    "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10976772/tenaris-bay-city-inc-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1382.OPINION.9-18-2026_2757740.pdf"
    },
@@ -2138,7 +2274,7 @@
    "decision": {
     "date": "2026-09-18",
     "precedential_status": "Unpublished",
-    "disposition": "Opinion",
+    "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10976773/strong-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1335.OPINION.9-18-2026_2757725.pdf"
    },
@@ -2160,7 +2296,7 @@
    "decision": {
     "date": "2026-09-17",
     "precedential_status": "Unpublished",
-    "disposition": "Errata",
+    "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10975538/enanta-pharmaceuticals-inc-v-pfizer-inc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1427.ERRATA.9-17-2026_2757023.pdf"
    },
@@ -2184,7 +2320,7 @@
    "decision": {
     "date": "2026-09-17",
     "precedential_status": "Unpublished",
-    "disposition": "Order",
+    "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10975591/in-re-patel/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-149.ORDER.9-17-2026_2757049.pdf"
    },
@@ -4541,22 +4677,6 @@
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10953046/robert-bosch-llc-v-westport-fuel-systems-canada-inc/",
    "url_audio": "https://www.courtlistener.com/audio/105686/robert-bosch-llc-v-westport-fuel-systems-canada-inc/"
-  },
-  {
-   "docket_number": "2026-153",
-   "case_name": "In re: Carter",
-   "case_type": "Patent (District Ct.)",
-   "origin": "United States District Court for the District of Massachusetts",
-   "status": "Pending / Briefing",
-   "date_filed": "2026-08-18",
-   "date_argued": null,
-   "argument": null,
-   "decision": null,
-   "panel": [],
-   "patent_issues": [],
-   "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/74667798/in-re-carter/",
-   "url_audio": null
   },
   {
    "docket_number": "2024-2203",
@@ -10812,7 +10932,7 @@
    "decision": {
     "date": "2026-06-23",
     "precedential_status": "Published",
-    "disposition": "Errata",
+    "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10878465/enanta-pharmaceuticals-inc-v-pfizer-inc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1427.OPINION.6-23-2026_2712960.pdf"
    },
