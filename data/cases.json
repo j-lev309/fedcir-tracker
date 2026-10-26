@@ -1,32 +1,30 @@
 {
- "generated_at": "2026-10-25T23:22:28+00:00",
+ "generated_at": "2026-10-26T19:12:17+00:00",
  "window_since": "2020-01-01",
  "coverage": {
-  "complete": false,
-  "run_complete": false,
-  "backfilling": [
-   "dockets"
-  ],
+  "complete": true,
+  "run_complete": true,
+  "backfilling": [],
   "window_since": "2020-01-01",
   "window_months": 18,
   "complete_since": "2020-01-01",
   "sources": {
    "dockets": {
-    "resume_url": "https://www.courtlistener.com/api/rest/v4/dockets/",
-    "complete": false,
-    "reason": "network timeouts",
-    "count": 0
+    "complete": true,
+    "reason": "ok",
+    "count": 0,
+    "resume_url": null
    },
    "clusters": {
     "complete": true,
     "reason": "ok",
-    "count": 18,
+    "count": 25,
     "resume_url": null
    },
    "opinions": {
     "complete": true,
     "reason": "ok",
-    "count": 0,
+    "count": 7,
     "resume_url": null
    },
    "audio": {
@@ -49,25 +47,181 @@
   "summaries": {
    "enabled": true,
    "have": 1584,
-   "expected": 7949,
+   "expected": 7956,
    "complete": false
   },
   "opinion_text_fetches_this_run": 600,
   "opinion_text_fetch_cap": 600,
-  "latest_decision_date": "2026-10-23",
+  "latest_decision_date": "2026-10-26",
   "next_argument_date": null
  },
  "stats": {
-  "total": 8852,
+  "total": 8859,
   "pending": 859,
   "scheduled": 0,
   "awaiting": 44,
-  "decided": 7949,
+  "decided": 7956,
   "precedential": 1446,
   "rule36": 0
  },
  "upcoming_argument_docket_numbers": [],
  "cases": [
+  {
+   "docket_number": "CL-11045747",
+   "case_name": "Moreno v. Nizer",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-10-26",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/11045747/moreno-v-nizer/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1995.ORDER.10-26-2026_2776445.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/11045747/moreno-v-nizer/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "CL-11045803",
+   "case_name": "Royal v. Collins",
+   "case_type": "Veterans",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-10-26",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/11045803/royal-v-collins/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1398.ORDER.10-26-2026_2776634.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/11045803/royal-v-collins/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "CL-11045776",
+   "case_name": "In Re THURMAN",
+   "case_type": "Patent (PTAB)",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-10-26",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/11045776/in-re-thurman/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-152.ORDER.10-26-2026_2776600.pdf"
+   },
+   "panel": [],
+   "patent_issues": [
+    "Other / Procedural"
+   ],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/11045776/in-re-thurman/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "CL-11045775",
+   "case_name": "Midkiff v. Commerce",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-10-26",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/11045775/midkiff-v-commerce/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1466.ORDER.10-26-2026_2776544.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/11045775/midkiff-v-commerce/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "CL-11045778",
+   "case_name": "Goodwin v. Pension Benefit Guaranty Corp.",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-10-26",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/11045778/goodwin-v-pension-benefit-guaranty-corp/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1616.OPINION.10-26-2026_2776582.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/11045778/goodwin-v-pension-benefit-guaranty-corp/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "CL-11045777",
+   "case_name": "Gurvey v. Live Nation Entertainment, Inc.",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-10-26",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/11045777/gurvey-v-live-nation-entertainment-inc/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1954.OPINION.10-26-2026_2776517.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/11045777/gurvey-v-live-nation-entertainment-inc/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "CL-11045748",
+   "case_name": "Camacho v. Army",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-10-26",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/11045748/camacho-v-army/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1728.OPINION.10-26-2026_2776467.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/11045748/camacho-v-army/",
+   "url_audio": null
+  },
   {
    "docket_number": "CL-11043920",
    "case_name": "Wells v. U.S. Court of Appeals",
@@ -2230,7 +2384,7 @@
    "decision": {
     "date": "2026-09-18",
     "precedential_status": "Unpublished",
-    "disposition": "Order",
+    "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10976829/richards-v-kallish/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-2022.ORDER.9-18-2026_2757939.pdf"
    },
