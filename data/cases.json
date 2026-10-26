@@ -1,30 +1,32 @@
 {
- "generated_at": "2026-10-26T20:31:05+00:00",
+ "generated_at": "2026-10-26T21:40:24+00:00",
  "window_since": "2020-01-01",
  "coverage": {
-  "complete": true,
-  "run_complete": true,
-  "backfilling": [],
+  "complete": false,
+  "run_complete": false,
+  "backfilling": [
+   "dockets"
+  ],
   "window_since": "2020-01-01",
   "window_months": 18,
   "complete_since": "2020-01-01",
   "sources": {
    "dockets": {
-    "complete": true,
-    "reason": "ok",
-    "count": 2,
-    "resume_url": null
+    "resume_url": "https://www.courtlistener.com/api/rest/v4/dockets/",
+    "complete": false,
+    "reason": "network timeouts",
+    "count": 0
    },
    "clusters": {
     "complete": true,
     "reason": "ok",
-    "count": 13,
+    "count": 14,
     "resume_url": null
    },
    "opinions": {
     "complete": true,
     "reason": "ok",
-    "count": 0,
+    "count": 1,
     "resume_url": null
    },
    "audio": {
@@ -47,7 +49,7 @@
   "summaries": {
    "enabled": true,
    "have": 1584,
-   "expected": 7956,
+   "expected": 7957,
    "complete": false
   },
   "opinion_text_fetches_this_run": 600,
@@ -56,11 +58,11 @@
   "next_argument_date": null
  },
  "stats": {
-  "total": 8860,
+  "total": 8861,
   "pending": 860,
   "scheduled": 0,
   "awaiting": 44,
-  "decided": 7956,
+  "decided": 7957,
   "precedential": 1446,
   "rule36": 0
  },
@@ -220,6 +222,28 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/11045748/camacho-v-army/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "CL-11045948",
+   "case_name": "You Map, Inc. v. Snap Inc.",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-10-26",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/11045948/you-map-inc-v-snap-inc/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-2026.ORDER.10-26-2026_2777010.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/11045948/you-map-inc-v-snap-inc/",
    "url_audio": null
   },
   {
