@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-26T19:12:17+00:00",
+ "generated_at": "2026-10-26T20:31:05+00:00",
  "window_since": "2020-01-01",
  "coverage": {
   "complete": true,
@@ -12,19 +12,19 @@
    "dockets": {
     "complete": true,
     "reason": "ok",
-    "count": 0,
+    "count": 2,
     "resume_url": null
    },
    "clusters": {
     "complete": true,
     "reason": "ok",
-    "count": 25,
+    "count": 13,
     "resume_url": null
    },
    "opinions": {
     "complete": true,
     "reason": "ok",
-    "count": 7,
+    "count": 0,
     "resume_url": null
    },
    "audio": {
@@ -56,8 +56,8 @@
   "next_argument_date": null
  },
  "stats": {
-  "total": 8859,
-  "pending": 859,
+  "total": 8860,
+  "pending": 860,
   "scheduled": 0,
   "awaiting": 44,
   "decided": 7956,
@@ -492,6 +492,22 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/11043182/lashify-inc-v-qingdao-lashbeauty-cosmetic-co-ltd/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "2027-1067",
+   "case_name": "In re: LS Electric Co., Ltd.",
+   "case_type": "Patent (PTAB)",
+   "origin": "United States Patent and Trademark Office",
+   "status": "Pending / Briefing",
+   "date_filed": "2026-10-22",
+   "date_argued": null,
+   "argument": null,
+   "decision": null,
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/75019340/in-re-ls-electric-co-ltd/",
    "url_audio": null
   },
   {
