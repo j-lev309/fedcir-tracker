@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-27T00:27:29+00:00",
+ "generated_at": "2026-10-27T18:49:15+00:00",
  "window_since": "2020-01-01",
  "coverage": {
   "complete": true,
@@ -18,13 +18,13 @@
    "clusters": {
     "complete": true,
     "reason": "ok",
-    "count": 14,
+    "count": 16,
     "resume_url": null
    },
    "opinions": {
     "complete": true,
     "reason": "ok",
-    "count": 0,
+    "count": 2,
     "resume_url": null
    },
    "audio": {
@@ -47,25 +47,69 @@
   "summaries": {
    "enabled": true,
    "have": 1584,
-   "expected": 7957,
+   "expected": 7959,
    "complete": false
   },
   "opinion_text_fetches_this_run": 600,
   "opinion_text_fetch_cap": 600,
-  "latest_decision_date": "2026-10-26",
+  "latest_decision_date": "2026-10-27",
   "next_argument_date": null
  },
  "stats": {
-  "total": 8861,
+  "total": 8863,
   "pending": 860,
   "scheduled": 0,
   "awaiting": 44,
-  "decided": 7957,
+  "decided": 7959,
   "precedential": 1446,
   "rule36": 0
  },
  "upcoming_argument_docket_numbers": [],
  "cases": [
+  {
+   "docket_number": "CL-11046032",
+   "case_name": "Reid v. Department of Transportation",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-10-27",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/11046032/reid-v-department-of-transportation/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1942.ORDER.10-27-2026_2777233.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/11046032/reid-v-department-of-transportation/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "CL-11046199",
+   "case_name": "Hassan v. Collins",
+   "case_type": "Veterans",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-10-27",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/11046199/hassan-v-collins/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-2195.ORDER.10-27-2026_2777442.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/11046199/hassan-v-collins/",
+   "url_audio": null
+  },
   {
    "docket_number": "CL-11045747",
    "case_name": "Moreno v. Nizer",
@@ -2266,7 +2310,7 @@
    "decision": {
     "date": "2026-09-21",
     "precedential_status": "Unpublished",
-    "disposition": "Opinion",
+    "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10978232/berkeleyieor-v-ww-grainger-inc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-2353.OPINION.9-21-2026_2758411.pdf"
    },
