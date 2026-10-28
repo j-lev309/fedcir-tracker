@@ -1,8 +1,8 @@
 {
  "dockets": {
-  "last_attempt": "2026-10-28T21:40:22+00:00",
+  "last_attempt": "2026-10-28T23:08:57+00:00",
   "caught_up": true,
-  "last_ok": "2026-10-28T21:40:22+00:00",
+  "last_ok": "2026-10-28T23:08:57+00:00",
   "backfill_done": true,
   "backfill_completed_at": "2026-07-21",
   "last_id": 75019340,
@@ -11,9 +11,9 @@
   "frontier_date": "2020-01-01"
  },
  "clusters": {
-  "last_attempt": "2026-10-28T21:40:22+00:00",
+  "last_attempt": "2026-10-28T23:08:57+00:00",
   "caught_up": true,
-  "last_ok": "2026-10-28T21:40:22+00:00",
+  "last_ok": "2026-10-28T23:08:57+00:00",
   "backfill_done": true,
   "last_id": 11047489,
   "last_date": "2026-10-28",
@@ -23,10 +23,10 @@
  },
  "opinions": {
   "last_id": 11515266,
-  "last_attempt": "2026-10-28T21:40:22+00:00",
+  "last_attempt": "2026-10-28T23:08:57+00:00",
   "caught_up": true,
   "backfill_done": true,
-  "last_ok": "2026-10-28T21:40:22+00:00",
+  "last_ok": "2026-10-28T23:08:57+00:00",
   "backfill_completed_at": "2026-07-31",
   "resume_url": null,
   "frontier_date": "2020-01-01",
@@ -34,16 +34,16 @@
  },
  "audio": {
   "last_id": 106837,
-  "last_attempt": "2026-10-28T21:40:22+00:00",
+  "last_attempt": "2026-10-28T23:08:57+00:00",
   "caught_up": true,
-  "last_ok": "2026-10-28T21:40:22+00:00",
+  "last_ok": "2026-10-28T23:08:57+00:00",
   "backfill_done": true,
   "backfill_completed_at": "2026-07-31",
   "resume_url": null,
   "frontier_date": "2020-01-01",
   "last_date": "2026-10-08"
  },
- "run_no": 379,
+ "run_no": 380,
  "schema_v17": true,
  "judge_names": {},
  "schema_v22": true,
