@@ -1,21 +1,19 @@
 {
- "generated_at": "2026-10-28T20:24:12+00:00",
+ "generated_at": "2026-10-28T21:43:05+00:00",
  "window_since": "2020-01-01",
  "coverage": {
-  "complete": false,
-  "run_complete": false,
-  "backfilling": [
-   "dockets"
-  ],
+  "complete": true,
+  "run_complete": true,
+  "backfilling": [],
   "window_since": "2020-01-01",
   "window_months": 18,
   "complete_since": "2020-01-01",
   "sources": {
    "dockets": {
-    "resume_url": "https://www.courtlistener.com/api/rest/v4/dockets/",
-    "complete": false,
-    "reason": "network timeouts",
-    "count": 0
+    "complete": true,
+    "reason": "ok",
+    "count": 0,
+    "resume_url": null
    },
    "clusters": {
     "complete": true,
