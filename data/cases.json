@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-28T00:34:02+00:00",
+ "generated_at": "2026-10-28T18:49:56+00:00",
  "window_since": "2020-01-01",
  "coverage": {
   "complete": true,
@@ -18,13 +18,13 @@
    "clusters": {
     "complete": true,
     "reason": "ok",
-    "count": 11,
+    "count": 14,
     "resume_url": null
    },
    "opinions": {
     "complete": true,
     "reason": "ok",
-    "count": 0,
+    "count": 3,
     "resume_url": null
    },
    "audio": {
@@ -47,25 +47,95 @@
   "summaries": {
    "enabled": true,
    "have": 1584,
-   "expected": 7960,
+   "expected": 7963,
    "complete": false
   },
   "opinion_text_fetches_this_run": 600,
   "opinion_text_fetch_cap": 600,
-  "latest_decision_date": "2026-10-27",
+  "latest_decision_date": "2026-10-28",
   "next_argument_date": null
  },
  "stats": {
-  "total": 8864,
+  "total": 8867,
   "pending": 860,
   "scheduled": 0,
   "awaiting": 44,
-  "decided": 7960,
+  "decided": 7963,
   "precedential": 1446,
   "rule36": 0
  },
  "upcoming_argument_docket_numbers": [],
  "cases": [
+  {
+   "docket_number": "CL-11047489",
+   "case_name": "El Malik v. United States",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-10-28",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/11047489/el-malik-v-united-states/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/27-1080.ORDER.10-28-2026_2778165.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/11047489/el-malik-v-united-states/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "CL-11047253",
+   "case_name": "In Re WENKMAN",
+   "case_type": "Patent (PTAB)",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-10-28",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/11047253/in-re-wenkman/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1424.OPINION.10-28-2026_2778116.pdf"
+   },
+   "panel": [],
+   "patent_issues": [
+    "Other / Procedural"
+   ],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/11047253/in-re-wenkman/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "CL-11047488",
+   "case_name": "Percept Technologies Inc. v. Squires",
+   "case_type": "Patent (PTAB)",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-10-28",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/11047488/percept-technologies-inc-v-squires/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1835.ORDER.10-28-2026_2778227.pdf"
+   },
+   "panel": [],
+   "patent_issues": [
+    "Other / Procedural"
+   ],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/11047488/percept-technologies-inc-v-squires/",
+   "url_audio": null
+  },
   {
    "docket_number": "CL-11046032",
    "case_name": "Reid v. Department of Transportation",
