@@ -1,30 +1,32 @@
 {
- "generated_at": "2026-10-29T00:55:23+00:00",
+ "generated_at": "2026-10-29T19:07:04+00:00",
  "window_since": "2020-01-01",
  "coverage": {
-  "complete": true,
-  "run_complete": true,
-  "backfilling": [],
+  "complete": false,
+  "run_complete": false,
+  "backfilling": [
+   "dockets"
+  ],
   "window_since": "2020-01-01",
   "window_months": 18,
   "complete_since": "2020-01-01",
   "sources": {
    "dockets": {
-    "complete": true,
-    "reason": "ok",
-    "count": 1,
-    "resume_url": null
+    "resume_url": "https://www.courtlistener.com/api/rest/v4/dockets/",
+    "complete": false,
+    "reason": "network timeouts",
+    "count": 0
    },
    "clusters": {
     "complete": true,
     "reason": "ok",
-    "count": 14,
+    "count": 22,
     "resume_url": null
    },
    "opinions": {
     "complete": true,
     "reason": "ok",
-    "count": 0,
+    "count": 8,
     "resume_url": null
    },
    "audio": {
@@ -47,25 +49,203 @@
   "summaries": {
    "enabled": true,
    "have": 1584,
-   "expected": 7963,
+   "expected": 7971,
    "complete": false
   },
   "opinion_text_fetches_this_run": 600,
   "opinion_text_fetch_cap": 600,
-  "latest_decision_date": "2026-10-28",
+  "latest_decision_date": "2026-10-29",
   "next_argument_date": null
  },
  "stats": {
-  "total": 8867,
-  "pending": 860,
+  "total": 8874,
+  "pending": 859,
   "scheduled": 0,
   "awaiting": 44,
-  "decided": 7963,
+  "decided": 7971,
   "precedential": 1446,
   "rule36": 0
  },
  "upcoming_argument_docket_numbers": [],
  "cases": [
+  {
+   "docket_number": "CL-11048541",
+   "case_name": "Polich v. Collins",
+   "case_type": "Veterans",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-10-29",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/11048541/polich-v-collins/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1299.OPINION.10-29-2026_2778785.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/11048541/polich-v-collins/",
+   "url_audio": "https://www.courtlistener.com/audio/106792/polich-v-collins/"
+  },
+  {
+   "docket_number": "CL-11048542",
+   "case_name": "Moore v. Griffen",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-10-29",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/11048542/moore-v-griffen/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-2090.ORDER.10-29-2026_2778780.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/11048542/moore-v-griffen/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "2025-1572",
+   "case_name": "Bt Americas, Inc. v. Palo Alto Networks, Inc.",
+   "case_type": "Patent (PTAB)",
+   "origin": "United States Patent and Trademark Office",
+   "status": "Decided",
+   "date_filed": "2025-03-21",
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-10-29",
+    "precedential_status": "Unpublished",
+    "disposition": "Opinion",
+    "url_cl": "https://www.courtlistener.com/opinion/11048543/bt-americas-inc-v-palo-alto-networks-inc/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1572.OPINION.10-29-2026_2778774.pdf"
+   },
+   "panel": [],
+   "patent_issues": [
+    "Other / Procedural"
+   ],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/70913989/bt-americas-inc-v-palo-alto-networks-inc/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "CL-11048544",
+   "case_name": "Beal v. United States",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-10-29",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/11048544/beal-v-united-states/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1917.ORDER.10-29-2026_2778769.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/11048544/beal-v-united-states/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "CL-11048684",
+   "case_name": "Perdue v. DVA",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-10-29",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/11048684/perdue-v-dva/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1727.ORDER.10-29-2026_2778869.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/11048684/perdue-v-dva/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "CL-11049011",
+   "case_name": "Blackmon v. Opm",
+   "case_type": "Federal Employment",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-10-29",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/11049011/blackmon-v-opm/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-2162.ORDER.10-29-2026_2778895.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/11049011/blackmon-v-opm/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "CL-11049010",
+   "case_name": "Thomas v. DVA",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-10-29",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/11049010/thomas-v-dva/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1448.ORDER.10-29-2026_2778936.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/11049010/thomas-v-dva/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "CL-11049009",
+   "case_name": "Titre v. Department of Agriculture",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-10-29",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/11049009/titre-v-department-of-agriculture/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-2253.ORDER.10-29-2026_2778960.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/11049009/titre-v-department-of-agriculture/",
+   "url_audio": null
+  },
   {
    "docket_number": "CL-11047489",
    "case_name": "El Malik v. United States",
@@ -2138,7 +2318,7 @@
    "decision": {
     "date": "2026-09-25",
     "precedential_status": "Unpublished",
-    "disposition": "Opinion",
+    "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10983489/receivership-estate-of-audiencescience-inc-v-google-llc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1825.OPINION.9-25-2026_2761456.pdf"
    },
@@ -2178,7 +2358,7 @@
    "decision": {
     "date": "2026-09-23",
     "precedential_status": "Unpublished",
-    "disposition": "Opinion",
+    "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/10980493/walker-v-collins/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1503.OPINION.9-23-2026_2760101.pdf"
    },
@@ -75415,22 +75595,6 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/73612498/ravgen-inc-v-laboratory-corporation-of-america-holdings/",
-   "url_audio": null
-  },
-  {
-   "docket_number": "2025-1572",
-   "case_name": "BT Americas, Inc. v. Palo Alto Networks, Inc.",
-   "case_type": "Patent (PTAB)",
-   "origin": "United States Patent and Trademark Office",
-   "status": "Pending / Briefing",
-   "date_filed": "2025-03-21",
-   "date_argued": null,
-   "argument": null,
-   "decision": null,
-   "panel": [],
-   "patent_issues": [],
-   "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/70913989/bt-americas-inc-v-palo-alto-networks-inc/",
    "url_audio": null
   },
   {
