@@ -1,38 +1,36 @@
 {
- "generated_at": "2026-11-02T00:49:08+00:00",
+ "generated_at": "2026-11-02T22:21:17+00:00",
  "window_since": "2020-01-01",
  "coverage": {
-  "complete": false,
-  "run_complete": false,
-  "backfilling": [
-   "dockets"
-  ],
+  "complete": true,
+  "run_complete": true,
+  "backfilling": [],
   "window_since": "2020-01-01",
   "window_months": 18,
   "complete_since": "2020-01-01",
   "sources": {
    "dockets": {
-    "resume_url": "https://www.courtlistener.com/api/rest/v4/dockets/",
-    "complete": false,
-    "reason": "network timeouts",
-    "count": 0
-   },
-   "clusters": {
-    "complete": true,
-    "reason": "ok",
-    "count": 22,
-    "resume_url": null
-   },
-   "opinions": {
     "complete": true,
     "reason": "ok",
     "count": 0,
     "resume_url": null
    },
+   "clusters": {
+    "complete": true,
+    "reason": "ok",
+    "count": 24,
+    "resume_url": null
+   },
+   "opinions": {
+    "complete": true,
+    "reason": "ok",
+    "count": 2,
+    "resume_url": null
+   },
    "audio": {
     "complete": true,
     "reason": "ok",
-    "count": 36,
+    "count": 44,
     "resume_url": null
    },
    "scheduled_arguments": {
@@ -49,25 +47,69 @@
   "summaries": {
    "enabled": true,
    "have": 1584,
-   "expected": 7979,
+   "expected": 7981,
    "complete": false
   },
   "opinion_text_fetches_this_run": 600,
   "opinion_text_fetch_cap": 600,
-  "latest_decision_date": "2026-10-30",
+  "latest_decision_date": "2026-11-02",
   "next_argument_date": null
  },
  "stats": {
-  "total": 8880,
+  "total": 8882,
   "pending": 857,
   "scheduled": 0,
   "awaiting": 44,
-  "decided": 7979,
+  "decided": 7981,
   "precedential": 1446,
   "rule36": 0
  },
  "upcoming_argument_docket_numbers": [],
  "cases": [
+  {
+   "docket_number": "CL-11052177",
+   "case_name": "Sanchez v. United States",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-11-02",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/11052177/sanchez-v-united-states/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-2244.ORDER.11-2-2026_2780509.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/11052177/sanchez-v-united-states/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "CL-11052178",
+   "case_name": "Buzzballz, LLC v. Mpl Brands Nv, Inc.",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-11-02",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/11052178/buzzballz-llc-v-mpl-brands-nv-inc/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1777.ORDER.11-2-2026_2780504.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/11052178/buzzballz-llc-v-mpl-brands-nv-inc/",
+   "url_audio": null
+  },
   {
    "docket_number": "CL-11050560",
    "case_name": "Besang Inc. v. Micron Technology Inc.",
@@ -72168,7 +72210,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/69933076/pt-zinus-global-indonesia-v-united-states/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/107340/pt-zinus-global-indonesia-v-united-states/"
   },
   {
    "docket_number": "2023-2274",
@@ -83813,7 +83855,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/69617891/orckit-corp-v-cisco-systems-inc/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/107327/orckit-corp-v-cisco-systems-inc/"
   },
   {
    "docket_number": "CL-10303228",
