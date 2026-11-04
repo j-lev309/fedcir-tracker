@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-04T20:25:55+00:00",
+ "generated_at": "2026-11-04T21:22:26+00:00",
  "window_since": "2020-01-01",
  "coverage": {
   "complete": true,
@@ -24,7 +24,7 @@
    "opinions": {
     "complete": true,
     "reason": "ok",
-    "count": 3,
+    "count": 0,
     "resume_url": null
    },
    "audio": {
