@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-04T21:22:26+00:00",
+ "generated_at": "2026-11-04T22:36:09+00:00",
  "window_since": "2020-01-01",
  "coverage": {
   "complete": true,
@@ -18,13 +18,13 @@
    "clusters": {
     "complete": true,
     "reason": "ok",
-    "count": 8,
+    "count": 10,
     "resume_url": null
    },
    "opinions": {
     "complete": true,
     "reason": "ok",
-    "count": 0,
+    "count": 2,
     "resume_url": null
    },
    "audio": {
@@ -47,7 +47,7 @@
   "summaries": {
    "enabled": true,
    "have": 1584,
-   "expected": 7987,
+   "expected": 7989,
    "complete": false
   },
   "opinion_text_fetches_this_run": 600,
@@ -56,11 +56,11 @@
   "next_argument_date": null
  },
  "stats": {
-  "total": 8887,
+  "total": 8889,
   "pending": 856,
   "scheduled": 0,
   "awaiting": 44,
-  "decided": 7987,
+  "decided": 7989,
   "precedential": 1446,
   "rule36": 0
  },
@@ -131,6 +131,50 @@
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/11053976/chromadex-inc-v-elysium-health-inc/",
    "url_audio": "https://www.courtlistener.com/audio/105710/chromadex-inc-v-elysium-health-inc/"
+  },
+  {
+   "docket_number": "CL-11054359",
+   "case_name": "Vallesteros v. Defense",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-11-04",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/11054359/vallesteros-v-defense/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/27-1013.ORDER.11-4-2026_2782093.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/11054359/vallesteros-v-defense/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "CL-11054360",
+   "case_name": "Vallesteros v. Defense",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-11-04",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/11054360/vallesteros-v-defense/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/27-1012.ORDER.11-4-2026_2782085.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/11054360/vallesteros-v-defense/",
+   "url_audio": null
   },
   {
    "docket_number": "CL-11052385",
