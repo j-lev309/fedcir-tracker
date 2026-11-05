@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-05T01:38:48+00:00",
+ "generated_at": "2026-11-05T20:38:01+00:00",
  "window_since": "2020-01-01",
  "coverage": {
   "complete": true,
@@ -18,19 +18,19 @@
    "clusters": {
     "complete": true,
     "reason": "ok",
-    "count": 10,
+    "count": 16,
     "resume_url": null
    },
    "opinions": {
     "complete": true,
     "reason": "ok",
-    "count": 0,
+    "count": 6,
     "resume_url": null
    },
    "audio": {
     "complete": true,
     "reason": "ok",
-    "count": 22,
+    "count": 30,
     "resume_url": null
    },
    "scheduled_arguments": {
@@ -47,25 +47,159 @@
   "summaries": {
    "enabled": true,
    "have": 1584,
-   "expected": 7989,
+   "expected": 7994,
    "complete": false
   },
   "opinion_text_fetches_this_run": 600,
   "opinion_text_fetch_cap": 600,
-  "latest_decision_date": "2026-11-04",
+  "latest_decision_date": "2026-11-05",
   "next_argument_date": null
  },
  "stats": {
-  "total": 8889,
-  "pending": 856,
+  "total": 8894,
+  "pending": 855,
   "scheduled": 0,
   "awaiting": 44,
-  "decided": 7989,
-  "precedential": 1446,
-  "rule36": 0
+  "decided": 7995,
+  "precedential": 1447,
+  "rule36": 1
  },
  "upcoming_argument_docket_numbers": [],
  "cases": [
+  {
+   "docket_number": "CL-11055025",
+   "case_name": "Simpson v. DVA",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-11-05",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/11055025/simpson-v-dva/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1800.OPINION.11-5-2026_2782347.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/11055025/simpson-v-dva/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "2025-1796",
+   "case_name": "Buergofol Gmbh v. Omega Liner Company, Inc.",
+   "case_type": "Patent (PTAB)",
+   "origin": "United States Patent and Trademark Office",
+   "status": "Decided",
+   "date_filed": "2025-05-20",
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-11-05",
+    "precedential_status": "Unpublished",
+    "disposition": "Rule 36 Judgment",
+    "url_cl": "https://www.courtlistener.com/opinion/11055030/buergofol-gmbh-v-omega-liner-company-inc/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1796.RULE_36_JUDGMENT.11-5-2026_2782360.pdf"
+   },
+   "panel": [],
+   "patent_issues": [
+    "Other / Procedural"
+   ],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/73035267/buergofol-gmbh-v-omega-liner-company-inc/",
+   "url_audio": "https://www.courtlistener.com/audio/107364/buergofol-gmbh-v-omega-liner-company-inc/"
+  },
+  {
+   "docket_number": "CL-11055027",
+   "case_name": "May v. DOJ",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-11-05",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/11055027/may-v-doj/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1742.OPINION.11-5-2026_2782393.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/11055027/may-v-doj/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "CL-11055029",
+   "case_name": "Digital Broadcasting Solutions, LLC v. Dish Network L.L.C.",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-11-05",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/11055029/digital-broadcasting-solutions-llc-v-dish-network-llc/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1364.RULE_36_JUDGMENT.11-5-2026_2782418.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/11055029/digital-broadcasting-solutions-llc-v-dish-network-llc/",
+   "url_audio": "https://www.courtlistener.com/audio/107398/digital-broadcasting-solutions-llc-v-dish-network-llc/"
+  },
+  {
+   "docket_number": "CL-11055028",
+   "case_name": "Google LLC v. Ddc Technology, LLC",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-11-05",
+    "precedential_status": "Published",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/11055028/google-llc-v-ddc-technology-llc/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1315.OPINION.11-5-2026_2782410.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/11055028/google-llc-v-ddc-technology-llc/",
+   "url_audio": "https://www.courtlistener.com/audio/105211/google-llc-v-ddc-technology-llc/"
+  },
+  {
+   "docket_number": "CL-11055031",
+   "case_name": "Brandenburg v. United States",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-11-05",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/11055031/brandenburg-v-united-states/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1222.OPINION.11-5-2026_2782367.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/11055031/brandenburg-v-united-states/",
+   "url_audio": null
+  },
   {
    "docket_number": "CL-11054244",
    "case_name": "Cooper v. Treasury",
@@ -2162,7 +2296,7 @@
    "decision": {
     "date": "2026-10-05",
     "precedential_status": "Unpublished",
-    "disposition": "Opinion",
+    "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/11010501/alexsam-inc-v-simon-property-group-lp/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1138.OPINION.10-5-2026_2766082.pdf"
    },
@@ -2276,7 +2410,7 @@
    "decision": {
     "date": "2026-10-01",
     "precedential_status": "Unpublished",
-    "disposition": "Opinion",
+    "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/11007605/truinject-corp-v-galderma-sa/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1268.OPINION.10-1-2026_2764692.pdf"
    },
@@ -21355,7 +21489,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/73112791/arbutus-biopharma-corporation-v-moderna-inc/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/107472/arbutus-biopharma-corporation-v-moderna-inc/"
   },
   {
    "docket_number": "2026-1586",
@@ -66581,7 +66715,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/71027788/terracino-v-trimaco-inc/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/107466/terracino-v-trimaco-inc/"
   },
   {
    "docket_number": "CL-10590681",
@@ -67405,22 +67539,6 @@
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10587280/shafique-v-united-states/",
    "url_audio": null
-  },
-  {
-   "docket_number": "2025-1796",
-   "case_name": "Buergofol GmbH v. Omega Liner Company, Inc.",
-   "case_type": "Patent (PTAB)",
-   "origin": "United States Patent and Trademark Office",
-   "status": "Pending / Briefing",
-   "date_filed": "2025-05-20",
-   "date_argued": null,
-   "argument": null,
-   "decision": null,
-   "panel": [],
-   "patent_issues": [],
-   "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/73035267/buergofol-gmbh-v-omega-liner-company-inc/",
-   "url_audio": "https://www.courtlistener.com/audio/107364/buergofol-gmbh-v-omega-liner-company-inc/"
   },
   {
    "docket_number": "2025-1791",
@@ -84615,7 +84733,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/73672440/powell-v-collins/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/107468/powell-v-collins/"
   },
   {
    "docket_number": "2025-1296",
