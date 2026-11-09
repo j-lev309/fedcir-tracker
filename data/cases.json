@@ -1,36 +1,38 @@
 {
- "generated_at": "2026-11-09T00:56:24+00:00",
+ "generated_at": "2026-11-09T23:09:55+00:00",
  "window_since": "2020-01-01",
  "coverage": {
-  "complete": true,
-  "run_complete": true,
-  "backfilling": [],
+  "complete": false,
+  "run_complete": false,
+  "backfilling": [
+   "dockets"
+  ],
   "window_since": "2020-01-01",
   "window_months": 18,
   "complete_since": "2020-01-01",
   "sources": {
    "dockets": {
-    "complete": true,
-    "reason": "ok",
-    "count": 1,
-    "resume_url": null
+    "resume_url": "https://www.courtlistener.com/api/rest/v4/dockets/",
+    "complete": false,
+    "reason": "network timeouts",
+    "count": 0
    },
    "clusters": {
     "complete": true,
     "reason": "ok",
-    "count": 16,
+    "count": 26,
     "resume_url": null
    },
    "opinions": {
     "complete": true,
     "reason": "ok",
-    "count": 0,
+    "count": 10,
     "resume_url": null
    },
    "audio": {
     "complete": true,
     "reason": "ok",
-    "count": 28,
+    "count": 38,
     "resume_url": null
    },
    "scheduled_arguments": {
@@ -47,25 +49,249 @@
   "summaries": {
    "enabled": true,
    "have": 1584,
-   "expected": 7996,
+   "expected": 8006,
    "complete": false
   },
   "opinion_text_fetches_this_run": 600,
   "opinion_text_fetch_cap": 600,
-  "latest_decision_date": "2026-11-06",
+  "latest_decision_date": "2026-11-09",
   "next_argument_date": null
  },
  "stats": {
-  "total": 8896,
+  "total": 8906,
   "pending": 855,
   "scheduled": 0,
   "awaiting": 44,
-  "decided": 7997,
-  "precedential": 1447,
+  "decided": 8007,
+  "precedential": 1448,
   "rule36": 1
  },
  "upcoming_argument_docket_numbers": [],
  "cases": [
+  {
+   "docket_number": "CL-11057741",
+   "case_name": "Bruzzese v. MSPB",
+   "case_type": "Federal Employment",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-11-09",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/11057741/bruzzese-v-mspb/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1704.OPINION.11-9-2026_2783589.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/11057741/bruzzese-v-mspb/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "CL-11057765",
+   "case_name": "In Re JIAXING SUPER LIGHTING ELECTRIC APPLIANCE CO. LTD.",
+   "case_type": "Patent (PTAB)",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-11-09",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/11057765/in-re-jiaxing-super-lighting-electric-appliance-co-ltd/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1465.RULE_36_JUDGMENT.11-9-2026_2783650.pdf"
+   },
+   "panel": [],
+   "patent_issues": [
+    "Other / Procedural"
+   ],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/11057765/in-re-jiaxing-super-lighting-electric-appliance-co-ltd/",
+   "url_audio": "https://www.courtlistener.com/audio/107361/in-re-jiaxing-super-lighting-electric-appliance-co-ltd/"
+  },
+  {
+   "docket_number": "CL-11057739",
+   "case_name": "Rezba v. Collins",
+   "case_type": "Veterans",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-11-09",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/11057739/rezba-v-collins/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1481.OPINION.11-9-2026_2783597.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/11057739/rezba-v-collins/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "CL-11057740",
+   "case_name": "In Re SHIPPEN",
+   "case_type": "Patent (PTAB)",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-11-09",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/11057740/in-re-shippen/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-2278.ORDER.11-9-2026_2783566.pdf"
+   },
+   "panel": [],
+   "patent_issues": [
+    "Other / Procedural"
+   ],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/11057740/in-re-shippen/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "CL-11057764",
+   "case_name": "Monette v. Collins",
+   "case_type": "Veterans",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-11-09",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/11057764/monette-v-collins/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1451.RULE_36_JUDGMENT.11-9-2026_2783643.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/11057764/monette-v-collins/",
+   "url_audio": "https://www.courtlistener.com/audio/107360/monette-v-collins/"
+  },
+  {
+   "docket_number": "CL-11057762",
+   "case_name": "Weber v. MSPB",
+   "case_type": "Federal Employment",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-11-09",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/11057762/weber-v-mspb/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1564.OPINION.11-9-2026_2783633.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/11057762/weber-v-mspb/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "CL-11057763",
+   "case_name": "Sonos, Inc. v. Google LLC",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-11-09",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/11057763/sonos-inc-v-google-llc/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1338.RULE_36_JUDGMENT.11-9-2026_2783606.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/11057763/sonos-inc-v-google-llc/",
+   "url_audio": "https://www.courtlistener.com/audio/107467/sonos-inc-v-google-llc/"
+  },
+  {
+   "docket_number": "CL-11057767",
+   "case_name": "Banks v. United States",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-11-09",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/11057767/banks-v-united-states/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1774.OPINION.11-9-2026_2783615.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/11057767/banks-v-united-states/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "CL-11057766",
+   "case_name": "Evans v. Collins",
+   "case_type": "Veterans",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-11-09",
+    "precedential_status": "Published",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/11057766/evans-v-collins/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1403.OPINION.11-9-2026_2783657.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/11057766/evans-v-collins/",
+   "url_audio": "https://www.courtlistener.com/audio/106256/evans-v-collins/"
+  },
+  {
+   "docket_number": "CL-11057880",
+   "case_name": "Weber State Federal Credit Union v. Ascend Federal Credit Union",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-11-09",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/11057880/weber-state-federal-credit-union-v-ascend-federal-credit-union/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1635.ORDER.11-9-2026_2783927.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/11057880/weber-state-federal-credit-union-v-ascend-federal-credit-union/",
+   "url_audio": null
+  },
   {
    "docket_number": "CL-11056602",
    "case_name": "Cullerton v. United States",
@@ -2316,7 +2542,7 @@
    "decision": {
     "date": "2026-10-06",
     "precedential_status": "Unpublished",
-    "disposition": "Order",
+    "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/11012804/inari-agriculture-inc-v-corteva-agriscience-llc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1323.ORDER.10-6-2026_2767008.pdf"
    },
@@ -61646,7 +61872,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/73503065/kaotica-ip-corp-v-iconic-mars-corporation/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/107511/kaotica-ip-corp-v-iconic-mars-corporation/"
   },
   {
    "docket_number": "CL-10616084",
@@ -62039,7 +62265,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/70629659/acadia-pharmaceuticals-inc-v-aurobindo-pharma-ltd/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/107514/acadia-pharmaceuticals-inc-v-aurobindo-pharma-ltd/"
   },
   {
    "docket_number": "CL-10614218",
@@ -77135,7 +77361,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/70251611/vl-collective-ip-llc-v-netflix-inc/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/107508/vl-collective-ip-llc-v-netflix-inc/"
   },
   {
    "docket_number": "2023-2317",
@@ -79129,7 +79355,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/71784513/in-re-blaze-mobile-inc/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/107530/in-re-blaze-mobile-inc/"
   },
   {
    "docket_number": "CL-10338068",
@@ -85681,7 +85907,7 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/69553877/medytox-inc-v-itc/",
-   "url_audio": null
+   "url_audio": "https://www.courtlistener.com/audio/107510/medytox-inc-v-itc/"
   },
   {
    "docket_number": "CL-10289338",
