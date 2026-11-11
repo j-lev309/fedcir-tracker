@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-10T22:19:56+00:00",
+ "generated_at": "2026-11-11T00:05:10+00:00",
  "window_since": "2020-01-01",
  "coverage": {
   "complete": true,
@@ -12,19 +12,19 @@
    "dockets": {
     "complete": true,
     "reason": "ok",
-    "count": 0,
+    "count": 1,
     "resume_url": null
    },
    "clusters": {
     "complete": true,
     "reason": "ok",
-    "count": 20,
+    "count": 21,
     "resume_url": null
    },
    "opinions": {
     "complete": true,
     "reason": "ok",
-    "count": 0,
+    "count": 1,
     "resume_url": null
    },
    "audio": {
@@ -47,7 +47,7 @@
   "summaries": {
    "enabled": true,
    "have": 1584,
-   "expected": 8015,
+   "expected": 8016,
    "complete": false
   },
   "opinion_text_fetches_this_run": 600,
@@ -59,8 +59,8 @@
   "total": 8915,
   "pending": 854,
   "scheduled": 0,
-  "awaiting": 44,
-  "decided": 8017,
+  "awaiting": 43,
+  "decided": 8018,
   "precedential": 1448,
   "rule36": 2
  },
@@ -287,6 +287,30 @@
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/11058796/ciers-v-mspb/",
    "url_audio": null
+  },
+  {
+   "docket_number": "2025-1936",
+   "case_name": "Netlist, Inc. v. Micron Technology Texas, LLC",
+   "case_type": "Patent (District Ct.)",
+   "origin": "United States District Court for the Eastern District of Texas",
+   "status": "Decided",
+   "date_filed": "2025-07-15",
+   "date_argued": "2026-09-09",
+   "argument": null,
+   "decision": {
+    "date": "2026-11-10",
+    "precedential_status": "Unpublished",
+    "disposition": "Order",
+    "url_cl": "https://www.courtlistener.com/opinion/11059146/netlist-inc-v-micron-technology-texas-llc/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1936.ORDER.11-10-2026_2784939.pdf"
+   },
+   "panel": [],
+   "patent_issues": [
+    "Other / Procedural"
+   ],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/71590498/netlist-inc-v-micron-technology-texas-llc/",
+   "url_audio": "https://www.courtlistener.com/audio/106195/netlist-inc-v-micron-technology-texas-llc/"
   },
   {
    "docket_number": "CL-11057741",
@@ -58943,22 +58967,6 @@
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/71841345/wsou-investments-llc-v-google-llc/",
    "url_audio": null
-  },
-  {
-   "docket_number": "2025-1936",
-   "case_name": "Netlist, Inc. v. Micron Technology Texas, LLC",
-   "case_type": "Patent (District Ct.)",
-   "origin": "United States District Court for the Eastern District of Texas",
-   "status": "Argued \u2014 Awaiting Decision",
-   "date_filed": "2025-07-15",
-   "date_argued": "2026-09-09",
-   "argument": null,
-   "decision": null,
-   "panel": [],
-   "patent_issues": [],
-   "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/71590498/netlist-inc-v-micron-technology-texas-llc/",
-   "url_audio": "https://www.courtlistener.com/audio/106195/netlist-inc-v-micron-technology-texas-llc/"
   },
   {
    "docket_number": "CL-10632470",
