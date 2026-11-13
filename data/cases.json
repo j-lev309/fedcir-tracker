@@ -1,30 +1,32 @@
 {
- "generated_at": "2026-11-13T01:51:57+00:00",
+ "generated_at": "2026-11-13T20:38:11+00:00",
  "window_since": "2020-01-01",
  "coverage": {
-  "complete": true,
-  "run_complete": true,
-  "backfilling": [],
+  "complete": false,
+  "run_complete": false,
+  "backfilling": [
+   "dockets"
+  ],
   "window_since": "2020-01-01",
   "window_months": 18,
   "complete_since": "2020-01-01",
   "sources": {
    "dockets": {
-    "complete": true,
-    "reason": "ok",
-    "count": 1,
-    "resume_url": null
+    "resume_url": "https://www.courtlistener.com/api/rest/v4/dockets/",
+    "complete": false,
+    "reason": "network timeouts",
+    "count": 0
    },
    "clusters": {
     "complete": true,
     "reason": "ok",
-    "count": 27,
+    "count": 35,
     "resume_url": null
    },
    "opinions": {
     "complete": true,
     "reason": "ok",
-    "count": 0,
+    "count": 8,
     "resume_url": null
    },
    "audio": {
@@ -47,25 +49,227 @@
   "summaries": {
    "enabled": true,
    "have": 1584,
-   "expected": 8020,
+   "expected": 8029,
    "complete": false
   },
   "opinion_text_fetches_this_run": 600,
   "opinion_text_fetch_cap": 600,
-  "latest_decision_date": "2026-11-12",
+  "latest_decision_date": "2026-11-13",
   "next_argument_date": null
  },
  "stats": {
-  "total": 8918,
-  "pending": 851,
+  "total": 8922,
+  "pending": 848,
   "scheduled": 0,
-  "awaiting": 43,
-  "decided": 8024,
-  "precedential": 1448,
+  "awaiting": 41,
+  "decided": 8033,
+  "precedential": 1453,
   "rule36": 4
  },
  "upcoming_argument_docket_numbers": [],
  "cases": [
+  {
+   "docket_number": "2025-1559",
+   "case_name": "Kaptan Demir Celik Endustrisi Ve Ticaret A.S. v. United States",
+   "case_type": "Trade (CIT)",
+   "origin": "United States Court of International Trade",
+   "status": "Decided",
+   "date_filed": "2025-03-19",
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-11-13",
+    "precedential_status": "Published",
+    "disposition": "Opinion",
+    "url_cl": "https://www.courtlistener.com/opinion/11060595/kaptan-demir-celik-endustrisi-ve-ticaret-as-v-united-states/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1559.OPINION.11-13-2026_2786072.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/69756541/kaptan-demir-celik-endustrisi-ve-ticaret-as-v-united-states/",
+   "url_audio": "https://www.courtlistener.com/audio/106253/kaptan-demir-celik-endustrisi-ve-ticaret-as-v-united-states/"
+  },
+  {
+   "docket_number": "2024-2304",
+   "case_name": "In Re NETLIST, INC.",
+   "case_type": "Patent (PTAB)",
+   "origin": "United States Patent and Trademark Office",
+   "status": "Decided",
+   "date_filed": "2024-09-11",
+   "date_argued": "2026-09-09",
+   "argument": null,
+   "decision": {
+    "date": "2026-11-13",
+    "precedential_status": "Unpublished",
+    "disposition": "Opinion",
+    "url_cl": "https://www.courtlistener.com/opinion/11060597/in-re-netlist-inc/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-2304.OPINION.11-13-2026_2786038.pdf"
+   },
+   "panel": [],
+   "patent_issues": [
+    "Other / Procedural"
+   ],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/69849095/netlist-inc-v-samsung-electronics-co-ltd/",
+   "url_audio": "https://www.courtlistener.com/audio/106194/netlist-inc-v-micron-technology-inc/"
+  },
+  {
+   "docket_number": "2025-1286",
+   "case_name": "In Re NETLIST, INC.",
+   "case_type": "Patent (PTAB)",
+   "origin": "United States Patent and Trademark Office",
+   "status": "Decided",
+   "date_filed": "2024-12-16",
+   "date_argued": "2026-09-09",
+   "argument": null,
+   "decision": {
+    "date": "2026-11-13",
+    "precedential_status": "Published",
+    "disposition": "Opinion",
+    "url_cl": "https://www.courtlistener.com/opinion/11060596/in-re-netlist-inc/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1286.OPINION.11-13-2026_2786049.pdf"
+   },
+   "panel": [],
+   "patent_issues": [
+    "Other / Procedural"
+   ],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/69849096/netlist-inc-v-samsung-electronics-co-ltd/",
+   "url_audio": "https://www.courtlistener.com/audio/106193/netlist-inc-v-micron-technology-inc/"
+  },
+  {
+   "docket_number": "2025-2097",
+   "case_name": "Dodson v. Collins",
+   "case_type": "Veterans",
+   "origin": "United States Court of Appeals for Veterans Claims",
+   "status": "Decided",
+   "date_filed": "2025-09-11",
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-11-13",
+    "precedential_status": "Unpublished",
+    "disposition": "Opinion",
+    "url_cl": "https://www.courtlistener.com/opinion/11060600/dodson-v-collins/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-2097.OPINION.11-13-2026_2786084.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/73481658/dodson-v-collins/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "CL-11060599",
+   "case_name": "Faerber v. United States",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-11-13",
+    "precedential_status": "Published",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/11060599/faerber-v-united-states/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1372.OPINION.11-13-2026_2786062.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/11060599/faerber-v-united-states/",
+   "url_audio": "https://www.courtlistener.com/audio/106761/faerber-v-united-states/"
+  },
+  {
+   "docket_number": "CL-11060593",
+   "case_name": "Walker v. MSPB",
+   "case_type": "Federal Employment",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-11-13",
+    "precedential_status": "Published",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/11060593/walker-v-mspb/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1456.OPINION.11-13-2026_2786115.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/11060593/walker-v-mspb/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "CL-11060594",
+   "case_name": "Valdez v. Opm",
+   "case_type": "Federal Employment",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-11-13",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/11060594/valdez-v-opm/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1580.OPINION.11-13-2026_2786125.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/11060594/valdez-v-opm/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "CL-11060598",
+   "case_name": "Green v. MSPB",
+   "case_type": "Federal Employment",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-11-13",
+    "precedential_status": "Published",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/11060598/green-v-mspb/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1012.OPINION.11-13-2026_2786103.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/11060598/green-v-mspb/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "2026-1493",
+   "case_name": "Apple Inc. v. Smith Interface Technologies, LLC",
+   "case_type": "Patent (PTAB)",
+   "origin": "United States Patent and Trademark Office",
+   "status": "Decided",
+   "date_filed": "2026-03-05",
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-11-13",
+    "precedential_status": null,
+    "disposition": "Order",
+    "url_cl": null,
+    "url_pdf": "https://www.cafc.uscourts.gov/11-13-2026-26-1493-apple-inc-v-smith-interface-technologies-llc-order-26-1493-order-11-13-2026_2786335/"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/73272461/apple-inc-v-smith-interface-technologies-llc/",
+   "url_audio": null
+  },
   {
    "docket_number": "CL-11060324",
    "case_name": "Ferring Pharmaceuticals Inc. v. Finch Therapeutics Group, Inc.",
@@ -2050,7 +2254,7 @@
    "decision": {
     "date": "2026-10-21",
     "precedential_status": "Unpublished",
-    "disposition": "Opinion",
+    "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/11041873/cheyenne-river-sioux-tribe-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1086.OPINION.10-21-2026_2774165.pdf"
    },
@@ -2138,7 +2342,7 @@
    "decision": {
     "date": "2026-10-20",
     "precedential_status": "Unpublished",
-    "disposition": "Opinion",
+    "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/11039826/233rd-street-partnership-lp-v-united-states/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1849.OPINION.10-20-2026_2773402.pdf"
    },
@@ -2204,7 +2408,7 @@
    "decision": {
     "date": "2026-10-19",
     "precedential_status": "Published",
-    "disposition": "Opinion",
+    "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/11038135/google-llc-v-valtrus-innovations-ltd/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-1945.OPINION.10-19-2026_2772810.pdf"
    },
@@ -2272,7 +2476,7 @@
    "decision": {
     "date": "2026-10-16",
     "precedential_status": "Unpublished",
-    "disposition": "Order",
+    "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/11036986/micron-technology-inc-v-netlist-inc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/24-2281.ORDER.10-16-2026_2772309.pdf"
    },
@@ -24341,22 +24545,6 @@
    "summary": "The Federal Circuit vacated and remanded the Veterans Court's decision, concluding that the Veterans Court may have committed legal error by holding that a Board's failure to support findings about specific jobs' characteristics was harmless under the TDIU standard of 38 C.F.R. \u00a7 4.16(b), because the court relied too heavily on Smith v. Shinseki's holding that job-market analysis is not required while potentially overlooking the requirement that core factual findings must be grounded in concrete evidence under the Zurko standard. The court did not address whether the Board was required to consider whether jobs identified could provide substantially gainful (non-marginal) employment, as that issue was not meaningfully raised before the Veterans Court.",
    "url_cl": "https://www.courtlistener.com/opinion/10804133/janich-v-collins/",
    "url_audio": "https://www.courtlistener.com/audio/102580/janich-v-collins/"
-  },
-  {
-   "docket_number": "2026-1493",
-   "case_name": "Apple Inc. v. Smith Interface Technologies, LLC",
-   "case_type": "Patent (PTAB)",
-   "origin": "United States Patent and Trademark Office",
-   "status": "Pending / Briefing",
-   "date_filed": "2026-03-05",
-   "date_argued": null,
-   "argument": null,
-   "decision": null,
-   "panel": [],
-   "patent_issues": [],
-   "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/73272461/apple-inc-v-smith-interface-technologies-llc/",
-   "url_audio": null
   },
   {
    "docket_number": "2026-1459",
@@ -50821,22 +51009,6 @@
    "url_audio": null
   },
   {
-   "docket_number": "2025-2097",
-   "case_name": "Dodson v. Collins",
-   "case_type": "Veterans",
-   "origin": "United States Court of Appeals for Veterans Claims",
-   "status": "Pending / Briefing",
-   "date_filed": "2025-09-11",
-   "date_argued": null,
-   "argument": null,
-   "decision": null,
-   "panel": [],
-   "patent_issues": [],
-   "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/73481658/dodson-v-collins/",
-   "url_audio": null
-  },
-  {
    "docket_number": "2025-2098",
    "case_name": "Omnitracs, LLC v. Motive Technologies, Inc.",
    "case_type": "Patent (District Ct.)",
@@ -77014,22 +77186,6 @@
    "url_audio": null
   },
   {
-   "docket_number": "2025-1559",
-   "case_name": "Kaptan Demir Celik Endustrisi ve Ticaret A.S. v. United States",
-   "case_type": "Trade (CIT)",
-   "origin": "United States Court of International Trade",
-   "status": "Pending / Briefing",
-   "date_filed": "2025-03-19",
-   "date_argued": null,
-   "argument": null,
-   "decision": null,
-   "panel": [],
-   "patent_issues": [],
-   "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/69756541/kaptan-demir-celik-endustrisi-ve-ticaret-as-v-united-states/",
-   "url_audio": "https://www.courtlistener.com/audio/106253/kaptan-demir-celik-endustrisi-ve-ticaret-as-v-united-states/"
-  },
-  {
    "docket_number": "CL-10357532",
    "case_name": "United States v. Holmes",
    "case_type": "Other / Unclassified",
@@ -85470,22 +85626,6 @@
    "url_audio": null
   },
   {
-   "docket_number": "2025-1286",
-   "case_name": "Netlist, Inc. v. Samsung Electronics Co., Ltd.",
-   "case_type": "Patent (PTAB)",
-   "origin": "United States Patent and Trademark Office",
-   "status": "Argued \u2014 Awaiting Decision",
-   "date_filed": "2024-12-16",
-   "date_argued": "2026-09-09",
-   "argument": null,
-   "decision": null,
-   "panel": [],
-   "patent_issues": [],
-   "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/69849096/netlist-inc-v-samsung-electronics-co-ltd/",
-   "url_audio": "https://www.courtlistener.com/audio/106193/netlist-inc-v-micron-technology-inc/"
-  },
-  {
    "docket_number": "2023-1570",
    "case_name": "Meyer Corporation, U.S. v. United States",
    "case_type": "Trade (CIT)",
@@ -92714,22 +92854,6 @@
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/10126949/estech-systems-inc-v-vidal/",
    "url_audio": "https://www.courtlistener.com/audio/93855/estech-systems-inc-v-vidal/"
-  },
-  {
-   "docket_number": "2024-2304",
-   "case_name": "Netlist, Inc. v. Samsung Electronics Co., Ltd.",
-   "case_type": "Patent (PTAB)",
-   "origin": "United States Patent and Trademark Office",
-   "status": "Argued \u2014 Awaiting Decision",
-   "date_filed": "2024-09-11",
-   "date_argued": "2026-09-09",
-   "argument": null,
-   "decision": null,
-   "panel": [],
-   "patent_issues": [],
-   "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/69849095/netlist-inc-v-samsung-electronics-co-ltd/",
-   "url_audio": "https://www.courtlistener.com/audio/106194/netlist-inc-v-micron-technology-inc/"
   },
   {
    "docket_number": "2024-1015",
