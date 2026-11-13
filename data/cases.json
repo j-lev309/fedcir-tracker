@@ -1,32 +1,30 @@
 {
- "generated_at": "2026-11-13T20:38:11+00:00",
+ "generated_at": "2026-11-13T21:28:36+00:00",
  "window_since": "2020-01-01",
  "coverage": {
-  "complete": false,
-  "run_complete": false,
-  "backfilling": [
-   "dockets"
-  ],
+  "complete": true,
+  "run_complete": true,
+  "backfilling": [],
   "window_since": "2020-01-01",
   "window_months": 18,
   "complete_since": "2020-01-01",
   "sources": {
    "dockets": {
-    "resume_url": "https://www.courtlistener.com/api/rest/v4/dockets/",
-    "complete": false,
-    "reason": "network timeouts",
-    "count": 0
+    "complete": true,
+    "reason": "ok",
+    "count": 0,
+    "resume_url": null
    },
    "clusters": {
     "complete": true,
     "reason": "ok",
-    "count": 35,
+    "count": 25,
     "resume_url": null
    },
    "opinions": {
     "complete": true,
     "reason": "ok",
-    "count": 8,
+    "count": 0,
     "resume_url": null
    },
    "audio": {
@@ -2124,7 +2122,7 @@
    "decision": {
     "date": "2026-10-22",
     "precedential_status": "Unpublished",
-    "disposition": "Order",
+    "disposition": null,
     "url_cl": "https://www.courtlistener.com/opinion/11043012/shoals-technologies-group-llc-v-itc/",
     "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1439.ORDER.10-22-2026_2775002.pdf"
    },
