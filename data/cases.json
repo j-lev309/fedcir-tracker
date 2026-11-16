@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-16T01:02:17+00:00",
+ "generated_at": "2026-11-16T23:02:40+00:00",
  "window_since": "2020-01-01",
  "coverage": {
   "complete": true,
@@ -12,19 +12,19 @@
    "dockets": {
     "complete": true,
     "reason": "ok",
-    "count": 0,
+    "count": 1,
     "resume_url": null
    },
    "clusters": {
     "complete": true,
     "reason": "ok",
-    "count": 25,
+    "count": 26,
     "resume_url": null
    },
    "opinions": {
     "complete": true,
     "reason": "ok",
-    "count": 0,
+    "count": 1,
     "resume_url": null
    },
    "audio": {
@@ -47,25 +47,47 @@
   "summaries": {
    "enabled": true,
    "have": 1584,
-   "expected": 8029,
+   "expected": 8030,
    "complete": false
   },
   "opinion_text_fetches_this_run": 600,
   "opinion_text_fetch_cap": 600,
-  "latest_decision_date": "2026-11-13",
+  "latest_decision_date": "2026-11-16",
   "next_argument_date": null
  },
  "stats": {
   "total": 8922,
   "pending": 848,
   "scheduled": 0,
-  "awaiting": 41,
-  "decided": 8033,
-  "precedential": 1453,
+  "awaiting": 40,
+  "decided": 8034,
+  "precedential": 1454,
   "rule36": 4
  },
  "upcoming_argument_docket_numbers": [],
  "cases": [
+  {
+   "docket_number": "2025-1496",
+   "case_name": "Traxcell Technologies, LLC v. Cellco Partnership",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": "2025-03-04",
+   "date_argued": "2026-09-08",
+   "argument": null,
+   "decision": {
+    "date": "2026-11-16",
+    "precedential_status": "Published",
+    "disposition": "Opinion",
+    "url_cl": "https://www.courtlistener.com/opinion/11062678/traxcell-technologies-llc-v-cellco-partnership/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1496.OPINION.11-16-2026_2786749.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/74687848/traxcell-technologies-llc-v-cellco-partnership/",
+   "url_audio": "https://www.courtlistener.com/audio/106174/traxcell-technologies-llc-v-cellco-partnership/"
+  },
   {
    "docket_number": "2025-1559",
    "case_name": "Kaptan Demir Celik Endustrisi Ve Ticaret A.S. v. United States",
@@ -79142,22 +79164,6 @@
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/69182774/gesture-technology-partners-llc-v-unified-patents-llc/",
    "url_audio": "https://www.courtlistener.com/audio/95573/gesture-technology-partners-llc-v-unified-patents-llc/"
-  },
-  {
-   "docket_number": "2025-1496",
-   "case_name": "Traxcell Technologies, LLC v. Cellco Partnership",
-   "case_type": "Other / Unclassified",
-   "origin": null,
-   "status": "Argued \u2014 Awaiting Decision",
-   "date_filed": "2025-03-04",
-   "date_argued": "2026-09-08",
-   "argument": null,
-   "decision": null,
-   "panel": [],
-   "patent_issues": [],
-   "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/74687848/traxcell-technologies-llc-v-cellco-partnership/",
-   "url_audio": "https://www.courtlistener.com/audio/106174/traxcell-technologies-llc-v-cellco-partnership/"
   },
   {
    "docket_number": "CL-10348592",
