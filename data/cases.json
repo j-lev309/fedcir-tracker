@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-19T21:27:04+00:00",
+ "generated_at": "2026-11-19T22:50:05+00:00",
  "window_since": "2020-01-01",
  "coverage": {
   "complete": true,
@@ -12,7 +12,7 @@
    "dockets": {
     "complete": true,
     "reason": "ok",
-    "count": 0,
+    "count": 2,
     "resume_url": null
    },
    "clusters": {
@@ -24,7 +24,7 @@
    "opinions": {
     "complete": true,
     "reason": "ok",
-    "count": 5,
+    "count": 0,
     "resume_url": null
    },
    "audio": {
@@ -56,8 +56,8 @@
   "next_argument_date": null
  },
  "stats": {
-  "total": 8932,
-  "pending": 846,
+  "total": 8933,
+  "pending": 847,
   "scheduled": 0,
   "awaiting": 39,
   "decided": 8047,
@@ -716,6 +716,22 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/opinion/11060325/breen-v-collins/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "2027-1127",
+   "case_name": "Roku, Inc. v. Ancora Technologies, Inc.",
+   "case_type": "Patent (PTAB)",
+   "origin": "United States Patent and Trademark Office",
+   "status": "Pending / Briefing",
+   "date_filed": "2026-11-12",
+   "date_argued": null,
+   "argument": null,
+   "decision": null,
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/75142866/roku-inc-v-ancora-technologies-inc/",
    "url_audio": null
   },
   {
