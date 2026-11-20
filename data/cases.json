@@ -1,30 +1,32 @@
 {
- "generated_at": "2026-11-20T02:21:12+00:00",
+ "generated_at": "2026-11-20T21:14:30+00:00",
  "window_since": "2020-01-01",
  "coverage": {
-  "complete": true,
-  "run_complete": true,
-  "backfilling": [],
+  "complete": false,
+  "run_complete": false,
+  "backfilling": [
+   "dockets"
+  ],
   "window_since": "2020-01-01",
   "window_months": 18,
   "complete_since": "2020-01-01",
   "sources": {
    "dockets": {
-    "complete": true,
-    "reason": "ok",
-    "count": 0,
-    "resume_url": null
+    "resume_url": "https://www.courtlistener.com/api/rest/v4/dockets/",
+    "complete": false,
+    "reason": "network timeouts",
+    "count": 0
    },
    "clusters": {
     "complete": true,
     "reason": "ok",
-    "count": 14,
+    "count": 18,
     "resume_url": null
    },
    "opinions": {
     "complete": true,
     "reason": "ok",
-    "count": 0,
+    "count": 4,
     "resume_url": null
    },
    "audio": {
@@ -47,25 +49,115 @@
   "summaries": {
    "enabled": true,
    "have": 1584,
-   "expected": 8043,
+   "expected": 8047,
    "complete": false
   },
   "opinion_text_fetches_this_run": 600,
   "opinion_text_fetch_cap": 600,
-  "latest_decision_date": "2026-11-19",
+  "latest_decision_date": "2026-11-20",
   "next_argument_date": null
  },
  "stats": {
-  "total": 8933,
-  "pending": 847,
+  "total": 8936,
+  "pending": 846,
   "scheduled": 0,
   "awaiting": 39,
-  "decided": 8047,
+  "decided": 8051,
   "precedential": 1455,
   "rule36": 4
  },
  "upcoming_argument_docket_numbers": [],
  "cases": [
+  {
+   "docket_number": "CL-11067697",
+   "case_name": "Fraud Free Transactions LLC v. Ping Identity Corp.",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-11-20",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/11067697/fraud-free-transactions-llc-v-ping-identity-corp/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1830.OPINION.11-20-2026_2789517.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/11067697/fraud-free-transactions-llc-v-ping-identity-corp/",
+   "url_audio": "https://www.courtlistener.com/audio/107363/fraud-free-transactions-llc-v-ping-identity-corp/"
+  },
+  {
+   "docket_number": "CL-11067698",
+   "case_name": "American Honda Motor Co., Inc. v. Neo Wireless LLC",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-11-20",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/11067698/american-honda-motor-co-inc-v-neo-wireless-llc/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1354.OPINION.11-20-2026_2789552.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/11067698/american-honda-motor-co-inc-v-neo-wireless-llc/",
+   "url_audio": "https://www.courtlistener.com/audio/107343/american-honda-motor-co-inc-v-neo-wireless-llc/"
+  },
+  {
+   "docket_number": "2026-1549",
+   "case_name": "Khaghani v. Navy",
+   "case_type": "Federal Employment",
+   "origin": "Merit Systems Protection Board",
+   "status": "Decided",
+   "date_filed": "2026-03-23",
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-11-20",
+    "precedential_status": "Unpublished",
+    "disposition": "Opinion",
+    "url_cl": "https://www.courtlistener.com/opinion/11067695/khaghani-v-navy/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/26-1549.OPINION.11-20-2026_2789501.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/docket/72529822/khaghani-v-mspb/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "CL-11067696",
+   "case_name": "In Re Ollnova Technologies Ltd.",
+   "case_type": "Patent (PTAB)",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-11-20",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/11067696/in-re-ollnova-technologies-ltd/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1512.OPINION.11-20-2026_2789528.pdf"
+   },
+   "panel": [],
+   "patent_issues": [
+    "Other / Procedural"
+   ],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/11067696/in-re-ollnova-technologies-ltd/",
+   "url_audio": "https://www.courtlistener.com/audio/104165/ollnova-technologies-ltd-v-ecobee-technologies-ulc/"
+  },
   {
    "docket_number": "2025-1960",
    "case_name": "Touchmusic Entertainment LLC v. Netflix, Inc.",
@@ -23080,22 +23172,6 @@
    "patent_issues": [],
    "summary": null,
    "url_cl": "https://www.courtlistener.com/docket/72530036/export-packers-company-ltd-v-united-states/",
-   "url_audio": null
-  },
-  {
-   "docket_number": "2026-1549",
-   "case_name": "Khaghani v. MSPB",
-   "case_type": "Federal Employment",
-   "origin": "Merit Systems Protection Board",
-   "status": "Pending / Briefing",
-   "date_filed": "2026-03-23",
-   "date_argued": null,
-   "argument": null,
-   "decision": null,
-   "panel": [],
-   "patent_issues": [],
-   "summary": null,
-   "url_cl": "https://www.courtlistener.com/docket/72529822/khaghani-v-mspb/",
    "url_audio": null
   },
   {
