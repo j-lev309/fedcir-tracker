@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-24T23:01:41+00:00",
+ "generated_at": "2026-11-24T23:58:50+00:00",
  "window_since": "2020-01-01",
  "coverage": {
   "complete": true,
@@ -18,13 +18,13 @@
    "clusters": {
     "complete": true,
     "reason": "ok",
-    "count": 10,
+    "count": 6,
     "resume_url": null
    },
    "opinions": {
     "complete": true,
     "reason": "ok",
-    "count": 3,
+    "count": 0,
     "resume_url": null
    },
    "audio": {
