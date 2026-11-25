@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-25T04:13:07+00:00",
+ "generated_at": "2026-11-25T22:30:03+00:00",
  "window_since": "2020-01-01",
  "coverage": {
   "complete": true,
@@ -12,19 +12,19 @@
    "dockets": {
     "complete": true,
     "reason": "ok",
-    "count": 0,
+    "count": 1,
     "resume_url": null
    },
    "clusters": {
     "complete": true,
     "reason": "ok",
-    "count": 6,
+    "count": 10,
     "resume_url": null
    },
    "opinions": {
     "complete": true,
     "reason": "ok",
-    "count": 0,
+    "count": 4,
     "resume_url": null
    },
    "audio": {
@@ -39,7 +39,7 @@
     "reason": "ok"
    },
    "opinion_rss": {
-    "count": 97,
+    "count": 98,
     "complete": true,
     "reason": "ok"
    }
@@ -47,25 +47,113 @@
   "summaries": {
    "enabled": true,
    "have": 1584,
-   "expected": 8053,
+   "expected": 8057,
    "complete": false
   },
   "opinion_text_fetches_this_run": 600,
   "opinion_text_fetch_cap": 600,
-  "latest_decision_date": "2026-11-24",
+  "latest_decision_date": "2026-11-25",
   "next_argument_date": null
  },
  "stats": {
-  "total": 8941,
+  "total": 8945,
   "pending": 845,
   "scheduled": 0,
   "awaiting": 39,
-  "decided": 8057,
+  "decided": 8061,
   "precedential": 1455,
   "rule36": 4
  },
  "upcoming_argument_docket_numbers": [],
  "cases": [
+  {
+   "docket_number": "CL-11072063",
+   "case_name": "Dunn v. Ssa",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-11-25",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/11072063/dunn-v-ssa/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/27-1082.ORDER.11-25-2026_2792125.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/11072063/dunn-v-ssa/",
+   "url_audio": null
+  },
+  {
+   "docket_number": "CL-11072136",
+   "case_name": "Centripetal Networks, LLC v. Keysight Technologies, Inc.",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-11-25",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/11072136/centripetal-networks-llc-v-keysight-technologies-inc/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1715.OPINION.11-25-2026_2792154.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/11072136/centripetal-networks-llc-v-keysight-technologies-inc/",
+   "url_audio": "https://www.courtlistener.com/audio/107414/centripetal-networks-llc-v-keysight-technologies-inc/"
+  },
+  {
+   "docket_number": "CL-11072135",
+   "case_name": "Kroenung v. Defense",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-11-25",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/11072135/kroenung-v-defense/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/25-1363.OPINION.11-25-2026_2792164.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/11072135/kroenung-v-defense/",
+   "url_audio": "https://www.courtlistener.com/audio/107412/kroenung-v-defense/"
+  },
+  {
+   "docket_number": "CL-11072062",
+   "case_name": "Payton v. DVA",
+   "case_type": "Other / Unclassified",
+   "origin": null,
+   "status": "Decided",
+   "date_filed": null,
+   "date_argued": null,
+   "argument": null,
+   "decision": {
+    "date": "2026-11-25",
+    "precedential_status": "Unpublished",
+    "disposition": null,
+    "url_cl": "https://www.courtlistener.com/opinion/11072062/payton-v-dva/",
+    "url_pdf": "https://cafc.uscourts.gov/opinions-orders/27-1083.ORDER.11-25-2026_2792120.pdf"
+   },
+   "panel": [],
+   "patent_issues": [],
+   "summary": null,
+   "url_cl": "https://www.courtlistener.com/opinion/11072062/payton-v-dva/",
+   "url_audio": null
+  },
   {
    "docket_number": "CL-11070835",
    "case_name": "Arcelormittal v. Posco Co., Ltd.",
